@@ -1,1 +1,0 @@
-# informe-del-proyecto
