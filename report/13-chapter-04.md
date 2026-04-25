@@ -164,9 +164,39 @@
 Los wireframes de la aplicación web fueron diseñados para definir la estructura funcional de las principales pantallas del sistema. En esta etapa se identificaron los elementos clave de interacción, como paneles de control, visualización de datos, navegación entre secciones y componentes necesarios para la gestión del sistema. Estos wireframes permiten validar la distribución de información antes de la implementación visual, asegurando que las funcionalidades respondan a las necesidades del usuario. 
 
 Wireframe Landing Page: En este wireframe vemos la organización de los elementos que se le presentarían al usuario inicialmente al entrar a la página. 
-
 <p align="center">
   <img src="assets/chapter-04/wireflowdiagram/WireframeLP.png" alt="Wireframes">
+</p>
+
+Wireframe Landing Page Mobile: Organización de elementos para el landing page en entorno de móviles 
+<p align="center">
+  <img src="assets/chapter-04/wireflowdiagram/WireframeMobile.png" alt="Wireframes">
+</p>
+
+Wireframes Pantallas: Aqui vemos la organización de secciones individuales que componen las distintas pantallas de la página web. 
+<p align="center">
+  <img src="assets/chapter-04/wireflowdiagram/Activos.png" alt="Wireframes">
+</p>
+<p align="center">
+  <img src="assets/chapter-04/wireflowdiagram/Alertas.png" alt="Wireframes">
+</p>
+<p align="center">
+  <img src="assets/chapter-04/wireflowdiagram/Configuracion.png" alt="Wireframes">
+</p>
+<p align="center">
+  <img src="assets/chapter-04/wireflowdiagram/Dashboard.png" alt="Wireframes">
+</p>
+<p align="center">
+  <img src="assets/chapter-04/wireflowdiagram/Login.png" alt="Wireframes">
+</p>
+<p align="center">
+  <img src="assets/chapter-04/wireflowdiagram/Monitoreo.png" alt="Wireframes">
+</p>
+<p align="center">
+  <img src="assets/chapter-04/wireflowdiagram/Reportes.png" alt="Wireframes">
+</p>
+<p align="center">
+  <img src="assets/chapter-04/wireflowdiagram/Usuarios.png" alt="Wireframes">
 </p>
 
 ---
