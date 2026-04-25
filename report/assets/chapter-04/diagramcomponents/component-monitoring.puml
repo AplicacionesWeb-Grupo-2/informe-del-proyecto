@@ -1,0 +1,55 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title Component Diagram - ColdTrace - Monitoring Context
+caption Internal components for telemetry ingestion, reading validation, historical queries, and integration events.
+
+LAYOUT_WITH_LEGEND()
+LAYOUT_LEFT_RIGHT()
+
+Container(api_gateway, "API Gateway", "ASP.NET Core / C#", "Routes monitoring queries from the web application.")
+Container(telemetry_api, "Telemetry Ingestion API", "MQTT / HTTP", "Receives normalized telemetry from IoT devices and edge gateways.")
+Container_Ext(sensor_api, "Sensor Management Context API", "ASP.NET Core / C#", "Publishes active sensors, ranges, and operating parameters.")
+Container_Ext(alerts_api, "Alerts Context API", "ASP.NET Core / C#", "Consumes out-of-range readings and connectivity issues.")
+Container_Ext(reports_api, "Reports Context API", "ASP.NET Core / C#", "Consumes readings and monitoring summaries.")
+
+Container_Boundary(monitoring, "Monitoring Context API") {
+    Component(readings_controller, "Readings Controller", "ASP.NET Core Controller", "Endpoints for current readings, historical readings, and connectivity status.")
+    Component(telemetry_consumer, "Telemetry Consumer", "Message / HTTP Consumer", "Receives telemetry commands from the Telemetry Ingestion API.")
+    Component(config_consumer, "Configuration Consumer", "Integration Event Consumer", "Updates local monitoring rules from Sensor Management events.")
+
+    Component(reading_service, "Reading Application Service", "Application Service", "Stores readings, evaluates ranges, and detects deviations.")
+    Component(connectivity_service, "Connectivity Service", "Application Service", "Evaluates sensor and gateway connectivity status.")
+    Component(history_query_service, "Reading History Query Service", "Application Service", "Serves current and historical reading queries.")
+
+    Component(range_policy, "Range Evaluation Policy", "Domain Service", "Applies temperature and humidity thresholds.")
+    Component(sync_policy, "Offline Sync Policy", "Domain Service", "Preserves timestamps and filters invalid offline records.")
+
+    Component(reading_repo, "Reading Repository", "EF Core Repository", "Persists readings, connectivity states, sync records, and validation results.")
+    Component(monitoring_events, "Monitoring Event Publisher", "Integration Events", "Publishes reading-recorded, out-of-range, connectivity-lost, and monitoring-summary events.")
+}
+
+ContainerDb(monitoring_db, "Monitoring Database", "MySQL", "Time-series readings, connectivity states, synchronization records, and range evaluation results.")
+
+Rel(api_gateway, readings_controller, "Routes reading queries", "HTTPS / JSON")
+Rel(telemetry_api, telemetry_consumer, "Sends normalized telemetry", "HTTP / internal events")
+Rel(sensor_api, config_consumer, "Publishes active configuration", "Internal events")
+
+Rel(readings_controller, history_query_service, "Executes monitoring queries")
+Rel(telemetry_consumer, reading_service, "Stores telemetry")
+Rel(telemetry_consumer, connectivity_service, "Updates connectivity status")
+Rel(config_consumer, reading_service, "Refreshes range rules")
+
+Rel(reading_service, range_policy, "Evaluates safe ranges")
+Rel(reading_service, sync_policy, "Validates offline sync data")
+Rel(reading_service, reading_repo, "Reads / writes readings")
+Rel(connectivity_service, reading_repo, "Reads / writes connectivity state")
+Rel(history_query_service, reading_repo, "Reads monitoring history")
+Rel(reading_repo, monitoring_db, "Reads / writes", "EF Core")
+
+Rel(reading_service, monitoring_events, "Publishes reading and deviation events")
+Rel(connectivity_service, monitoring_events, "Publishes connectivity events")
+Rel(monitoring_events, alerts_api, "Publishes risk events", "Internal events")
+Rel(monitoring_events, reports_api, "Publishes readings and summaries", "Internal events")
+
+@enduml

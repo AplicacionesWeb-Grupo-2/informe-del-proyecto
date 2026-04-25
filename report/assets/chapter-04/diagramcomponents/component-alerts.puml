@@ -1,0 +1,67 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title Component Diagram - ColdTrace - Alerts Context
+caption Internal components for incidents, critical alerts, escalation, acknowledgments, corrective actions, and notifications.
+
+LAYOUT_WITH_LEGEND()
+LAYOUT_LEFT_RIGHT()
+
+Container(api_gateway, "API Gateway", "ASP.NET Core / C#", "Routes alert and incident requests.")
+Container_Ext(monitoring_api, "Monitoring Context API", "ASP.NET Core / C#", "Publishes out-of-range readings and connectivity issues.")
+Container_Ext(reports_api, "Reports Context API", "ASP.NET Core / C#", "Consumes incident and corrective-action history.")
+System_Ext(email, "Email Service", "External provider for email alerts.")
+System_Ext(push, "Push Notification Service", "External provider for real-time critical alerts.")
+System_Ext(messaging, "Messaging Service", "External messaging channel such as WhatsApp Business API or SMS for escalation.")
+
+Container_Boundary(alerts, "Alerts Context API") {
+    Component(alert_controller, "Alert Controller", "ASP.NET Core Controller", "Endpoints for active alerts, acknowledgments, escalation, corrective actions, and incident closure.")
+    Component(risk_event_consumer, "Risk Event Consumer", "Integration Event Consumer", "Consumes out-of-range and connectivity events from Monitoring.")
+
+    Component(incident_service, "Incident Application Service", "Application Service", "Creates and updates thermal incidents.")
+    Component(alert_service, "Alert Application Service", "Application Service", "Creates alerts, acknowledges alerts, and updates incident state.")
+    Component(escalation_service, "Escalation Service", "Application Service", "Escalates unattended critical alerts based on configured thresholds.")
+    Component(notification_service, "Notification Orchestrator", "Application Service", "Selects notification channels and records delivery attempts.")
+
+    Component(alert_policy, "Alert Policy", "Domain Service", "Determines severity, duplicate incidents, and valid state transitions.")
+    Component(alert_repo, "Alert Repository", "EF Core Repository", "Persists alerts, incidents, escalation records, acknowledgments, and corrective actions.")
+
+    Component(email_adapter, "Email Notification Adapter", "External Adapter", "Sends email alerts.")
+    Component(push_adapter, "Push Notification Adapter", "External Adapter", "Sends browser and mobile push alerts.")
+    Component(messaging_adapter, "Messaging Adapter", "External Adapter", "Sends WhatsApp or SMS escalation messages.")
+    Component(alert_events, "Alert Event Publisher", "Integration Events", "Publishes incident-created and incident-closed events.")
+}
+
+ContainerDb(alerts_db, "Alerts Database", "MySQL", "Alerts, incidents, escalation records, acknowledgments, corrective actions, and closure evidence.")
+
+Rel(api_gateway, alert_controller, "Routes alert and incident requests", "HTTPS / JSON")
+Rel(monitoring_api, risk_event_consumer, "Publishes risk events", "Internal events")
+
+Rel(alert_controller, alert_service, "Executes alert commands")
+Rel(alert_controller, incident_service, "Executes incident commands")
+Rel(alert_controller, escalation_service, "Executes escalation commands")
+Rel(risk_event_consumer, incident_service, "Starts or updates incidents")
+
+Rel(incident_service, alert_policy, "Applies incident rules")
+Rel(alert_service, alert_policy, "Applies alert state rules")
+Rel(escalation_service, alert_policy, "Checks escalation rules")
+
+Rel(incident_service, alert_repo, "Reads / writes incidents")
+Rel(alert_service, alert_repo, "Reads / writes alerts")
+Rel(escalation_service, alert_repo, "Reads / writes escalation records")
+Rel(alert_repo, alerts_db, "Reads / writes", "EF Core")
+
+Rel(alert_service, notification_service, "Requests notifications")
+Rel(escalation_service, notification_service, "Requests escalation messages")
+Rel(notification_service, email_adapter, "Sends email alerts")
+Rel(notification_service, push_adapter, "Sends push alerts")
+Rel(notification_service, messaging_adapter, "Sends messaging alerts")
+
+Rel(email_adapter, email, "Sends alert", "SMTP / REST API")
+Rel(push_adapter, push, "Sends push notification", "Web Push / FCM")
+Rel(messaging_adapter, messaging, "Sends message", "REST API")
+
+Rel(incident_service, alert_events, "Publishes incident events")
+Rel(alert_events, reports_api, "Provides incident and action history", "Internal events")
+
+@enduml

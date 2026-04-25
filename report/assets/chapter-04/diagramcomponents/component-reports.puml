@@ -1,0 +1,57 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title Component Diagram - ColdTrace - Reports Context
+caption Internal components for logs, consolidated reports, exports, and report evidence for audit.
+
+LAYOUT_WITH_LEGEND()
+LAYOUT_LEFT_RIGHT()
+
+Container(api_gateway, "API Gateway", "ASP.NET Core / C#", "Routes report generation and download requests.")
+Container_Ext(monitoring_api, "Monitoring Context API", "ASP.NET Core / C#", "Publishes readings and monitoring summaries.")
+Container_Ext(alerts_api, "Alerts Context API", "ASP.NET Core / C#", "Publishes incident and corrective-action history.")
+Container_Ext(audit_api, "Audit Context API", "ASP.NET Core / C#", "Consumes generated reports and logs for compliance evidence.")
+
+Container_Boundary(reports, "Reports Context API") {
+    Component(report_controller, "Report Controller", "ASP.NET Core Controller", "Endpoints for daily logs, monthly reports, history views, and downloads.")
+    Component(monitoring_event_consumer, "Monitoring Event Consumer", "Integration Event Consumer", "Consumes readings and monitoring summaries.")
+    Component(alert_event_consumer, "Alert Event Consumer", "Integration Event Consumer", "Consumes incident and corrective-action events.")
+
+    Component(log_service, "Daily Log Service", "Application Service", "Builds daily operational logs from monitoring and incident data.")
+    Component(report_service, "Report Generation Service", "Application Service", "Generates monthly reports, compliance reports, and historical summaries.")
+    Component(export_service, "Export Service", "Application Service", "Creates PDF and CSV files for reports and logs.")
+    Component(report_query_service, "Report Query Service", "Application Service", "Serves generated reports, dashboard summaries, and download metadata.")
+
+    Component(report_policy, "Report Completeness Policy", "Domain Service", "Validates required data before report generation.")
+    Component(report_repo, "Report Repository", "EF Core Repository", "Persists report metadata, logs, export metadata, and download history.")
+    Component(file_store, "Report File Store", "File Storage Adapter", "Stores generated PDF and CSV files.")
+    Component(report_events, "Report Event Publisher", "Integration Events", "Publishes report-generated and log-generated events.")
+}
+
+ContainerDb(reports_db, "Reports Database", "MySQL", "Generated reports, logs, export metadata, report files, and download history.")
+
+Rel(api_gateway, report_controller, "Routes report requests", "HTTPS / JSON")
+Rel(monitoring_api, monitoring_event_consumer, "Publishes readings and summaries", "Internal events")
+Rel(alerts_api, alert_event_consumer, "Publishes incident history", "Internal events")
+
+Rel(report_controller, report_service, "Executes report commands")
+Rel(report_controller, export_service, "Executes export commands")
+Rel(report_controller, report_query_service, "Executes report queries")
+
+Rel(monitoring_event_consumer, log_service, "Updates daily logs")
+Rel(alert_event_consumer, log_service, "Adds incident and action entries")
+Rel(log_service, report_service, "Provides consolidated operational data")
+
+Rel(report_service, report_policy, "Checks data completeness")
+Rel(report_service, report_repo, "Reads / writes reports")
+Rel(log_service, report_repo, "Reads / writes logs")
+Rel(report_query_service, report_repo, "Reads report metadata")
+Rel(export_service, report_repo, "Reads report data")
+Rel(export_service, file_store, "Writes exported files")
+Rel(report_repo, reports_db, "Reads / writes", "EF Core")
+
+Rel(report_service, report_events, "Publishes report events")
+Rel(log_service, report_events, "Publishes log events")
+Rel(report_events, audit_api, "Provides reports and logs for evidence", "Internal events")
+
+@enduml
