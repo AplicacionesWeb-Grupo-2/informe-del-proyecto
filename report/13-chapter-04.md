@@ -161,7 +161,7 @@
 
 ### 4.4.1. Web Applications Wireframes.
 
-[contenido pendiente]
+Los wireframes de la aplicación web fueron diseñados para definir la estructura funcional de las principales pantallas del sistema. En esta etapa se identificaron los elementos clave de interacción, como paneles de control, visualización de datos, navegación entre secciones y componentes necesarios para la gestión del sistema. Estos wireframes permiten validar la distribución de información antes de la implementación visual, asegurando que las funcionalidades respondan a las necesidades del usuario. 
 
 [imágenes de wireframes de la aplicación web pendientes]
 
