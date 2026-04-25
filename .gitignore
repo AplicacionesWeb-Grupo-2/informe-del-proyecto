@@ -1,20 +1,2 @@
-# Vue.js / Node
-node_modules/
-dist/
-.env
-.env.local
-.vite/
-
-# C# / .NET
-bin/
-obj/
-*.user
-*.suo
-.vs/
-*.DotSettings
-appsettings.local.json
-
-# IDEs
 .idea/
-.vscode/
-*.iml
+build-readme.sh
