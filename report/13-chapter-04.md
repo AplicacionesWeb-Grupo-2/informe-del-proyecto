@@ -166,7 +166,7 @@ Los wireframes de la aplicación web fueron diseñados para definir la estructur
 Wireframe Landing Page: En este wireframe vemos la organización de los elementos que se le presentarían al usuario inicialmente al entrar a la página. 
 
 <p align="center">
-  <img src="report/assets/chapter-04/wireflowdiagram/Wireframe Landing Page.png" alt="Wireframes" width="300">
+  <img src="report/assets/chapter-04/wireflowdiagram/WireframeLP.png" alt="Wireframes" width="300">
 </p>
 
 ---
