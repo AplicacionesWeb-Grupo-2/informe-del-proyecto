@@ -203,9 +203,11 @@ Wireframes Pantallas: Aqui vemos la organización de secciones individuales que 
 
 ### 4.4.2. Web Applications Wireflow Diagrams.
 
-[contenido pendiente]
+Los wireflow diagrams representan el flujo de interacción del usuario dentro de la aplicación, mostrando la navegación entre pantallas y las acciones que el usuario puede realizar en cada etapa. Estos diagramas permiten entender el recorrido del usuario (user flow), facilitando la identificación de puntos clave de interacción y mejorando la experiencia general del sistema. 
 
-[diagrama de wireflows pendiente]
+<p align="center">
+  <img src="assets/chapter-04/wireflowdiagram/WireFlows (1).png" alt="Wireframes">
+</p>
 
 ---
 
