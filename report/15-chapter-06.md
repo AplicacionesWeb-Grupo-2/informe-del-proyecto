@@ -1,5 +1,15 @@
 # Capítulo VI: Conclusions
 ## 6.1. Conclusiones y recomendaciones
-[pending content]
+### Conlusiones
+El desarrollo del presente trabajo ha permitido al equipo validar que existe una necesidad real y no atendida adecuadamente en el sector alimentario peruano: la ausencia de herramientas digitales accesibles para el monitoreo continuo de la cadena de frío. A través de las entrevistas realizadas a ambos segmentos objetivo, se confirmó que tanto los dueños de pequeños negocios como los responsables de operaciones dependen exclusivamente de controles manuales, detectan las fallas de refrigeración de forma tardía y carecen de documentación que respalde el cumplimiento normativo ante DIGESA y MINSA.
+El proceso de needfinding, que incluyó User Personas, User Task Matrix, User Journey Maps y Empathy Maps, permitió comprender con profundidad las motivaciones, frustraciones y expectativas de cada segmento, asegurando que las decisiones de diseño de ColdTrace respondan a necesidades reales y no a suposiciones. Los Impact Maps y User Stories derivados de este análisis establecieron una base sólida y priorizada para el desarrollo del producto.
+En cuanto a la implementación, el equipo logró desplegar una landing page funcional que comunica con claridad la propuesta de valor de ColdTrace, sus funcionalidades principales y el flujo de uso de la plataforma, constituyendo el primer entregable tangible del producto hacia los usuarios potenciales.
+Finalmente, el trabajo colaborativo del equipo, con roles distribuidos entre investigación, diseño, arquitectura e implementación, demostró que es posible avanzar de forma paralela en múltiples frentes sin perder coherencia entre los entregables, gracias a una planificación por sprints y una comunicación constante.
+### Recomendaciones 
+Se recomienda realizar entrevistas de validación con usuarios reales del primer segmento, particularmente dueños de carnicerías, pescaderías y minimarkets, para contrastar los hallazgos obtenidos hasta ahora con experiencias concretas de campo, ajustando el diseño de la plataforma si fuera necesario.
+Para los siguientes sprints, se sugiere priorizar el desarrollo de las funcionalidades más valoradas por ambos segmentos: las alertas automáticas en tiempo real y la generación de reportes para auditorías sanitarias, ya que son las que mayor impacto tendrán en la decisión de adopción de la plataforma.
+Se recomienda también definir una estrategia de precios clara y accesible desde etapas tempranas, dado que el costo de implementación fue identificado como la principal barrera de adopción en ambos segmentos. Un modelo freemium o un periodo de prueba gratuito podría reducir significativamente esta fricción.
+En cuanto al diseño de la plataforma, se sugiere mantener la simplicidad como principio rector de la interfaz, especialmente para el primer segmento, cuyos usuarios no tienen experiencia con software de gestión. Cualquier funcionalidad nueva debe poder entenderse sin capacitación previa.
+Finalmente, se recomienda establecer alianzas tempranas con proveedores de hardware IoT locales en Perú, ya que la dependencia de sensores importados podría encarecer la solución y reducir su competitividad frente a alternativas ya posicionadas en el mercado peruano.
 ## 6.2. Video About-the-Team
 [pending content]
