@@ -1,6 +1,6 @@
 # Student Outcome
 
-[contenido pendiente: criterio ABET y descripción del Student Outcome correspondiente al curso]
+El presente informe evidencia el desempeño del equipo en relación con el Student Outcome asociado al trabajo colaborativo, la planificación de tareas y el cumplimiento de objetivos dentro del proyecto de Aplicaciones Web.
 
 ---
 
@@ -14,24 +14,24 @@
   </tr>
   <tr>
     <td>
-      Comunica oralmente con efectividad a diferentes rangos de audiencia
+      Trabaja en equipo para proporcionar liderazgo en forma conjunta
     </td>
     <td>
-      [pendiente]
+      ----------AV1----------
     </td>
     <td>
-      [pendiente]
+      ----------AV1----------
     </td>
   </tr>
   <tr>
     <td>
-      Comunica por escrito con efectividad a diferentes rangos de audiencia
+      Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.
     </td>
     <td>
-      [pendiente]
+      ----------AV1----------
     </td>
     <td>
-      [pendiente]
+      ----------AV1----------
     </td>
   </tr>
 </table>

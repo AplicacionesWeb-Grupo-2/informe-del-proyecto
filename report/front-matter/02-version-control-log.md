@@ -2,4 +2,4 @@
 
 | Versión | Fecha | Autores | Descripción |
 | :--- | :--- | :--- | :--- |
-| [pendiente] | [pendiente] | [pendiente] | [pendiente] |
+| 0.1 | 05/04 | Equipo FrostGuard | Versión inicial del informe del proyecto. |
