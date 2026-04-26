@@ -266,19 +266,68 @@ Portal de Autenticación (Login / Sign Up): Interfaces simplificadas y centr
 
 ### 4.4.4. Web Applications User Flow Diagrams.
 
-[contenido pendiente]
+En esta sección se presenta la narrativa detallada de los diagramas de flujo de usuario (User Flows) diseñados para la plataforma FrostWart. Estos recorridos definen la lógica de interacción, los nodos de decisión y la arquitectura de navegación, garantizando una experiencia fluida desde el acceso inicial hasta la gestión operativa de los activos térmicos.
 
-### User Flow 1 : [pendiente]
+### User Flow 1 : Login or Sing Up
 
-[diagrama pendiente]
+![LoginSignUp](./assets/chapter-04/userflowdiagram/LoginSign-up.png)
 
-### User Flow 2 : [pendiente]
+1. Ciclo de Autenticación y Control de Acceso 
 
-[diagrama pendiente]
+El flujo inicia en la Landing Page, donde el usuario ejecuta el disparador de "Iniciar Sesión". Al ingresar sus credenciales, el sistema activa un nodo de decisión crítico para la validación de identidad: 
 
-### User Flow 3 : [pendiente]
+- Validación Exitosa (Happy Path): El usuario es autenticado y redirigido inmediatamente al Dashboard Principal, permitiendo el acceso total a las herramientas de monitoreo. 
+- Falla de Validación: Ante credenciales incorrectas, el sistema proporciona retroalimentación visual mediante un mensaje de error. En este punto, el usuario puede optar por el flujo de Manejo de Excepciones seleccionando "Olvidé mi contraseña". 
 
-[diagrama pendiente]
+2. Protocolo de Recuperación de Cuenta 
+
+El subflujo de recuperación garantiza la continuidad de la experiencia del usuario (UX) ante la pérdida de acceso. Este proceso requiere el ingreso de un correo electrónico válido, tras lo cual el sistema confirma el envío de un enlace de recuperación. Una vez completado este ciclo de seguridad, el flujo converge nuevamente en el acceso al Dashboard Principal, restaurando la operatividad del usuario. 
+
+3. Proceso de Onboarding y Registro Empresarial 
+
+Como parte de la arquitectura de información para nuevos usuarios o perfiles incompletos, se contempla un flujo de Completado de Datos. Este segmento guía al usuario a través de un formulario de registro y la configuración de datos de la empresa. Este paso es mandatorio para establecer la jerarquía de activos dentro de la aplicación y finaliza con la transición al Dashboard Principal, asegurando que el entorno de trabajo esté debidamente personalizado antes de iniciar el monitoreo en vivo.
+
+### User Flow 2 : Monitores En Vivo
+
+![MonitoresenVivo](./assets/chapter-04/userflowdiagram/MonitoresenVivo.png)
+
+1. Segmento de Acceso y Supervisión General 
+
+El flujo inicia en el Dashboard Principal, el cual funciona como el centro de control del Web Service. Desde este punto, el usuario navega hacia el módulo de Monitoreo en Vivo, donde se despliega la lista global de sensores vinculados. Este nodo permite una supervisión constante de la telemetría enviada por el hardware. 
+
+2. Lógica de Control y Detección de Anomalías 
+
+El núcleo del flujo presenta un nodo de decisión crítico basado en el estado del sensor: 
+
+- Estado "Dentro de Rango": El sistema mantiene al sensor en la lista de monitoreo pasivo, permitiendo al usuario continuar con la supervisión de otros activos. 
+
+- Estado "Fuera de Rango" (Alerta): Si el sensor detecta una desviación térmica, el usuario es dirigido a la Vista de Información Específica del Activo. Este paso es fundamental para la trazabilidad, ya que proporciona el contexto necesario antes de cualquier intervención técnica. 
+
+3. Protocolo de Atención y Calibración 
+
+Una vez identificado el activo en crisis, se activa el flujo de mantenimiento correctivo: 
+
+- Inicio de Verificación: El usuario selecciona la opción "Verificar Calibración". 
+- Recolección de Datos: Se procede al llenado de un formulario técnico donde se ingresan las métricas actuales. 
+- Revisión de Desviación: El sistema procesa los datos y permite al usuario validar la desviación detectada. 
+- Firma y Documentación: Para garantizar el cumplimiento normativo (compliance), el usuario completa el registro de firma digital y adjunta la documentación pertinente. 
+- Cierre del Ciclo: El flujo concluye con una Confirmación de Calibración Verificada, notificando al sistema que el activo ha vuelto a un estado operativo seguro y retornando al usuario al monitoreo general.
+
+### User Flow 3 : Transporte
+
+![Transporte](./assets/chapter-04/userflowdiagram/Transporte.png)
+
+1. Acceso y Visibilidad Logística 
+
+El recorrido del usuario inicia en el Dashboard Principal, desde donde navega hacia el menú dedicado de Transporte. Al ingresar, el sistema despliega una vista de lista que consolida todas las unidades de transporte activas. Este nodo es un punto de control vital, ya que presenta de inmediato el Estado de Rango (telemetría térmica) de cada vehículo, permitiendo al usuario evaluar la salud de la cadena de frío de un vistazo. 
+
+2. Bifurcación de Acciones 
+
+Desde la lista principal de transporte, el flujo se divide en dos caminos operativos principales, dependiendo de la necesidad del usuario: 
+
+- Camino A: Registro de Nueva Unidad (Alta de Activos): Si la flota se expande, el usuario selecciona la acción para registrar una nueva unidad. El flujo lo dirige a un formulario estructurado donde completa los datos técnicos del nuevo activo. Al guardar, el sistema procesa la información, incorpora el vehículo a la base de datos general de activos y retorna al usuario a la lista actualizada, brindando retroalimentación de éxito. 
+
+- Camino B: Supervisión de Unidad Existente (Inspección Detallada): Si el usuario requiere auditar un vehículo específico (por ejemplo, un camión refrigerado que muestra alertas o requiere control de rutina), hace clic sobre el elemento en la lista. Esta acción lo redirige automáticamente a la vista de Detalles en Activos, donde se expone la información específica, gráficos e historial del vehículo seleccionado.
 
 ---
 
