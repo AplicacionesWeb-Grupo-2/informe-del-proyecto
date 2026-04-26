@@ -441,31 +441,78 @@ Desde la lista principal de transporte, el flujo se divide en dos camin
 
 ### 4.6.1. Design-Level Event Storming.
 
-[diagrama de bounded contexts pendiente]
+En esta sección se elaboró el diseño de los Bounded Contexts (BC) y sus conexiones dentro
+del sistema.
 
-## 1. Bounded Context: [pendiente]
-### Explicación
-[pendiente]
-
-### Justificación
-[pendiente]
-
-
-## 2. Bounded Context: [pendiente]
-
-### Explicación
-[pendiente]
-
-### Justificación
-[pendiente]
+1. Gestión de cuenta
+Este contexto gestiona el acceso de los usuarios al sistema mediante el inicio y cierre de
+sesión. Se encarga de validar credenciales, controlar sesiones activas y generar eventos como
+usuario autenticado o sesión iniciada/cerrada.
 
 
-## Problemas Identificados y Relación con Contextos
+Se separa este contexto porque la seguridad es un aspecto crítico y transversal en cualquier
+sistema. Se reduce el riesgo de accesos no autorizados, además de facilitar la implementación
+de mecanismos avanzados como OAuth, JWT o autenticación multifactor. Nos permite
+separar la lógica del proceso de seguridad con la del negocio principal y permite darle
+mantenimiento al módulo de forma independiente.
 
-- [pendiente] → [BC pendiente]
+2. Conexión a infraestructura
 
-### Justificación General
-[pendiente]
+
+Este contexto administra todo el ciclo de vida de los sensores: registro, configuración,
+activación y vinculación con activos. Además, define parámetros clave como rangos de
+temperatura, humedad y frecuencia de medición.
+Se separa este contexto porque la configuración de sensores define el comportamiento del
+sistema. Al aislarlo se reducen errores por parámetros mal definidos, se permite modificar
+reglas sin afectar otros contextos y se facilita la reutilización en otros sistemas IoT.
+
+3. Monitoreo en tiempo real
+
+
+Es el núcleo del sistema. Aquí se reciben las mediciones del sensor, se registran, validan y se
+verifica si están dentro o fuera de los rangos definidos. Finalmente, las mediciones se
+almacenan.
+Se separa este contexto porque es el proceso principal del negocio, permitiendo manejar alta
+carga de datos en tiempo real, enfocándonos en la eficacia con poco desgaste de memoria,
+además de la posibilidad de conexión a la nube. Además, podemos manejar los datos de
+forma independiente a su visualización.
+
+4. Gestión de alertas
+
+
+Se encarga de generar notificaciones cuando una medición está fuera de los rangos
+establecidos. También gestiona la visualización de alertas en el sistema.
+
+
+Se separa este contexto porque es el proceso principal del negocio. Este contexto permite
+implementar APIs especializadas para el manejo de mensajes, además de no sobrecargar el
+contexto de monitoreo.
+
+5. Cumplimiento con auditoría
+Este contexto controla el cumplimiento del sistema mediante auditorías. Permite iniciar
+auditorías, registrar resultados, validar cumplimiento y generar evidencias exportables.
+Se separa este contexto porque la auditoría responde a necesidades de control y
+cumplimiento, enfocándonos más en el proceso de normativas con respecto a los datos ya
+
+
+procesados, permitiendo que pueda evolucionar hacia automatización completa sin impactar
+otros contextos.
+
+6. Generación de reportes
+
+
+Gestiona la generación, visualización y exportación de reportes. Incluye dashboards, historial
+de mediciones y visualización en tiempo real.
+Se separa este contexto porque el análisis de datos tiene necesidades distintas al
+procesamiento y/o al análisis para la auditoría, permitiendo independencia ante otros
+módulos.
+Unión de Bounded Contexts
+
+
+Link del Miro donde fue diseñado:
+https://miro.com/app/board/uXjVHcNg7-M=/?share_link_id=9598536361 19
+Este diagrama muestra la integración y comunicación entre los diferentes Bounded Contexts,
+evidenciando las relaciones y dependencias dentro del sistema.
 
 
 ### 4.6.2. Software Architecture Context Diagram.
