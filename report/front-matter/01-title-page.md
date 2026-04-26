@@ -12,15 +12,15 @@
 
 <br>
 
-**Ciclo Académico [pendiente]**
+**Ciclo Académico 2026-10**
 
 <br>
 
-**Código:** [pendiente] &nbsp; | &nbsp; **Curso:** [pendiente] &nbsp; | &nbsp; **NRC:** [pendiente]
+**Código:** 1ASI0730 &nbsp; | &nbsp; **Curso:** Aplicaciones Web &nbsp; | &nbsp; **Sección:** 2610 &nbsp; | &nbsp; **NRC:** 12190
 
 <br>
 
-**Docente:** [pendiente]
+**Docente:** Hugo Allan Mori Paiva
 
 <br>
 
@@ -29,12 +29,12 @@
 <br>
 
 ### **Nombre de la Startup:**
-**[pendiente]**
+**FrostGuard**
 
 <br>
 
 ### **Nombre del Producto:**
-**[pendiente]**
+**ColdTrace**
 
 <br>
 
@@ -49,13 +49,29 @@
   </thead>
   <tbody>
     <tr>
-      <td align="center">[pendiente]</td>
-      <td align="left">[pendiente]</td>
+      <td align="center">U202414054</td>
+      <td align="left">Jean Pool Alexander Arias Tasayco</td>
+    </tr>
+    <tr>
+      <td align="center">U202410093</td>
+      <td align="left">Mauricio Luis Pajes Leon</td>
+    </tr>
+    <tr>
+      <td align="center">U202321020</td>
+      <td align="left">Leonardo Sebastian Delgado Arriola</td>
+    </tr>
+    <tr>
+      <td align="center">U202416706</td>
+      <td align="left">Santiago Enrique Vargas Alarcon</td>
+    </tr>
+    <tr>
+      <td align="center">U202323350</td>
+      <td align="left">Eduardo David Velasquez Laquihuanaco</td>
     </tr>
   </tbody>
 </table>
 
 <br><br>
 
-**Lima, [pendiente]**
+**Lima, Abril de 2026**
 </div>
