@@ -1,3 +1,0 @@
-Informe del Proyecto
-
-[pending]
