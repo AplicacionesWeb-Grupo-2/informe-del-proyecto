@@ -617,7 +617,7 @@ Se separa este contexto porque la auditoría responde a necesidades de control, 
 Este contexto gestiona la generación, visualización, programación y exportación de reportes. Incluye dashboards, historial de mediciones, gráficos, análisis de tendencias, reportes de cumplimiento y documentos exportables.
 
 <p align="center">
-  <img src="assets/chapter-04/boundedcontext/Bounded Context Final Final - Frame 6.jpg" width="760" alt="Bounded Context Canvas - Generación de reportes">
+  <img src="assets/chapter-04/boundedcontext/BCT6" width="760" alt="Bounded Context Canvas - Generación de reportes">
   <br>
   <em>Figura 4.6.1.9. Bounded Context Canvas de Generación de reportes.</em>
 </p>
