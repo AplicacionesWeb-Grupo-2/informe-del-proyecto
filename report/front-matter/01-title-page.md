@@ -16,7 +16,7 @@
 
 <br>
 
-**Código:** 1ASI0730 &nbsp; | &nbsp; **Curso:** Aplicaciones Web &nbsp; | &nbsp; **NRC:** 12190
+**Código:** 1ASI0730 &nbsp; | &nbsp; **Curso:** Aplicaciones Web &nbsp; | &nbsp; **Sección:** 2610 &nbsp; | &nbsp; **NRC:** 12190
 
 <br>
 
@@ -73,5 +73,5 @@
 
 <br><br>
 
-**Lima, abril de 2026**
+**Lima, Abril de 2026**
 </div>
