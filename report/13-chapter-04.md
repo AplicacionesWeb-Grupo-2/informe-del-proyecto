@@ -374,7 +374,7 @@ Desde la lista principal de transporte, el flujo se divide en dos camin
 
 ### 4.6.2. Software Architecture Context Diagram.
 
-El diagrama de contexto de ColdTrace muestra la plataforma como sistema central y presenta sus relaciones con los actores principales, los dispositivos IoT y los servicios externos necesarios para operar la solución. A partir de las user stories documentadas en el Capítulo II, se definen los siguientes bounded contexts: **Autenticación y gestión de cuenta**, **Gestión de Sensores**, **Monitoreo**, **Alertas**, **Reportes** y **Auditoría**.
+El diagrama de contexto de ColdTrace muestra la plataforma como sistema central y presenta sus relaciones con los actores principales, los dispositivos IoT y los servicios externos necesarios para operar la solución. A partir de las user stories documentadas en el Capítulo III y de la delimitación realizada en el Design-Level Event Storming de la sección 4.6.1, se definen los siguientes bounded contexts: **Autenticación y gestión de cuenta**, **Gestión de Sensores**, **Monitoreo**, **Alertas**, **Reportes** y **Auditoría**.
 
 Las user stories se reflejan en el diagrama de la siguiente manera:
 
@@ -398,9 +398,9 @@ Las user stories se reflejan en el diagrama de la siguiente manera:
 
 ### 4.6.3. Software Architecture Container Diagrams.
 
-El diagrama de contenedores muestra cómo ColdTrace se divide en sus principales aplicaciones, servicios y bases de datos. En esta vista se identifican la Landing Page, la Web Application, el API Gateway, el Telemetry Ingestion API, los servicios internos alineados a bounded contexts, sus repositorios de datos y los servicios externos requeridos por los flujos descritos en las user stories del Capítulo II.
+El diagrama de contenedores muestra cómo ColdTrace se divide en sus principales aplicaciones, servicios y bases de datos. En esta vista se identifican la Landing Page, la Web Application, el API Gateway, el Telemetry Ingestion API, los servicios internos alineados a bounded contexts, sus repositorios de datos y los servicios externos requeridos por los flujos descritos en las user stories del Capítulo III y por las responsabilidades identificadas en el Design-Level Event Storming.
 
-Para esta propuesta, la arquitectura mantiene los bounded contexts definidos para ColdTrace y adapta los contenedores a la tecnología proyectada del curso: aplicación web con Vue.js y PrimeVue, servicios internos con ASP.NET Core y C#, y documentación de servicios mediante OpenAPI/Swagger.
+Para esta propuesta, la arquitectura mantiene los bounded contexts definidos para ColdTrace en la sección 4.6.1 y adapta los contenedores a la tecnología proyectada del curso: aplicación web con Vue.js y PrimeVue, servicios internos con ASP.NET Core y C#, y documentación de servicios mediante OpenAPI/Swagger.
 
 Cada bounded context mantiene su propia base de datos MySQL. Cuando un contexto necesita información de otro, la obtiene mediante APIs internas o eventos de integración, evitando que dos microservicios dependan directamente de las mismas tablas. Además, la evidencia hacia auditoría se centraliza a través del contexto de Auditoría, en lugar de exponer varios servicios internos directamente al actor externo.
 
@@ -416,7 +416,7 @@ Cada bounded context mantiene su propia base de datos MySQL. Cuando un contexto 
 
 ### 4.6.4. Software Architecture Components Diagrams.
 
-En esta sección se presenta la vista de componentes de ColdTrace por bounded context. Cada diagrama descompone el contenedor interno definido en la vista de contenedores y muestra controladores, servicios de aplicación, servicios de dominio, repositorios, publicadores o consumidores de eventos y adaptadores externos.
+En esta sección se presenta la vista de componentes de ColdTrace por bounded context. Cada diagrama descompone el contenedor interno definido en la vista de contenedores y toma como base la separación de responsabilidades establecida en el Design-Level Event Storming. Además, muestra controladores, servicios de aplicación, servicios de dominio, repositorios, publicadores o consumidores de eventos y adaptadores externos.
 
 Los diagramas mantienen la misma regla arquitectónica definida para la vista de contenedores: cada bounded context es dueño de su propia base de datos MySQL y las dependencias entre contextos se realizan mediante APIs internas o eventos de integración.
 
