@@ -68,7 +68,7 @@ La paleta evoca el entorno industrial del frío y la fiabilidad tecnoló
 
 ### 4.1.2. Web Style Guidelines.
 
-Se definen los estándares visuales y de interacción específicos para la plataforma web FrostWatch (basado en el sistema de diseño de ColdTrace), asegurando una experiencia de usuario coherente en interfaces responsive.
+Se definen los estándares visuales y de interacción específicos para la plataforma web ColdTrace, asegurando una experiencia de usuario coherente en interfaces responsive.
 
 - **Responsive Design:** La interfaz se adapta dinámicamente a diversos dispositivos (Desktop y Mobile Web Browser). Se garantiza que los elementos críticos, como las alertas de temperatura y el dashboard centralizado, mantengan su jerarquía visual independientemente del tamaño de la pantalla.
 - **UI Components:** Siguiendo los requerimientos tecnológicos, el diseño de los componentes utiliza patrones modernos que garantizan una interacción estandarizada.
@@ -149,7 +149,7 @@ El sistema se estructura mediante variables CSS que controlan los breakpoints, a
 
 ## 4.2. Information Architecture.
 
-[contenido pendiente]
+Esta sección describe cómo se organiza, etiqueta y navega el contenido de la Landing Page y de la Web Application de ColdTrace. El objetivo es que los dueños de negocios, responsables de operaciones y usuarios administradores encuentren información crítica sin esfuerzo, especialmente cuando necesitan revisar sensores, alertas, reportes o evidencia de cumplimiento.
 
 ---
 
@@ -157,100 +157,129 @@ El sistema se estructura mediante variables CSS que controlan los breakpoints, a
 
 **Tipo de organización usada:**
 
-[pendiente]
+Se aplica una organización visual jerárquica y funcional. En la Landing Page, la información se ordena desde la propuesta de valor hacia las funcionalidades, beneficios, flujo de uso y contacto. En la Web Application, la organización se estructura por módulos operativos: dashboard, monitoreo, activos, alertas, reportes, usuarios y configuración.
 
 ---
 
 **Organización de la Landing Page:**
 
 *Encabezado (Header):*  
-[pendiente]
+Incluye el logotipo de ColdTrace, enlaces de navegación principales, selector de idioma y accesos a autenticación. Su función es mantener disponibles las rutas de mayor valor durante todo el recorrido.
 
 *Sección Introductoria (Hero):*  
-[pendiente]
+Presenta la propuesta de valor del producto: centralizar la infraestructura de almacenamiento en frío en una plataforma inteligente con monitoreo en tiempo real, alertas y trazabilidad.
 
 *Beneficios:*
-- [pendiente]
+- Monitoreo continuo de temperatura y humedad.
+- Alertas automáticas ante desviaciones.
+- Historial descargable para trazabilidad.
+- Reportes listos para auditorías sanitarias.
 
 *Cómo Funciona:*  
-[pendiente]
+Organiza el flujo de uso en pasos simples: configurar sensores y rangos, monitorear activos en tiempo real y auditar mediante reportes exportables.
 
 *Casos de uso:*  
-[pendiente]
+Explica escenarios asociados a cámaras frigoríficas, almacenes, transporte refrigerado, minimarkets y responsables de operaciones que necesitan controlar la cadena de frío.
 
 *Pie de Página (Footer):*  
-[pendiente]
+Agrupa enlaces secundarios relacionados con producto, soporte, recursos, redes sociales y acceso a información institucional.
 
 ---
 
 **Organización de la Aplicación Web (por rol)**
 
--[Rol 1]
+- Dueño o encargado de negocio:
 
-[pendiente]
+Accede principalmente al dashboard, monitoreo de activos, alertas activas, historial de condiciones y reportes básicos para revisar el estado de sus productos refrigerados.
 
--[Rol 2]
+- Responsable de operaciones, calidad o logística:
 
-[pendiente]
+Gestiona múltiples sedes, activos, sensores, gateways, rangos de operación, incidencias, acciones correctivas y reportes de cumplimiento.
+
+- Administrador de organización:
+
+Administra usuarios, roles, permisos, planes, preferencias de notificación y parámetros generales de la organización.
 
 ---
 
 ### 4.2.2. Labeling Systems.
 
-[contenido pendiente]
+El sistema de etiquetado utiliza términos breves, consistentes y orientados a la acción. Las etiquetas mantienen coherencia entre la Landing Page y la Web Application, reduciendo ambigüedad y facilitando el reconocimiento rápido de funciones críticas.
 
 **1. Etiquetas Textuales (Text Labels):**
 
-- [pendiente]
+- Navegación: "Home", "Features", "Platform", "Reviews", "Workflow" y "Contact".
+- Acciones principales: "Try demo", "Register", "Sign in", "Generate report", "Export" y "Resolve".
+- Estados del sistema: "Optimal", "Deviation", "In Progress", "Completed", "Open", "Acknowledged" y "Closed".
 
 **2. Etiquetas de Encabezado (Headings):**
 
-[pendiente]
+Los encabezados comunican el propósito de cada sección o módulo. En la Landing Page se usan títulos orientados al valor del producto, mientras que en la Web Application se utilizan encabezados funcionales como "Dashboard", "Live Monitoring", "Assets", "Alerts & Incidents", "Reports & Compliance" y "Settings".
 
 **3. Etiquetas Icónicas (Iconic Labels):**
 
-- [pendiente]
+- Iconos de temperatura y humedad para lecturas ambientales.
+- Iconos de alerta para incidencias o desviaciones críticas.
+- Iconos de documento para reportes, bitácoras y evidencias.
+- Iconos de usuario y configuración para administración de cuenta.
 
 **4. Tooltips:**
 
-- [pendiente]
+- Se emplean en botones, iconos y estados que pueden requerir explicación adicional.
+- Deben ser cortos, descriptivos y estar orientados a aclarar la acción o significado del elemento.
+- Se priorizan en acciones como exportar reportes, reconocer alertas, configurar rangos y verificar calibraciones.
 
 ---
 
 ### 4.2.3. SEO Tags and Meta Tags
 
 ```html
-<title>[pendiente]</title>
+<title>ColdTrace - Intelligent monitoring for cold storage</title>
 
-<meta name="description" content="[pendiente]">
+<meta
+  name="description"
+  content="ColdTrace centralizes your cold storage infrastructure on a single intelligent platform: real-time monitoring, hardware health, alerts and regulatory compliance."
+>
 
-<meta name="keywords" content="[pendiente]">
+<meta
+  name="keywords"
+  content="cold chain, cold storage, IoT monitoring, temperature monitoring, regulatory compliance, HACCP, ColdTrace"
+>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="author" content="[pendiente]">
+<meta name="author" content="ColdTrace">
 
-<meta name="copyright" content="[pendiente]">
+<meta property="og:title" content="ColdTrace - Intelligent monitoring for cold storage">
+<meta
+  property="og:description"
+  content="Real-time monitoring, hardware health, alerts and regulatory compliance for cold storage operations."
+>
+<meta property="og:type" content="website">
 ```
 
 ### 4.2.4. Searching Systems.
 
-[contenido pendiente]
+Los sistemas de búsqueda se diseñan para que el usuario no se pierda entre grandes volúmenes de datos históricos, activos, sensores e incidencias. La búsqueda se orienta a apoyar decisiones rápidas durante la supervisión operativa.
 
-- **[Tipo de búsqueda 1]:**  
-  [pendiente]
+- **Filtros de historial:** permiten buscar registros por rango de fechas, tipo de activo, sede, sensor, estado de alerta o nivel de criticidad.
 
-- **[Tipo de búsqueda 2]:**  
-  [pendiente]
+- **Búsqueda en dashboard:** permite localizar rápidamente un sensor, cámara, unidad de transporte o sede por nombre, código o identificador único.
+
+- **Búsqueda de reportes:** permite encontrar reportes generados por tipo, periodo, estado de cumplimiento o fecha de emisión.
 
 ---
 
 ### 4.2.5. Navigation Systems.
 
-[contenido pendiente]
+El sistema de navegación guía al usuario desde la presentación comercial del producto hasta las funcionalidades operativas de la Web Application.
 
 **Flujo principal:**  
-[pendiente]
+El usuario inicia en la Landing Page, revisa la propuesta de valor, consulta funcionalidades, explora el flujo de trabajo y accede al registro o inicio de sesión. Una vez autenticado, ingresa al dashboard principal, desde donde puede navegar hacia monitoreo en vivo, activos, transporte, alertas, reportes, usuarios y configuración.
+
+- **Navegación global:** el menú superior permanece disponible en la Landing Page para facilitar el acceso a secciones clave y al cambio de idioma.
+- **Navegación contextual:** la Web Application utiliza un sidebar para moverse entre módulos operativos como monitoreo, alertas, reportes e infraestructura.
+- **Navegación de salida:** los botones "Sign in" y "Register" conectan la Landing Page con la Web Application, asegurando una transición directa hacia los flujos autenticados.
 
 ---
 
@@ -258,17 +287,75 @@ El sistema se estructura mediante variables CSS que controlan los breakpoints, a
 
 ### 4.3.1. Landing Page Wireframe.
 
-[contenido pendiente]
+Para la Landing Page se desarrollaron wireframes en Figma con el objetivo de definir la estructura de las secciones antes de aplicar estilos visuales de alta fidelidad. Estos wireframes permiten validar jerarquía, distribución del contenido, ubicación de llamadas a la acción y organización general de la información.
 
-[imágenes de wireframes pendientes]
+<p align="center">
+  <img src="assets/chapter-04/landingpagedesign/landing-page-wireframe-home.png" width="620" alt="Landing Page Wireframe - Home">
+  <br>
+  <em>Figura 4.3.1.1. Wireframe de la sección Home de la Landing Page.</em>
+</p>
+
+<p align="center">
+  <img src="assets/chapter-04/landingpagedesign/landing-page-wireframe-features.png" width="620" alt="Landing Page Wireframe - Features">
+  <br>
+  <em>Figura 4.3.1.2. Wireframe de la sección Features de la Landing Page.</em>
+</p>
+
+<p align="center">
+  <img src="assets/chapter-04/landingpagedesign/landing-page-wireframe-platform.png" width="620" alt="Landing Page Wireframe - Platform">
+  <br>
+  <em>Figura 4.3.1.3. Wireframe de la sección Platform de la Landing Page.</em>
+</p>
+
+<p align="center">
+  <img src="assets/chapter-04/landingpagedesign/landing-page-wireframe-contact.png" width="620" alt="Landing Page Wireframe - Contact">
+  <br>
+  <em>Figura 4.3.1.4. Wireframe de la sección Contact de la Landing Page.</em>
+</p>
+
+*Elaborado en Figma: <https://www.figma.com/design/IqZN1pHeNjBjeM0C2N9YC7/Cold-trace-APP-WEB?node-id=2074-2545&t=AjnSNEwKUl9R9JyL-0>*
 
 ---
 
 ### 4.3.2. Landing Page Mock-up.
 
-[contenido pendiente]
+Los mock-ups de la Landing Page representan la versión visual de alta fidelidad del sitio. En esta etapa se aplican los lineamientos de color, tipografía, componentes, espaciado y estilo visual definidos previamente para comunicar la propuesta de valor de ColdTrace de manera clara y consistente.
 
-[imágenes de mockups pendientes]
+<p align="center">
+  <img src="assets/chapter-04/landingpagedesign/landing-page-mockup-home.png" width="700" alt="Landing Page Mock-up - Home">
+  <br>
+  <em>Figura 4.3.2.1. Mock-up de la sección Home de la Landing Page.</em>
+</p>
+
+<p align="center">
+  <img src="assets/chapter-04/landingpagedesign/landing-page-mockup-features.png" width="700" alt="Landing Page Mock-up - Features">
+  <br>
+  <em>Figura 4.3.2.2. Mock-up de la sección Features de la Landing Page.</em>
+</p>
+
+<p align="center">
+  <img src="assets/chapter-04/landingpagedesign/landing-page-mockup-platform.png" width="700" alt="Landing Page Mock-up - Platform">
+  <br>
+  <em>Figura 4.3.2.3. Mock-up de la sección Platform de la Landing Page.</em>
+</p>
+
+<p align="center">
+  <img src="assets/chapter-04/landingpagedesign/landing-page-mockup-reviews.png" width="700" alt="Landing Page Mock-up - Reviews">
+  <br>
+  <em>Figura 4.3.2.4. Mock-up de la sección Reviews de la Landing Page.</em>
+</p>
+
+<p align="center">
+  <img src="assets/chapter-04/landingpagedesign/landing-page-mockup-workflow.png" width="700" alt="Landing Page Mock-up - Workflow">
+  <br>
+  <em>Figura 4.3.2.5. Mock-up de la sección Workflow de la Landing Page.</em>
+</p>
+
+<p align="center">
+  <img src="assets/chapter-04/landingpagedesign/landing-page-mockup-contact.png" width="700" alt="Landing Page Mock-up - Contact">
+  <br>
+  <em>Figura 4.3.2.6. Mock-up de la sección Contact de la Landing Page.</em>
+</p>
 
 ---
 
@@ -328,7 +415,7 @@ Los wireflow diagrams representan el flujo de interacción del usuario dentro de
 
 ### 4.4.3. Web Applications Mock-ups.
 
-En esta sección se presentan los Mock-ups de alta fidelidad de la plataforma FrostWart. Estos diseños han sido elaborados en la plataforma Figma, siguiendo un sistema de diseño consistente que prioriza la legibilidad de datos críticos y la eficiencia operativa en entornos de logística y salud.
+En esta sección se presentan los Mock-ups de alta fidelidad de la plataforma ColdTrace. Estos diseños han sido elaborados en la plataforma Figma, siguiendo un sistema de diseño consistente que prioriza la legibilidad de datos críticos y la eficiencia operativa en entornos de logística y salud.
 
 ![Dashboard](./assets/chapter-04/mockups/Dashboard.png)
 
@@ -362,7 +449,7 @@ Portal de Autenticación (Login / Sign Up): Interfaces simplificadas y centr
 
 ### 4.4.4. Web Applications User Flow Diagrams.
 
-En esta sección se presenta la narrativa detallada de los diagramas de flujo de usuario (User Flows) diseñados para la plataforma FrostWart. Estos recorridos definen la lógica de interacción, los nodos de decisión y la arquitectura de navegación, garantizando una experiencia fluida desde el acceso inicial hasta la gestión operativa de los activos térmicos.
+En esta sección se presenta la narrativa detallada de los diagramas de flujo de usuario (User Flows) diseñados para la plataforma ColdTrace. Estos recorridos definen la lógica de interacción, los nodos de decisión y la arquitectura de navegación, garantizando una experiencia fluida desde el acceso inicial hasta la gestión operativa de los activos térmicos.
 
 ### User Flow 1 : Login or Sing Up
 
@@ -429,11 +516,15 @@ Desde la lista principal de transporte, el flujo se divide en dos camin
 
 ## 4.5. Web Applications Prototyping.
 
-[contenido pendiente]
+El desarrollo del prototipo de la aplicación web se realizó considerando una navegación intuitiva, una organización visual clara y acceso rápido a las funciones principales. El prototipo permite representar el recorrido del usuario dentro de ColdTrace, desde el acceso inicial hasta módulos operativos como dashboard, monitoreo, activos, alertas, reportes y configuración.
 
-[imagen del prototipo pendiente]
+<p align="center">
+  <img src="assets/chapter-04/prototype/web-application-prototype-overview.png" width="760" alt="Web Application Prototype Overview">
+  <br>
+  <em>Figura 4.5.1. Vista general del prototipo de la Web Application.</em>
+</p>
 
-[link al video demostrativo pendiente]
+**Enlace al video demostrativo:** [Visualización del prototipo de ColdTrace](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323350_upc_edu_pe/IQCLVGDwlf_SRJyIix_exJckAaMTcUyhtetBzt6yQ2hwH0c?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=0Mag1d)
 
 ---
 
