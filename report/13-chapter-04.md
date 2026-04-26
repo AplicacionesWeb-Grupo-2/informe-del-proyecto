@@ -6,29 +6,50 @@
 
 ### 4.1.1. General Style Guidelines.
 
-**Brand Overview**  
-[pendiente]
+**Brand Overview** 
 
-**Brand Name**  
-[pendiente]
+Se ha seleccionado la propuesta basada en un escudo térmico como logo definitivo. Esta elección responde a una estrategia de marca diseñada para transmitir seguridad alimentaria y protección. El isotipo fusiona un escudo (protección), la inicial "F" con trazos fluidos (logística) y ondas internas que simbolizan los datos de los sensores IoT y el flujo de aire frío.
 
 **Typography**  
-[pendiente]
+Se utiliza una tipografía Sans-Serif geométrica la elegida es Poppins en peso Bold para títulos, comunicando modernidad y eliminando ambigüedad en alertas críticas. Para el cuerpo de texto, se emplea una fuente de alta legibilidad en pantallas Inter o Roboto, optimizando la lectura de tablas de trazabilidad e informes en el dashboard.
 
 **Colors**
 
-| **Color** | **Código HEX** | **Significado** |
-|-----------|----------------|-----------------|
-| [pendiente] | `[#XXXXXX]` | [pendiente] |
+La paleta evoca el entorno industrial del frío y la fiabilidad tecnológica. 
+
+Azul Cián (Primario): Representa la tecnología, el frío y la  claridad de los datos en tiempo real. 
+
+Azul Marino (Secundario): Aporta solidez corporativa,  autoridad y seguridad para los gerentes logísticos. 
+
+Gris Glacial (Contraste): Utilizado en fondos de interfaz para  permitir que los datos de temperatura resalten sin generar  fatiga visual.
+
+| **Color**    | **Código HEX** | **Significado**                                                                                                  |
+| ------------ | -------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Gris Glacial | `[#F4F7F9]`    | Utilizado en fondos de interfaz para  permitir que los datos de temperatura resalten sin generar  fatiga visual. |
+| Azul Marino  | `[#002d56]`    | Aporta solidez corporativa,  autoridad y seguridad para los gerentes logísticos.                                 |
+| Azul Cián    | `[#00AEEF]`    | Representa la tecnología, el frío y la  claridad de los datos en tiempo real.                                    |
 
 **Visual Style**  
-[pendiente]
+
+![Logotype](./assets/chapter-04/studyguidelines/Logotype.png)
+
+![ColorsPalet](./assets/chapter-04/studyguidelines/ColorPalet.png)
+
+![Typography](./assets/chapter-04/studyguidelines/Typography.png)
 
 ---
 
 ### 4.1.2. Web Style Guidelines.
 
-[contenido pendiente]
+Se definen los estándares visuales y de interacción específicos para la plataforma web FrostWatch, asegurando una experiencia de usuario coherente en interfaces responsive. 
+
+Responsive Design: La interfaz se adapta dinámicamente a diversos dispositivos (Desktop y Mobile Web Browser). Se garantiza que los elementos críticos, como las alertas de temperatura y el dashboard centralizado, mantengan su jerarquía visual independientemente del tamaño de la pantalla. 
+
+UIComponents:  Siguiendo los requerimientos tecnológicos del curso, el diseño de los componentes está basado en Material Design, utilizando la biblioteca PrimeVue para asegurar una interacción estandarizada y moderna. 
+
+Visual Consistency: Se mantiene una coherencia estética absoluta entre el Landing Page promocional y la Web Application operativa. Los botones de llamada a la acción (Call-to-Action) utilizan el azul cián primario para destacar y guiar al usuario eficientemente hacia las funcionalidades de monitoreo. 
+
+Accessibility (a11y): La guía web integra características de accesibilidad mediante el uso correcto de atributos ARIA y contrastes de color validados, asegurando que la plataforma sea inclusiva para todos los operadores de la cadena logística.
 
 ---
 
