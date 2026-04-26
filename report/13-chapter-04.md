@@ -449,6 +449,7 @@ Este contexto gestiona el acceso de los usuarios al sistema mediante el inicio y
 sesión. Se encarga de validar credenciales, controlar sesiones activas y generar eventos como
 usuario autenticado o sesión iniciada/cerrada.
 
+![BC1 Tabla](./assets/chapter-04/boundedcontext/Bounded Context Final Final - Frame 1.jpg)
 
 Se separa este contexto porque la seguridad es un aspecto crítico y transversal en cualquier
 sistema. Se reduce el riesgo de accesos no autorizados, además de facilitar la implementación
