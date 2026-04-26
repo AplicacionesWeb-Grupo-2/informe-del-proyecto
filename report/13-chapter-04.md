@@ -2,52 +2,148 @@
 
 ## 4.1. Style Guidelines.
 
+Esta sección define los lineamientos de estilo que aseguran una identidad visual consistente, accesible y escalable en todas las interfaces del proyecto (web y móvil). Aquí se establecen los criterios de marca (logo, tono), tipografía, paleta de colores, espaciado y grid, así como estados e interacción (focus, hover, error) con enfoque en WCAG. Además, se especifican tokens de diseño y reglas responsive para facilitar la implementación y el mantenimiento entre equipos de diseño y desarrollo. Estos lineamientos actúan como fuente única de verdad, garantizando coherencia y calidad a medida que el producto evoluciona.
+
 ### 4.1.1. General Style Guidelines.
 
 **Brand Overview** 
 
 Se ha seleccionado la propuesta basada en un escudo térmico como logo definitivo. Esta elección responde a una estrategia de marca diseñada para transmitir seguridad alimentaria y protección. El isotipo fusiona un escudo (protección), la inicial "F" con trazos fluidos (logística) y ondas internas que simbolizan los datos de los sensores IoT y el flujo de aire frío.
 
-**Typography**  
-Se utiliza una tipografía Sans-Serif geométrica la elegida es Poppins en peso Bold para títulos, comunicando modernidad y eliminando ambigüedad en alertas críticas. Para el cuerpo de texto, se emplea una fuente de alta legibilidad en pantallas Inter o Roboto, optimizando la lectura de tablas de trazabilidad e informes en el dashboard.
+**Typography** 
+
+Hemos seleccionado cuidadosamente estas tipografías para ColdTrace, buscando un equilibrio armónico entre claridad, profesionalismo y modernidad que refuerce nuestros valores de eficiencia, monitoreo inteligente y trazabilidad precisa. La combinación de Poppins para títulos e Inter (o Roboto) para textos técnicos potencia la legibilidad en web y móvil, proyecta una identidad tecnológica y accesible, y acompaña con coherencia los flujos clave del _dashboard_, la gestión de sensores y la resolución de incidentes, asegurando una experiencia consistente, robusta y fácil de usar en toda la plataforma.
+
+Poppins, una tipografía Sans-Serif geométrica, fue elegida para los títulos por su estilo contemporáneo y estructura limpia, aportando una presencia clara y profesional que comunica modernidad y elimina por completo la ambigüedad visual en el sistema.
+
+- **Poppins (Bold - 40 px)** asegura jerarquías nítidas en los encabezados principales (H1), permitiendo que el usuario identifique rápidamente la sección en la que se encuentra (como los paneles de monitoreo en vivo) sin sacrificar legibilidad en dispositivos de escritorio.
+- **Poppins (Bold - 24 px / 20 px)** se utiliza en títulos de botones, encabezados secundarios y textos de énfasis por su equilibrio entre personalidad y orden visual, resultando fundamental para facilitar una lectura rápida y sin errores al momento de mostrar **alertas críticas** de temperatura y notificaciones del sistema.
+
+![Typography](./assets/chapter-04/studyguidelines/Typography.png)
 
 **Colors**
 
 La paleta evoca el entorno industrial del frío y la fiabilidad tecnológica. 
 
-Azul Cián (Primario): Representa la tecnología, el frío y la  claridad de los datos en tiempo real. 
+- Colores Primarios
 
-Azul Marino (Secundario): Aporta solidez corporativa,  autoridad y seguridad para los gerentes logísticos. 
+| **Color**                                         | **Código HEX** | **Significado**                                                                                                                                                                                                                                                  |
+| ------------------------------------------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](./assets/chapter-04/studyguidelines/Azul.png) | `[#002d56]`    | Es el color principal de la marca y de interacción. Se utiliza para guiar la atención del usuario hacia las acciones principales, como los botones de "Sign up", "Get started", "See all features", enlaces de texto y elementos clave en la interfaz del panel. |
 
-Gris Glacial (Contraste): Utilizado en fondos de interfaz para  permitir que los datos de temperatura resalten sin generar  fatiga visual.
+- Colores Secundarios
 
-| **Color**    | **Código HEX** | **Significado**                                                                                                  |
-| ------------ | -------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Gris Glacial | `[#F4F7F9]`    | Utilizado en fondos de interfaz para  permitir que los datos de temperatura resalten sin generar  fatiga visual. |
-| Azul Marino  | `[#002d56]`    | Aporta solidez corporativa,  autoridad y seguridad para los gerentes logísticos.                                 |
-| Azul Cián    | `[#00AEEF]`    | Representa la tecnología, el frío y la  claridad de los datos en tiempo real.                                    |
+| Color                                                  | Codigo HEX  | Significado                                                                                                                                           |
+| ------------------------------------------------------ | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](./assets/chapter-04/studyguidelines/Verde.png)     | `[#008F39]` | Se usa para indicar estados positivos, cumplimiento ("Compliance"), marcas de verificación (checkmarks) y métricas de buen rendimiento.               |
+| ![](./assets/chapter-04/studyguidelines/Colar.png)     | `[#008F39]` | Se emplea para captar la atención sobre problemas, como alertas, excursiones térmicas y notificaciones de error.                                      |
+| ![](./assets/chapter-04/studyguidelines/Amarrillo.png) | `[#E0B046]` | Funciona como un color de acento para íconos (como la ilustración de la carpeta), segmentos en los gráficos circulares y advertencias de nivel medio. |
+- Colores Neutros
 
-**Visual Style**  
+| Color                                                   | Codigo HEX  | Significado                                                                                                                                                   |
+| ------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](./assets/chapter-04/studyguidelines/Gris.png)       | `[#F4F7F9]` | Dominan el fondo de toda la página y las tarjetas de la interfaz, dando un respiro visual y un aspecto limpio (Clean UI).                                     |
+| ![](./assets/chapter-04/studyguidelines/GrisOscuro.png) | `[#828282]` | Se utiliza en la tipografía (títulos y cuerpos de texto) para asegurar legibilidad, y es el color sólido que conforma el bloque del pie de página (_footer_). |
 
-![Logotype](./assets/chapter-04/studyguidelines/Logotype.png)
+**Espaciado y márgenes (Análisis de la UI de ColdTrace)**
 
-![ColorsPalet](./assets/chapter-04/studyguidelines/ColorPalet.png)
+- **Márgenes generales y contenedores:** El diseño hace un uso generoso del "espacio en blanco" (white space). Las tarjetas (como las de testimonios, pasos del proceso o el modal de registro) presentan un _padding_ interno amplio (aproximadamente entre **24 px y 32 px**) para que el contenido no se sienta asfixiado.
+- **Márgenes alrededor de elementos interactivos:** Los botones de acción principal (como "Get started" o "Log in") tienen un área limpia a su alrededor. Mantienen un espaciado (margin) de al menos **16 px a 24 px** respecto a los textos o inputs adyacentes para darles jerarquía visual.
+- **Interlineado en textos:** Se distingue claramente entre jerarquías. Los bloques de texto explicativos y los testimonios mantienen un interlineado alto (alrededor de **1.4× a 1.5×**) que facilita la legibilidad en pantallas.
+- **Separación ícono–texto:** Se evidencia una clara agrupación por proximidad. En los listados de beneficios (como los checks verdes), en los íconos del footer o en los avatares junto a los nombres, el espaciado entre el elemento gráfico y el texto es reducido y consistente, utilizando medidas de **8 px a 12 px**.
+- **Ritmo y sistema espacial:** Toda la estructura visual es altamente modular, lo que sugiere fuertemente la aplicación de un sistema de cuadrícula geométrica, casi seguro un **ritmo de 8-pt**.
 
-![Typography](./assets/chapter-04/studyguidelines/Typography.png)
+
+**Branding y logo**
+
+- **Símbolo de Monitoreo Térmico (Isotipo):** Integra un copo de nieve (frío), un hexágono (estructura) y ondas (conectividad). Representa directamente la tecnología IoT para el rastreo inteligente y remoto de temperaturas.
+- **Identidad Cromática:** Utiliza un negro sólido con un enfoque minimalista e industrial. Esta elección visual transmite la precisión, rigor técnico y fiabilidad absoluta que requiere un sistema de control de normativas.
+- **Naming y Tipografía:** "ColdTrace" describe claramente su función: rastrear entornos fríos. Emplea una tipografía _sans-serif_ gruesa y geométrica que asegura excelente legibilidad y proyecta un software robusto y estable.
+
+![Logotype](./assets/chapter-04/studyguidelines/Coldtrace.png)
+
+
 
 ---
 
 ### 4.1.2. Web Style Guidelines.
 
-Se definen los estándares visuales y de interacción específicos para la plataforma web FrostWatch, asegurando una experiencia de usuario coherente en interfaces responsive. 
+Se definen los estándares visuales y de interacción específicos para la plataforma web FrostWatch (basado en el sistema de diseño de ColdTrace), asegurando una experiencia de usuario coherente en interfaces responsive.
 
-Responsive Design: La interfaz se adapta dinámicamente a diversos dispositivos (Desktop y Mobile Web Browser). Se garantiza que los elementos críticos, como las alertas de temperatura y el dashboard centralizado, mantengan su jerarquía visual independientemente del tamaño de la pantalla. 
+- **Responsive Design:** La interfaz se adapta dinámicamente a diversos dispositivos (Desktop y Mobile Web Browser). Se garantiza que los elementos críticos, como las alertas de temperatura y el dashboard centralizado, mantengan su jerarquía visual independientemente del tamaño de la pantalla.
+- **UI Components:** Siguiendo los requerimientos tecnológicos, el diseño de los componentes utiliza patrones modernos que garantizan una interacción estandarizada.
+- **Visual Consistency:** Se mantiene una coherencia estética absoluta entre el Landing Page promocional y la Web Application operativa. Los botones de llamada a la acción utilizan el azul primario (`#1b59f8`) para destacar y guiar al usuario eficientemente hacia las funcionalidades de monitoreo.
+- **Accessibility (a11y):** La guía web integra características de accesibilidad mediante el uso correcto de atributos `aria-label` descriptivos en botones, iconos y elementos de navegación interactiva.
 
-UIComponents:  Siguiendo los requerimientos tecnológicos del curso, el diseño de los componentes está basado en Material Design, utilizando la biblioteca PrimeVue para asegurar una interacción estandarizada y moderna. 
+### Estructura de la página
 
-Visual Consistency: Se mantiene una coherencia estética absoluta entre el Landing Page promocional y la Web Application operativa. Los botones de llamada a la acción (Call-to-Action) utilizan el azul cián primario para destacar y guiar al usuario eficientemente hacia las funcionalidades de monitoreo. 
+La interfaz web se articula en zonas funcionales que garantizan la orientación del usuario y el acceso inmediato a métricas críticas de temperatura y cumplimiento normativo.
 
-Accessibility (a11y): La guía web integra características de accesibilidad mediante el uso correcto de atributos ARIA y contrastes de color validados, asegurando que la plataforma sea inclusiva para todos los operadores de la cadena logística.
+|**Ubicación**|**Contenido**|
+|---|---|
+|**Parte superior fija (Header)**|Logotipo posicionado a la izquierda. Menú principal con enlaces a Inicio, Características, Plataforma, Reseñas y Precios. Selector de idioma (EN/ES) y accesos de autenticación (Sign in / Register).|
+|**Zona central (Body)**|Contenedor principal con un ancho máximo de 1200px. Dashboard de indicadores: KPIs de condiciones de almacenamiento, cumplimiento de temperatura óptima y reportes de análisis.|
+|**Pie de página (Footer)**|Área informativa con la marca, enlaces de redes sociales e hipervínculos agrupados por columnas (Producto, Soporte, Recursos).|
+
+### Tipografía
+
+En la interfaz web, la jerarquía tipográfica se divide en tipografías _Display_ para destacar y _Base_ para la legibilidad de datos técnicos.
+
+|**Uso**|**Fuente**|**Tamaño / Peso**|**Responsive (clamp)**|
+|---|---|---|---|
+|**Título Principal H1**|Varela Round|Hasta 64 px / Regular|`clamp(36px, 4.6vw, 64px)`|
+|**Subtítulo / Lead**|Varela Round|Hasta 22 px / Regular|`clamp(16px, 1.45vw, 22px)`|
+|**Títulos de Tarjeta (Dashboard)**|Inter|15 px / Medium|Fijo|
+|**Datos Destacados (KPIs)**|Inter|22 px - 28 px / Bold|Fijo|
+|**Cuerpo de texto y Botones**|Inter|16 px / Regular|Fijo|
+|**Microcopy / Etiquetas**|Inter|12 px - 14 px / Medium|Fijo|
+
+### Colores
+
+La aplicación cromática refuerza la identidad tecnológica y la claridad operativa necesaria para el control de cadena de frío y excursiones térmicas.
+
+|**Uso en interfaz web**|**Color / HEX**|**Descripción**|
+|---|---|---|
+|**Botón CTA principal, enlaces activos**|`#1b59f8`|**Azul Primario:** Concentra la llamada a la acción y estados de enfoque.|
+|**Hover de botón primario**|`#0f3fc4`|**Azul Oscuro:** Brinda retroalimentación visual al interactuar con acciones principales.|
+|**Tipografía principal**|`#191919` / `#1e1e1e`|**Negro/Gris muy oscuro:** Utilizado en encabezados y textos base para máxima legibilidad.|
+|**Fondo general**|`#ffffff` / `#f4f5f8`|**Blanco y Gris frío:** Superficies de lectura y fondos de la aplicación que proporcionan contraste y amplitud.|
+
+**Colores de Estado y Alertas**
+
+|**Estado / Uso**|**Color / HEX**|**Descripción**|
+|---|---|---|
+|**Alerta crítica / Excursión térmica**|`#ef292d`|**Rojo de alerta:** Exclusivo para advertencias de problemas de hardware o estado crítico.|
+|**Condiciones óptimas / Éxito**|`#2bc255`|**Verde:** Usado en métricas positivas, almacenamiento congelado estable e indicadores de estado completo.|
+|**Advertencia / Almacenamiento frío**|`#ff8a3c`|**Naranja:** Utilizado en gráficos de uso o alertas medias.|
+
+### Iconografía
+
+Los íconos apoyan visualmente cada acción del monitoreo: revisión de temperatura, alertas de chat/mail, y reportes de cumplimiento de DIGESA/MINSA.
+
+|**Aspecto**|**Especificación**|
+|---|---|
+|**Estilo**|Formato SVG incorporado directamente en el HTML mediante etiquetas `<use>` para escalabilidad perfecta y manipulación de color por CSS (`currentColor`).|
+|**Accesibilidad**|Cada icono interactivo o informativo está respaldado por el atributo `aria-hidden="true"` si es decorativo, o envuelto en un elemento con `aria-label` para lectores de pantalla.|
+
+### Componentes clave
+
+|**Componente**|**Estilo base**|**Variantes / Estados**|
+|---|---|---|
+|**Botón Primario (CTA)**|Fondo `#1b59f8`, texto `#f5f5f5`, fuente Inter 16px, `border-radius: 8px` (`--radius-md`), `padding: 12px 16px`.|**Hover:** Fondo `#0f3fc4`, sombra aumentada (`--shadow-md`). **Focus:** Contorno de 2px sólido `#1b59f8` con desplazamiento.|
+|**Botón Ghost (Secundario)**|Fondo `#e3e3e3` (neutral), texto `#1e1e1e`, sin bordes agresivos.|**Hover:** Fondo `#d1d1d1` (gray-04).|
+|**Campos de Texto (Inputs)**|Borde 1px `#eff0f6`, fondo `#ffffff`, `border-radius: 8px`, texto `#1e1e1e` a 16px.|**Focus:** Borde primario `#1b59f8` con un brillo suave tipo sombra de `3px rgba(27, 89, 248, 0.15)`.|
+|**Tarjetas (Dashboard Cards)**|Fondo `#ffffff`, `border-radius: 18px`, sombra compuesta para dar elevación `0 2px 4px rgba(91, 104, 133, 0.08)`.|Alojan gráficas, barras de estado y métricas como "Storage Conditions" o "Historical Temp".|
+
+### Diseño responsivo
+
+El sistema se estructura mediante variables CSS que controlan los breakpoints, asegurando adaptabilidad desde teléfonos hasta pantallas panorámicas.
+
+| **Dispositivo** | **Ancho (Breakpoint)**                 | **Especificaciones**                                                                                                                                                  |
+| --------------- | -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Mobile**      | Menor a 768 px                         | El contenido se reorganiza. El menú de navegación superior colapsa dentro de un panel "hamburger" activado mediante un botón con icono.                               |
+| **Tablet**      | Desde 768 px (`--breakpoint-tablet`)   | Ajuste del ancho de columnas para visualizaciones intermedios y acomodo de componentes.                                                                               |
+| **Desktop**     | Desde 1024 px (`--breakpoint-desktop`) | Contenedor de contenido distribuido uniformemente (hasta 1200px) con el uso completo del ritmo espacial dictado por el sistema, como separaciones de `64px` o `80px`. |
 
 ---
 
