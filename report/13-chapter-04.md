@@ -532,79 +532,115 @@ El desarrollo del prototipo de la aplicación web se realizó considerando una n
 
 ### 4.6.1. Design-Level Event Storming.
 
-En esta sección se elaboró el diseño de los Bounded Contexts (BC) y sus conexiones dentro
-del sistema.
+En esta sección se elaboró el diseño de los Bounded Contexts (BC) y sus conexiones dentro del sistema. El objetivo del Design-Level Event Storming fue identificar los límites funcionales principales de ColdTrace, separar responsabilidades y justificar por qué cada contexto debe evolucionar de manera independiente dentro de la arquitectura.
 
-1. Gestión de cuenta
-Este contexto gestiona el acceso de los usuarios al sistema mediante el inicio y cierre de
-sesión. Se encarga de validar credenciales, controlar sesiones activas y generar eventos como
-usuario autenticado o sesión iniciada/cerrada.
+#### Gestión de cuenta
 
-![BC1 Tabla](./assets/chapter-04/boundedcontext/Bounded Context Final Final - Frame 1.jpg)
+Este contexto gestiona el acceso de los usuarios al sistema mediante autenticación, registro, recuperación de credenciales, administración de perfiles y niveles de acceso. Se encarga de validar credenciales, controlar sesiones activas y generar eventos como usuario autenticado, sesión iniciada, sesión bloqueada o contraseña restablecida.
 
-Se separa este contexto porque la seguridad es un aspecto crítico y transversal en cualquier
-sistema. Se reduce el riesgo de accesos no autorizados, además de facilitar la implementación
-de mecanismos avanzados como OAuth, JWT o autenticación multifactor. Nos permite
-separar la lógica del proceso de seguridad con la del negocio principal y permite darle
-mantenimiento al módulo de forma independiente.
+<p align="center">
+  <img src="assets/chapter-04/boundedcontext/BCT1" width="760" alt="Bounded Context Canvas - Gestión de cuenta">
+  <br>
+  <em>Figura 4.6.1.1. Bounded Context Canvas de Gestión de cuenta.</em>
+</p>
 
-2. Conexión a infraestructura
+<p align="center">
+  <img src="assets/chapter-04/boundedcontext/Bounded Context Final Final - Gestion de cuenta - Storytelling.jpg" width="900" alt="Storytelling - Gestión de cuenta">
+  <br>
+  <em>Figura 4.6.1.2. Storytelling del contexto de Gestión de cuenta.</em>
+</p>
 
+Se separa este contexto porque la seguridad es un aspecto crítico y transversal. Esta delimitación reduce el riesgo de accesos no autorizados, facilita la implementación de mecanismos como OAuth, JWT o autenticación multifactor y evita mezclar la lógica de identidad con la lógica operativa del monitoreo de cadena de frío.
 
-Este contexto administra todo el ciclo de vida de los sensores: registro, configuración,
-activación y vinculación con activos. Además, define parámetros clave como rangos de
-temperatura, humedad y frecuencia de medición.
-Se separa este contexto porque la configuración de sensores define el comportamiento del
-sistema. Al aislarlo se reducen errores por parámetros mal definidos, se permite modificar
-reglas sin afectar otros contextos y se facilita la reutilización en otros sistemas IoT.
+#### Conexión a infraestructura
 
-3. Monitoreo en tiempo real
+Este contexto administra el ciclo de vida de sensores, gateways y activos físicos: registro, configuración, activación, vinculación con cámaras o unidades de transporte, definición de rangos de temperatura y humedad, y verificación de calibración.
 
+<p align="center">
+  <img src="assets/chapter-04/boundedcontext/Bounded Context Final Final - Frame 2 (1).jpg" width="760" alt="Bounded Context Canvas - Conexión a infraestructura">
+  <br>
+  <em>Figura 4.6.1.3. Bounded Context Canvas de Conexión a infraestructura.</em>
+</p>
 
-Es el núcleo del sistema. Aquí se reciben las mediciones del sensor, se registran, validan y se
-verifica si están dentro o fuera de los rangos definidos. Finalmente, las mediciones se
-almacenan.
-Se separa este contexto porque es el proceso principal del negocio, permitiendo manejar alta
-carga de datos en tiempo real, enfocándonos en la eficacia con poco desgaste de memoria,
-además de la posibilidad de conexión a la nube. Además, podemos manejar los datos de
-forma independiente a su visualización.
+Se separa este contexto porque la configuración de sensores define el comportamiento base del sistema. Al aislarlo, se reducen errores por parámetros mal definidos, se permite modificar reglas de vinculación o calibración sin afectar otros contextos y se facilita la reutilización de la integración IoT en futuras extensiones del producto.
 
-4. Gestión de alertas
+#### Monitoreo en tiempo real
 
+Este contexto representa el núcleo operativo de ColdTrace. Recibe mediciones de temperatura y humedad, valida la estructura de los datos, descarta lecturas erróneas, registra mediciones en el historial y verifica si los valores se encuentran dentro o fuera de los rangos definidos.
 
-Se encarga de generar notificaciones cuando una medición está fuera de los rangos
-establecidos. También gestiona la visualización de alertas en el sistema.
+<p align="center">
+  <img src="assets/chapter-04/boundedcontext/Bounded Context Final Final - Frame 3.jpg" width="760" alt="Bounded Context Canvas - Monitoreo en tiempo real">
+  <br>
+  <em>Figura 4.6.1.4. Bounded Context Canvas de Monitoreo en tiempo real.</em>
+</p>
 
+<p align="center">
+  <img src="assets/chapter-04/boundedcontext/Bounded Contexts - Monitoreo en tiempo real - Storytelling.jpg" width="900" alt="Storytelling - Monitoreo en tiempo real">
+  <br>
+  <em>Figura 4.6.1.5. Storytelling del contexto de Monitoreo en tiempo real.</em>
+</p>
 
-Se separa este contexto porque es el proceso principal del negocio. Este contexto permite
-implementar APIs especializadas para el manejo de mensajes, además de no sobrecargar el
-contexto de monitoreo.
+Se separa este contexto porque concentra la recepción y validación de datos en tiempo real. Esto permite gestionar cargas frecuentes de telemetría, mantener la lógica de validación cerca del dato recibido y evitar que los módulos de alertas, reportes o auditoría dependan directamente del procesamiento crudo de sensores.
 
-5. Cumplimiento con auditoría
-Este contexto controla el cumplimiento del sistema mediante auditorías. Permite iniciar
-auditorías, registrar resultados, validar cumplimiento y generar evidencias exportables.
-Se separa este contexto porque la auditoría responde a necesidades de control y
-cumplimiento, enfocándonos más en el proceso de normativas con respecto a los datos ya
+#### Gestión de alertas
 
+Este contexto genera notificaciones cuando una medición se encuentra fuera de los rangos establecidos. También gestiona la visualización de alertas, el reconocimiento por parte del responsable de turno, el escalamiento de criticidad, la documentación de acciones correctivas y el cierre de incidencias.
 
-procesados, permitiendo que pueda evolucionar hacia automatización completa sin impactar
-otros contextos.
+<p align="center">
+  <img src="assets/chapter-04/boundedcontext/Bounded Context Final Final - Frame 4.jpg" width="760" alt="Bounded Context Canvas - Gestión de alertas">
+  <br>
+  <em>Figura 4.6.1.6. Bounded Context Canvas de Gestión de alertas.</em>
+</p>
 
-6. Generación de reportes
+<p align="center">
+  <img src="assets/chapter-04/boundedcontext/Bounded Context Final Final - Gestion de alertas - Storytelling.jpg" width="900" alt="Storytelling - Gestión de alertas">
+  <br>
+  <em>Figura 4.6.1.7. Storytelling del contexto de Gestión de alertas.</em>
+</p>
 
+Se separa este contexto porque la atención de alertas requiere reglas, prioridades y canales de comunicación propios. Al aislarlo, se pueden integrar servicios externos de correo, SMS o mensajería sin sobrecargar el contexto de monitoreo, manteniendo trazabilidad clara sobre cada incidencia.
 
-Gestiona la generación, visualización y exportación de reportes. Incluye dashboards, historial
-de mediciones y visualización en tiempo real.
-Se separa este contexto porque el análisis de datos tiene necesidades distintas al
-procesamiento y/o al análisis para la auditoría, permitiendo independencia ante otros
-módulos.
-Unión de Bounded Contexts
+#### Cumplimiento con auditoría
 
+Este contexto controla el cumplimiento del sistema mediante auditorías. Permite iniciar casos de auditoría, registrar resultados, validar criterios de cumplimiento, generar hallazgos y consolidar evidencias exportables para sustentar inspecciones internas o externas.
 
-Link del Miro donde fue diseñado:
-https://miro.com/app/board/uXjVHcNg7-M=/?share_link_id=9598536361 19
-Este diagrama muestra la integración y comunicación entre los diferentes Bounded Contexts,
-evidenciando las relaciones y dependencias dentro del sistema.
+<p align="center">
+  <img src="assets/chapter-04/boundedcontext/Bounded Context Final Final - Frame 5.jpg" width="760" alt="Bounded Context Canvas - Cumplimiento con auditoría">
+  <br>
+  <em>Figura 4.6.1.8. Bounded Context Canvas de Cumplimiento con auditoría.</em>
+</p>
+
+Se separa este contexto porque la auditoría responde a necesidades de control, evidencia y cumplimiento normativo. Trabaja sobre datos ya procesados y reportes consolidados, por lo que puede evolucionar hacia automatización de validaciones sin impactar el flujo operativo de monitoreo o alertas.
+
+#### Generación de reportes
+
+Este contexto gestiona la generación, visualización, programación y exportación de reportes. Incluye dashboards, historial de mediciones, gráficos, análisis de tendencias, reportes de cumplimiento y documentos exportables.
+
+<p align="center">
+  <img src="assets/chapter-04/boundedcontext/Bounded Context Final Final - Frame 6.jpg" width="760" alt="Bounded Context Canvas - Generación de reportes">
+  <br>
+  <em>Figura 4.6.1.9. Bounded Context Canvas de Generación de reportes.</em>
+</p>
+
+<p align="center">
+  <img src="assets/chapter-04/boundedcontext/Bounded Context Final Final - Generación de reportes - Storytelling.jpg" width="900" alt="Storytelling - Generación de reportes">
+  <br>
+  <em>Figura 4.6.1.10. Storytelling del contexto de Generación de reportes.</em>
+</p>
+
+Se separa este contexto porque el análisis y la presentación de datos tienen necesidades distintas al procesamiento de telemetría. Esta separación permite optimizar consultas históricas, exportación de documentos y generación de visualizaciones sin afectar la captura de mediciones en tiempo real.
+
+#### Unión de Bounded Contexts
+
+El siguiente diagrama muestra la integración y comunicación entre los diferentes Bounded Contexts, evidenciando las relaciones y dependencias principales dentro del sistema.
+
+<p align="center">
+  <img src="assets/chapter-04/boundedcontext/Bounded Context Final Final - Frame 7.jpg" width="900" alt="Unión de Bounded Contexts">
+  <br>
+  <em>Figura 4.6.1.11. Unión de Bounded Contexts de ColdTrace.</em>
+</p>
+
+El tablero de diseño se encuentra disponible en Miro: <https://miro.com/app/board/uXjVHcNg7-M=/?share_link_id=9598536361>.
 
 
 ### 4.6.2. Software Architecture Context Diagram.
