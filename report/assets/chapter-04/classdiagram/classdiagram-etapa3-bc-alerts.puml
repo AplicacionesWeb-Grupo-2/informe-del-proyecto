@@ -1,0 +1,139 @@
+@startuml
+
+title Stage 3 - Alerts Context
+caption Identification of Aggregates, Entities and Value Objects. Only classes defined in the previous stages are used.
+
+skinparam classAttributeIconSize 0
+skinparam packageStyle rectangle
+skinparam nodesep 45
+skinparam ranksep 55
+left to right direction
+hide empty members
+
+package "Alerts Context" #FCF3CF {
+  class AlertRule <<Aggregate>> #FADBD8 {
+    - id: AlertRuleId
+    - sensorId: SensorId
+    - assetId: AssetId
+    - alertType: AlertType
+    - severity: AlertSeverity
+    - minimumDurationSeconds: int
+    - active: bool
+    + evaluates(evaluation: MeasurementEvaluationSnapshot): bool
+    + activate(): void
+    + deactivate(): void
+  }
+
+  class Alert <<Aggregate>> #FADBD8 {
+    - id: AlertId
+    - organizationId: OrganizationId
+    - alertRuleId: AlertRuleId
+    - assetId: AssetId
+    - sensorId: SensorId
+    - measurementId: MeasurementId
+    - type: AlertType
+    - severity: AlertSeverity
+    - status: AlertStatus
+    - generatedAt: DateTime
+    - acknowledgedByUserId: UserId?
+    - acknowledgedAt: DateTime
+    + acknowledge(userId: UserId): void
+    + escalate(): void
+    + close(): void
+  }
+
+  class EscalationPolicy <<Aggregate>> #FADBD8 {
+    - id: EscalationPolicyId
+    - organizationId: OrganizationId
+    - severity: AlertSeverity
+    - timeoutMinutes: int
+    - targetRoleId: RoleId
+    + shouldEscalate(alert: Alert, now: DateTime): bool
+  }
+
+  class ThermalIncident <<Entity>> {
+    - id: IncidentId
+    - alertId: AlertId
+    - assignedUserId: UserId
+    - status: IncidentStatus
+    - openedAt: DateTime
+    - closedAt: DateTime
+    - summary: string
+    + assignTo(userId: UserId): void
+    + close(action: CorrectiveAction): void
+  }
+
+  class CorrectiveAction <<Entity>> {
+    - id: CorrectiveActionId
+    - incidentId: IncidentId
+    - performedByUserId: UserId
+    - description: string
+    - evidenceUri: Uri
+    - stabilityConfirmed: bool
+    - performedAt: DateTime
+    + confirmStability(): void
+    + attachEvidence(evidenceUri: Uri): void
+  }
+
+  class Notification <<Entity>> {
+    - id: NotificationId
+    - alertId: AlertId
+    - recipientUserId: UserId
+    - channel: NotificationChannelType
+    - status: NotificationStatus
+    - sentAt: DateTime
+    + markSent(): void
+    + markFailed(reason: string): void
+  }
+
+  class MeasurementEvaluationSnapshot <<ValueObject>> #FCF3CF {
+    - measurementId: MeasurementId
+    - assetId: AssetId
+    - sensorId: SensorId
+    - kind: AlertMeasurementKind
+    - value: decimal
+    - result: AlertEvaluationResult
+    - capturedAt: DateTime
+    + isCritical(): bool
+  }
+
+  interface NotificationChannel <<DomainService>> #D5F5E3 {
+    + send(notification: Notification): bool
+    + getChannelType(): NotificationChannelType
+  }
+
+  class EmailChannel <<DomainService>> #D5F5E3 {
+    + send(notification: Notification): bool
+    + getChannelType(): NotificationChannelType
+  }
+
+  class PushChannel <<DomainService>> #D5F5E3 {
+    + send(notification: Notification): bool
+    + getChannelType(): NotificationChannelType
+  }
+
+  class MessagingChannel <<DomainService>> #D5F5E3 {
+    + send(notification: Notification): bool
+    + getChannelType(): NotificationChannelType
+  }
+
+  Alert "1" o-- "0..1" ThermalIncident
+  ThermalIncident "1" o-- "*" CorrectiveAction
+  Alert "1" o-- "*" Notification
+  AlertRule ..> MeasurementEvaluationSnapshot
+  AlertRule ..> Alert
+  EscalationPolicy ..> Alert
+  Notification ..> NotificationChannel
+  EmailChannel ..|> NotificationChannel
+  PushChannel ..|> NotificationChannel
+  MessagingChannel ..|> NotificationChannel
+}
+
+legend right
+  Red: Aggregate root
+  White: Entity
+  Yellow: Value Object
+  Green: Domain Service or delivery strategy
+endlegend
+
+@enduml

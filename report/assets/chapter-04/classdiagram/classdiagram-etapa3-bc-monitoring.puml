@@ -1,0 +1,79 @@
+@startuml
+
+title Stage 3 - Monitoring Context
+caption Identification of Aggregates, Entities and Value Objects. Only classes defined in the previous stages are used.
+
+skinparam classAttributeIconSize 0
+skinparam packageStyle rectangle
+skinparam nodesep 45
+skinparam ranksep 55
+left to right direction
+hide empty members
+
+package "Monitoring Context" #D5F5E3 {
+  abstract class Measurement <<Aggregate>> #FADBD8 {
+    # id: MeasurementId
+    # sensorId: SensorId
+    # assetId: AssetId
+    # capturedAt: DateTime
+    # receivedAt: DateTime
+    # status: MeasurementStatus
+    + {abstract} getKind(): MeasurementKind
+    + markInvalid(reason: string): void
+  }
+
+  class OfflineSyncBatch <<Aggregate>> #FADBD8 {
+    - id: OfflineSyncBatchId
+    - edgeGatewayId: EdgeGatewayId
+    - receivedAt: DateTime
+    - recordCount: int
+    - discardedCount: int
+    - status: OfflineSyncStatus
+    + registerAcceptedRecord(): void
+    + registerDiscardedRecord(): void
+  }
+
+  class TemperatureReading <<Entity>> {
+    - valueCelsius: decimal
+    + toFahrenheit(): decimal
+    + evaluate(range: TemperatureRange): RangeEvaluation
+    + getKind(): MeasurementKind
+  }
+
+  class HumidityReading <<Entity>> {
+    - valuePercentage: decimal
+    + evaluate(range: HumidityRange): RangeEvaluation
+    + getKind(): MeasurementKind
+  }
+
+  class ConnectivitySnapshot <<Entity>> {
+    - id: ConnectivitySnapshotId
+    - sensorId: SensorId
+    - edgeGatewayId: EdgeGatewayId
+    - status: ConnectivityStatus
+    - checkedAt: DateTime
+    + isOnline(): bool
+  }
+
+  class RangeEvaluation <<Entity>> {
+    - id: RangeEvaluationId
+    - measurementId: MeasurementId
+    - result: RangeEvaluationResult
+    - evaluatedAt: DateTime
+    - reason: string
+    + isOutOfRange(): bool
+  }
+
+  Measurement <|-- TemperatureReading
+  Measurement <|-- HumidityReading
+  Measurement "1" o-- "0..1" RangeEvaluation
+  OfflineSyncBatch "1" o-- "*" Measurement
+}
+
+legend right
+  Red: Aggregate root
+  White: Entity
+  Yellow: Value Object
+endlegend
+
+@enduml

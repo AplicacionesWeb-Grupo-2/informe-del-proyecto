@@ -1,0 +1,59 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title Component Diagram - ColdTrace - Account & Access Context
+caption Internal components for account, access control, session handling, and subscription status.
+
+LAYOUT_WITH_LEGEND()
+LAYOUT_LEFT_RIGHT()
+
+Container(api_gateway, "API Gateway", "ASP.NET Core / C#", "Routes account and access requests from the web application.")
+System_Ext(email, "Email Service", "External provider for password recovery and account notifications.")
+System_Ext(payments, "Payment Gateway", "External processor for subscription checkout and payment status.")
+
+Container_Boundary(account, "Account & Access Context API") {
+    Component(account_controller, "Account Controller", "ASP.NET Core Controller", "Registration, login, logout, password recovery, and profile endpoints.")
+    Component(payment_webhook_controller, "Payment Webhook Controller", "ASP.NET Core Controller", "Receives subscription status updates from the payment gateway.")
+
+    Component(identity_service, "Identity Application Service", "Application Service", "Coordinates registration, credential validation, session creation, and password recovery.")
+    Component(profile_service, "Profile & Permission Service", "Application Service", "Manages profile data, roles, permissions, and access decisions.")
+    Component(subscription_service, "Subscription Service", "Application Service", "Tracks active plans and subscription status for organization accounts.")
+
+    Component(token_service, "Token Service", "Domain Service", "Issues and validates JWT access tokens and session claims.")
+    Component(password_policy, "Password Policy", "Domain Service", "Validates password rules and recovery token expiration.")
+
+    Component(account_repo, "Account Repository", "EF Core Repository", "Persists users, roles, permissions, sessions, and recovery tokens.")
+    Component(subscription_repo, "Subscription Repository", "EF Core Repository", "Persists subscription state and payment references.")
+
+    Component(email_adapter, "Email Adapter", "External Adapter", "Sends account and password recovery messages.")
+    Component(payment_adapter, "Payment Adapter", "External Adapter", "Starts checkout and queries payment status.")
+    Component(account_events, "Account Event Publisher", "Integration Events", "Publishes account-created and subscription-updated events.")
+}
+
+ContainerDb(account_db, "Account & Access Database", "MySQL", "Users, profiles, roles, permissions, sessions, subscription status, and recovery tokens.")
+
+Rel(api_gateway, account_controller, "Routes account requests", "HTTPS / JSON")
+Rel(payments, payment_webhook_controller, "Posts payment callbacks", "HTTPS / Webhook")
+
+Rel(account_controller, identity_service, "Executes account commands")
+Rel(account_controller, profile_service, "Queries profile and permissions")
+Rel(account_controller, subscription_service, "Queries subscription status")
+Rel(payment_webhook_controller, subscription_service, "Updates subscription status")
+
+Rel(identity_service, token_service, "Issues and validates tokens")
+Rel(identity_service, password_policy, "Validates password and recovery rules")
+Rel(identity_service, account_repo, "Reads / writes accounts")
+Rel(profile_service, account_repo, "Reads / writes profile and access data")
+Rel(subscription_service, subscription_repo, "Reads / writes subscription data")
+
+Rel(identity_service, email_adapter, "Requests account email")
+Rel(subscription_service, payment_adapter, "Starts checkout or checks status")
+Rel(identity_service, account_events, "Publishes account lifecycle events")
+Rel(subscription_service, account_events, "Publishes subscription events")
+
+Rel(account_repo, account_db, "Reads / writes", "EF Core")
+Rel(subscription_repo, account_db, "Reads / writes", "EF Core")
+Rel(email_adapter, email, "Sends email", "SMTP / REST API")
+Rel(payment_adapter, payments, "Processes payment flow", "REST / HTTPS")
+
+@enduml
