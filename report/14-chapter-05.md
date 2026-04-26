@@ -4,131 +4,128 @@
 
 ### 5.1.1. Software Development Environment Configuration
 
-[contenido pendiente]
+Para asegurar la homogeneidad y evitar conflictos de compatibilidad entre los desarrolladores del equipo, considerando que el proyecto está construido con tecnologías web nativas, se ha estandarizado la siguiente pila tecnológica y entorno de desarrollo:
 
-### [Herramienta 1]
+### Sistema Operativo
 
-[pendiente]
+Windows 10/11, macOS o distribuciones Linux basadas en Debian/Ubuntu.
 
-[link pendiente]
+[Windows 10/11](https://www.microsoft.com/es-es/software-download/windows10%20)
+[MacOs](https://www.apple.com/la/os/macos/)
+[Ubuntu](https://ubuntu.com/download)
 
-[imagen pendiente]
+
+![](./assets/chapter-05/development_environment/MacOs.jpg)
+![](./assets/chapter-05/development_environment/Windows10.png)
+![](./assets/chapter-05/development_environment/Ubuntu.png)
+
+### Tecnologias Base
+
+HTML5, CSS3 y JavaScript (ES6+ puro / Vanilla JS). El proyecto no depende de marcos de trabajo (_frameworks_) ni librerías externas complejas para la interfaz de usuario, priorizando el rendimiento nativo.
+
+[HTML5](https://lenguajehtml.com/)
+[JavaScript](https://lenguajejs.com/javascript/)
+
+![](./assets/chapter-05/Html.png)
+![](./assets/chapter-05/Js.png)
+
+### Gestor de Paquetes
+
+**npm** (Node Package Manager). Se utiliza para administrar dependencias del entorno de desarrollo (como herramientas de formateo) definidas en el archivo `package.json`.
+
+[npm](https://www.npmjs.com/)
+
+![](./assets/chapter-05/npm.png)
+
+### Sistema de Control de Versiones
+
+Git (versión 2.30 o superior) instalado localmente para el control de cambios distribuidos.
+
+[Git]([https://www.npmjs.com/](https://git-scm.com/))
+
+![](./assets/chapter-05/git.png)
 
 
 ### 5.1.2. Source Code Management
 
-[contenido pendiente]
+Para la gestión del código fuente, el equipo utiliza **Git** de forma local y **GitHub** como repositorio remoto.
 
 Los repositorios usados fueron:
 
-- Repositorio del proyecto: [pendiente]
-- Repositorio de la landing page: [pendiente]
-
-[contenido pendiente]
+- Repositorio del proyecto: [https://github.com/AplicacionesWeb-Grupo-2/informe-del-proyecto.git](https://github.com/AplicacionesWeb-Grupo-2/informe-del-proyecto.git)
+- Repositorio de la landing page: [https://github.com/mauricio-pajes/landing-page-test](https://www.google.com/search?q=https://github.com/mauricio-pajes/landing-page-test)
 
 ### Workflow de Control de Versiones
 
-[contenido pendiente]
-
-Las ramas identificadas en el repositorio son:
-
-- **main**: [pendiente]
-- **feature/**: [pendiente]
-
-[imagen pendiente]
+Se ha seleccionado el flujo de trabajo **GitFlow**, el cual permite aislar el desarrollo de nuevas funcionalidades y mantener una versión estable del software en producción.
 
 ### Convenciones de Ramas
 
-[contenido pendiente]
+Las ramas identificadas en el repositorio son:
 
-- [pendiente]
+- **main**: Contiene el código fuente en estado de producción. Cada integración (_merge_) en esta rama representa una versión estable.
+- **develop:** Rama principal de integración donde se consolida el código nuevo antes de pasar a producción.
+- **feature/**: Ramas temporales para desarrollar características específicas de forma aislada (ej. `feature/thermal-monitoring`).
+- **hotfix/:** Ramas de emergencia para solucionar fallos críticos en producción.
 
 ### Conventional Commits
 
-[contenido pendiente]
+Se adoptó el estándar de _Conventional Commits_ para mantener un historial de cambios legible:
 
-[imagen pendiente]
-
-Los tipos de commits utilizados incluyen:
-
-- **feat**: [pendiente]
-- **docs**: [pendiente]
-- **fix**: [pendiente]
-- **chore**: [pendiente]
+- **feat:** Una nueva funcionalidad para el usuario.
+- **fix:** Corrección de un error en el código.
+- **docs:** Cambios únicamente en la documentación.
+- **chore:** Tareas de mantenimiento o cambios en herramientas de desarrollo.
 
 ### 5.1.3. Source Code Style Guide & Conventions
 
-[contenido pendiente]
+Para mantener un código limpio y escalable en el proyecto basado en Vanilla JS, se adoptan las siguientes guías de estilo:
 
 #### Naming conventions
 
-[contenido pendiente]
-
-Ejemplos del proyecto:
-
-- [pendiente]
+- **Archivos:** Convención `kebab-case` (ej. `scroll-reveal.js`).
+- **Variables/Funciones:** Formato `camelCase` (ej. `getSensorData`).    
+- **Ejemplo del proyecto:** `const updateLanguage = (lang) => { ... }` en `i18n.js`.
 
 #### CSS Style Guide
 
-[contenido pendiente]
+Se utiliza una arquitectura **CSS Modular**, dividiendo el diseño en archivos base (`reset.css`, `layout.css`) y específicos por componente (`hero.css`, `features.css`).
+
+- **Variables CSS:** Centralizadas en `variables.css`.
 
 ```css
 :root {
-  --color-primary: [pendiente];
+  --color-primary: #1a73e8;
+  --color-secondary: #f8f9fa;
 }
 ```
-
-[pendiente]
-
-#### JavaScript Conventions
-
-[contenido pendiente]
-
-```js
-// [pendiente]
-```
-
-[pendiente]
 
 #### Internacionalización (i18n)
 
-[contenido pendiente]
+Los textos se gestionan externamente en formato JSON dentro de `/assets/locales/` usando códigos estándar.
+
+- **Ejemplo (es-419.json):**
 
 ```json
 {
-  "[pendiente]": "[pendiente]"
+  "HERO_TITLE": "Monitoreo Térmico Inteligente",
+  "NAV_FEATURES": "Características"
 }
 ```
 
-[pendiente]
-
 ### 5.1.4. Software Deployment Configuration
 
-[contenido pendiente]
+El despliegue (_deployment_) se realiza hacia **GitHub Pages** mediante un flujo automatizado.
 
 ### Configuración del despliegue de la Landing Page
 
-1. [pendiente]
+El proceso se gestiona a través del archivo `.github/workflows/static.yml`, el cual automatiza las siguientes etapas:
 
-[imagen pendiente]
+1. **Carga de Artefactos:** El sistema identifica los archivos estáticos en la raíz y la carpeta `/assets`.
 
-2. [pendiente]
+2. **Ejecución del Despliegue:** Utiliza la acción oficial `actions/deploy-pages` para publicar el sitio.
 
-[imagen pendiente]
-
-3. [pendiente]
-
-[imagen pendiente]
-
-[contenido pendiente]
-
-### Validación del despliegue
-
-[contenido pendiente]
-
-- [pendiente]
-
-[contenido pendiente]
+3. **Validación:** Se verifica la disponibilidad del sitio en la URL asignada por GitHub para confirmar la correcta carga de scripts y estilos.
 
 ## 5.2. Landing Page, Services & Applications Implementation
 
