@@ -1417,7 +1417,33 @@ La implementación formal del RESTful API con Spring Boot será abordada en el S
 
 #### 5.2.2.7. Software Deployment Evidence for Sprint Review
 
+Durante el Sprint 2 se realizó el despliegue de los componentes web principales de ColdTrace para validar la solución en un entorno accesible por el equipo. La Frontend Web Application fue publicada en Vercel, mientras que el servicio provisional de datos basado en `json-server` fue desplegado en Render. Esta configuración permitió revisar los flujos implementados desde una URL pública y consumir datos de prueba desde un backend hospedado de forma independiente.
 
+**Pasos realizados para el despliegue:**
+
+1. Se desplegó la Frontend Web Application de ColdTrace en Vercel, generando un entorno de producción con estado `Ready` y dominio público asignado.
+
+2. Se verificó que el dominio de producción del frontend apunte correctamente a la aplicación publicada: [https://coldtrace-frontend-web.vercel.app/](https://coldtrace-frontend-web.vercel.app/).
+
+3. Se desplegó el backend provisional con `json-server` en Render como Web Service, exponiendo los recursos simulados requeridos por la aplicación para el Sprint Review.
+
+4. Se verificó que el servicio de Render se encuentre activo y disponible desde el enlace público: [https://coldtrace-app-web-json-server.onrender.com/](https://coldtrace-app-web-json-server.onrender.com/).
+
+5. Se validó que el `json-server` exponga las rutas de datos utilizadas por ColdTrace, incluyendo `sensor-readings`, `incidents`, `maintenance-schedules`, `technical-service-requests`, `notifications` y `reports`.
+
+**URL de despliegue del frontend:**
+[https://coldtrace-frontend-web.vercel.app/](https://coldtrace-frontend-web.vercel.app/)
+
+**URL de despliegue del json-server:**
+[https://coldtrace-app-web-json-server.onrender.com/](https://coldtrace-app-web-json-server.onrender.com/)
+
+A continuación se presenta la evidencia del despliegue del frontend en Vercel y del servicio `json-server` en Render:
+
+![Vercel Frontend Deployment](assets/chapter-05/sprint-02/Vercel-Frontend-Deployment.jpeg)
+*Figura 5.2.2.7.1: Despliegue de producción de la Frontend Web Application de ColdTrace en Vercel, con estado Ready y dominio coldtrace-frontend-web.vercel.app.*
+
+![Json Server Deployment](assets/chapter-05/sprint-02/Json-server-deployment.jpeg)
+*Figura 5.2.2.7.2: Despliegue del servicio json-server de ColdTrace en Render, con el servicio activo y las rutas de datos disponibles para la aplicación.*
 
 
 #### 5.2.2.8. Team Collaboration Insights during Sprint
