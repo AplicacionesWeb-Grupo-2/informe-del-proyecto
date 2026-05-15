@@ -622,7 +622,15 @@ Los aspectos principales del Sprint 2 fueron los siguientes:
 
 #### 5.2.2.3. Sprint Backlog 2
 
-El objetivo principal del Sprint 2 fue implementar y desplegar la primera versión completa de la Frontend Web Application de ColdTrace, habilitando los flujos de autenticación, gestión de activos, monitoreo operacional y consulta de reportes de cumplimiento. 
+El objetivo principal del Sprint 2 fue implementar y desplegar la primera versión completa de la Frontend Web Application de ColdTrace, habilitando los flujos de autenticación, gestión de activos, monitoreo operacional y consulta de reportes de cumplimiento. El equipo gestiono mediante el Sprint Backlog medinate Linear App, organizando las tareas por epica y bounded context.
+
+A continuacion se presenta una captura del backlog gestionado en Linear App:
+
+![Sprint Backlog 2 Screenshoot](assets/chapter-05/sprint-02/backlog-sprint-2.jpeg)
+*Figura 5.2.2.3.1: Sprint Backlog del Sprint 2 en Linear App*
+
+
+A continuacion se presenta la tabla del sprint.
 
 <table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; text-align: center;">
   <tr>
