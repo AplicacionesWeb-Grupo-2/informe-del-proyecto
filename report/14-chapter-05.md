@@ -1017,6 +1017,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <th>Branch</th>
     <th>Commit Id</th>
     <th>Commit Message</th>
+    <th>Commit Message Body</th>
     <th>Committed on (Date)</th>
   </tr>
   <tr>
@@ -1024,6 +1025,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/develop">develop</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/3dcccff">3dcccff</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/3dcccff">Initial commit</a></td>
+    <td>Set up base project structure with Vue 3, Vite and initial routing configuration.</td>
     <td>14/05/2026</td>
   </tr>
   <tr>
@@ -1031,6 +1033,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/indentity-access">feature/indentity-access</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/710190b">710190b</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/710190b">feat(indentity-access): Implementing the sign up page and users creation logic</a></td>
+    <td>Added sign-up form view, user entity, assembler and POST endpoint integration for new account registration.</td>
     <td>14/05/2026</td>
   </tr>
   <tr>
@@ -1038,6 +1041,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/develop">develop</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/ddfbfa8">ddfbfa8</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/ddfbfa8">Merge pull request #1 from AplicacionesWeb-Grupo-2/feature/indentity-access</a></td>
+    <td>Merged sign-up implementation into develop branch.</td>
     <td>14/05/2026</td>
   </tr>
   <tr>
@@ -1045,6 +1049,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/indentity-access">feature/indentity-access</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/a88797e">a88797e</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/a88797e">feat(indentity-access): Implementing the sign in page and users authentication logic</a></td>
+    <td>Added sign-in view with credential validation, session persistence via localStorage and redirect to dashboard on success.</td>
     <td>14/05/2026</td>
   </tr>
   <tr>
@@ -1052,6 +1057,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/indentity-access">feature/indentity-access</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/ebfceac">ebfceac</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/ebfceac">feat(indentity-acces): adding the list all users by organization</a></td>
+    <td>Implemented user list filtered by organization ID, including table view and GET endpoint consumption.</td>
     <td>14/05/2026</td>
   </tr>
   <tr>
@@ -1059,6 +1065,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/indentity-access">feature/indentity-access</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/2791042">2791042</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/2791042">feat(indentity-acces): adding role management and creation of new users for the organization</a></td>
+    <td>Added roles and permissions management view, role assignment per user and new user creation form scoped to organization.</td>
     <td>14/05/2026</td>
   </tr>
   <tr>
@@ -1066,6 +1073,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/develop">develop</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/2e4127a">2e4127a</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/2e4127a">Merge pull request #2 from AplicacionesWeb-Grupo-2/feature/indentity-access</a></td>
+    <td>Merged complete identity and access bounded context into develop.</td>
     <td>14/05/2026</td>
   </tr>
   <tr>
@@ -1073,6 +1081,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/asset-management">feature/asset-management</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/0ebdcda">0ebdcda</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/0ebdcda">feat(asset-management): adding the creation and list of assets (cold rooms and transports).</a></td>
+    <td>Implemented cold room and transport unit registration forms and list views with status indicators and organization filtering.</td>
     <td>14/05/2026</td>
   </tr>
   <tr>
@@ -1080,6 +1089,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/asset-management">feature/asset-management</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/53b293c">53b293c</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/53b293c">feat(asset-management): adding IoT devices and its creation</a></td>
+    <td>Added IoT device entity, assembler, API endpoint and creation form with device type, model and linked asset fields.</td>
     <td>14/05/2026</td>
   </tr>
   <tr>
@@ -1087,6 +1097,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/asset-management">feature/asset-management</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/3d44b2e">3d44b2e</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/3d44b2e">feat(asset-management): adding lists and creation of gateways</a></td>
+    <td>Implemented gateway registration form and list view with connectivity status, network type and location fields.</td>
     <td>14/05/2026</td>
   </tr>
   <tr>
@@ -1094,6 +1105,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/asset-management">feature/asset-management</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/37fd202">37fd202</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/37fd202">feat(asset-management): create settings to the paramaters of the IoT devices and assets</a></td>
+    <td>Added asset settings view with configurable temperature range, humidity threshold, calibration frequency and unit preferences per organization.</td>
     <td>14/05/2026</td>
   </tr>
   <tr>
@@ -1101,6 +1113,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/develop">develop</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/133c396">133c396</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/133c396">Merge pull request #3 from AplicacionesWeb-Grupo-2/feature/asset-management</a></td>
+    <td>Merged complete asset management bounded context into develop.</td>
     <td>14/05/2026</td>
   </tr>
   <tr>
@@ -1108,6 +1121,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/alerts">feature/alerts</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/15c2e4f">15c2e4f</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/15c2e4f">feat: Implement the alerts BoundedContext</a></td>
+    <td>Implemented alerts domain model, store, API endpoint and base UI views for incident creation, acknowledgement and corrective action registration.</td>
     <td>15/05/2026</td>
   </tr>
   <tr>
@@ -1115,6 +1129,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/monitoring">feature/monitoring</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/f573eba">f573eba</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/f573eba">feat(monitoring): sotre application implementation</a></td>
+    <td>Added monitoring application store with reactive state for sensor readings, asset status and telemetry data loading methods.</td>
     <td>15/05/2026</td>
   </tr>
   <tr>
@@ -1122,6 +1137,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/maintenance-management">feature/maintenance-management</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/c4edebe">c4edebe</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/c4edebe">feat(maintenance-management): Maintenance manegement domain update</a></td>
+    <td>Updated maintenance domain entities and enums to align with db.json structure for schedules and technical service requests.</td>
     <td>15/05/2026</td>
   </tr>
   <tr>
@@ -1129,6 +1145,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/reports">feature/reports</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/980b38e">980b38e</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/980b38e">feat: add report domain entities</a></td>
+    <td>Added Report entity class with id, organizationId, type, title, status and generatedAt fields.</td>
     <td>15/05/2026</td>
   </tr>
   <tr>
@@ -1136,6 +1153,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/reports">feature/reports</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/8e41ae2">8e41ae2</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/8e41ae2">feat: add supporting domain models and enums</a></td>
+    <td>Added ReportType and ReportStatus enums to support domain model classification for all report categories.</td>
     <td>15/05/2026</td>
   </tr>
   <tr>
@@ -1143,6 +1161,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/reports">feature/reports</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/60a2453">60a2453</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/60a2453">feat: add reports application store</a></td>
+    <td>Implemented reactive reports store with loadReports method and organization-scoped filtering.</td>
     <td>15/05/2026</td>
   </tr>
   <tr>
@@ -1150,6 +1169,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/reports">feature/reports</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/9859d2e">9859d2e</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/9859d2e">feat: implement reports API and assembler for report</a></td>
+    <td>Added ReportsApiEndpoint and ReportAssembler to map JSON server responses to Report domain entities.</td>
     <td>15/05/2026</td>
   </tr>
   <tr>
@@ -1157,6 +1177,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/reports">feature/reports</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/fac9cd1">fac9cd1</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/fac9cd1">feat: add reports UI views and routing</a></td>
+    <td>Added six report views (daily log, operational history, sanitary export, monthly download, compliance findings, audit evidence) and registered their routes.</td>
     <td>15/05/2026</td>
   </tr>
   <tr>
@@ -1164,6 +1185,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/develop">develop</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/ec92480">ec92480</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/ec92480">Merge pull request #7 from AplicacionesWeb-Grupo-2/feature/reports</a></td>
+    <td>Merged complete reports and compliance bounded context into develop.</td>
     <td>15/05/2026</td>
   </tr>
   <tr>
@@ -1171,6 +1193,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/monitoring">feature/monitoring</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/b7679b8">b7679b8</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/b7679b8">feat(monitoring): full domain model monitoring implementation</a></td>
+    <td>Completed monitoring domain with SensorReading entity, IoTDevice and Gateway domain models and their respective enums.</td>
     <td>15/05/2026</td>
   </tr>
   <tr>
@@ -1178,6 +1201,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/maintenance-management">feature/maintenance-management</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/e7132d2">e7132d2</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/e7132d2">feat(maintenance-management): Functionality design and link to domain</a></td>
+    <td>Linked maintenance UI components to domain entities and defined core interactions for schedule creation and service request flows.</td>
     <td>15/05/2026</td>
   </tr>
   <tr>
@@ -1185,13 +1209,15 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/maintenance-management">feature/maintenance-management</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/ce9881f">ce9881f</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/ce9881f">feat(maintenance-management): Domain file appearence correction</a></td>
+    <td>Fixed naming and formatting inconsistencies in maintenance domain files to match project conventions.</td>
     <td>15/05/2026</td>
   </tr>
   <tr>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/maintenance-management">feature/maintenance-management</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/bf30ad5">bf30ad5</a></td>
-    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/bf30ad5">feat(maintenance-management): User&#39;s interactive elements design</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/bf30ad5">feat(maintenance-management): User's interactive elements design</a></td>
+    <td>Added interactive UI elements for maintenance scheduling and technical service request views including status toggles and date pickers.</td>
     <td>15/05/2026</td>
   </tr>
   <tr>
@@ -1199,6 +1225,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/maintenance-management">feature/maintenance-management</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/ccf641c">ccf641c</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/ccf641c">feat(maintenance-management): Maintanance Management API implementation</a></td>
+    <td>Implemented MaintenanceApiEndpoint and assemblers for maintenance schedules and technical service requests consuming json-server endpoints.</td>
     <td>15/05/2026</td>
   </tr>
   <tr>
@@ -1206,6 +1233,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/monitoring">feature/monitoring</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/4ff7687">4ff7687</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/4ff7687">feat(monitoring): monitoring infrastructure implementation</a></td>
+    <td>Added monitoring API endpoint, assembler for sensor readings and base-api-endpoint integration for telemetry data consumption.</td>
     <td>15/05/2026</td>
   </tr>
   <tr>
@@ -1213,6 +1241,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/monitoring">feature/monitoring</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/900bbd9">900bbd9</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/900bbd9">feat(monitoring):visual monitoring components implementation</a></td>
+    <td>Implemented TemperatureChart, IncidentsChart, StorageDistribution, RecentAlerts, MaintenanceList and StatCard dashboard components.</td>
     <td>15/05/2026</td>
   </tr>
   <tr>
@@ -1220,6 +1249,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/develop">develop</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/eaa91ad">eaa91ad</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/eaa91ad">Merge pull request #8 from AplicacionesWeb-Grupo-2/feature/monitoring</a></td>
+    <td>Merged complete monitoring bounded context into develop.</td>
     <td>15/05/2026</td>
   </tr>
   <tr>
@@ -1227,6 +1257,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/develop">develop</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/ab5acb0">ab5acb0</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/ab5acb0">Merge pull request #6 from AplicacionesWeb-Grupo-2/feature/maintenance-management</a></td>
+    <td>Merged complete maintenance management bounded context into develop.</td>
     <td>15/05/2026</td>
   </tr>
   <tr>
@@ -1234,6 +1265,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/documentation">feature/documentation</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/08b793a">08b793a</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/08b793a">feat(docs): adding documentatin of user stories and class diagram</a></td>
+    <td>Added user stories documentation file and updated class diagram reflecting bounded context architecture for Sprint Review.</td>
     <td>15/05/2026</td>
   </tr>
   <tr>
@@ -1241,6 +1273,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/develop">develop</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/209f78d">209f78d</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/209f78d">Merge pull request #9 from AplicacionesWeb-Grupo-2/feature/documentation</a></td>
+    <td>Merged documentation updates into develop.</td>
     <td>15/05/2026</td>
   </tr>
   <tr>
@@ -1248,6 +1281,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/develop">develop</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/1607b9f">1607b9f</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/1607b9f">chore: stop tracking local editor settings</a></td>
+    <td>Added .idea/ and local config files to .gitignore to avoid tracking personal editor preferences.</td>
     <td>15/05/2026</td>
   </tr>
   <tr>
@@ -1255,6 +1289,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/develop">develop</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/834f28c">834f28c</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/834f28c">chore: stop tracking vscode recommendations</a></td>
+    <td>Removed .vscode/extensions.json from tracking to keep repository clean of editor-specific configuration.</td>
     <td>15/05/2026</td>
   </tr>
   <tr>
@@ -1262,13 +1297,15 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/release/1.0.0">release/1.0.0</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/3168c79">3168c79</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/3168c79">chore(release): v1.0.0</a></td>
+    <td>Tagged first production release v1.0.0 including all Sprint 2 bounded contexts: identity-access, asset-management, monitoring, alerts, reports and maintenance.</td>
     <td>15/05/2026</td>
   </tr>
   <tr>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/develop">develop</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/100e113">100e113</a></td>
-    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/100e113">Merge branch &#39;release/1.0.0&#39; into develop</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/100e113">Merge branch 'release/1.0.0' into develop</a></td>
+    <td>Integrated release/1.0.0 changes back into develop to keep branches in sync after production release.</td>
     <td>15/05/2026</td>
   </tr>
   <tr>
@@ -1276,13 +1313,15 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/develop">develop</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/da85358">da85358</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/da85358">chore: configure vercel deployment</a></td>
+    <td>Added vercel.json with SPA routing rewrites and build configuration for Vite-based Vue 3 project.</td>
     <td>15/05/2026</td>
   </tr>
   <tr>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/develop">develop</a></td>
     <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/9be865e">9be865e</a></td>
-    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/9be865e">Revert &quot;chore: configure vercel deployment&quot;</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/9be865e">Revert "chore: configure vercel deployment"</a></td>
+    <td>Reverted vercel.json configuration due to deployment conflict; deployment handled via Vercel dashboard settings instead.</td>
     <td>15/05/2026</td>
   </tr>
 </table>
@@ -1356,71 +1395,148 @@ A continuación se documentan los principales endpoints del servidor JSON que el
   <tr>
     <th>Endpoint</th>
     <th>Verb HTTP</th>
+    <th>Sintaxis de llamada</th>
+    <th>Parámetros</th>
     <th>Descripción</th>
     <th>Ejemplo de Response</th>
   </tr>
   <tr>
     <td>/assets</td>
     <td>GET</td>
-    <td>Retorna la lista de activos registrados (cámaras frigoríficas, unidades de transporte)</td>
-    <td>{ "id": "1", "name": "Cámara 01", "type": "cold_room", "status": "active" }</td>
+    <td><code>GET /assets?organizationId={id}</code></td>
+    <td><code>organizationId</code> (query, requerido): ID numérico de la organización para filtrar activos.</td>
+    <td>Retorna la lista de activos registrados (cámaras frigoríficas y unidades de transporte) filtrados por organización.</td>
+    <td><code>{ "id": "1", "name": "Cold Room 01", "type": "cold-room", "status": "active", "organizationId": 1 }</code></td>
   </tr>
   <tr>
     <td>/assets/:id</td>
     <td>GET</td>
-    <td>Retorna el detalle de un activo específico por ID</td>
-    <td>{ "id": "1", "name": "Cámara 01", "temperature": 4.2, "humidity": 78 }</td>
+    <td><code>GET /assets/{id}</code></td>
+    <td><code>id</code> (path, requerido): ID numérico del activo.</td>
+    <td>Retorna el detalle completo de un activo específico incluyendo temperatura actual, conectividad y último incidente.</td>
+    <td><code>{ "id": "1", "name": "Cold Room 01", "currentTemperature": "4.2°C", "connectivity": "online", "lastIncident": "none" }</code></td>
   </tr>
   <tr>
     <td>/assets</td>
     <td>POST</td>
-    <td>Registra un nuevo activo en la plataforma</td>
-    <td>{ "id": "5", "name": "Unidad Truck-03", "type": "transport_unit" }</td>
+    <td><code>POST /assets</code></td>
+    <td>Body JSON requerido: <code>name</code>, <code>type</code>, <code>organizationId</code>, <code>gatewayId</code>, <code>location</code>, <code>capacity</code>.</td>
+    <td>Registra un nuevo activo en la plataforma y retorna el objeto creado con su ID asignado.</td>
+    <td><code>{ "id": "28", "name": "Cold Room 21", "type": "cold-room", "status": "active" }</code></td>
+  </tr>
+  <tr>
+    <td>/assets/:id</td>
+    <td>PUT</td>
+    <td><code>PUT /assets/{id}</code></td>
+    <td><code>id</code> (path, requerido): ID del activo. Body JSON: campos a actualizar (<code>status</code>, <code>name</code>, <code>location</code>).</td>
+    <td>Actualiza los datos o estado de un activo existente. Retorna el objeto actualizado completo.</td>
+    <td><code>{ "id": "1", "name": "Cold Room 01", "status": "maintenance" }</code></td>
   </tr>
   <tr>
     <td>/gateways</td>
     <td>GET</td>
-    <td>Retorna la lista de gateways IoT registrados y su estado de conectividad</td>
-    <td>{ "id": "g1", "name": "Gateway A", "status": "connected" }</td>
+    <td><code>GET /gateways?organizationId={id}</code></td>
+    <td><code>organizationId</code> (query, requerido): ID numérico de la organización.</td>
+    <td>Retorna la lista de gateways IoT registrados con su estado de conectividad y tipo de red.</td>
+    <td><code>{ "id": "1", "uuid": "GW-001", "name": "Main Warehouse Gateway", "status": "active", "network": "LTE / Wi-Fi" }</code></td>
   </tr>
   <tr>
     <td>/iot-devices</td>
     <td>GET</td>
-    <td>Retorna la lista de sensores IoT vinculados a activos</td>
-    <td>{ "id": "s1", "assetId": "1", "type": "temperature", "lastReading": 4.2 }</td>
+    <td><code>GET /iot-devices?organizationId={id}</code></td>
+    <td><code>organizationId</code> (query, requerido): ID numérico de la organización.</td>
+    <td>Retorna la lista de sensores IoT vinculados a activos de la organización, incluyendo estado de calibración.</td>
+    <td><code>{ "id": "1", "uuid": "SN-001", "deviceType": "temperature-sensor", "status": "linked", "calibrationStatus": "compliant" }</code></td>
   </tr>
   <tr>
-    <td>/telemetry</td>
-    <td>GET</td>
-    <td>Retorna lecturas de telemetría para el dashboard operacional</td>
-    <td>{ "assetId": "1", "temperature": 4.1, "humidity": 79, "timestamp": "2026-05-12T20:00:00Z" }</td>
+    <td>/iot-devices</td>
+    <td>POST</td>
+    <td><code>POST /iot-devices</code></td>
+    <td>Body JSON requerido: <code>deviceType</code>, <code>model</code>, <code>organizationId</code>, <code>assetId</code>, <code>measurementType</code>.</td>
+    <td>Registra un nuevo dispositivo IoT y lo vincula al activo indicado. Retorna el objeto creado.</td>
+    <td><code>{ "id": "7", "uuid": "SN-007", "deviceType": "humidity-sensor", "assetId": 5, "status": "linked" }</code></td>
   </tr>
   <tr>
-    <td>/reports/daily-log</td>
+    <td>/sensor-readings</td>
     <td>GET</td>
-    <td>Retorna entradas de la bitácora diaria de operaciones</td>
-    <td>{ "date": "2026-05-12", "asset": "Cámara 01", "event": "Lectura normal", "value": 4.2 }</td>
+    <td><code>GET /sensor-readings?assetId={id}</code></td>
+    <td><code>assetId</code> (query, opcional): filtra lecturas por activo. Sin parámetro retorna todas las lecturas.</td>
+    <td>Retorna lecturas de telemetría de temperatura y humedad para el dashboard operacional, ordenadas por fecha descendente.</td>
+    <td><code>{ "id": "1", "assetId": 1, "temperature": -2, "humidity": 55, "isOutOfRange": false, "recordedAt": "2026-05-12T12:00:00.000Z" }</code></td>
   </tr>
   <tr>
-    <td>/reports/compliance</td>
+    <td>/reports</td>
     <td>GET</td>
-    <td>Retorna el reporte de cumplimiento sanitario del periodo</td>
-    <td>{ "period": "2026-05", "status": "compliant", "findings": 0 }</td>
+    <td><code>GET /reports?organizationId={id}&type={type}</code></td>
+    <td><code>organizationId</code> (query, requerido): ID de la organización. <code>type</code> (query, opcional): filtra por tipo (<code>daily-log</code>, <code>monthly</code>, <code>compliance</code>, <code>findings</code>, <code>audit-evidence</code>, <code>history</code>).</td>
+    <td>Retorna los reportes disponibles para la organización. Soporta filtrado por tipo de reporte.</td>
+    <td><code>{ "id": "1", "type": "daily-log", "title": "Daily Log - Lima Hub", "status": "ready", "generatedAt": "2026-05-12" }</code></td>
   </tr>
   <tr>
     <td>/users</td>
     <td>GET</td>
-    <td>Retorna la lista de usuarios registrados en la plataforma</td>
-    <td>{ "id": "u1", "name": "Admin", "role": "administrator" }</td>
+    <td><code>GET /users?organizationId={id}</code></td>
+    <td><code>organizationId</code> (query, requerido): ID numérico de la organización.</td>
+    <td>Retorna la lista de usuarios registrados en la organización con su rol asignado.</td>
+    <td><code>{ "id": "1", "firstName": "Mauricio", "lastName": "Pajes", "email": "mpajes@coldtrace.com", "roleId": 5 }</code></td>
+  </tr>
+  <tr>
+    <td>/users</td>
+    <td>POST</td>
+    <td><code>POST /users</code></td>
+    <td>Body JSON requerido: <code>firstName</code>, <code>lastName</code>, <code>email</code>, <code>organizationId</code>, <code>roleId</code>.</td>
+    <td>Registra un nuevo usuario en la organización. Retorna el objeto creado con UUID asignado.</td>
+    <td><code>{ "id": "9", "uuid": "USR-9", "firstName": "Ana", "lastName": "Torres", "roleId": 3 }</code></td>
   </tr>
   <tr>
     <td>/roles</td>
     <td>GET</td>
-    <td>Retorna los roles definidos en el sistema y sus permisos asociados</td>
-    <td>{ "id": "r1", "name": "operator", "permissions": ["read:assets", "read:reports"] }</td>
+    <td><code>GET /roles</code></td>
+    <td>Sin parámetros. Retorna todos los roles del sistema.</td>
+    <td>Retorna los roles definidos en el sistema con su nombre y etiqueta para la asignación a usuarios.</td>
+    <td><code>{ "id": "3", "name": "operator", "label": "Operator", "permissions": [] }</code></td>
+  </tr>
+  <tr>
+    <td>/incidents</td>
+    <td>GET</td>
+    <td><code>GET /incidents?organizationId={id}</code></td>
+    <td><code>organizationId</code> (query, requerido): ID numérico de la organización.</td>
+    <td>Retorna los incidentes registrados para la organización con severidad, estado y fecha.</td>
+    <td><code>{ "id": "1", "assetName": "Cold Room 01", "type": "High temperature", "severity": "critical", "status": "open", "date": "2026-05-10" }</code></td>
+  </tr>
+  <tr>
+    <td>/maintenance-schedules</td>
+    <td>GET</td>
+    <td><code>GET /maintenance-schedules?organizationId={id}</code></td>
+    <td><code>organizationId</code> (query, requerido): ID numérico de la organización.</td>
+    <td>Retorna los mantenimientos programados para los activos de la organización con su estado y fecha.</td>
+    <td><code>{ "id": "1", "assetName": "Cold Room 01", "task": "Compressor inspection", "status": "scheduled", "scheduledDate": "2026-05-14" }</code></td>
+  </tr>
+  <tr>
+    <td>/asset-settings</td>
+    <td>GET</td>
+    <td><code>GET /asset-settings?organizationId={id}</code></td>
+    <td><code>organizationId</code> (query, requerido): ID numérico de la organización.</td>
+    <td>Retorna la configuración operativa de la organización: rangos de temperatura, humedad máxima, frecuencia de calibración y unidades.</td>
+    <td><code>{ "id": "1", "minimumTemperature": -5, "maximumTemperature": 8, "maximumHumidity": 85, "calibrationFrequencyDays": 180 }</code></td>
+  </tr>
+  <tr>
+    <td>/asset-settings/:id</td>
+    <td>PUT</td>
+    <td><code>PUT /asset-settings/{id}</code></td>
+    <td><code>id</code> (path, requerido): ID del registro de settings. Body JSON: campos a actualizar.</td>
+    <td>Actualiza los parámetros operativos de la organización. Retorna el objeto de configuración actualizado.</td>
+    <td><code>{ "id": "1", "minimumTemperature": -3, "maximumTemperature": 6, "maximumHumidity": 80 }</code></td>
   </tr>
 </table>
 
+A continuación se la interacción con los endpoints del servidor JSON desplegado en Render:
+
+**URL del servidor JSON desplegado:** [https://coldtrace-app-web-json-server.onrender.com/](https://coldtrace-app-web-json-server.onrender.com/)
+
+**Commits relacionados con la configuración del servidor JSON:**
+- `da85358` — chore: configure vercel deployment
+- `T-43` — Vercel CI/CD & JSON Server Setup (Render deployment)
 La implementación formal del RESTful API con Spring Boot será abordada en el Sprint 3.
 
 #### 5.2.2.7. Software Deployment Evidence for Sprint Review
