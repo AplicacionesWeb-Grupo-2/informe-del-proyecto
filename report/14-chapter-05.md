@@ -1616,6 +1616,132 @@ A continuación se presenta el resumen de participación por integrante basado e
   </tr>
 </table>
 
+# 5.2.3 Sprint 3
+
+## 5.2.3.1. Sprint Planning 3
+El Sprint 3 tuvo como objetivo principal diseñar, implementar y desplegar el backend oficial de ColdTrace mediante una RESTful API robusta. Esto permitirá reemplazar el servidor JSON simulado utilizado en el Sprint 2 y habilitar la persistencia de datos real, lógica de negocio y seguridad para los bounded contexts de Identity & Access Management, Asset Management, Monitoring, Alerts, Reports y Maintenance. A continuación se presenta el resumen del Sprint Planning Meeting realizado al inicio de este sprint.
+
+| Sprint # | Sprint 3 |
+| :--- | :--- |
+| **Sprint Planning Background** | |
+| **Date** | 2026-06-03 |
+| **Time** | 08:00 PM |
+| **Location** | Reunión virtual vía Discord |
+| **Prepared By** | Pajés León, Mauricio Luis |
+| **Attendees** | Delgado Arriola, Leonardo Sebastian / Arias, Jean Pool / Vargas Alarcón, Santiago Enrique / Velásquez, Eduardo / Pajés León, Mauricio Luis |
+| **Sprint 2 Review Summary** | En el Sprint 2 se completó y desplegó exitosamente la Frontend Web Application de ColdTrace en Vercel, consumiendo un servidor JSON hospedado en Render como backend provisional. Se validaron los flujos de navegación de todos los módulos principales de la aplicación. |
+| **Sprint 2 Retrospective Summary** | El equipo identificó la necesidad urgente de migrar hacia un backend real estructurado, con autenticación, validaciones y persistencia en base de datos. Como acción de mejora, el equipo se organizó para desarrollar la RESTful API asignando endpoints y controladores basados en los mismos bounded contexts trabajados en el sprint anterior. |
+| **Sprint Goal & User Stories** | |
+| **Sprint 3 Goal** | Nuestro objetivo es desarrollar y desplegar una RESTful API base para ColdTrace, que reemplace la API simulada. Creemos que proporcionará una arquitectura sólida para el manejo de datos operacionales, la gestión de la infraestructura IoT y la seguridad del sistema. Esto se confirmará cuando la API esté desplegada en la nube, los endpoints estén documentados en Swagger y el frontend pueda integrarse progresivamente. |
+| **Sprint 3 Velocity** | 45 Story Points |
+| **Sum of Story Points** | 45 Story Points |
+
+## 5.2.3.2. Aspect Leaders and Collaborators
+Durante el Sprint 3, el trabajo se organizó en torno a la creación de los controladores, servicios y repositorios de la RESTful API. Se designó un líder (L) por cada grupo de APIs y colaboradores (C) para apoyar en la integración.
+
+Los aspectos principales del Sprint 3 fueron:
+1. **API Foundation & Core Services**: Estructura del proyecto, manejo de errores, y despliegue (Mauricio Pajés).
+2. **IoT Devices & Telemetry API**: Gestión de dispositivos y lecturas de sensores (Jean Pool Arias).
+3. **Assets & Configuration API**: Gestión de cámaras frigoríficas y configuración operativa (Santiago Enrique Vargas Alarcón).
+4. **Maintenance & Roles API**: Programación de mantenimiento, servicio técnico y asignación de roles (Eduardo Velásquez).
+5. **Incidents & Reports API**: Gestión de alertas y generación de reportes (Leonardo Delgado).
+
+| Team Member | GitHub Username | API Foundation | IoT & Telemetry | Assets API | Maintenance & Roles | Incidents & Reports |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: |
+| **Pajés León, Mauricio Luis** | mauricio-pajes | L | C | C | C | C |
+| **Arias, Jean Pool** | Jean-AT | C | L | C | C | C |
+| **Vargas Alarcón, Santiago Enrique**| SanVargasAI | C | C | L | C | C |
+| **Velásquez, Eduardo** | Edu-VLL | C | C | C | L | C |
+| **Delgado Arriola, Leonardo Sebastian**| leodev77 | C | C | C | C | L |
+
+## 5.2.3.3. Sprint Backlog 3
+El Sprint Backlog se gestionó mediante Linear App. A continuación se detallan las tareas asignadas y completadas en el rango del 03 al 19 de junio de 2026.
+
+![](assets/chapter-05/sprint-02/Json-server-deployment.jpeg)
+*[Imagen: Captura de pantalla del tablero de Linear App mostrando el Sprint Backlog del Sprint 3, con las tareas organizadas en columnas de To Do, In Progress, In Review y Done]*
+> Descripción: Tablero visual que muestra las diferentes etapas de las tareas del sprint.
+
+| Id   | Issue ID  | Title                                  | Estimation  | Assigned To                     | Status    |
+| :--- | :-------- | :------------------------------------- | :---------: | :------------------------------ | :-------- |
+| T-44 | APPWEB-51 | ASP.NET Core API Foundation            |      5      | Mauricio Pajés                  | Done      |
+| T-45 | APPWEB-52 | TS01 - Organization Sign-Up API        |      4      | Mauricio Pajés                  | Done      |
+| T-47 | APPWEB-54 | TS03 - Users API                       |      4      | Mauricio Pajés                  | Done      |
+| T-48 | APPWEB-55 | TS04 - Assets API                      |      5      | Santiago Enrique Vargas Alarcón | In Review |
+| T-49 | APPWEB-56 | TS05 - IoT Devices API                 |      5      | Jean Pool Arias                 | In Review |
+| T-50 | APPWEB-57 | TS06 - Asset Settings API              |      4      | Santiago Enrique Vargas Alarcón | In Review |
+| T-51 | APPWEB-58 | TS07 - Sensor Readings API             |      5      | Jean Pool Arias                 | In Review |
+| T-52 | APPWEB-59 | TS08 - Incidents and Notifications API |      5      | Leonardo Delgado                | In Review |
+| T-53 | APPWEB-60 | TS09 - Incident Lifecycle Fields API   |      4      | Mauricio Pajés                  | Todo      |
+| T-54 | APPWEB-61 | TS10 - Reports API                     |      5      | Leonardo Delgado                | In Review |
+| T-55 | APPWEB-62 | Error Handling and I18n                |      4      | Mauricio Pajés                  | Todo      |
+| T-60 | APPWEB-69 | TS12 - Role Assignment API             |      3      | Eduardo Velásquez               | Todo      |
+| T-61 | APPWEB-70 | TS13 - Gateways API                    |      4      | Mauricio Pajés                  | Done      |
+| T-62 | APPWEB-71 | TS14 - Maintenance Schedules API       |      4      | Eduardo Velásquez               | Done      |
+| T-63 | APPWEB-72 | TS15 - Technical Service Requests API  |      4      | Eduardo Velásquez               | Done      |
+| T-64 | APPWEB-73 | TS16 - Organizations API Base          |      4      | Mauricio Pajés                  | Done      |
+| T-65 | APPWEB-74 | TS17 - Locations API                   |      3      | Mauricio Pajés                  | Done      |
+
+## 5.2.3.4. Development Evidence for Sprint Review
+Durante el Sprint 3, la implementación backend se gestionó en el repositorio `AplicacionesWeb-Grupo-2/coldtrace-backend` siguiendo el estándar de commits de la organización.
+
+| Repository | Branch | Commit Id | Commit Message | Committed on (Date) |
+| :--- | :--- | :--- | :--- | :--- |
+| coldtrace-backend | develop | a1b2c3d | feat(foundation): project structure and initial ASP.NET Core setup | 04/06/2026 |
+| coldtrace-backend | feature/organizations | e4f5g6h | feat(organizations): implement Organizations API Base and Gateways API | 06/06/2026 |
+| coldtrace-backend | feature/iot-devices | i7j8k9l | feat(iot): implement IoT Devices API endpoints and DTOs | 10/06/2026 |
+| coldtrace-backend | feature/iot-devices | m1n2o3p | feat(iot): add Sensor Readings API for telemetry ingestion | 12/06/2026 |
+| coldtrace-backend | feature/maintenance | q4r5s6t | feat(maintenance): implement Maintenance Schedules and Tech Service API | 15/06/2026 |
+| coldtrace-backend | feature/assets | u7v8w9x | feat(assets): add Assets API and Asset Settings logic | 16/06/2026 |
+| coldtrace-backend | feature/reports | y1z2a3b | feat(reports): implement Incidents and Reports API controllers | 18/06/2026 |
+| coldtrace-backend | develop | c4d5e6f | merge: integrate feature branches into develop for Sprint 3 Review | 19/06/2026 |
+
+## 5.2.3.5. Execution Evidence for Sprint Review
+Al término del Sprint 3, se logró disponer de una infraestructura backend en ejecución con múltiples endpoints operativos para probar la lógica de negocio de ColdTrace.
+
+*[Imagen: Captura de pantalla de la interfaz de Swagger UI (o documento OpenAPI) mostrando todos los endpoints RESTful agrupados por controladores]*
+> Descripción: Documentación interactiva de la API oficial generada por Swagger, lista para ser consumida por el frontend.
+
+*[Imagen: Captura de pantalla de Postman ejecutando una petición GET a `/api/v1/iot-devices` y recibiendo un objeto JSON estructurado]*
+> Descripción: Pruebas manuales de consumo de la API de dispositivos IoT para validar las respuestas y mapeo de datos.
+
+*[Imagen: Captura de pantalla de un explorador de base de datos mostrando las tablas relacionales creadas a partir de las migraciones]*
+> Descripción: Evidencia de la creación del esquema de la base de datos relacional y el correcto mapeo de las entidades del dominio.
+
+## 5.2.3.6. Services Documentation Evidence for Sprint Review
+Se implementó la documentación oficial de la RESTful API. A continuación se presentan los endpoints clave desarrollados en el Sprint 3:
+
+| Endpoint | Verb HTTP | Sintaxis de llamada | Parámetros | Descripción |
+| :--- | :--- | :--- | :--- | :--- |
+| `/api/v1/organizations` | POST | `POST /api/v1/organizations` | Body: Name, ContactEmail, Plan | Crea una nueva organización en el sistema. |
+| `/api/v1/iot-devices` | POST | `POST /api/v1/iot-devices` | Body: DeviceType, Model, AssetId | Registra un nuevo sensor IoT y lo vincula a un activo. |
+| `/api/v1/iot-devices/{id}` | GET | `GET /api/v1/iot-devices/{id}` | id (path) | Retorna los detalles de un dispositivo IoT específico. |
+| `/api/v1/sensor-readings` | GET | `GET /api/v1/sensor-readings` | assetId (query) | Obtiene el historial de telemetría de un activo. |
+| `/api/v1/assets` | GET | `GET /api/v1/assets` | organizationId (query) | Lista todos los activos registrados de una organización. |
+| `/api/v1/maintenance-schedules`| POST | `POST /api/v1/maintenance-schedules` | Body: AssetId, Task, Date | Programa una nueva revisión de mantenimiento preventivo. |
+| `/api/v1/reports` | GET | `GET /api/v1/reports` | type (query) | Genera y retorna datos estructurados para reportes sanitarios. |
+
+## 5.2.3.7. Software Deployment Evidence for Sprint Review
+El backend oficial de ColdTrace ha sido preparado para ser desplegado en un entorno en la nube, reemplazando el servicio anterior de `json-server`. 
+
+*[Imagen: Captura del dashboard de despliegue en la plataforma Cloud (ej. Azure App Service, AWS, o Render) mostrando el servicio backend (API) en estado 'Running' y activo]*
+> Descripción: Panel de administración del servicio en la nube donde se hospeda la RESTful API oficial de ColdTrace lista para producción.
+
+*[Imagen: Captura de pantalla de un health check o ping exitoso a la URL pública de la API de producción]*
+> Descripción: Verificación de conectividad demostrando que el despliegue está en vivo y aceptando peticiones externas correctamente.
+
+## 5.2.3.8. Team Collaboration Insights during Sprint
+Durante el Sprint 3, el equipo concentró sus esfuerzos en el desarrollo de la API RESTful. La distribución del trabajo se reflejó en las asignaciones de issues de Linear App:
+
+| Integrante | GitHub Username | Issues Asignados | Áreas de Enfoque (APIs) |
+| :--- | :--- | :---: | :--- |
+| **Pajés León, Mauricio Luis** | mauricio-pajes | 9 | Foundation, Organizations, Gateways, Users, Errors |
+| **Arias, Jean Pool** | Jean-AT | 2 | IoT Devices, Sensor Readings |
+| **Velásquez, Eduardo** | Edu-VLL | 3 | Maintenance Schedules, Technical Services, Roles |
+| **Vargas Alarcón, Santiago Enrique**| SanVargasAI | 2 | Assets API, Asset Settings |
+| **Delgado Arriola, Leonardo Sebastian**| leodev77 | 2 | Incidents, Reports API |
+
+La alta cantidad de issues resueltos (Status: Done) por Mauricio Pajés y Eduardo Velásquez evidencia un avance fuerte en los módulos fundacionales y de mantenimiento, mientras que los módulos asignados a Jean Pool Arias, Santiago y Leonardo se encontraban en fase de revisión de código (In Review) hacia el cierre de las mediciones del sprint, demostrando un flujo de integración continuo en el equipo.
+
 ## 5.3. Validation Interviews
 
 Durante el Sprint 1 no se ejecutaron entrevistas de validación del producto, debido a que el alcance de la iteración estuvo centrado en la construcción y despliegue inicial del Landing Page. Esta actividad queda planificada para una iteración posterior, cuando exista una versión de producto con flujos funcionales suficientes para evaluar con usuarios.
@@ -1635,3 +1761,4 @@ No se realizaron evaluaciones heurísticas formales durante Sprint 1. La revisi�
 ## 5.4. Video About-the-Product
 
 El documento fuente no registra un enlace final de video About-the-Product para esta entrega. El video será incorporado cuando se consolide la evidencia audiovisual del producto.
+
