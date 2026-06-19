@@ -1,0 +1,131 @@
+@startuml
+
+title Stage 3 - Reports Context
+caption Identification of Aggregates, Entities and Value Objects. Only classes defined in the previous stages are used.
+
+skinparam classAttributeIconSize 0
+skinparam packageStyle rectangle
+skinparam nodesep 45
+skinparam ranksep 55
+left to right direction
+hide empty members
+
+package "Reports Context" #E8DAEF {
+  abstract class Report <<Aggregate>> #FADBD8 {
+    # id: ReportId
+    # organizationId: OrganizationId
+    # generatedByUserId: UserId
+    # title: string
+    # periodStart: DateTime
+    # periodEnd: DateTime
+    # status: ReportStatus
+    + {abstract} generate(): void
+    + markReady(): void
+  }
+
+  class MonthlyReport <<Aggregate>> #FADBD8 {
+    - month: int
+    - year: int
+    + calculateOperationalSummary(): void
+    + generate(): void
+  }
+
+  class ComplianceReport <<Aggregate>> #FADBD8 {
+    - standard: ComplianceStandard
+    - result: ComplianceResult
+    + evaluate(): ComplianceResult
+    + generate(): void
+  }
+
+  class DailyLog <<Aggregate>> #FADBD8 {
+    - id: DailyLogId
+    - organizationId: OrganizationId
+    - date: DateOnly
+    - status: LogStatus
+    + addReading(summary: ReadingSummary): void
+    + addAlert(summary: AlertSummary): void
+    + addIncident(summary: IncidentSummary): void
+  }
+
+  class Dashboard <<Aggregate>> #FADBD8 {
+    - id: DashboardId
+    - organizationId: OrganizationId
+    - userId: UserId
+    - name: string
+    + addWidget(widget: Widget): void
+    + removeWidget(widgetId: WidgetId): void
+  }
+
+  class ReportExport <<Entity>> {
+    - id: ReportExportId
+    - reportId: ReportId
+    - format: ExportFormat
+    - fileUri: Uri
+    - createdAt: DateTime
+    + isDownloadable(): bool
+  }
+
+  class Widget <<Entity>> {
+    - id: WidgetId
+    - dashboardId: DashboardId
+    - title: string
+    - type: WidgetType
+    - configurationJson: string
+    + updateConfiguration(configurationJson: string): void
+  }
+
+  class ReadingSummary <<ValueObject>> #FCF3CF {
+    - measurementId: MeasurementId
+    - assetId: AssetId
+    - sensorId: SensorId
+    - kind: ReadingKind
+    - value: decimal
+    - capturedAt: DateTime
+    - evaluation: ReadingEvaluation
+    + isOutOfRange(): bool
+  }
+
+  class AlertSummary <<ValueObject>> #FCF3CF {
+    - alertId: AlertId
+    - assetId: AssetId
+    - sensorId: SensorId
+    - type: string
+    - severity: ReportSeverity
+    - status: ReportAlertStatus
+    - generatedAt: DateTime
+    + requiresAttention(): bool
+  }
+
+  class IncidentSummary <<ValueObject>> #FCF3CF {
+    - incidentId: IncidentId
+    - alertId: AlertId
+    - assetId: AssetId
+    - severity: ReportSeverity
+    - status: ReportIncidentStatus
+    - openedAt: DateTime
+    - closedAt: DateTime
+    + durationMinutes(): int
+  }
+
+  Report <|-- MonthlyReport
+  Report <|-- ComplianceReport
+  Report "1" o-- "*" ReportExport
+  DailyLog "1" o-- "*" ReadingSummary
+  DailyLog "1" o-- "*" AlertSummary
+  DailyLog "1" o-- "*" IncidentSummary
+  MonthlyReport "1" o-- "*" ReadingSummary
+  MonthlyReport "1" o-- "*" AlertSummary
+  ComplianceReport "1" o-- "*" ReadingSummary
+  ComplianceReport "1" o-- "*" IncidentSummary
+  Dashboard "1" o-- "*" Widget
+  Dashboard ..> DailyLog : "visualizes"
+  Dashboard ..> Report : "visualizes"
+}
+
+legend right
+  Red: Aggregate root
+  White: Entity
+  Yellow: Value Object
+endlegend
+
+@enduml

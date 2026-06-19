@@ -97,3 +97,6 @@
 
 ## Bibliografía
 - [Bibliografía.](#bibliografía)
+
+## Anexos
+- [Anexos.](#anexos)

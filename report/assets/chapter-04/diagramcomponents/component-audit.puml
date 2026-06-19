@@ -1,0 +1,53 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title Component Diagram - ColdTrace - Audit Context
+caption Internal components for compliance checks, missing-record detection, evidence preparation, and external audit delivery.
+
+LAYOUT_WITH_LEGEND()
+LAYOUT_LEFT_RIGHT()
+
+Container(api_gateway, "API Gateway", "ASP.NET Core / C#", "Routes audit and compliance requests.")
+Container_Ext(reports_api, "Reports Context API", "ASP.NET Core / C#", "Publishes reports and logs used as compliance evidence.")
+Person_Ext(auditor, "Health Inspector / External Reviewer", "Receives exported compliance evidence [US31-US34].")
+
+Container_Boundary(audit, "Audit Context API") {
+    Component(audit_controller, "Audit Controller", "ASP.NET Core Controller", "Endpoints for audit preparation, compliance checks, findings, and evidence exports.")
+    Component(report_event_consumer, "Report Event Consumer", "Integration Event Consumer", "Consumes generated reports and logs from the Reports Context.")
+
+    Component(compliance_service, "Compliance Check Service", "Application Service", "Evaluates monitoring records against compliance rules.")
+    Component(missing_record_service, "Missing Record Detection Service", "Application Service", "Detects gaps in logs, reports, and mandatory evidence.")
+    Component(evidence_service, "Evidence Preparation Service", "Application Service", "Builds evidence packages for internal and external audits.")
+    Component(audit_query_service, "Audit Query Service", "Application Service", "Serves audit status, findings, and prepared evidence.")
+
+    Component(compliance_policy, "Compliance Policy", "Domain Service", "Defines required evidence and validation rules for audit readiness.")
+    Component(audit_repo, "Audit Repository", "EF Core Repository", "Persists audit checks, findings, evidence packages, and traceability records.")
+    Component(evidence_exporter, "Evidence Exporter", "File Export Adapter", "Creates PDF and CSV evidence packages.")
+}
+
+ContainerDb(audit_db, "Audit Database", "MySQL", "Audit checks, compliance findings, evidence packages, and traceability records.")
+
+Rel(api_gateway, audit_controller, "Routes audit requests", "HTTPS / JSON")
+Rel(reports_api, report_event_consumer, "Publishes reports and logs", "Internal events")
+
+Rel(audit_controller, compliance_service, "Runs compliance checks")
+Rel(audit_controller, evidence_service, "Prepares evidence")
+Rel(audit_controller, audit_query_service, "Queries audit status")
+
+Rel(report_event_consumer, compliance_service, "Updates compliance inputs")
+Rel(report_event_consumer, missing_record_service, "Checks for missing evidence")
+
+Rel(compliance_service, compliance_policy, "Applies compliance rules")
+Rel(missing_record_service, compliance_policy, "Applies required-record rules")
+Rel(evidence_service, compliance_policy, "Validates evidence package")
+
+Rel(compliance_service, audit_repo, "Reads / writes checks")
+Rel(missing_record_service, audit_repo, "Reads / writes findings")
+Rel(evidence_service, audit_repo, "Reads / writes evidence")
+Rel(audit_query_service, audit_repo, "Reads audit data")
+Rel(audit_repo, audit_db, "Reads / writes", "EF Core")
+
+Rel(evidence_service, evidence_exporter, "Exports evidence")
+Rel(evidence_exporter, auditor, "Delivers evidence package", "PDF / CSV")
+
+@enduml

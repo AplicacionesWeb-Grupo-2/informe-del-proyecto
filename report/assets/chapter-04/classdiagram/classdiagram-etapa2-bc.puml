@@ -1,0 +1,632 @@
+@startuml
+
+title Stage 2: Class Grouping by Bounded Context - ColdTrace
+caption Bounded context ownership view. Classes include attributes and operations; dashed dependencies represent typed identifiers, snapshots, or integration events.
+
+skinparam classAttributeIconSize 0
+skinparam packageStyle rectangle
+skinparam nodesep 38
+skinparam ranksep 50
+left to right direction
+hide empty members
+
+package "Account & Access Context" as Account #D6EAF8 {
+  class Organization {
+    - id: OrganizationId
+    - legalName: string
+    - taxIdentifier: string
+    - contactEmail: string
+    - status: OrganizationStatus
+    + addUser(userId: UserId): void
+    + suspend(): void
+    + activate(): void
+  }
+
+  class User {
+    - id: UserId
+    - organizationId: OrganizationId
+    - email: string
+    - displayName: string
+    - passwordHash: string
+    - status: UserStatus
+    - createdAt: DateTime
+    - verifiedAt: DateTime
+    + register(): void
+    + verifyEmail(token: string): bool
+    + changeProfile(displayName: string): void
+    + assignRole(roleId: RoleId): void
+  }
+
+  class Session {
+    - id: SessionId
+    - userId: UserId
+    - accessTokenHash: string
+    - createdAt: DateTime
+    - expiresAt: DateTime
+    - revokedAt: DateTime
+    + isActive(now: DateTime): bool
+    + revoke(): void
+  }
+
+  class Role {
+    - id: RoleId
+    - name: string
+    - description: string
+    + grants(permission: Permission): bool
+  }
+
+  class Permission {
+    - resource: string
+    - action: string
+    + matches(resource: string, action: string): bool
+  }
+
+  class SubscriptionPlan {
+    - id: SubscriptionPlanId
+    - name: string
+    - maxAssets: int
+    - maxUsers: int
+    - monthlyPrice: decimal
+    + supportsAssetCount(count: int): bool
+  }
+
+  class Subscription {
+    - id: SubscriptionId
+    - organizationId: OrganizationId
+    - planId: SubscriptionPlanId
+    - status: SubscriptionStatus
+    - startsAt: DateOnly
+    - endsAt: DateOnly
+    + isActive(date: DateOnly): bool
+    + renew(until: DateOnly): void
+    + cancel(): void
+  }
+
+  class PaymentRecord {
+    - id: PaymentRecordId
+    - subscriptionId: SubscriptionId
+    - providerReference: string
+    - amount: decimal
+    - status: PaymentStatus
+    - paidAt: DateTime
+    + markPaid(reference: string): void
+    + markFailed(reason: string): void
+  }
+
+  class NotificationPreference {
+    - id: NotificationPreferenceId
+    - userId: UserId
+    - enabledChannels: ISet<NotificationChannelType>
+    - quietHoursStart: TimeOnly
+    - quietHoursEnd: TimeOnly
+    - minimumSeverity: NotificationSeverity
+    + accepts(channel: NotificationChannelType, severity: NotificationSeverity): bool
+  }
+
+  Organization "1" o-- "*" User
+  Organization "1" *-- "0..1" Subscription
+  User "1" o-- "*" Session
+  User "*" -- "*" Role
+  Role "*" o-- "*" Permission
+  Subscription "*" --> "1" SubscriptionPlan
+  Subscription "1" o-- "*" PaymentRecord
+  User "1" *-- "1" NotificationPreference
+}
+
+package "Sensor Management Context" as SensorManagement #FADBD8 {
+  class Asset {
+    - id: AssetId
+    - organizationId: OrganizationId
+    - internalCode: string
+    - name: string
+    - description: string
+    - type: AssetType
+    - capacityValue: decimal
+    - capacityUnit: string
+    - status: AssetStatus
+    + assignSensor(sensorId: SensorId): void
+    + updateLocation(location: Location): void
+    + putInMaintenance(): void
+    + returnToOperation(): void
+  }
+
+  class Location {
+    - label: string
+    - address: string
+    - latitude: decimal
+    - longitude: decimal
+    - isMobile: bool
+    + distanceTo(other: Location): decimal
+  }
+
+  class Sensor {
+    - id: SensorId
+    - assetId: AssetId?
+    - edgeGatewayId: EdgeGatewayId?
+    - serialNumber: string
+    - model: string
+    - type: SensorType
+    - status: SensorStatus
+    - pairedAt: DateTime
+    - readingIntervalSeconds: int
+    + pairWith(assetId: AssetId, gatewayId: EdgeGatewayId): void
+    + activate(): void
+    + deactivate(): void
+    + requireCalibration(): void
+  }
+
+  class EdgeGateway {
+    - id: EdgeGatewayId
+    - organizationId: OrganizationId
+    - serialNumber: string
+    - claimCode: string
+    - model: string
+    - protocol: string
+    - status: GatewayStatus
+    + pair(): void
+    + markOnline(): void
+    + markOffline(): void
+  }
+
+  class CalibrationRecord {
+    - id: CalibrationRecordId
+    - sensorId: SensorId
+    - certificateCode: string
+    - calibratedAt: DateOnly
+    - expiresAt: DateOnly
+    - status: CalibrationStatus
+    + isValid(date: DateOnly): bool
+  }
+
+  class TemperatureRange {
+    - minCelsius: decimal
+    - maxCelsius: decimal
+    + contains(value: decimal): bool
+  }
+
+  class HumidityRange {
+    - minPercentage: decimal
+    - maxPercentage: decimal
+    + contains(value: decimal): bool
+  }
+
+  class OperatingParameter {
+    - id: OperatingParameterId
+    - assetId: AssetId
+    - productCategory: string
+    - temperatureRange: TemperatureRange
+    - humidityRange: HumidityRange
+    - readingIntervalSeconds: int
+    - criticality: CriticalityLevel
+    + isCompatibleWith(sensor: Sensor): bool
+  }
+
+  class MaintenanceSchedule {
+    - id: MaintenanceScheduleId
+    - assetId: AssetId
+    - sensorId: SensorId
+    - scheduledFor: DateOnly
+    - status: MaintenanceStatus
+    - notes: string
+    + reschedule(date: DateOnly): void
+    + complete(): void
+  }
+
+  class ServiceTicket {
+    - id: ServiceTicketId
+    - assetId: AssetId
+    - requestedByUserId: UserId
+    - status: ServiceTicketStatus
+    - openedAt: DateTime
+    - closedAt: DateTime
+    + open(): void
+    + close(intervention: ServiceIntervention): void
+  }
+
+  class ServiceIntervention {
+    - id: ServiceInterventionId
+    - ticketId: ServiceTicketId
+    - technicianName: string
+    - description: string
+    - result: InterventionResult
+    - performedAt: DateTime
+    + passesFunctionalTest(): bool
+  }
+
+  Asset "1" *-- "1" Location
+  Asset "1" o-- "*" Sensor
+  Asset "1" o-- "0..1" OperatingParameter
+  Asset "1" o-- "*" MaintenanceSchedule
+  Asset "1" o-- "*" ServiceTicket
+  EdgeGateway "1" o-- "*" Sensor
+  Sensor "1" o-- "*" CalibrationRecord
+  OperatingParameter *-- "1" TemperatureRange
+  OperatingParameter *-- "1" HumidityRange
+  ServiceTicket "1" o-- "*" ServiceIntervention
+}
+
+package "Monitoring Context" as Monitoring #D5F5E3 {
+  abstract class Measurement {
+    # id: MeasurementId
+    # sensorId: SensorId
+    # assetId: AssetId
+    # capturedAt: DateTime
+    # receivedAt: DateTime
+    # status: MeasurementStatus
+    + {abstract} getKind(): MeasurementKind
+    + markInvalid(reason: string): void
+  }
+
+  class TemperatureReading {
+    - valueCelsius: decimal
+    + toFahrenheit(): decimal
+    + evaluate(range: TemperatureRange): RangeEvaluation
+    + getKind(): MeasurementKind
+  }
+
+  class HumidityReading {
+    - valuePercentage: decimal
+    + evaluate(range: HumidityRange): RangeEvaluation
+    + getKind(): MeasurementKind
+  }
+
+  class ConnectivitySnapshot {
+    - id: ConnectivitySnapshotId
+    - sensorId: SensorId
+    - edgeGatewayId: EdgeGatewayId
+    - status: ConnectivityStatus
+    - checkedAt: DateTime
+    + isOnline(): bool
+  }
+
+  class RangeEvaluation {
+    - id: RangeEvaluationId
+    - measurementId: MeasurementId
+    - result: RangeEvaluationResult
+    - evaluatedAt: DateTime
+    - reason: string
+    + isOutOfRange(): bool
+  }
+
+  class OfflineSyncBatch {
+    - id: OfflineSyncBatchId
+    - edgeGatewayId: EdgeGatewayId
+    - receivedAt: DateTime
+    - recordCount: int
+    - discardedCount: int
+    - status: OfflineSyncStatus
+    + registerAcceptedRecord(): void
+    + registerDiscardedRecord(): void
+  }
+
+  Measurement <|-- TemperatureReading
+  Measurement <|-- HumidityReading
+  Measurement "1" o-- "0..1" RangeEvaluation
+  OfflineSyncBatch "1" o-- "*" Measurement
+}
+
+package "Alerts Context" as Alerts #FCF3CF {
+  class MeasurementEvaluationSnapshot {
+    - measurementId: MeasurementId
+    - assetId: AssetId
+    - sensorId: SensorId
+    - kind: AlertMeasurementKind
+    - value: decimal
+    - result: AlertEvaluationResult
+    - capturedAt: DateTime
+    + isCritical(): bool
+  }
+
+  class AlertRule {
+    - id: AlertRuleId
+    - sensorId: SensorId
+    - assetId: AssetId
+    - alertType: AlertType
+    - severity: AlertSeverity
+    - minimumDurationSeconds: int
+    - active: bool
+    + evaluates(evaluation: MeasurementEvaluationSnapshot): bool
+    + activate(): void
+    + deactivate(): void
+  }
+
+  class Alert {
+    - id: AlertId
+    - organizationId: OrganizationId
+    - alertRuleId: AlertRuleId
+    - assetId: AssetId
+    - sensorId: SensorId
+    - measurementId: MeasurementId
+    - type: AlertType
+    - severity: AlertSeverity
+    - status: AlertStatus
+    - generatedAt: DateTime
+    - acknowledgedByUserId: UserId?
+    - acknowledgedAt: DateTime
+    + acknowledge(userId: UserId): void
+    + escalate(): void
+    + close(): void
+  }
+
+  class ThermalIncident {
+    - id: IncidentId
+    - alertId: AlertId
+    - assignedUserId: UserId
+    - status: IncidentStatus
+    - openedAt: DateTime
+    - closedAt: DateTime
+    - summary: string
+    + assignTo(userId: UserId): void
+    + close(action: CorrectiveAction): void
+  }
+
+  class CorrectiveAction {
+    - id: CorrectiveActionId
+    - incidentId: IncidentId
+    - performedByUserId: UserId
+    - description: string
+    - evidenceUri: Uri
+    - stabilityConfirmed: bool
+    - performedAt: DateTime
+    + confirmStability(): void
+    + attachEvidence(evidenceUri: Uri): void
+  }
+
+  class Notification {
+    - id: NotificationId
+    - alertId: AlertId
+    - recipientUserId: UserId
+    - channel: NotificationChannelType
+    - status: NotificationStatus
+    - sentAt: DateTime
+    + markSent(): void
+    + markFailed(reason: string): void
+  }
+
+  class EscalationPolicy {
+    - id: EscalationPolicyId
+    - organizationId: OrganizationId
+    - severity: AlertSeverity
+    - timeoutMinutes: int
+    - targetRoleId: RoleId
+    + shouldEscalate(alert: Alert, now: DateTime): bool
+  }
+
+  interface NotificationChannel {
+    + send(notification: Notification): bool
+    + getChannelType(): NotificationChannelType
+  }
+
+  class EmailChannel {
+    + send(notification: Notification): bool
+    + getChannelType(): NotificationChannelType
+  }
+
+  class PushChannel {
+    + send(notification: Notification): bool
+    + getChannelType(): NotificationChannelType
+  }
+
+  class MessagingChannel {
+    + send(notification: Notification): bool
+    + getChannelType(): NotificationChannelType
+  }
+
+  Alert "1" o-- "0..1" ThermalIncident
+  ThermalIncident "1" o-- "*" CorrectiveAction
+  Alert "1" o-- "*" Notification
+  AlertRule ..> MeasurementEvaluationSnapshot
+  AlertRule ..> Alert
+  EscalationPolicy ..> Alert
+  Notification ..> NotificationChannel
+  EmailChannel ..|> NotificationChannel
+  PushChannel ..|> NotificationChannel
+  MessagingChannel ..|> NotificationChannel
+}
+
+package "Reports Context" as Reports #E8DAEF {
+  abstract class Report {
+    # id: ReportId
+    # organizationId: OrganizationId
+    # generatedByUserId: UserId
+    # title: string
+    # periodStart: DateTime
+    # periodEnd: DateTime
+    # status: ReportStatus
+    + {abstract} generate(): void
+    + markReady(): void
+  }
+
+  class DailyLog {
+    - id: DailyLogId
+    - organizationId: OrganizationId
+    - date: DateOnly
+    - status: LogStatus
+    + addReading(summary: ReadingSummary): void
+    + addAlert(summary: AlertSummary): void
+    + addIncident(summary: IncidentSummary): void
+  }
+
+  class MonthlyReport {
+    - month: int
+    - year: int
+    + calculateOperationalSummary(): void
+    + generate(): void
+  }
+
+  class ComplianceReport {
+    - standard: ComplianceStandard
+    - result: ComplianceResult
+    + evaluate(): ComplianceResult
+    + generate(): void
+  }
+
+  class ReadingSummary {
+    - measurementId: MeasurementId
+    - assetId: AssetId
+    - sensorId: SensorId
+    - kind: ReadingKind
+    - value: decimal
+    - capturedAt: DateTime
+    - evaluation: ReadingEvaluation
+    + isOutOfRange(): bool
+  }
+
+  class AlertSummary {
+    - alertId: AlertId
+    - assetId: AssetId
+    - sensorId: SensorId
+    - type: string
+    - severity: ReportSeverity
+    - status: ReportAlertStatus
+    - generatedAt: DateTime
+    + requiresAttention(): bool
+  }
+
+  class IncidentSummary {
+    - incidentId: IncidentId
+    - alertId: AlertId
+    - assetId: AssetId
+    - severity: ReportSeverity
+    - status: ReportIncidentStatus
+    - openedAt: DateTime
+    - closedAt: DateTime
+    + durationMinutes(): int
+  }
+
+  class ReportExport {
+    - id: ReportExportId
+    - reportId: ReportId
+    - format: ExportFormat
+    - fileUri: Uri
+    - createdAt: DateTime
+    + isDownloadable(): bool
+  }
+
+  class Dashboard {
+    - id: DashboardId
+    - organizationId: OrganizationId
+    - userId: UserId
+    - name: string
+    + addWidget(widget: Widget): void
+    + removeWidget(widgetId: WidgetId): void
+  }
+
+  class Widget {
+    - id: WidgetId
+    - dashboardId: DashboardId
+    - title: string
+    - type: WidgetType
+    - configurationJson: string
+    + updateConfiguration(configurationJson: string): void
+  }
+
+  Report <|-- MonthlyReport
+  Report <|-- ComplianceReport
+  Report "1" o-- "*" ReportExport
+  DailyLog "1" o-- "*" ReadingSummary
+  DailyLog "1" o-- "*" AlertSummary
+  DailyLog "1" o-- "*" IncidentSummary
+  MonthlyReport "1" o-- "*" ReadingSummary
+  MonthlyReport "1" o-- "*" AlertSummary
+  ComplianceReport "1" o-- "*" ReadingSummary
+  ComplianceReport "1" o-- "*" IncidentSummary
+  Dashboard "1" o-- "*" Widget
+  Dashboard ..> DailyLog : "visualizes"
+  Dashboard ..> Report : "visualizes"
+}
+
+package "Audit Context" as Audit #FDEBD0 {
+  class AuditCase {
+    - id: AuditCaseId
+    - organizationId: OrganizationId
+    - requestedByUserId: UserId
+    - standard: ComplianceStandard
+    - status: AuditStatus
+    - startedAt: DateTime
+    - closedAt: DateTime
+    + start(): void
+    + close(result: ComplianceResult): void
+  }
+
+  class ComplianceCriterion {
+    - id: ComplianceCriterionId
+    - standard: ComplianceStandard
+    - code: string
+    - description: string
+    + evaluate(package: EvidencePackage): ComplianceResult
+  }
+
+  class ComplianceFinding {
+    - id: ComplianceFindingId
+    - auditCaseId: AuditCaseId
+    - criterionId: ComplianceCriterionId
+    - result: ComplianceResult
+    - details: string
+    + isCompliant(): bool
+  }
+
+  class EvidencePackage {
+    - id: EvidencePackageId
+    - auditCaseId: AuditCaseId
+    - status: EvidencePackageStatus
+    - preparedAt: DateTime
+    + addItem(item: EvidenceItem): void
+    + markComplete(): void
+  }
+
+  class EvidenceItem {
+    - id: EvidenceItemId
+    - packageId: EvidencePackageId
+    - reportId: ReportId
+    - type: EvidenceType
+    - fileUri: Uri
+    - capturedAt: DateTime
+    + references(reportId: ReportId): bool
+  }
+
+  AuditCase "1" o-- "1" EvidencePackage
+  AuditCase "1" o-- "*" ComplianceFinding
+  AuditCase "*" --> "*" ComplianceCriterion
+  EvidencePackage "1" o-- "*" EvidenceItem
+  ComplianceFinding "*" --> "1" ComplianceCriterion
+}
+
+' Cross-context dependencies by typed identifiers, snapshots, or integration events.
+Asset ..> Organization : "organizationId"
+ServiceTicket ..> User : "requestedByUserId"
+
+Measurement ..> Sensor : "sensorId"
+Measurement ..> Asset : "assetId"
+TemperatureReading ..> TemperatureRange : "range snapshot"
+HumidityReading ..> HumidityRange : "range snapshot"
+ConnectivitySnapshot ..> Sensor : "sensorId"
+ConnectivitySnapshot ..> EdgeGateway : "edgeGatewayId"
+OfflineSyncBatch ..> EdgeGateway : "edgeGatewayId"
+
+MeasurementEvaluationSnapshot ..> RangeEvaluation : "copied from event"
+AlertRule ..> Sensor : "sensorId"
+AlertRule ..> Asset : "assetId"
+Alert ..> User : "acknowledgedByUserId"
+ThermalIncident ..> User : "assignedUserId"
+CorrectiveAction ..> User : "performedByUserId"
+Notification ..> User : "recipientUserId"
+EscalationPolicy ..> Role : "targetRoleId"
+
+ReadingSummary ..> Measurement : "measurementId snapshot"
+AlertSummary ..> Alert : "alertId snapshot"
+IncidentSummary ..> ThermalIncident : "incidentId snapshot"
+Report ..> Organization : "organizationId"
+Report ..> User : "generatedByUserId"
+
+AuditCase ..> Organization : "organizationId"
+AuditCase ..> User : "requestedByUserId"
+EvidenceItem ..> Report : "reportId"
+EvidenceItem ..> ReportExport : "references exported file"
+
+legend right
+  Solid line: relationship inside a bounded context
+  Dashed line: class-level dependency by typed identifier, snapshot, or integration event
+endlegend
+
+@enduml
