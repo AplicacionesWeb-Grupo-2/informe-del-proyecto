@@ -2476,6 +2476,1146 @@ Durante el Sprint 1, todos los miembros del equipo participaron activamente en l
 
 La evidencia de colaboración se refleja en los commits registrados en el repositorio `landing-page`, así como en la distribución de responsabilidades documentada en las secciones de Aspect Leaders and Collaborators y Development Evidence.
 
+
+### 5.2.2 Sprint 2
+
+#### 5.2.2.1. Sprint Planning 2
+
+El Sprint 2 tuvo como objetivo principal desplegar la primera versión funcional de la Frontend Web Application de ColdTrace, cubriendo los bounded contexts de Identity & Access Management, Asset Management, Monitoring y Reports. A continuación se presenta el resumen del Sprint Planning Meeting realizado al inicio de este sprint.
+
+<table border="1" cellpadding="6" cellspacing="0">
+  <tr>
+    <th>Sprint #</th>
+    <td>Sprint 2</td>
+  </tr>
+  <tr>
+    <th colspan="2">Sprint Planning Background</th>
+  </tr>
+  <tr>
+    <th>Date</th>
+    <td>2026-05-07</td>
+  </tr>
+  <tr>
+    <th>Time</th>
+    <td>08:00 PM</td>
+  </tr>
+  <tr>
+    <th>Location</th>
+    <td>Reunión virtual vía Discord</td>
+  </tr>
+  <tr>
+    <th>Prepared By</th>
+    <td>Pajés León, Mauricio Luis</td>
+  </tr>
+  <tr>
+    <th>Attendees (to planning meeting)</th>
+    <td>Delgado Arriola, Leonardo Sebastian / Arias Tasayco, Jean Pool Alexander / Santiago Enrique Vargas Alarcon / Eduardo David Velasquez Laquihuanaco / Pajés León, Mauricio Luis</td>
+  </tr>
+  <tr>
+    <th>Sprint 1 Review Summary</th>
+    <td>En el Sprint 1 se completó una primera versión funcional de la landing page de ColdTrace desplegada en GitHub Pages, con secciones de hero, features, showcase, pricing y footer. Se implementaron además las vistas básicas de dashboard, monitoreo y alertas como prueba de concepto del sistema. El equipo logró cumplir con el Sprint Goal y asegurar la coherencia visual entre la landing y la aplicación web. El despliegue fue exitoso y la landing page quedó accesible públicamente.</td>
+  </tr>
+  <tr>
+    <th>Sprint 1 Retrospective Summary</th>
+    <td>El equipo identificó que la distribución de tareas en el Sprint 1 fue desigual y que la comunicación entre integrantes podría mejorar. Como acción de mejora para el Sprint 2 se acordó dividir el trabajo por épicas y bounded contexts, asignar un responsable por aspecto funcional, e incorporar a todos los integrantes en la implementación del frontend distribuida según las épicas del product backlog.</td>
+  </tr>
+  <tr>
+    <th colspan="2">Sprint Goal & User Stories</th>
+  </tr>
+  <tr>
+    <th>Sprint 2 Goal</th>
+    <td>Nuestro objetivo es ofrecer una aplicación web frontend completamente navegable y desplegada para los operadores y administradores de ColdTrace. Creemos que proporcionara una experiencia digital útil para los gerentes de operaciones de la cadena de frío y el personal de control de calidad, permitiéndoles gestionar activos, monitorear las condiciones de temperatura y consultar informes operativos. Esto se confirmará cuando la aplicación sea accesible a través de su URL pública de Vercel y los usuarios puedan navegar sin problemas por los módulos de Autenticacion y Acceso, Gestión de sensores, Monitoreo y reportes.</td>
+  </tr>
+  <tr>
+    <th>Sprint 2 Velocity</th>
+    <td>40 Story Points</td>
+  </tr>
+  <tr>
+    <th>Sum of Story Points</th>
+    <td>40 Story Points</td>
+  </tr>
+</table>
+
+#### 5.2.2.2. Aspect Leaders and Collaborators
+
+Durante el Sprint 2, el equipo organizó el trabajo en torno a los principales aspectos funcionales de la Frontend Web Application de ColdTrace. Cada aspecto corresponde a una épica del product backlog o a un conjunto de features dentro de un bounded context. Se designó un líder (L) por aspecto para asegurar la coherencia técnica y la toma de decisiones dentro de cada módulo, y se asignaron colaboradores (C) entre los demás integrantes del equipo.
+
+Los aspectos principales del Sprint 2 fueron los siguientes:
+
+- **Gestion de usuarios y acceso (EP002):** Vistas de creación de cuenta, inicio de sesión, recuperación de contraseña y gestión de roles y permisos.
+- **Gestion de equipos y sensores (EP003):** Registro de cámaras frigoríficas, unidades de transporte, vinculación de sensores, emparejamiento de gateways, calibración y configuración avanzada de activos.
+- **Monitoreo de temperatura y humedad (EP004):** Dashboard operacional con telemetría en tiempo real, KPIs y estado de activos monitoreados (US039).
+- **Alertas e incidencias (EP005):** Estructura de navegación y vistas base para el módulo de alertas e incidencias.
+- **Reportes, historial de eventos y cumplimiento (EP006):** Vistas de bitácora diaria, historial de eventos operacionales, exportación de reportes sanitarios, descarga mensual, hallazgos de cumplimiento y evidencia de auditoría (US029–US034).
+- **Configuracion operativa y mantenimiento (EP007):** Configuración de rangos de seguridad, parámetros operativos del monitoreo y flujos de mantenimiento preventivo (US035–US038).
+- **Deployment & Infrastructure:** Configuración del pipeline CI/CD en Vercel, servidor JSON hospedado y configuración del entorno de producción.
+
+<table border="1" cellpadding="6" cellspacing="0">
+  <tr>
+    <th>Team Member (Last Name, First Name)</th>
+    <th>GitHub Username</th>
+    <th>Authentication &amp; User Access (EP002)</th>
+    <th>Asset Registration &amp; Configuration (EP003)</th>
+    <th>Operational Monitoring Dashboard (EP004)</th>
+    <th>Alerts &amp; Incidents UI (EP005)</th>
+    <th>Reports &amp; Compliance (EP006)</th>
+    <th>Operative Configuration (EP007)</th>
+    <th>Deployment &amp; Infrastructure</th>
+  </tr>
+  <tr>
+    <td>Delgado Arriola, Leonardo Sebastian</td>
+    <td>leodev77</td>
+    <td>C</td>
+    <td>C</td>
+    <td>C</td>
+    <td>C</td>
+    <td>L</td>
+    <td>C</td>
+    <td>C</td>
+  </tr>
+  <tr>
+    <td>Arias Tasayco, Jean Pool Alexander</td>
+    <td>Jean-AT</td>
+    <td>C</td>
+    <td>C</td>
+    <td>C</td>
+    <td>C</td>
+    <td>C</td>
+    <td>L</td>
+    <td>C</td>
+  </tr>
+  <tr>
+    <td>Vargas Alarcon, Santiago Enrique</td>
+    <td>SanVargasAI</td>
+    <td>C</td>
+    <td>C</td>
+    <td>L</td>
+    <td>C</td>
+    <td>C</td>
+    <td>C</td>
+    <td>C</td>
+  </tr>
+  <tr>
+    <td>Pajés León, Mauricio Luis</td>
+    <td>mauricio-pajes</td>
+    <td>L</td>
+    <td>L</td>
+    <td>C</td>
+    <td>C</td>
+    <td>C</td>
+    <td>C</td>
+    <td>L</td>
+  </tr>
+  <tr>
+    <td>Velasquez Laquihuanaco, Eduardo David</td>
+    <td>Edu-VLL</td>
+    <td>C</td>
+    <td>C</td>
+    <td>C</td>
+    <td>L</td>
+    <td>C</td>
+    <td>C</td>
+    <td>C</td>
+  </tr>
+</table>
+
+#### 5.2.2.3. Sprint Backlog 2
+
+El objetivo principal del Sprint 2 fue implementar y desplegar la primera versión completa de la Frontend Web Application de ColdTrace, habilitando los flujos de autenticación, gestión de activos, monitoreo operacional y consulta de reportes de cumplimiento. El equipo gestiono mediante el Sprint Backlog medinate Linear App, organizando las tareas por epica y bounded context.
+
+A continuacion se presenta una captura del backlog gestionado en Linear App:
+
+![Sprint Backlog 2 Screenshoot](report/assets/chapter-05/sprint-02/backlog-sprint-2.jpeg)
+*Figura 5.2.2.3.1: Sprint Backlog del Sprint 2 en Linear App*
+
+
+A continuacion se presenta la tabla del sprint.
+
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; text-align: center;">
+  <tr>
+    <th>Sprint #</th>
+    <td colspan="7">Sprint 2</td>
+  </tr>
+  <tr>
+    <th colspan="2">User Story</th>
+    <th colspan="6">Work-Item / Task</th>
+  </tr>
+  <tr>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Estimation (Hours)</th>
+    <th>Assigned To</th>
+    <th>Status</th>
+  </tr>
+
+  <!-- EP002 - IDENTITY & ACCESS -->
+  <tr>
+    <td>US007</td>
+    <td>Crear cuenta</td>
+    <td>T-10</td>
+    <td>Create Account UI</td>
+    <td>Implementar formulario de creación de cuenta de usuario</td>
+    <td>4</td>
+    <td>Mauricio Luis Pajes Leon</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>US008</td>
+    <td>Iniciar sesión</td>
+    <td>T-11</td>
+    <td>Sign-In UI</td>
+    <td>Implementar vista de inicio de sesión con validación de credenciales</td>
+    <td>3</td>
+    <td>Mauricio Luis Pajes Leon</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>US009</td>
+    <td>Recuperar contraseña</td>
+    <td>T-12</td>
+    <td>Password Recovery UI</td>
+    <td>Implementar flujo de recuperación de contraseña por email</td>
+    <td>3</td>
+    <td>Mauricio Luis Pajes Leon</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>US010</td>
+    <td>Gestionar roles y permisos</td>
+    <td>T-13</td>
+    <td>Roles &amp; Permissions UI</td>
+    <td>Implementar vista de administración de roles y permisos de usuario</td>
+    <td>5</td>
+    <td>Mauricio Luis Pajes Leon</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- EP003 - ASSET MANAGEMENT -->
+  <tr>
+    <td>US012</td>
+    <td>Registrar cámara frigorífica</td>
+    <td>T-14</td>
+    <td>Cold Room Registration UI</td>
+    <td>Implementar formulario de registro y listado de cámaras frigoríficas</td>
+    <td>5</td>
+    <td>Jean Pool Alexander Arias Tasayco</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>US013</td>
+    <td>Registrar unidad de transporte</td>
+    <td>T-15</td>
+    <td>Transport Unit UI</td>
+    <td>Implementar registro de unidades de transporte refrigerado</td>
+    <td>4</td>
+    <td>Jean Pool Alexander Arias Tasayco</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>US014</td>
+    <td>Vincular sensor a activo</td>
+    <td>T-16</td>
+    <td>Sensor Linking UI</td>
+    <td>Implementar flujo de vinculación de sensores IoT a activos registrados</td>
+    <td>4</td>
+    <td>Jean Pool Alexander Arias Tasayco</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>US015</td>
+    <td>Emparejar gateway</td>
+    <td>T-17</td>
+    <td>Gateway Pairing UI</td>
+    <td>Implementar emparejamiento de gateway con la plataforma</td>
+    <td>4</td>
+    <td>Jean Pool Alexander Arias Tasayco</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>US016</td>
+    <td>Calibrar sensor</td>
+    <td>T-18</td>
+    <td>Sensor Calibration UI</td>
+    <td>Implementar revisión y registro de calibración de sensores</td>
+    <td>3</td>
+    <td>Jean Pool Alexander Arias Tasayco</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>US017</td>
+    <td>Actualizar activo</td>
+    <td>T-19</td>
+    <td>Asset Update UI</td>
+    <td>Implementar flujo de actualización de datos y estado de activos</td>
+    <td>4</td>
+    <td>Jean Pool Alexander Arias Tasayco</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>US035</td>
+    <td>Configurar parámetros de activo</td>
+    <td>T-20</td>
+    <td>Asset Settings &amp; IoT Params UI</td>
+    <td>Implementar pantalla de configuración avanzada de activos y parámetros IoT</td>
+    <td>5</td>
+    <td>Jean Pool Alexander Arias Tasayco</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- EP004 - MONITORING -->
+  <tr>
+    <td>US018</td>
+    <td>Visualizar temperatura en tiempo real</td>
+    <td>T-21</td>
+    <td>Real-Time Temperature View</td>
+    <td>Implementar vista de monitoreo de temperatura en tiempo real por activo</td>
+    <td>5</td>
+    <td>Eduardo David Velasquez Laquihuanaco</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>US019</td>
+    <td>Visualizar humedad en tiempo real</td>
+    <td>T-22</td>
+    <td>Real-Time Humidity View</td>
+    <td>Implementar vista de monitoreo de humedad en tiempo real por activo</td>
+    <td>5</td>
+    <td>Eduardo David Velasquez Laquihuanaco</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>US020</td>
+    <td>Consultar historial de lecturas</td>
+    <td>T-23</td>
+    <td>Readings History View</td>
+    <td>Implementar vista de historial de lecturas de temperatura y humedad</td>
+    <td>5</td>
+    <td>Eduardo David Velasquez Laquihuanaco</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>US021</td>
+    <td>Detectar temperatura fuera de rango</td>
+    <td>T-24</td>
+    <td>Out-of-Range Detection View</td>
+    <td>Implementar indicadores visuales de detección de temperatura fuera de rango seguro</td>
+    <td>5</td>
+    <td>Eduardo David Velasquez Laquihuanaco</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>US022</td>
+    <td>Visualizar estado de conectividad</td>
+    <td>T-25</td>
+    <td>Connectivity Status View</td>
+    <td>Implementar vista del estado de conectividad de sensores y gateways</td>
+    <td>4</td>
+    <td>Eduardo David Velasquez Laquihuanaco</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>US023</td>
+    <td>Sincronizar datos almacenados offline</td>
+    <td>T-26</td>
+    <td>Offline Sync View</td>
+    <td>Implementar vista de sincronización de datos almacenados sin conexión</td>
+    <td>5</td>
+    <td>Eduardo David Velasquez Laquihuanaco</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>US039</td>
+    <td>Visualizar dashboard operativo inicial</td>
+    <td>T-27</td>
+    <td>Operational Dashboard UI</td>
+    <td>Implementar dashboard operacional con telemetría en vivo, KPIs y estado de activos monitoreados</td>
+    <td>8</td>
+    <td>Eduardo David Velasquez Laquihuanaco / Santiago Enrique Vargas Alarcon</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- EP005 - ALERTS -->
+  <tr>
+    <td>US024</td>
+    <td>Crear incidencia térmica</td>
+    <td>T-28</td>
+    <td>Thermal Incident Creation UI</td>
+    <td>Implementar vista de creación de incidencia térmica al detectar desviación</td>
+    <td>4</td>
+    <td>Santiago Enrique Vargas Alarcon</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>US025</td>
+    <td>Disparar notificaciones de alerta</td>
+    <td>T-29</td>
+    <td>Alert Notification UI</td>
+    <td>Implementar vista de notificaciones de alerta automáticas</td>
+    <td>4</td>
+    <td>Santiago Enrique Vargas Alarcon</td>
+    <td>In-Process</td>
+  </tr>
+  <tr>
+    <td>US026</td>
+    <td>Escalar alerta no atendida</td>
+    <td>T-30</td>
+    <td>Alert Escalation UI</td>
+    <td>Implementar vista de escalamiento de alertas no atendidas</td>
+    <td>4</td>
+    <td>Santiago Enrique Vargas Alarcon</td>
+    <td>To-do</td>
+  </tr>
+  <tr>
+    <td>US027</td>
+    <td>Reconocer alerta crítica</td>
+    <td>T-31</td>
+    <td>Critical Alert Acknowledgement UI</td>
+    <td>Implementar vista de reconocimiento de alertas críticas</td>
+    <td>4</td>
+    <td>Santiago Enrique Vargas Alarcon</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>US028</td>
+    <td>Registrar acción correctiva y cerrar incidencia</td>
+    <td>T-32</td>
+    <td>Corrective Action UI</td>
+    <td>Implementar vista de registro de acción correctiva y cierre de incidencia</td>
+    <td>4</td>
+    <td>Santiago Enrique Vargas Alarcon</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- EP006 - REPORTS -->
+  <tr>
+    <td>US029</td>
+    <td>Generar bitácora diaria</td>
+    <td>T-33</td>
+    <td>Daily Log View</td>
+    <td>Implementar vista de bitácora diaria de lecturas y eventos del sistema</td>
+    <td>4</td>
+    <td>Leonardo Sebastian Delgado Arriola</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>US030</td>
+    <td>Consultar historial de eventos</td>
+    <td>T-34</td>
+    <td>Operational History View</td>
+    <td>Implementar vista de historial de eventos operacionales</td>
+    <td>4</td>
+    <td>Leonardo Sebastian Delgado Arriola</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>US031</td>
+    <td>Exportar reporte sanitario</td>
+    <td>T-35</td>
+    <td>Sanitary Compliance Export</td>
+    <td>Implementar vista de exportación de reporte de cumplimiento sanitario</td>
+    <td>4</td>
+    <td>Leonardo Sebastian Delgado Arriola</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>US032</td>
+    <td>Descargar reporte mensual</td>
+    <td>T-36</td>
+    <td>Monthly Report Download</td>
+    <td>Implementar descarga de reporte mensual consolidado</td>
+    <td>4</td>
+    <td>Leonardo Sebastian Delgado Arriola</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>US033</td>
+    <td>Detectar faltantes o incumplimientos</td>
+    <td>T-37</td>
+    <td>Compliance Findings View</td>
+    <td>Implementar vista de hallazgos y faltantes de cumplimiento normativo</td>
+    <td>4</td>
+    <td>Leonardo Sebastian Delgado Arriola</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>US034</td>
+    <td>Preparar evidencia para auditoría</td>
+    <td>T-38</td>
+    <td>Audit Evidence View</td>
+    <td>Implementar vista de evidencia de auditoría con registros descargables</td>
+    <td>4</td>
+    <td>Leonardo Sebastian Delgado Arriola</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- EP007 - OPERATIVE CONFIG -->
+  <tr>
+    <td>US035</td>
+    <td>Configurar rangos de seguridad</td>
+    <td>T-39</td>
+    <td>Safety Range Settings UI</td>
+    <td>Implementar vista de configuración de rangos seguros de temperatura y humedad por activo</td>
+    <td>4</td>
+    <td>Jean Pool Alexander Arias Tasayco</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>US036</td>
+    <td>Actualizar parámetros operativos</td>
+    <td>T-40</td>
+    <td>Operational Parameters UI</td>
+    <td>Implementar vista de actualización de parámetros operativos del monitoreo</td>
+    <td>4</td>
+    <td>Santiago Enrique Vargas Alarcon</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>US037</td>
+    <td>Programar mantenimiento preventivo</td>
+    <td>T-41</td>
+    <td>Preventive Maintenance UI</td>
+    <td>Implementar vista de programación y seguimiento de mantenimiento preventivo</td>
+    <td>4</td>
+    <td>Eduardo David Velasquez Laquihuanaco</td>
+    <td>Done</td>
+  </tr>
+  <tr>
+    <td>US038</td>
+    <td>Solicitar y cerrar servicio técnico</td>
+    <td>T-42</td>
+    <td>Technical Service UI</td>
+    <td>Implementar vista de solicitud y cierre de servicio técnico</td>
+    <td>4</td>
+    <td>Mauricio Luis Pajes Leon</td>
+    <td>Done</td>
+  </tr>
+
+  <!-- DEPLOYMENT -->
+  <tr>
+    <td>-</td>
+    <td>Despliegue continuo</td>
+    <td>T-43</td>
+    <td>Vercel CI/CD &amp; JSON Server Setup</td>
+    <td>Configurar despliegue automático en Vercel con preview por branch y servidor JSON hospedado</td>
+    <td>3</td>
+    <td>Leonardo Sebastian Delgado Arriola</td>
+    <td>Done</td>
+  </tr>
+</table>
+
+#### 5.2.2.4. Development Evidence for Sprint Review
+
+Durante el Sprint 2 se realizó la implementación completa de la Frontend Web Application de ColdTrace utilizando Vue Framework, aplicando la arquitectura de bounded contexts definida en el diseño de la solución. Todos los commits se realizaron en el repositorio [AplicacionesWeb-Grupo-2/coldtrace-frontend](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/develop), aplicando Conventional Commits y GitFlow con ramas `feature/` por cada User Story.
+
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse;">
+  <tr>
+    <th>Repository</th>
+    <th>Branch</th>
+    <th>Commit Id</th>
+    <th>Commit Message</th>
+    <th>Commit Message Body</th>
+    <th>Committed on (Date)</th>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/develop">develop</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/3dcccff">3dcccff</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/3dcccff">Initial commit</a></td>
+    <td>Set up base project structure with Vue 3, Vite and initial routing configuration.</td>
+    <td>14/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/indentity-access">feature/indentity-access</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/710190b">710190b</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/710190b">feat(indentity-access): Implementing the sign up page and users creation logic</a></td>
+    <td>Added sign-up form view, user entity, assembler and POST endpoint integration for new account registration.</td>
+    <td>14/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/develop">develop</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/ddfbfa8">ddfbfa8</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/ddfbfa8">Merge pull request #1 from AplicacionesWeb-Grupo-2/feature/indentity-access</a></td>
+    <td>Merged sign-up implementation into develop branch.</td>
+    <td>14/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/indentity-access">feature/indentity-access</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/a88797e">a88797e</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/a88797e">feat(indentity-access): Implementing the sign in page and users authentication logic</a></td>
+    <td>Added sign-in view with credential validation, session persistence via localStorage and redirect to dashboard on success.</td>
+    <td>14/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/indentity-access">feature/indentity-access</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/ebfceac">ebfceac</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/ebfceac">feat(indentity-acces): adding the list all users by organization</a></td>
+    <td>Implemented user list filtered by organization ID, including table view and GET endpoint consumption.</td>
+    <td>14/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/indentity-access">feature/indentity-access</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/2791042">2791042</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/2791042">feat(indentity-acces): adding role management and creation of new users for the organization</a></td>
+    <td>Added roles and permissions management view, role assignment per user and new user creation form scoped to organization.</td>
+    <td>14/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/develop">develop</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/2e4127a">2e4127a</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/2e4127a">Merge pull request #2 from AplicacionesWeb-Grupo-2/feature/indentity-access</a></td>
+    <td>Merged complete identity and access bounded context into develop.</td>
+    <td>14/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/asset-management">feature/asset-management</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/0ebdcda">0ebdcda</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/0ebdcda">feat(asset-management): adding the creation and list of assets (cold rooms and transports).</a></td>
+    <td>Implemented cold room and transport unit registration forms and list views with status indicators and organization filtering.</td>
+    <td>14/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/asset-management">feature/asset-management</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/53b293c">53b293c</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/53b293c">feat(asset-management): adding IoT devices and its creation</a></td>
+    <td>Added IoT device entity, assembler, API endpoint and creation form with device type, model and linked asset fields.</td>
+    <td>14/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/asset-management">feature/asset-management</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/3d44b2e">3d44b2e</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/3d44b2e">feat(asset-management): adding lists and creation of gateways</a></td>
+    <td>Implemented gateway registration form and list view with connectivity status, network type and location fields.</td>
+    <td>14/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/asset-management">feature/asset-management</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/37fd202">37fd202</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/37fd202">feat(asset-management): create settings to the paramaters of the IoT devices and assets</a></td>
+    <td>Added asset settings view with configurable temperature range, humidity threshold, calibration frequency and unit preferences per organization.</td>
+    <td>14/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/develop">develop</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/133c396">133c396</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/133c396">Merge pull request #3 from AplicacionesWeb-Grupo-2/feature/asset-management</a></td>
+    <td>Merged complete asset management bounded context into develop.</td>
+    <td>14/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/alerts">feature/alerts</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/15c2e4f">15c2e4f</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/15c2e4f">feat: Implement the alerts BoundedContext</a></td>
+    <td>Implemented alerts domain model, store, API endpoint and base UI views for incident creation, acknowledgement and corrective action registration.</td>
+    <td>15/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/monitoring">feature/monitoring</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/f573eba">f573eba</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/f573eba">feat(monitoring): sotre application implementation</a></td>
+    <td>Added monitoring application store with reactive state for sensor readings, asset status and telemetry data loading methods.</td>
+    <td>15/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/maintenance-management">feature/maintenance-management</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/c4edebe">c4edebe</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/c4edebe">feat(maintenance-management): Maintenance manegement domain update</a></td>
+    <td>Updated maintenance domain entities and enums to align with db.json structure for schedules and technical service requests.</td>
+    <td>15/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/reports">feature/reports</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/980b38e">980b38e</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/980b38e">feat: add report domain entities</a></td>
+    <td>Added Report entity class with id, organizationId, type, title, status and generatedAt fields.</td>
+    <td>15/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/reports">feature/reports</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/8e41ae2">8e41ae2</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/8e41ae2">feat: add supporting domain models and enums</a></td>
+    <td>Added ReportType and ReportStatus enums to support domain model classification for all report categories.</td>
+    <td>15/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/reports">feature/reports</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/60a2453">60a2453</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/60a2453">feat: add reports application store</a></td>
+    <td>Implemented reactive reports store with loadReports method and organization-scoped filtering.</td>
+    <td>15/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/reports">feature/reports</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/9859d2e">9859d2e</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/9859d2e">feat: implement reports API and assembler for report</a></td>
+    <td>Added ReportsApiEndpoint and ReportAssembler to map JSON server responses to Report domain entities.</td>
+    <td>15/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/reports">feature/reports</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/fac9cd1">fac9cd1</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/fac9cd1">feat: add reports UI views and routing</a></td>
+    <td>Added six report views (daily log, operational history, sanitary export, monthly download, compliance findings, audit evidence) and registered their routes.</td>
+    <td>15/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/develop">develop</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/ec92480">ec92480</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/ec92480">Merge pull request #7 from AplicacionesWeb-Grupo-2/feature/reports</a></td>
+    <td>Merged complete reports and compliance bounded context into develop.</td>
+    <td>15/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/monitoring">feature/monitoring</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/b7679b8">b7679b8</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/b7679b8">feat(monitoring): full domain model monitoring implementation</a></td>
+    <td>Completed monitoring domain with SensorReading entity, IoTDevice and Gateway domain models and their respective enums.</td>
+    <td>15/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/maintenance-management">feature/maintenance-management</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/e7132d2">e7132d2</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/e7132d2">feat(maintenance-management): Functionality design and link to domain</a></td>
+    <td>Linked maintenance UI components to domain entities and defined core interactions for schedule creation and service request flows.</td>
+    <td>15/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/maintenance-management">feature/maintenance-management</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/ce9881f">ce9881f</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/ce9881f">feat(maintenance-management): Domain file appearence correction</a></td>
+    <td>Fixed naming and formatting inconsistencies in maintenance domain files to match project conventions.</td>
+    <td>15/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/maintenance-management">feature/maintenance-management</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/bf30ad5">bf30ad5</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/bf30ad5">feat(maintenance-management): User's interactive elements design</a></td>
+    <td>Added interactive UI elements for maintenance scheduling and technical service request views including status toggles and date pickers.</td>
+    <td>15/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/maintenance-management">feature/maintenance-management</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/ccf641c">ccf641c</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/ccf641c">feat(maintenance-management): Maintanance Management API implementation</a></td>
+    <td>Implemented MaintenanceApiEndpoint and assemblers for maintenance schedules and technical service requests consuming json-server endpoints.</td>
+    <td>15/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/monitoring">feature/monitoring</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/4ff7687">4ff7687</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/4ff7687">feat(monitoring): monitoring infrastructure implementation</a></td>
+    <td>Added monitoring API endpoint, assembler for sensor readings and base-api-endpoint integration for telemetry data consumption.</td>
+    <td>15/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/monitoring">feature/monitoring</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/900bbd9">900bbd9</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/900bbd9">feat(monitoring):visual monitoring components implementation</a></td>
+    <td>Implemented TemperatureChart, IncidentsChart, StorageDistribution, RecentAlerts, MaintenanceList and StatCard dashboard components.</td>
+    <td>15/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/develop">develop</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/eaa91ad">eaa91ad</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/eaa91ad">Merge pull request #8 from AplicacionesWeb-Grupo-2/feature/monitoring</a></td>
+    <td>Merged complete monitoring bounded context into develop.</td>
+    <td>15/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/develop">develop</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/ab5acb0">ab5acb0</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/ab5acb0">Merge pull request #6 from AplicacionesWeb-Grupo-2/feature/maintenance-management</a></td>
+    <td>Merged complete maintenance management bounded context into develop.</td>
+    <td>15/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/feature/documentation">feature/documentation</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/08b793a">08b793a</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/08b793a">feat(docs): adding documentatin of user stories and class diagram</a></td>
+    <td>Added user stories documentation file and updated class diagram reflecting bounded context architecture for Sprint Review.</td>
+    <td>15/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/develop">develop</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/209f78d">209f78d</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/209f78d">Merge pull request #9 from AplicacionesWeb-Grupo-2/feature/documentation</a></td>
+    <td>Merged documentation updates into develop.</td>
+    <td>15/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/develop">develop</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/1607b9f">1607b9f</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/1607b9f">chore: stop tracking local editor settings</a></td>
+    <td>Added .idea/ and local config files to .gitignore to avoid tracking personal editor preferences.</td>
+    <td>15/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/develop">develop</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/834f28c">834f28c</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/834f28c">chore: stop tracking vscode recommendations</a></td>
+    <td>Removed .vscode/extensions.json from tracking to keep repository clean of editor-specific configuration.</td>
+    <td>15/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/release/1.0.0">release/1.0.0</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/3168c79">3168c79</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/3168c79">chore(release): v1.0.0</a></td>
+    <td>Tagged first production release v1.0.0 including all Sprint 2 bounded contexts: identity-access, asset-management, monitoring, alerts, reports and maintenance.</td>
+    <td>15/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/develop">develop</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/100e113">100e113</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/100e113">Merge branch 'release/1.0.0' into develop</a></td>
+    <td>Integrated release/1.0.0 changes back into develop to keep branches in sync after production release.</td>
+    <td>15/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/develop">develop</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/da85358">da85358</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/da85358">chore: configure vercel deployment</a></td>
+    <td>Added vercel.json with SPA routing rewrites and build configuration for Vite-based Vue 3 project.</td>
+    <td>15/05/2026</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend">AplicacionesWeb-Grupo-2/coldtrace-frontend</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commits/develop">develop</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/9be865e">9be865e</a></td>
+    <td><a href="https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/commit/9be865e">Revert "chore: configure vercel deployment"</a></td>
+    <td>Reverted vercel.json configuration due to deployment conflict; deployment handled via Vercel dashboard settings instead.</td>
+    <td>15/05/2026</td>
+  </tr>
+</table>
+
+
+#### 5.2.2.5 Execution Evidence for Sprint Review
+
+Al término del Sprint 2, se desplegó la primera versión funcional de la Frontend Web Application de ColdTrace en Vercel, accesible públicamente. La aplicación permite navegar a través de los módulos de autenticación, gestión de activos, monitoreo operacional y reportes de cumplimiento. A continuación se presentan las principales vistas implementadas durante el sprint.
+
+**Identity & Access – Autenticación y gestión de usuarios**
+
+La plataforma cuenta con vistas de creación de cuenta, inicio de sesión y recuperación de contraseña, así como una pantalla de administración de roles y permisos para usuarios con perfil administrador.
+
+![Sign-In View](report/assets/chapter-05/sprint-02/sign-in.png)
+*Figura 5.2.2.5.1: Vista de Inicio de Sesión (Sign-In).*
+
+![Create Account View](report/assets/chapter-05/sprint-02/create-account.png)
+*Figura 5.2.2.5.2: Vista de Registro de Cuenta (Sign-Up).*
+
+![Password Recovery View](report/assets/chapter-05/sprint-02/password-recovery.png)
+*Figura 5.2.2.5.3: Vista de Recuperación de Contraseña.*
+
+![Roles & Permissions View](report/assets/chapter-05/sprint-02/roles-permissions.png)
+*Figura 5.2.2.5.4: Administración de Roles y Permisos.*
+
+**Asset Management – Gestión de activos e infraestructura IoT**
+
+Se implementó el módulo completo de gestión de activos, incluyendo el registro de cámaras frigoríficas, unidades de transporte, vinculación de sensores IoT, emparejamiento de gateways, calibración y configuración avanzada de parámetros de dispositivos.
+
+![Cold Room List View](report/assets/chapter-05/sprint-02/cold-room-list.png)
+*Figura 5.2.2.5.5: Listado y Gestión de Cámaras Frigoríficas.*
+
+![Transport Unit List View](report/assets/chapter-05/sprint-02/transport-units.png)
+*Figura 5.2.2.5.6: Registro de Unidades de Transporte.*
+
+![Sensor Linking & Gateway Pairing View](report/assets/chapter-05/sprint-02/sensor-pairing.png)
+*Figura 5.2.2.5.7: Vinculación de Sensores y Gateways IoT.*
+
+![Asset Settings & IoT Configuration View](report/assets/chapter-05/sprint-02/asset-settings.png)
+*Figura 5.2.2.5.8: Configuración Avanzada y Parámetros Operativos.*
+
+**Monitoring – Dashboard operacional (US039)**
+
+El dashboard operacional muestra en tiempo real el estado de los activos monitoreados, KPIs de temperatura, alertas activas y telemetría de sensores. Los datos se consumen desde el servidor JSON configurado como backend provisional.
+
+![Operational Dashboard View](report/assets/chapter-05/sprint-02/operational-dashboard.png)
+*Figura 5.2.2.5.9: Dashboard Operacional con Telemetría en Tiempo Real.*
+
+**Reports – Reportes y cumplimiento normativo (US029–US034)**
+
+El módulo de reportes incluye seis vistas: bitácora diaria, historial de eventos operacionales, exportación de reportes sanitarios, descarga de reportes mensuales, hallazgos de cumplimiento y evidencia de auditoría.
+
+![Reports Daily Log View](report/assets/chapter-05/sprint-02/daily-log.png)
+*Figura 5.2.2.5.10: Bitácora Diaria de Operaciones.*
+
+![Operational History View](report/assets/chapter-05/sprint-02/operational-history.png)
+*Figura 5.2.2.5.11: Historial de Eventos Operacionales.*
+
+![Compliance Findings & Audit Evidence View](report/assets/chapter-05/sprint-02/compliance-audit.png)
+*Figura 5.2.2.5.12: Hallazgos de Cumplimiento y Evidencia de Auditoría.*
+
+**Video de navegación del producto:** [upc-pre-202610-1asi0730-12190-coldtrace-productnav-sprint-02](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQAb3T9DE7AmQ7aOxNsIfCAIAaqlY68Kt3syw7uDil2npvk?e=hlq0YC&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
+#### 5.2.2.6. Services Documentation Evidence for Sprint Review
+
+Durante el Sprint 2 no se desplegaron Web Services propios (RESTful API), dado que el alcance del sprint estuvo centrado en la implementación del frontend. Para soportar el funcionamiento de la aplicación en producción, el equipo configuró un servidor JSON hospedado (`json-server`) que actúa como API provisional, permitiendo que el frontend consuma datos estructurados mediante endpoints REST simulados.
+
+A continuación se documentan los principales endpoints del servidor JSON que el frontend consume durante este sprint:
+
+<table border="1" cellpadding="6" cellspacing="0">
+  <tr>
+    <th>Endpoint</th>
+    <th>Verb HTTP</th>
+    <th>Sintaxis de llamada</th>
+    <th>Parámetros</th>
+    <th>Descripción</th>
+    <th>Ejemplo de Response</th>
+  </tr>
+  <tr>
+    <td>/assets</td>
+    <td>GET</td>
+    <td><code>GET /assets?organizationId={id}</code></td>
+    <td><code>organizationId</code> (query, requerido): ID numérico de la organización para filtrar activos.</td>
+    <td>Retorna la lista de activos registrados (cámaras frigoríficas y unidades de transporte) filtrados por organización.</td>
+    <td><code>{ "id": "1", "name": "Cold Room 01", "type": "cold-room", "status": "active", "organizationId": 1 }</code></td>
+  </tr>
+  <tr>
+    <td>/assets/:id</td>
+    <td>GET</td>
+    <td><code>GET /assets/{id}</code></td>
+    <td><code>id</code> (path, requerido): ID numérico del activo.</td>
+    <td>Retorna el detalle completo de un activo específico incluyendo temperatura actual, conectividad y último incidente.</td>
+    <td><code>{ "id": "1", "name": "Cold Room 01", "currentTemperature": "4.2°C", "connectivity": "online", "lastIncident": "none" }</code></td>
+  </tr>
+  <tr>
+    <td>/assets</td>
+    <td>POST</td>
+    <td><code>POST /assets</code></td>
+    <td>Body JSON requerido: <code>name</code>, <code>type</code>, <code>organizationId</code>, <code>gatewayId</code>, <code>location</code>, <code>capacity</code>.</td>
+    <td>Registra un nuevo activo en la plataforma y retorna el objeto creado con su ID asignado.</td>
+    <td><code>{ "id": "28", "name": "Cold Room 21", "type": "cold-room", "status": "active" }</code></td>
+  </tr>
+  <tr>
+    <td>/assets/:id</td>
+    <td>PUT</td>
+    <td><code>PUT /assets/{id}</code></td>
+    <td><code>id</code> (path, requerido): ID del activo. Body JSON: campos a actualizar (<code>status</code>, <code>name</code>, <code>location</code>).</td>
+    <td>Actualiza los datos o estado de un activo existente. Retorna el objeto actualizado completo.</td>
+    <td><code>{ "id": "1", "name": "Cold Room 01", "status": "maintenance" }</code></td>
+  </tr>
+  <tr>
+    <td>/gateways</td>
+    <td>GET</td>
+    <td><code>GET /gateways?organizationId={id}</code></td>
+    <td><code>organizationId</code> (query, requerido): ID numérico de la organización.</td>
+    <td>Retorna la lista de gateways IoT registrados con su estado de conectividad y tipo de red.</td>
+    <td><code>{ "id": "1", "uuid": "GW-001", "name": "Main Warehouse Gateway", "status": "active", "network": "LTE / Wi-Fi" }</code></td>
+  </tr>
+  <tr>
+    <td>/iot-devices</td>
+    <td>GET</td>
+    <td><code>GET /iot-devices?organizationId={id}</code></td>
+    <td><code>organizationId</code> (query, requerido): ID numérico de la organización.</td>
+    <td>Retorna la lista de sensores IoT vinculados a activos de la organización, incluyendo estado de calibración.</td>
+    <td><code>{ "id": "1", "uuid": "SN-001", "deviceType": "temperature-sensor", "status": "linked", "calibrationStatus": "compliant" }</code></td>
+  </tr>
+  <tr>
+    <td>/iot-devices</td>
+    <td>POST</td>
+    <td><code>POST /iot-devices</code></td>
+    <td>Body JSON requerido: <code>deviceType</code>, <code>model</code>, <code>organizationId</code>, <code>assetId</code>, <code>measurementType</code>.</td>
+    <td>Registra un nuevo dispositivo IoT y lo vincula al activo indicado. Retorna el objeto creado.</td>
+    <td><code>{ "id": "7", "uuid": "SN-007", "deviceType": "humidity-sensor", "assetId": 5, "status": "linked" }</code></td>
+  </tr>
+  <tr>
+    <td>/sensor-readings</td>
+    <td>GET</td>
+    <td><code>GET /sensor-readings?assetId={id}</code></td>
+    <td><code>assetId</code> (query, opcional): filtra lecturas por activo. Sin parámetro retorna todas las lecturas.</td>
+    <td>Retorna lecturas de telemetría de temperatura y humedad para el dashboard operacional, ordenadas por fecha descendente.</td>
+    <td><code>{ "id": "1", "assetId": 1, "temperature": -2, "humidity": 55, "isOutOfRange": false, "recordedAt": "2026-05-12T12:00:00.000Z" }</code></td>
+  </tr>
+  <tr>
+    <td>/reports</td>
+    <td>GET</td>
+    <td><code>GET /reports?organizationId={id}&type={type}</code></td>
+    <td><code>organizationId</code> (query, requerido): ID de la organización. <code>type</code> (query, opcional): filtra por tipo (<code>daily-log</code>, <code>monthly</code>, <code>compliance</code>, <code>findings</code>, <code>audit-evidence</code>, <code>history</code>).</td>
+    <td>Retorna los reportes disponibles para la organización. Soporta filtrado por tipo de reporte.</td>
+    <td><code>{ "id": "1", "type": "daily-log", "title": "Daily Log - Lima Hub", "status": "ready", "generatedAt": "2026-05-12" }</code></td>
+  </tr>
+  <tr>
+    <td>/users</td>
+    <td>GET</td>
+    <td><code>GET /users?organizationId={id}</code></td>
+    <td><code>organizationId</code> (query, requerido): ID numérico de la organización.</td>
+    <td>Retorna la lista de usuarios registrados en la organización con su rol asignado.</td>
+    <td><code>{ "id": "1", "firstName": "Mauricio", "lastName": "Pajes", "email": "mpajes@coldtrace.com", "roleId": 5 }</code></td>
+  </tr>
+  <tr>
+    <td>/users</td>
+    <td>POST</td>
+    <td><code>POST /users</code></td>
+    <td>Body JSON requerido: <code>firstName</code>, <code>lastName</code>, <code>email</code>, <code>organizationId</code>, <code>roleId</code>.</td>
+    <td>Registra un nuevo usuario en la organización. Retorna el objeto creado con UUID asignado.</td>
+    <td><code>{ "id": "9", "uuid": "USR-9", "firstName": "Ana", "lastName": "Torres", "roleId": 3 }</code></td>
+  </tr>
+  <tr>
+    <td>/roles</td>
+    <td>GET</td>
+    <td><code>GET /roles</code></td>
+    <td>Sin parámetros. Retorna todos los roles del sistema.</td>
+    <td>Retorna los roles definidos en el sistema con su nombre y etiqueta para la asignación a usuarios.</td>
+    <td><code>{ "id": "3", "name": "operator", "label": "Operator", "permissions": [] }</code></td>
+  </tr>
+  <tr>
+    <td>/incidents</td>
+    <td>GET</td>
+    <td><code>GET /incidents?organizationId={id}</code></td>
+    <td><code>organizationId</code> (query, requerido): ID numérico de la organización.</td>
+    <td>Retorna los incidentes registrados para la organización con severidad, estado y fecha.</td>
+    <td><code>{ "id": "1", "assetName": "Cold Room 01", "type": "High temperature", "severity": "critical", "status": "open", "date": "2026-05-10" }</code></td>
+  </tr>
+  <tr>
+    <td>/maintenance-schedules</td>
+    <td>GET</td>
+    <td><code>GET /maintenance-schedules?organizationId={id}</code></td>
+    <td><code>organizationId</code> (query, requerido): ID numérico de la organización.</td>
+    <td>Retorna los mantenimientos programados para los activos de la organización con su estado y fecha.</td>
+    <td><code>{ "id": "1", "assetName": "Cold Room 01", "task": "Compressor inspection", "status": "scheduled", "scheduledDate": "2026-05-14" }</code></td>
+  </tr>
+  <tr>
+    <td>/asset-settings</td>
+    <td>GET</td>
+    <td><code>GET /asset-settings?organizationId={id}</code></td>
+    <td><code>organizationId</code> (query, requerido): ID numérico de la organización.</td>
+    <td>Retorna la configuración operativa de la organización: rangos de temperatura, humedad máxima, frecuencia de calibración y unidades.</td>
+    <td><code>{ "id": "1", "minimumTemperature": -5, "maximumTemperature": 8, "maximumHumidity": 85, "calibrationFrequencyDays": 180 }</code></td>
+  </tr>
+  <tr>
+    <td>/asset-settings/:id</td>
+    <td>PUT</td>
+    <td><code>PUT /asset-settings/{id}</code></td>
+    <td><code>id</code> (path, requerido): ID del registro de settings. Body JSON: campos a actualizar.</td>
+    <td>Actualiza los parámetros operativos de la organización. Retorna el objeto de configuración actualizado.</td>
+    <td><code>{ "id": "1", "minimumTemperature": -3, "maximumTemperature": 6, "maximumHumidity": 80 }</code></td>
+  </tr>
+</table>
+
+A continuación se la interacción con los endpoints del servidor JSON desplegado en Render:
+
+**URL del servidor JSON desplegado:** [https://coldtrace-app-web-json-server.onrender.com/](https://coldtrace-app-web-json-server.onrender.com/)
+
+**Commits relacionados con la configuración del servidor JSON:**
+- `da85358` — chore: configure vercel deployment
+- `T-43` — Vercel CI/CD & JSON Server Setup (Render deployment)
+La implementación formal del RESTful API con Spring Boot será abordada en el Sprint 3.
+
+#### 5.2.2.7. Software Deployment Evidence for Sprint Review
+
+Durante el Sprint 2 se realizó el despliegue de los componentes web principales de ColdTrace para validar la solución en un entorno accesible por el equipo. La Frontend Web Application fue publicada en Vercel, mientras que el servicio provisional de datos basado en `json-server` fue desplegado en Render. Esta configuración permitió revisar los flujos implementados desde una URL pública y consumir datos de prueba desde un backend hospedado de forma independiente.
+
+**Pasos realizados para el despliegue:**
+
+1. Se desplegó la Frontend Web Application de ColdTrace en Vercel, generando un entorno de producción con estado `Ready` y dominio público asignado.
+
+2. Se verificó que el dominio de producción del frontend apunte correctamente a la aplicación publicada: [https://coldtrace-frontend-web.vercel.app/](https://coldtrace-frontend-web.vercel.app/).
+
+3. Se desplegó el backend provisional con `json-server` en Render como Web Service, exponiendo los recursos simulados requeridos por la aplicación para el Sprint Review.
+
+4. Se verificó que el servicio de Render se encuentre activo y disponible desde el enlace público: [https://coldtrace-app-web-json-server.onrender.com/](https://coldtrace-app-web-json-server.onrender.com/).
+
+5. Se validó que el `json-server` exponga las rutas de datos utilizadas por ColdTrace, incluyendo `sensor-readings`, `incidents`, `maintenance-schedules`, `technical-service-requests`, `notifications` y `reports`.
+
+**URL de despliegue del frontend:**
+[https://coldtrace-frontend-web.vercel.app/](https://coldtrace-frontend-web.vercel.app/)
+
+**URL de despliegue del json-server:**
+[https://coldtrace-app-web-json-server.onrender.com/](https://coldtrace-app-web-json-server.onrender.com/)
+
+A continuación se presenta la evidencia del despliegue del frontend en Vercel y del servicio `json-server` en Render:
+
+![Vercel Frontend Deployment](report/assets/chapter-05/sprint-02/Vercel-Frontend-Deployment.jpeg)
+*Figura 5.2.2.7.1: Despliegue de producción de la Frontend Web Application de ColdTrace en Vercel, con estado Ready y dominio coldtrace-frontend-web.vercel.app.*
+
+![Json Server Deployment](report/assets/chapter-05/sprint-02/Json-server-deployment.jpeg)
+*Figura 5.2.2.7.2: Despliegue del servicio json-server de ColdTrace en Render, con el servicio activo y las rutas de datos disponibles para la aplicación.*
+
+
+#### 5.2.2.8. Team Collaboration Insights during Sprint
+
+Durante el Sprint 2, el equipo trabajó de forma colaborativa en el repositorio `AplicacionesWeb-Grupo-2 /
+coldtrace-frontend`, aplicando GitFlow con ramas `feature/` por cada User Story y fusionando los cambios hacia `develop` mediante Pull Requests revisados. La distribución del trabajo refleja la organización por épicas acordada en el Sprint Planning: Mauricio Pajés lideró la implementación de EP002 (Identity & Access) y EP003 (Asset Management), David Morales encabezó el desarrollo del dashboard operacional de EP004, y Leonardo Cabrera implementó la totalidad del bounded context de reportes EP006 (US029–US034).
+
+A continuación se presenta el resumen de participación por integrante basado en el historial de commits del repositorio:
+
+<table border="1" cellpadding="6" cellspacing="0">
+  <tr>
+    <th>Integrante</th>
+    <th>GitHub Username</th>
+    <th>Commits (Sprint 2)</th>
+    <th>Épicas / Bounded Contexts trabajados</th>
+  </tr>
+  <tr>
+    <td>Pajés León, Mauricio Luis</td>
+    <td>mauricio-pajes</td>
+    <td>~33</td>
+    <td>EP002 Identity &amp; Access, EP003 Asset Management, EP004 Monitoring, Deployment</td>
+  </tr>
+  <tr>
+    <td>Delgado Arriola, Leonardo Sebastian</td>
+    <td>leodev77</td>
+    <td>~19</td>
+    <td>EP006 Reports &amp; Compliance (US029–US034)</td>
+  </tr>
+  <tr>
+    <td>Vargas Alarcon, Santiago Enrique</td>
+    <td>SanVargasAI</td>
+    <td>~5</td>
+    <td>EP004 Operational Monitoring Dashboard (US039, monitoring dashboard, sidebar)</td>
+  </tr>
+  <tr>
+    <td>Arias Tasayco, Jean Pool</td>
+    <td>Jean-AT</td>
+    <td>4</td>
+    <td>EP007 Operative Configuration &amp; Maintenance (US035–US038)</td>
+  </tr>
+  <tr>
+    <td>Velasquez Laquihuanaco, Eduardo David</td>
+    <td>Edu-VLL</td>
+    <td>1</td>
+    <td>EP005 Alerts &amp; Incidents (US027 – recognize critical alert)</td>
+  </tr>
+</table>
+
+
 ## 5.3. Validation Interviews
 
 Durante el Sprint 1 no se ejecutaron entrevistas de validación del producto, debido a que el alcance de la iteración estuvo centrado en la construcción y despliegue inicial del Landing Page. Esta actividad queda planificada para una iteración posterior, cuando exista una versión de producto con flujos funcionales suficientes para evaluar con usuarios.
