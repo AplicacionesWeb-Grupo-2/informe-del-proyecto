@@ -3599,6 +3599,36 @@ A continuación se presenta el resumen de participación por integrante basado e
 </table>
 
 
+### 5.2.3. Sprint 3
+
+
+#### 5.2.3.1.Spring Planning 3.
+
+
+#### 5.2.3.2. Aspect Leaders and Collaborators.
+
+
+#### 5.2.3.3.Sprint Backlog 3.
+
+
+#### 5.2.3.4.Development Evidence for Sprint Review.
+
+
+#### 5.2.3.5.Execution Evidence for Sprint Review.
+
+
+#### 5.2.3.6.Services Documentation Evidence for Sprint Review.
+
+
+
+#### 5.2.3.7.Software Deployment Evidence for Sprint Review.
+
+
+
+#### 5.2.3.8.Team Collaboration Insights during Sprint.
+
+
+
 ## 5.3. Validation Interviews
 
 Durante el Sprint 1 no se ejecutaron entrevistas de validación del producto, debido a que el alcance de la iteración estuvo centrado en la construcción y despliegue inicial del Landing Page. Esta actividad queda planificada para una iteración posterior, cuando exista una versión de producto con flujos funcionales suficientes para evaluar con usuarios.
