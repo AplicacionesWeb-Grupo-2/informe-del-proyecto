@@ -1749,12 +1749,15 @@ Al término del Sprint 3, se logró disponer de una infraestructura backend en e
 *[Imagen: Captura de pantalla de la interfaz de Swagger UI (o documento OpenAPI) mostrando todos los endpoints RESTful agrupados por controladores]*
 > Descripción: Documentación interactiva de la API oficial generada por Swagger, lista para ser consumida por el frontend.
 
+<br>
 
 
-(FALTA AGREGAR)
-*[Imagen: Captura de pantalla de Postman ejecutando una petición GET a `/api/v1/iot-devices` y recibiendo un objeto JSON estructurado]*
-> Descripción: Pruebas manuales de consumo de la API de dispositivos IoT para validar las respuestas y mapeo de datos.
+![swagger](assets/chapter-05/sprint-03/getPostman.png) 
+ 
+*[Imagen: Captura de pantalla de Postman ejecutando una petición GET a `/api/v1/organizations` y recibiendo un objeto JSON estructurado]* 
 
+
+<br>
 
 ![swagger](assets/chapter-05/sprint-03/database.png)
 
