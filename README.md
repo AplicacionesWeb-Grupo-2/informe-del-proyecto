@@ -3631,15 +3631,105 @@ A continuación se presenta el resumen de participación por integrante basado e
 
 ## 5.3. Validation Interviews
 
-Durante el Sprint 1 no se ejecutaron entrevistas de validación del producto, debido a que el alcance de la iteración estuvo centrado en la construcción y despliegue inicial del Landing Page. Esta actividad queda planificada para una iteración posterior, cuando exista una versión de producto con flujos funcionales suficientes para evaluar con usuarios.
-
 ### 5.3.1. Diseño de Entrevistas
 
-El diseño de entrevistas de validación será elaborado en una siguiente iteración, considerando preguntas orientadas a evaluar comprensión de la propuesta de valor, utilidad percibida, claridad visual y facilidad de navegación.
+Para la validación de la solución implementada, se diseñaron entrevistas dirigidas a representantes de los segmentos objetivo identificados en las fases iniciales del proyecto. El objetivo fue evaluar la percepción de los usuarios sobre la funcionalidad, usabilidad y pertinencia de la RESTful API de ColdTrace y su integración con la Frontend Web Application.
+
+Se definieron dos perfiles de entrevistados:
+
+- **Dueño o encargado de negocio:** Interesado en la reducción de merma, el cumplimiento sanitario y la generación de reportes operativos.
+- **Responsable de operaciones o calidad:** Enfocado en el monitoreo en tiempo real, la gestión de alertas e incidencias y la configuración de parámetros operativos.
+
+Las entrevistas se estructuraron en torno a los siguientes ejes de validación:
+
+1. **Registro y gestión de organizaciones y usuarios:** Validar que el flujo de sign-up y administración de usuarios sea claro y funcional.
+2. **Gestión de activos e infraestructura IoT:** Evaluar la facilidad para registrar activos, vincular sensores y configurar gateways.
+3. **Monitoreo y alertas:** Verificar que la visualización de lecturas de sensores y la gestión de incidencias térmicas responda a las necesidades operativas.
+4. **Reportes y cumplimiento:** Confirmar que la generación de reportes operativos y de cumplimiento sea útil para la toma de decisiones.
+5. **Mantenimiento y servicio técnico:** Evaluar la utilidad de la programación de mantenimiento preventivo y la gestión de solicitudes de servicio técnico.
 
 ### 5.3.2. Registro de Entrevistas
 
-No se registran entrevistas de validación para Sprint 1.
+Para cada segmento objetivo se registrarán 3 entrevistas. Cada entrevista debe incluir la información personal solicitada, un screenshot del video, el enlace de Microsoft Stream, el timing donde inicia la entrevista, su duración y un resumen descriptivo de las principales apreciaciones del participante.
+
+**Video consolidado de entrevistas de validación:** [Ver video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQDzxmtGoZMES7vutMFjzCRkAXimh9-_K-h2BVM1FMlXjhY?e=hdDtj8&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)  
+**Nomenclatura del video:** `upc-pre-202610-1asi0729-10177-ICEQvalidation-sprint-3.mp4`
+
+#### Segmento objetivo 1: Dueños, administradores o encargados de pequeños negocios alimentarios
+
+| **Entrevista Nro. 1** |  |
+| --- | --- |
+| Screenshot | <img src="report/assets/chapter-05/validation/IsaacDiazInterview.png" alt="Screenshot de entrevista de validación - Isaac Diaz" width="600"> |
+| Nombres y apellidos | Isaac Diaz |
+| Edad | 25 años |
+| Distrito | San Miguel |
+| Segmento objetivo | Dueños, administradores o encargados de pequeños negocios alimentarios |
+| URL de grabación | [Ver video en Microsoft Stream](https://1drv.ms/v/c/470edfbbf4f38077/IQDBetSYZ7JeQpQ6vmBHOrz2AQAVRE3xe3Wd1l_OaXu63Cs?e=l02EFp) |
+| Timing de inicio | 00:00 |
+| Duración | 12:28 |
+| Resumen | Isaac evaluó ColdTrace desde el rol de encargado de un pequeño negocio familiar que comercializa productos frios como carnes. Durante la revisión de la Landing Page, comprendió que la propuesta se enfoca en monitorear equipos refrigerados, recibir alertas y consultar historial, relacionándolo con su necesidad de detectar fallas antes de que la mercadería esté en riesgo. En la Web Application, valoró especialmente el dashboard, la revisión de activos, las alertas y el historial diario, pues estos elementos reemplazan parcialmente el control manual basado en revisar indicadores de refrigeradoras o inspeccionar visualmente los productos. Señaló que la solución sería útil si mantiene una experiencia simple, accesible desde cualquier dispositivo y con notificaciones claras. |
+
+| **Entrevista Nro. 2** |  |
+| --- | --- |
+| Screenshot | <br><br> |
+| Nombres y apellidos |  |
+| Edad |  |
+| Distrito |  |
+| Segmento objetivo | Dueños, administradores o encargados de pequeños negocios alimentarios |
+| URL de grabación |  |
+| Timing de inicio |  |
+| Duración |  |
+| Resumen | <br><br><br> |
+
+| **Entrevista Nro. 3** |  |
+| --- | --- |
+| Screenshot | <br><br> |
+| Nombres y apellidos |  |
+| Edad |  |
+| Distrito |  |
+| Segmento objetivo | Dueños, administradores o encargados de pequeños negocios alimentarios |
+| URL de grabación |  |
+| Timing de inicio |  |
+| Duración |  |
+| Resumen | <br><br><br> |
+
+#### Segmento objetivo 2: Responsables de operaciones, calidad o logística en negocios con cadena de frío
+
+| **Entrevista Nro. 1** |  |
+| --- | --- |
+| Screenshot | <img src=" " alt=" " width="600"> |
+| Nombres y apellidos |  |
+| Edad |  |
+| Distrito |  |
+| Segmento objetivo | Responsables de operaciones, calidad o logística en negocios con cadena de frío |
+| URL de grabación | [Ver video en Microsoft Stream](url) |
+| Timing de inicio |  |
+| Duración |  |
+| Resumen | |
+
+| **Entrevista Nro. 2** |  |
+| --- | --- |
+| Screenshot | <br><br> |
+| Nombres y apellidos |  |
+| Edad |  |
+| Distrito |  |
+| Segmento objetivo | Responsables de operaciones, calidad o logística en negocios con cadena de frío |
+| URL de grabación |  |
+| Timing de inicio |  |
+| Duración |  |
+| Resumen | <br><br><br> |
+
+| **Entrevista Nro. 3** |  |
+| --- | --- |
+| Screenshot | <br><br> |
+| Nombres y apellidos |  |
+| Edad |  |
+| Distrito |  |
+| Segmento objetivo | Responsables de operaciones, calidad o logística en negocios con cadena de frío |
+| URL de grabación |  |
+| Timing de inicio |  |
+| Duración |  |
+| Resumen | <br><br><br> |
 
 ### 5.3.3. Evaluaciones según heurísticas
 
