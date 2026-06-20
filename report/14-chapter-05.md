@@ -1657,8 +1657,13 @@ Los aspectos principales del Sprint 3 fueron:
 ## 5.2.3.3. Sprint Backlog 3
 El Sprint Backlog se gestionó mediante Linear App. A continuación se detallan las tareas asignadas y completadas en el rango del 03 al 19 de junio de 2026.
 
-![](assets/chapter-05/sprint-02/Json-server-deployment.jpeg)
+![Backlog en Linear](assets/chapter-05/sprint-03/linar-backlog.png)
+Elaboración propia en Linear: [https://linear.app/coldtrace/team/APPWEB/all](https://linear.app/coldtrace/team/APPWEB/all)
+
 *[Imagen: Captura de pantalla del tablero de Linear App mostrando el Sprint Backlog del Sprint 3, con las tareas organizadas en columnas de To Do, In Progress, In Review y Done]*
+
+
+
 > Descripción: Tablero visual que muestra las diferentes etapas de las tareas del sprint.
 
 | Id   | Issue ID  | Title                                  | Estimation  | Assigned To                     | Status    |
@@ -1682,43 +1687,163 @@ El Sprint Backlog se gestionó mediante Linear App. A continuación se detallan 
 | T-65 | APPWEB-74 | TS17 - Locations API                   |      3      | Mauricio Pajés                  | Done      |
 
 ## 5.2.3.4. Development Evidence for Sprint Review
-Durante el Sprint 3, la implementación backend se gestionó en el repositorio `AplicacionesWeb-Grupo-2/coldtrace-backend` siguiendo el estándar de commits de la organización.
+Durante el Sprint 3, la implementación backend se gestionó en el repositorio `AplicacionesWeb-Grupo-2/coldtrace-platform` siguiendo el estándar de commits de la organización.
+ 
 
-| Repository | Branch | Commit Id | Commit Message | Committed on (Date) |
-| :--- | :--- | :--- | :--- | :--- |
-| coldtrace-backend | develop | a1b2c3d | feat(foundation): project structure and initial ASP.NET Core setup | 04/06/2026 |
-| coldtrace-backend | feature/organizations | e4f5g6h | feat(organizations): implement Organizations API Base and Gateways API | 06/06/2026 |
-| coldtrace-backend | feature/iot-devices | i7j8k9l | feat(iot): implement IoT Devices API endpoints and DTOs | 10/06/2026 |
-| coldtrace-backend | feature/iot-devices | m1n2o3p | feat(iot): add Sensor Readings API for telemetry ingestion | 12/06/2026 |
-| coldtrace-backend | feature/maintenance | q4r5s6t | feat(maintenance): implement Maintenance Schedules and Tech Service API | 15/06/2026 |
-| coldtrace-backend | feature/assets | u7v8w9x | feat(assets): add Assets API and Asset Settings logic | 16/06/2026 |
-| coldtrace-backend | feature/reports | y1z2a3b | feat(reports): implement Incidents and Reports API controllers | 18/06/2026 |
-| coldtrace-backend | develop | c4d5e6f | merge: integrate feature branches into develop for Sprint 3 Review | 19/06/2026 |
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+|:---|:---|:---|:---|:---|:---|
+| coldtrace-platform | feature/coldtrace-backend-alignment | 5273159 | feat: align ColdTrace backend contract and structure | Alineación de la estructura general del backend con especificaciones de ColdTrace. Se revisaron y ajustaron los contratos de datos para cumplir con los estándares de la cadena de frío y asegurar consistencia con el dominio del negocio. | 2026-06-17 |
+| coldtrace-platform | develop | 945bec8 | Merge pull request #2 from AplicacionesWeb-Grupo-2/feature/t-44-api-foundation | Consolidación de la fundación de API. Se integró toda la configuración base del proyecto ASP.NET Core, incluyendo configuración de dependencias, middleware y estructura de carpetas. | 2026-06-14 |
+| coldtrace-platform | feature/t-44-api-foundation | 0489ac8 | Add ASP.NET Core backend scaffold | Generación del scaffold inicial de proyecto ASP.NET Core. Se creó la estructura básica de carpetas (Controllers, Services, Repositories, DTOs), Program.cs, appsettings.json y configuración DI. | 2026-06-10 |
+| coldtrace-platform | feature/t-44-api-foundation | cd2a721 | Implement API foundation | Implementación de la capa base de API Foundation. Se configuró ASP.NET Core, middleware de autenticación/validación, y estructura de carpetas según arquitectura en capas. | 2026-06-13 |
+| coldtrace-platform | develop | 9707b6a | Merge pull request #4 from AplicacionesWeb-Grupo-2/feature/ts16-organizations-api-base | Merge de la estructura base del API de Organizaciones. Se establecieron los bounded contexts principales y la configuración de DbContext. | 2026-06-15 |
+| coldtrace-platform | feature/ts16-organizations-api-base | ca7963a | APPWEB-73 Implement organizations API base | Implementación de la estructura base del API de Organizaciones. Se creó el bounded context Organizations con entidades principales (Organization, OrganizationType) y repositorio base. | 2026-06-15 |
+| coldtrace-platform | develop | 6e387fd | Merge pull request #6 from AplicacionesWeb-Grupo-2/feature/ts01-organization-sign-up-api | Primer merge del API de organizaciones. Se consolidó la lógica de registro con validaciones de negocio. | 2026-06-16 |
+| coldtrace-platform | feature/ts01-organization-sign-up-api | 8dcbfed | feat(APPWEB-52): implement organization sign-up API | Implementación del API de registro de organizaciones. Se crearon endpoints POST/GET para registrar nuevas organizaciones con validación de email y datos básicos. | 2026-06-15 |
+| coldtrace-platform | develop | 816723d | Merge pull request #8 from AplicacionesWeb-Grupo-2/feature/ts03-users-api | Integración del API de Usuarios. Se completó la gestión de perfiles de usuario con roles y permisos. | 2026-06-17 |
+| coldtrace-platform | feature/ts03-users-api | 30e4c8c | feat(APPWEB-54): implement organization users API | Implementación del API para gestión de usuarios a nivel de organización. Se incluye CRUD completo de usuarios (POST, GET, PUT, DELETE) y asignación de roles. | 2026-06-16 |
+| coldtrace-platform | develop | 0606d33 | Merge pull request #11 from AplicacionesWeb-Grupo-2/feature/ts04-assets-api | Merge del API de gestión de activos. Se integró la lógica de asociación de activos con ubicaciones y organización. | 2026-06-18 |
+| coldtrace-platform | feature/ts04-assets-api | f828633 | feat(asset-management): implement assets API (T-48). NOT TESTED | Implementación del API de gestión de activos (cámaras frigoríficas). Endpoints: POST (crear), GET (listar/consultar), PUT (actualizar activos). PENDIENTE DE TESTING. | 2026-06-18 |
+| coldtrace-platform | feature/ts04-assets-api | 3e4f9ba | feat(asset-management): add assets migration. TESTED | Migración de base de datos para crear tablas de Assets, AssetStatus, AssetType. Se definieron índices para búsquedas eficientes y constraints de integridad referencial. TESTEADO. | 2026-06-18 |
+| coldtrace-platform | develop | ccdbb4a | Merge pull request #14 from AplicacionesWeb-Grupo-2/feature/ts05-iot-device-api | Integración del API de gestión de dispositivos IoT. Se completó la lógica para vincular sensores con activos y monitoreo de estado de conectividad. | 2026-06-19 |
+| coldtrace-platform | feature/ts05-iot-device-api | ccdbb4a | Merge pull request #14 from AplicacionesWeb-Grupo-2/feature/ts05-iot-device-api | Endpoints para registro y gestión de dispositivos IoT. Se implementó lógica para vincular dispositivos sensores con activos específicos. | 2026-06-19 |
+| coldtrace-platform | develop | 4067cd3 | feat(asset-management): implement asset settings API (T-50). TESTED | Implementación del API de configuración de activos (en develop). Se crearon endpoints para obtener y actualizar parámetros de activos como rangos de temperatura permitida y niveles de alerta. TESTEADO. | 2026-06-18 |
+| coldtrace-platform | feature/ts06-asset-settings-api | 4067cd3 | feat(asset-management): implement asset settings API (T-50). TESTED | Endpoints para configuración de activos: GET `/api/v1/assets/{id}/settings`, POST `/api/v1/assets/{id}/settings`. Se creó la entidad AssetSettings con propiedades de temperatura/humedad y validación según normas sanitarias. | 2026-06-18 |
+| coldtrace-platform | develop | 8aac072 | Merge pull request #15 from AplicacionesWeb-Grupo-2/feature/ts07-sensor-readings-api | Merge de API de ingesta de lecturas de sensores. Se integró soporte para procesamiento en tiempo real y detección de anomalías. | 2026-06-19 |
+| coldtrace-platform | feature/ts07-sensor-readings-api | d702bad | fix: Add the migration to create the sensor_readings table in the Database | Migración EF Core para crear tabla sensor_readings. Se definieron índices para optimizar consultas de telemetría y constraints para integridad referencial con dispositivos IoT. | 2026-06-19 |
+| coldtrace-platform | feature/ts07-sensor-readings-api | 2d4a960 | feat: IMplement persistens and composition | Implementación de patrones de persistencia y patrón Composition Root. Se configuró el contenedor DI para resolver todas las dependencias de servicios y repositorios de sensores. | 2026-06-19 |
+| coldtrace-platform | feature/ts07-sensor-readings-api | c4e96c4 | feat: Implement REST contract | Especificación formal de contratos REST para el bounded context de sensores. Se definieron DTOs, versioning de API y convenciones de respuesta HTTP coherentes. | 2026-06-19 |
+| coldtrace-platform | feature/ts07-sensor-readings-api | 097a2d4 | feat:Implement domain & application | Implementación de capas de dominio y aplicación para lecturas de sensores. Se crearon entidades (SensorReading, SensorType) y application services con validaciones de negocio. | 2026-06-19 |
+| coldtrace-platform | develop | 29cb503 | feat(alerts): implement incidents and notifications api | Implementación del API de incidentes y alertas en develop. Se creó el bounded context Monitoring con soporte para generación automática de alertas basadas en reglas. | 2026-06-18 |
+| coldtrace-platform | feature/ts08-alerts | 29cb503 | feat(alerts): implement incidents and notifications api | Endpoints para gestión de incidentes: POST (crear), GET (listar), PUT (actualizar estado). Se implementó lógica de escalamiento según severidad y tiempo de resolución. | 2026-06-18 |
+| coldtrace-platform | develop | 96c86c0 | feat(ts10): implement reports bounded context | Implementación del bounded context de Reportes en develop. Se creó la lógica para agregación de datos de sensores y generación de reportes de cumplimiento. | 2026-06-18 |
+| coldtrace-platform | feature/ts10-reports | 96c86c0 | feat(ts10): implement reports bounded context | Endpoints para generación de reportes: GET temperature trends, compliance reports, incidents. Se implementó exportación a formatos PDF y Excel para cumplimiento regulatorio. | 2026-06-18 |
+| coldtrace-platform | develop | fd2c27d | feat(APPWEB-70): implement gateways API | Implementación del API de Gateways en develop. Endpoints para registrar, consultar y actualizar gateways que actúan como intermediarios IoT. | 2026-06-17 |
+| coldtrace-platform | feature/ts13-gateways-api | fd2c27d | feat(APPWEB-70): implement gateways API | Endpoints para gestión de gateways: POST (crear), GET (consultar), PUT (actualizar). Se implementó validación de conectividad y estado de sincronización. | 2026-06-17 |
+| coldtrace-platform | develop | 57f48a1 | Merge pull request #12 from AplicacionesWeb-Grupo-2/feature/ts14-maintenance-schedules-api | Integración del API de programación de mantenimiento. Se completó la lógica para calendarización automática de revisiones preventivas. | 2026-06-18 |
+| coldtrace-platform | feature/ts14-maintenance-schedules-api | 9738e19 | feat: implement maintenance API | Implementación completa del API de Mantenimiento. Se crearon endpoints para CRUD de programaciones de mantenimiento preventivo. | 2026-06-18 |
+| coldtrace-platform | feature/ts14-maintenance-schedules-api | 7ddd2cb | feat: add MaintenanceSchedules database migration | Migración para crear tabla MaintenanceSchedules. Se definieron campos para asset_id, scheduled_date, task_description e índices para búsquedas eficientes. | 2026-06-18 |
+| coldtrace-platform | develop | 54ced19 | Merge pull request #13 from AplicacionesWeb-Grupo-2/feature/ts15-technical-service-requests | Integración del API de solicitudes de servicio técnico. Se completó el flujo de estados y asignación automática de técnicos. | 2026-06-18 |
+| coldtrace-platform | feature/ts15-technical-service-requests | 55c3557 | feat: expose technical service request REST API | Exposición de endpoints REST para solicitudes de servicio técnico: POST (crear), GET (listar), PUT (actualizar estado), DELETE. Se implementó autenticación y autorización basada en roles. | 2026-06-18 |
+| coldtrace-platform | feature/ts15-technical-service-requests | 1d92a63 | feat: add techbucak service request persistence and migration | Creación de tablas de base de datos para Technical Service Request. Se definieron relaciones con técnicos asignados e historial de cambios. | 2026-06-18 |
+| coldtrace-platform | feature/ts15-technical-service-requests | 75baae4 | feat: add technical service request domain model and application services | Modelado de dominio para solicitudes de servicio. Se crearon services de aplicación para crear, actualizar y cerrar solicitudes con validaciones de negocio. | 2026-06-18 |
+| coldtrace-platform | develop | 83c250f | Merge pull request #9 from AplicacionesWeb-Grupo-2/feature/ts17-locations-api | Integración del API de Ubicaciones. Se completó la gestión de sedes y almacenes del negocio. | 2026-06-17 |
+| coldtrace-platform | feature/ts17-locations-api | e8126e4 | feat(APPWEB-74): implement locations API | Implementación del API de Ubicaciones. Se crearon endpoints para gestionar sedes, almacenes y puntos de distribución con trazabilidad de productos. | 2026-06-17 |
+| coldtrace-platform | develop | 880ea0c | Implement documentation | Implementación completa de documentación de API en Swagger/OpenAPI. Se crearon descripciones detalladas para cada endpoint, parámetros, códigos de respuesta y ejemplos de uso. | 2026-06-19 |
+| coldtrace-platform | develop | 9a1dfb7 | feat: Implement documentation & localization | Soporte para internacionalización de mensajes de API. Se configuró el sistema para múltiples idiomas en validaciones, errores y notificaciones. | 2026-06-19 |
+| coldtrace-platform | develop | edefc0a | Smoke checklists upload | Se agregó documentación y checklist de pruebas de humo para validación de todos los endpoints antes del despliegue. Se crearon scripts para verificar que servicios principales estén operativos. | 2026-06-19 |
+| coldtrace-platform | develop | c4d5e6f | merge: integrate feature branches into develop for Sprint 3 Review | Merge final consolidando todos los feature branches hacia develop. Se ejecutaron pruebas de integración y validación de compatibilidad entre módulos para Sprint 3. | 2026-06-19 |
+
+---
+ 
 
 ## 5.2.3.5. Execution Evidence for Sprint Review
 Al término del Sprint 3, se logró disponer de una infraestructura backend en ejecución con múltiples endpoints operativos para probar la lógica de negocio de ColdTrace.
 
+![swagger](assets/chapter-05/sprint-03/swagger-assetSetting-asset.png)
+![swagger](assets/chapter-05/sprint-03/swagger-gateways-Incidents-iotDevices.png)
+![swagger](assets/chapter-05/sprint-03/swagger-locations-maintenance-notifications-organizatios.png)
+![swagger](assets/chapter-05/sprint-03/swagger-reports-roles-sensor-technical-users.png) 
+
+
 *[Imagen: Captura de pantalla de la interfaz de Swagger UI (o documento OpenAPI) mostrando todos los endpoints RESTful agrupados por controladores]*
 > Descripción: Documentación interactiva de la API oficial generada por Swagger, lista para ser consumida por el frontend.
 
+
+
+(FALTA AGREGAR)
 *[Imagen: Captura de pantalla de Postman ejecutando una petición GET a `/api/v1/iot-devices` y recibiendo un objeto JSON estructurado]*
 > Descripción: Pruebas manuales de consumo de la API de dispositivos IoT para validar las respuestas y mapeo de datos.
+
+
+![swagger](assets/chapter-05/sprint-03/database.png)
 
 *[Imagen: Captura de pantalla de un explorador de base de datos mostrando las tablas relacionales creadas a partir de las migraciones]*
 > Descripción: Evidencia de la creación del esquema de la base de datos relacional y el correcto mapeo de las entidades del dominio.
 
-## 5.2.3.6. Services Documentation Evidence for Sprint Review
+#### 5.2.3.6. Services Documentation Evidence for Sprint Review
 Se implementó la documentación oficial de la RESTful API. A continuación se presentan los endpoints clave desarrollados en el Sprint 3:
 
-| Endpoint | Verb HTTP | Sintaxis de llamada | Parámetros | Descripción |
-| :--- | :--- | :--- | :--- | :--- |
-| `/api/v1/organizations` | POST | `POST /api/v1/organizations` | Body: Name, ContactEmail, Plan | Crea una nueva organización en el sistema. |
-| `/api/v1/iot-devices` | POST | `POST /api/v1/iot-devices` | Body: DeviceType, Model, AssetId | Registra un nuevo sensor IoT y lo vincula a un activo. |
-| `/api/v1/iot-devices/{id}` | GET | `GET /api/v1/iot-devices/{id}` | id (path) | Retorna los detalles de un dispositivo IoT específico. |
-| `/api/v1/sensor-readings` | GET | `GET /api/v1/sensor-readings` | assetId (query) | Obtiene el historial de telemetría de un activo. |
-| `/api/v1/assets` | GET | `GET /api/v1/assets` | organizationId (query) | Lista todos los activos registrados de una organización. |
-| `/api/v1/maintenance-schedules`| POST | `POST /api/v1/maintenance-schedules` | Body: AssetId, Task, Date | Programa una nueva revisión de mantenimiento preventivo. |
-| `/api/v1/reports` | GET | `GET /api/v1/reports` | type (query) | Genera y retorna datos estructurados para reportes sanitarios. |
+| Endpoint | Verb HTTP | Sintaxis de llamada | Descripción |
+|:---|:---:|:---|:---|
+| Organization Sign-Ups | POST | `POST /api/v1/organization-sign-ups` | Registra una nueva organización en el sistema |
+| Organizations | GET | `GET /api/v1/organizations` | Obtiene todas las organizaciones registradas |
+| Organizations | POST | `POST /api/v1/organizations` | Crea una nueva organización |
+| Users | GET | `GET /api/v1/organizations/{organizationId}/users` | Lista todos los usuarios de una organización |
+| Users | POST | `POST /api/v1/organizations/{organizationId}/users` | Crea un nuevo usuario en la organización |
+| Users Role | PATCH | `PATCH /api/v1/organizations/{organizationId}/users/{userId}/role` | Asigna o actualiza el rol de un usuario |
+| Roles | GET | `GET /api/v1/roles` | Obtiene todos los roles disponibles en el sistema |
+| Assets | GET | `GET /api/v1/organizations/{organizationId}/assets` | Lista todos los activos (cámaras frigoríficas) de una organización |
+| Assets | POST | `POST /api/v1/organizations/{organizationId}/assets` | Crea un nuevo activo |
+| Assets | GET | `GET /api/v1/organizations/{organizationId}/assets/{assetId}` | Obtiene los detalles de un activo específico |
+| Assets | PUT | `PUT /api/v1/organizations/{organizationId}/assets/{assetId}` | Actualiza un activo existente |
+| Asset Settings | GET | `GET /api/v1/organizations/{organizationId}/asset-settings` | Obtiene configuraciones de activos por organización |
+| Asset Settings | GET | `GET /api/v1/organizations/{organizationId}/assets/{assetId}/settings` | Obtiene configuración efectiva de un activo |
+| Asset Settings | PUT | `PUT /api/v1/organizations/{organizationId}/assets/{assetId}/settings` | Guarda configuración de un activo específico |
+| Asset Settings Default | PUT | `PUT /api/v1/organizations/{organizationId}/asset-settings/default` | Guarda configuración por defecto de la organización |
+| Locations | GET | `GET /api/v1/organizations/{organizationId}/locations` | Lista todas las ubicaciones de una organización |
+| Locations | POST | `POST /api/v1/organizations/{organizationId}/locations` | Crea una nueva ubicación |
+| Locations | GET | `GET /api/v1/organizations/{organizationId}/locations/{locationId}` | Obtiene detalles de una ubicación |
+| Locations | PUT | `PUT /api/v1/organizations/{organizationId}/locations/{locationId}` | Actualiza una ubicación |
+| IoT Devices | GET | `GET /api/v1/organizations/{organizationId}/iot-devices` | Lista todos los dispositivos IoT de una organización |
+| IoT Devices | POST | `POST /api/v1/organizations/{organizationId}/iot-devices` | Registra un nuevo dispositivo IoT |
+| IoT Devices | GET | `GET /api/v1/organizations/{organizationId}/iot-devices/{iotDeviceId}` | Obtiene detalles de un dispositivo IoT |
+| IoT Devices | PUT | `PUT /api/v1/organizations/{organizationId}/iot-devices/{iotDeviceId}` | Actualiza un dispositivo IoT |
+| Sensor Readings | GET | `GET /api/v1/organizations/{organizationId}/sensor-readings` | Obtiene lecturas de sensores de una organización |
+| Sensor Readings | GET | `GET /api/v1/organizations/{organizationId}/sensor-readings/{sensorReadingId}` | Obtiene una lectura de sensor específica |
+| Sensor Readings by Device | GET | `GET /api/v1/organizations/{organizationId}/iot-devices/{iotDeviceId}/sensor-readings` | Obtiene lecturas de un dispositivo específico |
+| Sensor Readings | POST | `POST /api/v1/organizations/{organizationId}/iot-devices/{iotDeviceId}/sensor-readings` | Registra una nueva lectura de sensor (telemetría) |
+| Gateways | GET | `GET /api/v1/organizations/{organizationId}/gateways` | Lista todos los gateways IoT de una organización |
+| Gateways | POST | `POST /api/v1/organizations/{organizationId}/gateways` | Crea un nuevo gateway IoT |
+| Gateways | GET | `GET /api/v1/organizations/{organizationId}/gateways/{gatewayId}` | Obtiene detalles de un gateway |
+| Gateways | PUT | `PUT /api/v1/organizations/{organizationId}/gateways/{gatewayId}` | Actualiza un gateway |
+| Maintenance Schedules | GET | `GET /api/v1/organizations/{organizationId}/maintenance-schedules` | Lista programaciones de mantenimiento preventivo |
+| Maintenance Schedules | POST | `POST /api/v1/organizations/{organizationId}/maintenance-schedules` | Crea una nueva programación de mantenimiento |
+| Maintenance Schedules | GET | `GET /api/v1/organizations/{organizationId}/maintenance-schedules/{maintenanceScheduleId}` | Obtiene detalles de una programación |
+| Maintenance Schedules | PATCH | `PATCH /api/v1/organizations/{organizationId}/maintenance-schedules/{maintenanceScheduleId}` | Actualiza el estado de una programación |
+| Technical Service Requests | GET | `GET /api/v1/organizations/{organizationId}/technical-service-requests` | Lista solicitudes de servicio técnico |
+| Technical Service Requests | POST | `POST /api/v1/organizations/{organizationId}/technical-service-requests` | Crea una nueva solicitud de servicio técnico |
+| Technical Service Requests | GET | `GET /api/v1/organizations/{organizationId}/technical-service-requests/{technicalServiceRequestId}` | Obtiene detalles de una solicitud |
+| Technical Service Requests | PATCH | `PATCH /api/v1/organizations/{organizationId}/technical-service-requests/{technicalServiceRequestId}` | Actualiza el estado de una solicitud |
+| Incidents | GET | `GET /api/v1/organizations/{organizationId}/incidents` | Lista incidentes de temperatura/humedad |
+| Incidents | POST | `POST /api/v1/organizations/{organizationId}/incidents` | Crea un nuevo incidente |
+| Incidents | GET | `GET /api/v1/organizations/{organizationId}/incidents/{incidentId}` | Obtiene detalles de un incidente |
+| Incidents Acknowledgements | POST | `POST /api/v1/organizations/{organizationId}/incidents/{incidentId}/acknowledgements` | Reconoce/confirma un incidente |
+| Incidents Resolutions | POST | `POST /api/v1/organizations/{organizationId}/incidents/{incidentId}/resolutions` | Resuelve un incidente |
+| Incidents Notifications | GET | `GET /api/v1/organizations/{organizationId}/incidents/{incidentId}/notifications` | Obtiene historial de notificaciones de un incidente |
+| Notifications | GET | `GET /api/v1/organizations/{organizationId}/notifications` | Obtiene notificaciones de la organización |
+| Reports | GET | `GET /api/v1/organizations/{organizationId}/reports` | Lista reportes generados |
+| Reports | POST | `POST /api/v1/organizations/{organizationId}/reports` | Genera un nuevo reporte |
+| Reports | GET | `GET /api/v1/organizations/{organizationId}/reports/{reportId}` | Obtiene detalles/contenido de un reporte |
+ 
+
+### Documentación en Swagger UI
+
+Se incluyen a continuación capturas de la documentación interactiva accesible en Swagger:
+
+
+**Captura 1: Ejecución interactiva de un endpoint de prueba**
+
+![Swagger UI - Endpoint POST](assets/chapter-05/sprint-03/post-organizations.png)
+
+> Descripción: Vista expandida de un endpoint (POST /api/v1/organizations) mostrando como agregar una nueva organización, modelo de respuesta exitosa status 200.
+
+
+**Captura 2: Detalle de un endpoint con ejemplo de request/response**
+
+![Swagger UI - Endpoint GET](assets/chapter-05/sprint-03/get-organizations.png)
+
+> Descripción: Vista expandida de un endpoint (ejemplo: GET /api/v1/organizations) mostrando especificación de parámetros, modelo de respuesta exitosa (200) y ejemplo de datos JSON retornado por el servidor.
+
+ 
+
+### Referencias de Implementación
+
+**Repositorio de Web Services:** https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform
+
+**URL de la Documentación Swagger:** (FALTA AGREGAR)
+
+---
 
 ## 5.2.3.7. Software Deployment Evidence for Sprint Review
 El backend oficial de ColdTrace ha sido preparado para ser desplegado en un entorno en la nube, reemplazando el servicio anterior de `json-server`. 
