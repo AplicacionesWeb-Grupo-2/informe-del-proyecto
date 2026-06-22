@@ -19,4 +19,40 @@ También se recomienda ampliar las pruebas automatizadas del backend, incluyendo
 Finalmente, se debe mantener la documentación del informe sincronizada con cada despliegue, incluyendo URLs vigentes, capturas legibles, evidencia de ejecución, estado de ramas y enlaces finales a los videos de exposición.
 
 ## 6.2. Video About-the-Team
-El enlace final del video About-the-Team no se encuentra registrado en el repositorio al momento de esta revisión. Debe incorporarse cuando el equipo consolide la evidencia audiovisual de exposición final.
+
+Como parte de la entrega final, cada integrante del equipo ha grabado una breve presentación personal en la que comparte su experiencia durante el desarrollo del proyecto ColdTrace, destacando los conocimientos adquiridos en el curso y cómo estos contribuyeron a su crecimiento profesional y al logro de los objetivos planteados.
+
+Los integrantes que participan en el video son:
+
+<table align="center" style="margin: 0 auto; font-size: 15px;">
+  <thead>
+    <tr>
+      <th align="center">Código</th>
+      <th align="center">Apellidos y Nombres</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">U202414054</td>
+      <td align="left">Jean Pool Alexander Arias Tasayco</td>
+    </tr>
+    <tr>
+      <td align="center">U202410093</td>
+      <td align="left">Mauricio Luis Pajes Leon</td>
+    </tr>
+    <tr>
+      <td align="center">U202321020</td>
+      <td align="left">Leonardo Sebastian Delgado Arriola</td>
+    </tr>
+    <tr>
+      <td align="center">U202416706</td>
+      <td align="left">Santiago Enrique Vargas Alarcon</td>
+    </tr>
+    <tr>
+      <td align="center">U202323350</td>
+      <td align="left">Eduardo David Velasquez Laquihuanaco</td>
+    </tr>
+  </tbody>
+</table>
+
+[upc-pre-202610-1ASI0730-10177-coldtrace-about-the-team-sprint-3](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414054_upc_edu_pe/IQB7LR5aGL-8RoNvXRn22suHAQESryMX97Dk_Kc26UCQ6B0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=sRmsG2)
