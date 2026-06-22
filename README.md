@@ -3671,7 +3671,7 @@ Los aspectos principales del Sprint 3 fueron:
 El Sprint Backlog se gestionó mediante Linear App. A continuación se detallan las tareas asignadas y completadas en el rango del 03 al 19 de junio de 2026.
 
 ![Backlog en Linear](./report/assets/chapter-05/sprint-03/linar-backlog.png)
-Elaboración propia en Linear: [https://linear.app/coldtrace/team/APPWEB/all](https://linear.app/coldtrace/team/APPWEB/all)
+Elaboración propia en Linear: [Ver el Backlog en Notion](https://app.notion.com/p/387eb3344500803c8075f8c8e02655d7?v=387eb33445008195a654000c50102c1c&source=copy_link)
 
 *[Imagen: Captura de pantalla del tablero de Linear App mostrando el Sprint Backlog del Sprint 3, con las tareas organizadas en columnas de To Do, In Progress, In Review y Done]*
 
@@ -4177,7 +4177,10 @@ No se realizaron evaluaciones heurísticas formales durante Sprint 1. La revisi�
 
 ## 5.4. Video About-the-Product
 
-El documento fuente no registra un enlace final de video About-the-Product para esta entrega. El video será incorporado cuando se consolide la evidencia audiovisual del producto.
+Como parte de la entrega del proyecto, se ha elaborado un video explicativo que presenta de manera resumida el producto ColdTrace, una plataforma orientada a la gestión y monitoreo de la cadena de frío. En el video se describe el problema que aborda el sistema, sus principales funcionalidades —gestión de organizaciones, ubicaciones, gateways, activos, dispositivos IoT, lecturas de sensores, incidentes y reportes— así como el valor que aporta a las organizaciones que dependen del control de temperatura y humedad en sus operaciones.
+El video puede visualizarse en el siguiente enlace:
+
+[Ver en Microsoft Team](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414054_upc_edu_pe/IQCmZIySYa3pT43sGAmn0UaGAfUnEK7pyE9kdDZWjSlXGX4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=1oulNb)
 
 ---
 
@@ -4202,7 +4205,41 @@ También se recomienda ampliar las pruebas automatizadas del backend, incluyendo
 Finalmente, se debe mantener la documentación del informe sincronizada con cada despliegue, incluyendo URLs vigentes, capturas legibles, evidencia de ejecución, estado de ramas y enlaces finales a los videos de exposición.
 
 ## 6.2. Video About-the-Team
-El enlace final del video About-the-Team no se encuentra registrado en el repositorio al momento de esta revisión. Debe incorporarse cuando el equipo consolide la evidencia audiovisual de exposición final.
+
+Como parte de la entrega final, cada integrante del equipo ha grabado una breve presentación personal en la que comparte su experiencia durante el desarrollo del proyecto ColdTrace, destacando los conocimientos adquiridos en el curso y cómo estos contribuyeron a su crecimiento profesional y al logro de los objetivos planteados.
+Los integrantes que participan en el video son:
+<table align="center" style="margin: 0 auto; font-size: 15px;">
+<thead>
+    <tr>
+      <th align="center">Código</th>
+      <th align="center">Apellidos y Nombres</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">U202414054</td>
+      <td align="left">Jean Pool Alexander Arias Tasayco</td>
+    </tr>
+    <tr>
+      <td align="center">U202410093</td>
+      <td align="left">Mauricio Luis Pajes Leon</td>
+    </tr>
+    <tr>
+      <td align="center">U202321020</td>
+      <td align="left">Leonardo Sebastian Delgado Arriola</td>
+    </tr>
+    <tr>
+      <td align="center">U202416706</td>
+      <td align="left">Santiago Enrique Vargas Alarcon</td>
+    </tr>
+    <tr>
+      <td align="center">U202323350</td>
+      <td align="left">Eduardo David Velasquez Laquihuanaco</td>
+    </tr>
+  </tbody>
+</table>
+
+[Ver en Microsoft Team](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414054_upc_edu_pe/IQCmZIySYa3pT43sGAmn0UaGAfUnEK7pyE9kdDZWjSlXGX4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=1oulNb)
 
 ---
 
