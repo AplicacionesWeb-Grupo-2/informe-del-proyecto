@@ -1616,7 +1616,10 @@ A continuación se presenta el resumen de participación por integrante basado e
   </tr>
 </table>
 
-# 5.2.3 Sprint 3
+<br>
+<br>
+
+ # 5.2.3 Sprint 3
 
 ## 5.2.3.1. Sprint Planning 3
 El Sprint 3 tuvo como objetivo principal diseñar, implementar y desplegar el backend oficial de ColdTrace mediante una RESTful API robusta. Esto permitirá reemplazar el servidor JSON simulado utilizado en el Sprint 2 y habilitar la persistencia de datos real, lógica de negocio y seguridad para los bounded contexts de Identity & Access Management, Asset Management, Monitoring, Alerts, Reports y Maintenance. A continuación se presenta el resumen del Sprint Planning Meeting realizado al inicio de este sprint.
@@ -1632,7 +1635,7 @@ El Sprint 3 tuvo como objetivo principal diseñar, implementar y desplegar el ba
 | **Sprint 2 Review Summary** | En el Sprint 2 se completó y desplegó exitosamente la Frontend Web Application de ColdTrace en Vercel, consumiendo un servidor JSON hospedado en Render como backend provisional. Se validaron los flujos de navegación de todos los módulos principales de la aplicación. |
 | **Sprint 2 Retrospective Summary** | El equipo identificó la necesidad urgente de migrar hacia un backend real estructurado, con autenticación, validaciones y persistencia en base de datos. Como acción de mejora, el equipo se organizó para desarrollar la RESTful API asignando endpoints y controladores basados en los mismos bounded contexts trabajados en el sprint anterior. |
 | **Sprint Goal & User Stories** | |
-| **Sprint 3 Goal** | Nuestro objetivo es desarrollar y desplegar una RESTful API base para ColdTrace, que reemplace la API simulada. Creemos que proporcionará una arquitectura sólida para el manejo de datos operacionales, la gestión de la infraestructura IoT y la seguridad del sistema. Esto se confirmará cuando la API esté desplegada en la nube, los endpoints estén documentados en Swagger y el frontend pueda integrarse progresivamente. |
+| **Sprint 3 Goal** | Nuestro enfoque está en desarrollar y desplegar la primera versión de la RESTful API de ColdTrace, reemplazando la API simulada utilizada en el Sprint 2. Creemos que entrega una arquitectura backend con persistencia real, lógica de negocio y seguridad a los equipos que gestionan la cadena de frío. Esto se confirmará cuando la API esté desplegada en la nube, los endpoints estén documentados en Swagger y el frontend pueda consumir datos reales. |
 | **Sprint 3 Velocity** | 45 Story Points |
 | **Sum of Story Points** | 45 Story Points |
 
@@ -1666,29 +1669,29 @@ Elaboración propia en Linear: [https://linear.app/coldtrace/team/APPWEB/all](ht
 
 > Descripción: Tablero visual que muestra las diferentes etapas de las tareas del sprint.
 
-| Id   | Issue ID  | Title                                  | Estimation  | Assigned To                     | Status    |
-| :--- | :-------- | :------------------------------------- | :---------: | :------------------------------ | :-------- |
-| T-44 | APPWEB-51 | ASP.NET Core API Foundation            |      5      | Mauricio Pajés                  | Done      |
-| T-45 | APPWEB-52 | TS01 - Organization Sign-Up API        |      4      | Mauricio Pajés                  | Done      |
-| T-47 | APPWEB-54 | TS03 - Users API                       |      4      | Mauricio Pajés                  | Done      |
-| T-48 | APPWEB-55 | TS04 - Assets API                      |      5      | Santiago Enrique Vargas Alarcón | In Review |
-| T-49 | APPWEB-56 | TS05 - IoT Devices API                 |      5      | Jean Pool Arias                 | In Review |
-| T-50 | APPWEB-57 | TS06 - Asset Settings API              |      4      | Santiago Enrique Vargas Alarcón | In Review |
-| T-51 | APPWEB-58 | TS07 - Sensor Readings API             |      5      | Jean Pool Arias                 | In Review |
-| T-52 | APPWEB-59 | TS08 - Incidents and Notifications API |      5      | Leonardo Delgado                | In Review |
-| T-53 | APPWEB-60 | TS09 - Incident Lifecycle Fields API   |      4      | Mauricio Pajés                  | Todo      |
-| T-54 | APPWEB-61 | TS10 - Reports API                     |      5      | Leonardo Delgado                | In Review |
-| T-55 | APPWEB-62 | Error Handling and I18n                |      4      | Mauricio Pajés                  | Todo      |
-| T-60 | APPWEB-69 | TS12 - Role Assignment API             |      3      | Eduardo Velásquez               | Todo      |
-| T-61 | APPWEB-70 | TS13 - Gateways API                    |      4      | Mauricio Pajés                  | Done      |
-| T-62 | APPWEB-71 | TS14 - Maintenance Schedules API       |      4      | Eduardo Velásquez               | Done      |
-| T-63 | APPWEB-72 | TS15 - Technical Service Requests API  |      4      | Eduardo Velásquez               | Done      |
-| T-64 | APPWEB-73 | TS16 - Organizations API Base          |      4      | Mauricio Pajés                  | Done      |
-| T-65 | APPWEB-74 | TS17 - Locations API                   |      3      | Mauricio Pajés                  | Done      |
+| User Story Id | User Story Title | Work-item Id | Title | Description | Estimation | Assigned To | Status |
+| :---: | :--- | :---: | :--- | :--- | :---: | :--- | :---: |
+| — | API Foundation | T-44 | ASP.NET Core API Foundation | Estructura base del proyecto ASP.NET Core: carpetas, middleware, inyección de dependencias y configuración inicial. | 5 | Mauricio Pajés | Done |
+| TS01 | Organization Sign-Up API | T-45 | TS01 - Organization Sign-Up API | Endpoint POST para registro de nuevas organizaciones con validación de correo y datos básicos. | 4 | Mauricio Pajés | Done |
+| TS03 | Users API | T-47 | TS03 - Users API | CRUD completo de usuarios por organización: creación, consulta, actualización y eliminación con asignación de roles. | 4 | Mauricio Pajés | Done |
+| TS04 | Assets API | T-48 | TS04 - Assets API | Endpoints para crear, consultar y actualizar activos (cámaras frigoríficas) vinculados a una organización. | 5 | Santiago Enrique Vargas Alarcón | In Review |
+| TS05 | IoT Devices API | T-49 | TS05 - IoT Devices API | Registro y gestión de dispositivos IoT vinculados a activos de monitoreo de temperatura. | 5 | Jean Pool Arias | In Review |
+| TS06 | Asset Settings API | T-50 | TS06 - Asset Settings API | Configuración de parámetros operativos por activo: rangos de temperatura permitida y niveles de alerta. | 4 | Santiago Enrique Vargas Alarcón | In Review |
+| TS07 | Sensor Readings API | T-51 | TS07 - Sensor Readings API | Endpoints de ingesta de telemetría: lecturas de temperatura y humedad enviadas por dispositivos IoT. | 5 | Jean Pool Arias | In Review |
+| TS08 | Incidents and Notifications API | T-52 | TS08 - Incidents and Notifications API | Gestión del ciclo de vida de incidentes térmicos y envío de notificaciones asociadas. | 5 | Leonardo Delgado | In Review |
+| TS09 | Incident Lifecycle Fields API | T-53 | TS09 - Incident Lifecycle Fields API | Campos y acciones adicionales para el reconocimiento y resolución formal de incidentes. | 4 | Mauricio Pajés | Todo |
+| TS10 | Reports API | T-54 | TS10 - Reports API | Generación de reportes consolidados de temperatura, alertas e incidencias por periodo y organización. | 5 | Leonardo Delgado | In Review |
+| — | Error Handling & I18n | T-55 | Error Handling and I18n | Manejo global de errores HTTP y soporte de internacionalización de mensajes de la API. | 4 | Mauricio Pajés | Todo |
+| TS12 | Role Assignment API | T-60 | TS12 - Role Assignment API | Endpoint PATCH para asignar y actualizar el rol de un usuario dentro de la organización. | 3 | Eduardo Velásquez | Todo |
+| TS13 | Gateways API | T-61 | TS13 - Gateways API | CRUD de gateways IoT que actúan como intermediarios entre los sensores y la nube. | 4 | Mauricio Pajés | Done |
+| TS14 | Maintenance Schedules API | T-62 | TS14 - Maintenance Schedules API | Programación y consulta de mantenimiento preventivo de activos con calendarización automática. | 4 | Eduardo Velásquez | Done |
+| TS15 | Technical Service Requests API | T-63 | TS15 - Technical Service Requests API | Solicitudes de servicio técnico: creación, actualización de estado y asignación a técnicos. | 4 | Eduardo Velásquez | Done |
+| TS16 | Organizations API Base | T-64 | TS16 - Organizations API Base | Estructura base del bounded context Organizations con DbContext y entidades principales. | 4 | Mauricio Pajés | Done |
+| TS17 | Locations API | T-65 | TS17 - Locations API | CRUD de ubicaciones (sedes, almacenes, puntos de distribución) dentro de una organización. | 3 | Mauricio Pajés | Done |
 
 ## 5.2.3.4. Development Evidence for Sprint Review
 Durante el Sprint 3, la implementación backend se gestionó en el repositorio `AplicacionesWeb-Grupo-2/coldtrace-platform` siguiendo el estándar de commits de la organización.
- 
+
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
 |:---|:---|:---|:---|:---|:---|
@@ -1735,7 +1738,7 @@ Durante el Sprint 3, la implementación backend se gestionó en el repositorio `
 | coldtrace-platform | develop | c4d5e6f | merge: integrate feature branches into develop for Sprint 3 Review | Merge final consolidando todos los feature branches hacia develop. Se ejecutaron pruebas de integración y validación de compatibilidad entre módulos para Sprint 3. | 2026-06-19 |
 
 ---
- 
+
 
 ## 5.2.3.5. Execution Evidence for Sprint Review
 Al término del Sprint 3, se logró disponer de una infraestructura backend en ejecución con múltiples endpoints operativos para probar la lógica de negocio de ColdTrace.
@@ -1743,79 +1746,88 @@ Al término del Sprint 3, se logró disponer de una infraestructura backend en e
 ![swagger](assets/chapter-05/sprint-03/swagger-assetSetting-asset.png)
 ![swagger](assets/chapter-05/sprint-03/swagger-gateways-Incidents-iotDevices.png)
 ![swagger](assets/chapter-05/sprint-03/swagger-locations-maintenance-notifications-organizatios.png)
-![swagger](assets/chapter-05/sprint-03/swagger-reports-roles-sensor-technical-users.png) 
+![swagger](assets/chapter-05/sprint-03/swagger-reports-roles-sensor-technical-users.png)
 
 
 *[Imagen: Captura de pantalla de la interfaz de Swagger UI (o documento OpenAPI) mostrando todos los endpoints RESTful agrupados por controladores]*
 > Descripción: Documentación interactiva de la API oficial generada por Swagger, lista para ser consumida por el frontend.
 
+<br>
 
 
-(FALTA AGREGAR)
-*[Imagen: Captura de pantalla de Postman ejecutando una petición GET a `/api/v1/iot-devices` y recibiendo un objeto JSON estructurado]*
-> Descripción: Pruebas manuales de consumo de la API de dispositivos IoT para validar las respuestas y mapeo de datos.
+![swagger](assets/chapter-05/sprint-03/getPostman.png)
 
+*[Imagen: Captura de pantalla de Postman ejecutando una petición GET a `/api/v1/organizations` y recibiendo un objeto JSON estructurado]*
+
+
+<br>
 
 ![swagger](assets/chapter-05/sprint-03/database.png)
 
 *[Imagen: Captura de pantalla de un explorador de base de datos mostrando las tablas relacionales creadas a partir de las migraciones]*
 > Descripción: Evidencia de la creación del esquema de la base de datos relacional y el correcto mapeo de las entidades del dominio.
 
-#### 5.2.3.6. Services Documentation Evidence for Sprint Review
+<br>
+A continuación se presenta el video de navegación del producto correspondiente al Sprint 3, que consolida la demostración del flujo de la RESTful API desplegada, priorizando los user flows relacionados con el core business de ColdTrace
+
+![evidencia del video](assets/chapter-05/sprint-03/evidenceVideo.png)
+
+**URL del video:** [Video Product Navigation Sprint 3](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323350_upc_edu_pe/IQC_iCMNMEIJRoDLEchEjK4XAQZvho_o3UllbIqUg4E8yHo?e=RanuCx&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
+## 5.2.3.6. Services Documentation Evidence for Sprint Review
 Se implementó la documentación oficial de la RESTful API. A continuación se presentan los endpoints clave desarrollados en el Sprint 3:
 
-| Endpoint | Verb HTTP | Sintaxis de llamada | Descripción |
-|:---|:---:|:---|:---|
-| Organization Sign-Ups | POST | `POST /api/v1/organization-sign-ups` | Registra una nueva organización en el sistema |
-| Organizations | GET | `GET /api/v1/organizations` | Obtiene todas las organizaciones registradas |
-| Organizations | POST | `POST /api/v1/organizations` | Crea una nueva organización |
-| Users | GET | `GET /api/v1/organizations/{organizationId}/users` | Lista todos los usuarios de una organización |
-| Users | POST | `POST /api/v1/organizations/{organizationId}/users` | Crea un nuevo usuario en la organización |
-| Users Role | PATCH | `PATCH /api/v1/organizations/{organizationId}/users/{userId}/role` | Asigna o actualiza el rol de un usuario |
-| Roles | GET | `GET /api/v1/roles` | Obtiene todos los roles disponibles en el sistema |
-| Assets | GET | `GET /api/v1/organizations/{organizationId}/assets` | Lista todos los activos (cámaras frigoríficas) de una organización |
-| Assets | POST | `POST /api/v1/organizations/{organizationId}/assets` | Crea un nuevo activo |
-| Assets | GET | `GET /api/v1/organizations/{organizationId}/assets/{assetId}` | Obtiene los detalles de un activo específico |
-| Assets | PUT | `PUT /api/v1/organizations/{organizationId}/assets/{assetId}` | Actualiza un activo existente |
-| Asset Settings | GET | `GET /api/v1/organizations/{organizationId}/asset-settings` | Obtiene configuraciones de activos por organización |
-| Asset Settings | GET | `GET /api/v1/organizations/{organizationId}/assets/{assetId}/settings` | Obtiene configuración efectiva de un activo |
-| Asset Settings | PUT | `PUT /api/v1/organizations/{organizationId}/assets/{assetId}/settings` | Guarda configuración de un activo específico |
-| Asset Settings Default | PUT | `PUT /api/v1/organizations/{organizationId}/asset-settings/default` | Guarda configuración por defecto de la organización |
-| Locations | GET | `GET /api/v1/organizations/{organizationId}/locations` | Lista todas las ubicaciones de una organización |
-| Locations | POST | `POST /api/v1/organizations/{organizationId}/locations` | Crea una nueva ubicación |
-| Locations | GET | `GET /api/v1/organizations/{organizationId}/locations/{locationId}` | Obtiene detalles de una ubicación |
-| Locations | PUT | `PUT /api/v1/organizations/{organizationId}/locations/{locationId}` | Actualiza una ubicación |
-| IoT Devices | GET | `GET /api/v1/organizations/{organizationId}/iot-devices` | Lista todos los dispositivos IoT de una organización |
-| IoT Devices | POST | `POST /api/v1/organizations/{organizationId}/iot-devices` | Registra un nuevo dispositivo IoT |
-| IoT Devices | GET | `GET /api/v1/organizations/{organizationId}/iot-devices/{iotDeviceId}` | Obtiene detalles de un dispositivo IoT |
-| IoT Devices | PUT | `PUT /api/v1/organizations/{organizationId}/iot-devices/{iotDeviceId}` | Actualiza un dispositivo IoT |
-| Sensor Readings | GET | `GET /api/v1/organizations/{organizationId}/sensor-readings` | Obtiene lecturas de sensores de una organización |
-| Sensor Readings | GET | `GET /api/v1/organizations/{organizationId}/sensor-readings/{sensorReadingId}` | Obtiene una lectura de sensor específica |
-| Sensor Readings by Device | GET | `GET /api/v1/organizations/{organizationId}/iot-devices/{iotDeviceId}/sensor-readings` | Obtiene lecturas de un dispositivo específico |
-| Sensor Readings | POST | `POST /api/v1/organizations/{organizationId}/iot-devices/{iotDeviceId}/sensor-readings` | Registra una nueva lectura de sensor (telemetría) |
-| Gateways | GET | `GET /api/v1/organizations/{organizationId}/gateways` | Lista todos los gateways IoT de una organización |
-| Gateways | POST | `POST /api/v1/organizations/{organizationId}/gateways` | Crea un nuevo gateway IoT |
-| Gateways | GET | `GET /api/v1/organizations/{organizationId}/gateways/{gatewayId}` | Obtiene detalles de un gateway |
-| Gateways | PUT | `PUT /api/v1/organizations/{organizationId}/gateways/{gatewayId}` | Actualiza un gateway |
-| Maintenance Schedules | GET | `GET /api/v1/organizations/{organizationId}/maintenance-schedules` | Lista programaciones de mantenimiento preventivo |
-| Maintenance Schedules | POST | `POST /api/v1/organizations/{organizationId}/maintenance-schedules` | Crea una nueva programación de mantenimiento |
-| Maintenance Schedules | GET | `GET /api/v1/organizations/{organizationId}/maintenance-schedules/{maintenanceScheduleId}` | Obtiene detalles de una programación |
-| Maintenance Schedules | PATCH | `PATCH /api/v1/organizations/{organizationId}/maintenance-schedules/{maintenanceScheduleId}` | Actualiza el estado de una programación |
-| Technical Service Requests | GET | `GET /api/v1/organizations/{organizationId}/technical-service-requests` | Lista solicitudes de servicio técnico |
-| Technical Service Requests | POST | `POST /api/v1/organizations/{organizationId}/technical-service-requests` | Crea una nueva solicitud de servicio técnico |
-| Technical Service Requests | GET | `GET /api/v1/organizations/{organizationId}/technical-service-requests/{technicalServiceRequestId}` | Obtiene detalles de una solicitud |
-| Technical Service Requests | PATCH | `PATCH /api/v1/organizations/{organizationId}/technical-service-requests/{technicalServiceRequestId}` | Actualiza el estado de una solicitud |
-| Incidents | GET | `GET /api/v1/organizations/{organizationId}/incidents` | Lista incidentes de temperatura/humedad |
-| Incidents | POST | `POST /api/v1/organizations/{organizationId}/incidents` | Crea un nuevo incidente |
-| Incidents | GET | `GET /api/v1/organizations/{organizationId}/incidents/{incidentId}` | Obtiene detalles de un incidente |
-| Incidents Acknowledgements | POST | `POST /api/v1/organizations/{organizationId}/incidents/{incidentId}/acknowledgements` | Reconoce/confirma un incidente |
-| Incidents Resolutions | POST | `POST /api/v1/organizations/{organizationId}/incidents/{incidentId}/resolutions` | Resuelve un incidente |
-| Incidents Notifications | GET | `GET /api/v1/organizations/{organizationId}/incidents/{incidentId}/notifications` | Obtiene historial de notificaciones de un incidente |
-| Notifications | GET | `GET /api/v1/organizations/{organizationId}/notifications` | Obtiene notificaciones de la organización |
-| Reports | GET | `GET /api/v1/organizations/{organizationId}/reports` | Lista reportes generados |
-| Reports | POST | `POST /api/v1/organizations/{organizationId}/reports` | Genera un nuevo reporte |
-| Reports | GET | `GET /api/v1/organizations/{organizationId}/reports/{reportId}` | Obtiene detalles/contenido de un reporte |
- 
+| Endpoint | Verb HTTP | Sintaxis de llamada | Parámetros | Descripción | Response |
+|:---|:---:|:---|:---|:---|:---:|
+| Organization Sign-Ups | POST | `POST /api/v1/organization-sign-ups` | Body: legalName, commercialName, contactEmail, firstName, email | Registra una nueva organización y su primer usuario | 201 |
+| Organizations | GET | `GET /api/v1/organizations` | — | Obtiene todas las organizaciones registradas | 200 |
+| Organizations | POST | `POST /api/v1/organizations` | Body: legalName, commercialName, contactEmail | Crea una nueva organización | 201 |
+| Users | GET | `GET /api/v1/organizations/{organizationId}/users` | organizationId (path) | Lista todos los usuarios de una organización | 200 |
+| Users | POST | `POST /api/v1/organizations/{organizationId}/users` | organizationId (path), Body: firstName, email, roleId | Crea un nuevo usuario en la organización | 201 |
+| Users Role | PATCH | `PATCH /api/v1/organizations/{organizationId}/users/{userId}/role` | organizationId, userId (path), Body: roleId | Asigna o actualiza el rol de un usuario | 200 |
+| Roles | GET | `GET /api/v1/roles` | — | Obtiene todos los roles disponibles en el sistema | 200 |
+| Assets | GET | `GET /api/v1/organizations/{organizationId}/assets` | organizationId (path) | Lista todos los activos de una organización | 200 |
+| Assets | POST | `POST /api/v1/organizations/{organizationId}/assets` | organizationId (path), Body: locationId, uuid, type, name, capacity, status | Crea un nuevo activo (cámara frigorífica) | 201 |
+| Assets | GET | `GET /api/v1/organizations/{organizationId}/assets/{assetId}` | organizationId, assetId (path) | Obtiene los detalles de un activo específico | 200 |
+| Assets | PUT | `PUT /api/v1/organizations/{organizationId}/assets/{assetId}` | organizationId, assetId (path), Body: locationId, uuid, type, name, capacity, status | Actualiza un activo existente | 200 |
+| Asset Settings | GET | `GET /api/v1/organizations/{organizationId}/asset-settings` | organizationId (path) | Obtiene configuraciones de activos por organización | 200 |
+| Asset Settings | GET | `GET /api/v1/organizations/{organizationId}/assets/{assetId}/settings` | organizationId, assetId (path) | Obtiene configuración efectiva de un activo | 200 |
+| Asset Settings | PUT | `PUT /api/v1/organizations/{organizationId}/assets/{assetId}/settings` | organizationId, assetId (path), Body: minimumTemperature, maximumTemperature, temperatureUnit, humidityUnit, weightUnit | Guarda configuración de un activo específico | 200 |
+| Asset Settings Default | PUT | `PUT /api/v1/organizations/{organizationId}/asset-settings/default` | organizationId (path), Body: minimumTemperature, maximumTemperature, temperatureUnit, humidityUnit, weightUnit | Guarda configuración por defecto de la organización | 200 |
+| Locations | GET | `GET /api/v1/organizations/{organizationId}/locations` | organizationId (path) | Lista todas las ubicaciones de una organización | 200 |
+| Locations | POST | `POST /api/v1/organizations/{organizationId}/locations` | organizationId (path), Body: name, type, status | Crea una nueva ubicación | 201 |
+| Locations | GET | `GET /api/v1/organizations/{organizationId}/locations/{locationId}` | organizationId, locationId (path) | Obtiene detalles de una ubicación | 200 |
+| Locations | PUT | `PUT /api/v1/organizations/{organizationId}/locations/{locationId}` | organizationId, locationId (path), Body: name, type, status | Actualiza una ubicación | 200 |
+| IoT Devices | GET | `GET /api/v1/organizations/{organizationId}/iot-devices` | organizationId (path) | Lista todos los dispositivos IoT de una organización | 200 |
+| IoT Devices | POST | `POST /api/v1/organizations/{organizationId}/iot-devices` | organizationId (path), Body: gatewayId, uuid, deviceType, model, measurementType, status, calibrationStatus | Registra un nuevo dispositivo IoT | 201 |
+| IoT Devices | GET | `GET /api/v1/organizations/{organizationId}/iot-devices/{iotDeviceId}` | organizationId, iotDeviceId (path) | Obtiene detalles de un dispositivo IoT | 200 |
+| IoT Devices | PUT | `PUT /api/v1/organizations/{organizationId}/iot-devices/{iotDeviceId}` | organizationId, iotDeviceId (path), Body: gatewayId, uuid, deviceType, model, status | Actualiza un dispositivo IoT | 200 |
+| Sensor Readings | GET | `GET /api/v1/organizations/{organizationId}/sensor-readings` | organizationId (path), assetId?, iotDeviceId?, from?, to? (query) | Obtiene lecturas de sensores con filtros opcionales | 200 |
+| Sensor Readings | GET | `GET /api/v1/organizations/{organizationId}/sensor-readings/{sensorReadingId}` | organizationId, sensorReadingId (path) | Obtiene una lectura de sensor específica | 200 |
+| Sensor Readings | POST | `POST /api/v1/organizations/{organizationId}/sensor-readings` | organizationId (path), Body: assetId, iotDeviceId, temperature?, humidity?, recordedAt? | Registra una nueva lectura de telemetría | 201 |
+| Gateways | GET | `GET /api/v1/organizations/{organizationId}/gateways` | organizationId (path) | Lista todos los gateways IoT de una organización | 200 |
+| Gateways | POST | `POST /api/v1/organizations/{organizationId}/gateways` | organizationId (path), Body: locationId, uuid, name, network, status | Crea un nuevo gateway IoT | 201 |
+| Gateways | GET | `GET /api/v1/organizations/{organizationId}/gateways/{gatewayId}` | organizationId, gatewayId (path) | Obtiene detalles de un gateway | 200 |
+| Gateways | PUT | `PUT /api/v1/organizations/{organizationId}/gateways/{gatewayId}` | organizationId, gatewayId (path), Body: locationId, uuid, name, network, status | Actualiza un gateway | 200 |
+| Maintenance Schedules | GET | `GET /api/v1/organizations/{organizationId}/maintenance-schedules` | organizationId (path) | Lista programaciones de mantenimiento preventivo | 200 |
+| Maintenance Schedules | POST | `POST /api/v1/organizations/{organizationId}/maintenance-schedules` | organizationId (path), Body: assetId, scheduledDate, status | Crea una nueva programación de mantenimiento | 201 |
+| Maintenance Schedules | GET | `GET /api/v1/organizations/{organizationId}/maintenance-schedules/{maintenanceScheduleId}` | organizationId, maintenanceScheduleId (path) | Obtiene detalles de una programación | 200 |
+| Maintenance Schedules | PATCH | `PATCH /api/v1/organizations/{organizationId}/maintenance-schedules/{maintenanceScheduleId}` | organizationId, maintenanceScheduleId (path), Body: status | Actualiza el estado de una programación | 200 |
+| Technical Service Requests | GET | `GET /api/v1/organizations/{organizationId}/technical-service-requests` | organizationId (path) | Lista solicitudes de servicio técnico | 200 |
+| Technical Service Requests | POST | `POST /api/v1/organizations/{organizationId}/technical-service-requests` | organizationId (path), Body: assetId, issueDescription, priority | Crea una nueva solicitud de servicio técnico | 201 |
+| Technical Service Requests | GET | `GET /api/v1/organizations/{organizationId}/technical-service-requests/{technicalServiceRequestId}` | organizationId, technicalServiceRequestId (path) | Obtiene detalles de una solicitud | 200 |
+| Technical Service Requests | PATCH | `PATCH /api/v1/organizations/{organizationId}/technical-service-requests/{technicalServiceRequestId}` | organizationId, technicalServiceRequestId (path), Body: status | Actualiza el estado de una solicitud | 200 |
+| Incidents | GET | `GET /api/v1/organizations/{organizationId}/incidents` | organizationId (path) | Lista incidentes de temperatura/humedad | 200 |
+| Incidents | POST | `POST /api/v1/organizations/{organizationId}/incidents` | organizationId (path), Body: type, severity, assetId?, value? | Crea un nuevo incidente | 201 |
+| Incidents | GET | `GET /api/v1/organizations/{organizationId}/incidents/{incidentId}` | organizationId, incidentId (path) | Obtiene detalles de un incidente | 200 |
+| Incidents Acknowledgements | POST | `POST /api/v1/organizations/{organizationId}/incidents/{incidentId}/acknowledgements` | organizationId, incidentId (path), Body: acknowledgedBy | Reconoce/confirma un incidente abierto | 200 |
+| Incidents Resolutions | POST | `POST /api/v1/organizations/{organizationId}/incidents/{incidentId}/resolutions` | organizationId, incidentId (path), Body: resolvedBy, resolutionNotes | Resuelve un incidente | 200 |
+| Incidents Notifications | GET | `GET /api/v1/organizations/{organizationId}/incidents/{incidentId}/notifications` | organizationId, incidentId (path) | Obtiene historial de notificaciones de un incidente | 200 |
+| Notifications | GET | `GET /api/v1/organizations/{organizationId}/notifications` | organizationId (path) | Obtiene notificaciones de la organización | 200 |
+| Reports | GET | `GET /api/v1/organizations/{organizationId}/reports` | organizationId (path) | Lista reportes generados | 200 |
+| Reports | POST | `POST /api/v1/organizations/{organizationId}/reports` | organizationId (path), Body: (según tipo de reporte) | Genera un nuevo reporte | 201 |
+| Reports | GET | `GET /api/v1/organizations/{organizationId}/reports/{reportId}` | organizationId, reportId (path) | Obtiene detalles/contenido de un reporte | 200 |
+
 
 ### Documentación en Swagger UI
 
@@ -1835,24 +1847,172 @@ Se incluyen a continuación capturas de la documentación interactiva accesible 
 
 > Descripción: Vista expandida de un endpoint (ejemplo: GET /api/v1/organizations) mostrando especificación de parámetros, modelo de respuesta exitosa (200) y ejemplo de datos JSON retornado por el servidor.
 
- 
+
 
 ### Referencias de Implementación
 
 **Repositorio de Web Services:** https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform
 
-**URL de la Documentación Swagger:** (FALTA AGREGAR)
+**URL de la Documentación Swagger:** https://coldtrace-platform-55771439812.us-central1.run.app/swagger/index.html
 
 ---
 
 ## 5.2.3.7. Software Deployment Evidence for Sprint Review
-El backend oficial de ColdTrace ha sido preparado para ser desplegado en un entorno en la nube, reemplazando el servicio anterior de `json-server`. 
 
-*[Imagen: Captura del dashboard de despliegue en la plataforma Cloud (ej. Azure App Service, AWS, o Render) mostrando el servicio backend (API) en estado 'Running' y activo]*
-> Descripción: Panel de administración del servicio en la nube donde se hospeda la RESTful API oficial de ColdTrace lista para producción.
+Durante el Sprint 3 se realizó el despliegue de la primera versión de los Web Services de ColdTrace. El backend ASP.NET Core fue containerizado con Docker y publicado en **Google Cloud Run**, conectado a una base de datos administrada en **Google Cloud SQL for MySQL**. A continuación se presentan las evidencias del proceso de despliegue.
 
-*[Imagen: Captura de pantalla de un health check o ping exitoso a la URL pública de la API de producción]*
-> Descripción: Verificación de conectividad demostrando que el despliegue está en vivo y aceptando peticiones externas correctamente.
+---
+
+### Despliegue de Web Services
+
+**Stack de despliegue:**
+
+| Componente | Tecnología / Plataforma |
+| :--- | :--- |
+| Runtime del backend | ASP.NET Core containerizado con Docker |
+| Plataforma de hosting | Google Cloud Run — `us-central1` |
+| Base de datos | Google Cloud SQL for MySQL — instancia `coldtrace-mysql` |
+| Esquema de base de datos | `coldtrace_platform` |
+| Registro de imágenes | Google Artifact Registry |
+| Integración continua | GitHub Actions (`backend-ci.yml`) |
+| Documentación de API | Swagger UI / OpenAPI |
+
+**URLs del servicio desplegado:**
+
+| Servicio | URL |
+| :--- | :--- |
+| Repositorio backend | https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform |
+| Backend Cloud Run | https://coldtrace-platform-3kti2ylcba-uc.a.run.app |
+| Swagger UI | https://coldtrace-platform-3kti2ylcba-uc.a.run.app/swagger |
+| Swagger JSON | https://coldtrace-platform-3kti2ylcba-uc.a.run.app/swagger/v1/swagger.json |
+
+---
+
+ <br>
+
+## **Procedimiento de despliegue**
+
+**Creación de la instancia Cloud SQL para MySQL**
+
+Se aprovisionó una instancia administrada de Cloud SQL seleccionando MySQL como motor de base de datos y asignándole el nombre `coldtrace-mysql` en la región `us-central1`.
+
+![Creación de la instancia Cloud SQL para MySQL asociada al backend de ColdTrace](assets/chapter-05/sprint-03/creacion_intancia_cloudSQL_figura1.png)
+
+---
+
+<br>
+
+**Verificación de la instancia `coldtrace-mysql` disponible**
+
+Se confirmó que la instancia `coldtrace-mysql` quedó creada correctamente en la región configurada y disponible para recibir bases de datos y usuarios.
+
+![Instancia Cloud SQL coldtrace-mysql creada en Google Cloud y disponible para configuración](assets/chapter-05/sprint-03/intancia_cloud_sql_figura2.png)
+
+---
+
+<br>
+
+
+**Creación de la base de datos `coldtrace_platform`**
+
+Dentro de la instancia Cloud SQL se registró el esquema `coldtrace_platform`, que actúa como base de datos principal donde el backend persiste la información de organizaciones, activos, reportes y monitoreo.
+
+![Base de datos coldtrace_platform registrada en la instancia Cloud SQL](assets/chapter-05/sprint-03/base_de_datos_coldtrace_figura3.png)
+
+---
+
+<br>
+
+
+**Configuración del usuario de base de datos**
+
+Se creó un usuario de aplicación dedicado para que el servicio Cloud Run acceda a MySQL sin utilizar credenciales administrativas durante la operación del backend.
+
+![Usuario de base de datos configurado para la conexión del backend](assets/chapter-05/sprint-03/usuario_base_de_datos_figura4.png)
+
+---
+
+<br>
+
+
+**Configuración del servicio Cloud Run**
+
+Se creó el servicio Cloud Run `coldtrace-platform` conectado al repositorio `AplicacionesWeb-Grupo-2/coldtrace-platform` usando la rama `main`. Se seleccionó compilación mediante el `Dockerfile` del repositorio y se configuró el puerto de contenedor `8080`, requerido por Cloud Run para enrutar el tráfico HTTP.
+
+![Configuración inicial de Cloud Run con repositorio del backend, rama main y compilación mediante Dockerfile](assets/chapter-05/sprint-03/configuracion_cloud_run_backend_figura5.png)
+
+---
+
+<br>
+
+
+**Configuración de variables de entorno en Cloud Run**
+
+Se registraron las variables de entorno de producción para separar la configuración del código fuente: cadena de conexión a Cloud SQL, configuración del runtime de ASP.NET Core y parámetros de CORS para permitir la integración con el frontend.
+
+![Variables de entorno del servicio Cloud Run para conectar ASP.NET Core con Cloud SQL y el frontend](assets/chapter-05/sprint-03/variable_de_entorno_figura6.png)
+
+---
+
+<br>
+
+
+**Servicio Cloud Run desplegado y panel de métricas activo**
+
+Se ejecutó el despliegue inicial. Cloud Run publicó una revisión activa del servicio y habilitó el panel de métricas para monitorear solicitudes, latencia y uso de recursos en tiempo real.
+
+![Servicio Cloud Run desplegado y panel de métricas disponible para monitoreo](assets/chapter-05/sprint-03/servicio_cloud_run_desplegado_figura7.png)
+
+---
+
+<br>
+
+
+**Swagger UI publicado y accesible**
+
+Se verificó que la documentación interactiva de la API esté expuesta públicamente en la URL de producción, confirmando que los endpoints REST pueden ser revisados y probados directamente desde el navegador.
+
+![Swagger UI publicado para validar los endpoints REST de ColdTrace.Platform](assets/chapter-05/sprint-03/swaggerUI_publicado_figura8.png)
+
+---
+
+**Archivos de configuración que soportan el despliegue:**
+
+**`Dockerfile`** — Define el proceso de build y runtime de .NET, publicando el binario de la Web API y exponiendo el puerto `8080` requerido por Cloud Run.
+
+![Dockerfile del backend con compilación .NET, runtime ASP.NET Core y exposición del puerto 8080](assets/chapter-05/sprint-03/dockerfile_backend_figura9.png)
+
+---
+
+**`backend-ci.yml` (GitHub Actions)** — Documenta la validación continua del backend antes de integrar cambios al repositorio principal.
+
+![Workflow backend-ci.yml usado para validar la integración continua del Web Service](assets/chapter-05/sprint-03/workflow_backend_figura10.png)
+
+---
+
+**`appsettings.Production.json`** — Define la cadena de conexión a MySQL mediante placeholders de variables de entorno, evitando exponer host, usuario, contraseña o nombre del esquema en el código fuente del repositorio.
+
+![appsettings.Production.json con cadena de conexión basada en variables de entorno](assets/chapter-05/sprint-03/appsettings_productionsjson_figura11.png)
+
+---
+
+**Validación del despliegue:**
+
+**Conexión a la base de datos desde Rider/DataGrip**
+
+La conexión exitosa confirma acceso a la base de datos real `coldtrace_platform` y permite inspeccionar los datos persistidos por la aplicación.
+
+![Conexión exitosa desde Rider/DataGrip hacia la base de datos real coldtrace_platform](assets/chapter-05/sprint-03/conexion_rider_to_base_de_datos_figura12.png)
+
+---
+
+**Prueba del endpoint `GET /api/v1/organizations` desde Postman**
+
+Se ejecutó una solicitud GET al endpoint publicado en Cloud Run. La respuesta `200 OK` con datos reales confirma que la API está operativa, conectada a la base de datos y accesible desde clientes externos.
+
+![Prueba del endpoint GET /api/v1/organizations desde Postman con respuesta 200 OK](assets/chapter-05/sprint-03/prueba_endpoint_GET_figura13.png)
+
+
 
 ## 5.2.3.8. Team Collaboration Insights during Sprint
 Durante el Sprint 3, el equipo concentró sus esfuerzos en el desarrollo de la API RESTful. La distribución del trabajo se reflejó en las asignaciones de issues de Linear App:
@@ -1865,7 +2025,15 @@ Durante el Sprint 3, el equipo concentró sus esfuerzos en el desarrollo de la A
 | **Vargas Alarcón, Santiago Enrique**| SanVargasAI | 2 | Assets API, Asset Settings |
 | **Delgado Arriola, Leonardo Sebastian**| leodev77 | 2 | Incidents, Reports API |
 
-La alta cantidad de issues resueltos (Status: Done) por Mauricio Pajés y Eduardo Velásquez evidencia un avance fuerte en los módulos fundacionales y de mantenimiento, mientras que los módulos asignados a Jean Pool Arias, Santiago y Leonardo se encontraban en fase de revisión de código (In Review) hacia el cierre de las mediciones del sprint, demostrando un flujo de integración continuo en el equipo.
+<br>
+
+A continuación se presentan los analíticos de colaboración del repositorio principal del backend (`coldtrace-platform`) en GitHub, que muestran la participación de todos los integrantes del equipo durante el Sprint 3.
+
+**Figura 1. Gráfica de contribuciones de commits por integrante**
+
+![GitHub Contributors Graph – coldtrace-platform](assets/chapter-05/sprint-03/contributors.png)
+
+
 
 ## 5.3. Validation Interviews
 

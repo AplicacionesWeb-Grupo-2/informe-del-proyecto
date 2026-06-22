@@ -232,90 +232,90 @@ Finalmente, el trabajo colaborativo durante AV1 permitió establecer una base do
 
 # Student Outcome
 
-<table border="1" style="width:100%; border-collapse: collapse;">  
-<tr>  
-<th style="width:25%;">Criterio Específico</th>  
-<th style="width:37.5%;">Acciones Realizadas</th>  
-<th style="width:37.5%;">Conclusiones</th>  
-</tr>  
-<tr>  
-<td>  
-Trabaja en equipo para proporcionar liderazgo en forma conjunta  
-</td>  
-<td>  
-<strong>----------AV2----------</strong><br>  
-<strong>Leonardo Delgado:</strong><br>  
-Desarrolló funcionalidades asociadas a incidentes, notificaciones y reportes dentro del backend del proyecto, abordando componentes clave para el seguimiento de eventos y la generación de información útil para la plataforma. Su trabajo permitió ampliar el alcance funcional del sistema hacia procesos de monitoreo y análisis.<br><br>  
-  
-<strong>Mauricio Pajés:</strong><br>  
-Lideró la organización técnica del AV2 mediante la creación y estructuración de la mayor parte de los issues del sprint, definiendo el alcance funcional del backend y distribuyendo responsabilidades entre los integrantes del equipo. Además, avanzó directamente en endpoints clave como la base de la API, registro de organizaciones, usuarios, gateways, organizaciones y ubicaciones, consolidando la arquitectura general del sistema.<br><br>  
-  
-<strong>Jean Pool Arias:</strong><br>  
-Asumió el desarrollo de funcionalidades centrales vinculadas a dispositivos IoT y lecturas de sensores, avanzando en componentes importantes para la lógica operativa de la plataforma. Su trabajo permitió complementar la base backend con servicios directamente relacionados al monitoreo y seguimiento técnico del sistema.<br><br>  
-  
-<strong>Eduardo Velásquez:</strong><br>  
-Contribuyó en el desarrollo de funcionalidades vinculadas a cronogramas de mantenimiento, solicitudes técnicas y asignación de roles, participando en módulos que ayudan a estructurar la operación funcional de la plataforma. Su aporte fortaleció la implementación de procesos internos relevantes para el flujo del sistema.<br><br>  
-  
-<strong>Santiago Enrique Vargas Alarcón:</strong><br>  
-Desarrolló funcionalidades relacionadas con assets y configuración de activos, contribuyendo en módulos importantes para la administración de recursos dentro de la plataforma. Su participación aportó continuidad al trabajo técnico del equipo en servicios necesarios para la gestión operativa del sistema.  
-</td>  
-<td>  
-<strong>----------AV2----------</strong><br>  
-<strong>Leonardo Delgado:</strong><br>  
-Su trabajo en incidentes, notificaciones y reportes fortaleció la capacidad del equipo para desarrollar soluciones orientadas al monitoreo y control de la plataforma, aportando valor funcional al backend y ampliando la cobertura técnica del proyecto.<br><br>  
-  
-<strong>Mauricio Pajés:</strong><br>  
-Su rol fue clave para sostener el liderazgo técnico y organizativo del equipo durante el AV2, ya que no solo impulsó el avance de múltiples funcionalidades, sino que también estructuró el trabajo mediante la creación y planificación de los issues. Esto permitió que el equipo trabajara con una dirección común y una base técnica consistente.<br><br>  
-  
-<strong>Jean Pool Arias:</strong><br>  
-Su trabajo en los servicios de dispositivos y lecturas aportó valor directo al desarrollo del núcleo funcional del sistema, alineándose con los objetivos del equipo y fortaleciendo la construcción colaborativa del backend.<br><br>  
-  
-<strong>Eduardo Velásquez:</strong><br>  
-Su contribución en módulos operativos y de mantenimiento permitió que el equipo avanzara en funcionalidades necesarias para la gestión del sistema, manteniendo coherencia con la planificación general del sprint.<br><br>  
-  
-<strong>Santiago Enrique Vargas Alarcón:</strong><br>  
-Su aporte en la gestión de assets y configuraciones técnicas fue importante para complementar el desarrollo backend del equipo, contribuyendo a una implementación más completa, articulada y funcional del sistema.  
-</td>  
-</tr>  
-<tr>  
-<td>  
-Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.  
-</td>  
-<td>  
-<strong>----------AV2----------</strong><br>  
-<strong>Leonardo Delgado:</strong><br>  
-Desarrolló tareas vinculadas a incidentes, notificaciones y reportes, cumpliendo con responsabilidades técnicas definidas para esta etapa del proyecto y contribuyendo al avance funcional del backend dentro del sprint.<br><br>  
-  
-<strong>Mauricio Pajés:</strong><br>  
-Planificó el trabajo del AV2 a través de la creación y organización de los issues del sprint, estableciendo una ruta clara para el desarrollo del backend. Además, cumplió con varias responsabilidades de implementación dentro del periodo evaluado, avanzando tanto en tareas base como en funcionalidades específicas del sistema.<br><br>  
-  
-<strong>Jean Pool Arias:</strong><br>  
-Organizó su trabajo en torno al desarrollo de los servicios de dispositivos IoT y lecturas de sensores, cumpliendo con tareas concretas del sprint y contribuyendo al avance funcional de la plataforma.<br><br>  
-  
-<strong>Eduardo Velásquez:</strong><br>  
-Desarrolló tareas relacionadas con mantenimiento, solicitudes técnicas y roles, participando de forma ordenada en funcionalidades que responden a necesidades concretas del sistema y al cumplimiento de los objetivos del equipo.<br><br>  
-  
-<strong>Santiago Enrique Vargas Alarcón:</strong><br>  
-Ejecutó tareas orientadas a la gestión de assets y su configuración, cumpliendo con responsabilidades técnicas específicas dentro del sprint y aportando al avance estructurado del backend.  
-</td>  
-<td>  
-<strong>----------AV2----------</strong><br>  
-<strong>Leonardo Delgado:</strong><br>  
-Su trabajo en módulos de incidentes, notificaciones y reportes demuestra cumplimiento de tareas y aporte concreto al desarrollo coordinado del backend, contribuyendo al logro de las metas funcionales del sprint.<br><br>  
-  
-<strong>Mauricio Pajés:</strong><br>  
-Demostró capacidad para establecer metas técnicas, organizar el trabajo del equipo y avanzar de forma consistente en múltiples funcionalidades, contribuyendo tanto desde la planificación como desde la ejecución. Su participación fue determinante para que el sprint mantuviera dirección y productividad.<br><br>  
-  
-<strong>Jean Pool Arias:</strong><br>  
-Su participación en funcionalidades centrales del sistema refleja compromiso con los objetivos del equipo y capacidad para aportar en componentes relevantes del backend durante el AV2.<br><br>  
-  
-<strong>Eduardo Velásquez:</strong><br>  
-Su trabajo metódico en distintas funcionalidades operativas permitió sostener el avance del sprint y aportar entregables alineados con la planificación técnica del equipo.<br><br>  
-  
-<strong>Santiago Enrique Vargas Alarcón:</strong><br>  
-Su contribución técnica en módulos de assets y configuración refleja cumplimiento de tareas y aporte al trabajo colaborativo, fortaleciendo la implementación integral del sistema.  
-</td>  
-</tr>  
+<table border="1" style="width:100%; border-collapse: collapse;">
+<tr>
+<th style="width:25%;">Criterio Específico</th>
+<th style="width:37.5%;">Acciones Realizadas</th>
+<th style="width:37.5%;">Conclusiones</th>
+</tr>
+<tr>
+<td>
+Trabaja en equipo para proporcionar liderazgo en forma conjunta
+</td>
+<td>
+<strong>----------AV2----------</strong><br>
+<strong>Leonardo Delgado:</strong><br>
+Desarrolló funcionalidades asociadas a incidentes, notificaciones y reportes dentro del backend del proyecto, abordando componentes clave para el seguimiento de eventos y la generación de información útil para la plataforma. Su trabajo permitió ampliar el alcance funcional del sistema hacia procesos de monitoreo y análisis.<br><br>
+
+<strong>Mauricio Pajés:</strong><br>
+Lideró la organización técnica del AV2 mediante la creación y estructuración de la mayor parte de los issues del sprint, definiendo el alcance funcional del backend y distribuyendo responsabilidades entre los integrantes del equipo. Además, avanzó directamente en endpoints clave como la base de la API, registro de organizaciones, usuarios, gateways, organizaciones y ubicaciones, consolidando la arquitectura general del sistema.<br><br>
+
+<strong>Jean Pool Arias:</strong><br>
+Asumió el desarrollo de funcionalidades centrales vinculadas a dispositivos IoT y lecturas de sensores, avanzando en componentes importantes para la lógica operativa de la plataforma. Su trabajo permitió complementar la base backend con servicios directamente relacionados al monitoreo y seguimiento técnico del sistema.<br><br>
+
+<strong>Eduardo Velásquez:</strong><br>
+Contribuyó en el desarrollo de funcionalidades vinculadas a cronogramas de mantenimiento, solicitudes técnicas y asignación de roles, participando en módulos que ayudan a estructurar la operación funcional de la plataforma. Su aporte fortaleció la implementación de procesos internos relevantes para el flujo del sistema.<br><br>
+
+<strong>Santiago Enrique Vargas Alarcón:</strong><br>
+Desarrolló funcionalidades relacionadas con assets y configuración de activos, contribuyendo en módulos importantes para la administración de recursos dentro de la plataforma. Su participación aportó continuidad al trabajo técnico del equipo en servicios necesarios para la gestión operativa del sistema.
+</td>
+<td>
+<strong>----------AV2----------</strong><br>
+<strong>Leonardo Delgado:</strong><br>
+Su trabajo en incidentes, notificaciones y reportes fortaleció la capacidad del equipo para desarrollar soluciones orientadas al monitoreo y control de la plataforma, aportando valor funcional al backend y ampliando la cobertura técnica del proyecto.<br><br>
+
+<strong>Mauricio Pajés:</strong><br>
+Su rol fue clave para sostener el liderazgo técnico y organizativo del equipo durante el AV2, ya que no solo impulsó el avance de múltiples funcionalidades, sino que también estructuró el trabajo mediante la creación y planificación de los issues. Esto permitió que el equipo trabajara con una dirección común y una base técnica consistente.<br><br>
+
+<strong>Jean Pool Arias:</strong><br>
+Su trabajo en los servicios de dispositivos y lecturas aportó valor directo al desarrollo del núcleo funcional del sistema, alineándose con los objetivos del equipo y fortaleciendo la construcción colaborativa del backend.<br><br>
+
+<strong>Eduardo Velásquez:</strong><br>
+Su contribución en módulos operativos y de mantenimiento permitió que el equipo avanzara en funcionalidades necesarias para la gestión del sistema, manteniendo coherencia con la planificación general del sprint.<br><br>
+
+<strong>Santiago Enrique Vargas Alarcón:</strong><br>
+Su aporte en la gestión de assets y configuraciones técnicas fue importante para complementar el desarrollo backend del equipo, contribuyendo a una implementación más completa, articulada y funcional del sistema.
+</td>
+</tr>
+<tr>
+<td>
+Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.
+</td>
+<td>
+<strong>----------AV2----------</strong><br>
+<strong>Leonardo Delgado:</strong><br>
+Desarrolló tareas vinculadas a incidentes, notificaciones y reportes, cumpliendo con responsabilidades técnicas definidas para esta etapa del proyecto y contribuyendo al avance funcional del backend dentro del sprint.<br><br>
+
+<strong>Mauricio Pajés:</strong><br>
+Planificó el trabajo del AV2 a través de la creación y organización de los issues del sprint, estableciendo una ruta clara para el desarrollo del backend. Además, cumplió con varias responsabilidades de implementación dentro del periodo evaluado, avanzando tanto en tareas base como en funcionalidades específicas del sistema.<br><br>
+
+<strong>Jean Pool Arias:</strong><br>
+Organizó su trabajo en torno al desarrollo de los servicios de dispositivos IoT y lecturas de sensores, cumpliendo con tareas concretas del sprint y contribuyendo al avance funcional de la plataforma.<br><br>
+
+<strong>Eduardo Velásquez:</strong><br>
+Desarrolló tareas relacionadas con mantenimiento, solicitudes técnicas y roles, participando de forma ordenada en funcionalidades que responden a necesidades concretas del sistema y al cumplimiento de los objetivos del equipo.<br><br>
+
+<strong>Santiago Enrique Vargas Alarcón:</strong><br>
+Ejecutó tareas orientadas a la gestión de assets y su configuración, cumpliendo con responsabilidades técnicas específicas dentro del sprint y aportando al avance estructurado del backend.
+</td>
+<td>
+<strong>----------AV2----------</strong><br>
+<strong>Leonardo Delgado:</strong><br>
+Su trabajo en módulos de incidentes, notificaciones y reportes demuestra cumplimiento de tareas y aporte concreto al desarrollo coordinado del backend, contribuyendo al logro de las metas funcionales del sprint.<br><br>
+
+<strong>Mauricio Pajés:</strong><br>
+Demostró capacidad para establecer metas técnicas, organizar el trabajo del equipo y avanzar de forma consistente en múltiples funcionalidades, contribuyendo tanto desde la planificación como desde la ejecución. Su participación fue determinante para que el sprint mantuviera dirección y productividad.<br><br>
+
+<strong>Jean Pool Arias:</strong><br>
+Su participación en funcionalidades centrales del sistema refleja compromiso con los objetivos del equipo y capacidad para aportar en componentes relevantes del backend durante el AV2.<br><br>
+
+<strong>Eduardo Velásquez:</strong><br>
+Su trabajo metódico en distintas funcionalidades operativas permitió sostener el avance del sprint y aportar entregables alineados con la planificación técnica del equipo.<br><br>
+
+<strong>Santiago Enrique Vargas Alarcón:</strong><br>
+Su contribución técnica en módulos de assets y configuración refleja cumplimiento de tareas y aporte al trabajo colaborativo, fortaleciendo la implementación integral del sistema.
+</td>
+</tr>
 </table>
 
 ---
@@ -539,7 +539,7 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 
 ### 2.2.2 Registro de entrevistas
 
-**Segmento 1: 
+**Segmento 1:
 
 ### Entrevista N.° 1
 
@@ -556,7 +556,7 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 - **URL de grabación:** [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQC5SLu3pgY6S5eNUkOt9uyaAa8jPHO6DP0PwkxE8ClfFCU?e=NkAjlP](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQC5SLu3pgY6S5eNUkOt9uyaAa8jPHO6DP0PwkxE8ClfFCU?e=NkAjlP)
 
 > **Resumen de la entrevista**
-> 
+>
 > Jean Pool administra un minimarket familiar que comercializa lácteos, embutidos, bebidas frías y productos congelados. El control de la temperatura en sus equipos se realiza de forma manual, revisando los indicadores de las refrigeradoras o inspeccionando visualmente el estado de los productos, sin contar con alertas automáticas ni historial digital de mediciones. Las fallas suelen originarse por cortes de luz, puertas mal cerradas o problemas técnicos en los equipos, y normalmente se detectan cuando la mercadería ya está en riesgo. El entrevistado señala que estas incidencias generan pérdidas económicas y desorden operativo, ya que debe mover productos entre equipos o recurrir a soporte técnico de forma reactiva. Valora especialmente la posibilidad de recibir alertas en tiempo real y consultar un historial simple desde el celular, aunque advierte que el costo y la facilidad de uso serán factores decisivos para adoptar una solución como ColdTrace en un negocio pequeño.
 
 ---
@@ -576,7 +576,7 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 - **URL de grabación:** [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323350_upc_edu_pe/IQCqkr-aHZRMQJ4asJYslxzNATYEJLIw5vyYjCGVZpJhyQE?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=E8Wvkf](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323350_upc_edu_pe/IQCqkr-aHZRMQJ4asJYslxzNATYEJLIw5vyYjCGVZpJhyQE?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=E8Wvkf)
 
 > **Resumen de la entrevista**
-> 
+>
 > Durante la entrevista se presentó FrostGuard, una startup enfocada en ofrecer ColdTrace, una plataforma web de monitoreo inteligente de la cadena de frío para la industria alimentaria. El entrevistado, Matías Carrillo, de 19 años y residente de Bellavista, comentó que en su negocio maneja productos lácteos, carnes, embutidos, bebidas refrigeradas y productos congelados como pollo y mariscos. Actualmente controlan la temperatura de forma manual revisando termómetros varias veces al día, y las variaciones de temperatura suelen ocurrir algunas veces al mes por cortes de energía o fallas en los equipos. Estas fallas generan pérdidas de productos, gastos económicos y problemas con normas sanitarias. Cuando ocurre un problema, revisan el equipo, trasladan los productos a otra unidad y llaman a un técnico. También mencionó que una solución tecnológica sería útil para prevenir pérdidas y tener mayor control en tiempo real. Entre las funcionalidades más valiosas destacó el monitoreo en tiempo real, el historial de temperatura y los reportes de incidencias, esperando una plataforma fácil de usar, confiable y útil para auditorías y control.
 
 ---
@@ -593,22 +593,22 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 |**Residencia / ubicación:** Callao|**Software especializado utilizado:** Ninguno|
 
 - **Duración:** 3:51
-    
+
 - **URL de grabación:** [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323350_upc_edu_pe/IQCqkr-aHZRMQJ4asJYslxzNATYEJLIw5vyYjCGVZpJhyQE?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=TcHSJQ](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323350_upc_edu_pe/IQCwTuQrPyIgRq040cbclhPqAfX8tnqEC6IFJJJ84kIgL6U?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=TcHSJQ)
-    
+
 
 > **Resumen de la entrevista**
-> 
+>
 > El entrevistado, Miguel Rodríguez, de 22 años y residente del Callao, explicó que trabaja con productos como lácteos, carnes, embutidos, bebidas refrigeradas y alimentos congelados como pollo y mariscos. Actualmente, el control de temperatura se realiza de forma manual mediante la revisión de termómetros varias veces al día. Indicó que los problemas de refrigeración suelen presentarse aproximadamente una vez al mes, principalmente por fallas eléctricas o daños en los equipos, lo que puede generar pérdidas de productos, costos adicionales y sanciones sanitarias.
-> 
+>
 > Cuando ocurre una incidencia, el personal inspecciona el equipo, traslada los productos a otra unidad disponible y contacta a un técnico especializado. Generalmente, estos problemas se detectan durante revisiones rutinarias o cuando ya hay señales de deterioro en los productos.
-> 
+>
 > El entrevistado señaló que sí han considerado implementar tecnología para mejorar el control y anticiparse a fallas. Sin embargo, mencionó como principales dificultades la inversión inicial, la capacitación del personal y la adaptación al sistema.
-> 
+>
 > Finalmente, destacó que las funcionalidades más valiosas serían las alertas automáticas, el monitoreo constante, el registro de temperaturas y los reportes de incidencias. Espera una plataforma sencilla, confiable y útil para mejorar el control interno, cumplir auditorías y reducir pérdidas.
-> 
+>
 
-### Segmento 2: 
+### Segmento 2:
 
 
 ![](report/assets/chapter-02/interviews/segmento21.png)
@@ -624,11 +624,11 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 - **URL de grabación:** [https://1drv.ms/v/c/470edfbbf4f38077/IQCRg4LcvetaRLbLebLPf0QWAR3HOtvvikDBCQaQ68PDMBs?e=tNMWES](https://1drv.ms/v/c/470edfbbf4f38077/IQCRg4LcvetaRLbLebLPf0QWAR3HOtvvikDBCQaQ68PDMBs?e=tNMWES)
 
 > **Resumen de la entrevista** El entrevistado, estudiante de Ingeniería Industrial de Lima, señala que el principal problema en la supervisión de la cadena de frío es la dependencia del factor humano, ya que el monitoreo se realiza de forma manual mediante hojas de registro en papel o Excel, sin ningún mecanismo de verificación en tiempo real. Esta situación se agrava durante los turnos nocturnos, fines de semana y en las rutas de transporte, donde la supervisión es prácticamente inexistente entre el punto de origen y el destino.
-> 
+>
 > Respecto a la confiabilidad del proceso actual, el entrevistado la considera baja, dado que los datos registrados dependen del criterio y la disciplina de cada operario, sin posibilidad de auditar su exactitud. Las incidencias se gestionan de manera informal, principalmente a través de WhatsApp o llamadas directas, sin protocolos estandarizados, lo que genera respuestas inconsistentes según quién esté disponible en el momento.
-> 
+>
 > En cuanto a soluciones tecnológicas, indica que nunca se han evaluado formalmente debido al costo inicial percibido y a la resistencia de la gerencia hacia herramientas desconocidas, sumado a una cultura organizacional de conformidad con los métodos tradicionales. Sin embargo, reconoce que sí existen pérdidas que no se contabilizan correctamente.
-> 
+>
 > Finalmente, el entrevistado identifica como valor clave de una solución digital la generación automática de reportes con historial de temperaturas, fechas y acciones correctivas, que es exactamente lo que exigen las inspecciones de DIGESA y MINSA. Considera que una plataforma accesible mediante suscripción mensual, con interfaz simple y reportes pre-formateados, tendría alta viabilidad de adopción en su organización.
 
 ### Entrevista N.° 2
@@ -646,11 +646,11 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 - **URL de grabación:** [https://1drv.ms/v/c/470edfbbf4f38077/IQCRg4LcvetaRLbLebLPf0QWAR3HOtvvikDBCQaQ68PDMBs?e=tNMWES](https://1drv.ms/v/c/470edfbbf4f38077/IQCRg4LcvetaRLbLebLPf0QWAR3HOtvvikDBCQaQ68PDMBs?e=tNMWES)
 
 > **Resumen de la entrevista**
-> 
+>
 > El entrevistado, estudiante de Ingeniería Industrial de Lima, destaca que la falta de visibilidad en tiempo real es el problema central de la cadena de frío, agravado por registros manuales poco confiables donde los operarios suelen completar datos estimados al final del turno. Identifica el transporte, los cambios de turno y las épocas de alta demanda como los puntos de mayor riesgo operativo.
-> 
+>
 > Respecto a la gestión de incidencias, señala que no existe un protocolo formal establecido, resolviéndose cada situación según el criterio de quien esté disponible y sin documentación adecuada. En cuanto a soluciones tecnológicas, menciona que el alto costo percibido y la falta de tiempo para investigar alternativas accesibles son las principales razones por las que las empresas descartan la adopción.
-> 
+>
 > Finalmente, el entrevistado considera que una solución viable debe ser económica, intuitiva y capaz de generar reportes listos para inspecciones de DIGESA sin procesamiento adicional, esperando como beneficios concretos la reducción de pérdidas no contabilizadas y la disponibilidad inmediata de evidencia ante auditorías sanitarias.
 
 ### Entrevista N.° 3
@@ -668,13 +668,13 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 - **URL de grabación:** [https://1drv.ms/v/c/470edfbbf4f38077/IQCRg4LcvetaRLbLebLPf0QWAR3HOtvvikDBCQaQ68PDMBs?e=tNMWES](https://1drv.ms/v/c/470edfbbf4f38077/IQCRg4LcvetaRLbLebLPf0QWAR3HOtvvikDBCQaQ68PDMBs?e=tNMWES)
 
 > **Resumen de la entrevista**
-> 
+>
 > El entrevistado, estudiante de Ingeniería Industrial de Lima, señala que la ausencia de automatización es el problema central, ya que el monitoreo queda supeditado a la carga de trabajo del operario, generando datos imprecisos sin ningún mecanismo de verificación. Identifica el transporte nocturno y los periodos sin personal como los momentos de mayor riesgo, donde una falla puede pasar desapercibida durante horas.
-> 
+>
 > Respecto a la gestión de incidencias, confirma la ausencia de protocolos formales, resolviéndose cada situación por WhatsApp según el criterio del jefe disponible. La adopción tecnológica no se ha explorado formalmente debido a la percepción generalizada de alto costo y complejidad de implementación.
-> 
+>
 > Finalmente, el entrevistado es claro en que una solución viable debe ser económica, operable sin capacitación extensa y capaz de generar automáticamente el historial de temperaturas requerido por DIGESA, esperando como resultado concreto pasar de una gestión reactiva a una preventiva.
-> 
+>
 ### 2.2.3 Análisis de entrevistas
 
 El análisis de entrevistas nos permite profundizar en la comprensión de las necesidades, deseos y comportamientos de nuestros usuarios, lo que a su vez informa la toma de decisiones en el diseño y desarrollo de productos o servicios orientados al usuario.
@@ -752,11 +752,11 @@ Se ha elaborado el Empathy Mapping utilizando los datos obtenidos de las etap
 
 User Task Matrix: Primer Segmento Objetivo (Dueños de carnicerías, pescaderías o verdulerías que posean un sistema de refrigeración)
 
-**Empathy Map: 
+**Empathy Map:
 
 ![](report/assets/chapter-02/empathy-maps/Empathy1.png)
 
-**Empathy Map: 
+**Empathy Map:
 
 ![](report/assets/chapter-02/empathy-maps/Empathy2.png)
 
@@ -1107,11 +1107,11 @@ Esta sección define los lineamientos de estilo que aseguran una identidad visua
 
 ### 4.1.1. General Style Guidelines.
 
-**Brand Overview** 
+**Brand Overview**
 
 Se ha seleccionado la propuesta basada en un escudo térmico como logo definitivo. Esta elección responde a una estrategia de marca diseñada para transmitir seguridad alimentaria y protección. El isotipo fusiona un escudo (protección), la inicial "F" con trazos fluidos (logística) y ondas internas que simbolizan los datos de los sensores IoT y el flujo de aire frío.
 
-**Typography** 
+**Typography**
 
 Hemos seleccionado cuidadosamente estas tipografías para ColdTrace, buscando un equilibrio armónico entre claridad, profesionalismo y modernidad que refuerce nuestros valores de eficiencia, monitoreo inteligente y trazabilidad precisa. La combinación de Poppins para títulos e Inter (o Roboto) para textos técnicos potencia la legibilidad en web y móvil, proyecta una identidad tecnológica y accesible, y acompaña con coherencia los flujos clave del _dashboard_, la gestión de sensores y la resolución de incidentes, asegurando una experiencia consistente, robusta y fácil de usar en toda la plataforma.
 
@@ -1264,10 +1264,10 @@ Se aplica una organización visual jerárquica y funcional. En la Landing Page, 
 
 **Organización de la Landing Page:**
 
-*Encabezado (Header):*  
+*Encabezado (Header):*
 Incluye el logotipo de ColdTrace, enlaces de navegación principales, selector de idioma y accesos a autenticación. Su función es mantener disponibles las rutas de mayor valor durante todo el recorrido.
 
-*Sección Introductoria (Hero):*  
+*Sección Introductoria (Hero):*
 Presenta la propuesta de valor del producto: centralizar la infraestructura de almacenamiento en frío en una plataforma inteligente con monitoreo en tiempo real, alertas y trazabilidad.
 
 *Beneficios:*
@@ -1276,13 +1276,13 @@ Presenta la propuesta de valor del producto: centralizar la infraestructura de a
 - Historial descargable para trazabilidad.
 - Reportes listos para auditorías sanitarias.
 
-*Cómo Funciona:*  
+*Cómo Funciona:*
 Organiza el flujo de uso en pasos simples: configurar sensores y rangos, monitorear activos en tiempo real y auditar mediante reportes exportables.
 
-*Casos de uso:*  
+*Casos de uso:*
 Explica escenarios asociados a cámaras frigoríficas, almacenes, transporte refrigerado, minimarkets y responsables de operaciones que necesitan controlar la cadena de frío.
 
-*Pie de Página (Footer):*  
+*Pie de Página (Footer):*
 Agrupa enlaces secundarios relacionados con producto, soporte, recursos, redes sociales y acceso a información institucional.
 
 ---
@@ -1375,7 +1375,7 @@ Los sistemas de búsqueda se diseñan para que el usuario no se pierda entre gra
 
 El sistema de navegación guía al usuario desde la presentación comercial del producto hasta las funcionalidades operativas de la Web Application.
 
-**Flujo principal:**  
+**Flujo principal:**
 El usuario inicia en la Landing Page, revisa la propuesta de valor, consulta funcionalidades, explora el flujo de trabajo y accede al registro o inicio de sesión. Una vez autenticado, ingresa al dashboard principal, desde donde puede navegar hacia monitoreo en vivo, activos, transporte, alertas, reportes, usuarios y configuración.
 
 - **Navegación global:** el menú superior permanece disponible en la Landing Page para facilitar el acceso a secciones clave y al cambio de idioma.
@@ -1464,19 +1464,19 @@ Los mock-ups de la Landing Page representan la versión visual de alta fidelidad
 
 ### 4.4.1. Web Applications Wireframes.
 
-Los wireframes de la aplicación web fueron diseñados para definir la estructura funcional de las principales pantallas del sistema. En esta etapa se identificaron los elementos clave de interacción, como paneles de control, visualización de datos, navegación entre secciones y componentes necesarios para la gestión del sistema. Estos wireframes permiten validar la distribución de información antes de la implementación visual, asegurando que las funcionalidades respondan a las necesidades del usuario. 
+Los wireframes de la aplicación web fueron diseñados para definir la estructura funcional de las principales pantallas del sistema. En esta etapa se identificaron los elementos clave de interacción, como paneles de control, visualización de datos, navegación entre secciones y componentes necesarios para la gestión del sistema. Estos wireframes permiten validar la distribución de información antes de la implementación visual, asegurando que las funcionalidades respondan a las necesidades del usuario.
 
-Wireframe Landing Page: En este wireframe vemos la organización de los elementos que se le presentarían al usuario inicialmente al entrar a la página. 
+Wireframe Landing Page: En este wireframe vemos la organización de los elementos que se le presentarían al usuario inicialmente al entrar a la página.
 <p align="center">
   <img src="report/assets/chapter-04/wireflowdiagram/WireframeLP.png" alt="Wireframes">
 </p>
 
-Wireframe Landing Page Mobile: Organización de elementos para el landing page en entorno de móviles 
+Wireframe Landing Page Mobile: Organización de elementos para el landing page en entorno de móviles
 <p align="center">
   <img src="report/assets/chapter-04/wireflowdiagram/WireframeMobile.png" alt="Wireframes">
 </p>
 
-Wireframes Pantallas: Aqui vemos la organización de secciones individuales que componen las distintas pantallas de la página web. 
+Wireframes Pantallas: Aqui vemos la organización de secciones individuales que componen las distintas pantallas de la página web.
 <p align="center">
   <img src="report/assets/chapter-04/wireflowdiagram/Activos.png" alt="Wireframes">
 </p>
@@ -1506,7 +1506,7 @@ Wireframes Pantallas: Aqui vemos la organización de secciones individuales que 
 
 ### 4.4.2. Web Applications Wireflow Diagrams.
 
-Los wireflow diagrams representan el flujo de interacción del usuario dentro de la aplicación, mostrando la navegación entre pantallas y las acciones que el usuario puede realizar en cada etapa. Estos diagramas permiten entender el recorrido del usuario (user flow), facilitando la identificación de puntos clave de interacción y mejorando la experiencia general del sistema. 
+Los wireflow diagrams representan el flujo de interacción del usuario dentro de la aplicación, mostrando la navegación entre pantallas y las acciones que el usuario puede realizar en cada etapa. Estos diagramas permiten entender el recorrido del usuario (user flow), facilitando la identificación de puntos clave de interacción y mejorando la experiencia general del sistema.
 
 <p align="center">
   <img src="report/assets/chapter-04/wireflowdiagram/WireFlows (1).png" alt="Wireframes">
@@ -3615,6 +3615,10 @@ A continuación se presenta el resumen de participación por integrante basado e
   </tr>
 </table>
 
+<br>
+<br>
+
+
 # 5.2.3 Sprint 3
 
 ## 5.2.3.1. Sprint Planning 3
@@ -3631,9 +3635,13 @@ El Sprint 3 tuvo como objetivo principal diseñar, implementar y desplegar el ba
 | **Sprint 2 Review Summary** | En el Sprint 2 se completó y desplegó exitosamente la Frontend Web Application de ColdTrace en Vercel, consumiendo un servidor JSON hospedado en Render como backend provisional. Se validaron los flujos de navegación de todos los módulos principales de la aplicación. |
 | **Sprint 2 Retrospective Summary** | El equipo identificó la necesidad urgente de migrar hacia un backend real estructurado, con autenticación, validaciones y persistencia en base de datos. Como acción de mejora, el equipo se organizó para desarrollar la RESTful API asignando endpoints y controladores basados en los mismos bounded contexts trabajados en el sprint anterior. |
 | **Sprint Goal & User Stories** | |
-| **Sprint 3 Goal** | Nuestro objetivo es desarrollar y desplegar una RESTful API base para ColdTrace, que reemplace la API simulada. Creemos que proporcionará una arquitectura sólida para el manejo de datos operacionales, la gestión de la infraestructura IoT y la seguridad del sistema. Esto se confirmará cuando la API esté desplegada en la nube, los endpoints estén documentados en Swagger y el frontend pueda integrarse progresivamente. |
+| **Sprint 3 Goal** | Nuestro enfoque está en desarrollar y desplegar la primera versión de la RESTful API de ColdTrace, reemplazando la API simulada utilizada en el Sprint 2. Creemos que entrega una arquitectura backend con persistencia real, lógica de negocio y seguridad a los equipos que gestionan la cadena de frío. Esto se confirmará cuando la API esté desplegada en la nube, los endpoints estén documentados en Swagger y el frontend pueda consumir datos reales. |
 | **Sprint 3 Velocity** | 45 Story Points |
 | **Sum of Story Points** | 45 Story Points |
+
+
+<br>
+<br>
 
 ## 5.2.3.2. Aspect Leaders and Collaborators
 Durante el Sprint 3, el trabajo se organizó en torno a la creación de los controladores, servicios y repositorios de la RESTful API. Se designó un líder (L) por cada grupo de APIs y colaboradores (C) para apoyar en la integración.
@@ -3653,40 +3661,51 @@ Los aspectos principales del Sprint 3 fueron:
 | **Velásquez, Eduardo** | Edu-VLL | C | C | C | L | C |
 | **Delgado Arriola, Leonardo Sebastian**| leodev77 | C | C | C | C | L |
 
+
+
+<br>
+<br>
+
+
 ## 5.2.3.3. Sprint Backlog 3
 El Sprint Backlog se gestionó mediante Linear App. A continuación se detallan las tareas asignadas y completadas en el rango del 03 al 19 de junio de 2026.
 
-![Backlog en Linear](report/assets/chapter-05/sprint-03/linar-backlog.png)
-Elaboración propia en Linear: [Link del Sprint Backlog 3](https://app.notion.com/p/387eb3344500803c8075f8c8e02655d7?v=387eb33445008195a654000c50102c1c&source=copy_link)
-*Se redirige a Notion para un tema de exploner el Sprint Backlog en una URL publica*
+![Backlog en Linear](./report/assets/chapter-05/sprint-03/linar-backlog.png)
+Elaboración propia en Linear: [https://linear.app/coldtrace/team/APPWEB/all](https://linear.app/coldtrace/team/APPWEB/all)
 
 *[Imagen: Captura de pantalla del tablero de Linear App mostrando el Sprint Backlog del Sprint 3, con las tareas organizadas en columnas de To Do, In Progress, In Review y Done]*
 
+
+
 > Descripción: Tablero visual que muestra las diferentes etapas de las tareas del sprint.
 
-| Id   | Issue ID  | Title                                  | Estimation  | Assigned To                     | Status    |
-| :--- | :-------- | :------------------------------------- | :---------: | :------------------------------ | :-------- |
-| T-44 | APPWEB-51 | ASP.NET Core API Foundation            |      5      | Mauricio Pajés                  | Done      |
-| T-45 | APPWEB-52 | TS01 - Organization Sign-Up API        |      4      | Mauricio Pajés                  | Done      |
-| T-47 | APPWEB-54 | TS03 - Users API                       |      4      | Mauricio Pajés                  | Done      |
-| T-48 | APPWEB-55 | TS04 - Assets API                      |      5      | Santiago Enrique Vargas Alarcón | In Review |
-| T-49 | APPWEB-56 | TS05 - IoT Devices API                 |      5      | Jean Pool Arias                 | In Review |
-| T-50 | APPWEB-57 | TS06 - Asset Settings API              |      4      | Santiago Enrique Vargas Alarcón | In Review |
-| T-51 | APPWEB-58 | TS07 - Sensor Readings API             |      5      | Jean Pool Arias                 | In Review |
-| T-52 | APPWEB-59 | TS08 - Incidents and Notifications API |      5      | Leonardo Delgado                | In Review |
-| T-53 | APPWEB-60 | TS09 - Incident Lifecycle Fields API   |      4      | Mauricio Pajés                  | Todo      |
-| T-54 | APPWEB-61 | TS10 - Reports API                     |      5      | Leonardo Delgado                | In Review |
-| T-55 | APPWEB-62 | Error Handling and I18n                |      4      | Mauricio Pajés                  | Todo      |
-| T-60 | APPWEB-69 | TS12 - Role Assignment API             |      3      | Eduardo Velásquez               | Todo      |
-| T-61 | APPWEB-70 | TS13 - Gateways API                    |      4      | Mauricio Pajés                  | Done      |
-| T-62 | APPWEB-71 | TS14 - Maintenance Schedules API       |      4      | Eduardo Velásquez               | Done      |
-| T-63 | APPWEB-72 | TS15 - Technical Service Requests API  |      4      | Eduardo Velásquez               | Done      |
-| T-64 | APPWEB-73 | TS16 - Organizations API Base          |      4      | Mauricio Pajés                  | Done      |
-| T-65 | APPWEB-74 | TS17 - Locations API                   |      3      | Mauricio Pajés                  | Done      |
+| User Story Id | User Story Title | Work-item Id | Title | Description | Estimation | Assigned To | Status |
+| :---: | :--- | :---: | :--- | :--- | :---: | :--- | :---: |
+| — | API Foundation | T-44 | ASP.NET Core API Foundation | Estructura base del proyecto ASP.NET Core: carpetas, middleware, inyección de dependencias y configuración inicial. | 5 | Mauricio Pajés | Done |
+| TS01 | Organization Sign-Up API | T-45 | TS01 - Organization Sign-Up API | Endpoint POST para registro de nuevas organizaciones con validación de correo y datos básicos. | 4 | Mauricio Pajés | Done |
+| TS03 | Users API | T-47 | TS03 - Users API | CRUD completo de usuarios por organización: creación, consulta, actualización y eliminación con asignación de roles. | 4 | Mauricio Pajés | Done |
+| TS04 | Assets API | T-48 | TS04 - Assets API | Endpoints para crear, consultar y actualizar activos (cámaras frigoríficas) vinculados a una organización. | 5 | Santiago Enrique Vargas Alarcón | In Review |
+| TS05 | IoT Devices API | T-49 | TS05 - IoT Devices API | Registro y gestión de dispositivos IoT vinculados a activos de monitoreo de temperatura. | 5 | Jean Pool Arias | In Review |
+| TS06 | Asset Settings API | T-50 | TS06 - Asset Settings API | Configuración de parámetros operativos por activo: rangos de temperatura permitida y niveles de alerta. | 4 | Santiago Enrique Vargas Alarcón | In Review |
+| TS07 | Sensor Readings API | T-51 | TS07 - Sensor Readings API | Endpoints de ingesta de telemetría: lecturas de temperatura y humedad enviadas por dispositivos IoT. | 5 | Jean Pool Arias | In Review |
+| TS08 | Incidents and Notifications API | T-52 | TS08 - Incidents and Notifications API | Gestión del ciclo de vida de incidentes térmicos y envío de notificaciones asociadas. | 5 | Leonardo Delgado | In Review |
+| TS09 | Incident Lifecycle Fields API | T-53 | TS09 - Incident Lifecycle Fields API | Campos y acciones adicionales para el reconocimiento y resolución formal de incidentes. | 4 | Mauricio Pajés | Todo |
+| TS10 | Reports API | T-54 | TS10 - Reports API | Generación de reportes consolidados de temperatura, alertas e incidencias por periodo y organización. | 5 | Leonardo Delgado | In Review |
+| — | Error Handling & I18n | T-55 | Error Handling and I18n | Manejo global de errores HTTP y soporte de internacionalización de mensajes de la API. | 4 | Mauricio Pajés | Todo |
+| TS12 | Role Assignment API | T-60 | TS12 - Role Assignment API | Endpoint PATCH para asignar y actualizar el rol de un usuario dentro de la organización. | 3 | Eduardo Velásquez | Todo |
+| TS13 | Gateways API | T-61 | TS13 - Gateways API | CRUD de gateways IoT que actúan como intermediarios entre los sensores y la nube. | 4 | Mauricio Pajés | Done |
+| TS14 | Maintenance Schedules API | T-62 | TS14 - Maintenance Schedules API | Programación y consulta de mantenimiento preventivo de activos con calendarización automática. | 4 | Eduardo Velásquez | Done |
+| TS15 | Technical Service Requests API | T-63 | TS15 - Technical Service Requests API | Solicitudes de servicio técnico: creación, actualización de estado y asignación a técnicos. | 4 | Eduardo Velásquez | Done |
+| TS16 | Organizations API Base | T-64 | TS16 - Organizations API Base | Estructura base del bounded context Organizations con DbContext y entidades principales. | 4 | Mauricio Pajés | Done |
+| TS17 | Locations API | T-65 | TS17 - Locations API | CRUD de ubicaciones (sedes, almacenes, puntos de distribución) dentro de una organización. | 3 | Mauricio Pajés | Done |
+
+<br>
+<br>
+
 
 ## 5.2.3.4. Development Evidence for Sprint Review
 Durante el Sprint 3, la implementación backend se gestionó en el repositorio `AplicacionesWeb-Grupo-2/coldtrace-platform` siguiendo el estándar de commits de la organización.
- 
+
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
 |:---|:---|:---|:---|:---|:---|
@@ -3733,87 +3752,104 @@ Durante el Sprint 3, la implementación backend se gestionó en el repositorio `
 | coldtrace-platform | develop | c4d5e6f | merge: integrate feature branches into develop for Sprint 3 Review | Merge final consolidando todos los feature branches hacia develop. Se ejecutaron pruebas de integración y validación de compatibilidad entre módulos para Sprint 3. | 2026-06-19 |
 
 ---
- 
+
+<br>
+<br>
+
 
 ## 5.2.3.5. Execution Evidence for Sprint Review
 Al término del Sprint 3, se logró disponer de una infraestructura backend en ejecución con múltiples endpoints operativos para probar la lógica de negocio de ColdTrace.
 
-![swagger](report//assets/chapter-05/sprint-03/swagger-assetSetting-asset.png)
-![swagger](report/assets/chapter-05/sprint-03/swagger-gateways-Incidents-iotDevices.png)
-![swagger](report/assets/chapter-05/sprint-03/swagger-locations-maintenance-notifications-organizatios.png)
-![swagger](report/assets/chapter-05/sprint-03/swagger-reports-roles-sensor-technical-users.png) 
+![swagger](./report/assets/chapter-05/sprint-03/swagger-assetSetting-asset.png)
+![swagger](./report/assets/chapter-05/sprint-03/swagger-gateways-Incidents-iotDevices.png)
+![swagger](./report/assets/chapter-05/sprint-03/swagger-locations-maintenance-notifications-organizatios.png)
+![swagger](./report/assets/chapter-05/sprint-03/swagger-reports-roles-sensor-technical-users.png)
 
 
 *[Imagen: Captura de pantalla de la interfaz de Swagger UI (o documento OpenAPI) mostrando todos los endpoints RESTful agrupados por controladores]*
 > Descripción: Documentación interactiva de la API oficial generada por Swagger, lista para ser consumida por el frontend.
 
+<br>
 
 
-(FALTA AGREGAR)
-*[Imagen: Captura de pantalla de Postman ejecutando una petición GET a `/api/v1/iot-devices` y recibiendo un objeto JSON estructurado]*
-> Descripción: Pruebas manuales de consumo de la API de dispositivos IoT para validar las respuestas y mapeo de datos.
+![swagger](./report/assets/chapter-05/sprint-03/getPostman.png)
+
+*[Imagen: Captura de pantalla de Postman ejecutando una petición GET a `/api/v1/organizations` y recibiendo un objeto JSON estructurado]*
 
 
-![swagger](report/assets/chapter-05/sprint-03/database.png)
+<br>
+
+![swagger](./report/assets/chapter-05/sprint-03/database.png)
 
 *[Imagen: Captura de pantalla de un explorador de base de datos mostrando las tablas relacionales creadas a partir de las migraciones]*
 > Descripción: Evidencia de la creación del esquema de la base de datos relacional y el correcto mapeo de las entidades del dominio.
 
-#### 5.2.3.6. Services Documentation Evidence for Sprint Review
+<br>
+A continuación se presenta el video de navegación del producto correspondiente al Sprint 3, que consolida la demostración del flujo de la RESTful API desplegada, priorizando los user flows relacionados con el core business de ColdTrace
+
+![evidencia del video](./report/assets/chapter-05/sprint-03/evidenceVideo.png)
+
+**URL del video:** [Video Product Navigation Sprint 3](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323350_upc_edu_pe/IQC_iCMNMEIJRoDLEchEjK4XAQZvho_o3UllbIqUg4E8yHo?e=RanuCx&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
+
+<br>
+<br>
+
+
+## 5.2.3.6. Services Documentation Evidence for Sprint Review
 Se implementó la documentación oficial de la RESTful API. A continuación se presentan los endpoints clave desarrollados en el Sprint 3:
 
-| Endpoint | Verb HTTP | Sintaxis de llamada | Descripción |
-|:---|:---:|:---|:---|
-| Organization Sign-Ups | POST | `POST /api/v1/organization-sign-ups` | Registra una nueva organización en el sistema |
-| Organizations | GET | `GET /api/v1/organizations` | Obtiene todas las organizaciones registradas |
-| Organizations | POST | `POST /api/v1/organizations` | Crea una nueva organización |
-| Users | GET | `GET /api/v1/organizations/{organizationId}/users` | Lista todos los usuarios de una organización |
-| Users | POST | `POST /api/v1/organizations/{organizationId}/users` | Crea un nuevo usuario en la organización |
-| Users Role | PATCH | `PATCH /api/v1/organizations/{organizationId}/users/{userId}/role` | Asigna o actualiza el rol de un usuario |
-| Roles | GET | `GET /api/v1/roles` | Obtiene todos los roles disponibles en el sistema |
-| Assets | GET | `GET /api/v1/organizations/{organizationId}/assets` | Lista todos los activos (cámaras frigoríficas) de una organización |
-| Assets | POST | `POST /api/v1/organizations/{organizationId}/assets` | Crea un nuevo activo |
-| Assets | GET | `GET /api/v1/organizations/{organizationId}/assets/{assetId}` | Obtiene los detalles de un activo específico |
-| Assets | PUT | `PUT /api/v1/organizations/{organizationId}/assets/{assetId}` | Actualiza un activo existente |
-| Asset Settings | GET | `GET /api/v1/organizations/{organizationId}/asset-settings` | Obtiene configuraciones de activos por organización |
-| Asset Settings | GET | `GET /api/v1/organizations/{organizationId}/assets/{assetId}/settings` | Obtiene configuración efectiva de un activo |
-| Asset Settings | PUT | `PUT /api/v1/organizations/{organizationId}/assets/{assetId}/settings` | Guarda configuración de un activo específico |
-| Asset Settings Default | PUT | `PUT /api/v1/organizations/{organizationId}/asset-settings/default` | Guarda configuración por defecto de la organización |
-| Locations | GET | `GET /api/v1/organizations/{organizationId}/locations` | Lista todas las ubicaciones de una organización |
-| Locations | POST | `POST /api/v1/organizations/{organizationId}/locations` | Crea una nueva ubicación |
-| Locations | GET | `GET /api/v1/organizations/{organizationId}/locations/{locationId}` | Obtiene detalles de una ubicación |
-| Locations | PUT | `PUT /api/v1/organizations/{organizationId}/locations/{locationId}` | Actualiza una ubicación |
-| IoT Devices | GET | `GET /api/v1/organizations/{organizationId}/iot-devices` | Lista todos los dispositivos IoT de una organización |
-| IoT Devices | POST | `POST /api/v1/organizations/{organizationId}/iot-devices` | Registra un nuevo dispositivo IoT |
-| IoT Devices | GET | `GET /api/v1/organizations/{organizationId}/iot-devices/{iotDeviceId}` | Obtiene detalles de un dispositivo IoT |
-| IoT Devices | PUT | `PUT /api/v1/organizations/{organizationId}/iot-devices/{iotDeviceId}` | Actualiza un dispositivo IoT |
-| Sensor Readings | GET | `GET /api/v1/organizations/{organizationId}/sensor-readings` | Obtiene lecturas de sensores de una organización |
-| Sensor Readings | GET | `GET /api/v1/organizations/{organizationId}/sensor-readings/{sensorReadingId}` | Obtiene una lectura de sensor específica |
-| Sensor Readings by Device | GET | `GET /api/v1/organizations/{organizationId}/iot-devices/{iotDeviceId}/sensor-readings` | Obtiene lecturas de un dispositivo específico |
-| Sensor Readings | POST | `POST /api/v1/organizations/{organizationId}/iot-devices/{iotDeviceId}/sensor-readings` | Registra una nueva lectura de sensor (telemetría) |
-| Gateways | GET | `GET /api/v1/organizations/{organizationId}/gateways` | Lista todos los gateways IoT de una organización |
-| Gateways | POST | `POST /api/v1/organizations/{organizationId}/gateways` | Crea un nuevo gateway IoT |
-| Gateways | GET | `GET /api/v1/organizations/{organizationId}/gateways/{gatewayId}` | Obtiene detalles de un gateway |
-| Gateways | PUT | `PUT /api/v1/organizations/{organizationId}/gateways/{gatewayId}` | Actualiza un gateway |
-| Maintenance Schedules | GET | `GET /api/v1/organizations/{organizationId}/maintenance-schedules` | Lista programaciones de mantenimiento preventivo |
-| Maintenance Schedules | POST | `POST /api/v1/organizations/{organizationId}/maintenance-schedules` | Crea una nueva programación de mantenimiento |
-| Maintenance Schedules | GET | `GET /api/v1/organizations/{organizationId}/maintenance-schedules/{maintenanceScheduleId}` | Obtiene detalles de una programación |
-| Maintenance Schedules | PATCH | `PATCH /api/v1/organizations/{organizationId}/maintenance-schedules/{maintenanceScheduleId}` | Actualiza el estado de una programación |
-| Technical Service Requests | GET | `GET /api/v1/organizations/{organizationId}/technical-service-requests` | Lista solicitudes de servicio técnico |
-| Technical Service Requests | POST | `POST /api/v1/organizations/{organizationId}/technical-service-requests` | Crea una nueva solicitud de servicio técnico |
-| Technical Service Requests | GET | `GET /api/v1/organizations/{organizationId}/technical-service-requests/{technicalServiceRequestId}` | Obtiene detalles de una solicitud |
-| Technical Service Requests | PATCH | `PATCH /api/v1/organizations/{organizationId}/technical-service-requests/{technicalServiceRequestId}` | Actualiza el estado de una solicitud |
-| Incidents | GET | `GET /api/v1/organizations/{organizationId}/incidents` | Lista incidentes de temperatura/humedad |
-| Incidents | POST | `POST /api/v1/organizations/{organizationId}/incidents` | Crea un nuevo incidente |
-| Incidents | GET | `GET /api/v1/organizations/{organizationId}/incidents/{incidentId}` | Obtiene detalles de un incidente |
-| Incidents Acknowledgements | POST | `POST /api/v1/organizations/{organizationId}/incidents/{incidentId}/acknowledgements` | Reconoce/confirma un incidente |
-| Incidents Resolutions | POST | `POST /api/v1/organizations/{organizationId}/incidents/{incidentId}/resolutions` | Resuelve un incidente |
-| Incidents Notifications | GET | `GET /api/v1/organizations/{organizationId}/incidents/{incidentId}/notifications` | Obtiene historial de notificaciones de un incidente |
-| Notifications | GET | `GET /api/v1/organizations/{organizationId}/notifications` | Obtiene notificaciones de la organización |
-| Reports | GET | `GET /api/v1/organizations/{organizationId}/reports` | Lista reportes generados |
-| Reports | POST | `POST /api/v1/organizations/{organizationId}/reports` | Genera un nuevo reporte |
-| Reports | GET | `GET /api/v1/organizations/{organizationId}/reports/{reportId}` | Obtiene detalles/contenido de un reporte |
- 
+| Endpoint | Verb HTTP | Sintaxis de llamada | Parámetros | Descripción | Response |
+|:---|:---:|:---|:---|:---|:---:|
+| Organization Sign-Ups | POST | `POST /api/v1/organization-sign-ups` | Body: legalName, commercialName, contactEmail, firstName, email | Registra una nueva organización y su primer usuario | 201 |
+| Organizations | GET | `GET /api/v1/organizations` | — | Obtiene todas las organizaciones registradas | 200 |
+| Organizations | POST | `POST /api/v1/organizations` | Body: legalName, commercialName, contactEmail | Crea una nueva organización | 201 |
+| Users | GET | `GET /api/v1/organizations/{organizationId}/users` | organizationId (path) | Lista todos los usuarios de una organización | 200 |
+| Users | POST | `POST /api/v1/organizations/{organizationId}/users` | organizationId (path), Body: firstName, email, roleId | Crea un nuevo usuario en la organización | 201 |
+| Users Role | PATCH | `PATCH /api/v1/organizations/{organizationId}/users/{userId}/role` | organizationId, userId (path), Body: roleId | Asigna o actualiza el rol de un usuario | 200 |
+| Roles | GET | `GET /api/v1/roles` | — | Obtiene todos los roles disponibles en el sistema | 200 |
+| Assets | GET | `GET /api/v1/organizations/{organizationId}/assets` | organizationId (path) | Lista todos los activos de una organización | 200 |
+| Assets | POST | `POST /api/v1/organizations/{organizationId}/assets` | organizationId (path), Body: locationId, uuid, type, name, capacity, status | Crea un nuevo activo (cámara frigorífica) | 201 |
+| Assets | GET | `GET /api/v1/organizations/{organizationId}/assets/{assetId}` | organizationId, assetId (path) | Obtiene los detalles de un activo específico | 200 |
+| Assets | PUT | `PUT /api/v1/organizations/{organizationId}/assets/{assetId}` | organizationId, assetId (path), Body: locationId, uuid, type, name, capacity, status | Actualiza un activo existente | 200 |
+| Asset Settings | GET | `GET /api/v1/organizations/{organizationId}/asset-settings` | organizationId (path) | Obtiene configuraciones de activos por organización | 200 |
+| Asset Settings | GET | `GET /api/v1/organizations/{organizationId}/assets/{assetId}/settings` | organizationId, assetId (path) | Obtiene configuración efectiva de un activo | 200 |
+| Asset Settings | PUT | `PUT /api/v1/organizations/{organizationId}/assets/{assetId}/settings` | organizationId, assetId (path), Body: minimumTemperature, maximumTemperature, temperatureUnit, humidityUnit, weightUnit | Guarda configuración de un activo específico | 200 |
+| Asset Settings Default | PUT | `PUT /api/v1/organizations/{organizationId}/asset-settings/default` | organizationId (path), Body: minimumTemperature, maximumTemperature, temperatureUnit, humidityUnit, weightUnit | Guarda configuración por defecto de la organización | 200 |
+| Locations | GET | `GET /api/v1/organizations/{organizationId}/locations` | organizationId (path) | Lista todas las ubicaciones de una organización | 200 |
+| Locations | POST | `POST /api/v1/organizations/{organizationId}/locations` | organizationId (path), Body: name, type, status | Crea una nueva ubicación | 201 |
+| Locations | GET | `GET /api/v1/organizations/{organizationId}/locations/{locationId}` | organizationId, locationId (path) | Obtiene detalles de una ubicación | 200 |
+| Locations | PUT | `PUT /api/v1/organizations/{organizationId}/locations/{locationId}` | organizationId, locationId (path), Body: name, type, status | Actualiza una ubicación | 200 |
+| IoT Devices | GET | `GET /api/v1/organizations/{organizationId}/iot-devices` | organizationId (path) | Lista todos los dispositivos IoT de una organización | 200 |
+| IoT Devices | POST | `POST /api/v1/organizations/{organizationId}/iot-devices` | organizationId (path), Body: gatewayId, uuid, deviceType, model, measurementType, status, calibrationStatus | Registra un nuevo dispositivo IoT | 201 |
+| IoT Devices | GET | `GET /api/v1/organizations/{organizationId}/iot-devices/{iotDeviceId}` | organizationId, iotDeviceId (path) | Obtiene detalles de un dispositivo IoT | 200 |
+| IoT Devices | PUT | `PUT /api/v1/organizations/{organizationId}/iot-devices/{iotDeviceId}` | organizationId, iotDeviceId (path), Body: gatewayId, uuid, deviceType, model, status | Actualiza un dispositivo IoT | 200 |
+| Sensor Readings | GET | `GET /api/v1/organizations/{organizationId}/sensor-readings` | organizationId (path), assetId?, iotDeviceId?, from?, to? (query) | Obtiene lecturas de sensores con filtros opcionales | 200 |
+| Sensor Readings | GET | `GET /api/v1/organizations/{organizationId}/sensor-readings/{sensorReadingId}` | organizationId, sensorReadingId (path) | Obtiene una lectura de sensor específica | 200 |
+| Sensor Readings | POST | `POST /api/v1/organizations/{organizationId}/sensor-readings` | organizationId (path), Body: assetId, iotDeviceId, temperature?, humidity?, recordedAt? | Registra una nueva lectura de telemetría | 201 |
+| Gateways | GET | `GET /api/v1/organizations/{organizationId}/gateways` | organizationId (path) | Lista todos los gateways IoT de una organización | 200 |
+| Gateways | POST | `POST /api/v1/organizations/{organizationId}/gateways` | organizationId (path), Body: locationId, uuid, name, network, status | Crea un nuevo gateway IoT | 201 |
+| Gateways | GET | `GET /api/v1/organizations/{organizationId}/gateways/{gatewayId}` | organizationId, gatewayId (path) | Obtiene detalles de un gateway | 200 |
+| Gateways | PUT | `PUT /api/v1/organizations/{organizationId}/gateways/{gatewayId}` | organizationId, gatewayId (path), Body: locationId, uuid, name, network, status | Actualiza un gateway | 200 |
+| Maintenance Schedules | GET | `GET /api/v1/organizations/{organizationId}/maintenance-schedules` | organizationId (path) | Lista programaciones de mantenimiento preventivo | 200 |
+| Maintenance Schedules | POST | `POST /api/v1/organizations/{organizationId}/maintenance-schedules` | organizationId (path), Body: assetId, scheduledDate, status | Crea una nueva programación de mantenimiento | 201 |
+| Maintenance Schedules | GET | `GET /api/v1/organizations/{organizationId}/maintenance-schedules/{maintenanceScheduleId}` | organizationId, maintenanceScheduleId (path) | Obtiene detalles de una programación | 200 |
+| Maintenance Schedules | PATCH | `PATCH /api/v1/organizations/{organizationId}/maintenance-schedules/{maintenanceScheduleId}` | organizationId, maintenanceScheduleId (path), Body: status | Actualiza el estado de una programación | 200 |
+| Technical Service Requests | GET | `GET /api/v1/organizations/{organizationId}/technical-service-requests` | organizationId (path) | Lista solicitudes de servicio técnico | 200 |
+| Technical Service Requests | POST | `POST /api/v1/organizations/{organizationId}/technical-service-requests` | organizationId (path), Body: assetId, issueDescription, priority | Crea una nueva solicitud de servicio técnico | 201 |
+| Technical Service Requests | GET | `GET /api/v1/organizations/{organizationId}/technical-service-requests/{technicalServiceRequestId}` | organizationId, technicalServiceRequestId (path) | Obtiene detalles de una solicitud | 200 |
+| Technical Service Requests | PATCH | `PATCH /api/v1/organizations/{organizationId}/technical-service-requests/{technicalServiceRequestId}` | organizationId, technicalServiceRequestId (path), Body: status | Actualiza el estado de una solicitud | 200 |
+| Incidents | GET | `GET /api/v1/organizations/{organizationId}/incidents` | organizationId (path) | Lista incidentes de temperatura/humedad | 200 |
+| Incidents | POST | `POST /api/v1/organizations/{organizationId}/incidents` | organizationId (path), Body: type, severity, assetId?, value? | Crea un nuevo incidente | 201 |
+| Incidents | GET | `GET /api/v1/organizations/{organizationId}/incidents/{incidentId}` | organizationId, incidentId (path) | Obtiene detalles de un incidente | 200 |
+| Incidents Acknowledgements | POST | `POST /api/v1/organizations/{organizationId}/incidents/{incidentId}/acknowledgements` | organizationId, incidentId (path), Body: acknowledgedBy | Reconoce/confirma un incidente abierto | 200 |
+| Incidents Resolutions | POST | `POST /api/v1/organizations/{organizationId}/incidents/{incidentId}/resolutions` | organizationId, incidentId (path), Body: resolvedBy, resolutionNotes | Resuelve un incidente | 200 |
+| Incidents Notifications | GET | `GET /api/v1/organizations/{organizationId}/incidents/{incidentId}/notifications` | organizationId, incidentId (path) | Obtiene historial de notificaciones de un incidente | 200 |
+| Notifications | GET | `GET /api/v1/organizations/{organizationId}/notifications` | organizationId (path) | Obtiene notificaciones de la organización | 200 |
+| Reports | GET | `GET /api/v1/organizations/{organizationId}/reports` | organizationId (path) | Lista reportes generados | 200 |
+| Reports | POST | `POST /api/v1/organizations/{organizationId}/reports` | organizationId (path), Body: (según tipo de reporte) | Genera un nuevo reporte | 201 |
+| Reports | GET | `GET /api/v1/organizations/{organizationId}/reports/{reportId}` | organizationId, reportId (path) | Obtiene detalles/contenido de un reporte | 200 |
+
 
 ### Documentación en Swagger UI
 
@@ -3822,26 +3858,30 @@ Se incluyen a continuación capturas de la documentación interactiva accesible 
 
 **Captura 1: Ejecución interactiva de un endpoint de prueba**
 
-![Swagger UI - Endpoint POST](report/assets/chapter-05/sprint-03/post-organizations.png)
+![Swagger UI - Endpoint POST](./report/assets/chapter-05/sprint-03/post-organizations.png)
 
 > Descripción: Vista expandida de un endpoint (POST /api/v1/organizations) mostrando como agregar una nueva organización, modelo de respuesta exitosa status 200.
 
 
 **Captura 2: Detalle de un endpoint con ejemplo de request/response**
 
-![Swagger UI - Endpoint GET](report/assets/chapter-05/sprint-03/get-organizations.png)
+![Swagger UI - Endpoint GET](./report/assets/chapter-05/sprint-03/get-organizations.png)
 
 > Descripción: Vista expandida de un endpoint (ejemplo: GET /api/v1/organizations) mostrando especificación de parámetros, modelo de respuesta exitosa (200) y ejemplo de datos JSON retornado por el servidor.
 
- 
+
 
 ### Referencias de Implementación
 
 **Repositorio de Web Services:** https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform
 
-**URL de la Documentación Swagger:** (FALTA AGREGAR)
+**URL de la Documentación Swagger:** https://coldtrace-platform-55771439812.us-central1.run.app/swagger/index.html
 
 ---
+
+
+<br>
+<br>
 
 ## 5.2.3.7. Software Deployment Evidence for Sprint Review
 
@@ -3858,7 +3898,7 @@ Durante el Sprint 3 se realizó el despliegue de la primera versión de los Web 
 | Runtime del backend | ASP.NET Core containerizado con Docker |
 | Plataforma de hosting | Google Cloud Run — `us-central1` |
 | Base de datos | Google Cloud SQL for MySQL — instancia `coldtrace-mysql` |
-| Esquema de base de datos | `coldtrace_platform` | 
+| Esquema de base de datos | `coldtrace_platform` |
 | Registro de imágenes | Google Artifact Registry |
 | Integración continua | GitHub Actions (`backend-ci.yml`) |
 | Documentación de API | Swagger UI / OpenAPI |
@@ -3873,7 +3913,7 @@ Durante el Sprint 3 se realizó el despliegue de la primera versión de los Web 
 | Swagger JSON | https://coldtrace-platform-3kti2ylcba-uc.a.run.app/swagger/v1/swagger.json |
 
 ---
- 
+
  <br>
 
 ## **Procedimiento de despliegue**
@@ -3882,7 +3922,7 @@ Durante el Sprint 3 se realizó el despliegue de la primera versión de los Web 
 
 Se aprovisionó una instancia administrada de Cloud SQL seleccionando MySQL como motor de base de datos y asignándole el nombre `coldtrace-mysql` en la región `us-central1`.
 
-![Creación de la instancia Cloud SQL para MySQL asociada al backend de ColdTrace](report/assets/chapter-05/sprint-03/creacion_intancia_cloudSQL_figura1.png)
+![Creación de la instancia Cloud SQL para MySQL asociada al backend de ColdTrace](./report/assets/chapter-05/sprint-03/creacion_intancia_cloudSQL_figura1.png)
 
 ---
 
@@ -3892,7 +3932,7 @@ Se aprovisionó una instancia administrada de Cloud SQL seleccionando MySQL como
 
 Se confirmó que la instancia `coldtrace-mysql` quedó creada correctamente en la región configurada y disponible para recibir bases de datos y usuarios.
 
-![Instancia Cloud SQL coldtrace-mysql creada en Google Cloud y disponible para configuración](report/assets/chapter-05/sprint-03/intancia_cloud_sql_figura2.png)
+![Instancia Cloud SQL coldtrace-mysql creada en Google Cloud y disponible para configuración](./report/assets/chapter-05/sprint-03/intancia_cloud_sql_figura2.png)
 
 ---
 
@@ -3903,7 +3943,7 @@ Se confirmó que la instancia `coldtrace-mysql` quedó creada correctamente en l
 
 Dentro de la instancia Cloud SQL se registró el esquema `coldtrace_platform`, que actúa como base de datos principal donde el backend persiste la información de organizaciones, activos, reportes y monitoreo.
 
-![Base de datos coldtrace_platform registrada en la instancia Cloud SQL](report/assets/chapter-05/sprint-03/base_de_datos_coldtrace_figura3.png)
+![Base de datos coldtrace_platform registrada en la instancia Cloud SQL](./report/assets/chapter-05/sprint-03/base_de_datos_coldtrace_figura3.png)
 
 ---
 
@@ -3914,7 +3954,7 @@ Dentro de la instancia Cloud SQL se registró el esquema `coldtrace_platform`, q
 
 Se creó un usuario de aplicación dedicado para que el servicio Cloud Run acceda a MySQL sin utilizar credenciales administrativas durante la operación del backend.
 
-![Usuario de base de datos configurado para la conexión del backend](report/assets/chapter-05/sprint-03/usuario_base_de_datos_figura4.png)
+![Usuario de base de datos configurado para la conexión del backend](./report/assets/chapter-05/sprint-03/usuario_base_de_datos_figura4.png)
 
 ---
 
@@ -3925,7 +3965,7 @@ Se creó un usuario de aplicación dedicado para que el servicio Cloud Run acced
 
 Se creó el servicio Cloud Run `coldtrace-platform` conectado al repositorio `AplicacionesWeb-Grupo-2/coldtrace-platform` usando la rama `main`. Se seleccionó compilación mediante el `Dockerfile` del repositorio y se configuró el puerto de contenedor `8080`, requerido por Cloud Run para enrutar el tráfico HTTP.
 
-![Configuración inicial de Cloud Run con repositorio del backend, rama main y compilación mediante Dockerfile](report/assets/chapter-05/sprint-03/configuracion_cloud_run_backend_figura5.png)
+![Configuración inicial de Cloud Run con repositorio del backend, rama main y compilación mediante Dockerfile](./report/assets/chapter-05/sprint-03/configuracion_cloud_run_backend_figura5.png)
 
 ---
 
@@ -3936,7 +3976,7 @@ Se creó el servicio Cloud Run `coldtrace-platform` conectado al repositorio `Ap
 
 Se registraron las variables de entorno de producción para separar la configuración del código fuente: cadena de conexión a Cloud SQL, configuración del runtime de ASP.NET Core y parámetros de CORS para permitir la integración con el frontend.
 
-![Variables de entorno del servicio Cloud Run para conectar ASP.NET Core con Cloud SQL y el frontend](report/assets/chapter-05/sprint-03/variable_de_entorno_figura6.png)
+![Variables de entorno del servicio Cloud Run para conectar ASP.NET Core con Cloud SQL y el frontend](./report/assets/chapter-05/sprint-03/variable_de_entorno_figura6.png)
 
 ---
 
@@ -3947,7 +3987,7 @@ Se registraron las variables de entorno de producción para separar la configura
 
 Se ejecutó el despliegue inicial. Cloud Run publicó una revisión activa del servicio y habilitó el panel de métricas para monitorear solicitudes, latencia y uso de recursos en tiempo real.
 
-![Servicio Cloud Run desplegado y panel de métricas disponible para monitoreo](report/assets/chapter-05/sprint-03/servicio_cloud_run_desplegado_figura7.png)
+![Servicio Cloud Run desplegado y panel de métricas disponible para monitoreo](./report/assets/chapter-05/sprint-03/servicio_cloud_run_desplegado_figura7.png)
 
 ---
 
@@ -3958,7 +3998,7 @@ Se ejecutó el despliegue inicial. Cloud Run publicó una revisión activa del s
 
 Se verificó que la documentación interactiva de la API esté expuesta públicamente en la URL de producción, confirmando que los endpoints REST pueden ser revisados y probados directamente desde el navegador.
 
-![Swagger UI publicado para validar los endpoints REST de ColdTrace.Platform](report/assets/chapter-05/sprint-03/swaggerUI_publicado_figura8.png)
+![Swagger UI publicado para validar los endpoints REST de ColdTrace.Platform](./report/assets/chapter-05/sprint-03/swaggerUI_publicado_figura8.png)
 
 ---
 
@@ -3966,19 +4006,19 @@ Se verificó que la documentación interactiva de la API esté expuesta pública
 
 **`Dockerfile`** — Define el proceso de build y runtime de .NET, publicando el binario de la Web API y exponiendo el puerto `8080` requerido por Cloud Run.
 
-![Dockerfile del backend con compilación .NET, runtime ASP.NET Core y exposición del puerto 8080](report/assets/chapter-05/sprint-03/dockerfile_backend_figura9.png)
+![Dockerfile del backend con compilación .NET, runtime ASP.NET Core y exposición del puerto 8080](./report/assets/chapter-05/sprint-03/dockerfile_backend_figura9.png)
 
 ---
 
 **`backend-ci.yml` (GitHub Actions)** — Documenta la validación continua del backend antes de integrar cambios al repositorio principal.
 
-![Workflow backend-ci.yml usado para validar la integración continua del Web Service](report/assets/chapter-05/sprint-03/workflow_backend_figura10.png)
+![Workflow backend-ci.yml usado para validar la integración continua del Web Service](./report/assets/chapter-05/sprint-03/workflow_backend_figura10.png)
 
 ---
 
 **`appsettings.Production.json`** — Define la cadena de conexión a MySQL mediante placeholders de variables de entorno, evitando exponer host, usuario, contraseña o nombre del esquema en el código fuente del repositorio.
 
-![appsettings.Production.json con cadena de conexión basada en variables de entorno](report/assets/chapter-05/sprint-03/appsettings_productionsjson_figura11.png)
+![appsettings.Production.json con cadena de conexión basada en variables de entorno](./report/assets/chapter-05/sprint-03/appsettings_productionsjson_figura11.png)
 
 ---
 
@@ -3988,7 +4028,7 @@ Se verificó que la documentación interactiva de la API esté expuesta pública
 
 La conexión exitosa confirma acceso a la base de datos real `coldtrace_platform` y permite inspeccionar los datos persistidos por la aplicación.
 
-![Conexión exitosa desde Rider/DataGrip hacia la base de datos real coldtrace_platform](report/assets/chapter-05/sprint-03/conexion_rider_to_base_de_datos_figura12.png)
+![Conexión exitosa desde Rider/DataGrip hacia la base de datos real coldtrace_platform](./report/assets/chapter-05/sprint-03/conexion_rider_to_base_de_datos_figura12.png)
 
 ---
 
@@ -3996,13 +4036,13 @@ La conexión exitosa confirma acceso a la base de datos real `coldtrace_platform
 
 Se ejecutó una solicitud GET al endpoint publicado en Cloud Run. La respuesta `200 OK` con datos reales confirma que la API está operativa, conectada a la base de datos y accesible desde clientes externos.
 
-![Prueba del endpoint GET /api/v1/organizations desde Postman con respuesta 200 OK](report/assets/chapter-05/sprint-03/prueba_endpoint_GET_figura13.png)
+![Prueba del endpoint GET /api/v1/organizations desde Postman con respuesta 200 OK](./report/assets/chapter-05/sprint-03/prueba_endpoint_GET_figura13.png)
 
 
 
 <br>
 <br>
- 
+
 
 
 ## 5.2.3.8. Team Collaboration Insights during Sprint
@@ -4022,7 +4062,7 @@ A continuación se presentan los analíticos de colaboración del repositorio pr
 
 **Figura 1. Gráfica de contribuciones de commits por integrante**
 
-![GitHub Contributors Graph – coldtrace-platform](report/assets/chapter-05/sprint-03/contributors.png)
+![GitHub Contributors Graph – coldtrace-platform](./report/assets/chapter-05/sprint-03/contributors.png)
 
 
 <br>
@@ -4031,15 +4071,105 @@ A continuación se presentan los analíticos de colaboración del repositorio pr
 
 ## 5.3. Validation Interviews
 
-Durante el Sprint 1 no se ejecutaron entrevistas de validación del producto, debido a que el alcance de la iteración estuvo centrado en la construcción y despliegue inicial del Landing Page. Esta actividad queda planificada para una iteración posterior, cuando exista una versión de producto con flujos funcionales suficientes para evaluar con usuarios.
-
 ### 5.3.1. Diseño de Entrevistas
 
-El diseño de entrevistas de validación será elaborado en una siguiente iteración, considerando preguntas orientadas a evaluar comprensión de la propuesta de valor, utilidad percibida, claridad visual y facilidad de navegación.
+Para la validación de la solución implementada, se diseñaron entrevistas dirigidas a representantes de los segmentos objetivo identificados en las fases iniciales del proyecto. El objetivo fue evaluar la percepción de los usuarios sobre la funcionalidad, usabilidad y pertinencia de la RESTful API de ColdTrace y su integración con la Frontend Web Application.
+
+Se definieron dos perfiles de entrevistados:
+
+- **Dueño o encargado de negocio:** Interesado en la reducción de merma, el cumplimiento sanitario y la generación de reportes operativos.
+- **Responsable de operaciones o calidad:** Enfocado en el monitoreo en tiempo real, la gestión de alertas e incidencias y la configuración de parámetros operativos.
+
+Las entrevistas se estructuraron en torno a los siguientes ejes de validación:
+
+1. **Registro y gestión de organizaciones y usuarios:** Validar que el flujo de sign-up y administración de usuarios sea claro y funcional.
+2. **Gestión de activos e infraestructura IoT:** Evaluar la facilidad para registrar activos, vincular sensores y configurar gateways.
+3. **Monitoreo y alertas:** Verificar que la visualización de lecturas de sensores y la gestión de incidencias térmicas responda a las necesidades operativas.
+4. **Reportes y cumplimiento:** Confirmar que la generación de reportes operativos y de cumplimiento sea útil para la toma de decisiones.
+5. **Mantenimiento y servicio técnico:** Evaluar la utilidad de la programación de mantenimiento preventivo y la gestión de solicitudes de servicio técnico.
 
 ### 5.3.2. Registro de Entrevistas
 
-No se registran entrevistas de validación para Sprint 1.
+Para cada segmento objetivo se registrarán 3 entrevistas. Cada entrevista debe incluir la información personal solicitada, un screenshot del video, el enlace de Microsoft Stream, el timing donde inicia la entrevista, su duración y un resumen descriptivo de las principales apreciaciones del participante.
+
+**Video consolidado de entrevistas de validación:** [Ver video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQDzxmtGoZMES7vutMFjzCRkAXimh9-_K-h2BVM1FMlXjhY?e=hdDtj8&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+**Nomenclatura del video:** `upc-pre-202610-1asi0729-10177-ICEQvalidation-sprint-3.mp4`
+
+#### Segmento objetivo 1: Dueños, administradores o encargados de pequeños negocios alimentarios
+
+| **Entrevista Nro. 1** |  |
+| --- | --- |
+| Screenshot | <img src="report/assets/chapter-05/validation/IsaacDiazInterview.png" alt="Screenshot de entrevista de validación - Isaac Diaz" width="600"> |
+| Nombres y apellidos | Isaac Diaz |
+| Edad | 25 años |
+| Distrito | San Miguel |
+| Segmento objetivo | Dueños, administradores o encargados de pequeños negocios alimentarios |
+| URL de grabación | [Ver video en Microsoft Stream](https://1drv.ms/v/c/470edfbbf4f38077/IQDBetSYZ7JeQpQ6vmBHOrz2AQAVRE3xe3Wd1l_OaXu63Cs?e=l02EFp) |
+| Timing de inicio | 00:00 |
+| Duración | 12:28 |
+| Resumen | Isaac evaluó ColdTrace desde el rol de encargado de un pequeño negocio familiar que comercializa productos frios como carnes. Durante la revisión de la Landing Page, comprendió que la propuesta se enfoca en monitorear equipos refrigerados, recibir alertas y consultar historial, relacionándolo con su necesidad de detectar fallas antes de que la mercadería esté en riesgo. En la Web Application, valoró especialmente el dashboard, la revisión de activos, las alertas y el historial diario, pues estos elementos reemplazan parcialmente el control manual basado en revisar indicadores de refrigeradoras o inspeccionar visualmente los productos. Señaló que la solución sería útil si mantiene una experiencia simple, accesible desde cualquier dispositivo y con notificaciones claras. |
+
+| **Entrevista Nro. 2** | |
+| --- | --- |
+| Screenshot | <img src="report/assets/chapter-05/validation/GabrielRamirezInterview.png" alt="Screenshot de entrevista de validación - Gabriel Ramirez" width="600"> |
+| Nombres y apellidos | Gabriel Ramirez Gutiérrez |
+| Edad | 19 años |
+| Distrito | San Miguel |
+| Segmento objetivo | Dueños, administradores o encargados de pequeños negocios alimentarios |
+| URL de grabación | [Ver video en Microsoft Stream](https://1drv.ms/v/c/470edfbbf4f38077/IQDBetSYZ7JeQpQ6vmBHOrz2AQAVRE3xe3Wd1l_OaXu63Cs?e=l02EFp) |
+| Timing de inicio | 00:00 |
+| Duración | 08:07 |
+| Resumen | Gabriel evaluó ColdTrace desde su rol como trabajador de una bodega en San Miguel, donde gestiona áreas de carnicería y verdulería. Durante la presentación, destacó que la Landing Page es clara y comunica eficazmente la propuesta de valor. Valoró positivamente la automatización del monitoreo de temperatura, señalando que le permitiría gestionar su inventario de forma más rápida y precisa desde un dispositivo, eliminando el control manual. Finalmente, expresó que las funciones de alertas y notificaciones del sistema serían herramientas de gran ayuda en su labor diaria. |
+
+| **Entrevista Nro. 3** |  |
+| --- | --- |
+| Screenshot | <img src="report/assets/chapter-05/validation/vi-s1-01-jean-pool-coaguila.png" alt="Screenshot de entrevista de validación - Jean Pool Coaguila" width="600"> |
+| Nombres y apellidos | Jean Pool Coaguila |
+| Edad | 29 años |
+| Distrito | Lima Norte |
+| Segmento objetivo | Dueños, administradores o encargados de pequeños negocios alimentarios |
+| URL de grabación | [Ver video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQDzxmtGoZMES7vutMFjzCRkAXimh9-_K-h2BVM1FMlXjhY?e=hdDtj8&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D) |
+| Timing de inicio | 00:00 |
+| Duración | 18:16 |
+| Resumen | Jean Pool evaluó ColdTrace desde el rol de encargado de un minimarket familiar que comercializa productos perecibles. Durante la revisión de la Landing Page, comprendió que la propuesta se enfoca en monitorear equipos refrigerados, recibir alertas y consultar historial, relacionándolo con su necesidad de detectar fallas antes de que la mercadería esté en riesgo. En la Web Application, valoró especialmente el dashboard, la revisión de activos, las alertas y el historial diario, pues estos elementos reemplazan parcialmente el control manual basado en revisar indicadores de refrigeradoras o inspeccionar visualmente los productos. Señaló que la solución sería útil si mantiene una experiencia simple, accesible desde celular y con mensajes de alerta claros. Como oportunidades de mejora, sugirió explicar mejor el costo, la instalación de sensores y agregar recomendaciones concretas de acción ante cada alerta. |
+
+#### Segmento objetivo 2: Responsables de operaciones, calidad o logística en negocios con cadena de frío
+
+| **Entrevista Nro. 1** |  |
+| --- | --- |
+| Screenshot | <img src="report/assets/chapter-05/validation/vi-s2-01-rodrigo-vasquez.png" alt="Screenshot de entrevista de validación - Rodrigo Vasquez" width="600"> |
+| Nombres y apellidos | Rodrigo Vasquez |
+| Edad | 30 años |
+| Distrito | Lima Metropolitana |
+| Segmento objetivo | Responsables de operaciones, calidad o logística en negocios con cadena de frío |
+| URL de grabación | [Ver video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQDzxmtGoZMES7vutMFjzCRkAXimh9-_K-h2BVM1FMlXjhY?e=hdDtj8&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D) |
+| Timing de inicio | 18:16 |
+| Duración | 31:58 |
+| Resumen | Rodrigo evaluó ColdTrace desde el rol de supervisor de operaciones encargado de controlar activos refrigerados y consolidar información operativa. Al revisar la Landing Page, identificó que la propuesta responde a problemas mencionados en la entrevista inicial, como la falta de visibilidad inmediata, la dependencia de registros manuales y la dispersión de información. En la Web Application, destacó el valor del dashboard operacional para priorizar riesgos, la gestión de activos y sensores para mantener trazabilidad de equipos, el módulo de incidentes para reconocer y cerrar alertas con acciones correctivas, y los reportes para auditorías o revisiones internas. Consideró que ColdTrace puede reducir el trabajo manual de consolidación en Excel o Google Sheets, siempre que los reportes sean descargables y la interfaz mantenga filtros claros por sede, activo, severidad y estado. Como mejoras, recomendó reforzar la priorización de alertas, agregar recomendaciones de acción y mejorar la vista por sede o zona para operaciones con varios puntos de control. |
+
+| **Entrevista Nro. 2** |  |
+| --- | --- |
+| Screenshot | <br><br> |
+| Nombres y apellidos |  |
+| Edad |  |
+| Distrito |  |
+| Segmento objetivo | Responsables de operaciones, calidad o logística en negocios con cadena de frío |
+| URL de grabación |  |
+| Timing de inicio |  |
+| Duración |  |
+| Resumen | <br><br><br> |
+
+| **Entrevista Nro. 3** |  |
+| --- | --- |
+| Screenshot | <br><br> |
+| Nombres y apellidos |  |
+| Edad |  |
+| Distrito |  |
+| Segmento objetivo | Responsables de operaciones, calidad o logística en negocios con cadena de frío |
+| URL de grabación |  |
+| Timing de inicio |  |
+| Duración |  |
+| Resumen | <br><br><br> |
 
 ### 5.3.3. Evaluaciones según heurísticas
 
@@ -4053,25 +4183,32 @@ El documento fuente no registra un enlace final de video About-the-Product para 
 
 # Capítulo VI: Conclusions
 ## 6.1. Conclusiones y recomendaciones
-### Conlusiones
-El desarrollo del presente trabajo ha permitido al equipo validar que existe una necesidad real y no atendida adecuadamente en el sector alimentario peruano: la ausencia de herramientas digitales accesibles para el monitoreo continuo de la cadena de frío. A través de las entrevistas realizadas a ambos segmentos objetivo, se confirmó que tanto los dueños de pequeños negocios como los responsables de operaciones dependen exclusivamente de controles manuales, detectan las fallas de refrigeración de forma tardía y carecen de documentación que respalde el cumplimiento normativo ante DIGESA y MINSA.
-El proceso de needfinding, que incluyó User Personas, User Task Matrix, User Journey Maps y Empathy Maps, permitió comprender con profundidad las motivaciones, frustraciones y expectativas de cada segmento, asegurando que las decisiones de diseño de ColdTrace respondan a necesidades reales y no a suposiciones. Los Impact Maps y User Stories derivados de este análisis establecieron una base sólida y priorizada para el desarrollo del producto.
-En cuanto a la implementación, el equipo logró desplegar una landing page funcional que comunica con claridad la propuesta de valor de ColdTrace, sus funcionalidades principales y el flujo de uso de la plataforma, constituyendo el primer entregable tangible del producto hacia los usuarios potenciales.
-Finalmente, el trabajo colaborativo del equipo, con roles distribuidos entre investigación, diseño, arquitectura e implementación, demostró que es posible avanzar de forma paralela en múltiples frentes sin perder coherencia entre los entregables, gracias a una planificación por sprints y una comunicación constante.
-### Recomendaciones 
-Se recomienda realizar entrevistas de validación con usuarios reales del primer segmento, particularmente dueños de carnicerías, pescaderías y minimarkets, para contrastar los hallazgos obtenidos hasta ahora con experiencias concretas de campo, ajustando el diseño de la plataforma si fuera necesario.
-Para los siguientes sprints, se sugiere priorizar el desarrollo de las funcionalidades más valoradas por ambos segmentos: las alertas automáticas en tiempo real y la generación de reportes para auditorías sanitarias, ya que son las que mayor impacto tendrán en la decisión de adopción de la plataforma.
-Se recomienda también definir una estrategia de precios clara y accesible desde etapas tempranas, dado que el costo de implementación fue identificado como la principal barrera de adopción en ambos segmentos. Un modelo freemium o un periodo de prueba gratuito podría reducir significativamente esta fricción.
-En cuanto al diseño de la plataforma, se sugiere mantener la simplicidad como principio rector de la interfaz, especialmente para el primer segmento, cuyos usuarios no tienen experiencia con software de gestión. Cualquier funcionalidad nueva debe poder entenderse sin capacitación previa.
-Finalmente, se recomienda establecer alianzas tempranas con proveedores de hardware IoT locales en Perú, ya que la dependencia de sensores importados podría encarecer la solución y reducir su competitividad frente a alternativas ya posicionadas en el mercado peruano.
+### Conclusiones
+El desarrollo del presente trabajo permitió validar una necesidad real en el sector alimentario peruano: la falta de herramientas accesibles para monitorear la cadena de frío, detectar incidentes a tiempo y conservar evidencia operativa para auditorías sanitarias.
+
+El proceso de investigación, diseño y especificación permitió convertir hallazgos de entrevistas, user personas, journeys, mapas de impacto y user stories en una propuesta de producto coherente para los dos segmentos objetivo priorizados.
+
+En la implementación, ColdTrace evolucionó desde la landing page y la frontend web application hacia una RESTful API en ASP.NET Core desplegada en Google Cloud Run, conectada a Cloud SQL for MySQL y documentada mediante Swagger UI. Esto reduce la dependencia del servidor JSON provisional y acerca la solución a un entorno de producción real.
+
+El trabajo por sprints, ramas GitFlow y evidencias de commits permitió mantener trazabilidad entre requisitos, diseño, implementación, validación y despliegue, aunque el equipo debe seguir reforzando la integración continua entre frontend, backend y base de datos.
+
+### Recomendaciones
+Se recomienda continuar validando la solución con usuarios reales de ambos segmentos, especialmente responsables de operaciones y dueños de negocios que gestionan productos perecibles, para contrastar la utilidad de alertas, reportes y monitoreo en escenarios reales.
+
+Para los siguientes incrementos, se debe priorizar la integración completa entre la frontend web application y la RESTful API desplegada, reemplazando definitivamente los datos simulados y verificando los flujos críticos de autenticación, activos, sensores, incidentes y reportes.
+
+También se recomienda ampliar las pruebas automatizadas del backend, incluyendo pruebas de integración contra la base de datos y validaciones de seguridad sobre credenciales, CORS, roles y acceso por organización.
+
+Finalmente, se debe mantener la documentación del informe sincronizada con cada despliegue, incluyendo URLs vigentes, capturas legibles, evidencia de ejecución, estado de ramas y enlaces finales a los videos de exposición.
+
 ## 6.2. Video About-the-Team
-[pending content]
+El enlace final del video About-the-Team no se encuentra registrado en el repositorio al momento de esta revisión. Debe incorporarse cuando el equipo consolide la evidencia audiovisual de exposición final.
 
 ---
 
 # Bibliografía
-Agraria.pe. (2019, junio 26). Perú pierde más del 33% de los alimentos que produce por mal uso de la cadena de frío. Agraria. https://www.agraria.pe/noticias/peru-pierde-mas-del-33-de-los-alimentos-que-produce-por-mal--19324 
+Agraria.pe. (2019, junio 26). Perú pierde más del 33% de los alimentos que produce por mal uso de la cadena de frío. Agraria. https://www.agraria.pe/noticias/peru-pierde-mas-del-33-de-los-alimentos-que-produce-por-mal--19324
 
-FAO. (2021). Más de 12 millones de toneladas de alimentos se pierden a lo largo de la cadena productiva en el Perú. Organización de las Naciones Unidas para la Alimentación y la Agricultura. https://www.fao.org/peru/noticias/detail-events/en/c/1712376/ 
+FAO. (2021). Más de 12 millones de toneladas de alimentos se pierden a lo largo de la cadena productiva en el Perú. Organización de las Naciones Unidas para la Alimentación y la Agricultura. https://www.fao.org/peru/noticias/detail-events/en/c/1712376/
 
 Gestión. (2025, septiembre 21). Mercado de almacenes en frío en Perú crecerá a US$ 510 millones en 2025: ¿qué lo impulsa? Gestión. https://gestion.pe/economia/empresas/mercado-de-almacenes-en-frio-en-peru-crecera-a-us-510-millones-en-2025-que-lo-impulsa-noticia/
