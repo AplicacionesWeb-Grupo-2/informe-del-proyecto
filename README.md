@@ -76,16 +76,14 @@
 **Lima, Abril de 2026**
 </div>
 
----
 
 # Registro de Versiones del Informe
 
-| Versión | Fecha      | Autor                 | Descripción de modificación                                                                                                                                                                                                                                                                                 |
-| :------ | :--------- | :-------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| AV1     | 25/04/2026 | Todos los integrantes | Primera versión formal del informe, correspondiente al avance AV1 del proyecto. Incluye la documentación inicial del producto, análisis del segmento objetivo, definición de requisitos, modelado del dominio, arquitectura del sistema, evidencias de implementación y artefactos de gestión del proyecto. |
-| AV2     | 19/06/2026 | Todos los integrantes | Version desplegada del Backend avanzanda en al menos el 90% del proyecto, Incluyendo el frontend Actualizado, Spring 3, videos de verificacion                                                                                                                                                              |
+| Versión | Fecha | Autor | Descripción de modificación |
+| :--- | :--- | :--- | :--- |
+| AV1 | 25/04/2026 | Todos los integrantes | Primera versión formal del informe, correspondiente al avance AV1 del proyecto. Incluye la documentación inicial del producto, análisis del segmento objetivo, definición de requisitos, modelado del dominio, arquitectura del sistema, evidencias de implementación y artefactos de gestión del proyecto. |
+| AV2 | 19/06/2026 | Todos los integrantes | Versión desplegada del backend y actualización final de la web application para la entrega AV2. Incluye backend ASP.NET Core en Google Cloud Run, base de datos Cloud SQL for MySQL, documentación Swagger, integración con frontend, evidencias de Sprint 3, validaciones y videos de verificación. |
 
----
 
 # Project Report Collaboration Insights
 
@@ -97,11 +95,11 @@ El presente apartado tiene como finalidad evidenciar el trabajo colaborativo rea
 
 A partir de este repositorio, se analiza la participación de los integrantes mediante indicadores como la distribución de tareas, la frecuencia de contribuciones, la revisión de contenidos y la integración progresiva de los entregables desarrollados durante el avance del proyecto.
 
-En el contexto de la entrega correspondiente a AV1, el análisis de colaboración permite visualizar el aporte individual de cada miembro del equipo, sustentado en los registros de GitHub, la organización de responsabilidades y la evolución del informe. Este seguimiento busca demostrar una distribución ordenada del trabajo, la consistencia en la documentación y el cumplimiento de las actividades asignadas.
+En el contexto de las entregas AV1 y AV2, el análisis de colaboración permite visualizar el aporte individual de cada miembro del equipo, sustentado en los registros de GitHub, la organización de responsabilidades y la evolución del informe. Este seguimiento busca demostrar una distribución ordenada del trabajo, la consistencia en la documentación y el cumplimiento de las actividades asignadas.
 
-## AV2
+## AV1
 
-Durante el desarrollo de la entrega AV2, el equipo organizó la elaboración del informe mediante la asignación de responsabilidades por secciones. Esta distribución permitió avanzar de manera paralela en actividades relacionadas con investigación, análisis del segmento objetivo, definición de requisitos, diseño UX, modelado del dominio, arquitectura de software y documentación técnica.
+Durante el desarrollo de la entrega AV1, el equipo organizó la elaboración del informe mediante la asignación de responsabilidades por secciones. Esta distribución permitió avanzar de manera paralela en actividades relacionadas con investigación, análisis del segmento objetivo, definición de requisitos, diseño UX, modelado del dominio, arquitectura de software y documentación técnica.
 
 El proceso de desarrollo del informe se realizó de forma incremental, incorporando progresivamente los contenidos conforme se consolidaban los artefactos del proyecto. Esto se refleja en el Registro de Versiones del Informe, donde se evidencia la evolución del documento desde su estructura inicial hasta la inclusión de elementos como Lean UX, entrevistas, user stories, impact maps, event storming, bounded contexts, diagramas C4, diagramas de clases, diseño de base de datos y evidencias de implementación.
 
@@ -123,7 +121,30 @@ La coordinación del equipo también permitió mantener una visión compartida d
 
 Finalmente, el trabajo colaborativo durante AV1 permitió establecer una base documental sólida para las siguientes etapas del proyecto. Esta base facilita la continuidad del desarrollo, la revisión de decisiones tomadas y la trazabilidad entre los objetivos de negocio, las necesidades de los usuarios y la solución propuesta.
 
----
+## AV2
+
+Durante la entrega AV2, el trabajo colaborativo se enfocó en consolidar el informe del proyecto con las evidencias correspondientes al backend oficial, el despliegue en Google Cloud, la integración con Cloud SQL, la documentación de servicios mediante Swagger y la actualización de las secciones acumulativas del reporte.
+
+El equipo mantuvo una dinámica de trabajo distribuida, organizando las responsabilidades por capítulos, evidencias de Sprint 3, documentación de despliegue, validaciones y ajustes finales del informe. La actividad registrada en GitHub permite observar que la entrega no dependió de un único integrante, sino de la participación de los cinco miembros del equipo en la actualización y cierre de los contenidos requeridos.
+
+En la vista Pulse del repositorio se evidencia actividad durante la semana del 14 al 21 de junio de 2026. En este periodo se registró un Pull Request fusionado, participación de cinco autores y veinticuatro commits asociados a la rama principal, además de cambios acumulados en múltiples archivos del informe.
+
+<p align="center">
+  <img src="report/assets/common/collaboration-insights/av2-pulse-overview.png" width="900" alt="GitHub Pulse overview for AV2 collaboration insights">
+</p>
+
+*Figura 3. Vista general de actividad del repositorio durante el periodo correspondiente a AV2.*
+
+La vista Contributors muestra la continuidad del aporte por integrante durante el periodo del proyecto, incluyendo actividad reciente cercana a la entrega AV2. Se identifican contribuciones de Santiago Vargas, Jean Pool Arias, Mauricio Pajes, Leonardo Delgado y Eduardo Velasquez, lo que refuerza la trazabilidad del trabajo colaborativo y la distribución de responsabilidades en el informe.
+
+<p align="center">
+  <img src="report/assets/common/collaboration-insights/av2-contributors-commits.png" width="900" alt="GitHub contributors commit activity for AV2 collaboration insights">
+</p>
+
+*Figura 4. Registro de contribuciones por integrante en el repositorio del informe durante el periodo acumulado hacia AV2.*
+
+En conjunto, las evidencias de AV2 muestran que el equipo continuó trabajando de forma incremental sobre el informe, incorporando contenido técnico, evidencias de despliegue y documentación de servicios. Esto permitió mantener trazabilidad entre las tareas ejecutadas, los commits realizados y los entregables exigidos para la revisión de Sprint 3.
+
 
 # Contenido
 ## Tabla de contenidos
@@ -228,97 +249,167 @@ Finalmente, el trabajo colaborativo durante AV1 permitió establecer una base do
 ## Anexos
 - [Anexos.](#anexos)
 
----
 
 # Student Outcome
 
+El curso contribuye al cumplimiento del Student Outcome ABET: **ABET - EAC - Student Outcome 5**.
+
+**Criterio:** Trabaja efectivamente en un equipo cuyos miembros juntos proporcionan liderazgo; crea un entorno colaborativo e inclusivo y establece metas, planifica tareas y cumple objetivos.
+
+En los siguientes cuadros se describen las acciones realizadas y conclusiones del equipo, conservando las evidencias acumuladas de **AV1**, **TB1** y **AV2**.
+
+## Criterio 5.c.1
+
 <table border="1" style="width:100%; border-collapse: collapse;">
-<tr>
-<th style="width:25%;">Criterio Específico</th>
-<th style="width:37.5%;">Acciones Realizadas</th>
-<th style="width:37.5%;">Conclusiones</th>
-</tr>
-<tr>
-<td>
-Trabaja en equipo para proporcionar liderazgo en forma conjunta
-</td>
-<td>
-<strong>----------AV2----------</strong><br>
-<strong>Leonardo Delgado:</strong><br>
-Desarrolló funcionalidades asociadas a incidentes, notificaciones y reportes dentro del backend del proyecto, abordando componentes clave para el seguimiento de eventos y la generación de información útil para la plataforma. Su trabajo permitió ampliar el alcance funcional del sistema hacia procesos de monitoreo y análisis.<br><br>
-
-<strong>Mauricio Pajés:</strong><br>
-Lideró la organización técnica del AV2 mediante la creación y estructuración de la mayor parte de los issues del sprint, definiendo el alcance funcional del backend y distribuyendo responsabilidades entre los integrantes del equipo. Además, avanzó directamente en endpoints clave como la base de la API, registro de organizaciones, usuarios, gateways, organizaciones y ubicaciones, consolidando la arquitectura general del sistema.<br><br>
-
-<strong>Jean Pool Arias:</strong><br>
-Asumió el desarrollo de funcionalidades centrales vinculadas a dispositivos IoT y lecturas de sensores, avanzando en componentes importantes para la lógica operativa de la plataforma. Su trabajo permitió complementar la base backend con servicios directamente relacionados al monitoreo y seguimiento técnico del sistema.<br><br>
-
-<strong>Eduardo Velásquez:</strong><br>
-Contribuyó en el desarrollo de funcionalidades vinculadas a cronogramas de mantenimiento, solicitudes técnicas y asignación de roles, participando en módulos que ayudan a estructurar la operación funcional de la plataforma. Su aporte fortaleció la implementación de procesos internos relevantes para el flujo del sistema.<br><br>
-
-<strong>Santiago Enrique Vargas Alarcón:</strong><br>
-Desarrolló funcionalidades relacionadas con assets y configuración de activos, contribuyendo en módulos importantes para la administración de recursos dentro de la plataforma. Su participación aportó continuidad al trabajo técnico del equipo en servicios necesarios para la gestión operativa del sistema.
-</td>
-<td>
-<strong>----------AV2----------</strong><br>
-<strong>Leonardo Delgado:</strong><br>
-Su trabajo en incidentes, notificaciones y reportes fortaleció la capacidad del equipo para desarrollar soluciones orientadas al monitoreo y control de la plataforma, aportando valor funcional al backend y ampliando la cobertura técnica del proyecto.<br><br>
-
-<strong>Mauricio Pajés:</strong><br>
-Su rol fue clave para sostener el liderazgo técnico y organizativo del equipo durante el AV2, ya que no solo impulsó el avance de múltiples funcionalidades, sino que también estructuró el trabajo mediante la creación y planificación de los issues. Esto permitió que el equipo trabajara con una dirección común y una base técnica consistente.<br><br>
-
-<strong>Jean Pool Arias:</strong><br>
-Su trabajo en los servicios de dispositivos y lecturas aportó valor directo al desarrollo del núcleo funcional del sistema, alineándose con los objetivos del equipo y fortaleciendo la construcción colaborativa del backend.<br><br>
-
-<strong>Eduardo Velásquez:</strong><br>
-Su contribución en módulos operativos y de mantenimiento permitió que el equipo avanzara en funcionalidades necesarias para la gestión del sistema, manteniendo coherencia con la planificación general del sprint.<br><br>
-
-<strong>Santiago Enrique Vargas Alarcón:</strong><br>
-Su aporte en la gestión de assets y configuraciones técnicas fue importante para complementar el desarrollo backend del equipo, contribuyendo a una implementación más completa, articulada y funcional del sistema.
-</td>
-</tr>
-<tr>
-<td>
-Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.
-</td>
-<td>
-<strong>----------AV2----------</strong><br>
-<strong>Leonardo Delgado:</strong><br>
-Desarrolló tareas vinculadas a incidentes, notificaciones y reportes, cumpliendo con responsabilidades técnicas definidas para esta etapa del proyecto y contribuyendo al avance funcional del backend dentro del sprint.<br><br>
-
-<strong>Mauricio Pajés:</strong><br>
-Planificó el trabajo del AV2 a través de la creación y organización de los issues del sprint, estableciendo una ruta clara para el desarrollo del backend. Además, cumplió con varias responsabilidades de implementación dentro del periodo evaluado, avanzando tanto en tareas base como en funcionalidades específicas del sistema.<br><br>
-
-<strong>Jean Pool Arias:</strong><br>
-Organizó su trabajo en torno al desarrollo de los servicios de dispositivos IoT y lecturas de sensores, cumpliendo con tareas concretas del sprint y contribuyendo al avance funcional de la plataforma.<br><br>
-
-<strong>Eduardo Velásquez:</strong><br>
-Desarrolló tareas relacionadas con mantenimiento, solicitudes técnicas y roles, participando de forma ordenada en funcionalidades que responden a necesidades concretas del sistema y al cumplimiento de los objetivos del equipo.<br><br>
-
-<strong>Santiago Enrique Vargas Alarcón:</strong><br>
-Ejecutó tareas orientadas a la gestión de assets y su configuración, cumpliendo con responsabilidades técnicas específicas dentro del sprint y aportando al avance estructurado del backend.
-</td>
-<td>
-<strong>----------AV2----------</strong><br>
-<strong>Leonardo Delgado:</strong><br>
-Su trabajo en módulos de incidentes, notificaciones y reportes demuestra cumplimiento de tareas y aporte concreto al desarrollo coordinado del backend, contribuyendo al logro de las metas funcionales del sprint.<br><br>
-
-<strong>Mauricio Pajés:</strong><br>
-Demostró capacidad para establecer metas técnicas, organizar el trabajo del equipo y avanzar de forma consistente en múltiples funcionalidades, contribuyendo tanto desde la planificación como desde la ejecución. Su participación fue determinante para que el sprint mantuviera dirección y productividad.<br><br>
-
-<strong>Jean Pool Arias:</strong><br>
-Su participación en funcionalidades centrales del sistema refleja compromiso con los objetivos del equipo y capacidad para aportar en componentes relevantes del backend durante el AV2.<br><br>
-
-<strong>Eduardo Velásquez:</strong><br>
-Su trabajo metódico en distintas funcionalidades operativas permitió sostener el avance del sprint y aportar entregables alineados con la planificación técnica del equipo.<br><br>
-
-<strong>Santiago Enrique Vargas Alarcón:</strong><br>
-Su contribución técnica en módulos de assets y configuración refleja cumplimiento de tareas y aporte al trabajo colaborativo, fortaleciendo la implementación integral del sistema.
-</td>
-</tr>
+  <tr>
+    <th style="width:20%; text-align:center;">Criterio Específico</th>
+    <th style="width:40%; text-align:center;">Acciones realizadas</th>
+    <th style="width:40%; text-align:center;">Conclusiones</th>
+  </tr>
+  <tr>
+    <td rowspan="5" style="vertical-align:middle;">
+      <strong>Trabaja en equipo para proporcionar liderazgo en forma conjunta.</strong>
+    </td>
+    <td>
+      <strong>Delgado Arriola, Leonardo Sebastian</strong><br>
+      <strong><em>AV1</em></strong><br>
+      Lideró entrevistas del segundo segmento objetivo y sistematizó hallazgos para el needfinding.<br><br>
+      <strong><em>TB1</em></strong><br>
+      Lideró el bounded context de Reportes y Cumplimiento (EP006).<br><br>
+      <strong><em>AV2</em></strong><br>
+      Lideró Incidents &amp; Reports API en el backend oficial, cubriendo incidentes, notificaciones y reportes.
+    </td>
+    <td rowspan="5" style="vertical-align:middle;">
+      <strong><em>AV1</em></strong><br>
+      El equipo distribuyó el liderazgo por artefactos de investigación, diseño y modelado, construyendo una base documental coherente con decisiones compartidas entre entrevistas, UX, arquitectura y dominio.<br><br>
+      <strong><em>TB1</em></strong><br>
+      El liderazgo se trasladó a módulos funcionales de la frontend web application. Cada integrante asumió un bounded context o aspecto clave, permitiendo completar una aplicación navegable y desplegada con responsabilidades claras.<br><br>
+      <strong><em>AV2</em></strong><br>
+      El liderazgo conjunto se evidenció en la construcción del backend real y su despliegue. La distribución por APIs permitió que cada integrante condujera un área técnica específica y que el equipo avance hacia una solución integrada con persistencia, documentación Swagger y entorno cloud.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>Pajes Leon, Mauricio Luis</strong><br>
+      <strong><em>AV1</em></strong><br>
+      Lideró la landing page inicial y elaboró diagramas de clase y base de datos.<br><br>
+      <strong><em>TB1</em></strong><br>
+      Lideró Identity &amp; Access (EP002), Asset Management (EP003) y el despliegue inicial del frontend en Vercel con servidor JSON provisional en Render.<br><br>
+      <strong><em>AV2</em></strong><br>
+      Lideró API Foundation, Identity &amp; Access, Organizations, Users, Gateways y el despliegue en Google Cloud Run con Cloud SQL, Docker y variables de entorno.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>Arias Tasayco, Jean Pool Alexander</strong><br>
+      <strong><em>AV1</em></strong><br>
+      Participó en la landing page y elaboró diagramas de flujo del sistema.<br><br>
+      <strong><em>TB1</em></strong><br>
+      Lideró Configuración Operativa y Mantenimiento (EP007).<br><br>
+      <strong><em>AV2</em></strong><br>
+      Lideró IoT Devices &amp; Telemetry API, articulando dispositivos IoT, lecturas de sensores y monitoreo.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>Velasquez Laquihuanaco, Eduardo David</strong><br>
+      <strong><em>AV1</em></strong><br>
+      Elaboró wireframes, wireflows y diagramas de flujo de la aplicación web.<br><br>
+      <strong><em>TB1</em></strong><br>
+      Lideró Alertas e Incidencias (EP005).<br><br>
+      <strong><em>AV2</em></strong><br>
+      Lideró Maintenance &amp; Roles API, incluyendo mantenimiento preventivo, solicitudes técnicas y roles.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>Vargas Alarcon, Santiago Enrique</strong><br>
+      <strong><em>AV1</em></strong><br>
+      Desarrolló Event Storming y Bounded Context Canvas.<br><br>
+      <strong><em>TB1</em></strong><br>
+      Lideró el dashboard operacional (EP004, US039).<br><br>
+      <strong><em>AV2</em></strong><br>
+      Lideró Assets &amp; Configuration API, desarrollando servicios para activos refrigerados y parámetros operativos.
+    </td>
+  </tr>
 </table>
 
----
+## Criterio 5.c.2
+
+<table border="1" style="width:100%; border-collapse: collapse;">
+  <tr>
+    <th style="width:20%; text-align:center;">Criterio Específico</th>
+    <th style="width:40%; text-align:center;">Acciones realizadas</th>
+    <th style="width:40%; text-align:center;">Conclusiones</th>
+  </tr>
+  <tr>
+    <td rowspan="5" style="vertical-align:middle;">
+      <strong>Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.</strong>
+    </td>
+    <td>
+      <strong>Delgado Arriola, Leonardo Sebastian</strong><br>
+      <strong><em>AV1</em></strong><br>
+      Planificó entrevistas, preparó preguntas y revisó la consistencia del informe.<br><br>
+      <strong><em>TB1</em></strong><br>
+      Descompuso EP006 en tasks concretos y completó entregables de reportes y cumplimiento.<br><br>
+      <strong><em>AV2</em></strong><br>
+      Ejecutó issues de incidentes, notificaciones y reportes, coordinando su integración con el contrato REST del backend.
+    </td>
+    <td rowspan="5" style="vertical-align:middle;">
+      <strong><em>AV1</em></strong><br>
+      El equipo creó un entorno colaborativo inicial al dividir investigación, UX, modelado y landing page. La coordinación permitió cerrar los entregables base sin perder coherencia entre problema, solución y arquitectura.<br><br>
+      <strong><em>TB1</em></strong><br>
+      El equipo consolidó la planificación por bounded contexts y mantuvo colaboración mediante backlog, ramas y revisión de avances. La entrega evidenció metas claras y cumplimiento funcional del frontend desplegado.<br><br>
+      <strong><em>AV2</em></strong><br>
+      La colaboración se reflejó en la planificación por APIs, integración con Cloud Run/Cloud SQL, actualización del informe y validación de endpoints. Estas evidencias satisfacen la rúbrica ABET 5 porque muestran liderazgo compartido, comunicación operativa, metas técnicas claras, planificación de tareas y cumplimiento de objetivos del sprint.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>Pajes Leon, Mauricio Luis</strong><br>
+      <strong><em>AV1</em></strong><br>
+      Organizó su trabajo entre landing page y diagramas técnicos.<br><br>
+      <strong><em>TB1</em></strong><br>
+      Planificó el Sprint 2, distribuyó responsabilidades por bounded context y coordinó Pull Requests hacia develop.<br><br>
+      <strong><em>AV2</em></strong><br>
+      Organizó issues técnicos del Sprint 3, alineó ramas hacia develop/main y coordinó hotfixes de integración, CORS, base de datos y deployment.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>Arias Tasayco, Jean Pool Alexander</strong><br>
+      <strong><em>AV1</em></strong><br>
+      Coordinó aportes en landing page y diagramas de flujo.<br><br>
+      <strong><em>TB1</em></strong><br>
+      Organizó tareas de EP003 y EP007 dentro del velocity planificado.<br><br>
+      <strong><em>AV2</em></strong><br>
+      Ejecutó tareas de IoT devices y sensor readings, colaborando en la continuidad entre telemetría, monitoreo y evidencias del informe.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>Velasquez Laquihuanaco, Eduardo David</strong><br>
+      <strong><em>AV1</em></strong><br>
+      Desarrolló wireframes y wireflows de forma estructurada.<br><br>
+      <strong><em>TB1</em></strong><br>
+      Participó en alertas, incidencias y soporte de monitoreo.<br><br>
+      <strong><em>AV2</em></strong><br>
+      Ejecutó tareas de mantenimiento, servicio técnico y roles, además de apoyar la incorporación de evidencias de ejecución y documentación.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>Vargas Alarcon, Santiago Enrique</strong><br>
+      <strong><em>AV1</em></strong><br>
+      Aplicó Event Storming y Bounded Context Canvas para ordenar la comprensión del dominio.<br><br>
+      <strong><em>TB1</em></strong><br>
+      Completó tareas del dashboard operacional y contribuyó al Sprint Goal.<br><br>
+      <strong><em>AV2</em></strong><br>
+      Ejecutó tareas de assets y asset settings, aportando a la gestión de parámetros operativos y validación de flujos con la API.
+    </td>
+  </tr>
+</table>
+
 
 # Capítulo I: Introducción
 
@@ -338,8 +429,8 @@ Nuestra visión es convertirnos en la plataforma de referencia en moni
 
 ### 1.1.2 Perfiles de integrantes del equipo
 
-|                        Foto de perfil                        | Nombre Completo                      | Carrera                | Habilidades                                                                                                         |
-| :----------------------------------------------------------: | :----------------------------------- | :--------------------- | :------------------------------------------------------------------------------------------------------------------ |
+|                     Foto de perfil                      | Nombre Completo                      | Carrera                | Habilidades                                                                                                         |
+| :-----------------------------------------------------: | :----------------------------------- | :--------------------- | :------------------------------------------------------------------------------------------------------------------ |
 | ![LeonardoFoto](report/assets/chapter-01/team/Leonardo.png)  | Leonardo Sebastian Delgado Arriola   | Ingenieria de Software | C++, HTML, CSS, JS, Vue, MySQL, MongoDB, Git                                                                        |
 |     ![JeanFoto](report/assets/chapter-01/team/Jean.png)      | Jean Pool Alexander Arias Tasayco    | Ingenieria de Software | Java, Html, Css, JavaScript, Angular, Vue, Node.js, TypeScript, TailwindCss, Spring, C++, Python                    |
 | ![SantiagoFoto](report/assets/chapter-01/team/Santiago.jpeg) | Santiago Enrique Vargas Alarcon      | Ingenieria de Software | C++, HTML, CSS, MySQL, Python (basics), C# (basics)                                                                 |
@@ -440,7 +531,6 @@ En la industria alimentaria del Perú, empresas de todos los tamaños, s
 | Dueños o encargados de pequeño negocios con productos perecibles                                       | Edad: Adultos de 25 a más <br><br>Cargo: Dueños de carnicerías, pescaderías o verdulerias que posean un sistema de refrigeración. <br><br>Ubicación: Zonas urbanas con alta densidad comercial.   <br><br>Interés: Garantizar la inocuidad para evitar sanciones de DIGESA o MINSA                                                                                                                                                                                                                                                                                                                                                                                                              | De acuerdo con Agraria.pe (2019), se descarta gran cantidad de producto por control de calidad y estándares en el sector minorista.                                                                                                                                                                                                                                           |
 | Responsables de operaciones, calidad o logística en negocios con cadena de frío (Ingeniero industrial) | Edad: Adultos de 21 años a más. <br><br>Cargo: Jefes de operaciones, responsables de calidad, supervisores logísticos, encargados de almacén e ingenieros industriales que trabajan en empresas o negocios que manipulan productos refrigerados. <br><br>Ubicación: Centros de distribución, almacenes, supermercados, cámaras frigoríficas, operadores logísticos y empresas alimentarias ubicadas principalmente en zonas urbanas con flujo constante de productos perecibles. <br><br>Interés: Centralizar el monitoreo de la cadena de frío, responder con rapidez ante incidencias, mejorar trazabilidad, facilitar auditorías y tomar decisiones operativas con base en datos históricos. | Según la FAO (2021), en el Perú se desperdician más de 12 millones de toneladas de alimentos a lo largo de la cadena productiva. Esto refuerza la necesidad de que las áreas de operaciones, calidad y logística cuenten con herramientas de monitoreo continuo para prevenir pérdidas, documentar condiciones de almacenamiento y elevar el control sobre la cadena de frío. |
 
----
 
 # Capítulo II: Requirements Elicitation & Analysis
 
@@ -539,7 +629,7 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 
 ### 2.2.2 Registro de entrevistas
 
-**Segmento 1:
+**Segmento 1: 
 
 ### Entrevista N.° 1
 
@@ -556,7 +646,7 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 - **URL de grabación:** [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQC5SLu3pgY6S5eNUkOt9uyaAa8jPHO6DP0PwkxE8ClfFCU?e=NkAjlP](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQC5SLu3pgY6S5eNUkOt9uyaAa8jPHO6DP0PwkxE8ClfFCU?e=NkAjlP)
 
 > **Resumen de la entrevista**
->
+> 
 > Jean Pool administra un minimarket familiar que comercializa lácteos, embutidos, bebidas frías y productos congelados. El control de la temperatura en sus equipos se realiza de forma manual, revisando los indicadores de las refrigeradoras o inspeccionando visualmente el estado de los productos, sin contar con alertas automáticas ni historial digital de mediciones. Las fallas suelen originarse por cortes de luz, puertas mal cerradas o problemas técnicos en los equipos, y normalmente se detectan cuando la mercadería ya está en riesgo. El entrevistado señala que estas incidencias generan pérdidas económicas y desorden operativo, ya que debe mover productos entre equipos o recurrir a soporte técnico de forma reactiva. Valora especialmente la posibilidad de recibir alertas en tiempo real y consultar un historial simple desde el celular, aunque advierte que el costo y la facilidad de uso serán factores decisivos para adoptar una solución como ColdTrace en un negocio pequeño.
 
 ---
@@ -576,7 +666,7 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 - **URL de grabación:** [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323350_upc_edu_pe/IQCqkr-aHZRMQJ4asJYslxzNATYEJLIw5vyYjCGVZpJhyQE?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=E8Wvkf](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323350_upc_edu_pe/IQCqkr-aHZRMQJ4asJYslxzNATYEJLIw5vyYjCGVZpJhyQE?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=E8Wvkf)
 
 > **Resumen de la entrevista**
->
+> 
 > Durante la entrevista se presentó FrostGuard, una startup enfocada en ofrecer ColdTrace, una plataforma web de monitoreo inteligente de la cadena de frío para la industria alimentaria. El entrevistado, Matías Carrillo, de 19 años y residente de Bellavista, comentó que en su negocio maneja productos lácteos, carnes, embutidos, bebidas refrigeradas y productos congelados como pollo y mariscos. Actualmente controlan la temperatura de forma manual revisando termómetros varias veces al día, y las variaciones de temperatura suelen ocurrir algunas veces al mes por cortes de energía o fallas en los equipos. Estas fallas generan pérdidas de productos, gastos económicos y problemas con normas sanitarias. Cuando ocurre un problema, revisan el equipo, trasladan los productos a otra unidad y llaman a un técnico. También mencionó que una solución tecnológica sería útil para prevenir pérdidas y tener mayor control en tiempo real. Entre las funcionalidades más valiosas destacó el monitoreo en tiempo real, el historial de temperatura y los reportes de incidencias, esperando una plataforma fácil de usar, confiable y útil para auditorías y control.
 
 ---
@@ -593,22 +683,22 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 |**Residencia / ubicación:** Callao|**Software especializado utilizado:** Ninguno|
 
 - **Duración:** 3:51
-
+    
 - **URL de grabación:** [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323350_upc_edu_pe/IQCqkr-aHZRMQJ4asJYslxzNATYEJLIw5vyYjCGVZpJhyQE?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=TcHSJQ](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323350_upc_edu_pe/IQCwTuQrPyIgRq040cbclhPqAfX8tnqEC6IFJJJ84kIgL6U?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=TcHSJQ)
-
+    
 
 > **Resumen de la entrevista**
->
+> 
 > El entrevistado, Miguel Rodríguez, de 22 años y residente del Callao, explicó que trabaja con productos como lácteos, carnes, embutidos, bebidas refrigeradas y alimentos congelados como pollo y mariscos. Actualmente, el control de temperatura se realiza de forma manual mediante la revisión de termómetros varias veces al día. Indicó que los problemas de refrigeración suelen presentarse aproximadamente una vez al mes, principalmente por fallas eléctricas o daños en los equipos, lo que puede generar pérdidas de productos, costos adicionales y sanciones sanitarias.
->
+> 
 > Cuando ocurre una incidencia, el personal inspecciona el equipo, traslada los productos a otra unidad disponible y contacta a un técnico especializado. Generalmente, estos problemas se detectan durante revisiones rutinarias o cuando ya hay señales de deterioro en los productos.
->
+> 
 > El entrevistado señaló que sí han considerado implementar tecnología para mejorar el control y anticiparse a fallas. Sin embargo, mencionó como principales dificultades la inversión inicial, la capacitación del personal y la adaptación al sistema.
->
+> 
 > Finalmente, destacó que las funcionalidades más valiosas serían las alertas automáticas, el monitoreo constante, el registro de temperaturas y los reportes de incidencias. Espera una plataforma sencilla, confiable y útil para mejorar el control interno, cumplir auditorías y reducir pérdidas.
->
+> 
 
-### Segmento 2:
+### Segmento 2: 
 
 
 ![](report/assets/chapter-02/interviews/segmento21.png)
@@ -624,11 +714,11 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 - **URL de grabación:** [https://1drv.ms/v/c/470edfbbf4f38077/IQCRg4LcvetaRLbLebLPf0QWAR3HOtvvikDBCQaQ68PDMBs?e=tNMWES](https://1drv.ms/v/c/470edfbbf4f38077/IQCRg4LcvetaRLbLebLPf0QWAR3HOtvvikDBCQaQ68PDMBs?e=tNMWES)
 
 > **Resumen de la entrevista** El entrevistado, estudiante de Ingeniería Industrial de Lima, señala que el principal problema en la supervisión de la cadena de frío es la dependencia del factor humano, ya que el monitoreo se realiza de forma manual mediante hojas de registro en papel o Excel, sin ningún mecanismo de verificación en tiempo real. Esta situación se agrava durante los turnos nocturnos, fines de semana y en las rutas de transporte, donde la supervisión es prácticamente inexistente entre el punto de origen y el destino.
->
+> 
 > Respecto a la confiabilidad del proceso actual, el entrevistado la considera baja, dado que los datos registrados dependen del criterio y la disciplina de cada operario, sin posibilidad de auditar su exactitud. Las incidencias se gestionan de manera informal, principalmente a través de WhatsApp o llamadas directas, sin protocolos estandarizados, lo que genera respuestas inconsistentes según quién esté disponible en el momento.
->
+> 
 > En cuanto a soluciones tecnológicas, indica que nunca se han evaluado formalmente debido al costo inicial percibido y a la resistencia de la gerencia hacia herramientas desconocidas, sumado a una cultura organizacional de conformidad con los métodos tradicionales. Sin embargo, reconoce que sí existen pérdidas que no se contabilizan correctamente.
->
+> 
 > Finalmente, el entrevistado identifica como valor clave de una solución digital la generación automática de reportes con historial de temperaturas, fechas y acciones correctivas, que es exactamente lo que exigen las inspecciones de DIGESA y MINSA. Considera que una plataforma accesible mediante suscripción mensual, con interfaz simple y reportes pre-formateados, tendría alta viabilidad de adopción en su organización.
 
 ### Entrevista N.° 2
@@ -646,11 +736,11 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 - **URL de grabación:** [https://1drv.ms/v/c/470edfbbf4f38077/IQCRg4LcvetaRLbLebLPf0QWAR3HOtvvikDBCQaQ68PDMBs?e=tNMWES](https://1drv.ms/v/c/470edfbbf4f38077/IQCRg4LcvetaRLbLebLPf0QWAR3HOtvvikDBCQaQ68PDMBs?e=tNMWES)
 
 > **Resumen de la entrevista**
->
+> 
 > El entrevistado, estudiante de Ingeniería Industrial de Lima, destaca que la falta de visibilidad en tiempo real es el problema central de la cadena de frío, agravado por registros manuales poco confiables donde los operarios suelen completar datos estimados al final del turno. Identifica el transporte, los cambios de turno y las épocas de alta demanda como los puntos de mayor riesgo operativo.
->
+> 
 > Respecto a la gestión de incidencias, señala que no existe un protocolo formal establecido, resolviéndose cada situación según el criterio de quien esté disponible y sin documentación adecuada. En cuanto a soluciones tecnológicas, menciona que el alto costo percibido y la falta de tiempo para investigar alternativas accesibles son las principales razones por las que las empresas descartan la adopción.
->
+> 
 > Finalmente, el entrevistado considera que una solución viable debe ser económica, intuitiva y capaz de generar reportes listos para inspecciones de DIGESA sin procesamiento adicional, esperando como beneficios concretos la reducción de pérdidas no contabilizadas y la disponibilidad inmediata de evidencia ante auditorías sanitarias.
 
 ### Entrevista N.° 3
@@ -668,13 +758,13 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 - **URL de grabación:** [https://1drv.ms/v/c/470edfbbf4f38077/IQCRg4LcvetaRLbLebLPf0QWAR3HOtvvikDBCQaQ68PDMBs?e=tNMWES](https://1drv.ms/v/c/470edfbbf4f38077/IQCRg4LcvetaRLbLebLPf0QWAR3HOtvvikDBCQaQ68PDMBs?e=tNMWES)
 
 > **Resumen de la entrevista**
->
+> 
 > El entrevistado, estudiante de Ingeniería Industrial de Lima, señala que la ausencia de automatización es el problema central, ya que el monitoreo queda supeditado a la carga de trabajo del operario, generando datos imprecisos sin ningún mecanismo de verificación. Identifica el transporte nocturno y los periodos sin personal como los momentos de mayor riesgo, donde una falla puede pasar desapercibida durante horas.
->
+> 
 > Respecto a la gestión de incidencias, confirma la ausencia de protocolos formales, resolviéndose cada situación por WhatsApp según el criterio del jefe disponible. La adopción tecnológica no se ha explorado formalmente debido a la percepción generalizada de alto costo y complejidad de implementación.
->
+> 
 > Finalmente, el entrevistado es claro en que una solución viable debe ser económica, operable sin capacitación extensa y capaz de generar automáticamente el historial de temperaturas requerido por DIGESA, esperando como resultado concreto pasar de una gestión reactiva a una preventiva.
->
+> 
 ### 2.2.3 Análisis de entrevistas
 
 El análisis de entrevistas nos permite profundizar en la comprensión de las necesidades, deseos y comportamientos de nuestros usuarios, lo que a su vez informa la toma de decisiones en el diseño y desarrollo de productos o servicios orientados al usuario.
@@ -752,11 +842,11 @@ Se ha elaborado el Empathy Mapping utilizando los datos obtenidos de las etap
 
 User Task Matrix: Primer Segmento Objetivo (Dueños de carnicerías, pescaderías o verdulerías que posean un sistema de refrigeración)
 
-**Empathy Map:
+**Empathy Map: 
 
 ![](report/assets/chapter-02/empathy-maps/Empathy1.png)
 
-**Empathy Map:
+**Empathy Map: 
 
 ![](report/assets/chapter-02/empathy-maps/Empathy2.png)
 
@@ -876,7 +966,6 @@ Cumplimiento con auditoria:
 | Dashboard                   | Panel centralizado que muestra en tiempo real el estado de todos los activos monitoreados, alertas activas e indicadores clave.          |
 | Traceability (Trazabilidad) | Capacidad de reconstruir y documentar las condiciones de temperatura y humedad a lo largo del tiempo para un activo o lote de productos. |
 
----
 
 # Capitulo III: Requirements Specification
 
@@ -964,63 +1053,386 @@ Las épicas del producto organizan el alcance funcional de ColdTrace en capacida
 
 Luego de definir las epicas principales del sistema, se desarrollan las historias de usuario correspondientes. Las historias `US` representan necesidades funcionales del producto, mientras que las historias `TS` representan capacidades tecnicas de la API requeridas por la Web Application.
 
-
-
-| Epic / Story ID | Titulo                                                         | Descripcion                                                                                                                                                                                                                                                        | Criterios de Aceptacion                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Relacionado con |
-| --------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
-| EP01/US01       | Ver propuesta de valor en la landing page                      | Como visitante, quiero ver en la pagina principal que problema resuelve ColdTrace y como lo soluciona, para evaluar si es relevante para mi negocio antes de registrarme.                                                                                          | Escenario 1: Given el visitante accede a la landing page de ColdTrace. When la pagina carga correctamente. Then el sistema muestra el problema, la solucion y los beneficios clave del producto en la seccion principal. Escenario2: Given la página tiene un error de carga. When el visitante intenta acceder. Then el sistema muestra un mensaje de error amigable y un enlace de reintento.<br>Escenario 3: Given el visitante accede desde un navegador desactualizado. When la página carga. Then el contenido principal sigue siendo legible sin pérdida de información clave.                                                                                                                                                                                                                      | EP01            |
-| EP01/US02       | Ver seccion de funcionalidades                                 | Como visitante, quiero ver una seccion con las funcionalidades del producto, para entender que incluye ColdTrace antes de tomar una decision de contratacion.                                                                                                      | Escenario 1: Given el visitante esta en la landing page. When hace scroll hacia la seccion de funcionalidades. Then el sistema muestra tarjetas o bloques con cada funcionalidad principal y su descripcion breve. Escenario 2: Given la sección de funcionalidades no carga por error de servicio. When el visitante llega a esa sección. Then el sistema muestra un aviso de contenido no disponible en lugar de una sección vacía.<br>Escenario3: Given el visitante hace clic en una tarjeta de funcionalidad. When la tarjeta es seleccionable. Then el sistema muestra un detalle ampliado o redirige a más información.                                                                                                                                                                             | EP01            |
-| EP01/US03       | Ver planes y precios                                           | Como visitante, quiero ver los planes disponibles y sus precios, para evaluar si ColdTrace se ajusta al presupuesto de mi organizacion.                                                                                                                            | Escenario 1: Given el visitante navega a la seccion de precios. When la seccion carga correctamente. Then el sistema muestra al menos dos planes con su lista de caracteristicas y precio mensual. Escenario 2: Given los precios no se pueden cargar por error del servidor. When el visitante accede a la sección. Then el sistema muestra un aviso de no disponibilidad temporal.<br>Escenario 3: Given un visitante del segmento logístico accede a la sección de precios. When la sección carga. Then el sistema destaca visualmente el plan recomendado para empresas con cadena de frío.                                                                                                                                                                                                            | EP01<br>        |
-| EP01/US04       | Solicitar demo                                                 | Como visitante empresarial, quiero completar un formulario para solicitar una demo.                                                                                                                                                                                | Escenario 1: Given el visitante completa nombre y correo validos. When envia la solicitud de demo. Then el sistema registra la solicitud y muestra confirmacion. Escenario 2: Given deja campos obligatorios vacios. When intenta enviar el formulario. Then el sistema muestra validaciones. Escenario 3: Given ingresa un correo con formato invalido. When envia el formulario. Then el sistema informa que el correo no tiene formato valido.                                                                                                                                                                                                                                                                                                                                                          | EP01            |
-| EP01/US05       | Navegar con menu fijo                                          | Como visitante, quiero que el menu de navegacion permanezca visible al hacer scroll, para poder acceder a cualquier seccion de la landing en cualquier momento.                                                                                                    | Escenario 1: Given el visitante hace scroll hacia abajo en la landing page. When el menu llega al borde superior de la pantalla. Then el sistema mantiene el menu fijo y visible durante el desplazamiento. Escenario 2: Given el visitante accede desde un dispositivo móvil. When hace scroll. Then el menú fijo sigue visible y no cubre el contenido principal.<br>Escenario 3: Given el visitante hace clic en un ítem del menú fijo. When está en cualquier sección de la página. Then el sistema desplaza suavemente hasta la sección correspondiente.                                                                                                                                                                                                                                              | EP01            |
-| EP01/US06       | Ver landing page en dispositivo movil                          | Como visitante que accede desde un celular, quiero que la landing page se adapte correctamente a mi pantalla, para navegar y leer el contenido sin problemas.                                                                                                      | Escenario 1: Given el visitante accede desde un dispositivo movil. When la pagina carga. Then el sistema muestra el contenido adaptado a la resolucion del dispositivo sin elementos cortados ni superpuestos. Escenario 2: Given el dispositivo está en orientación horizontal. When la página carga. Then el contenido se reajusta sin desbordamiento lateral ni elementos ocultos.<br>Escenario 3: Given el visitante accede desde una tablet. When la página carga. Then el sistema aplica un layout intermedio (breakpoint tablet) sin usar el diseño de escritorio completo ni el de móvil.                                                                                                                                                                                                          | EP01            |
-| EP02/US07       | Registrar una cuenta nueva                                     | Como usuario nuevo, quiero crear una cuenta en la plataforma, para acceder a las funcionalidades de monitoreo.                                                                                                                                                     | Escenario 1: Given el usuario completa el formulario con datos validos. When presiona registrarse. Then se crea su cuenta y accede al flujo de la plataforma. Escenario 2: Given ingresa un correo ya registrado. When envia el formulario. Then el sistema informa que el correo ya esta en uso. Escenario 3: Given deja campos obligatorios vacios. When intenta registrarse. Then el sistema solicita completar la informacion requerida.                                                                                                                                                                                                                                                                                                                                                               | EP02            |
-| EP02/US08       | Iniciar sesion con correo y contrasena                         | Como usuario registrado, quiero iniciar sesion con mi correo y contrasena, para acceder a mi cuenta y mis datos.                                                                                                                                                   | Escenario 1: Given el usuario ingresa credenciales validas. When presiona iniciar sesion. Then el sistema autentica al usuario y lo redirige al dashboard. Escenario 2: Given ingresa credenciales incorrectas. When intenta iniciar sesion. Then el sistema muestra un mensaje de error. Escenario 3: Given deja campos vacios. When envia el formulario. Then el sistema indica los campos requeridos.                                                                                                                                                                                                                                                                                                                                                                                                   | EP02            |
-| EP02/US09       | Cerrar sesion                                                  | Como usuario autenticado, quiero cerrar sesion, para proteger mi cuenta cuando dejo de usar la plataforma.                                                                                                                                                         | Escenario 1: Given el usuario ingresa credenciales válidas. When presiona iniciar sesión. Then el sistema autentica al usuario y lo redirige al dashboard.<br>Escenario 2: Given ingresa credenciales incorrectas. When intenta iniciar sesión. Then el sistema muestra un mensaje de error.<br>Escenario 3: Given deja campos vacíos. When envía el formulario. Then el sistema indica los campos requeridos.                                                                                                                                                                                                                                                                                                                                                                                             | EP02            |
-| EP02/US10       | Recuperar contraseña olvidada                                  | Como usuario, quiero recuperar mi contraseña si la olvidé, para volver a acceder a mi cuenta sin perder mis datos.                                                                                                                                                 | Escenario 1: Given el usuario solicita recuperación con un correo registrado. When el sistema procesa la solicitud. Then envía instrucciones para restablecer la contraseña.<br>Escenario 2: Given el correo no existe. When solicita recuperación. Then el sistema informa que no puede procesar la solicitud.<br>Escenario 3: Given el enlace expiró. When intenta usarlo. Then el sistema solicita generar una nueva recuperación.                                                                                                                                                                                                                                                                                                                                                                      | EP02            |
-| EP02/US11       | Editar datos del perfil personal                               | Como usuario registrado, quiero editar mi información de perfil, para mantener mis datos actualizados.                                                                                                                                                             | Escenario 1: Given el usuario modifica datos válidos. When guarda los cambios. Then el sistema actualiza el perfil y muestra confirmación.<br>Escenario 2: Given ingresa datos inválidos. When guarda. Then el sistema muestra validaciones.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | EP02            |
-| EP03/US12       | Registrar cámara frigorífica                                   | Como responsable de la operación, quiero registrar una cámara frigorífica con sus datos principales, para monitorear su funcionamiento.                                                                                                                            | Escenario 1: Given registra nombre, ubicación y capacidad válidos. When confirma el registro. Then el sistema crea la cámara y la muestra en el inventario.<br>Escenario 2: Given faltan datos obligatorios. When intenta guardar. Then el sistema solicita completar la información.<br>Escenario 3: Given existe una cámara con el mismo código interno. When registra. Then el sistema evita la duplicidad.                                                                                                                                                                                                                                                                                                                                                                                             | EP03            |
-| EP03/US13       | Registrar unidad de transporte                                 | Como responsable logístico, quiero registrar una unidad de transporte refrigerado, para monitorear sus condiciones térmicas en ruta.                                                                                                                               | Escenario 1: Given ingresa placa, identificador y datos de capacidad válidos. When guarda la unidad. Then el sistema registra la unidad de transporte.<br>Escenario 2: Given la placa ya existe. When intenta registrar. Then el sistema muestra error de duplicidad.<br>Escenario 3: Given faltan campos requeridos. When guarda. Then el sistema solicita completar los datos.                                                                                                                                                                                                                                                                                                                                                                                                                           | EP03            |
-| EP03/US14       | Vincular sensor IoT a un activo                                | Como responsable de configuración, quiero vincular un sensor IoT a un activo, para capturar datos de temperatura y humedad del activo correcto.                                                                                                                    | Escenario 1: Given selecciona un activo y un sensor disponible. When confirma la vinculación. Then el sistema asocia el sensor al activo.<br>Escenario 2: Given el sensor ya está vinculado. When intenta asociarlo. Then el sistema impide la vinculación duplicada.<br>Escenario 3: Given el activo está inactivo. When intenta vincular. Then el sistema bloquea la operación.                                                                                                                                                                                                                                                                                                                                                                                                                          | EP03            |
-| EP03/US15       | Emparejar gateway de red                                       | Como responsable técnico, deseo emparejar el gateway para asegurar la transmisión de datos de sensores hacia la nube.                                                                                                                                              | Escenario 1: Given el gateway está disponible y las credenciales son válidas. When se realiza el emparejamiento. Then el sistema registra el gateway como activo.<br>Escenario 2: Given la clave de emparejamiento es incorrecta. When se intenta conectar. Then el sistema rechaza la vinculación.<br>Escenario 3: Given el gateway no responde. When se intenta emparejar. Then el sistema informa la falla de conexión.                                                                                                                                                                                                                                                                                                                                                                                 | EP03            |
-| EP03/US16       | Verificar calibración del sensor                               | Como responsable de calidad, quiero verificar el estado de calibración de los sensores, para asegurar que las lecturas sean confiables.                                                                                                                            | Escenario 1: Given el usuario consulta un sensor registrado. When abre su detalle. Then el sistema muestra fecha de última calibración, fecha de próxima revisión y estado (vigente / por vencer / vencida). Se considera vencida si han pasado más de 90 días sin revisión.<br>Escenario 2: Given la calibración está vencida (más de 90 días). When se consulta el sensor. Then el sistema marca el sensor como "pendiente de revisión" y lo resalta visualmente en el inventario.<br>Escenario 3: Given el responsable de calidad registra una nueva calibración con fecha válida. When guarda. Then el sistema actualiza el estado del sensor a "vigente" y registra quién realizó la actualización.                                                                                                   | EP03            |
-| EP03/US17       | Actualizar ubicación y estado del activo                       | Como responsable de la operación, quiero actualizar la ubicación física y el estado de un activo, para mantener el inventario preciso.                                                                                                                             | Escenario 1: Given el activo existe. When el usuario actualiza la ubicación (texto libre, max 100 caracteres) o el estado (activo / inactivo / en mantenimiento). Then el sistema guarda los cambios y registra fecha y usuario de la modificación.<br>Escenario 2: Given el nuevo estado no es permitido. When intenta guardar. Then el sistema rechaza el cambio e indica los valores permitidos.<br>Escenario 3: Given el usuario actualiza solo la ubicación sin modificar el estado. When guarda. Then el sistema guarda únicamente el campo modificado sin alterar el estado actual del activo.                                                                                                                                                                                                      | EP03            |
-| EP04/US18       | Visualizar temperatura en tiempo real                          | Como usuario, quiero visualizar en tiempo real la temperatura de mis equipos, para detectar variaciones críticas.                                                                                                                                                  | Escenario 1: Given el activo tiene lecturas recientes. When el usuario abre el dashboard. Then el sistema muestra temperatura actual, unidad y momento de captura.<br>Escenario 2: Given no hay lecturas recientes. When se abre el dashboard. Then el sistema muestra estado sin datos recientes.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | EP04            |
-| EP04/US19       | Visualizar humedad en tiempo real                              | Como usuario, quiero visualizar en tiempo real los valores de humedad, para complementar el control de conservación.                                                                                                                                               | Escenario 1: Given el activo tiene lecturas de humedad. When el usuario abre la vista de monitoreo. Then el sistema muestra humedad actual y tendencia.<br>Escenario 2: Given el sensor no mide humedad. When se consulta el activo. Then el sistema indica que el dato no está disponible.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | EP04            |
-| EP04/US20       | Consultar historial de lecturas                                | Como encargado de negocio, quiero consultar el historial de lecturas de un activo, para revisar su comportamiento en el tiempo.                                                                                                                                    | Escenario1: Given selecciona activo y periodo válidos. When consulta el historial. Then el sistema muestra lecturas ordenadas y gráficos.<br>Escenario 2: Given no existen lecturas en el periodo. When consulta. Then el sistema muestra un resultado vacío sin error.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | EP04            |
-| EP04/US21       | Detectar temperatura fuera de rango                            | Como usuario, quiero que el sistema identifique automáticamente cuando la temperatura salga del rango seguro, para reconocer riesgos.                                                                                                                              | Escenario 1: Given llega una lectura fuera del rango configurado. When el sistema la evalúa. Then marca la condición como fuera de rango.<br>Escenario 2: Given la lectura está dentro del rango. When se evalúa. Then no se genera condición crítica.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | EP04            |
-| EP04/US22       | Visualizar estado de conectividad                              | Como responsable de monitoreo, quiero visualizar el estado de conexión de sensores y gateways, para identificar problemas de transmisión.                                                                                                                          | Escenario 1: Given el sensor reporta actividad reciente. When el usuario consulta el activo. Then el sistema muestra estado online.<br>Escenario 2: Given no hay comunicación reciente. When se consulta el activo. Then el sistema muestra estado offline o inestable.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | EP04            |
-| EP04/US23       | Sincronizar datos almacenados offline                          | Como responsable técnico de una unidad de transporte que opera en zonas con cobertura intermitente, deseo que los datos capturados sin conexión se sincronicen automáticamente al recuperar acceso a la red, para no perder lecturas críticas durante el trayecto. | Escenario 1: Given el gateway recupera conectividad. When existen lecturas pendientes. Then el sistema sincroniza los datos y conserva el historial con la marca de tiempo original de captura.<br>Escenario 2: Given hay datos duplicados. When se sincronizan. Then el sistema evita registros repetidos basándose en el identificador único de lectura.<br>Escenario 3: Given el proceso de sincronización está en curso. When el usuario consulta el activo. Then el sistema indica visualmente que hay una sincronización en progreso y muestra los datos ya disponibles.                                                                                                                                                                                                                             | EP04            |
-| EP05/US24       | Crear incidencia térmica                                       | Como usuario, quiero que el sistema cree una incidencia térmica automática al detectar una condición crítica, para iniciar seguimiento formal.                                                                                                                     | Escenario 1: Given se detecta una condición crítica. When no existe incidencia abierta para el activo. Then el sistema crea una incidencia.<br>Escenario 2: Given ya existe una incidencia abierta. When ocurre otra lectura crítica. Then el sistema actualiza el seguimiento sin duplicar la incidencia.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | EP05            |
-| EP05/US25       | Disparar notificaciones de alerta                              | Como responsable de operaciones, quiero recibir notificaciones automáticas ante incidencias críticas, para reaccionar oportunamente.                                                                                                                               | Escenario 1: Given se crea una incidencia crítica. When existen canales configurados. Then el sistema envía notificaciones por los medios disponibles.<br>Escenario 2: Given no hay canal configurado. When se genera la alerta. Then el sistema registra el evento y muestra advertencia de configuración.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | EP05            |
-| EP05/US26       | Escalar alerta no atendida                                     | Como responsable de la operación, quiero que el sistema escale una alerta no atendida a un nivel superior, para asegurar su resolución.                                                                                                                            | Escenario 1: Given una alerta supera el tiempo de atención configurado. When no ha sido reconocida. Then el sistema la escala al siguiente responsable.<br>Escenario 2: Given la alerta ya fue atendida. When vence el tiempo de escalamiento. Then el sistema no realiza escalamiento.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | EP05            |
-| EP05/US27       | Reconocer alerta crítica                                       | Como usuario responsable, quiero marcar una alerta como reconocida, para dejar constancia de que el incidente está siendo atendido.                                                                                                                                | Escenario 1: Given existe una alerta activa. When el usuario selecciona reconocer. Then el sistema registra usuario, fecha y nuevo estado.<br>Escenario 2: Given la alerta ya fue cerrada. When intenta reconocerla. Then el sistema impide el cambio.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | EP05            |
-| EP05/US28       | Registrar acción correctiva y cerrar incidencia                | Como usuario responsable, quiero registrar la medida aplicada y cerrar la incidencia cuando la condición se estabilice, para conservar el historial.                                                                                                               | Escenario 1: Given la condición se estabilizó y se registra acción correctiva. When el usuario cierra la incidencia. Then el sistema guarda la evidencia y marca el caso como cerrado.<br>Escenario 2: Given falta la acción correctiva. When intenta cerrar. Then el sistema exige completar la evidencia.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | EP05            |
-| EP06/US29       | Generar bitácora diaria                                        | Como responsable de calidad, quiero generar y descargar una bitácora diaria de lecturas en formato PDF o CSV, para contar con evidencia ordenada del control térmico.                                                                                              | Escenario 1: Given existe información del día seleccionado. When genera la bitácora. Then el sistema consolida lecturas, alertas e incidencias y genera un archivo descargable en formato PDF o CSV.<br>Escenario 2: Given no hay información. When genera la bitácora. Then el sistema muestra una bitácora sin registros con mensaje informativo.<br>Escenario 3: Given el sistema está configurado para generación automática. When finaliza el día. Then el sistema genera y almacena la bitácora sin intervención del usuario y la deja disponible para descarga.                                                                                                                                                                                                                                     | EP06            |
-| EP06/US30       | Consultar historial de lecturas, alertas e incidencias         | Como responsable de operaciones, quiero consultar el historial completo de un activo, para reconstruir eventos pasados.                                                                                                                                            | Escenario 1: Given selecciona activo y rango válidos. When consulta historial. Then el sistema muestra lecturas, alertas e incidencias relacionadas.<br>Escenario 2: Given el rango no contiene datos. When consulta. Then el sistema muestra resultado vacío.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | EP06            |
-| EP06/US31       | Exportar reporte de cumplimiento sanitario                     | Como responsable de calidad, quiero exportar un reporte en el formato exigido por DIGESA/MINSA (PDF con temperatura mínima/máxima, responsable, fecha y número de registro), para sustentar auditorías sanitarias.                                                 | Escenario 1: Given selecciona periodo y activos válidos. When exporta el reporte. Then el sistema genera un archivo PDF con los campos requeridos por DIGESA: temperatura mínima y máxima del periodo, nombre del responsable, fecha de generación y número de registro del establecimiento.<br>Escenario 2: Given faltan parámetros de periodo o activo. When intenta exportar. Then el sistema solicita completar los criterios antes de continuar.<br>Escenario 3: Given faltan el nombre del responsable o el número de registro del establecimiento. When intenta exportar. Then el sistema impide la exportación e indica los campos faltantes obligatorios para cumplimiento normativo.                                                                                                             | EP06            |
-| EP06/US32       | Descargar reporte mensual                                      | Como usuario administrativo, quiero descargar reportes mensuales consolidados en formato Excel (.xlsx) o PDF, para evaluar el desempeño operativo.                                                                                                                 | Escenario1: Given selecciona un mes con datos. When descarga el reporte. Then el sistema genera el archivo mensual en formato Excel (.xlsx) o PDF según la selección del usuario, con datos consolidados de lecturas, alertas e incidencias.<br>Escenario 2: Given el mes no tiene datos. When solicita descarga. Then el sistema informa ausencia de información y no genera archivo vacío.                                                                                                                                                                                                                                                                                                                                                                                                               | EP06            |
-| EP06/US33       | Detectar faltantes o incumplimientos                           | Como responsable de cumplimiento, quiero identificar vacíos en los registros (activos sin lectura por más de 4 horas continuas o incidencias sin cierre tras 48 horas), para corregirlos antes de una inspección formal.                                           | Escenario 1: Given existen activos sin lectura por más de 4 horas continuas o incidencias abiertas por más de 48 horas. When se ejecuta la revisión. Then el sistema lista los faltantes agrupados por tipo (lecturas ausentes / incidencias sin cierre).<br>Escenario 2: Given no hay incumplimientos. When revisa. Then el sistema muestra estado conforme.<br>Escenario 3: Given el responsable selecciona un faltante de la lista. When hace clic. Then el sistema lo redirige directamente al activo o incidencia correspondiente para que pueda corregirlo.                                                                                                                                                                                                                                          | EP06            |
-| EP06/US34       | Preparar evidencia para auditoría                              | Como responsable de auditoría interna, quiero reunir la documentación de control en un archivo ZIP descargable, para sustentar el cumplimiento ante inspecciones de DIGESA/MINSA.                                                                                  | Escenario 1: Given selecciona periodo y todas las evidencias mínimas están disponibles (reporte de lecturas, incidencias cerradas con acción correctiva, bitácoras del periodo). When prepara el paquete. Then el sistema genera un archivo ZIP con los documentos consolidados.<br>Escenario2: Given faltan evidencias mínimas (ausencia de bitácora del periodo, incidencias sin cerrar o sin acción correctiva). When genera el paquete. Then el sistema lista específicamente los documentos faltantes e impide la descarga hasta completarlos.<br>Escenario 3: Given el paquete de auditoría fue generado previamente. When el responsable vuelve a solicitarlo para el mismo periodo. Then el sistema le ofrece el archivo ya generado sin reconstruirlo, con la fecha de última generación visible. | EP06            |
-| EP07/US35       | Configurar rango de seguridad                                  | Como administrador, quiero definir límites de temperatura y humedad por tipo de producto, para adaptar el monitoreo.                                                                                                                                               | Escenario1: Given ingresa límites válidos. When guarda la configuración. Then el sistema aplica el rango al activo o producto.<br>Escenario 2: Given el mínimo es mayor al máximo. When guarda. Then el sistema rechaza la configuración.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | EP07            |
-| EP07/US36       | Actualizar parámetros operativos                               | Como responsable de la operación, quiero ajustar intervalos de lectura y criterios de evaluación, para adaptar el sistema según criticidad.                                                                                                                        | Escenario 1: Given los parámetros son válidos. When guarda cambios. Then el sistema actualiza la configuración.<br>Escenario 2: Given los valores están fuera de rango permitido. When guarda. Then el sistema muestra validaciones.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | EP07            |
-| EP07/US37       | Programar mantenimiento preventivo                             | Como responsable de calidad de un negocio con activos refrigerados de alto valor, quiero agendar mantenimiento de sensores y equipos de frío, para reducir riesgos de falla y asegurar continuidad operativa.                                                      | Escenario1: Given selecciona activo, fecha y responsable. When agenda mantenimiento. Then el sistema crea la programación y la muestra en el calendario del responsable asignado.<br>Escenario 2: Given ya existe mantenimiento en la misma fecha para el mismo activo. When agenda. Then el sistema advierte la duplicidad y solicita confirmación o cambio de fecha.<br>Escenario 3: Given la fecha de mantenimiento programado se aproxima (48 horas antes). When el sistema evalúa los próximos eventos. Then envía una notificación al responsable                                                                                                                                                                                                                                                    | EP07            |
-| EP07/US38       | Solicitar y cerrar servicio técnico                            | Como usuario responsable de activos con fallas de refrigeración, quiero solicitar asistencia técnica y documentar la reparación realizada, para devolver el equipo a operación con evidencia del servicio.                                                         | Escenario 1: Given el activo requiere atención. When el usuario registra solicitud y luego documenta la reparación. Then el sistema permite cerrar el caso.<br>Escenario 2: Given falta evidencia técnica. When intenta cerrar. Then el sistema exige evidencia mínima (descripción de la falla y acción correctiva aplicada).<br>Escenario 3: Given la prueba de funcionamiento falla. When intenta cerrar. Then el sistema mantiene el servicio abierto e indica que el equipo no ha sido validado.                                                                                                                                                                                                                                                                                                      | EP07            |
-| EP08/TS01       | Endpoint de registro de usuario                                | Como developer, quiero un endpoint POST para registrar usuarios, para que el frontend pueda crear nuevas cuentas desde el formulario de registro.                                                                                                                  | Escenario 1: Given se envia una solicitud valida. When el servidor procesa el registro. Then responde 201 con el usuario creado sin contrasena. Escenario 2: Given el correo ya existe. Then responde 400. Escenario 3: Given faltan campos requeridos. Then responde 400 con los campos faltantes.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | EP08            |
-| EP08/TS02       | Endpoint de inicio de sesion                                   | Como developer, quiero un endpoint POST para autenticar usuarios, para que el frontend pueda iniciar sesion y recibir un token de acceso.                                                                                                                          | Escenario 1: Given credenciales validas. When el servidor valida. Then responde 200 con token JWT y datos basicos. Escenario 2: Given credenciales invalidas. Then responde 401. Escenario 3: Given faltan correo o contrasena. Then responde 400.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | EP09            |
-| EP09/TS03       | Endpoint para registrar un sensor                              | Como developer, quiero un endpoint POST para registrar sensores IoT, para que el frontend pueda agregar dispositivos de monitoreo vinculados a una organizacion.                                                                                                   | Escenario 1: Given datos validos. When el servidor procesa la solicitud. Then responde 201 con el sensor creado. Escenario 2: Given faltan datos obligatorios. Then responde 400. Escenario 3: Given el sensor ya existe. Then responde 400.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | EP09            |
-| EP09/TS04       | Endpoint para obtener sensores de una organizacion             | Como developer, quiero un endpoint GET para obtener los sensores registrados de una organizacion, para mostrar el inventario de dispositivos.                                                                                                                      | Escenario 1: Given organizationId valido. Then responde 200 con sensores. Escenario 2: Given no hay sensores. Then responde 200 con array vacio. Escenario 3: Given organizationId inexistente. Then responde 404.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | EP09            |
-| EP09/TS05       | Endpoint para actualizar un sensor                             | Como developer, quiero un endpoint PUT para actualizar datos de un sensor, para que el frontend guarde cambios del administrador.                                                                                                                                  | Escenario 1: Given ID y datos validos. Then responde 200 con el sensor actualizado. Escenario 2: Given sensor inexistente. Then responde 404. Escenario 3: Given datos invalidos. Then responde 400.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | EP09            |
-| EP09/TS06       | Endpoint para eliminar un sensor                               | Como developer, quiero un endpoint DELETE para eliminar un sensor, para que el frontend pueda removerlo cuando el administrador lo solicite.                                                                                                                       | Escenario 1: Given ID valido. Then responde 200 confirmando eliminacion. Escenario 2: Given sensor inexistente. Then responde 404.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | EP09            |
-| EP10/TS07       | Endpoint para registrar lectura de sensor                      | Como developer, quiero un endpoint POST para registrar lecturas de temperatura y humedad enviadas por sensores IoT, para almacenarlas y procesarlas.                                                                                                               | Escenario 1: Given sensor_id, temperature y humidity validos. Then responde 201 con la lectura creada. Escenario 2: Given sensor_id no existe. Then responde 404. Escenario 3: Given valores no numericos o fuera de rango. Then responde 400. Escenario 4: Given token ausente o invalido. Then responde 401.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | EP10            |
-| EP10/TS08       | Endpoint para obtener historial de lecturas por sensor y fecha | Como developer, quiero un endpoint GET para obtener el historial de lecturas de un sensor en un rango de fechas, para mostrar graficas y datos historicos.                                                                                                         | Escenario 1: Given sensor_id y fechas validas. Then responde 200 con lecturas ordenadas. Escenario 2: Given no hay lecturas. Then responde 200 con array vacio. Escenario 3: Given rango invalido. Then responde 400. Escenario 4: Given sensor_id no existe. Then responde 404.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | EP10            |
-| EP11/TS09       | Endpoint para obtener alertas activas                          | Como developer, quiero un endpoint GET para obtener las alertas activas de una organizacion, para mostrarlas en el panel de monitoreo.                                                                                                                             | Escenario 1: Given organizationId valido. Then responde 200 con alertas activas. Escenario 2: Given no hay alertas activas. Then responde 200 con array vacio. Escenario 3: Given organizationId inexistente. Then responde 404.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | EP11            |
-| EP11/TS10       | Endpoint para crear una alerta                                 | Como developer, quiero un endpoint POST para registrar una alerta cuando el sistema detecte una desviacion termica, para almacenarla y notificar al usuario.                                                                                                       | Escenario 1: Given sensor_id valido y tipo permitido. Then responde 201 con alerta creada. Escenario 2: Given sensor_id no existe. Then responde 404. Escenario 3: Given tipo de alerta no valido. Then responde 400.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | EP11            |
-| EP12/TS11       | Endpoint para crear una incidencia                             | Como developer, quiero un endpoint POST para registrar una incidencia termica vinculada a un sensor, para iniciar su seguimiento formal.                                                                                                                           | Escenario 1: Given sensor_id valido y descripcion. Then responde 201 con incidencia creada. Escenario 2: Given ya existe incidencia abierta para el sensor. Then responde 400. Escenario 3: Given sensor_id no existe. Then responde 404.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | EP12            |
-| EP12/TS12       | Endpoint para actualizar estado de una incidencia              | Como developer, quiero un endpoint PATCH para actualizar el estado de una incidencia, para marcarla como reconocida, en atencion o cerrada.                                                                                                                        | Escenario 1: Given ID valido y estado permitido. Then responde 200 con incidencia actualizada. Escenario 2: Given estado no permitido. Then responde 400. Escenario 3: Given incidencia inexistente. Then responde 404.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | EP12            |
-| EP12/TS13       | Endpoint para registrar accion correctiva                      | Como developer, quiero un endpoint POST para registrar la accion correctiva aplicada sobre una incidencia, para almacenarla como evidencia antes de cerrar el caso.                                                                                                | Escenario 1: Given ID de incidencia valido y descripcion. Then responde 201 con accion registrada. Escenario 2: Given incidencia inexistente. Then responde 404. Escenario 3: Given descripcion vacia. Then responde 400.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | EP12            |
-| EP13/TS14       | Endpoint para generar reporte por periodo                      | Como developer, quiero un endpoint GET para obtener un reporte consolidado de lecturas, alertas e incidencias de una organizacion en un rango de fechas, para que el frontend pueda mostrarlo o permitir su descarga.                                              | Escenario 1: Given organizationId y rango validos. Then responde 200 con resumen del periodo. Escenario 2: Given no hay datos en el periodo. Then responde 200 con contadores en cero. Escenario 3: Given rango invalido. Then responde 400. Escenario 4: Given organizationId inexistente. Then responde 404.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | EP13            |
-
+<table style="width: 100%; table-layout: fixed;">
+  <colgroup>
+    <col style="width: 12%;">
+    <col style="width: 18%;">
+    <col style="width: 25%;">
+    <col style="width: 33%;">
+    <col style="width: 12%;">
+  </colgroup>
+  <tr>
+    <td><strong>Epic / Story ID</strong></td>
+    <td><strong>Titulo</strong></td>
+    <td><strong>Descripcion</strong></td>
+    <td><strong>Criterios de Aceptacion</strong></td>
+    <td><strong>Relacionado con</strong></td>
+  </tr>
+  <tr>
+    <td>EP01/US01</td>
+    <td>Ver propuesta de valor en la landing page</td>
+    <td>Como visitante, quiero ver en la pagina principal que problema resuelve ColdTrace y como lo soluciona, para evaluar si es relevante para mi negocio antes de registrarme.</td>
+    <td><strong>Escenario 1:</strong> Given el visitante accede a la landing page de ColdTrace. When la pagina carga correctamente. Then el sistema muestra el problema, la solucion y los beneficios clave del producto en la seccion principal.</td>
+    <td>EP01</td>
+  </tr>
+  <tr>
+    <td>EP01/US02</td>
+    <td>Ver seccion de funcionalidades</td>
+    <td>Como visitante, quiero ver una seccion con las funcionalidades del producto, para entender que incluye ColdTrace antes de tomar una decision de contratacion.</td>
+    <td><strong>Escenario 1:</strong> Given el visitante esta en la landing page. When hace scroll hacia la seccion de funcionalidades. Then el sistema muestra tarjetas o bloques con cada funcionalidad principal y su descripcion breve.</td>
+    <td>EP01</td>
+  </tr>
+  <tr>
+    <td>EP01/US03</td>
+    <td>Ver planes y precios</td>
+    <td>Como visitante, quiero ver los planes disponibles y sus precios, para evaluar si ColdTrace se ajusta al presupuesto de mi organizacion.</td>
+    <td><strong>Escenario 1:</strong> Given el visitante navega a la seccion de precios. When la seccion carga correctamente. Then el sistema muestra al menos dos planes con su lista de caracteristicas y precio mensual.</td>
+    <td>EP01</td>
+  </tr>
+  <tr>
+    <td>EP01/US04</td>
+    <td>Solicitar demo desde la landing page</td>
+    <td>Como visitante del segmento empresarial, quiero completar un formulario para solicitar una demo, para conocer la plataforma en detalle antes de contratar.</td>
+    <td><strong>Escenario 1:</strong> Given el visitante completa nombre y correo validos. When envia la solicitud de demo. Then el sistema registra la solicitud y muestra confirmacion. <br><strong>Escenario 2:</strong> Given deja campos obligatorios vacios. When intenta enviar el formulario. Then el sistema muestra validaciones. <br><strong>Escenario 3:</strong> Given ingresa un correo con formato invalido. When envia el formulario. Then el sistema informa que el correo no tiene formato valido.</td>
+    <td>EP01</td>
+  </tr>
+  <tr>
+    <td>EP01/US05</td>
+    <td>Navegar con menu fijo</td>
+    <td>Como visitante, quiero que el menu de navegacion permanezca visible al hacer scroll, para poder acceder a cualquier seccion de la landing en cualquier momento.</td>
+    <td><strong>Escenario 1:</strong> Given el visitante hace scroll hacia abajo en la landing page. When el menu llega al borde superior de la pantalla. Then el sistema mantiene el menu fijo y visible durante el desplazamiento.</td>
+    <td>EP01</td>
+  </tr>
+  <tr>
+    <td>EP01/US06</td>
+    <td>Ver landing page en dispositivo movil</td>
+    <td>Como visitante que accede desde un celular, quiero que la landing page se adapte correctamente a mi pantalla, para navegar y leer el contenido sin problemas.</td>
+    <td><strong>Escenario 1:</strong> Given el visitante accede desde un dispositivo movil. When la pagina carga. Then el sistema muestra el contenido adaptado a la resolucion del dispositivo sin elementos cortados ni superpuestos.</td>
+    <td>EP01</td>
+  </tr>
+  <tr>
+    <td>EP02/US07</td>
+    <td>Registrar una cuenta nueva</td>
+    <td>Como usuario nuevo, quiero crear una cuenta en la plataforma, para acceder a las funcionalidades de monitoreo.</td>
+    <td><strong>Escenario 1:</strong> Given el usuario completa el formulario con datos validos. When presiona registrarse. Then se crea su cuenta y accede al flujo de la plataforma. <br><strong>Escenario 2:</strong> Given ingresa un correo ya registrado. When envia el formulario. Then el sistema informa que el correo ya esta en uso. <br><strong>Escenario 3:</strong> Given deja campos obligatorios vacios. When intenta registrarse. Then el sistema solicita completar la informacion requerida.</td>
+    <td>EP02</td>
+  </tr>
+  <tr>
+    <td>EP02/US08</td>
+    <td>Iniciar sesion con correo y contrasena</td>
+    <td>Como usuario registrado, quiero iniciar sesion con mi correo y contrasena, para acceder a mi cuenta y mis datos.</td>
+    <td><strong>Escenario 1:</strong> Given el usuario ingresa credenciales validas. When presiona iniciar sesion. Then el sistema autentica al usuario y lo redirige al dashboard. <br><strong>Escenario 2:</strong> Given ingresa credenciales incorrectas. When intenta iniciar sesion. Then el sistema muestra un mensaje de error. <br><strong>Escenario 3:</strong> Given deja campos vacios. When envia el formulario. Then el sistema indica los campos requeridos.</td>
+    <td>EP02</td>
+  </tr>
+  <tr>
+    <td>EP02/US09</td>
+    <td>Cerrar sesion</td>
+    <td>Como usuario autenticado, quiero cerrar sesion, para proteger mi cuenta cuando dejo de usar la plataforma.</td>
+    <td><strong>Escenario 1:</strong> Given el usuario tiene una sesion activa. When selecciona cerrar sesion. Then el sistema invalida la sesion y lo redirige al inicio de sesion.</td>
+    <td>EP02</td>
+  </tr>
+  <tr>
+    <td>EP02/US10</td>
+    <td>Recuperar contrasena olvidada</td>
+    <td>Como usuario, quiero recuperar mi contrasena si la olvide, para volver a acceder a mi cuenta sin perder mis datos.</td>
+    <td><strong>Escenario 1:</strong> Given el usuario solicita recuperacion con un correo registrado. When el sistema procesa la solicitud. Then envia instrucciones para restablecer la contrasena. <br><strong>Escenario 2:</strong> Given el correo no existe. When solicita recuperacion. Then el sistema informa que no puede procesar la solicitud. <br><strong>Escenario 3:</strong> Given el enlace expiro. When intenta usarlo. Then el sistema solicita generar una nueva recuperacion.</td>
+    <td>EP02</td>
+  </tr>
+  <tr>
+    <td>EP02/US11</td>
+    <td>Editar datos del perfil personal</td>
+    <td>Como usuario registrado, quiero editar mi informacion de perfil, para mantener mis datos actualizados.</td>
+    <td><strong>Escenario 1:</strong> Given el usuario modifica datos validos. When guarda los cambios. Then el sistema actualiza el perfil y muestra confirmacion. <br><strong>Escenario 2:</strong> Given ingresa datos invalidos. When guarda. Then el sistema muestra validaciones.</td>
+    <td>EP02</td>
+  </tr>
+  <tr>
+    <td>EP03/US12</td>
+    <td>Registrar camara frigorifica</td>
+    <td>Como responsable de la operacion, quiero registrar una camara frigorifica con sus datos principales, para monitorear su funcionamiento.</td>
+    <td><strong>Escenario 1:</strong> Given registra nombre, ubicacion y capacidad validos. When confirma el registro. Then el sistema crea la camara y la muestra en el inventario. <br><strong>Escenario 2:</strong> Given faltan datos obligatorios. When intenta guardar. Then el sistema solicita completar la informacion. <br><strong>Escenario 3:</strong> Given existe una camara con el mismo codigo interno. When registra. Then el sistema evita la duplicidad.</td>
+    <td>EP03</td>
+  </tr>
+  <tr>
+    <td>EP03/US13</td>
+    <td>Registrar unidad de transporte</td>
+    <td>Como responsable logistico, quiero registrar una unidad de transporte refrigerado, para monitorear sus condiciones termicas en ruta.</td>
+    <td><strong>Escenario 1:</strong> Given ingresa placa, identificador y datos de capacidad validos. When guarda la unidad. Then el sistema registra la unidad de transporte. <br><strong>Escenario 2:</strong> Given la placa ya existe. When intenta registrar. Then el sistema muestra error de duplicidad. <br><strong>Escenario 3:</strong> Given faltan campos requeridos. When guarda. Then el sistema solicita completar los datos.</td>
+    <td>EP03</td>
+  </tr>
+  <tr>
+    <td>EP03/US14</td>
+    <td>Vincular sensor IoT a un activo</td>
+    <td>Como responsable de configuracion, quiero vincular un sensor IoT a un activo, para capturar datos de temperatura y humedad del activo correcto.</td>
+    <td><strong>Escenario 1:</strong> Given selecciona un activo y un sensor disponible. When confirma la vinculacion. Then el sistema asocia el sensor al activo. <br><strong>Escenario 2:</strong> Given el sensor ya esta vinculado. When intenta asociarlo. Then el sistema impide la vinculacion duplicada. <br><strong>Escenario 3:</strong> Given el activo esta inactivo. When intenta vincular. Then el sistema bloquea la operacion.</td>
+    <td>EP03</td>
+  </tr>
+  <tr>
+    <td>EP03/US15</td>
+    <td>Emparejar gateway de red</td>
+    <td>Como responsable tecnico, deseo emparejar el gateway para asegurar la transmision de datos de sensores hacia la nube.</td>
+    <td><strong>Escenario 1:</strong> Given el gateway esta disponible y las credenciales son validas. When se realiza el emparejamiento. Then el sistema registra el gateway como activo. <br><strong>Escenario 2:</strong> Given la clave de emparejamiento es incorrecta. When se intenta conectar. Then el sistema rechaza la vinculacion. <br><strong>Escenario 3:</strong> Given el gateway no responde. When se intenta emparejar. Then el sistema informa la falla de conexion.</td>
+    <td>EP03</td>
+  </tr>
+  <tr>
+    <td>EP03/US16</td>
+    <td>Verificar calibracion del sensor</td>
+    <td>Como responsable de calidad, quiero verificar el estado de calibracion de los sensores, para asegurar que las lecturas sean confiables.</td>
+    <td><strong>Escenario 1:</strong> Given el usuario consulta un sensor registrado. When abre su detalle. Then el sistema muestra estado y fecha de calibracion. <br><strong>Escenario 2:</strong> Given la calibracion esta vencida. When se consulta. Then el sistema marca el sensor como pendiente de revision.</td>
+    <td>EP03</td>
+  </tr>
+  <tr>
+    <td>EP03/US17</td>
+    <td>Actualizar ubicacion y estado del activo</td>
+    <td>Como responsable de la operacion, quiero actualizar la ubicacion fisica y el estado de un activo, para mantener el inventario preciso.</td>
+    <td><strong>Escenario 1:</strong> Given el activo existe. When el usuario actualiza ubicacion o estado. Then el sistema guarda los cambios. <br><strong>Escenario 2:</strong> Given el nuevo estado no es permitido. When intenta guardar. Then el sistema rechaza el cambio.</td>
+    <td>EP03</td>
+  </tr>
+  <tr>
+    <td>EP04/US18</td>
+    <td>Visualizar temperatura en tiempo real</td>
+    <td>Como usuario, quiero visualizar en tiempo real la temperatura de mis equipos, para detectar variaciones criticas.</td>
+    <td><strong>Escenario 1:</strong> Given el activo tiene lecturas recientes. When el usuario abre el dashboard. Then el sistema muestra temperatura actual, unidad y momento de captura. <br><strong>Escenario 2:</strong> Given no hay lecturas recientes. When se abre el dashboard. Then el sistema muestra estado sin datos recientes.</td>
+    <td>EP04</td>
+  </tr>
+  <tr>
+    <td>EP04/US19</td>
+    <td>Visualizar humedad en tiempo real</td>
+    <td>Como usuario, quiero visualizar en tiempo real los valores de humedad, para complementar el control de conservacion.</td>
+    <td><strong>Escenario 1:</strong> Given el activo tiene lecturas de humedad. When el usuario abre la vista de monitoreo. Then el sistema muestra humedad actual y tendencia. <br><strong>Escenario 2:</strong> Given el sensor no mide humedad. When se consulta el activo. Then el sistema indica que el dato no esta disponible.</td>
+    <td>EP04</td>
+  </tr>
+  <tr>
+    <td>EP04/US20</td>
+    <td>Consultar historial de lecturas</td>
+    <td>Como encargado de negocio, quiero consultar el historial de lecturas de un activo, para revisar su comportamiento en el tiempo.</td>
+    <td><strong>Escenario 1:</strong> Given selecciona activo y periodo validos. When consulta el historial. Then el sistema muestra lecturas ordenadas y graficos. <br><strong>Escenario 2:</strong> Given no existen lecturas en el periodo. When consulta. Then el sistema muestra un resultado vacio sin error.</td>
+    <td>EP04</td>
+  </tr>
+  <tr>
+    <td>EP04/US21</td>
+    <td>Detectar temperatura fuera de rango</td>
+    <td>Como usuario, quiero que el sistema identifique automaticamente cuando la temperatura salga del rango seguro, para reconocer riesgos.</td>
+    <td><strong>Escenario 1:</strong> Given llega una lectura fuera del rango configurado. When el sistema la evalua. Then marca la condicion como fuera de rango. <br><strong>Escenario 2:</strong> Given la lectura esta dentro del rango. When se evalua. Then no se genera condicion critica.</td>
+    <td>EP04</td>
+  </tr>
+  <tr>
+    <td>EP04/US22</td>
+    <td>Visualizar estado de conectividad</td>
+    <td>Como responsable de monitoreo, quiero visualizar el estado de conexion de sensores y gateways, para identificar problemas de transmision.</td>
+    <td><strong>Escenario 1:</strong> Given el sensor reporta actividad reciente. When el usuario consulta el activo. Then el sistema muestra estado online. <br><strong>Escenario 2:</strong> Given no hay comunicacion reciente. When se consulta el activo. Then el sistema muestra estado offline o inestable.</td>
+    <td>EP04</td>
+  </tr>
+  <tr>
+    <td>EP04/US23</td>
+    <td>Sincronizar datos almacenados offline</td>
+    <td>Como responsable tecnico, deseo que los datos capturados sin conexion se sincronicen automaticamente al recuperar acceso a la red.</td>
+    <td><strong>Escenario 1:</strong> Given el gateway recupera conectividad. When existen lecturas pendientes. Then el sistema sincroniza los datos y conserva el historial. <br><strong>Escenario 2:</strong> Given hay datos duplicados. When se sincronizan. Then el sistema evita registros repetidos.</td>
+    <td>EP04</td>
+  </tr>
+  <tr>
+    <td>EP05/US24</td>
+    <td>Crear incidencia termica</td>
+    <td>Como usuario, quiero que el sistema cree una incidencia termica automatica al detectar una condicion critica, para iniciar seguimiento formal.</td>
+    <td><strong>Escenario 1:</strong> Given se detecta una condicion critica. When no existe incidencia abierta para el activo. Then el sistema crea una incidencia. <br><strong>Escenario 2:</strong> Given ya existe una incidencia abierta. When ocurre otra lectura critica. Then el sistema actualiza el seguimiento sin duplicar la incidencia.</td>
+    <td>EP05</td>
+  </tr>
+  <tr>
+    <td>EP05/US25</td>
+    <td>Disparar notificaciones de alerta</td>
+    <td>Como responsable de operaciones, quiero recibir notificaciones automaticas ante incidencias criticas, para reaccionar oportunamente.</td>
+    <td><strong>Escenario 1:</strong> Given se crea una incidencia critica. When existen canales configurados. Then el sistema envia notificaciones por los medios disponibles. <br><strong>Escenario 2:</strong> Given no hay canal configurado. When se genera la alerta. Then el sistema registra el evento y muestra advertencia de configuracion.</td>
+    <td>EP05</td>
+  </tr>
+  <tr>
+    <td>EP05/US26</td>
+    <td>Escalar alerta no atendida</td>
+    <td>Como responsable de la operacion, quiero que el sistema escale una alerta no atendida a un nivel superior, para asegurar su resolucion.</td>
+    <td><strong>Escenario 1:</strong> Given una alerta supera el tiempo de atencion configurado. When no ha sido reconocida. Then el sistema la escala al siguiente responsable. <br><strong>Escenario 2:</strong> Given la alerta ya fue atendida. When vence el tiempo de escalamiento. Then el sistema no realiza escalamiento.</td>
+    <td>EP05</td>
+  </tr>
+  <tr>
+    <td>EP05/US27</td>
+    <td>Reconocer alerta critica</td>
+    <td>Como usuario responsable, quiero marcar una alerta como reconocida, para dejar constancia de que el incidente esta siendo atendido.</td>
+    <td><strong>Escenario 1:</strong> Given existe una alerta activa. When el usuario selecciona reconocer. Then el sistema registra usuario, fecha y nuevo estado. <br><strong>Escenario 2:</strong> Given la alerta ya fue cerrada. When intenta reconocerla. Then el sistema impide el cambio.</td>
+    <td>EP05</td>
+  </tr>
+  <tr>
+    <td>EP05/US28</td>
+    <td>Registrar accion correctiva y cerrar incidencia</td>
+    <td>Como usuario responsable, quiero registrar la medida aplicada y cerrar la incidencia cuando la condicion se estabilice, para conservar el historial.</td>
+    <td><strong>Escenario 1:</strong> Given la condicion se estabilizo y se registra accion correctiva. When el usuario cierra la incidencia. Then el sistema guarda la evidencia y marca el caso como cerrado. <br><strong>Escenario 2:</strong> Given falta la accion correctiva. When intenta cerrar. Then el sistema exige completar la evidencia.</td>
+    <td>EP05</td>
+  </tr>
+  <tr>
+    <td>EP06/US29</td>
+    <td>Generar bitacora diaria</td>
+    <td>Como responsable de calidad, quiero generar una bitacora diaria de lecturas, para contar con evidencia ordenada del control termico.</td>
+    <td><strong>Escenario 1:</strong> Given existe informacion del dia seleccionado. When genera la bitacora. Then el sistema consolida lecturas, alertas e incidencias. <br><strong>Escenario 2:</strong> Given no hay informacion. When genera la bitacora. Then el sistema muestra una bitacora sin registros y mensaje informativo.</td>
+    <td>EP06</td>
+  </tr>
+  <tr>
+    <td>EP06/US30</td>
+    <td>Consultar historial de lecturas, alertas e incidencias</td>
+    <td>Como responsable de operaciones, quiero consultar el historial completo de un activo, para reconstruir eventos pasados.</td>
+    <td><strong>Escenario 1:</strong> Given selecciona activo y rango validos. When consulta historial. Then el sistema muestra lecturas, alertas e incidencias relacionadas. <br><strong>Escenario 2:</strong> Given el rango no contiene datos. When consulta. Then el sistema muestra resultado vacio.</td>
+    <td>EP06</td>
+  </tr>
+  <tr>
+    <td>EP06/US31</td>
+    <td>Exportar reporte de cumplimiento sanitario</td>
+    <td>Como responsable de calidad, quiero exportar un reporte con formatos exigidos por DIGESA/MINSA, para auditorias.</td>
+    <td><strong>Escenario 1:</strong> Given selecciona periodo y activos validos. When exporta el reporte. Then el sistema genera archivo descargable con informacion consolidada. <br><strong>Escenario 2:</strong> Given faltan parametros. When intenta exportar. Then el sistema solicita completar los criterios.</td>
+    <td>EP06</td>
+  </tr>
+  <tr>
+    <td>EP06/US32</td>
+    <td>Descargar reporte mensual</td>
+    <td>Como usuario administrativo, quiero descargar reportes mensuales consolidados, para evaluar el desempeno operativo.</td>
+    <td><strong>Escenario 1:</strong> Given selecciona un mes con datos. When descarga el reporte. Then el sistema genera el archivo mensual. <br><strong>Escenario 2:</strong> Given el mes no tiene datos. When solicita descarga. Then el sistema informa ausencia de informacion.</td>
+    <td>EP06</td>
+  </tr>
+  <tr>
+    <td>EP06/US33</td>
+    <td>Detectar faltantes o incumplimientos</td>
+    <td>Como responsable de cumplimiento, quiero identificar vacios en los registros, para corregirlos antes de una inspeccion formal.</td>
+    <td><strong>Escenario 1:</strong> Given existen periodos sin lecturas o evidencias faltantes. When se ejecuta la revision. Then el sistema lista los faltantes. <br><strong>Escenario 2:</strong> Given no hay incumplimientos. When revisa. Then el sistema muestra estado conforme.</td>
+    <td>EP06</td>
+  </tr>
+  <tr>
+    <td>EP06/US34</td>
+    <td>Preparar evidencia para auditoria</td>
+    <td>Como responsable de auditoria interna, quiero reunir la documentacion de control en un solo archivo, para sustentar el cumplimiento.</td>
+    <td><strong>Escenario 1:</strong> Given selecciona periodo y evidencias. When prepara el paquete. Then el sistema consolida reportes, incidencias y acciones correctivas. <br><strong>Escenario 2:</strong> Given faltan evidencias minimas. When genera el paquete. Then el sistema advierte los faltantes.</td>
+    <td>EP06</td>
+  </tr>
+  <tr>
+    <td>EP07/US35</td>
+    <td>Configurar rango de seguridad</td>
+    <td>Como administrador, quiero definir limites de temperatura y humedad por tipo de producto, para adaptar el monitoreo.</td>
+    <td><strong>Escenario 1:</strong> Given ingresa limites validos. When guarda la configuracion. Then el sistema aplica el rango al activo o producto. <br><strong>Escenario 2:</strong> Given el minimo es mayor al maximo. When guarda. Then el sistema rechaza la configuracion.</td>
+    <td>EP07</td>
+  </tr>
+  <tr>
+    <td>EP07/US36</td>
+    <td>Actualizar parametros operativos</td>
+    <td>Como responsable de la operacion, quiero ajustar intervalos de lectura y criterios de evaluacion, para adaptar el sistema segun criticidad.</td>
+    <td><strong>Escenario 1:</strong> Given los parametros son validos. When guarda cambios. Then el sistema actualiza la configuracion. <br><strong>Escenario 2:</strong> Given los valores estan fuera de rango permitido. When guarda. Then el sistema muestra validaciones.</td>
+    <td>EP07</td>
+  </tr>
+  <tr>
+    <td>EP07/US37</td>
+    <td>Programar mantenimiento preventivo</td>
+    <td>Como responsable de calidad, quiero agendar mantenimiento de sensores y equipos de frio, para reducir riesgos de falla.</td>
+    <td><strong>Escenario 1:</strong> Given selecciona activo, fecha y responsable. When agenda mantenimiento. Then el sistema crea la programacion. <br><strong>Escenario 2:</strong> Given ya existe mantenimiento en la misma fecha. When agenda. Then el sistema advierte la duplicidad.</td>
+    <td>EP07</td>
+  </tr>
+  <tr>
+    <td>EP07/US38</td>
+    <td>Solicitar y cerrar servicio tecnico</td>
+    <td>Como usuario responsable, quiero solicitar asistencia tecnica y documentar la reparacion realizada, para devolver el equipo a operacion.</td>
+    <td><strong>Escenario 1:</strong> Given el activo requiere atencion. When el usuario registra solicitud y luego documenta la reparacion. Then el sistema permite cerrar el caso. <br><strong>Escenario 2:</strong> Given falta evidencia tecnica. When intenta cerrar. Then el sistema exige evidencia minima. <br><strong>Escenario 3:</strong> Given la prueba de funcionamiento falla. When intenta cerrar. Then el sistema mantiene el servicio abierto.</td>
+    <td>EP07</td>
+  </tr>
+  <tr>
+    <td>EP08/TS01</td>
+    <td>Endpoint de registro de usuario</td>
+    <td>Como developer, quiero un endpoint POST para registrar usuarios, para que el frontend pueda crear nuevas cuentas desde el formulario de registro.</td>
+    <td><strong>Escenario 1:</strong> Given se envia una solicitud valida. When el servidor procesa el registro. Then responde 201 con el usuario creado sin contrasena. <br><strong>Escenario 2:</strong> Given el correo ya existe. Then responde 400. <br><strong>Escenario 3:</strong> Given faltan campos requeridos. Then responde 400 con los campos faltantes.</td>
+    <td>EP08</td>
+  </tr>
+  <tr>
+    <td>EP08/TS02</td>
+    <td>Endpoint de inicio de sesion</td>
+    <td>Como developer, quiero un endpoint POST para autenticar usuarios, para que el frontend pueda iniciar sesion y recibir un token de acceso.</td>
+    <td><strong>Escenario 1:</strong> Given credenciales validas. When el servidor valida. Then responde 200 con token JWT y datos basicos. <br><strong>Escenario 2:</strong> Given credenciales invalidas. Then responde 401. <br><strong>Escenario 3:</strong> Given faltan correo o contrasena. Then responde 400.</td>
+    <td>EP08</td>
+  </tr>
+  <tr>
+    <td>EP09/TS03</td>
+    <td>Endpoint para registrar un sensor</td>
+    <td>Como developer, quiero un endpoint POST para registrar sensores IoT, para que el frontend pueda agregar dispositivos de monitoreo vinculados a una organizacion.</td>
+    <td><strong>Escenario 1:</strong> Given datos validos. When el servidor procesa la solicitud. Then responde 201 con el sensor creado. <br><strong>Escenario 2:</strong> Given faltan datos obligatorios. Then responde 400. <br><strong>Escenario 3:</strong> Given el sensor ya existe. Then responde 400.</td>
+    <td>EP09</td>
+  </tr>
+  <tr>
+    <td>EP09/TS04</td>
+    <td>Endpoint para obtener sensores de una organizacion</td>
+    <td>Como developer, quiero un endpoint GET para obtener los sensores registrados de una organizacion, para mostrar el inventario de dispositivos.</td>
+    <td><strong>Escenario 1:</strong> Given organizationId valido. Then responde 200 con sensores. <br><strong>Escenario 2:</strong> Given no hay sensores. Then responde 200 con array vacio. <br><strong>Escenario 3:</strong> Given organizationId inexistente. Then responde 404.</td>
+    <td>EP09</td>
+  </tr>
+  <tr>
+    <td>EP09/TS05</td>
+    <td>Endpoint para actualizar un sensor</td>
+    <td>Como developer, quiero un endpoint PUT para actualizar datos de un sensor, para que el frontend guarde cambios del administrador.</td>
+    <td><strong>Escenario 1:</strong> Given ID y datos validos. Then responde 200 con el sensor actualizado. <br><strong>Escenario 2:</strong> Given sensor inexistente. Then responde 404. <br><strong>Escenario 3:</strong> Given datos invalidos. Then responde 400.</td>
+    <td>EP09</td>
+  </tr>
+  <tr>
+    <td>EP09/TS06</td>
+    <td>Endpoint para eliminar un sensor</td>
+    <td>Como developer, quiero un endpoint DELETE para eliminar un sensor, para que el frontend pueda removerlo cuando el administrador lo solicite.</td>
+    <td><strong>Escenario 1:</strong> Given ID valido. Then responde 200 confirmando eliminacion. <br><strong>Escenario 2:</strong> Given sensor inexistente. Then responde 404.</td>
+    <td>EP09</td>
+  </tr>
+  <tr>
+    <td>EP10/TS07</td>
+    <td>Endpoint para registrar lectura de sensor</td>
+    <td>Como developer, quiero un endpoint POST para registrar lecturas de temperatura y humedad enviadas por sensores IoT, para almacenarlas y procesarlas.</td>
+    <td><strong>Escenario 1:</strong> Given sensor_id, temperature y humidity validos. Then responde 201 con la lectura creada. <br><strong>Escenario 2:</strong> Given sensor_id no existe. Then responde 404. <br><strong>Escenario 3:</strong> Given valores no numericos o fuera de rango. Then responde 400. <br><strong>Escenario 4:</strong> Given token ausente o invalido. Then responde 401.</td>
+    <td>EP10</td>
+  </tr>
+  <tr>
+    <td>EP10/TS08</td>
+    <td>Endpoint para obtener historial de lecturas por sensor y fecha</td>
+    <td>Como developer, quiero un endpoint GET para obtener el historial de lecturas de un sensor en un rango de fechas, para mostrar graficas y datos historicos.</td>
+    <td><strong>Escenario 1:</strong> Given sensor_id y fechas validas. Then responde 200 con lecturas ordenadas. <br><strong>Escenario 2:</strong> Given no hay lecturas. Then responde 200 con array vacio. <br><strong>Escenario 3:</strong> Given rango invalido. Then responde 400. <br><strong>Escenario 4:</strong> Given sensor_id no existe. Then responde 404.</td>
+    <td>EP10</td>
+  </tr>
+  <tr>
+    <td>EP11/TS09</td>
+    <td>Endpoint para obtener alertas activas</td>
+    <td>Como developer, quiero un endpoint GET para obtener las alertas activas de una organizacion, para mostrarlas en el panel de monitoreo.</td>
+    <td><strong>Escenario 1:</strong> Given organizationId valido. Then responde 200 con alertas activas. <br><strong>Escenario 2:</strong> Given no hay alertas activas. Then responde 200 con array vacio. <br><strong>Escenario 3:</strong> Given organizationId inexistente. Then responde 404.</td>
+    <td>EP11</td>
+  </tr>
+  <tr>
+    <td>EP11/TS10</td>
+    <td>Endpoint para crear una alerta</td>
+    <td>Como developer, quiero un endpoint POST para registrar una alerta cuando el sistema detecte una desviacion termica, para almacenarla y notificar al usuario.</td>
+    <td><strong>Escenario 1:</strong> Given sensor_id valido y tipo permitido. Then responde 201 con alerta creada. <br><strong>Escenario 2:</strong> Given sensor_id no existe. Then responde 404. <br><strong>Escenario 3:</strong> Given tipo de alerta no valido. Then responde 400.</td>
+    <td>EP11</td>
+  </tr>
+  <tr>
+    <td>EP12/TS11</td>
+    <td>Endpoint para crear una incidencia</td>
+    <td>Como developer, quiero un endpoint POST para registrar una incidencia termica vinculada a un sensor, para iniciar su seguimiento formal.</td>
+    <td><strong>Escenario 1:</strong> Given sensor_id valido y descripcion. Then responde 201 con incidencia creada. <br><strong>Escenario 2:</strong> Given ya existe incidencia abierta para el sensor. Then responde 400. <br><strong>Escenario 3:</strong> Given sensor_id no existe. Then responde 404.</td>
+    <td>EP12</td>
+  </tr>
+  <tr>
+    <td>EP12/TS12</td>
+    <td>Endpoint para actualizar estado de una incidencia</td>
+    <td>Como developer, quiero un endpoint PATCH para actualizar el estado de una incidencia, para marcarla como reconocida, en atencion o cerrada.</td>
+    <td><strong>Escenario 1:</strong> Given ID valido y estado permitido. Then responde 200 con incidencia actualizada. <br><strong>Escenario 2:</strong> Given estado no permitido. Then responde 400. <br><strong>Escenario 3:</strong> Given incidencia inexistente. Then responde 404.</td>
+    <td>EP12</td>
+  </tr>
+  <tr>
+    <td>EP12/TS13</td>
+    <td>Endpoint para registrar accion correctiva</td>
+    <td>Como developer, quiero un endpoint POST para registrar la accion correctiva aplicada sobre una incidencia, para almacenarla como evidencia antes de cerrar el caso.</td>
+    <td><strong>Escenario 1:</strong> Given ID de incidencia valido y descripcion. Then responde 201 con accion registrada. <br><strong>Escenario 2:</strong> Given incidencia inexistente. Then responde 404. <br><strong>Escenario 3:</strong> Given descripcion vacia. Then responde 400.</td>
+    <td>EP12</td>
+  </tr>
+  <tr>
+    <td>EP13/TS14</td>
+    <td>Endpoint para generar reporte por periodo</td>
+    <td>Como developer, quiero un endpoint GET para obtener un reporte consolidado de lecturas, alertas e incidencias de una organizacion en un rango de fechas, para que el frontend pueda mostrarlo o permitir su descarga.</td>
+    <td><strong>Escenario 1:</strong> Given organizationId y rango validos. Then responde 200 con resumen del periodo. <br><strong>Escenario 2:</strong> Given no hay datos en el periodo. Then responde 200 con contadores en cero. <br><strong>Escenario 3:</strong> Given rango invalido. Then responde 400. <br><strong>Escenario 4:</strong> Given organizationId inexistente. Then responde 404.</td>
+    <td>EP13</td>
+  </tr>
+</table>
 
 ## 3.2 Impact Mapping
 
@@ -1097,7 +1509,6 @@ El Product Backlog prioriza las historias funcionales del producto segun el valo
   <tr><td>38</td><td>US38</td><td>Solicitar y cerrar servicio tecnico</td><td>Como usuario responsable, quiero solicitar asistencia tecnica y documentar la reparacion realizada para devolver el equipo a operacion.</td><td>2</td></tr>
 </table>
 
----
 
 # CAPÍTULO IV. PRODUCT UX/UI DESIGN
 
@@ -1107,11 +1518,11 @@ Esta sección define los lineamientos de estilo que aseguran una identidad visua
 
 ### 4.1.1. General Style Guidelines.
 
-**Brand Overview**
+**Brand Overview** 
 
 Se ha seleccionado la propuesta basada en un escudo térmico como logo definitivo. Esta elección responde a una estrategia de marca diseñada para transmitir seguridad alimentaria y protección. El isotipo fusiona un escudo (protección), la inicial "F" con trazos fluidos (logística) y ondas internas que simbolizan los datos de los sensores IoT y el flujo de aire frío.
 
-**Typography**
+**Typography** 
 
 Hemos seleccionado cuidadosamente estas tipografías para ColdTrace, buscando un equilibrio armónico entre claridad, profesionalismo y modernidad que refuerce nuestros valores de eficiencia, monitoreo inteligente y trazabilidad precisa. La combinación de Poppins para títulos e Inter (o Roboto) para textos técnicos potencia la legibilidad en web y móvil, proyecta una identidad tecnológica y accesible, y acompaña con coherencia los flujos clave del _dashboard_, la gestión de sensores y la resolución de incidentes, asegurando una experiencia consistente, robusta y fácil de usar en toda la plataforma.
 
@@ -1264,10 +1675,10 @@ Se aplica una organización visual jerárquica y funcional. En la Landing Page, 
 
 **Organización de la Landing Page:**
 
-*Encabezado (Header):*
+*Encabezado (Header):*  
 Incluye el logotipo de ColdTrace, enlaces de navegación principales, selector de idioma y accesos a autenticación. Su función es mantener disponibles las rutas de mayor valor durante todo el recorrido.
 
-*Sección Introductoria (Hero):*
+*Sección Introductoria (Hero):*  
 Presenta la propuesta de valor del producto: centralizar la infraestructura de almacenamiento en frío en una plataforma inteligente con monitoreo en tiempo real, alertas y trazabilidad.
 
 *Beneficios:*
@@ -1276,13 +1687,13 @@ Presenta la propuesta de valor del producto: centralizar la infraestructura de a
 - Historial descargable para trazabilidad.
 - Reportes listos para auditorías sanitarias.
 
-*Cómo Funciona:*
+*Cómo Funciona:*  
 Organiza el flujo de uso en pasos simples: configurar sensores y rangos, monitorear activos en tiempo real y auditar mediante reportes exportables.
 
-*Casos de uso:*
+*Casos de uso:*  
 Explica escenarios asociados a cámaras frigoríficas, almacenes, transporte refrigerado, minimarkets y responsables de operaciones que necesitan controlar la cadena de frío.
 
-*Pie de Página (Footer):*
+*Pie de Página (Footer):*  
 Agrupa enlaces secundarios relacionados con producto, soporte, recursos, redes sociales y acceso a información institucional.
 
 ---
@@ -1375,7 +1786,7 @@ Los sistemas de búsqueda se diseñan para que el usuario no se pierda entre gra
 
 El sistema de navegación guía al usuario desde la presentación comercial del producto hasta las funcionalidades operativas de la Web Application.
 
-**Flujo principal:**
+**Flujo principal:**  
 El usuario inicia en la Landing Page, revisa la propuesta de valor, consulta funcionalidades, explora el flujo de trabajo y accede al registro o inicio de sesión. Una vez autenticado, ingresa al dashboard principal, desde donde puede navegar hacia monitoreo en vivo, activos, transporte, alertas, reportes, usuarios y configuración.
 
 - **Navegación global:** el menú superior permanece disponible en la Landing Page para facilitar el acceso a secciones clave y al cambio de idioma.
@@ -1464,19 +1875,19 @@ Los mock-ups de la Landing Page representan la versión visual de alta fidelidad
 
 ### 4.4.1. Web Applications Wireframes.
 
-Los wireframes de la aplicación web fueron diseñados para definir la estructura funcional de las principales pantallas del sistema. En esta etapa se identificaron los elementos clave de interacción, como paneles de control, visualización de datos, navegación entre secciones y componentes necesarios para la gestión del sistema. Estos wireframes permiten validar la distribución de información antes de la implementación visual, asegurando que las funcionalidades respondan a las necesidades del usuario.
+Los wireframes de la aplicación web fueron diseñados para definir la estructura funcional de las principales pantallas del sistema. En esta etapa se identificaron los elementos clave de interacción, como paneles de control, visualización de datos, navegación entre secciones y componentes necesarios para la gestión del sistema. Estos wireframes permiten validar la distribución de información antes de la implementación visual, asegurando que las funcionalidades respondan a las necesidades del usuario. 
 
-Wireframe Landing Page: En este wireframe vemos la organización de los elementos que se le presentarían al usuario inicialmente al entrar a la página.
+Wireframe Landing Page: En este wireframe vemos la organización de los elementos que se le presentarían al usuario inicialmente al entrar a la página. 
 <p align="center">
   <img src="report/assets/chapter-04/wireflowdiagram/WireframeLP.png" alt="Wireframes">
 </p>
 
-Wireframe Landing Page Mobile: Organización de elementos para el landing page en entorno de móviles
+Wireframe Landing Page Mobile: Organización de elementos para el landing page en entorno de móviles 
 <p align="center">
   <img src="report/assets/chapter-04/wireflowdiagram/WireframeMobile.png" alt="Wireframes">
 </p>
 
-Wireframes Pantallas: Aqui vemos la organización de secciones individuales que componen las distintas pantallas de la página web.
+Wireframes Pantallas: Aqui vemos la organización de secciones individuales que componen las distintas pantallas de la página web. 
 <p align="center">
   <img src="report/assets/chapter-04/wireflowdiagram/Activos.png" alt="Wireframes">
 </p>
@@ -1506,7 +1917,7 @@ Wireframes Pantallas: Aqui vemos la organización de secciones individuales que 
 
 ### 4.4.2. Web Applications Wireflow Diagrams.
 
-Los wireflow diagrams representan el flujo de interacción del usuario dentro de la aplicación, mostrando la navegación entre pantallas y las acciones que el usuario puede realizar en cada etapa. Estos diagramas permiten entender el recorrido del usuario (user flow), facilitando la identificación de puntos clave de interacción y mejorando la experiencia general del sistema.
+Los wireflow diagrams representan el flujo de interacción del usuario dentro de la aplicación, mostrando la navegación entre pantallas y las acciones que el usuario puede realizar en cada etapa. Estos diagramas permiten entender el recorrido del usuario (user flow), facilitando la identificación de puntos clave de interacción y mejorando la experiencia general del sistema. 
 
 <p align="center">
   <img src="report/assets/chapter-04/wireflowdiagram/WireFlows (1).png" alt="Wireframes">
@@ -1529,10 +1940,6 @@ Detalle del Activo y Gráficos en Vivo: Pantalla dedicada al análisis�
 ![Activos](report/assets/chapter-04/mockups/Activos.png)
 
 Gestión de Activos y Lista de Sensores: Presenta una interfaz de tabla avanzada con indicadores de estado codificados por colores (Verde: Estable / Rojo: Alerta). Permite acciones rápidas de filtrado y búsqueda, facilitando la administración de grandes volúmenes de dispositivos de telemetría.
-
-![Transporte](report/assets/chapter-04/mockups/Transporte.png)
-
-Módulos de Gestión (Transporte y Formularios): Vistas diseñadas para la entrada de datos. Los formularios de "Registro de Unidad" y "Verificación de Calibración" siguen un flujo paso a paso para evitar la sobrecarga cognitiva, asegurando que el operador complete la documentación y firma digital sin errores.
 
 ![AlertaseIncidencias](report/assets/chapter-04/mockups/AlertaseIncidencias.png)
 
@@ -1766,7 +2173,7 @@ Las user stories se reflejan en el diagrama de la siguiente manera:
   <em>Figura 4.6.2. Context Diagram del sistema ColdTrace para la aplicación web.</em>
 </p>
 
-> El código fuente del diagrama en PlantUML se encuentra en `report/assets/chapter-04/contextdiagram/contextdiagram.puml`.
+> El código fuente del diagrama en PlantUML se encuentra en `assets/chapter-04/contextdiagram/contextdiagram.puml`.
 
 ### 4.6.3. Software Architecture Container Diagrams.
 
@@ -1784,7 +2191,7 @@ Cada bounded context mantiene su propia base de datos MySQL. Cuando un contexto 
   <em>Figura 4.6.3. Container Diagram del sistema ColdTrace.</em>
 </p>
 
-> El código fuente del diagrama en PlantUML se encuentra en `report/assets/chapter-04/containerdiagram/containerdiagram.puml`.
+> El código fuente del diagrama en PlantUML se encuentra en `assets/chapter-04/containerdiagram/containerdiagram.puml`.
 
 ### 4.6.4. Software Architecture Components Diagrams.
 
@@ -1800,7 +2207,7 @@ Los diagramas mantienen la misma regla arquitectónica definida para la vista de
   <em>Figura 4.6.4.1. Component Diagram del Account & Access Context.</em>
 </p>
 
-> El código fuente en PlantUML se encuentra en `report/assets/chapter-04/diagramcomponents/component-account-access.puml`.
+> El código fuente en PlantUML se encuentra en `assets/chapter-04/diagramcomponents/component-account-access.puml`.
 
 - **Component Diagram - Sensor Management Context:** muestra los componentes encargados de activos, cámaras frigoríficas, unidades de transporte, sensores, gateways físicos, calibración, rangos y mantenimiento.
 
@@ -1810,7 +2217,7 @@ Los diagramas mantienen la misma regla arquitectónica definida para la vista de
   <em>Figura 4.6.4.2. Component Diagram del Sensor Management Context.</em>
 </p>
 
-> El código fuente en PlantUML se encuentra en `report/assets/chapter-04/diagramcomponents/component-sensor-management.puml`.
+> El código fuente en PlantUML se encuentra en `assets/chapter-04/diagramcomponents/component-sensor-management.puml`.
 
 - **Component Diagram - Monitoring Context:** muestra los componentes que reciben telemetría, validan lecturas, almacenan series de tiempo, consultan histórico y publican eventos hacia alertas y reportes.
 
@@ -1820,7 +2227,7 @@ Los diagramas mantienen la misma regla arquitectónica definida para la vista de
   <em>Figura 4.6.4.3. Component Diagram del Monitoring Context.</em>
 </p>
 
-> El código fuente en PlantUML se encuentra en `report/assets/chapter-04/diagramcomponents/component-monitoring.puml`.
+> El código fuente en PlantUML se encuentra en `assets/chapter-04/diagramcomponents/component-monitoring.puml`.
 
 - **Component Diagram - Alerts Context:** muestra los componentes encargados de incidencias térmicas, alertas críticas, reconocimiento, escalamiento, acciones correctivas y notificaciones externas.
 
@@ -1830,7 +2237,7 @@ Los diagramas mantienen la misma regla arquitectónica definida para la vista de
   <em>Figura 4.6.4.4. Component Diagram del Alerts Context.</em>
 </p>
 
-> El código fuente en PlantUML se encuentra en `report/assets/chapter-04/diagramcomponents/component-alerts.puml`.
+> El código fuente en PlantUML se encuentra en `assets/chapter-04/diagramcomponents/component-alerts.puml`.
 
 - **Component Diagram - Reports Context:** muestra los componentes responsables de bitácoras, reportes diarios o mensuales, historial consolidado, exportación de archivos y entrega de datos al contexto de Auditoría.
 
@@ -1840,7 +2247,7 @@ Los diagramas mantienen la misma regla arquitectónica definida para la vista de
   <em>Figura 4.6.4.5. Component Diagram del Reports Context.</em>
 </p>
 
-> El código fuente en PlantUML se encuentra en `report/assets/chapter-04/diagramcomponents/component-reports.puml`.
+> El código fuente en PlantUML se encuentra en `assets/chapter-04/diagramcomponents/component-reports.puml`.
 
 - **Component Diagram - Audit Context:** muestra los componentes responsables de verificar cumplimiento, detectar faltantes, preparar evidencia y entregar paquetes exportables al auditor externo.
 
@@ -1850,7 +2257,7 @@ Los diagramas mantienen la misma regla arquitectónica definida para la vista de
   <em>Figura 4.6.4.6. Component Diagram del Audit Context.</em>
 </p>
 
-> El código fuente en PlantUML se encuentra en `report/assets/chapter-04/diagramcomponents/component-audit.puml`.
+> El código fuente en PlantUML se encuentra en `assets/chapter-04/diagramcomponents/component-audit.puml`.
 
 ---
 
@@ -1885,7 +2292,7 @@ Todas las clases quedan conectadas dentro de la vista general. Cuando la relaci�
   <em>Figura 4.7.1.1. Etapa 1 - Diagrama de clases con enfoque DDD.</em>
 </p>
 
-> El código fuente en PlantUML se encuentra en `report/assets/chapter-04/classdiagram/classdiagram-etapa1-ddd.puml`.
+> El código fuente en PlantUML se encuentra en `assets/chapter-04/classdiagram/classdiagram-etapa1-ddd.puml`.
 
 #### Etapa 2: Agrupar las clases en Bounded Context
 
@@ -1908,7 +2315,7 @@ Las relaciones internas de cada bounded context se representan con asociaciones,
   <em>Figura 4.7.1.2. Etapa 2 - Agrupar las clases en Bounded Context.</em>
 </p>
 
-> El código fuente en PlantUML se encuentra en `report/assets/chapter-04/classdiagram/classdiagram-etapa2-bc.puml`.
+> El código fuente en PlantUML se encuentra en `assets/chapter-04/classdiagram/classdiagram-etapa2-bc.puml`.
 
 #### Etapa 3: Identificación de Value Object, Entity y Aggregate
 
@@ -1922,7 +2329,7 @@ En esta tercera etapa se toma el modelo de clases ya definido y se clasifica cad
   <em>Figura 4.7.1.3.1. Etapa 3 - Account & Access Context.</em>
 </p>
 
-> Código PlantUML: `report/assets/chapter-04/classdiagram/classdiagram-etapa3-bc-account-access.puml`.
+> Código PlantUML: `assets/chapter-04/classdiagram/classdiagram-etapa3-bc-account-access.puml`.
 
 **Sensor Management Context.** Aggregates → `Asset`, `Sensor`, `EdgeGateway` y `ServiceTicket`, porque cada uno controla un ciclo de vida relevante del dominio: activos monitoreados, sensores físicos, gateways de borde y tickets de servicio. Entities → `CalibrationRecord`, `OperatingParameter`, `MaintenanceSchedule` y `ServiceIntervention`, porque tienen identidad propia pero dependen del ciclo de vida de una raíz. Value Objects → `Location`, `TemperatureRange` y `HumidityRange`, porque describen valores reutilizables sin identidad propia.
 
@@ -1932,7 +2339,7 @@ En esta tercera etapa se toma el modelo de clases ya definido y se clasifica cad
   <em>Figura 4.7.1.3.2. Etapa 3 - Sensor Management Context.</em>
 </p>
 
-> Código PlantUML: `report/assets/chapter-04/classdiagram/classdiagram-etapa3-bc-sensor-management.puml`.
+> Código PlantUML: `assets/chapter-04/classdiagram/classdiagram-etapa3-bc-sensor-management.puml`.
 
 **Monitoring Context.** Aggregates → `Measurement` y `OfflineSyncBatch`. `Measurement` funciona como raíz abstracta de las lecturas recibidas y `OfflineSyncBatch` agrupa registros sincronizados desde un gateway después de operar sin conexión. Entities → `TemperatureReading`, `HumidityReading`, `ConnectivitySnapshot` y `RangeEvaluation`, porque conservan identidad o comportamiento propio dentro del proceso de monitoreo. En este bounded context no se modela una clase explícita como value object; las referencias externas se mantienen como identificadores tipados en atributos.
 
@@ -1942,7 +2349,7 @@ En esta tercera etapa se toma el modelo de clases ya definido y se clasifica cad
   <em>Figura 4.7.1.3.3. Etapa 3 - Monitoring Context.</em>
 </p>
 
-> Código PlantUML: `report/assets/chapter-04/classdiagram/classdiagram-etapa3-bc-monitoring.puml`.
+> Código PlantUML: `assets/chapter-04/classdiagram/classdiagram-etapa3-bc-monitoring.puml`.
 
 **Alerts Context.** Aggregates → `AlertRule`, `Alert` y `EscalationPolicy`, porque concentran reglas de evaluación, ciclo de vida de alertas y escalamiento. Entities → `ThermalIncident`, `CorrectiveAction` y `Notification`, porque poseen identidad y dependen del ciclo de atención de una alerta o incidencia. Value Object → `MeasurementEvaluationSnapshot`, ya que copia información de una medición para evaluar reglas sin acoplarse al modelo interno de Monitoreo. `NotificationChannel`, `EmailChannel`, `PushChannel` y `MessagingChannel` se marcan como servicios de dominio o estrategias de entrega, no como aggregates.
 
@@ -1952,7 +2359,7 @@ En esta tercera etapa se toma el modelo de clases ya definido y se clasifica cad
   <em>Figura 4.7.1.3.4. Etapa 3 - Alerts Context.</em>
 </p>
 
-> Código PlantUML: `report/assets/chapter-04/classdiagram/classdiagram-etapa3-bc-alerts.puml`.
+> Código PlantUML: `assets/chapter-04/classdiagram/classdiagram-etapa3-bc-alerts.puml`.
 
 **Reports Context.** Aggregates → `Report`, `MonthlyReport`, `ComplianceReport`, `DailyLog` y `Dashboard`, porque son raíces para generación, consolidación o visualización de información. Entities → `ReportExport` y `Widget`, ya que tienen identidad y dependen de reportes o dashboards. Value Objects → `ReadingSummary`, `AlertSummary` e `IncidentSummary`, porque son snapshots de información proveniente de otros contextos y evitan depender directamente de sus agregados.
 
@@ -1962,7 +2369,7 @@ En esta tercera etapa se toma el modelo de clases ya definido y se clasifica cad
   <em>Figura 4.7.1.3.5. Etapa 3 - Reports Context.</em>
 </p>
 
-> Código PlantUML: `report/assets/chapter-04/classdiagram/classdiagram-etapa3-bc-reports.puml`.
+> Código PlantUML: `assets/chapter-04/classdiagram/classdiagram-etapa3-bc-reports.puml`.
 
 **Audit Context.** Aggregates → `AuditCase` y `ComplianceCriterion`, porque el primero gobierna el caso de auditoría y el segundo representa una regla de cumplimiento reutilizable. Entities → `ComplianceFinding`, `EvidencePackage` y `EvidenceItem`, porque poseen identidad dentro del proceso de auditoría y trazabilidad. En este bounded context no se agrega un value object explícito; los tipos de cumplimiento y referencias externas permanecen como atributos del modelo.
 
@@ -1972,7 +2379,7 @@ En esta tercera etapa se toma el modelo de clases ya definido y se clasifica cad
   <em>Figura 4.7.1.3.6. Etapa 3 - Audit Context.</em>
 </p>
 
-> Código PlantUML: `report/assets/chapter-04/classdiagram/classdiagram-etapa3-bc-audit.puml`.
+> Código PlantUML: `assets/chapter-04/classdiagram/classdiagram-etapa3-bc-audit.puml`.
 
 ---
 
@@ -1992,9 +2399,8 @@ También se evitó introducir ciclos lógicos o dependencias transitivas inneces
   <em>Figura 4.8.1. Database Diagram del sistema ColdTrace.</em>
 </p>
 
-> El código fuente en PlantUML se encuentra en `report/assets/chapter-04/databasediagram/databasediagram.puml`.
+> El código fuente en PlantUML se encuentra en `assets/chapter-04/databasediagram/databasediagram.puml`.
 
----
 
 # Capítulo V: Product Implementation, Validation & Deployment
 
@@ -2475,7 +2881,6 @@ El proceso de despliegue considera:
 Durante el Sprint 1, todos los miembros del equipo participaron activamente en la implementación del Landing Page. El trabajo se distribuyó de manera colaborativa entre configuración del repositorio, estructura base, secciones visuales, funcionalidades interactivas y corrección de contenido.
 
 La evidencia de colaboración se refleja en los commits registrados en el repositorio `landing-page`, así como en la distribución de responsabilidades documentada en las secciones de Aspect Leaders and Collaborators y Development Evidence.
-
 
 ### 5.2.2 Sprint 2
 
@@ -3618,8 +4023,7 @@ A continuación se presenta el resumen de participación por integrante basado e
 <br>
 <br>
 
-
-# 5.2.3 Sprint 3
+ # 5.2.3 Sprint 3
 
 ## 5.2.3.1. Sprint Planning 3
 El Sprint 3 tuvo como objetivo principal diseñar, implementar y desplegar el backend oficial de ColdTrace mediante una RESTful API robusta. Esto permitirá reemplazar el servidor JSON simulado utilizado en el Sprint 2 y habilitar la persistencia de datos real, lógica de negocio y seguridad para los bounded contexts de Identity & Access Management, Asset Management, Monitoring, Alerts, Reports y Maintenance. A continuación se presenta el resumen del Sprint Planning Meeting realizado al inicio de este sprint.
@@ -3639,10 +4043,6 @@ El Sprint 3 tuvo como objetivo principal diseñar, implementar y desplegar el ba
 | **Sprint 3 Velocity** | 45 Story Points |
 | **Sum of Story Points** | 45 Story Points |
 
-
-<br>
-<br>
-
 ## 5.2.3.2. Aspect Leaders and Collaborators
 Durante el Sprint 3, el trabajo se organizó en torno a la creación de los controladores, servicios y repositorios de la RESTful API. Se designó un líder (L) por cada grupo de APIs y colaboradores (C) para apoyar en la integración.
 
@@ -3661,17 +4061,11 @@ Los aspectos principales del Sprint 3 fueron:
 | **Velásquez, Eduardo** | Edu-VLL | C | C | C | L | C |
 | **Delgado Arriola, Leonardo Sebastian**| leodev77 | C | C | C | C | L |
 
-
-
-<br>
-<br>
-
-
 ## 5.2.3.3. Sprint Backlog 3
 El Sprint Backlog se gestionó mediante Linear App. A continuación se detallan las tareas asignadas y completadas en el rango del 03 al 19 de junio de 2026.
 
-![Backlog en Linear](./report/assets/chapter-05/sprint-03/linar-backlog.png)
-Elaboración propia en Linear: [Ver el Backlog en Notion](https://app.notion.com/p/387eb3344500803c8075f8c8e02655d7?v=387eb33445008195a654000c50102c1c&source=copy_link)
+![Backlog en Linear](report/assets/chapter-05/sprint-03/linar-backlog.png)
+Elaboración propia en Linear: [https://linear.app/coldtrace/team/APPWEB/all](https://linear.app/coldtrace/team/APPWEB/all)
 
 *[Imagen: Captura de pantalla del tablero de Linear App mostrando el Sprint Backlog del Sprint 3, con las tareas organizadas en columnas de To Do, In Progress, In Review y Done]*
 
@@ -3698,10 +4092,6 @@ Elaboración propia en Linear: [Ver el Backlog en Notion](https://app.notion.com
 | TS15 | Technical Service Requests API | T-63 | TS15 - Technical Service Requests API | Solicitudes de servicio técnico: creación, actualización de estado y asignación a técnicos. | 4 | Eduardo Velásquez | Done |
 | TS16 | Organizations API Base | T-64 | TS16 - Organizations API Base | Estructura base del bounded context Organizations con DbContext y entidades principales. | 4 | Mauricio Pajés | Done |
 | TS17 | Locations API | T-65 | TS17 - Locations API | CRUD de ubicaciones (sedes, almacenes, puntos de distribución) dentro de una organización. | 3 | Mauricio Pajés | Done |
-
-<br>
-<br>
-
 
 ## 5.2.3.4. Development Evidence for Sprint Review
 Durante el Sprint 3, la implementación backend se gestionó en el repositorio `AplicacionesWeb-Grupo-2/coldtrace-platform` siguiendo el estándar de commits de la organización.
@@ -3753,17 +4143,14 @@ Durante el Sprint 3, la implementación backend se gestionó en el repositorio `
 
 ---
 
-<br>
-<br>
-
 
 ## 5.2.3.5. Execution Evidence for Sprint Review
 Al término del Sprint 3, se logró disponer de una infraestructura backend en ejecución con múltiples endpoints operativos para probar la lógica de negocio de ColdTrace.
 
-![swagger](./report/assets/chapter-05/sprint-03/swagger-assetSetting-asset.png)
-![swagger](./report/assets/chapter-05/sprint-03/swagger-gateways-Incidents-iotDevices.png)
-![swagger](./report/assets/chapter-05/sprint-03/swagger-locations-maintenance-notifications-organizatios.png)
-![swagger](./report/assets/chapter-05/sprint-03/swagger-reports-roles-sensor-technical-users.png)
+![swagger](report/assets/chapter-05/sprint-03/swagger-assetSetting-asset.png)
+![swagger](report/assets/chapter-05/sprint-03/swagger-gateways-Incidents-iotDevices.png)
+![swagger](report/assets/chapter-05/sprint-03/swagger-locations-maintenance-notifications-organizatios.png)
+![swagger](report/assets/chapter-05/sprint-03/swagger-reports-roles-sensor-technical-users.png)
 
 
 *[Imagen: Captura de pantalla de la interfaz de Swagger UI (o documento OpenAPI) mostrando todos los endpoints RESTful agrupados por controladores]*
@@ -3772,14 +4159,14 @@ Al término del Sprint 3, se logró disponer de una infraestructura backend en e
 <br>
 
 
-![swagger](./report/assets/chapter-05/sprint-03/getPostman.png)
+![swagger](report/assets/chapter-05/sprint-03/getPostman.png)
 
 *[Imagen: Captura de pantalla de Postman ejecutando una petición GET a `/api/v1/organizations` y recibiendo un objeto JSON estructurado]*
 
 
 <br>
 
-![swagger](./report/assets/chapter-05/sprint-03/database.png)
+![swagger](report/assets/chapter-05/sprint-03/database.png)
 
 *[Imagen: Captura de pantalla de un explorador de base de datos mostrando las tablas relacionales creadas a partir de las migraciones]*
 > Descripción: Evidencia de la creación del esquema de la base de datos relacional y el correcto mapeo de las entidades del dominio.
@@ -3787,14 +4174,9 @@ Al término del Sprint 3, se logró disponer de una infraestructura backend en e
 <br>
 A continuación se presenta el video de navegación del producto correspondiente al Sprint 3, que consolida la demostración del flujo de la RESTful API desplegada, priorizando los user flows relacionados con el core business de ColdTrace
 
-![evidencia del video](./report/assets/chapter-05/sprint-03/evidenceVideo.png)
+![evidencia del video](report/assets/chapter-05/sprint-03/evidenceVideo.png)
 
 **URL del video:** [Video Product Navigation Sprint 3](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323350_upc_edu_pe/IQC_iCMNMEIJRoDLEchEjK4XAQZvho_o3UllbIqUg4E8yHo?e=RanuCx&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
-
-
-<br>
-<br>
-
 
 ## 5.2.3.6. Services Documentation Evidence for Sprint Review
 Se implementó la documentación oficial de la RESTful API. A continuación se presentan los endpoints clave desarrollados en el Sprint 3:
@@ -3858,14 +4240,14 @@ Se incluyen a continuación capturas de la documentación interactiva accesible 
 
 **Captura 1: Ejecución interactiva de un endpoint de prueba**
 
-![Swagger UI - Endpoint POST](./report/assets/chapter-05/sprint-03/post-organizations.png)
+![Swagger UI - Endpoint POST](report/assets/chapter-05/sprint-03/post-organizations.png)
 
 > Descripción: Vista expandida de un endpoint (POST /api/v1/organizations) mostrando como agregar una nueva organización, modelo de respuesta exitosa status 200.
 
 
 **Captura 2: Detalle de un endpoint con ejemplo de request/response**
 
-![Swagger UI - Endpoint GET](./report/assets/chapter-05/sprint-03/get-organizations.png)
+![Swagger UI - Endpoint GET](report/assets/chapter-05/sprint-03/get-organizations.png)
 
 > Descripción: Vista expandida de un endpoint (ejemplo: GET /api/v1/organizations) mostrando especificación de parámetros, modelo de respuesta exitosa (200) y ejemplo de datos JSON retornado por el servidor.
 
@@ -3878,10 +4260,6 @@ Se incluyen a continuación capturas de la documentación interactiva accesible 
 **URL de la Documentación Swagger:** https://coldtrace-platform-55771439812.us-central1.run.app/swagger/index.html
 
 ---
-
-
-<br>
-<br>
 
 ## 5.2.3.7. Software Deployment Evidence for Sprint Review
 
@@ -3924,7 +4302,7 @@ Google Cloud Run también generó la URL automática alternativa `https://coldtr
 
 Se aprovisionó una instancia administrada de Cloud SQL seleccionando MySQL como motor de base de datos y asignándole el nombre `coldtrace-mysql` en la región `us-central1`.
 
-![Creación de la instancia Cloud SQL para MySQL asociada al backend de ColdTrace](./report/assets/chapter-05/sprint-03/creacion_intancia_cloudSQL_figura1.png)
+![Creación de la instancia Cloud SQL para MySQL asociada al backend de ColdTrace](report/assets/chapter-05/sprint-03/creacion_intancia_cloudSQL_figura1.png)
 
 ---
 
@@ -3934,7 +4312,7 @@ Se aprovisionó una instancia administrada de Cloud SQL seleccionando MySQL como
 
 Se confirmó que la instancia `coldtrace-mysql` quedó creada correctamente en la región configurada y disponible para recibir bases de datos y usuarios.
 
-![Instancia Cloud SQL coldtrace-mysql creada en Google Cloud y disponible para configuración](./report/assets/chapter-05/sprint-03/intancia_cloud_sql_figura2.png)
+![Instancia Cloud SQL coldtrace-mysql creada en Google Cloud y disponible para configuración](report/assets/chapter-05/sprint-03/intancia_cloud_sql_figura2.png)
 
 ---
 
@@ -3945,7 +4323,7 @@ Se confirmó que la instancia `coldtrace-mysql` quedó creada correctamente en l
 
 Dentro de la instancia Cloud SQL se registró el esquema `coldtrace_platform`, que actúa como base de datos principal donde el backend persiste la información de organizaciones, activos, reportes y monitoreo.
 
-![Base de datos coldtrace_platform registrada en la instancia Cloud SQL](./report/assets/chapter-05/sprint-03/base_de_datos_coldtrace_figura3.png)
+![Base de datos coldtrace_platform registrada en la instancia Cloud SQL](report/assets/chapter-05/sprint-03/base_de_datos_coldtrace_figura3.png)
 
 ---
 
@@ -3956,7 +4334,7 @@ Dentro de la instancia Cloud SQL se registró el esquema `coldtrace_platform`, q
 
 Se creó un usuario de aplicación dedicado para que el servicio Cloud Run acceda a MySQL sin utilizar credenciales administrativas durante la operación del backend.
 
-![Usuario de base de datos configurado para la conexión del backend](./report/assets/chapter-05/sprint-03/usuario_base_de_datos_figura4.png)
+![Usuario de base de datos configurado para la conexión del backend](report/assets/chapter-05/sprint-03/usuario_base_de_datos_figura4.png)
 
 ---
 
@@ -3967,7 +4345,7 @@ Se creó un usuario de aplicación dedicado para que el servicio Cloud Run acced
 
 Se creó el servicio Cloud Run `coldtrace-platform` conectado al repositorio `AplicacionesWeb-Grupo-2/coldtrace-platform` usando la rama `main`. Se seleccionó compilación mediante el `Dockerfile` del repositorio y se configuró el puerto de contenedor `8080`, requerido por Cloud Run para enrutar el tráfico HTTP.
 
-![Configuración inicial de Cloud Run con repositorio del backend, rama main y compilación mediante Dockerfile](./report/assets/chapter-05/sprint-03/configuracion_cloud_run_backend_figura5.png)
+![Configuración inicial de Cloud Run con repositorio del backend, rama main y compilación mediante Dockerfile](report/assets/chapter-05/sprint-03/configuracion_cloud_run_backend_figura5.png)
 
 ---
 
@@ -3978,7 +4356,7 @@ Se creó el servicio Cloud Run `coldtrace-platform` conectado al repositorio `Ap
 
 Se registraron las variables de entorno de producción para separar la configuración del código fuente: cadena de conexión a Cloud SQL, configuración del runtime de ASP.NET Core y parámetros de CORS para permitir la integración con el frontend.
 
-![Variables de entorno del servicio Cloud Run para conectar ASP.NET Core con Cloud SQL y el frontend](./report/assets/chapter-05/sprint-03/variable_de_entorno_figura6.png)
+![Variables de entorno del servicio Cloud Run para conectar ASP.NET Core con Cloud SQL y el frontend](report/assets/chapter-05/sprint-03/variable_de_entorno_figura6.png)
 
 ---
 
@@ -3989,7 +4367,7 @@ Se registraron las variables de entorno de producción para separar la configura
 
 Se ejecutó el despliegue inicial. Cloud Run publicó una revisión activa del servicio y habilitó el panel de métricas para monitorear solicitudes, latencia y uso de recursos en tiempo real.
 
-![Servicio Cloud Run desplegado y panel de métricas disponible para monitoreo](./report/assets/chapter-05/sprint-03/servicio_cloud_run_desplegado_figura7.png)
+![Servicio Cloud Run desplegado y panel de métricas disponible para monitoreo](report/assets/chapter-05/sprint-03/servicio_cloud_run_desplegado_figura7.png)
 
 ---
 
@@ -4000,7 +4378,7 @@ Se ejecutó el despliegue inicial. Cloud Run publicó una revisión activa del s
 
 Se verificó que la documentación interactiva de la API esté expuesta públicamente en la URL de producción, confirmando que los endpoints REST pueden ser revisados y probados directamente desde el navegador.
 
-![Swagger UI publicado para validar los endpoints REST de ColdTrace.Platform](./report/assets/chapter-05/sprint-03/swaggerUI_publicado_figura8.png)
+![Swagger UI publicado para validar los endpoints REST de ColdTrace.Platform](report/assets/chapter-05/sprint-03/swaggerUI_publicado_figura8.png)
 
 ---
 
@@ -4008,19 +4386,19 @@ Se verificó que la documentación interactiva de la API esté expuesta pública
 
 **`Dockerfile`** — Define el proceso de build y runtime de .NET, publicando el binario de la Web API y exponiendo el puerto `8080` requerido por Cloud Run.
 
-![Dockerfile del backend con compilación .NET, runtime ASP.NET Core y exposición del puerto 8080](./report/assets/chapter-05/sprint-03/dockerfile_backend_figura9.png)
+![Dockerfile del backend con compilación .NET, runtime ASP.NET Core y exposición del puerto 8080](report/assets/chapter-05/sprint-03/dockerfile_backend_figura9.png)
 
 ---
 
 **`backend-ci.yml` (GitHub Actions)** — Documenta la validación continua del backend antes de integrar cambios al repositorio principal.
 
-![Workflow backend-ci.yml usado para validar la integración continua del Web Service](./report/assets/chapter-05/sprint-03/workflow_backend_figura10.png)
+![Workflow backend-ci.yml usado para validar la integración continua del Web Service](report/assets/chapter-05/sprint-03/workflow_backend_figura10.png)
 
 ---
 
 **`appsettings.Production.json`** — Define la cadena de conexión a MySQL mediante placeholders de variables de entorno, evitando exponer host, usuario, contraseña o nombre del esquema en el código fuente del repositorio.
 
-![appsettings.Production.json con cadena de conexión basada en variables de entorno](./report/assets/chapter-05/sprint-03/appsettings_productionsjson_figura11.png)
+![appsettings.Production.json con cadena de conexión basada en variables de entorno](report/assets/chapter-05/sprint-03/appsettings_productionsjson_figura11.png)
 
 ---
 
@@ -4030,7 +4408,7 @@ Se verificó que la documentación interactiva de la API esté expuesta pública
 
 La conexión exitosa confirma acceso a la base de datos real `coldtrace_platform` y permite inspeccionar los datos persistidos por la aplicación.
 
-![Conexión exitosa desde Rider/DataGrip hacia la base de datos real coldtrace_platform](./report/assets/chapter-05/sprint-03/conexion_rider_to_base_de_datos_figura12.png)
+![Conexión exitosa desde Rider/DataGrip hacia la base de datos real coldtrace_platform](report/assets/chapter-05/sprint-03/conexion_rider_to_base_de_datos_figura12.png)
 
 ---
 
@@ -4038,12 +4416,7 @@ La conexión exitosa confirma acceso a la base de datos real `coldtrace_platform
 
 Se ejecutó una solicitud GET al endpoint publicado en Cloud Run. La respuesta `200 OK` con datos reales confirma que la API está operativa, conectada a la base de datos y accesible desde clientes externos.
 
-![Prueba del endpoint GET /api/v1/organizations desde Postman con respuesta 200 OK](./report/assets/chapter-05/sprint-03/prueba_endpoint_GET_figura13.png)
-
-
-
-<br>
-<br>
+![Prueba del endpoint GET /api/v1/organizations desde Postman con respuesta 200 OK](report/assets/chapter-05/sprint-03/prueba_endpoint_GET_figura13.png)
 
 
 
@@ -4064,114 +4437,21 @@ A continuación se presentan los analíticos de colaboración del repositorio pr
 
 **Figura 1. Gráfica de contribuciones de commits por integrante**
 
-![GitHub Contributors Graph – coldtrace-platform](./report/assets/chapter-05/sprint-03/contributors.png)
+![GitHub Contributors Graph – coldtrace-platform](report/assets/chapter-05/sprint-03/contributors.png)
 
-
-<br>
-<br>
 
 
 ## 5.3. Validation Interviews
 
+Durante el Sprint 1 no se ejecutaron entrevistas de validación del producto, debido a que el alcance de la iteración estuvo centrado en la construcción y despliegue inicial del Landing Page. Esta actividad queda planificada para una iteración posterior, cuando exista una versión de producto con flujos funcionales suficientes para evaluar con usuarios.
+
 ### 5.3.1. Diseño de Entrevistas
 
-Para la validación de la solución implementada, se diseñaron entrevistas dirigidas a representantes de los segmentos objetivo identificados en las fases iniciales del proyecto. El objetivo fue evaluar la percepción de los usuarios sobre la funcionalidad, usabilidad y pertinencia de la RESTful API de ColdTrace y su integración con la Frontend Web Application.
-
-Se definieron dos perfiles de entrevistados:
-
-- **Dueño o encargado de negocio:** Interesado en la reducción de merma, el cumplimiento sanitario y la generación de reportes operativos.
-- **Responsable de operaciones o calidad:** Enfocado en el monitoreo en tiempo real, la gestión de alertas e incidencias y la configuración de parámetros operativos.
-
-Las entrevistas se estructuraron en torno a los siguientes ejes de validación:
-
-1. **Registro y gestión de organizaciones y usuarios:** Validar que el flujo de sign-up y administración de usuarios sea claro y funcional.
-2. **Gestión de activos e infraestructura IoT:** Evaluar la facilidad para registrar activos, vincular sensores y configurar gateways.
-3. **Monitoreo y alertas:** Verificar que la visualización de lecturas de sensores y la gestión de incidencias térmicas responda a las necesidades operativas.
-4. **Reportes y cumplimiento:** Confirmar que la generación de reportes operativos y de cumplimiento sea útil para la toma de decisiones.
-5. **Mantenimiento y servicio técnico:** Evaluar la utilidad de la programación de mantenimiento preventivo y la gestión de solicitudes de servicio técnico.
+El diseño de entrevistas de validación será elaborado en una siguiente iteración, considerando preguntas orientadas a evaluar comprensión de la propuesta de valor, utilidad percibida, claridad visual y facilidad de navegación.
 
 ### 5.3.2. Registro de Entrevistas
 
-Para cada segmento objetivo se registrarán 3 entrevistas. Cada entrevista debe incluir la información personal solicitada, un screenshot del video, el enlace de Microsoft Stream, el timing donde inicia la entrevista, su duración y un resumen descriptivo de las principales apreciaciones del participante.
-
-**Video consolidado de entrevistas de validación:** [Ver video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQDzxmtGoZMES7vutMFjzCRkAXimh9-_K-h2BVM1FMlXjhY?e=hdDtj8&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
-**Nomenclatura del video:** `upc-pre-202610-1asi0729-10177-ColdTracevalidation-sprint-3.mp4`
-
-#### Segmento objetivo 1: Dueños, administradores o encargados de pequeños negocios alimentarios
-
-| **Entrevista Nro. 1** |  |
-| --- | --- |
-| Screenshot | <img src="report/assets/chapter-05/validation/IsaacDiazInterview.png" alt="Screenshot de entrevista de validación - Isaac Diaz" width="600"> |
-| Nombres y apellidos | Isaac Diaz |
-| Edad | 25 años |
-| Distrito | San Miguel |
-| Segmento objetivo | Dueños, administradores o encargados de pequeños negocios alimentarios |
-| URL de grabación | [Ver video en Microsoft Stream](https://1drv.ms/v/c/470edfbbf4f38077/IQDBetSYZ7JeQpQ6vmBHOrz2AQAVRE3xe3Wd1l_OaXu63Cs?e=l02EFp) |
-| Timing de inicio | 00:00 |
-| Duración | 12:28 |
-| Resumen | Isaac evaluó ColdTrace desde el rol de encargado de un pequeño negocio familiar que comercializa productos frios como carnes. Durante la revisión de la Landing Page, comprendió que la propuesta se enfoca en monitorear equipos refrigerados, recibir alertas y consultar historial, relacionándolo con su necesidad de detectar fallas antes de que la mercadería esté en riesgo. En la Web Application, valoró especialmente el dashboard, la revisión de activos, las alertas y el historial diario, pues estos elementos reemplazan parcialmente el control manual basado en revisar indicadores de refrigeradoras o inspeccionar visualmente los productos. Señaló que la solución sería útil si mantiene una experiencia simple, accesible desde cualquier dispositivo y con notificaciones claras. |
-
-| **Entrevista Nro. 2** | |
-| --- | --- |
-| Screenshot | <img src="report/assets/chapter-05/validation/GabrielRamirezInterview.png" alt="Screenshot de entrevista de validación - Gabriel Ramirez" width="600"> |
-| Nombres y apellidos | Gabriel Ramirez Gutiérrez |
-| Edad | 19 años |
-| Distrito | San Miguel |
-| Segmento objetivo | Dueños, administradores o encargados de pequeños negocios alimentarios |
-| URL de grabación | [Ver video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416706_upc_edu_pe/IQCjVmGP_7UOT5AhWUlpq7XcAXPy3iQzuc8WC1u_7x62KWw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=D1GZfR) |
-| Timing de inicio | 00:00 |
-| Duración | 08:07 |
-| Resumen | Gabriel evaluó ColdTrace desde su rol como trabajador de una bodega en San Miguel, donde gestiona áreas de carnicería y verdulería. Durante la presentación, destacó que la Landing Page es clara y comunica eficazmente la propuesta de valor. Valoró positivamente la automatización del monitoreo de temperatura, señalando que le permitiría gestionar su inventario de forma más rápida y precisa desde un dispositivo, eliminando el control manual. Finalmente, expresó que las funciones de alertas y notificaciones del sistema serían herramientas de gran ayuda en su labor diaria. |
-
-| **Entrevista Nro. 3** |  |
-| --- | --- |
-| Screenshot | <img src="report/assets/chapter-05/validation/vi-s1-01-jean-pool-coaguila.png" alt="Screenshot de entrevista de validación - Jean Pool Coaguila" width="600"> |
-| Nombres y apellidos | Jean Pool Coaguila |
-| Edad | 29 años |
-| Distrito | Lima Norte |
-| Segmento objetivo | Dueños, administradores o encargados de pequeños negocios alimentarios |
-| URL de grabación | [Ver video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQDzxmtGoZMES7vutMFjzCRkAXimh9-_K-h2BVM1FMlXjhY?e=hdDtj8&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D) |
-| Timing de inicio | 00:00 |
-| Duración | 18:16 |
-| Resumen | Jean Pool evaluó ColdTrace desde el rol de encargado de un minimarket familiar que comercializa productos perecibles. Durante la revisión de la Landing Page, comprendió que la propuesta se enfoca en monitorear equipos refrigerados, recibir alertas y consultar historial, relacionándolo con su necesidad de detectar fallas antes de que la mercadería esté en riesgo. En la Web Application, valoró especialmente el dashboard, la revisión de activos, las alertas y el historial diario, pues estos elementos reemplazan parcialmente el control manual basado en revisar indicadores de refrigeradoras o inspeccionar visualmente los productos. Señaló que la solución sería útil si mantiene una experiencia simple, accesible desde celular y con mensajes de alerta claros. Como oportunidades de mejora, sugirió explicar mejor el costo, la instalación de sensores y agregar recomendaciones concretas de acción ante cada alerta. |
-
-#### Segmento objetivo 2: Responsables de operaciones, calidad o logística en negocios con cadena de frío
-
-| **Entrevista Nro. 1** |  |
-| --- | --- |
-| Screenshot | <img src="report/assets/chapter-05/validation/vi-s2-01-rodrigo-vasquez.png" alt="Screenshot de entrevista de validación - Rodrigo Vasquez" width="600"> |
-| Nombres y apellidos | Rodrigo Vasquez |
-| Edad | 30 años |
-| Distrito | Lima Metropolitana |
-| Segmento objetivo | Responsables de operaciones, calidad o logística en negocios con cadena de frío |
-| URL de grabación | [Ver video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQDzxmtGoZMES7vutMFjzCRkAXimh9-_K-h2BVM1FMlXjhY?e=hdDtj8&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D) |
-| Timing de inicio | 18:16 |
-| Duración | 31:58 |
-| Resumen | Rodrigo evaluó ColdTrace desde el rol de supervisor de operaciones encargado de controlar activos refrigerados y consolidar información operativa. Al revisar la Landing Page, identificó que la propuesta responde a problemas mencionados en la entrevista inicial, como la falta de visibilidad inmediata, la dependencia de registros manuales y la dispersión de información. En la Web Application, destacó el valor del dashboard operacional para priorizar riesgos, la gestión de activos y sensores para mantener trazabilidad de equipos, el módulo de incidentes para reconocer y cerrar alertas con acciones correctivas, y los reportes para auditorías o revisiones internas. Consideró que ColdTrace puede reducir el trabajo manual de consolidación en Excel o Google Sheets, siempre que los reportes sean descargables y la interfaz mantenga filtros claros por sede, activo, severidad y estado. Como mejoras, recomendó reforzar la priorización de alertas, agregar recomendaciones de acción y mejorar la vista por sede o zona para operaciones con varios puntos de control. |
-
-| **Entrevista Nro. 2** |  |
-| --- | --- |
-| Screenshot | <br><br> |
-| Nombres y apellidos |  |
-| Edad |  |
-| Distrito |  |
-| Segmento objetivo | Responsables de operaciones, calidad o logística en negocios con cadena de frío |
-| URL de grabación |  |
-| Timing de inicio |  |
-| Duración |  |
-| Resumen | <br><br><br> |
-
-| **Entrevista Nro. 3** |  |
-| --- | --- |
-| Screenshot | <br><br> |
-| Nombres y apellidos |  |
-| Edad |  |
-| Distrito |  |
-| Segmento objetivo | Responsables de operaciones, calidad o logística en negocios con cadena de frío |
-| URL de grabación |  |
-| Timing de inicio |  |
-| Duración |  |
-| Resumen | <br><br><br> |
+No se registran entrevistas de validación para Sprint 1.
 
 ### 5.3.3. Evaluaciones según heurísticas
 
@@ -4179,12 +4459,8 @@ No se realizaron evaluaciones heurísticas formales durante Sprint 1. La revisi�
 
 ## 5.4. Video About-the-Product
 
-Como parte de la entrega del proyecto, se ha elaborado un video explicativo que presenta de manera resumida el producto ColdTrace, una plataforma orientada a la gestión y monitoreo de la cadena de frío. En el video se describe el problema que aborda el sistema, sus principales funcionalidades —gestión de organizaciones, ubicaciones, gateways, activos, dispositivos IoT, lecturas de sensores, incidentes y reportes— así como el valor que aporta a las organizaciones que dependen del control de temperatura y humedad en sus operaciones.
-El video puede visualizarse en el siguiente enlace:
+El documento fuente no registra un enlace final de video About-the-Product para esta entrega. El video será incorporado cuando se consolide la evidencia audiovisual del producto.
 
-[Ver en Microsoft Team](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414054_upc_edu_pe/IQCmZIySYa3pT43sGAmn0UaGAfUnEK7pyE9kdDZWjSlXGX4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=1oulNb)
-
----
 
 # Capítulo VI: Conclusions
 ## 6.1. Conclusiones y recomendaciones
@@ -4207,47 +4483,14 @@ También se recomienda ampliar las pruebas automatizadas del backend, incluyendo
 Finalmente, se debe mantener la documentación del informe sincronizada con cada despliegue, incluyendo URLs vigentes, capturas legibles, evidencia de ejecución, estado de ramas y enlaces finales a los videos de exposición.
 
 ## 6.2. Video About-the-Team
+El enlace final del video About-the-Team no se encuentra registrado en el repositorio al momento de esta revisión. Debe incorporarse cuando el equipo consolide la evidencia audiovisual de exposición final.
 
-Como parte de la entrega final, cada integrante del equipo ha grabado una breve presentación personal en la que comparte su experiencia durante el desarrollo del proyecto ColdTrace, destacando los conocimientos adquiridos en el curso y cómo estos contribuyeron a su crecimiento profesional y al logro de los objetivos planteados.
-Los integrantes que participan en el video son:
-<table align="center" style="margin: 0 auto; font-size: 15px;">
-<thead>
-    <tr>
-      <th align="center">Código</th>
-      <th align="center">Apellidos y Nombres</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="center">U202414054</td>
-      <td align="left">Jean Pool Alexander Arias Tasayco</td>
-    </tr>
-    <tr>
-      <td align="center">U202410093</td>
-      <td align="left">Mauricio Luis Pajes Leon</td>
-    </tr>
-    <tr>
-      <td align="center">U202321020</td>
-      <td align="left">Leonardo Sebastian Delgado Arriola</td>
-    </tr>
-    <tr>
-      <td align="center">U202416706</td>
-      <td align="left">Santiago Enrique Vargas Alarcon</td>
-    </tr>
-    <tr>
-      <td align="center">U202323350</td>
-      <td align="left">Eduardo David Velasquez Laquihuanaco</td>
-    </tr>
-  </tbody>
-</table>
-
-[upc-pre-202610-1ASI0730-10177-coldtrace-about-the-team-sprint-3](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414054_upc_edu_pe/IQB7LR5aGL-8RoNvXRn22suHAQESryMX97Dk_Kc26UCQ6B0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=sRmsG2)
-
----
 
 # Bibliografía
-Agraria.pe. (2019, junio 26). Perú pierde más del 33% de los alimentos que produce por mal uso de la cadena de frío. Agraria. https://www.agraria.pe/noticias/peru-pierde-mas-del-33-de-los-alimentos-que-produce-por-mal--19324
+Agraria.pe. (2019, junio 26). Perú pierde más del 33% de los alimentos que produce por mal uso de la cadena de frío. Agraria. https://www.agraria.pe/noticias/peru-pierde-mas-del-33-de-los-alimentos-que-produce-por-mal--19324 
 
-FAO. (2021). Más de 12 millones de toneladas de alimentos se pierden a lo largo de la cadena productiva en el Perú. Organización de las Naciones Unidas para la Alimentación y la Agricultura. https://www.fao.org/peru/noticias/detail-events/en/c/1712376/
+FAO. (2021). Más de 12 millones de toneladas de alimentos se pierden a lo largo de la cadena productiva en el Perú. Organización de las Naciones Unidas para la Alimentación y la Agricultura. https://www.fao.org/peru/noticias/detail-events/en/c/1712376/ 
 
-Gestión. (2025, septiembre 21). Mercado de almacenes en frío en Perú crecerá a US$ 510 millones en 2025: ¿qué lo impulsa? Gestión. https://gestion.pe/economia/empresas/mercado-de-almacenes-en-frio-en-peru-crecera-a-us-510-millones-en-2025-que-lo-impulsa-noticia/
+Gestión. (2025, septiembre 21). Mercado de almacenes en frío en Perú crecerá a US$ 510 millones en 2025: ¿qué lo impulsa? Gestión. https://gestion.pe/economia/empresas/mercado-de-almacenes-en-frio-en-peru-crecera-a-us-510-millones-en-2025-que-lo-impulsa-noticia/ 
+
+
