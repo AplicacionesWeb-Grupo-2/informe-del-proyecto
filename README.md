@@ -4093,7 +4093,7 @@ Las entrevistas se estructuraron en torno a los siguientes ejes de validación:
 Para cada segmento objetivo se registrarán 3 entrevistas. Cada entrevista debe incluir la información personal solicitada, un screenshot del video, el enlace de Microsoft Stream, el timing donde inicia la entrevista, su duración y un resumen descriptivo de las principales apreciaciones del participante.
 
 **Video consolidado de entrevistas de validación:** [Ver video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQDzxmtGoZMES7vutMFjzCRkAXimh9-_K-h2BVM1FMlXjhY?e=hdDtj8&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
-**Nomenclatura del video:** `upc-pre-202610-1asi0729-10177-ICEQvalidation-sprint-3.mp4`
+**Nomenclatura del video:** `upc-pre-202610-1asi0729-10177-ColdTracevalidation-sprint-3.mp4`
 
 #### Segmento objetivo 1: Dueños, administradores o encargados de pequeños negocios alimentarios
 
