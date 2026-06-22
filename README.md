@@ -4241,7 +4241,7 @@ Los integrantes que participan en el video son:
   </tbody>
 </table>
 
-[upc-pre-202610-1ASI0730-10177-coldtrace-about-the-team-sprint-3](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414054_upc_edu_pe/IQB7LR5aGL-8RoNvXRn22suHAS4NXIRQzpw2kvnvDeEd7ns?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=ZhVVGH)
+[upc-pre-202610-1ASI0730-10177-coldtrace-about-the-team-sprint-3](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414054_upc_edu_pe/IQB7LR5aGL-8RoNvXRn22suHAQESryMX97Dk_Kc26UCQ6B0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=sRmsG2)
 
 ---
 
