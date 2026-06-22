@@ -3844,13 +3844,166 @@ Se incluyen a continuación capturas de la documentación interactiva accesible 
 ---
 
 ## 5.2.3.7. Software Deployment Evidence for Sprint Review
-El backend oficial de ColdTrace ha sido preparado para ser desplegado en un entorno en la nube, reemplazando el servicio anterior de `json-server`. 
 
-*[Imagen: Captura del dashboard de despliegue en la plataforma Cloud (ej. Azure App Service, AWS, o Render) mostrando el servicio backend (API) en estado 'Running' y activo]*
-> Descripción: Panel de administración del servicio en la nube donde se hospeda la RESTful API oficial de ColdTrace lista para producción.
+Durante el Sprint 3 se realizó el despliegue de la primera versión de los Web Services de ColdTrace. El backend ASP.NET Core fue containerizado con Docker y publicado en **Google Cloud Run**, conectado a una base de datos administrada en **Google Cloud SQL for MySQL**. A continuación se presentan las evidencias del proceso de despliegue.
 
-*[Imagen: Captura de pantalla de un health check o ping exitoso a la URL pública de la API de producción]*
-> Descripción: Verificación de conectividad demostrando que el despliegue está en vivo y aceptando peticiones externas correctamente.
+---
+
+### Despliegue de Web Services
+
+**Stack de despliegue:**
+
+| Componente | Tecnología / Plataforma |
+| :--- | :--- |
+| Runtime del backend | ASP.NET Core containerizado con Docker |
+| Plataforma de hosting | Google Cloud Run — `us-central1` |
+| Base de datos | Google Cloud SQL for MySQL — instancia `coldtrace-mysql` |
+| Esquema de base de datos | `coldtrace_platform` | 
+| Registro de imágenes | Google Artifact Registry |
+| Integración continua | GitHub Actions (`backend-ci.yml`) |
+| Documentación de API | Swagger UI / OpenAPI |
+
+**URLs del servicio desplegado:**
+
+| Servicio | URL |
+| :--- | :--- |
+| Repositorio backend | https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform |
+| Backend Cloud Run | https://coldtrace-platform-3kti2ylcba-uc.a.run.app |
+| Swagger UI | https://coldtrace-platform-3kti2ylcba-uc.a.run.app/swagger |
+| Swagger JSON | https://coldtrace-platform-3kti2ylcba-uc.a.run.app/swagger/v1/swagger.json |
+
+---
+ 
+ <br>
+
+## **Procedimiento de despliegue**
+
+**Creación de la instancia Cloud SQL para MySQL**
+
+Se aprovisionó una instancia administrada de Cloud SQL seleccionando MySQL como motor de base de datos y asignándole el nombre `coldtrace-mysql` en la región `us-central1`.
+
+![Creación de la instancia Cloud SQL para MySQL asociada al backend de ColdTrace](report/assets/chapter-05/sprint-03/creacion_intancia_cloudSQL_figura1.png)
+
+---
+
+<br>
+
+**Verificación de la instancia `coldtrace-mysql` disponible**
+
+Se confirmó que la instancia `coldtrace-mysql` quedó creada correctamente en la región configurada y disponible para recibir bases de datos y usuarios.
+
+![Instancia Cloud SQL coldtrace-mysql creada en Google Cloud y disponible para configuración](report/assets/chapter-05/sprint-03/intancia_cloud_sql_figura2.png)
+
+---
+
+<br>
+
+
+**Creación de la base de datos `coldtrace_platform`**
+
+Dentro de la instancia Cloud SQL se registró el esquema `coldtrace_platform`, que actúa como base de datos principal donde el backend persiste la información de organizaciones, activos, reportes y monitoreo.
+
+![Base de datos coldtrace_platform registrada en la instancia Cloud SQL](report/assets/chapter-05/sprint-03/base_de_datos_coldtrace_figura3.png)
+
+---
+
+<br>
+
+
+**Configuración del usuario de base de datos**
+
+Se creó un usuario de aplicación dedicado para que el servicio Cloud Run acceda a MySQL sin utilizar credenciales administrativas durante la operación del backend.
+
+![Usuario de base de datos configurado para la conexión del backend](report/assets/chapter-05/sprint-03/usuario_base_de_datos_figura4.png)
+
+---
+
+<br>
+
+
+**Configuración del servicio Cloud Run**
+
+Se creó el servicio Cloud Run `coldtrace-platform` conectado al repositorio `AplicacionesWeb-Grupo-2/coldtrace-platform` usando la rama `main`. Se seleccionó compilación mediante el `Dockerfile` del repositorio y se configuró el puerto de contenedor `8080`, requerido por Cloud Run para enrutar el tráfico HTTP.
+
+![Configuración inicial de Cloud Run con repositorio del backend, rama main y compilación mediante Dockerfile](report/assets/chapter-05/sprint-03/configuracion_cloud_run_backend_figura5.png)
+
+---
+
+<br>
+
+
+**Configuración de variables de entorno en Cloud Run**
+
+Se registraron las variables de entorno de producción para separar la configuración del código fuente: cadena de conexión a Cloud SQL, configuración del runtime de ASP.NET Core y parámetros de CORS para permitir la integración con el frontend.
+
+![Variables de entorno del servicio Cloud Run para conectar ASP.NET Core con Cloud SQL y el frontend](report/assets/chapter-05/sprint-03/variable_de_entorno_figura6.png)
+
+---
+
+<br>
+
+
+**Servicio Cloud Run desplegado y panel de métricas activo**
+
+Se ejecutó el despliegue inicial. Cloud Run publicó una revisión activa del servicio y habilitó el panel de métricas para monitorear solicitudes, latencia y uso de recursos en tiempo real.
+
+![Servicio Cloud Run desplegado y panel de métricas disponible para monitoreo](report/assets/chapter-05/sprint-03/servicio_cloud_run_desplegado_figura7.png)
+
+---
+
+<br>
+
+
+**Swagger UI publicado y accesible**
+
+Se verificó que la documentación interactiva de la API esté expuesta públicamente en la URL de producción, confirmando que los endpoints REST pueden ser revisados y probados directamente desde el navegador.
+
+![Swagger UI publicado para validar los endpoints REST de ColdTrace.Platform](report/assets/chapter-05/sprint-03/swaggerUI_publicado_figura8.png)
+
+---
+
+**Archivos de configuración que soportan el despliegue:**
+
+**`Dockerfile`** — Define el proceso de build y runtime de .NET, publicando el binario de la Web API y exponiendo el puerto `8080` requerido por Cloud Run.
+
+![Dockerfile del backend con compilación .NET, runtime ASP.NET Core y exposición del puerto 8080](report/assets/chapter-05/sprint-03/dockerfile_backend_figura9.png)
+
+---
+
+**`backend-ci.yml` (GitHub Actions)** — Documenta la validación continua del backend antes de integrar cambios al repositorio principal.
+
+![Workflow backend-ci.yml usado para validar la integración continua del Web Service](report/assets/chapter-05/sprint-03/workflow_backend_figura10.png)
+
+---
+
+**`appsettings.Production.json`** — Define la cadena de conexión a MySQL mediante placeholders de variables de entorno, evitando exponer host, usuario, contraseña o nombre del esquema en el código fuente del repositorio.
+
+![appsettings.Production.json con cadena de conexión basada en variables de entorno](report/assets/chapter-05/sprint-03/appsettings_productionsjson_figura11.png)
+
+---
+
+**Validación del despliegue:**
+
+**Conexión a la base de datos desde Rider/DataGrip**
+
+La conexión exitosa confirma acceso a la base de datos real `coldtrace_platform` y permite inspeccionar los datos persistidos por la aplicación.
+
+![Conexión exitosa desde Rider/DataGrip hacia la base de datos real coldtrace_platform](report/assets/chapter-05/sprint-03/conexion_rider_to_base_de_datos_figura12.png)
+
+---
+
+**Prueba del endpoint `GET /api/v1/organizations` desde Postman**
+
+Se ejecutó una solicitud GET al endpoint publicado en Cloud Run. La respuesta `200 OK` con datos reales confirma que la API está operativa, conectada a la base de datos y accesible desde clientes externos.
+
+![Prueba del endpoint GET /api/v1/organizations desde Postman con respuesta 200 OK](report/assets/chapter-05/sprint-03/prueba_endpoint_GET_figura13.png)
+
+
+
+<br>
+<br>
+ 
+
 
 ## 5.2.3.8. Team Collaboration Insights during Sprint
 Durante el Sprint 3, el equipo concentró sus esfuerzos en el desarrollo de la API RESTful. La distribución del trabajo se reflejó en las asignaciones de issues de Linear App:
@@ -3863,7 +4016,17 @@ Durante el Sprint 3, el equipo concentró sus esfuerzos en el desarrollo de la A
 | **Vargas Alarcón, Santiago Enrique**| SanVargasAI | 2 | Assets API, Asset Settings |
 | **Delgado Arriola, Leonardo Sebastian**| leodev77 | 2 | Incidents, Reports API |
 
-La alta cantidad de issues resueltos (Status: Done) por Mauricio Pajés y Eduardo Velásquez evidencia un avance fuerte en los módulos fundacionales y de mantenimiento, mientras que los módulos asignados a Jean Pool Arias, Santiago y Leonardo se encontraban en fase de revisión de código (In Review) hacia el cierre de las mediciones del sprint, demostrando un flujo de integración continuo en el equipo.
+<br>
+
+A continuación se presentan los analíticos de colaboración del repositorio principal del backend (`coldtrace-platform`) en GitHub, que muestran la participación de todos los integrantes del equipo durante el Sprint 3.
+
+**Figura 1. Gráfica de contribuciones de commits por integrante**
+
+![GitHub Contributors Graph – coldtrace-platform](report/assets/chapter-05/sprint-03/contributors.png)
+
+
+<br>
+<br>
 
 
 ## 5.3. Validation Interviews
