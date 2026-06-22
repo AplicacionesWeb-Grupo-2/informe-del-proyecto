@@ -4109,17 +4109,17 @@ Para cada segmento objetivo se registrarán 3 entrevistas. Cada entrevista debe 
 | Duración | 12:28 |
 | Resumen | Isaac evaluó ColdTrace desde el rol de encargado de un pequeño negocio familiar que comercializa productos frios como carnes. Durante la revisión de la Landing Page, comprendió que la propuesta se enfoca en monitorear equipos refrigerados, recibir alertas y consultar historial, relacionándolo con su necesidad de detectar fallas antes de que la mercadería esté en riesgo. En la Web Application, valoró especialmente el dashboard, la revisión de activos, las alertas y el historial diario, pues estos elementos reemplazan parcialmente el control manual basado en revisar indicadores de refrigeradoras o inspeccionar visualmente los productos. Señaló que la solución sería útil si mantiene una experiencia simple, accesible desde cualquier dispositivo y con notificaciones claras. |
 
-| **Entrevista Nro. 2** |  |
+| **Entrevista Nro. 2** | |
 | --- | --- |
-| Screenshot | <br><br> |
-| Nombres y apellidos |  |
-| Edad |  |
-| Distrito |  |
+| Screenshot | <img src="report/assets/chapter-05/validation/GabrielRamirezInterview.png" alt="Screenshot de entrevista de validación - Gabriel Ramirez" width="600"> |
+| Nombres y apellidos | Gabriel Ramirez Gutiérrez |
+| Edad | 19 años |
+| Distrito | San Miguel |
 | Segmento objetivo | Dueños, administradores o encargados de pequeños negocios alimentarios |
-| URL de grabación |  |
-| Timing de inicio |  |
-| Duración |  |
-| Resumen | <br><br><br> |
+| URL de grabación | [Ver video en Microsoft Stream](https://1drv.ms/v/c/470edfbbf4f38077/IQDBetSYZ7JeQpQ6vmBHOrz2AQAVRE3xe3Wd1l_OaXu63Cs?e=l02EFp) |
+| Timing de inicio | 00:00 |
+| Duración | 08:07 |
+| Resumen | Gabriel evaluó ColdTrace desde su rol como trabajador de una bodega en San Miguel, donde gestiona áreas de carnicería y verdulería. Durante la presentación, destacó que la Landing Page es clara y comunica eficazmente la propuesta de valor. Valoró positivamente la automatización del monitoreo de temperatura, señalando que le permitiría gestionar su inventario de forma más rápida y precisa desde un dispositivo, eliminando el control manual. Finalmente, expresó que las funciones de alertas y notificaciones del sistema serían herramientas de gran ayuda en su labor diaria. |
 
 | **Entrevista Nro. 3** |  |
 | --- | --- |
