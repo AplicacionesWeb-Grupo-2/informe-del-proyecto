@@ -83,7 +83,8 @@
 | Versión | Fecha      | Autor                 | Descripción de modificación                                                                                                                                                                                                                                                                                 |
 | :------ | :--------- | :-------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | AV1     | 25/04/2026 | Todos los integrantes | Primera versión formal del informe, correspondiente al avance AV1 del proyecto. Incluye la documentación inicial del producto, análisis del segmento objetivo, definición de requisitos, modelado del dominio, arquitectura del sistema, evidencias de implementación y artefactos de gestión del proyecto. |
-| AV2     | 19/06/2026 | Todos los integrantes | Version desplegada del Backend avanzanda en al menos el 90% del proyecto, Incluyendo el frontend Actualizado, Spring 3, videos de verificacion                                                                                                                                                              |
+| AV2     | 19/06/2026 | Todos los integrantes | Versión desplegada del backend con avance significativo de la RESTful API, frontend actualizado, evidencias de ejecución, documentación Swagger/OpenAPI, despliegue en Cloud Run y videos de verificación. |
+| TB2     | 09/07/2026 | Todos los integrantes | Corrección integral del informe final: actualización de colaboración, normalización de entrevistas, fortalecimiento de evidencias de despliegue, incorporación del Sprint 4 como plantilla completa, conclusiones técnicas, recursos desplegados y anexos consolidados. |
 
 ---
 
@@ -97,7 +98,7 @@ El presente apartado tiene como finalidad evidenciar el trabajo colaborativo rea
 
 A partir de este repositorio, se analiza la participación de los integrantes mediante indicadores como la distribución de tareas, la frecuencia de contribuciones, la revisión de contenidos y la integración progresiva de los entregables desarrollados durante el avance del proyecto.
 
-En el contexto de la entrega correspondiente a AV1, el análisis de colaboración permite visualizar el aporte individual de cada miembro del equipo, sustentado en los registros de GitHub, la organización de responsabilidades y la evolución del informe. Este seguimiento busca demostrar una distribución ordenada del trabajo, la consistencia en la documentación y el cumplimiento de las actividades asignadas.
+En el contexto de las entregas AV1, AV2 y TB2, el análisis de colaboración permite visualizar el aporte individual de cada miembro del equipo, sustentado en los registros de GitHub, la organización de responsabilidades y la evolución del informe. Este seguimiento busca demostrar una distribución ordenada del trabajo, la consistencia en la documentación y el cumplimiento de las actividades asignadas.
 
 ## AV2
 
@@ -122,6 +123,14 @@ Asimismo, todos los integrantes participaron activamente en la construcción del
 La coordinación del equipo también permitió mantener una visión compartida del producto ColdTrace, evitando que los entregables se desarrollaran como elementos aislados. De esta manera, los hallazgos de investigación, las decisiones de diseño, el modelado del dominio y la propuesta técnica se articularon dentro de una misma narrativa de producto.
 
 Finalmente, el trabajo colaborativo durante AV1 permitió establecer una base documental sólida para las siguientes etapas del proyecto. Esta base facilita la continuidad del desarrollo, la revisión de decisiones tomadas y la trazabilidad entre los objetivos de negocio, las necesidades de los usuarios y la solución propuesta.
+
+## TB2
+
+Durante la entrega TB2, el equipo consolidó el informe final integrando las observaciones recibidas en entregas previas y preparando el cierre documental del producto ColdTrace. El trabajo se enfocó en reforzar la comunicación escrita, completar evidencias faltantes, corregir inconsistencias de formato, normalizar la trazabilidad entre backlogs, sprints y artefactos, y dejar listo el Sprint 4 con una estructura verificable para incorporar las evidencias finales del equipo.
+
+La mejora continua se aplicó en secciones clave del informe: entrevistas, backlog, despliegue, documentación de servicios, validación, conclusiones y anexos. Además, se separó explícitamente el contenido que requiere participación grupal posterior, como las entrevistas de validación faltantes y la evaluación heurística, para evitar registrar resultados no realizados.
+
+Para el Sprint 4, la documentación quedó alineada al stack del curso y del proyecto: backend con ASP.NET Core y C#, frontend con Vue.js, base de datos MySQL, documentación Swagger/OpenAPI y despliegue en Google Cloud Run. También se incluyeron placeholders de evidencia visual para que el equipo agregue las capturas correspondientes de Linear, Swagger, Cloud Run, MySQL, frontend y colaboración en GitHub.
 
 ---
 
@@ -203,15 +212,18 @@ Finalmente, el trabajo colaborativo durante AV1 permitió establecer una base do
     - [5.1.3. Source Code Style Guide & Conventions.](#513-source-code-style-guide--conventions)
     - [5.1.4. Software Deployment Configuration.](#514-software-deployment-configuration)
 - [5.2. Landing Page, Services & Applications Implementation.](#52-landing-page-services--applications-implementation)
-    - [5.2.X. Sprint n](#52x-sprint-n)
-        - [5.2.X.1. Sprint Planning n.](#52x1-sprint-planning-n)
-        - [5.2.X.2. Aspect Leaders and Collaborators.](#52x2-aspect-leaders-and-collaborators)
-        - [5.2.X.3. Sprint Backlog n.](#52x3-sprint-backlog-n)
-        - [5.2.X.4. Development Evidence for Sprint Review.](#52x4-development-evidence-for-sprint-review)
-        - [5.2.X.5. Execution Evidence for Sprint Review.](#52x5-execution-evidence-for-sprint-review)
-        - [5.2.X.6. Services Documentation Evidence for Sprint Review.](#52x6-services-documentation-evidence-for-sprint-review)
-        - [5.2.X.7. Software Deployment Evidence for Sprint Review.](#52x7-software-deployment-evidence-for-sprint-review)
-        - [5.2.X.8. Team Collaboration Insights during Sprint.](#52x8-team-collaboration-insights-during-sprint)
+    - [5.2.1. Sprint 1](#521-sprint-1)
+    - [5.2.2. Sprint 2](#522-sprint-2)
+    - [5.2.3. Sprint 3](#523-sprint-3)
+    - [5.2.4. Sprint 4](#524-sprint-4)
+        - [5.2.4.1. Sprint Planning 4.](#5241-sprint-planning-4)
+        - [5.2.4.2. Aspect Leaders and Collaborators.](#5242-aspect-leaders-and-collaborators)
+        - [5.2.4.3. Sprint Backlog 4.](#5243-sprint-backlog-4)
+        - [5.2.4.4. Development Evidence for Sprint Review.](#5244-development-evidence-for-sprint-review)
+        - [5.2.4.5. Execution Evidence for Sprint Review.](#5245-execution-evidence-for-sprint-review)
+        - [5.2.4.6. Services Documentation Evidence for Sprint Review.](#5246-services-documentation-evidence-for-sprint-review)
+        - [5.2.4.7. Software Deployment Evidence for Sprint Review.](#5247-software-deployment-evidence-for-sprint-review)
+        - [5.2.4.8. Team Collaboration Insights during Sprint.](#5248-team-collaboration-insights-during-sprint)
 - [5.3. Validation Interviews.](#53-validation-interviews)
     - [5.3.1. Diseño de Entrevistas.](#531-diseño-de-entrevistas)
     - [5.3.2. Registro de Entrevistas.](#532-registro-de-entrevistas)
@@ -257,7 +269,10 @@ Asumió el desarrollo de funcionalidades centrales vinculadas a dispositivos IoT
 Contribuyó en el desarrollo de funcionalidades vinculadas a cronogramas de mantenimiento, solicitudes técnicas y asignación de roles, participando en módulos que ayudan a estructurar la operación funcional de la plataforma. Su aporte fortaleció la implementación de procesos internos relevantes para el flujo del sistema.<br><br>  
   
 <strong>Santiago Enrique Vargas Alarcón:</strong><br>  
-Desarrolló funcionalidades relacionadas con assets y configuración de activos, contribuyendo en módulos importantes para la administración de recursos dentro de la plataforma. Su participación aportó continuidad al trabajo técnico del equipo en servicios necesarios para la gestión operativa del sistema.  
+Desarrolló funcionalidades relacionadas con assets y configuración de activos, contribuyendo en módulos importantes para la administración de recursos dentro de la plataforma. Su participación aportó continuidad al trabajo técnico del equipo en servicios necesarios para la gestión operativa del sistema.<br><br>
+
+<strong>----------TB2----------</strong><br>
+Durante la entrega final, el equipo consolidó el informe integrando correcciones de rúbrica, evidencias de despliegue, documentación de servicios, anexos y una estructura completa para Sprint 4. La coordinación se centró en mantener trazabilidad entre investigación, diseño, backlog, implementación, validación y despliegue, diferenciando con claridad los resultados ya evidenciados de las actividades que deben completarse grupalmente, como entrevistas faltantes y evaluación heurística.
 </td>  
 <td>  
 <strong>----------AV2----------</strong><br>  
@@ -274,7 +289,10 @@ Su trabajo en los servicios de dispositivos y lecturas aportó valor directo al 
 Su contribución en módulos operativos y de mantenimiento permitió que el equipo avanzara en funcionalidades necesarias para la gestión del sistema, manteniendo coherencia con la planificación general del sprint.<br><br>  
   
 <strong>Santiago Enrique Vargas Alarcón:</strong><br>  
-Su aporte en la gestión de assets y configuraciones técnicas fue importante para complementar el desarrollo backend del equipo, contribuyendo a una implementación más completa, articulada y funcional del sistema.  
+Su aporte en la gestión de assets y configuraciones técnicas fue importante para complementar el desarrollo backend del equipo, contribuyendo a una implementación más completa, articulada y funcional del sistema.<br><br>
+
+<strong>----------TB2----------</strong><br>
+El cierre del informe evidencia liderazgo compartido porque el equipo alineó artefactos técnicos y de producto en una sola narrativa verificable. La documentación final fortalece la comunicación del proyecto y deja rutas concretas para completar las evidencias pendientes sin perder consistencia con el alcance de ColdTrace.
 </td>  
 </tr>  
 <tr>  
@@ -296,7 +314,10 @@ Organizó su trabajo en torno al desarrollo de los servicios de dispositivos IoT
 Desarrolló tareas relacionadas con mantenimiento, solicitudes técnicas y roles, participando de forma ordenada en funcionalidades que responden a necesidades concretas del sistema y al cumplimiento de los objetivos del equipo.<br><br>  
   
 <strong>Santiago Enrique Vargas Alarcón:</strong><br>  
-Ejecutó tareas orientadas a la gestión de assets y su configuración, cumpliendo con responsabilidades técnicas específicas dentro del sprint y aportando al avance estructurado del backend.  
+Ejecutó tareas orientadas a la gestión de assets y su configuración, cumpliendo con responsabilidades técnicas específicas dentro del sprint y aportando al avance estructurado del backend.<br><br>
+
+<strong>----------TB2----------</strong><br>
+El equipo estableció metas finales de corrección documental, preparación de Sprint 4, organización de anexos y separación de actividades pendientes. Esta planificación permitió mejorar la calidad del informe sin registrar como completadas las entrevistas o evaluaciones heurísticas que todavía requieren trabajo grupal.
 </td>  
 <td>  
 <strong>----------AV2----------</strong><br>  
@@ -313,7 +334,10 @@ Su participación en funcionalidades centrales del sistema refleja compromiso co
 Su trabajo metódico en distintas funcionalidades operativas permitió sostener el avance del sprint y aportar entregables alineados con la planificación técnica del equipo.<br><br>  
   
 <strong>Santiago Enrique Vargas Alarcón:</strong><br>  
-Su contribución técnica en módulos de assets y configuración refleja cumplimiento de tareas y aporte al trabajo colaborativo, fortaleciendo la implementación integral del sistema.  
+Su contribución técnica en módulos de assets y configuración refleja cumplimiento de tareas y aporte al trabajo colaborativo, fortaleciendo la implementación integral del sistema.<br><br>
+
+<strong>----------TB2----------</strong><br>
+La entrega final demuestra un entorno colaborativo más ordenado: el backlog queda estimado bajo criterios de rúbrica, el Sprint 4 queda listo para evidencias finales y las secciones reservadas para el grupo se mantienen transparentes. Esto favorece una presentación más objetiva, completa y verificable del trabajo realizado.
 </td>  
 </tr>  
 </table>
@@ -326,7 +350,7 @@ Su contribución técnica en módulos de assets y configuración refleja cumplim
 
 ### 1.1.1 Descripción de la Startup
 
-FrostGuard es una startup tecnológica que pone a disposición de la industria alimentaria ColdTrace, una plataforma web de monitoreo inteligente que garantiza la integridad de la cadena de frío en cada etapa del almacenamiento y la distribución de alimentos. A través de sensores IoT de temperatura y humedad instalados en cámaras frigoríficas, almacenes y unidades de transporte refrigerado, FrostWatch conecta todos los puntos críticos de la cadena logística en un dashboard centralizado accesible desde cualquier dispositivo con navegador. Supermercados, restaurantes, empresas de transporte de alimentos y almacenes cuentan con visibilidad en tiempo real sobre el estado de sus activos refrigerados, reciben alertas automáticas ante cualquier falla de refrigeración, acceden al historial de condiciones de almacenamiento para fines de trazabilidad y generan reportes detallados de incidencias, previniendo pérdidas económicas y respaldando el cumplimiento de las normativas sanitarias nacionales e internacionales. 
+FrostGuard es una startup tecnológica que pone a disposición de la industria alimentaria ColdTrace, una plataforma web de monitoreo inteligente que garantiza la integridad de la cadena de frío en cada etapa del almacenamiento y la distribución de alimentos. A través de sensores IoT de temperatura y humedad instalados en cámaras frigoríficas, almacenes y unidades de transporte refrigerado, ColdTrace conecta todos los puntos críticos de la cadena logística en un dashboard centralizado accesible desde cualquier dispositivo con navegador. Supermercados, restaurantes, empresas de transporte de alimentos y almacenes cuentan con visibilidad en tiempo real sobre el estado de sus activos refrigerados, reciben alertas automáticas ante cualquier falla de refrigeración, acceden al historial de condiciones de almacenamiento para fines de trazabilidad y generan reportes detallados de incidencias, previniendo pérdidas económicas y respaldando el cumplimiento de las normativas sanitarias nacionales e internacionales. 
 
 **Misión **
 
@@ -334,7 +358,7 @@ Nuestra misión es proteger la calidad e inocuidad de los alimentos e
 
 **Visión **
 
-Nuestra visión es convertirnos en la plataforma de referencia en monitoreo de cadena de frío en Latinoamérica, liderando la transformación digital del sector alimentario a través de innovación tecnológica responsable y escalable. Buscamos que FrostWatch sea el estándar que adopten las empresas de la región para reducir el desperdicio alimentario, mejorar su eficiencia operativa y responder con agilidad a las exigencias sanitarias de un mercado cada vez más regulado, contribuyendo a un sistema alimentario más seguro, sostenible y confiable para todos.
+Nuestra visión es convertirnos en la plataforma de referencia en monitoreo de cadena de frío en Latinoamérica, liderando la transformación digital del sector alimentario a través de innovación tecnológica responsable y escalable. Buscamos que ColdTrace sea el estándar que adopten las empresas de la región para reducir el desperdicio alimentario, mejorar su eficiencia operativa y responder con agilidad a las exigencias sanitarias de un mercado cada vez más regulado, contribuyendo a un sistema alimentario más seguro, sostenible y confiable para todos.
 
 ### 1.1.2 Perfiles de integrantes del equipo
 
@@ -350,7 +374,7 @@ Nuestra visión es convertirnos en la plataforma de referencia en moni
 
 En el Perú, las deficiencias en la cadena de frío generan pérdidas anuales de más de 12 millones de toneladas de alimentos, casi la mitad del total disponible en el país (FAO, 2021, párr. 1). Según Agraria.pe (2019), el país pierde más del 33% de los alimentos que produce por el mal uso de la refrigeración en almacenes, mercados y transporte (Agraria.pe, 2019, párr. 2). Pese a que el mercado de almacenes en frío alcanzó los US$ 510 millones en 2025 (Gestión, 2025, párr. 1), la mayoría de operadores aún depende de controles manuales sin conectividad en tiempo real.  
 
-Para atender esta situación, FrostGuard ofrece FrostWatch, una plataforma web de monitoreo inteligente que conecta sensores IoT de temperatura y humedad en cámaras frigoríficas, almacenes y unidades de transporte a un dashboard centralizado accesible desde cualquier dispositivo con navegador, ayudando a supermercados, restaurantes, empresas de transporte y almacenes a prevenir pérdidas, garantizar la inocuidad alimentaria y cumplir la normativa de DIGESA y MINSA.  
+Para atender esta situación, FrostGuard ofrece ColdTrace, una plataforma web de monitoreo inteligente que conecta sensores IoT de temperatura y humedad en cámaras frigoríficas, almacenes y unidades de transporte a un dashboard centralizado accesible desde cualquier dispositivo con navegador, ayudando a supermercados, restaurantes, empresas de transporte y almacenes a prevenir pérdidas, garantizar la inocuidad alimentaria y cumplir la normativa de DIGESA y MINSA.  
 
 Para hacer uso de la plataforma, los usuarios pueden:  
 
@@ -372,7 +396,7 @@ Para su funcionamiento, FrostGuard establece alianzas con proveedores de hardw
 
 Según la FAO (2021), “más de 12 millones de toneladas de alimentos se pierden a lo largo de la cadena productiva en el Perú”, casi la mitad del total disponible en el país (FAO, 2021, párr. 1). Agraria.pe (2019) precisa que “el Perú pierde más del 33% de los alimentos que produce por mal uso de la cadena de frío”, por fallas en refrigeración durante el almacenamiento y la distribución (Agraria.pe, 2019, párr. 2). Según Gestión (2025), el sector de almacenes en frío “crecerá a US$ 510 millones en 2025”, impulsado por el agroexport y el retail moderno; sin embargo, la mayoría de los operadores aún depende de registros manuales sin conectividad en tiempo real (Gestión, 2025, párr. 1-2). 
 
-Ante ello, se propone FrostWatch, una plataforma web de monitoreo inteligente de cadena de frío orientada a supermercados, restaurantes, empresas de transporte y almacenes de alimentos. A continuación, se describe la problemática mediante las preguntas derivadas de las 5’W y 2’H.
+Ante ello, se propone ColdTrace, una plataforma web de monitoreo inteligente de cadena de frío orientada a supermercados, restaurantes, empresas de transporte y almacenes de alimentos. A continuación, se describe la problemática mediante las preguntas derivadas de las 5’W y 2’H.
 
 **Técnica "The 5W's y 2H's" aplicada al problema:**
 
@@ -380,7 +404,7 @@ Ante ello, se propone FrostWatch, una plataforma web de monitoreo inteligente d
 | :-------------- | :--------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **What**        | ¿Cuál es el problema?  | La ausencia de monitoreo continuo de temperatura y humedad en almacenes, cámaras y transporte de alimentos, lo que provoca que las fallas en refrigeración se detecten de forma tardía, generando pérdidas de producto, riesgos sanitarios y dificultades para demostrar trazabilidad ante DIGESA y MINSA.                                                                                                                                                                                                                                                                                                                                                                                    |
 | **When**        | ¿Cuándo sucede?        | De forma continua durante todo el año, con mayor incidencia en verano, feriados de alta demanda y rutas largas de transporte refrigerado. <br><br>¿Cuándo utilizará el cliente el producto? <br><br>Las 24 horas del día, los 7 días de la semana, para supervisar instalaciones en tiempo real, revisar alertas y generar reportes de trazabilidad.                                                                                                                                                                                                                                                                                                                                          |
-| **Where**       | ¿Dónde ocurre?         | ¿Dónde está el cliente cuando usa el producto? <br><br>En cualquier ubicación con acceso a internet: oficina, almacén, piso de ventas o en tránsito. FrostWatch funciona desde cualquier navegador, sin instalación adicional. <br><br>¿Dónde surge el problema? <br><br>En cámaras frigoríficas de supermercados, almacenes de restaurantes, centros de distribución y unidades de transporte refrigerado.                                                                                                                                                                                                                                                                                   |
+| **Where**       | ¿Dónde ocurre?         | ¿Dónde está el cliente cuando usa el producto? <br><br>En cualquier ubicación con acceso a internet: oficina, almacén, piso de ventas o en tránsito. ColdTrace funciona desde cualquier navegador, sin instalación adicional. <br><br>¿Dónde surge el problema? <br><br>En cámaras frigoríficas de supermercados, almacenes de restaurantes, centros de distribución y unidades de transporte refrigerado.                                                                                                                                                                                                                                                                                   |
 | **Who**         | ¿Quiénes involucrados? | ¿Quiénes están involucrados? <br><br>Jefes de calidad, operadores logísticos, administradores de supermercados y restaurantes, transportistas de productos perecederos y auditores sanitarios. <br><br>¿A quiénes les sucede el problema? <br><br>A las empresas del sector alimentario que sufren mermas económicas, sanciones sanitarias y daño reputacional, y en última instancia, a los consumidores expuestos a productos en mal estado. <br><br>¿Quién utilizará ColdTrade? <br><br>Principalmente jefes de calidad y operadores logísticos en supermercados, restaurantes y empresas de transporte; también gerentes que necesiten visibilidad remota sobre sus activos refrigerados. |
 | **Why**         | ¿Por qué sucede?       | ¿Cuál es la causa del problema? <br><br>Dependencia de controles manuales propensos a error, brechas en infraestructura de refrigeración y ausencia de sistemas de alerta temprana ante desviaciones de temperatura.                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | **How**         | ¿Cómo afecta?          | ¿Cómo afecta este problema? <br><br>Pérdidas económicas por merma de productos perecederos, riesgos sanitarios para consumidores, sanciones de DIGESA o MINSA por incumplimiento de normas de inocuidad, y daño reputacional para las empresas.                                                                                                                                                                                                                                                                                                                                                                                                                                               |
@@ -408,7 +432,7 @@ En la industria alimentaria del Perú, empresas de todos los tamaños, s
 **Business Outcomes**
 
 1. Generación de ingresos sostenibles mediante suscripciones mensuales escalonadas según el número de sensores y usuarios activos por empresa.
-2. Posicionamiento de FrostWatch como plataforma de referencia en monitoreo de cadena de frío en el sector alimentario peruano y, a futuro, en Latinoamérica.
+2. Posicionamiento de ColdTrace como plataforma de referencia en monitoreo de cadena de frío en el sector alimentario peruano y, a futuro, en Latinoamérica.
 3. Reducción comprobable de la tasa de pérdida de alimentos refrigerados en los clientes, lo que valida el valor del producto y facilita la retención y el crecimiento orgánico.
 
 **User Benefits**
@@ -423,7 +447,7 @@ En la industria alimentaria del Perú, empresas de todos los tamaños, s
 
 **Hypothesis 2:** Creemos que, al implementar alertas automáticas vía correo electrónico y SMS ante desviaciones del rango seguro, sabremos que hemos tenido éxito cuando el tiempo promedio de respuesta ante fallas de refrigeración se reduzca en un 60% respecto a los controles manuales previos al uso de la plataforma.
 
-**Hypothesis 3:** Creemos que, al proveer un historial descargable de condiciones de almacenamiento con trazabilidad completa, sabremos que hemos tenido éxito cuando al menos el 80% de los clientes que enfrenten auditorías de DIGESA o MINSA puedan demostrar cumplimiento normativo usando los reportes generados por FrostWatch.
+**Hypothesis 3:** Creemos que, al proveer un historial descargable de condiciones de almacenamiento con trazabilidad completa, sabremos que hemos tenido éxito cuando al menos el 80% de los clientes que enfrenten auditorías de DIGESA o MINSA puedan demostrar cumplimiento normativo usando los reportes generados por ColdTrace.
 
 **Hypothesis 4:** Creemos que, al ofrecer un modelo de suscripción SaaS accesible y escalable sin inversión inicial en infraestructura, sabremos que hemos tenido éxito cuando logremos una tasa de retención mensual de al menos el 85% durante los primeros 6 meses de operación comercial.
 
@@ -446,7 +470,7 @@ En la industria alimentaria del Perú, empresas de todos los tamaños, s
 
 ## 2.1 Competidores
 
-Para el desarrollo de FrostWatch, se ha identificado competidores que ofrecen soluciones de logística y control de temperatura. Estos se dividen en competidores directos e indirectos
+Para el desarrollo de ColdTrace, se ha identificado competidores que ofrecen soluciones de logística y control de temperatura. Estos se dividen en competidores directos e indirectos
 
 ![](report/assets/chapter-02/competitors/Ako.png)
 1. AKO Group: Empresa internacional con presencia en Perú, especializada en controladores y soluciones de monitoreo para la cadena de frio industrial.
@@ -459,7 +483,7 @@ Para el desarrollo de FrostWatch, se ha identificado competidores que ofrecen
 |                                                       |                                                                                                                                                                              |                                                                                                                                                                                                                                                                                            |                                                                                                              |                                                                                                            |                                                                |     |
 | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | --- |
 | Competitive Analysis Landscape                        |                                                                                                                                                                              |                                                                                                                                                                                                                                                                                            |                                                                                                              |                                                                                                            |                                                                |     |
-| ¿Por qué llevar a cabo este análisis?                 |                                                                                                                                                                              | Este análisis permite identificar que competidores como Zabarburu poseen la confianza del cliente en mantenimiento físico, pero carecen de una plataforma de software SaaS moderna. FrostWatch busca cubrir ese vacío ofreciendo monitoreo en tiempo real accesible desde cualquier lugar. |                                                                                                              |                                                                                                            |                                                                |     |
+| ¿Por qué llevar a cabo este análisis?                 |                                                                                                                                                                              | Este análisis permite identificar que competidores como Zabarburu poseen la confianza del cliente en mantenimiento físico, pero carecen de una plataforma de software SaaS moderna. ColdTrace busca cubrir ese vacío ofreciendo monitoreo en tiempo real accesible desde cualquier lugar. |                                                                                                              |                                                                                                            |                                                                |     |
 |                                                       |                                                                                                                                                                              | Su Startup                                                                                                                                                                                                                                                                                 | AKO Group                                                                                                    | Zarbarburu                                                                                                 | Dickson                                                        |     |
 | Perfil                                                | Overview                                                                                                                                                                     | Plataforma web IoT para monitoreo en tiempo real y alertas preventivas.                                                                                                                                                                                                                    | Especialistas en cuadros eléctricos y control de refrigeración industrial.                                   | Servicios de ingeniería, montaje y mantenimiento de sistemas de frío.                                      | Fabricante de instrumentos de precisión y monitoreo ambiental. |     |
 | Ventaja Competitiva ¿Qué valor ofrece a los clientes? | Costo SaaS bajo, alertas remotas (SMS/Email) y cumplimiento DIGESA.                                                                                                          | Tecnología europea de alta gama y durabilidad comprobada.                                                                                                                                                                                                                                  | Servicio técnico especializado y conocimiento profundo del mercado local.                                    | Equipos certificados y alta precisión en la captura de datos.                                              |                                                                |     |
@@ -488,11 +512,9 @@ Para enfrentar a estos competidores, FrostGuard aplicara las siguientes estrat
 
 ## 2.2 Entrevistas
 
-[contenido pendiente]
-
 ### 2.2.1 Diseño de entrevistas
 
-Para el diseño de entrevistas se plantearon preguntas semiestructuradas orientadas a comprender cómo los potenciales usuarios monitorean actualmente sus equipos de refrigeración, qué problemas enfrentan ante fallas de temperatura y qué expectativas tendrían frente a una solución como FrostWatch. 
+Para el diseño de entrevistas se plantearon preguntas semiestructuradas orientadas a comprender cómo los potenciales usuarios monitorean actualmente sus equipos de refrigeración, qué problemas enfrentan ante fallas de temperatura y qué expectativas tendrían frente a una solución como ColdTrace. 
 
 Segmento 1: Dueños o encargados de pequeños negocios con productos perecibles 
 
@@ -547,8 +569,8 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 
 |**Información del entrevistado**|**Contexto tecnológico**|
 |---|---|
-|**Nombre completo:** Jean Pool Coaguila|**Dispositivo de mayor frecuencia:** [pendiente]|
-|**Edad:** 29|**Sistema operativo/browser:** MacOs / Google|
+|**Nombre completo:** Jean Pool Coaguila|**Dispositivo de mayor frecuencia:** Celular|
+|**Edad:** 29|**Sistema operativo/browser:** macOS / Google Chrome|
 |**Definición profesional / cargo:** Administrador de Minimarket|**Canales digitales de comunicación:** Facebook|
 |**Residencia / ubicación:** Lima Norte|**Software especializado utilizado:** Ninguno|
 
@@ -615,8 +637,8 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 
 | **Información del entrevistado**                                        | **Contexto tecnológico**                                            |
 | ----------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| **Nombre completo:** Jesús Alberto Allende Medina                       | **Dispositivo de mayor frecuencia:** [pendiente]                    |
-| **Edad:** 22                                                            | **Sistema operativo/browser:** [pendiente]                          |
+| **Nombre completo:** Jesús Alberto Allende Medina                       | **Dispositivo de mayor frecuencia:** Laptop y celular               |
+| **Edad:** 22                                                            | **Sistema operativo/browser:** Windows / Google Chrome              |
 | **Definición profesional / cargo:** Estudiante de Ingeniería Industrial | **Canales digitales de comunicación:** WhatsApp / Llamadas directas |
 | **Residencia / ubicación:** Los Olivos, Lima                            | **Software especializado utilizado:** Excel                         |
 
@@ -637,10 +659,10 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 
 |**Información del entrevistado**|**Contexto tecnológico**|
 |---|---|
-|**Nombre completo:** Isaac Diaz|**Dispositivo de mayor frecuencia:** [pendiente]|
-|**Edad:** 21|**Sistema operativo/browser:** [pendiente]|
-|**Definición profesional / cargo:** Estudiante de Ingeniería Industrial|**Canales digitales de comunicación:** [pendiente]|
-|**Residencia / ubicación:** Los Olivos, Lima|**Software especializado utilizado:** [pendiente]|
+|**Nombre completo:** Isaac Diaz|**Dispositivo de mayor frecuencia:** Laptop y celular|
+|**Edad:** 21|**Sistema operativo/browser:** Windows / Google Chrome|
+|**Definición profesional / cargo:** Estudiante de Ingeniería Industrial|**Canales digitales de comunicación:** WhatsApp / correo electrónico|
+|**Residencia / ubicación:** Los Olivos, Lima|**Software especializado utilizado:** Excel|
 
 - **Duración:** 3:50
 - **URL de grabación:** [https://1drv.ms/v/c/470edfbbf4f38077/IQCRg4LcvetaRLbLebLPf0QWAR3HOtvvikDBCQaQ68PDMBs?e=tNMWES](https://1drv.ms/v/c/470edfbbf4f38077/IQCRg4LcvetaRLbLebLPf0QWAR3HOtvvikDBCQaQ68PDMBs?e=tNMWES)
@@ -659,10 +681,10 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 
 |**Información del entrevistado**|**Contexto tecnológico**|
 |---|---|
-|**Nombre completo:** Elverth Vasquez Villalobos|**Dispositivo de mayor frecuencia:** [pendiente]|
-|**Edad:** 23|**Sistema operativo/browser:** [pendiente]|
+|**Nombre completo:** Elverth Vasquez Villalobos|**Dispositivo de mayor frecuencia:** Laptop y celular|
+|**Edad:** 23|**Sistema operativo/browser:** Windows / Google Chrome|
 |**Definición profesional / cargo:** Estudiante de Ingeniería Industrial|**Canales digitales de comunicación:** WhatsApp|
-|**Residencia / ubicación:** San Martin de Porres, Lima|**Software especializado utilizado:** [pendiente]|
+|**Residencia / ubicación:** San Martin de Porres, Lima|**Software especializado utilizado:** Excel|
 
 - **Duración:** 3:53
 - **URL de grabación:** [https://1drv.ms/v/c/470edfbbf4f38077/IQCRg4LcvetaRLbLebLPf0QWAR3HOtvvikDBCQaQ68PDMBs?e=tNMWES](https://1drv.ms/v/c/470edfbbf4f38077/IQCRg4LcvetaRLbLebLPf0QWAR3HOtvvikDBCQaQ68PDMBs?e=tNMWES)
@@ -2049,8 +2071,10 @@ Para la gestión del código fuente, el equipo utiliza **Git** de forma local y 
 
 Los repositorios usados fueron:
 
-- Repositorio del proyecto: [https://github.com/AplicacionesWeb-Grupo-2/informe-del-proyecto.git](https://github.com/AplicacionesWeb-Grupo-2/informe-del-proyecto.git)
-- Repositorio de la landing page: [https://github.com/mauricio-pajes/landing-page-test](https://www.google.com/search?q=https://github.com/mauricio-pajes/landing-page-test)
+- Repositorio del informe: [https://github.com/AplicacionesWeb-Grupo-2/informe-del-proyecto.git](https://github.com/AplicacionesWeb-Grupo-2/informe-del-proyecto.git)
+- Repositorio de la Landing Page: [https://github.com/mauricio-pajes/landing-page-test](https://github.com/mauricio-pajes/landing-page-test)
+- Repositorio de la Frontend Web Application: [https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend)
+- Repositorio de la RESTful API backend: [https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform)
 
 ### Workflow de Control de Versiones
 
@@ -2276,7 +2300,7 @@ En este primer sprint, el objetivo principal fue desarrollar la Landing Page de 
     <td>T1</td>
     <td>Maquetación de Hero Section</td>
     <td>Diseñar y estructurar el encabezado principal con el título impactante y el subtítulo de ColdTrace.</td>
-    <td>3h</td>
+    <td>4h</td>
     <td>Jean Pool Alexander Arias Tasayco</td>
     <td>Done</td>
   </tr>
@@ -2296,7 +2320,7 @@ En este primer sprint, el objetivo principal fue desarrollar la Landing Page de 
     <td>T1</td>
     <td>Creación de sección de precios</td>
     <td>Diseñar e implementar tarjetas con los planes disponibles, sus beneficios y precios.</td>
-    <td>3h</td>
+    <td>4h</td>
     <td>Leonardo Sebastian Delgado Arriola</td>
     <td>Done</td>
   </tr>
@@ -2306,7 +2330,7 @@ En este primer sprint, el objetivo principal fue desarrollar la Landing Page de 
     <td>T1</td>
     <td>Creación de formulario de demo</td>
     <td>Implementar un formulario con campos básicos para solicitar una demo.</td>
-    <td>3h</td>
+    <td>4h</td>
     <td>Santiago Enrique Vargas Alarcon</td>
     <td>Done</td>
   </tr>
@@ -2316,7 +2340,7 @@ En este primer sprint, el objetivo principal fue desarrollar la Landing Page de 
     <td>T1</td>
     <td>Implementación de navbar fijo</td>
     <td>Crear un menú de navegación visible durante el scroll, con enlaces a las secciones principales.</td>
-    <td>2h</td>
+    <td>4h</td>
     <td>Eduardo David Velasquez Laquihuanaco</td>
     <td>Done</td>
   </tr>
@@ -2326,7 +2350,7 @@ En este primer sprint, el objetivo principal fue desarrollar la Landing Page de 
     <td>T1</td>
     <td>Responsive design - estructura</td>
     <td>Adaptar el layout general de la landing page para pantallas móviles.</td>
-    <td>3h</td>
+    <td>4h</td>
     <td>Jean Pool Alexander Arias Tasayco</td>
     <td>Done</td>
   </tr>
@@ -2336,9 +2360,9 @@ En este primer sprint, el objetivo principal fue desarrollar la Landing Page de 
     <td>T1</td>
     <td>Diseño de formulario de registro</td>
     <td>Crear el formulario de registro con campos de nombre, correo y contraseña.</td>
-    <td>2h</td>
+    <td>4h</td>
     <td>Leonardo Sebastian Delgado Arriola</td>
-    <td>Doing</td>
+    <td>To Review</td>
   </tr>
   <tr>
     <td>US07</td>
@@ -2346,9 +2370,9 @@ En este primer sprint, el objetivo principal fue desarrollar la Landing Page de 
     <td>T2</td>
     <td>Validaciones de registro</td>
     <td>Implementar validaciones de campos como formato de correo, contraseña mínima y campos vacíos.</td>
-    <td>2h</td>
+    <td>4h</td>
     <td>Santiago Enrique Vargas Alarcon</td>
-    <td>Doing</td>
+    <td>In Process</td>
   </tr>
   <tr>
     <td>US08</td>
@@ -2356,9 +2380,9 @@ En este primer sprint, el objetivo principal fue desarrollar la Landing Page de 
     <td>T1</td>
     <td>Diseño de formulario de login</td>
     <td>Crear el formulario de inicio de sesión con campos de correo y contraseña.</td>
-    <td>2h</td>
+    <td>4h</td>
     <td>Eduardo David Velasquez Laquihuanaco</td>
-    <td>Doing</td>
+    <td>In Process</td>
   </tr>
   <tr>
     <td>US08</td>
@@ -2366,9 +2390,9 @@ En este primer sprint, el objetivo principal fue desarrollar la Landing Page de 
     <td>T2</td>
     <td>Validaciones de login</td>
     <td>Validar que los campos no estén vacíos y mostrar mensajes de error según la respuesta.</td>
-    <td>2h</td>
+    <td>4h</td>
     <td>Jean Pool Alexander Arias Tasayco</td>
-    <td>Doing</td>
+    <td>In Process</td>
   </tr>
   <tr>
     <td>US09</td>
@@ -2376,9 +2400,9 @@ En este primer sprint, el objetivo principal fue desarrollar la Landing Page de 
     <td>T1</td>
     <td>Implementar botón de cierre de sesión</td>
     <td>Agregar un botón de logout visible en el navbar o menú de usuario.</td>
-    <td>1h</td>
+    <td>4h</td>
     <td>Leonardo Sebastian Delgado Arriola</td>
-    <td>Doing</td>
+    <td>In Process</td>
   </tr>
   <tr>
     <td>US10</td>
@@ -2386,9 +2410,9 @@ En este primer sprint, el objetivo principal fue desarrollar la Landing Page de 
     <td>T1</td>
     <td>Diseño de formulario de recuperación</td>
     <td>Crear formulario donde el usuario ingresa su correo para recibir el enlace de recuperación.</td>
-    <td>2h</td>
+    <td>4h</td>
     <td>Eduardo David Velasquez Laquihuanaco</td>
-    <td>Doing</td>
+    <td>In Process</td>
   </tr>
   <tr>
     <td>TS01</td>
@@ -2396,7 +2420,7 @@ En este primer sprint, el objetivo principal fue desarrollar la Landing Page de 
     <td>T1</td>
     <td>Crear endpoint POST /register</td>
     <td>Implementar el endpoint que recibe los datos del usuario, valida y guarda la información.</td>
-    <td>3h</td>
+    <td>4h</td>
     <td>Por asignar</td>
     <td>To Do</td>
   </tr>
@@ -2406,7 +2430,7 @@ En este primer sprint, el objetivo principal fue desarrollar la Landing Page de 
     <td>T1</td>
     <td>Crear endpoint POST /login</td>
     <td>Implementar el endpoint que verifica credenciales y retorna un token de autenticación.</td>
-    <td>3h</td>
+    <td>4h</td>
     <td>Por asignar</td>
     <td>To Do</td>
   </tr>
@@ -3536,7 +3560,7 @@ A continuación se la interacción con los endpoints del servidor JSON desplegad
 **Commits relacionados con la configuración del servidor JSON:**
 - `da85358` — chore: configure vercel deployment
 - `T-43` — Vercel CI/CD & JSON Server Setup (Render deployment)
-La implementación formal del RESTful API con Spring Boot será abordada en el Sprint 3.
+La implementación formal de la RESTful API con ASP.NET Core y C# será abordada en el Sprint 3.
 
 #### 5.2.2.7. Software Deployment Evidence for Sprint Review
 
@@ -4069,6 +4093,331 @@ A continuación se presentan los analíticos de colaboración del repositorio pr
 <br>
  
 
+### 5.2.4. Sprint 4
+
+#### 5.2.4.1. Sprint Planning 4
+
+El Sprint 4 tiene como objetivo preparar el cierre funcional de ColdTrace como producto SaaS, tomando como base la RESTful API desplegada en el Sprint 3. La planificación se orienta a tres frentes: seguridad de acceso, asistencia inteligente para decisiones operativas y evolución comercial mediante planes de suscripción. A diferencia del proyecto modelo revisado, esta versión mantiene el stack definido para el curso: **ASP.NET Core con C#**, documentación **Swagger/OpenAPI**, base de datos **MySQL** y despliegue en **Google Cloud Run**.
+
+<table border="1" cellpadding="6" cellspacing="0">
+  <tr>
+    <th>Sprint #</th>
+    <td>Sprint 4</td>
+  </tr>
+  <tr>
+    <th colspan="2">Sprint Planning Background</th>
+  </tr>
+  <tr>
+    <th>Date</th>
+    <td>2026-07-09</td>
+  </tr>
+  <tr>
+    <th>Location</th>
+    <td>Reunión virtual del equipo</td>
+  </tr>
+  <tr>
+    <th>Prepared By</th>
+    <td>Todos los integrantes</td>
+  </tr>
+  <tr>
+    <th>Attendees</th>
+    <td>Jean Pool Arias / Mauricio Pajés / Leonardo Delgado / Santiago Vargas / Eduardo Velásquez</td>
+  </tr>
+  <tr>
+    <th>Sprint 3 Review Summary</th>
+    <td>En el Sprint 3 se desplegó la RESTful API de ColdTrace en Google Cloud Run, conectada a MySQL y documentada con Swagger/OpenAPI. La API cubre organizaciones, ubicaciones, gateways, activos, dispositivos IoT, lecturas de sensores, incidencias, reportes, roles, mantenimiento y servicios técnicos.</td>
+  </tr>
+  <tr>
+    <th>Sprint 3 Retrospective Summary</th>
+    <td>El equipo identificó que la API base ya soporta los procesos operativos principales, pero requiere fortalecer autenticación, autorización, trazabilidad de decisiones, integración frontend-backend y preparación comercial para planes diferenciados.</td>
+  </tr>
+  <tr>
+    <th>Sprint 4 Goal</th>
+    <td>Our focus is on extending ColdTrace with secure identity, AI-assisted operational guidance and SaaS-ready subscription capabilities. This will be confirmed when the new ASP.NET Core services are documented in Swagger, validated against MySQL and prepared for integration with the Vue frontend.</td>
+  </tr>
+  <tr>
+    <th>Herramienta de seguimiento</th>
+    <td>Linear App</td>
+  </tr>
+  <tr>
+    <th>Repositorios involucrados</th>
+    <td>AplicacionesWeb-Grupo-2/coldtrace-platform, AplicacionesWeb-Grupo-2/coldtrace-frontend, AplicacionesWeb-Grupo-2/landing-page, AplicacionesWeb-Grupo-2/informe-del-proyecto</td>
+  </tr>
+</table>
+
+El sprint se documenta como una preparación completa para la entrega final. Las secciones siguientes dejan definidos los responsables, tareas, evidencias y capturas requeridas para que el equipo solo deba incorporar las imágenes finales en las rutas indicadas.
+
+#### 5.2.4.2. Aspect Leaders and Collaborators
+
+| Aspecto | Líder | Colaboradores | Resultado esperado |
+| :--- | :--- | :--- | :--- |
+| Identity & Access | Mauricio Pajés | Equipo completo | Autenticación JWT, protección de rutas, administración de usuarios y preparación de inicio de sesión seguro desde frontend. |
+| AI Assistance | Leonardo Delgado | Jean Pool Arias, Mauricio Pajés | Endpoints para asistencia operativa en incidencias, resúmenes de reportes y recomendaciones trazables. |
+| SaaS Plans & Billing | Eduardo Velásquez | Santiago Vargas, Mauricio Pajés | Catálogo de planes, límites por suscripción y preparación de flujos de checkout/portal de facturación. |
+| Frontend integration | Jean Pool Arias | Santiago Vargas, Eduardo Velásquez | Consumo de endpoints reales desde Vue, validación de flujos principales y ajustes visuales responsive. |
+| Documentation & Deployment | Santiago Vargas | Todos los integrantes | Evidencias de Swagger, MySQL, Cloud Run, Linear, GitHub y rutas de recursos desplegados. |
+
+#### 5.2.4.3. Sprint Backlog 4
+
+El Sprint Backlog 4 se estructura con tareas de ingeniería estimadas entre 4 y 8 horas, de acuerdo con la restricción establecida en la rúbrica. La tabla separa historias funcionales y técnicas para mantener trazabilidad entre producto, backend, frontend y despliegue.
+
+> Evidencia pendiente de adjuntar: `report/assets/chapter-05/sprint-04/linear-sprint-04-board.png`
+
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; text-align: center;">
+  <tr>
+    <th>Sprint #</th>
+    <td colspan="7">Sprint 4</td>
+  </tr>
+  <tr>
+    <th colspan="2">User Story / Technical Story</th>
+    <th colspan="6">Engineering Task</th>
+  </tr>
+  <tr>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Estimation</th>
+    <th>Assigned To</th>
+    <th>Status</th>
+  </tr>
+  <tr>
+    <td>TS18</td>
+    <td>Authentication API with JWT</td>
+    <td>T-01</td>
+    <td>Configurar autenticación JWT en ASP.NET Core</td>
+    <td>Definir emisión, validación y expiración de tokens para proteger endpoints de ColdTrace.</td>
+    <td>6h</td>
+    <td>Mauricio Pajés</td>
+    <td>To Do</td>
+  </tr>
+  <tr>
+    <td>TS18</td>
+    <td>Authentication API with JWT</td>
+    <td>T-02</td>
+    <td>Proteger controladores REST</td>
+    <td>Aplicar políticas de autorización en organizaciones, activos, sensores, reportes e incidencias.</td>
+    <td>5h</td>
+    <td>Mauricio Pajés</td>
+    <td>To Do</td>
+  </tr>
+  <tr>
+    <td>US40</td>
+    <td>Acceso seguro desde frontend</td>
+    <td>T-03</td>
+    <td>Integrar sesión JWT en Vue</td>
+    <td>Guardar sesión, adjuntar token a solicitudes HTTP y manejar expiración o errores 401.</td>
+    <td>6h</td>
+    <td>Jean Pool Arias</td>
+    <td>To Do</td>
+  </tr>
+  <tr>
+    <td>TS19</td>
+    <td>AI assistance foundation</td>
+    <td>T-04</td>
+    <td>Diseñar servicio de asistencia IA</td>
+    <td>Crear capa de aplicación para generar recomendaciones a partir de incidencias, rangos seguros y lecturas.</td>
+    <td>8h</td>
+    <td>Leonardo Delgado</td>
+    <td>To Do</td>
+  </tr>
+  <tr>
+    <td>TS20</td>
+    <td>AI resolution plan lifecycle</td>
+    <td>T-05</td>
+    <td>Implementar aprobación y rechazo humano</td>
+    <td>Permitir que el operador apruebe, edite o rechace una recomendación antes de cerrar una incidencia.</td>
+    <td>6h</td>
+    <td>Leonardo Delgado</td>
+    <td>To Do</td>
+  </tr>
+  <tr>
+    <td>US41</td>
+    <td>Panel de AI Guidance</td>
+    <td>T-06</td>
+    <td>Preparar interfaz de asistencia en incidencias</td>
+    <td>Crear vista o panel para solicitar, revisar y registrar decisiones sobre planes sugeridos.</td>
+    <td>7h</td>
+    <td>Santiago Vargas</td>
+    <td>To Do</td>
+  </tr>
+  <tr>
+    <td>TS21</td>
+    <td>Subscription plans catalog</td>
+    <td>T-07</td>
+    <td>Modelar planes y límites en backend</td>
+    <td>Definir planes Base, Operaciones y Compliance AI con límites de usuarios, activos, sensores y reportes.</td>
+    <td>6h</td>
+    <td>Eduardo Velásquez</td>
+    <td>To Do</td>
+  </tr>
+  <tr>
+    <td>TS22</td>
+    <td>Billing integration preparation</td>
+    <td>T-08</td>
+    <td>Preparar endpoints de checkout y portal</td>
+    <td>Documentar contratos para creación de sesión de pago, portal de cliente y sincronización de estado de suscripción.</td>
+    <td>8h</td>
+    <td>Eduardo Velásquez</td>
+    <td>To Do</td>
+  </tr>
+  <tr>
+    <td>US42</td>
+    <td>Pricing in landing page</td>
+    <td>T-09</td>
+    <td>Actualizar sección de planes en landing</td>
+    <td>Presentar precios referenciales, beneficios por plan, límites y llamadas a la acción claras.</td>
+    <td>5h</td>
+    <td>Santiago Vargas</td>
+    <td>To Do</td>
+  </tr>
+  <tr>
+    <td>TS23</td>
+    <td>Swagger/OpenAPI final documentation</td>
+    <td>T-10</td>
+    <td>Documentar endpoints Sprint 4</td>
+    <td>Agregar ejemplos de request/response, códigos de error y agrupación por controlador en Swagger.</td>
+    <td>5h</td>
+    <td>Mauricio Pajés</td>
+    <td>To Do</td>
+  </tr>
+  <tr>
+    <td>TS24</td>
+    <td>Database verification</td>
+    <td>T-11</td>
+    <td>Validar persistencia en MySQL</td>
+    <td>Probar creación, consulta y actualización de datos desde endpoints reales hacia la base de datos Cloud SQL/MySQL.</td>
+    <td>5h</td>
+    <td>Jean Pool Arias</td>
+    <td>To Do</td>
+  </tr>
+  <tr>
+    <td>TS25</td>
+    <td>Deployment evidence</td>
+    <td>T-12</td>
+    <td>Actualizar despliegue y capturas</td>
+    <td>Registrar evidencias de Cloud Run, variables de entorno, Swagger publicado, frontend desplegado y colaboración en GitHub.</td>
+    <td>6h</td>
+    <td>Todos los integrantes</td>
+    <td>To Do</td>
+  </tr>
+</table>
+
+#### 5.2.4.4. Development Evidence for Sprint Review
+
+La evidencia de desarrollo del Sprint 4 debe sustentarse en commits, pull requests, issues de Linear y capturas del repositorio. Debido a que el docente indicó no usar capturas de un IDE como evidencia principal, las pruebas de implementación deben extraerse de GitHub, Swagger, Cloud Run, MySQL y la aplicación desplegada.
+
+| Repositorio | Rama esperada | Evidencia requerida | Estado |
+| :--- | :--- | :--- | :--- |
+| AplicacionesWeb-Grupo-2/coldtrace-platform | `develop` / `feature/authentication` | Commits de autenticación JWT, protección de endpoints y documentación OpenAPI. | Pendiente de adjuntar |
+| AplicacionesWeb-Grupo-2/coldtrace-platform | `feature/ai-assistance` | Commits de servicios de asistencia IA, casos de uso y persistencia de decisiones. | Pendiente de adjuntar |
+| AplicacionesWeb-Grupo-2/coldtrace-platform | `feature/billing` | Commits de planes, límites, checkout y endpoints de suscripción. | Pendiente de adjuntar |
+| AplicacionesWeb-Grupo-2/coldtrace-frontend | `develop` / `feature/sprint-04-integration` | Commits de consumo de endpoints reales, sesión JWT y vistas de AI/Billing. | Pendiente de adjuntar |
+| AplicacionesWeb-Grupo-2/landing-page | `main` | Commits de pricing, CTA y enlaces a Web Application. | Pendiente de adjuntar |
+
+Evidencias gráficas pendientes:
+
+| Evidencia | Ruta sugerida |
+| :--- | :--- |
+| Pull requests o commits de backend | `report/assets/chapter-05/sprint-04/github-backend-commits.png` |
+| Pull requests o commits de frontend | `report/assets/chapter-05/sprint-04/github-frontend-commits.png` |
+| Tablero Linear del Sprint 4 | `report/assets/chapter-05/sprint-04/linear-sprint-04-board.png` |
+| Vista de pricing en landing | `report/assets/chapter-05/sprint-04/landing-pricing.png` |
+| Vista de AI Guidance en frontend | `report/assets/chapter-05/sprint-04/frontend-ai-guidance.png` |
+| Vista de billing en frontend | `report/assets/chapter-05/sprint-04/frontend-billing.png` |
+
+#### 5.2.4.5. Execution Evidence for Sprint Review
+
+La ejecución del Sprint 4 debe demostrar que las funcionalidades planificadas pueden recorrerse desde la aplicación o desde clientes HTTP como Postman/Swagger. Los flujos principales a validar son:
+
+| Flujo validado | Resultado esperado | Evidencia pendiente |
+| :--- | :--- | :--- |
+| Inicio de sesión protegido | El backend emite un JWT y el frontend consume rutas protegidas sin exponer credenciales. | Captura de login, respuesta HTTP 200 y uso del token. |
+| Gestión de organización y usuarios | Los usuarios autenticados consultan recursos según organización y rol. | Captura de endpoint protegido y vista frontend. |
+| Asistencia IA para incidencia | El sistema genera una recomendación estructurada basada en datos operativos y exige aprobación humana. | Captura de Swagger/Postman y pantalla de AI Guidance. |
+| Resumen de reporte | El backend devuelve una síntesis de cumplimiento para auditoría o revisión interna. | Captura del endpoint y respuesta JSON. |
+| Consulta de planes | Landing y frontend muestran planes, límites y acciones disponibles. | Captura de sección pricing y vista billing. |
+| Persistencia en MySQL | Las operaciones realizadas desde API se reflejan en la base de datos. | Captura de tabla MySQL/Cloud SQL con datos generados. |
+
+> Evidencias pendientes de adjuntar en `report/assets/chapter-05/sprint-04/`: `swagger-auth-test.png`, `swagger-ai-test.png`, `swagger-billing-test.png`, `mysql-sprint-04-validation.png`, `frontend-authenticated-flow.png`.
+
+#### 5.2.4.6. Services Documentation Evidence for Sprint Review
+
+Los servicios del Sprint 4 deben mantenerse bajo el prefijo versionado `/api/v1`, siguiendo el criterio documentado en el Sprint 3. La evidencia principal será Swagger/OpenAPI publicado en Cloud Run y pruebas contra MySQL.
+
+| Grupo de servicios | Método | Endpoint propuesto | Propósito |
+| :--- | :--- | :--- | :--- |
+| Authentication | POST | `/api/v1/auth/sign-in` | Validar credenciales y emitir JWT. |
+| Authentication | POST | `/api/v1/auth/password-reset` | Solicitar recuperación de contraseña. |
+| Users | GET | `/api/v1/organizations/{organizationId}/users` | Listar usuarios por organización. |
+| Users | DELETE | `/api/v1/organizations/{organizationId}/users/{userId}` | Eliminar usuario cuando no existan dependencias bloqueantes. |
+| AI Assistance | POST | `/api/v1/organizations/{organizationId}/incidents/{incidentId}/ai-resolution-plans` | Generar plan asistido para una incidencia. |
+| AI Assistance | POST | `/api/v1/organizations/{organizationId}/incidents/{incidentId}/ai-resolution-plans/{planId}/approvals` | Aprobar plan sugerido con control humano. |
+| AI Assistance | POST | `/api/v1/organizations/{organizationId}/incidents/{incidentId}/ai-resolution-plans/{planId}/rejections` | Rechazar plan sugerido con motivo. |
+| AI Assistance | GET | `/api/v1/organizations/{organizationId}/incidents/{incidentId}/ai-resolution-plans` | Consultar historial de planes. |
+| Reports | POST | `/api/v1/organizations/{organizationId}/reports/{reportId}/ai-summary` | Generar resumen de cumplimiento. |
+| Subscription Plans | GET | `/api/v1/subscription-plans` | Listar planes disponibles. |
+| Billing | GET | `/api/v1/organizations/{organizationId}/subscription` | Consultar plan actual y consumo de límites. |
+| Billing | POST | `/api/v1/organizations/{organizationId}/billing/checkout-sessions` | Crear sesión de checkout externo. |
+| Billing | POST | `/api/v1/organizations/{organizationId}/billing/customer-portal-sessions` | Abrir portal de gestión de facturación. |
+
+Evidencias gráficas que deben agregarse:
+
+| Evidencia | Ruta sugerida | Descripción |
+| :--- | :--- | :--- |
+| Swagger general Sprint 4 | `report/assets/chapter-05/sprint-04/swagger-sprint-04-menu.png` | Menú Swagger con controladores nuevos. |
+| Swagger Authentication | `report/assets/chapter-05/sprint-04/swagger-authentication.png` | Endpoints de autenticación y usuarios protegidos. |
+| Swagger AI Assistance | `report/assets/chapter-05/sprint-04/swagger-ai-assistance.png` | Endpoints de generación, aprobación, rechazo e historial. |
+| Swagger Billing | `report/assets/chapter-05/sprint-04/swagger-billing.png` | Endpoints de planes, suscripción y checkout. |
+| MySQL validation | `report/assets/chapter-05/sprint-04/mysql-cloudsql-validation.png` | Tablas actualizadas luego de ejecutar endpoints. |
+
+#### 5.2.4.7. Software Deployment Evidence for Sprint Review
+
+El Sprint 4 se apoya en la infraestructura ya documentada en el Sprint 3: backend ASP.NET Core containerizado con Docker, publicación en Google Cloud Run, base de datos MySQL en Cloud SQL y documentación Swagger/OpenAPI disponible públicamente.
+
+| Componente | Detalle |
+| :--- | :--- |
+| Backend | ASP.NET Core Web API con C# |
+| Frontend | Vue.js desplegado en Vercel |
+| Landing Page | Sitio estático desplegado con GitHub Pages |
+| Base de datos | MySQL / Google Cloud SQL |
+| Documentación API | Swagger/OpenAPI |
+| Cloud | Google Cloud Run |
+| Seguridad | JWT, CORS y variables de entorno para secretos |
+| Integraciones preparadas | Proveedor IA externo y pasarela de pagos externa |
+
+Para completar la evidencia final del despliegue se deben adjuntar las siguientes capturas:
+
+| Evidencia | Ruta sugerida |
+| :--- | :--- |
+| Revisión activa en Cloud Run | `report/assets/chapter-05/sprint-04/cloud-run-revision.png` |
+| Variables de entorno sin exponer secretos | `report/assets/chapter-05/sprint-04/cloud-run-env-vars.png` |
+| Swagger publicado en URL pública | `report/assets/chapter-05/sprint-04/swagger-public-url.png` |
+| Frontend desplegado en Vercel | `report/assets/chapter-05/sprint-04/vercel-frontend-deployment.png` |
+| Landing Page desplegada en GitHub Pages | `report/assets/chapter-05/sprint-04/github-pages-landing.png` |
+
+#### 5.2.4.8. Team Collaboration Insights during Sprint
+
+La colaboración del Sprint 4 debe evidenciarse con Linear, commits, pull requests y analíticos de GitHub. La revisión final debe mostrar distribución de tareas, participación de todos los miembros y trazabilidad entre lo planificado y lo implementado.
+
+| Actividad colaborativa | Evidencia requerida | Herramienta |
+| :--- | :--- | :--- |
+| Planning | Backlog Sprint 4 con tareas estimadas de 4 a 8 horas. | Linear App |
+| Development | Commits y pull requests por feature branch. | GitHub |
+| Execution | Pruebas de endpoints y recorridos frontend. | Swagger, Postman, Vercel |
+| Documentation | Actualización del informe y evidencias por sección. | GitHub, README.md |
+| Deployment | Revisión de Cloud Run, Swagger y base de datos. | Google Cloud, MySQL |
+
+Evidencias pendientes de adjuntar:
+
+| Evidencia | Ruta sugerida |
+| :--- | :--- |
+| Contributors del repositorio backend/frontend | `report/assets/chapter-05/sprint-04/github-contributors.png` |
+| Pulse del repositorio | `report/assets/chapter-05/sprint-04/github-pulse.png` |
+| Linear por estados | `report/assets/chapter-05/sprint-04/linear-statuses.png` |
+| Pull requests cerrados | `report/assets/chapter-05/sprint-04/github-pull-requests.png` |
+
 ## 5.3. Validation Interviews
 
 ### 5.3.1. Diseño de Entrevistas
@@ -4173,29 +4522,137 @@ Para cada segmento objetivo se registrarán 3 entrevistas. Cada entrevista debe 
 
 ### 5.3.3. Evaluaciones según heurísticas
 
-No se realizaron evaluaciones heurísticas formales durante Sprint 1. La revisión se enfocó en verificar que la Landing Page cargue correctamente, que las secciones principales sean visibles y que el diseño responda en distintas resoluciones.
+Esta sección queda preparada para que el equipo complete la evaluación heurística formal de la Landing Page y la Frontend Web Application. Los problemas, severidades, heurísticas vulneradas y alternativas de solución deben registrarse después de la revisión grupal.
+
+#### UX Heuristics & Principles Evaluation
+
+**Usability - Inclusive Design - Information Architecture**
+
+| Campo | Información |
+| :--- | :--- |
+| Carrera | Ingeniería de Software |
+| Curso | Aplicaciones Web |
+| Sección | 2610 |
+| Profesor | Hugo Allan Mori Paiva |
+| Auditor | FrostGuard |
+| Cliente(s) |  |
+| Site o App a evaluar | ColdTrace Landing Page y ColdTrace Frontend Web Application |
+
+**Tareas a evaluar**
+
+| # | Tarea | Incluida |
+| :---: | :--- | :---: |
+| 1 | Registro o inicio de sesión de usuario. |  |
+| 2 | Consulta del dashboard operacional. |  |
+| 3 | Gestión de activos, sensores y gateways. |  |
+| 4 | Revisión de alertas e incidencias. |  |
+| 5 | Consulta de reportes de cumplimiento. |  |
+| 6 | Gestión de mantenimiento o servicios técnicos. |  |
+| 7 | Revisión de planes, billing o funcionalidades SaaS. |  |
+
+**Escala de severidad**
+
+| Nivel | Descripción |
+| :---: | :--- |
+| 1 | Problema superficial que puede ser superado fácilmente o aparece con muy poca frecuencia. |
+| 2 | Problema menor que puede dificultar parcialmente la experiencia y debe priorizarse con severidad baja. |
+| 3 | Problema mayor que ocurre con frecuencia o impide completar una tarea de forma fluida. |
+| 4 | Problema crítico que bloquea el uso de la herramienta y debe corregirse antes de una entrega productiva. |
+
+**Tabla resumen**
+
+| # | Problema | Escala de severidad | Heurística/Principio vulnerado |
+| :---: | :--- | :---: | :--- |
+| 1 |  |  |  |
+| 2 |  |  |  |
+| 3 |  |  |  |
+| 4 |  |  |  |
+
+**Descripción de problemas**
+
+| Problema | Severidad | Heurística/Principio | Evidencia | Recomendación |
+| :--- | :---: | :--- | :--- | :--- |
+|  |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
 
 ## 5.4. Video About-the-Product
 
-El documento fuente no registra un enlace final de video About-the-Product para esta entrega. El video será incorporado cuando se consolide la evidencia audiovisual del producto.
+Como parte de la entrega del proyecto, se ha elaborado un video explicativo que presenta de manera resumida el producto ColdTrace, una plataforma orientada a la gestión y monitoreo de la cadena de frío. En el video se describe el problema que aborda el sistema, sus principales funcionalidades —gestión de organizaciones, ubicaciones, gateways, activos, dispositivos IoT, lecturas de sensores, incidentes y reportes— así como el valor que aporta a las organizaciones que dependen del control de temperatura y humedad en sus operaciones.
 
+El video puede visualizarse en el siguiente enlace:
+
+[Ver en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414054_upc_edu_pe/IQCmZIySYa3pT43sGAmn0UaGAfUnEK7pyE9kdDZWjSlXGX4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=1oulNb)
 ---
 
 # Capítulo VI: Conclusions
 ## 6.1. Conclusiones y recomendaciones
-### Conlusiones
-El desarrollo del presente trabajo ha permitido al equipo validar que existe una necesidad real y no atendida adecuadamente en el sector alimentario peruano: la ausencia de herramientas digitales accesibles para el monitoreo continuo de la cadena de frío. A través de las entrevistas realizadas a ambos segmentos objetivo, se confirmó que tanto los dueños de pequeños negocios como los responsables de operaciones dependen exclusivamente de controles manuales, detectan las fallas de refrigeración de forma tardía y carecen de documentación que respalde el cumplimiento normativo ante DIGESA y MINSA.
-El proceso de needfinding, que incluyó User Personas, User Task Matrix, User Journey Maps y Empathy Maps, permitió comprender con profundidad las motivaciones, frustraciones y expectativas de cada segmento, asegurando que las decisiones de diseño de ColdTrace respondan a necesidades reales y no a suposiciones. Los Impact Maps y User Stories derivados de este análisis establecieron una base sólida y priorizada para el desarrollo del producto.
-En cuanto a la implementación, el equipo logró desplegar una landing page funcional que comunica con claridad la propuesta de valor de ColdTrace, sus funcionalidades principales y el flujo de uso de la plataforma, constituyendo el primer entregable tangible del producto hacia los usuarios potenciales.
-Finalmente, el trabajo colaborativo del equipo, con roles distribuidos entre investigación, diseño, arquitectura e implementación, demostró que es posible avanzar de forma paralela en múltiples frentes sin perder coherencia entre los entregables, gracias a una planificación por sprints y una comunicación constante.
-### Recomendaciones 
-Se recomienda realizar entrevistas de validación con usuarios reales del primer segmento, particularmente dueños de carnicerías, pescaderías y minimarkets, para contrastar los hallazgos obtenidos hasta ahora con experiencias concretas de campo, ajustando el diseño de la plataforma si fuera necesario.
-Para los siguientes sprints, se sugiere priorizar el desarrollo de las funcionalidades más valoradas por ambos segmentos: las alertas automáticas en tiempo real y la generación de reportes para auditorías sanitarias, ya que son las que mayor impacto tendrán en la decisión de adopción de la plataforma.
-Se recomienda también definir una estrategia de precios clara y accesible desde etapas tempranas, dado que el costo de implementación fue identificado como la principal barrera de adopción en ambos segmentos. Un modelo freemium o un periodo de prueba gratuito podría reducir significativamente esta fricción.
-En cuanto al diseño de la plataforma, se sugiere mantener la simplicidad como principio rector de la interfaz, especialmente para el primer segmento, cuyos usuarios no tienen experiencia con software de gestión. Cualquier funcionalidad nueva debe poder entenderse sin capacitación previa.
-Finalmente, se recomienda establecer alianzas tempranas con proveedores de hardware IoT locales en Perú, ya que la dependencia de sensores importados podría encarecer la solución y reducir su competitividad frente a alternativas ya posicionadas en el mercado peruano.
+### Conclusiones
+
+1. **Necesidad validada en cadena de frío:** Las entrevistas y artefactos de needfinding evidencian que los negocios alimentarios pequeños y los responsables de operaciones aún dependen de controles manuales, hojas de cálculo, revisiones visuales y comunicación informal por WhatsApp o llamadas. Esta situación incrementa el riesgo de detectar tarde una desviación térmica y perder productos perecibles.
+
+2. **Soporte al cumplimiento sanitario:** ColdTrace contribuye a la preparación de evidencias requeridas en inspecciones sanitarias relacionadas con inocuidad alimentaria, conservación de alimentos perecibles y control de condiciones de almacenamiento supervisadas por entidades como DIGESA y MINSA. La plataforma no reemplaza la obligación normativa de cada negocio, pero sí facilita el registro de temperaturas, historial de incidencias, acciones correctivas y reportes que pueden sustentar auditorías internas o revisiones sanitarias.
+
+3. **Trazabilidad operacional:** La propuesta conecta activos refrigerados, gateways, dispositivos IoT, lecturas de sensores, alertas, incidencias y reportes dentro de una misma plataforma. Esta trazabilidad permite pasar de una gestión reactiva a una supervisión basada en datos, donde cada evento crítico puede vincularse con una lectura, un activo, una acción correctiva y un responsable.
+
+4. **Arquitectura y despliegue coherentes con el curso:** El producto se documentó como una solución web distribuida con Landing Page, Frontend Web Application y RESTful API. El backend ASP.NET Core con C# se despliega en Google Cloud Run, se conecta a MySQL y expone documentación Swagger/OpenAPI, lo que permite validar contratos de servicio y consumo desde el frontend.
+
+5. **Mejora continua aplicada:** El informe incorporó correcciones de entregas anteriores, especialmente en entrevistas, backlog, evidencias, despliegue, documentación de servicios, conclusiones y anexos. Además, el Sprint 4 quedó preparado para integrar evidencias finales sin mezclar resultados pendientes con resultados ya validados.
+
+6. **Colaboración del equipo:** La distribución por sprints, roles, issues y repositorios permitió organizar el trabajo de investigación, diseño, arquitectura, implementación y documentación. El uso de GitHub, Linear/Trello, Swagger y recursos desplegados fortalece la trazabilidad entre planificación, ejecución y evidencia.
+
+### Recomendaciones
+
+1. **Completar validaciones pendientes con usuarios reales:** Se recomienda terminar las entrevistas faltantes del segmento de responsables de operaciones, calidad o logística, registrando screenshots, enlaces, duración, timing y resumen por participante.
+
+2. **Realizar la evaluación heurística grupal:** La sección 5.3.3 quedó como plantilla vacía para que el equipo complete problemas reales de usabilidad, severidad, heurística vulnerada y alternativa de solución técnica.
+
+3. **Adjuntar evidencias finales del Sprint 4:** Para cerrar el Sprint 4, se deben agregar capturas de Linear, Swagger, Cloud Run, MySQL, Vercel/GitHub Pages y GitHub Collaboration Insights en las rutas sugeridas dentro de la sección 5.2.4.
+
+4. **Consolidar pruebas frontend-backend:** Se recomienda ejecutar pruebas end-to-end sobre endpoints reales desplegados, especialmente autenticación, gestión de activos, lecturas, incidencias, reportes y flujos preparados de asistencia IA o billing.
+
+5. **Fortalecer reportes para auditoría sanitaria:** Los reportes deben exportarse en formatos portables como PDF o Excel e incluir rangos aceptables, lecturas fuera de rango, acciones correctivas, fecha, responsable y activo afectado, de modo que puedan servir como evidencia ordenada ante auditorías internas o inspecciones.
+
+6. **Mantener simplicidad para negocios pequeños:** Las funcionalidades nuevas deben conservar una interfaz clara, con lenguaje operativo y pocas decisiones por pantalla, debido a que parte del segmento objetivo no cuenta con experiencia previa en sistemas de monitoreo o gestión empresarial.
+
+7. **Evaluar sensores y proveedores locales:** Para reducir costos de adopción, se recomienda validar compatibilidad con hardware IoT accesible en Perú, como ESP32, Raspberry Pi o sensores comerciales de temperatura/humedad, antes de una implementación productiva.
 ## 6.2. Video About-the-Team
-[pending content]
+Como parte de la entrega final, cada integrante del equipo ha grabado una breve presentación personal en la que comparte su experiencia durante el desarrollo del proyecto ColdTrace, destacando los conocimientos adquiridos en el curso y cómo estos contribuyeron a su crecimiento profesional y al logro de los objetivos planteados.
+
+Los integrantes que participan en el video son:
+
+<table align="center" style="margin: 0 auto; font-size: 15px;">
+  <thead>
+    <tr>
+      <th align="center">Código</th>
+      <th align="center">Apellidos y Nombres</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">U202414054</td>
+      <td align="left">Jean Pool Alexander Arias Tasayco</td>
+    </tr>
+    <tr>
+      <td align="center">U202410093</td>
+      <td align="left">Mauricio Luis Pajes Leon</td>
+    </tr>
+    <tr>
+      <td align="center">U202321020</td>
+      <td align="left">Leonardo Sebastian Delgado Arriola</td>
+    </tr>
+    <tr>
+      <td align="center">U202416706</td>
+      <td align="left">Santiago Enrique Vargas Alarcon</td>
+    </tr>
+    <tr>
+      <td align="center">U202323350</td>
+      <td align="left">Eduardo David Velasquez Laquihuanaco</td>
+    </tr>
+  </tbody>
+</table>
+
+[upc-pre-202610-1ASI0730-10177-coldtrace-about-the-team-sprint-3](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414054_upc_edu_pe/IQB7LR5aGL-8RoNvXRn22suHAQESryMX97Dk_Kc26UCQ6B0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=sRmsG2)
 
 ---
 
@@ -4205,3 +4662,61 @@ Agraria.pe. (2019, junio 26). Perú pierde más del 33% de los alimentos que pro
 FAO. (2021). Más de 12 millones de toneladas de alimentos se pierden a lo largo de la cadena productiva en el Perú. Organización de las Naciones Unidas para la Alimentación y la Agricultura. https://www.fao.org/peru/noticias/detail-events/en/c/1712376/ 
 
 Gestión. (2025, septiembre 21). Mercado de almacenes en frío en Perú crecerá a US$ 510 millones en 2025: ¿qué lo impulsa? Gestión. https://gestion.pe/economia/empresas/mercado-de-almacenes-en-frio-en-peru-crecera-a-us-510-millones-en-2025-que-lo-impulsa-noticia/
+
+---
+
+# Anexos
+
+## Anexo A: Repositorios del proyecto
+
+| Producto | Repositorio |
+| :--- | :--- |
+| Informe del proyecto | https://github.com/AplicacionesWeb-Grupo-2/informe-del-proyecto |
+| Landing Page | https://github.com/mauricio-pajes/landing-page-test |
+| Frontend Web Application | https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend |
+| Backend RESTful API | https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform |
+| Organización GitHub | https://github.com/AplicacionesWeb-Grupo-2 |
+
+## Anexo B: Recursos desplegados
+
+| Recurso | URL |
+| :--- | :--- |
+| Frontend Web Application (Vercel) | https://coldtrace-frontend-web.vercel.app/ |
+| Backend Cloud Run | https://coldtrace-platform-3kti2ylcba-uc.a.run.app |
+| Swagger UI | https://coldtrace-platform-3kti2ylcba-uc.a.run.app/swagger |
+| Swagger JSON | https://coldtrace-platform-3kti2ylcba-uc.a.run.app/swagger/v1/swagger.json |
+| JSON Server provisional Sprint 2 | https://coldtrace-app-web-json-server.onrender.com/ |
+
+> Pendiente por confirmar con el equipo: URL pública final de la Landing Page en GitHub Pages, ya que el informe conserva el repositorio de landing pero no una URL pública explícita de producción.
+
+## Anexo C: Videos del proyecto
+
+| Tipo | Enlace |
+| :--- | :--- |
+| Video de navegación del producto - Sprint 2 | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQAb3T9DE7AmQ7aOxNsIfCAIAaqlY68Kt3syw7uDil2npvk |
+| Video Product Navigation - Sprint 3 | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323350_upc_edu_pe/IQC_iCMNMEIJRoDLEchEjK4XAQZvho_o3UllbIqUg4E8yHo |
+| Video consolidado de entrevistas de validación | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQDzxmtGoZMES7vutMFjzCRkAXimh9-_K-h2BVM1FMlXjhY |
+| Video About-the-Product | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414054_upc_edu_pe/IQCmZIySYa3pT43sGAmn0UaGAfUnEK7pyE9kdDZWjSlXGX4 |
+| Video About-the-Team | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414054_upc_edu_pe/IQB7LR5aGL-8RoNvXRn22suHAQESryMX97Dk_Kc26UCQ6B0 |
+
+## Anexo D: Evidencias pendientes para Sprint 4
+
+| Evidencia | Ruta sugerida |
+| :--- | :--- |
+| Tablero Linear del Sprint 4 | `report/assets/chapter-05/sprint-04/linear-sprint-04-board.png` |
+| Commits o Pull Requests backend | `report/assets/chapter-05/sprint-04/github-backend-commits.png` |
+| Commits o Pull Requests frontend | `report/assets/chapter-05/sprint-04/github-frontend-commits.png` |
+| Swagger Authentication | `report/assets/chapter-05/sprint-04/swagger-authentication.png` |
+| Swagger AI Assistance | `report/assets/chapter-05/sprint-04/swagger-ai-assistance.png` |
+| Swagger Billing | `report/assets/chapter-05/sprint-04/swagger-billing.png` |
+| Validación MySQL/Cloud SQL | `report/assets/chapter-05/sprint-04/mysql-cloudsql-validation.png` |
+| Despliegue Cloud Run | `report/assets/chapter-05/sprint-04/cloud-run-revision.png` |
+| Despliegue Frontend en Vercel | `report/assets/chapter-05/sprint-04/vercel-frontend-deployment.png` |
+| Analíticos de colaboración GitHub | `report/assets/chapter-05/sprint-04/github-contributors.png` |
+
+## Anexo E: Secciones deliberadamente reservadas para trabajo grupal
+
+| Sección | Motivo |
+| :--- | :--- |
+| 5.3.2 Entrevistas de validación faltantes | Deben ser completadas con participantes reales, capturas, timing, duración y resumen. |
+| 5.3.3 Evaluaciones según heurísticas | Debe ser completada por el equipo después de la evaluación formal de UX. |
