@@ -98,11 +98,11 @@ El presente apartado tiene como finalidad evidenciar el trabajo colaborativo rea
 
 A partir de este repositorio, se analiza la participación de los integrantes mediante indicadores como la distribución de tareas, la frecuencia de contribuciones, la revisión de contenidos y la integración progresiva de los entregables desarrollados durante el avance del proyecto.
 
-En el contexto de las entregas AV1, AV2 y TB2, el análisis de colaboración permite visualizar el aporte individual de cada miembro del equipo, sustentado en los registros de GitHub, la organización de responsabilidades y la evolución del informe. Este seguimiento busca demostrar una distribución ordenada del trabajo, la consistencia en la documentación y el cumplimiento de las actividades asignadas.
+En el contexto de las entregas AV1, TB1, AV2 y TB2, el análisis de colaboración permite visualizar el aporte individual de cada miembro del equipo, sustentado en los registros de GitHub, la organización de responsabilidades y la evolución del informe. Este seguimiento busca demostrar una distribución ordenada del trabajo, la consistencia en la documentación y el cumplimiento de las actividades asignadas.
 
-## AV2
+## AV1
 
-Durante el desarrollo de la entrega AV2, el equipo organizó la elaboración del informe mediante la asignación de responsabilidades por secciones. Esta distribución permitió avanzar de manera paralela en actividades relacionadas con investigación, análisis del segmento objetivo, definición de requisitos, diseño UX, modelado del dominio, arquitectura de software y documentación técnica.
+Durante la entrega AV1, correspondiente al Sprint 1 del proyecto, el equipo organizó la elaboración del informe mediante la asignación de responsabilidades por secciones. Esta distribución permitió avanzar de manera paralela en actividades relacionadas con investigación, análisis del segmento objetivo, definición de requisitos, diseño UX, modelado del dominio, arquitectura de software y documentación técnica.
 
 El proceso de desarrollo del informe se realizó de forma incremental, incorporando progresivamente los contenidos conforme se consolidaban los artefactos del proyecto. Esto se refleja en el Registro de Versiones del Informe, donde se evidencia la evolución del documento desde su estructura inicial hasta la inclusión de elementos como Lean UX, entrevistas, user stories, impact maps, event storming, bounded contexts, diagramas C4, diagramas de clases, diseño de base de datos y evidencias de implementación.
 
@@ -124,13 +124,65 @@ La coordinación del equipo también permitió mantener una visión compartida d
 
 Finalmente, el trabajo colaborativo durante AV1 permitió establecer una base documental sólida para las siguientes etapas del proyecto. Esta base facilita la continuidad del desarrollo, la revisión de decisiones tomadas y la trazabilidad entre los objetivos de negocio, las necesidades de los usuarios y la solución propuesta.
 
+## TB1
+
+Durante la entrega TB1, correspondiente al Sprint 2, el equipo se enfocó en el desarrollo frontend de la aplicación web ColdTrace utilizando Vue 3 y Vite, desplegada en Vercel con un backend provisional basado en json-server alojado en Render. El objetivo fue ofrecer una aplicación web completamente navegable con módulos de autenticación, gestión de activos, monitoreo, alertas, reportes y configuración operativa.
+
+La colaboración se organizó por bounded contexts funcionales: Mauricio Pajés lideró la identidad y acceso junto con la gestión de activos; Leonardo Delgado condujo el módulo de reportes y cumplimiento normativo; Jean Pool Arias asumió la configuración operativa; Santiago Vargas lideró el dashboard de monitoreo operacional; y Eduardo Velásquez lideró las alertas e incidencias. Todos los integrantes participaron como colaboradores en los módulos restantes, lo que permitió completar una aplicación funcional en un solo sprint.
+
+El equipo registró alrededor de 76 commits en el repositorio del frontend, con una distribución que refleja la participación activa de todos los miembros. La planificación se gestionó mediante Trello, y la integración continua se implementó con GitHub Actions hacia Vercel.
+
+<p align="center">
+  <img src="report/assets/common/collaboration-insights/av1-pulse-overview.png" width="900" alt="GitHub Pulse overview for TB1 collaboration insights">
+</p>
+
+*Figura 3. Vista general de actividad del repositorio durante el periodo correspondiente a TB1.*
+
+<p align="center">
+  <img src="report/assets/common/collaboration-insights/av1-contributors-commits.png" width="900" alt="GitHub contributors commit activity for TB1 collaboration insights">
+</p>
+
+*Figura 4. Registro de contribuciones por integrante en el repositorio del informe durante TB1.*
+
+## AV2
+
+Durante la entrega AV2, correspondiente al Sprint 3, el equipo desarrolló y desplegó la RESTful API oficial de ColdTrace utilizando ASP.NET Core con C#, reemplazando la API simulada del Sprint 2. El backend se desplegó en Google Cloud Run con persistencia real en Google Cloud SQL for MySQL, documentación Swagger/OpenAPI y pipeline de integración continua con GitHub Actions.
+
+La colaboración se distribuyó por áreas técnicas de la API: Mauricio Pajés lideró la fundación de la API, la autenticación, organizaciones, usuarios y gateways; Jean Pool Arias lideró el módulo de dispositivos IoT y lecturas de sensores; Santiago Vargas condujo la API de activos y configuración de activos; Eduardo Velásquez lideró las APIs de mantenimiento, servicio técnico y roles; y Leonardo Delgado lideró las APIs de incidentes, notificaciones y reportes.
+
+El equipo consolidó la arquitectura general del sistema mediante endpoints RESTful que cubrieron los bounded contexts definidos en el diseño del dominio. La documentación Swagger quedó publicada como fuente técnica de referencia, y las pruebas con Postman validaron la funcionalidad de los endpoints principales.
+
+<p align="center">
+  <img src="report/assets/common/collaboration-insights/av1-pulse-overview.png" width="900" alt="GitHub Pulse overview for AV2 collaboration insights">
+</p>
+
+*Figura 5. Vista general de actividad del repositorio durante el periodo correspondiente a AV2.*
+
+<p align="center">
+  <img src="report/assets/common/collaboration-insights/av1-contributors-commits.png" width="900" alt="GitHub contributors commit activity for AV2 collaboration insights">
+</p>
+
+*Figura 6. Registro de contribuciones por integrante en el repositorio del informe durante AV2.*
+
 ## TB2
 
-Durante la entrega TB2, el equipo consolidó el informe final integrando las observaciones recibidas en entregas previas y preparando el cierre documental del producto ColdTrace. El trabajo se enfocó en reforzar la comunicación escrita, completar evidencias faltantes, corregir inconsistencias de formato, normalizar la trazabilidad entre backlogs, sprints y artefactos, y dejar listo el Sprint 4 con una estructura verificable para incorporar las evidencias finales del equipo.
+Durante la entrega TB2, correspondiente al Sprint 4, el equipo consolidó el informe final integrando las observaciones recibidas en entregas previas y preparando el cierre documental del producto ColdTrace. El trabajo se enfocó en reforzar la comunicación escrita, completar evidencias faltantes, corregir inconsistencias de formato, normalizar la trazabilidad entre backlogs, sprints y artefactos, y dejar listo el Sprint 4 con una estructura verificable para incorporar las evidencias finales del equipo.
+
+El Sprint 4 tiene como objetivo extender ColdTrace con identidad segura mediante JWT, asistencia operativa basada en inteligencia artificial y capacidades SaaS de suscripción. Mauricio Pajés lidera la autenticación JWT, Leonardo Delgado la asistencia con IA, Jean Pool Arias la integración frontend, Eduardo Velásquez los planes y facturación SaaS, y Santiago Vargas la documentación y despliegue.
 
 La mejora continua se aplicó en secciones clave del informe: entrevistas, backlog, despliegue, documentación de servicios, validación, conclusiones y anexos. Además, se separó explícitamente el contenido que requiere participación grupal posterior, como las entrevistas de validación faltantes y la evaluación heurística, para evitar registrar resultados no realizados.
 
-Para el Sprint 4, la documentación quedó alineada al stack del curso y del proyecto: backend con ASP.NET Core y C#, frontend con Vue.js, base de datos MySQL, documentación Swagger/OpenAPI y despliegue en Google Cloud Run. También se incluyeron placeholders de evidencia visual para que el equipo agregue las capturas correspondientes de Linear, Swagger, Cloud Run, MySQL, frontend y colaboración en GitHub.
+<p align="center">
+  <img src="report/assets/common/collaboration-insights/av1-pulse-overview.png" width="900" alt="GitHub Pulse overview for TB2 collaboration insights">
+</p>
+
+*Figura 7. Vista general de actividad del repositorio durante el periodo correspondiente a TB2.*
+
+<p align="center">
+  <img src="report/assets/common/collaboration-insights/av1-contributors-commits.png" width="900" alt="GitHub contributors commit activity for TB2 collaboration insights">
+</p>
+
+*Figura 8. Registro de contribuciones por integrante en el repositorio del informe durante TB2.*
 
 ---
 
@@ -244,100 +296,116 @@ Para el Sprint 4, la documentación quedó alineada al stack del curso y del pro
 
 # Student Outcome
 
+## ABET 5 — Student Outcome 5
+
+El curso contribuye al cumplimiento del Student Outcome ABET: **ABET - EAC - Student Outcome 5**.
+
+**Criterio:** Trabaja efectivamente en un equipo cuyos miembros juntos proporcionan liderazgo; crea un entorno colaborativo e inclusivo y establece metas, planifica tareas y cumple objetivos.
+
+En los siguientes cuadros se describen las acciones realizadas y conclusiones del equipo, conservando las evidencias acumuladas de **AV1**, **TB1**, **AV2** y **TB2**.
+
+### Criterio 5.c.1 — Trabaja en equipo para proporcionar liderazgo en forma conjunta
+
 <table border="1" style="width:100%; border-collapse: collapse;">  
 <tr>  
-<th style="width:25%;">Criterio Específico</th>  
-<th style="width:37.5%;">Acciones Realizadas</th>  
-<th style="width:37.5%;">Conclusiones</th>  
+<th style="width:15%;">Criterio Específico</th>  
+<th style="width:42.5%;">Acciones Realizadas</th>  
+<th style="width:42.5%;">Conclusiones</th>  
 </tr>  
 <tr>  
 <td>  
 Trabaja en equipo para proporcionar liderazgo en forma conjunta  
 </td>  
 <td>  
-<strong>----------AV2----------</strong><br>  
-<strong>Leonardo Delgado:</strong><br>  
-Desarrolló funcionalidades asociadas a incidentes, notificaciones y reportes dentro del backend del proyecto, abordando componentes clave para el seguimiento de eventos y la generación de información útil para la plataforma. Su trabajo permitió ampliar el alcance funcional del sistema hacia procesos de monitoreo y análisis.<br><br>  
-  
-<strong>Mauricio Pajés:</strong><br>  
-Lideró la organización técnica del AV2 mediante la creación y estructuración de la mayor parte de los issues del sprint, definiendo el alcance funcional del backend y distribuyendo responsabilidades entre los integrantes del equipo. Además, avanzó directamente en endpoints clave como la base de la API, registro de organizaciones, usuarios, gateways, organizaciones y ubicaciones, consolidando la arquitectura general del sistema.<br><br>  
-  
-<strong>Jean Pool Arias:</strong><br>  
-Asumió el desarrollo de funcionalidades centrales vinculadas a dispositivos IoT y lecturas de sensores, avanzando en componentes importantes para la lógica operativa de la plataforma. Su trabajo permitió complementar la base backend con servicios directamente relacionados al monitoreo y seguimiento técnico del sistema.<br><br>  
-  
-<strong>Eduardo Velásquez:</strong><br>  
-Contribuyó en el desarrollo de funcionalidades vinculadas a cronogramas de mantenimiento, solicitudes técnicas y asignación de roles, participando en módulos que ayudan a estructurar la operación funcional de la plataforma. Su aporte fortaleció la implementación de procesos internos relevantes para el flujo del sistema.<br><br>  
-  
-<strong>Santiago Enrique Vargas Alarcón:</strong><br>  
-Desarrolló funcionalidades relacionadas con assets y configuración de activos, contribuyendo en módulos importantes para la administración de recursos dentro de la plataforma. Su participación aportó continuidad al trabajo técnico del equipo en servicios necesarios para la gestión operativa del sistema.<br><br>
+<strong>----------AV1----------</strong><br>  
+<strong>Leonardo Delgado:</strong> Lideró la corrección de contenido del informe y participó como colaborador en las demás secciones del Landing Page, aportando consistencia técnica y editorial al documento base del proyecto.<br><br>  
+<strong>Mauricio Pajés:</strong> Lideró la infraestructura del repositorio, la configuración de CI/CD, la base del Landing Page y las funcionalidades interactivas del Sprint 1. Su liderazgo técnico permitió establecer el entorno de desarrollo y despliegue desde la primera etapa.<br><br>  
+<strong>Jean Pool Arias:</strong> Lideró la sección de contenido del informe y desarrolló las secciones Hero y responsive del Landing Page, participando activamente en la construcción visual y estructural de la página inicial del producto.<br><br>  
+<strong>Eduardo Velásquez:</strong> Preparó el Sprint Planning 1 como planificador principal del primer sprint, distribuyendo las historias de usuario entre los integrantes y estableciendo el velocity del equipo. Desarrolló la navegación sticky y los formularios de registro e inicio de sesión.<br><br>  
+<strong>Santiago Enrique Vargas Alarcón:</strong> Lideró la corrección de contenido del informe y desarrolló la sección de demo del Landing Page, completando el formulario de contacto como punto de entrada para futuros clientes.<br><br>
 
-<strong>----------TB2----------</strong><br>
-Durante la entrega final, el equipo consolidó el informe integrando correcciones de rúbrica, evidencias de despliegue, documentación de servicios, anexos y una estructura completa para Sprint 4. La coordinación se centró en mantener trazabilidad entre investigación, diseño, backlog, implementación, validación y despliegue, diferenciando con claridad los resultados ya evidenciados de las actividades que deben completarse grupalmente, como entrevistas faltantes y evaluación heurística.
+<strong>----------TB1----------</strong><br>  
+<strong>Leonardo Delgado:</strong> Lideró el bounded context de Reportes y Cumplimiento (EP006), desarrollando las vistas de bitácora diaria, historial operativo, exportación sanitaria, reporte mensual, detección de faltantes y evidencia para auditoría. Configuró el despliegue en Vercel.<br><br>  
+<strong>Mauricio Pajés:</strong> Lideró Identidad y Acceso (EP002), Gestión de Activos (EP003) y la infraestructura de despliegue del frontend en Vercel con json-server en Render. Planificó el Sprint 2 y coordinó Pull Requests hacia develop.<br><br>  
+<strong>Jean Pool Arias:</strong> Lideró Configuración Operativa y Mantenimiento (EP007), implementando rangos de seguridad, parámetros operativos y seguimiento de mantenimiento. Participó como colaborador en gestión de activos dentro del velocity planificado.<br><br>  
+<strong>Eduardo Velásquez:</strong> Lideró Alertas e Incidencias (EP005), desarrollando la creación de incidencias térmicas, notificaciones automáticas, escalamiento de alertas, reconocimiento de alertas críticas y registro de acciones correctivas.<br><br>  
+<strong>Santiago Enrique Vargas Alarcón:</strong> Lideró el dashboard operacional (EP004, US039) y colaboró en las vistas de monitoreo de temperatura, humedad, historial de lecturas, detección fuera de rango y conectividad.<br><br>
+
+<strong>----------AV2----------</strong><br>  
+<strong>Leonardo Delgado:</strong> Lideró las APIs de Incidentes, Notificaciones y Reportes en el backend oficial, cubriendo los bounded contexts de seguimiento de eventos, generación de reportes consolidados y evidencia documental para auditorías.<br><br>  
+<strong>Mauricio Pajés:</strong> Lideró la fundación de la API, la autenticación, las APIs de organizaciones, usuarios, gateways y ubicaciones. Creó y estructuró la mayor parte de los issues del sprint, definiendo el alcance funcional del backend y distribuyendo responsabilidades entre los integrantes.<br><br>  
+<strong>Jean Pool Arias:</strong> Lideró la API de dispositivos IoT y lecturas de sensores, articulando los servicios que permiten el monitoreo de temperatura y humedad en tiempo real, la consulta de historiales y la detección de desviaciones.<br><br>  
+<strong>Eduardo Velásquez:</strong> Lideró las APIs de mantenimiento, servicio técnico y roles, incluyendo cronogramas de mantenimiento preventivo, solicitudes técnicas y asignación de permisos dentro de la plataforma.<br><br>  
+<strong>Santiago Enrique Vargas Alarcón:</strong> Lideró la API de assets y configuración de activos, desarrollando servicios para la administración de activos refrigerados, configuración de parámetros operativos y vinculación con sensores IoT.<br><br>
+
+<strong>----------TB2----------</strong><br>  
+<strong>Mauricio Pajés:</strong> Lidera la autenticación JWT del backend, extendiendo la seguridad de la API con emisión y validación de tokens. <strong>Leonardo Delgado:</strong> Lidera el diseño del servicio de asistencia operativa basada en IA. <strong>Jean Pool Arias:</strong> Lidera la integración del frontend con el nuevo backend JWT. <strong>Eduardo Velásquez:</strong> Lidera los planes y facturación SaaS. <strong>Santiago Enrique Vargas Alarcón:</strong> Lidera la documentación técnica y el despliegue actualizado.
 </td>  
 <td>  
-<strong>----------AV2----------</strong><br>  
-<strong>Leonardo Delgado:</strong><br>  
-Su trabajo en incidentes, notificaciones y reportes fortaleció la capacidad del equipo para desarrollar soluciones orientadas al monitoreo y control de la plataforma, aportando valor funcional al backend y ampliando la cobertura técnica del proyecto.<br><br>  
-  
-<strong>Mauricio Pajés:</strong><br>  
-Su rol fue clave para sostener el liderazgo técnico y organizativo del equipo durante el AV2, ya que no solo impulsó el avance de múltiples funcionalidades, sino que también estructuró el trabajo mediante la creación y planificación de los issues. Esto permitió que el equipo trabajara con una dirección común y una base técnica consistente.<br><br>  
-  
-<strong>Jean Pool Arias:</strong><br>  
-Su trabajo en los servicios de dispositivos y lecturas aportó valor directo al desarrollo del núcleo funcional del sistema, alineándose con los objetivos del equipo y fortaleciendo la construcción colaborativa del backend.<br><br>  
-  
-<strong>Eduardo Velásquez:</strong><br>  
-Su contribución en módulos operativos y de mantenimiento permitió que el equipo avanzara en funcionalidades necesarias para la gestión del sistema, manteniendo coherencia con la planificación general del sprint.<br><br>  
-  
-<strong>Santiago Enrique Vargas Alarcón:</strong><br>  
-Su aporte en la gestión de assets y configuraciones técnicas fue importante para complementar el desarrollo backend del equipo, contribuyendo a una implementación más completa, articulada y funcional del sistema.<br><br>
-
+<strong>----------AV1----------</strong><br>
+El equipo lideró de forma conjunta el desarrollo del Landing Page de ColdTrace, distribuyendo el liderazgo por artefactos: infraestructura técnica, contenido editorial, secciones interactivas, formularios y despliegue. Cada integrante asumió un rol de liderazgo en su área y colaboró en las demás, demostrando capacidad para trabajar de manera coordinada, establecer un entorno de desarrollo funcional desde el primer sprint y superar los logros planteados a nivel de investigación, diseño UX, modelado del dominio y arquitectura del sistema.
+<br><br>
+<strong>----------TB1----------</strong><br>
+El liderazgo se trasladó a módulos funcionales de la frontend web application. Cada integrante lideró un bounded context concreto — reportes, identidad y acceso, configuración operativa, alertas e incidencias, y dashboard operacional — mientras colaboraba en los demás. El equipo demostró capacidad para liderar equipos multidisciplinarios en el desarrollo de una aplicación web completamente navegable y desplegada, con responsabilidades claras y resultados efectivos en cada módulo.
+<br><br>
+<strong>----------AV2----------</strong><br>
+El liderazgo conjunto se evidenció en la construcción del backend real y su despliegue en Google Cloud Run. La distribución por APIs permitió que cada integrante condujera un área técnica específica — fundación de la API, dispositivos IoT, assets, mantenimiento, incidentes y reportes — mientras el equipo avanzaba de forma coordinada hacia una solución integrada con persistencia en Cloud SQL, documentación Swagger y entorno cloud. El liderazgo se sostuvo mediante la creación y planificación de issues, la distribución de responsabilidades y la integración continua de ramas.
+<br><br>
 <strong>----------TB2----------</strong><br>
-El cierre del informe evidencia liderazgo compartido porque el equipo alineó artefactos técnicos y de producto en una sola narrativa verificable. La documentación final fortalece la comunicación del proyecto y deja rutas concretas para completar las evidencias pendientes sin perder consistencia con el alcance de ColdTrace.
+El equipo extendió ColdTrace con identidad segura (JWT), asistencia operativa basada en IA y capacidades SaaS de suscripción. El liderazgo se mantuvo distribuido: cada integrante condujo un área específica mientras colaboraba en las demás, demostrando capacidad para liderar en todas las actividades del proyecto y trabajar de manera coordinada entre frontend, backend, documentación y despliegue. El informe final consolidó todas las evidencias en una narrativa técnica coherente y verificable.
 </td>  
+</tr>  
+</table>
+
+### Criterio 5.c.2 — Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos
+
+<table border="1" style="width:100%; border-collapse: collapse;">  
+<tr>  
+<th style="width:15%;">Criterio Específico</th>  
+<th style="width:42.5%;">Acciones Realizadas</th>  
+<th style="width:42.5%;">Conclusiones</th>  
 </tr>  
 <tr>  
 <td>  
-Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.  
+Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos  
 </td>  
 <td>  
-<strong>----------AV2----------</strong><br>  
-<strong>Leonardo Delgado:</strong><br>  
-Desarrolló tareas vinculadas a incidentes, notificaciones y reportes, cumpliendo con responsabilidades técnicas definidas para esta etapa del proyecto y contribuyendo al avance funcional del backend dentro del sprint.<br><br>  
-  
-<strong>Mauricio Pajés:</strong><br>  
-Planificó el trabajo del AV2 a través de la creación y organización de los issues del sprint, estableciendo una ruta clara para el desarrollo del backend. Además, cumplió con varias responsabilidades de implementación dentro del periodo evaluado, avanzando tanto en tareas base como en funcionalidades específicas del sistema.<br><br>  
-  
-<strong>Jean Pool Arias:</strong><br>  
-Organizó su trabajo en torno al desarrollo de los servicios de dispositivos IoT y lecturas de sensores, cumpliendo con tareas concretas del sprint y contribuyendo al avance funcional de la plataforma.<br><br>  
-  
-<strong>Eduardo Velásquez:</strong><br>  
-Desarrolló tareas relacionadas con mantenimiento, solicitudes técnicas y roles, participando de forma ordenada en funcionalidades que responden a necesidades concretas del sistema y al cumplimiento de los objetivos del equipo.<br><br>  
-  
-<strong>Santiago Enrique Vargas Alarcón:</strong><br>  
-Ejecutó tareas orientadas a la gestión de assets y su configuración, cumpliendo con responsabilidades técnicas específicas dentro del sprint y aportando al avance estructurado del backend.<br><br>
+<strong>----------AV1----------</strong><br>  
+<strong>Leonardo Delgado:</strong> Planificó la corrección de contenido del informe, preparó preguntas para entrevistas y revisó la consistencia del documento, estableciendo un proceso de revisión que el equipo mantuvo durante las siguientes etapas.<br><br>  
+<strong>Mauricio Pajés:</strong> Planificó la infraestructura del repositorio, distribuyó responsabilidades por secciones del Landing Page y coordinó la integración de contribuciones mediante Pull Requests, asegurando que cada miembro pudiera trabajar de forma paralela.<br><br>  
+<strong>Jean Pool Arias:</strong> Coordinó los aportes de contenido del informe y participó en la planificación de las secciones visuales del Landing Page, organizando el trabajo en tareas concretas y verificables dentro del sprint.<br><br>  
+<strong>Eduardo Velásquez:</strong> Preparó el Sprint Planning 1, distribuyendo las historias de usuario entre los integrantes y estableciendo el velocity del equipo.<br><br>  
+<strong>Santiago Enrique Vargas Alarcón:</strong> Ejecutó la sección de demo del Landing Page dentro del plazo establecido, cumpliendo con los criterios de aceptación y manteniendo la línea de trabajo acordada por el equipo.<br><br>
 
-<strong>----------TB2----------</strong><br>
-El equipo estableció metas finales de corrección documental, preparación de Sprint 4, organización de anexos y separación de actividades pendientes. Esta planificación permitió mejorar la calidad del informe sin registrar como completadas las entrevistas o evaluaciones heurísticas que todavía requieren trabajo grupal.
+<strong>----------TB1----------</strong><br>  
+<strong>Leonardo Delgado:</strong> Descompuso el bounded context EP006 en tasks concretos, completó todos los entregables de reportes y cumplimiento, y coordinó la integración del despliegue en Vercel durante el Sprint 2.<br><br>  
+<strong>Mauricio Pajés:</strong> Planificó el Sprint 2, distribuyó responsabilidades por bounded context, coordinó Pull Requests hacia develop y mantuvo la infraestructura de despliegue operativa durante todo el sprint.<br><br>  
+<strong>Jean Pool Arias:</strong> Organizó las tareas de EP003 y EP007 dentro del velocity planificado, completando las funcionalidades de configuración operativa y mantenimiento en el tiempo establecido.<br><br>  
+<strong>Eduardo Velásquez:</strong> Participó en la planificación del sprint y ejecutó las funcionalidades de alertas e incidencias de forma estructurada, cumpliendo con los criterios de aceptación de cada historia de usuario asignada.<br><br>  
+<strong>Santiago Enrique Vargas Alarcón:</strong> Completó las tareas del dashboard operacional y contribuyó al Sprint Goal, manteniendo la colaboración con los demás integrantes en las vistas de monitoreo.<br><br>
+
+<strong>----------AV2----------</strong><br>  
+<strong>Leonardo Delgado:</strong> Ejecutó issues de incidentes, notificaciones y reportes, coordinando su integración con el contrato REST del backend y documentando los endpoints mediante Swagger.<br><br>  
+<strong>Mauricio Pajés:</strong> Organizó issues técnicos del Sprint 3, alineó ramas hacia develop/main y coordinó hotfixes de integración, CORS, base de datos y deployment en Google Cloud Run.<br><br>  
+<strong>Jean Pool Arias:</strong> Ejecutó las tareas de dispositivos IoT y sensor readings, colaborando en la continuidad entre telemetría, monitoreo y evidencias del informe.<br><br>  
+<strong>Eduardo Velásquez:</strong> Ejecutó tareas de mantenimiento, servicio técnico y roles, además de apoyar la incorporación de evidencias de ejecución y documentación en el informe.<br><br>  
+<strong>Santiago Enrique Vargas Alarcón:</strong> Ejecutó tareas de assets y asset settings, aportando a la gestión de parámetros operativos y validación de flujos con la API, documentando los endpoints en Swagger.<br><br>
+
+<strong>----------TB2----------</strong><br>  
+<strong>Mauricio Pajés:</strong> Planificó el Sprint 4, distribuyó responsabilidades por feature branch y coordinó la integración de los módulos de JWT, IA, SaaS y frontend. <strong>Leonardo Delgado:</strong> Diseñó y planificó el servicio de asistencia con IA. <strong>Jean Pool Arias:</strong> Organizó la integración frontend-backend con JWT. <strong>Eduardo Velásquez:</strong> Planificó el modelo de planes y facturación SaaS. <strong>Santiago Enrique Vargas Alarcón:</strong> Organizó la documentación técnica actualizada y el despliegue.
 </td>  
 <td>  
-<strong>----------AV2----------</strong><br>  
-<strong>Leonardo Delgado:</strong><br>  
-Su trabajo en módulos de incidentes, notificaciones y reportes demuestra cumplimiento de tareas y aporte concreto al desarrollo coordinado del backend, contribuyendo al logro de las metas funcionales del sprint.<br><br>  
-  
-<strong>Mauricio Pajés:</strong><br>  
-Demostró capacidad para establecer metas técnicas, organizar el trabajo del equipo y avanzar de forma consistente en múltiples funcionalidades, contribuyendo tanto desde la planificación como desde la ejecución. Su participación fue determinante para que el sprint mantuviera dirección y productividad.<br><br>  
-  
-<strong>Jean Pool Arias:</strong><br>  
-Su participación en funcionalidades centrales del sistema refleja compromiso con los objetivos del equipo y capacidad para aportar en componentes relevantes del backend durante el AV2.<br><br>  
-  
-<strong>Eduardo Velásquez:</strong><br>  
-Su trabajo metódico en distintas funcionalidades operativas permitió sostener el avance del sprint y aportar entregables alineados con la planificación técnica del equipo.<br><br>  
-  
-<strong>Santiago Enrique Vargas Alarcón:</strong><br>  
-Su contribución técnica en módulos de assets y configuración refleja cumplimiento de tareas y aporte al trabajo colaborativo, fortaleciendo la implementación integral del sistema.<br><br>
-
+<strong>----------AV1----------</strong><br>
+El equipo creó un entorno colaborativo desde la primera etapa al dividir investigación, UX, modelado y Landing Page en responsabilidades claras. La planificación se realizó mediante Trello y GitHub, con Pull Requests y ramas feature que permitieron integrar contribuciones de los cinco miembros sin conflicto. El equipo demostró disposición para escuchar opiniones, recibir retroalimentación y mantener una comunicación efectiva durante todo el sprint, estableciendo una base documental sólida y un entorno de desarrollo funcional que facilitó la continuidad del proyecto.
+<br><br>
+<strong>----------TB1----------</strong><br>
+El equipo consolidó la planificación por bounded contexts y mantuvo colaboración mediante backlog, ramas feature y revisión de avances. La entrega evidenció metas claras, cumplimiento funcional del frontend desplegado en Vercel y una distribución equitativa del trabajo que permitió que cada integrante completara sus responsabilidades dentro del velocity planificado. El equipo promovió la cooperación, participación e integración efectiva entre sus miembros, receptivo a sugerencias y críticas que mejoraron la calidad del entregable.
+<br><br>
+<strong>----------AV2----------</strong><br>
+La colaboración se reflejó en la planificación por APIs, integración con Cloud Run y Cloud SQL, actualización del informe y validación de endpoints con Postman y Swagger. El equipo estableció metas técnicas claras, planificó tareas por issue en GitHub y distribuyó responsabilidades que permitieron completar el backend oficial en un solo sprint. La comunicación se mantuvo mediante reuniones virtuales, Pull Requests revisados y coordinación constante entre frontend y backend, demostrando un entorno colaborativo inclusivo donde cada miembro aportó desde su área de expertise.
+<br><br>
 <strong>----------TB2----------</strong><br>
-La entrega final demuestra un entorno colaborativo más ordenado: el backlog queda estimado bajo criterios de rúbrica, el Sprint 4 queda listo para evidencias finales y las secciones reservadas para el grupo se mantienen transparentes. Esto favorece una presentación más objetiva, completa y verificable del trabajo realizado.
+El equipo estableció metas finales de corrección documental, preparación del Sprint 4, organización de anexos y separación de actividades pendientes. La planificación permitió mejorar la calidad del informe sin registrar como completadas las entrevistas o evaluaciones heurísticas que todavía requieren trabajo grupal. El entorno colaborativo se mantuvo ordenado: el backlog quedó estimado bajo criterios de rúbrica, el Sprint 4 quedó listo para evidencias finales y las secciones reservadas para el grupo se mantuvieron transparentes. El equipo demostró capacidad para analizar críticas de entregas previas, proponer soluciones de mejora continua y garantizar cooperación, participación e integración efectiva entre todos los miembros.
 </td>  
 </tr>  
 </table>
@@ -405,7 +473,7 @@ Ante ello, se propone ColdTrace, una plataforma web de monitoreo inteligente de
 | **What**        | ¿Cuál es el problema?  | La ausencia de monitoreo continuo de temperatura y humedad en almacenes, cámaras y transporte de alimentos, lo que provoca que las fallas en refrigeración se detecten de forma tardía, generando pérdidas de producto, riesgos sanitarios y dificultades para demostrar trazabilidad ante DIGESA y MINSA.                                                                                                                                                                                                                                                                                                                                                                                    |
 | **When**        | ¿Cuándo sucede?        | De forma continua durante todo el año, con mayor incidencia en verano, feriados de alta demanda y rutas largas de transporte refrigerado. <br><br>¿Cuándo utilizará el cliente el producto? <br><br>Las 24 horas del día, los 7 días de la semana, para supervisar instalaciones en tiempo real, revisar alertas y generar reportes de trazabilidad.                                                                                                                                                                                                                                                                                                                                          |
 | **Where**       | ¿Dónde ocurre?         | ¿Dónde está el cliente cuando usa el producto? <br><br>En cualquier ubicación con acceso a internet: oficina, almacén, piso de ventas o en tránsito. ColdTrace funciona desde cualquier navegador, sin instalación adicional. <br><br>¿Dónde surge el problema? <br><br>En cámaras frigoríficas de supermercados, almacenes de restaurantes, centros de distribución y unidades de transporte refrigerado.                                                                                                                                                                                                                                                                                   |
-| **Who**         | ¿Quiénes involucrados? | ¿Quiénes están involucrados? <br><br>Jefes de calidad, operadores logísticos, administradores de supermercados y restaurantes, transportistas de productos perecederos y auditores sanitarios. <br><br>¿A quiénes les sucede el problema? <br><br>A las empresas del sector alimentario que sufren mermas económicas, sanciones sanitarias y daño reputacional, y en última instancia, a los consumidores expuestos a productos en mal estado. <br><br>¿Quién utilizará ColdTrade? <br><br>Principalmente jefes de calidad y operadores logísticos en supermercados, restaurantes y empresas de transporte; también gerentes que necesiten visibilidad remota sobre sus activos refrigerados. |
+| **Who**         | ¿Quiénes involucrados? | ¿Quiénes están involucrados? <br><br>Jefes de calidad, operadores logísticos, administradores de supermercados y restaurantes, transportistas de productos perecederos y auditores sanitarios. <br><br>¿A quiénes les sucede el problema? <br><br>A las empresas del sector alimentario que sufren mermas económicas, sanciones sanitarias y daño reputacional, y en última instancia, a los consumidores expuestos a productos en mal estado. <br><br>¿Quién utilizará ColdTrace? <br><br>Principalmente jefes de calidad y operadores logísticos en supermercados, restaurantes y empresas de transporte; también gerentes que necesiten visibilidad remota sobre sus activos refrigerados. |
 | **Why**         | ¿Por qué sucede?       | ¿Cuál es la causa del problema? <br><br>Dependencia de controles manuales propensos a error, brechas en infraestructura de refrigeración y ausencia de sistemas de alerta temprana ante desviaciones de temperatura.                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | **How**         | ¿Cómo afecta?          | ¿Cómo afecta este problema? <br><br>Pérdidas económicas por merma de productos perecederos, riesgos sanitarios para consumidores, sanciones de DIGESA o MINSA por incumplimiento de normas de inocuidad, y daño reputacional para las empresas.                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | **How Much**    | ¿Cuánto impacta?       | ¿Qué datos respaldan la problemática? <br><br>Según la FAO (2021), “más de 12 millones de toneladas de alimentos se pierden a lo largo de la cadena productiva en el Perú”, lo que representa casi la mitad del total de alimentos disponibles en el país (FAO, 2021, párr. 1). <br><br>De acuerdo con Agraria.pe (2019), “el Perú pierde más del 33% de los alimentos que produce por mal uso de la cadena de frío”. Esta cifra podría reducirse significativamente si los operadores contaran con sistemas de alerta temprana y monitoreo continuo (Agraria.pe, 2019, párr. 2).                                                                                                             |
@@ -427,7 +495,7 @@ En la industria alimentaria del Perú, empresas de todos los tamaños, s
 
 1. Existencia de demanda: Suponemos que supermercados, restaurantes y empresas logísticas están dispuestos a adoptar una solución SaaS de monitoreo si demuestra reducir pérdidas por fallas de refrigeración. 
 2. Disposición a pagar: Suponemos que los operadores del sector alimentario valoran la trazabilidad y el cumplimiento normativo lo suficiente como para suscribirse mensualmente a una plataforma de monitoreo. 
-3. -Alianzas estratégicas: Suponemos que los proveedores de hardware IoT e integradores logísticos están interesados en aliarse con FrostGuard para ampliar su oferta de valor al cliente.
+3. Alianzas estratégicas: Suponemos que los proveedores de hardware IoT e integradores logísticos están interesados en aliarse con FrostGuard para ampliar su oferta de valor al cliente.
 
 **Business Outcomes**
 
@@ -499,15 +567,15 @@ Para el desarrollo de ColdTrace, se ha identificado competidores que ofrecen 
 | Amenazas                                              | Que empresas como Zabarburu desarrollen su propia plataforma digital o se alíen con otros proveedores de software.                                                           | Startups ágiles que utilizan sensores IoT genéricos a una fracción de su costo.                                                                                                                                                                                                            | Incremento de costos de importación de repuestos y componentes de refrigeración.                             | Plataformas de software que integran múltiples marcas de sensores, desplazando su software propietario     |                                                                |     |
 ### 2.1.2 Estrategias y tácticas frente a competidores
 
-Para enfrentar a estos competidores, FrostGuard aplicara las siguientes estrategias y tacticas enfocadas en las debilidades detectadas. 
+Para enfrentar a estos competidores, FrostGuard aplicará las siguientes estrategias y tácticas enfocadas en las debilidades detectadas. 
 
-- Estrategias de Diferenciacion por Accesibilidad: Mientras que AKO y Dickson requiere compra de hardware costoso, FrostGuard ofrecera un modelo de suscripcion mensual al que incluye el acceso a la plataforma, facilitando que minimarkets y restaurantes adopten la tecnologia sin descapilizarse. 
+- Estrategias de Diferenciación por Accesibilidad: Mientras que AKO y Dickson requieren compra de hardware costoso, FrostGuard ofrecerá un modelo de suscripción mensual que incluye el acceso a la plataforma, facilitando que minimarkets y restaurantes adopten la tecnología sin descapitalizarse. 
 
-- Táctica de Alertas Preventivas: A diferencia de los registros manuales de Zabarburu o los datos "offline" de Dickson, nuestra plataforma enviará notificaciones automáticas al móvil del usuario ante cualquier falla, permitiendo salvar la mercadería antes de que se pierda. 
+- Táctica de Alertas Preventivas: A diferencia de los registros manuales de Zabarburu o los datos "offline" de Dickson, nuestra plataforma enviará notificaciones automáticas al móvil del usuario ante cualquier falla, permitiendo salvar la mercadería antes de que se pierda. 
 
-- Estrategia de Enfoque Normativo: Aprovecharemos la debilidad de los competidores internacionales en el conocimiento de la burocracia local para ofrecer reportes de trazabilidad que cumplan específicamente con los formatos y exigencias de las inspecciones de DIGESA y MINSA en el Perú. 
+- Estrategia de Enfoque Normativo: Aprovecharemos la debilidad de los competidores internacionales en el conocimiento de la burocracia local para ofrecer reportes de trazabilidad que cumplan específicamente con los formatos y exigencias de las inspecciones de DIGESA y MINSA en el Perú. 
 
-- Táctica de Diseño Inclusivo: Desarrollaremos una interfaz web (Dashboard) extremadamente sencilla e intuitiva (UX), permitiendo que cualquier operario de almacén pueda entender el estado de la cadena de frío sin necesidad de ser un ingeniero en refrigeración.
+- Táctica de Diseño Inclusivo: Desarrollaremos una interfaz web (Dashboard) extremadamente sencilla e intuitiva (UX), permitiendo que cualquier operario de almacén pueda entender el estado de la cadena de frío sin necesidad de ser un ingeniero en refrigeración.
 ---
 
 ## 2.2 Entrevistas
@@ -561,7 +629,7 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 
 ### 2.2.2 Registro de entrevistas
 
-**Segmento 1: 
+**Segmento 1: Dueños o encargados de pequeños negocios con productos perecibles**
 
 ### Entrevista N.° 1
 
@@ -630,8 +698,9 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 > Finalmente, destacó que las funcionalidades más valiosas serían las alertas automáticas, el monitoreo constante, el registro de temperaturas y los reportes de incidencias. Espera una plataforma sencilla, confiable y útil para mejorar el control interno, cumplir auditorías y reducir pérdidas.
 > 
 
-### Segmento 2: 
+**Segmento 2: Responsables de operaciones, calidad o logística en negocios con cadena de frío**
 
+### Entrevista N.° 1
 
 ![](report/assets/chapter-02/interviews/segmento21.png)
 
@@ -642,7 +711,7 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 | **Definición profesional / cargo:** Estudiante de Ingeniería Industrial | **Canales digitales de comunicación:** WhatsApp / Llamadas directas |
 | **Residencia / ubicación:** Los Olivos, Lima                            | **Software especializado utilizado:** Excel                         |
 
-- **Duración:** 2:80
+- **Duración:** 2:48
 - **URL de grabación:** [https://1drv.ms/v/c/470edfbbf4f38077/IQCRg4LcvetaRLbLebLPf0QWAR3HOtvvikDBCQaQ68PDMBs?e=tNMWES](https://1drv.ms/v/c/470edfbbf4f38077/IQCRg4LcvetaRLbLebLPf0QWAR3HOtvvikDBCQaQ68PDMBs?e=tNMWES)
 
 > **Resumen de la entrevista** El entrevistado, estudiante de Ingeniería Industrial de Lima, señala que el principal problema en la supervisión de la cadena de frío es la dependencia del factor humano, ya que el monitoreo se realiza de forma manual mediante hojas de registro en papel o Excel, sin ningún mecanismo de verificación en tiempo real. Esta situación se agrava durante los turnos nocturnos, fines de semana y en las rutas de transporte, donde la supervisión es prácticamente inexistente entre el punto de origen y el destino.
@@ -710,7 +779,7 @@ El análisis de entrevistas nos permite profundizar en la comprensión de las ne
 
 Características comunes: 
 
-Interés en la virtualidad: Todos expresan un claro entusiasmo por los beneficios potenciales al implementar una solucion de monitero digital, siempre y cuando, no requeria una inversion inicialo algun perdio de prueba que los pueda convencer. 
+Interés en la virtualidad: Todos expresan un claro entusiasmo por los beneficios potenciales al implementar una solución de monitoreo digital, siempre y cuando, no requiera una inversión inicial o algún período de prueba que los pueda convencer. 
 
 Importancia de herramientas y características esenciales: Resaltan la importancia de herramientas como las alertas automáticas ante una falla de temperatura. 
 
@@ -724,7 +793,7 @@ Mejora de la eficacia laboral: Se puede destacar de las repuestas de las entrev
 
 En esta sección, presentaremos el perfil de nuestros User Persona, que surge de un análisis de las entrevistas realizadas anteriormente y de una evaluación de la competencia en el mercado. Los artefactos que vamos a presentar están estrechamente relacionados con las principales características identificadas durante este proceso de análisis. Desde las entrevistas, hemos extraído valiosa información sobre las necesidades, deseos y frustraciones de nuestros potenciales usuarios, lo que nos ha permitido perfilar a nuestro User Persona de manera precisa y realista. 
 
-User Persona: Primer Segmento Objetivo (Dueños de carnicerías,
+User Persona: Primer Segmento Objetivo (Dueños o encargados de pequeños negocios con productos perecibles)
 
 **Segmento 1:**
 
@@ -737,7 +806,7 @@ User Persona: Primer Segmento Objetivo (Dueños de carnicerías,
 
 La User Task Matrix es una herramienta que nos permite identificar las tareas clave que nuestros usuarios necesitan realizaren nuestra aplicación web. Al mapear estas tareas, podemos comprender mejor las necesidades y expectativas de nuestros usuarios, lo que nos ayuda a diseñar una experiencia de usuario más efectiva y centrada en sus requerimientos. 
 
-User Task Matrix: Primer Segmento Objetivo (Dueños de carnicerías, pescaderías o verdulerías que posean un sistema de refrigeración)
+Empathy Map: Primer Segmento Objetivo (Dueños de carnicerías, pescaderías o verdulerías que posean un sistema de refrigeración)
 
 |   |   |   |
 |---|---|---|
@@ -774,11 +843,11 @@ Se ha elaborado el Empathy Mapping utilizando los datos obtenidos de las etap
 
 User Task Matrix: Primer Segmento Objetivo (Dueños de carnicerías, pescaderías o verdulerías que posean un sistema de refrigeración)
 
-**Empathy Map: 
+**Empathy Map: Primer Segmento Objetivo**
 
 ![](report/assets/chapter-02/empathy-maps/Empathy1.png)
 
-**Empathy Map: 
+**Empathy Map: Segundo Segmento Objetivo**
 
 ![](report/assets/chapter-02/empathy-maps/Empathy2.png)
 
@@ -900,7 +969,7 @@ Cumplimiento con auditoria:
 
 ---
 
-# Capitulo III: Requirements Specification
+# Capítulo III: Requirements Specification
 
 ## 3.1 User Stories
 
@@ -4161,7 +4230,9 @@ El sprint se documenta como una preparación completa para la entrega final. Las
 
 El Sprint Backlog 4 se estructura con tareas de ingeniería estimadas entre 4 y 8 horas, de acuerdo con la restricción establecida en la rúbrica. La tabla separa historias funcionales y técnicas para mantener trazabilidad entre producto, backend, frontend y despliegue.
 
-> Evidencia pendiente de adjuntar: `report/assets/chapter-05/sprint-04/linear-sprint-04-board.png`
+![](./report/assets/chapter-05/sprint-04/sprint-backlog.png)
+*Link del Board de Trello (As Observer): https://trello.com/invite/b/6a5017db6b94ad4b44ffd40e/ATTI0218c96b6e195f10d67e6da5d1518410D78B106A/sprint-4 *
+
 
 <table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; text-align: center;">
   <tr>
@@ -4591,7 +4662,7 @@ El video puede visualizarse en el siguiente enlace:
 
 1. **Necesidad validada en cadena de frío:** Las entrevistas y artefactos de needfinding evidencian que los negocios alimentarios pequeños y los responsables de operaciones aún dependen de controles manuales, hojas de cálculo, revisiones visuales y comunicación informal por WhatsApp o llamadas. Esta situación incrementa el riesgo de detectar tarde una desviación térmica y perder productos perecibles.
 
-2. **Soporte al cumplimiento sanitario:** ColdTrace contribuye a la preparación de evidencias requeridas en inspecciones sanitarias relacionadas con inocuidad alimentaria, conservación de alimentos perecibles y control de condiciones de almacenamiento supervisadas por entidades como DIGESA y MINSA. La plataforma no reemplaza la obligación normativa de cada negocio, pero sí facilita el registro de temperaturas, historial de incidencias, acciones correctivas y reportes que pueden sustentar auditorías internas o revisiones sanitarias.
+2. **Soporte al cumplimiento normativo DIGESA/MINSA:** ColdTrace contribuye a la preparación de evidencias para inspecciones sanitarias de la Dirección General de Salud Ambiental (DIGESA) y del Ministerio de Salud (MINSA), especialmente en lo relativo a inocuidad alimentaria, conservación de alimentos perecibles y control de condiciones de almacenamiento. La plataforma facilita el registro de temperaturas, historial de incidencias, acciones correctivas y reportes en formatos exigidos por DIGESA, como el PDF con temperatura mínima/máxima, responsable, fecha y número de registro (US31). Además, permite generar paquetes de evidencia para auditoría interna (US34) que incluyen reportes de lecturas, incidencias cerradas con acción correctiva y bitácoras del periodo. La plataforma no reemplaza la obligación normativa de cada negocio, pero sí reduce el riesgo de sanciones al ofrecer trazabilidad documental verificable.
 
 3. **Trazabilidad operacional:** La propuesta conecta activos refrigerados, gateways, dispositivos IoT, lecturas de sensores, alertas, incidencias y reportes dentro de una misma plataforma. Esta trazabilidad permite pasar de una gestión reactiva a una supervisión basada en datos, donde cada evento crítico puede vincularse con una lectura, un activo, una acción correctiva y un responsable.
 
@@ -4611,11 +4682,13 @@ El video puede visualizarse en el siguiente enlace:
 
 4. **Consolidar pruebas frontend-backend:** Se recomienda ejecutar pruebas end-to-end sobre endpoints reales desplegados, especialmente autenticación, gestión de activos, lecturas, incidencias, reportes y flujos preparados de asistencia IA o billing.
 
-5. **Fortalecer reportes para auditoría sanitaria:** Los reportes deben exportarse en formatos portables como PDF o Excel e incluir rangos aceptables, lecturas fuera de rango, acciones correctivas, fecha, responsable y activo afectado, de modo que puedan servir como evidencia ordenada ante auditorías internas o inspecciones.
+5. **Fortalecer reportes para auditoría sanitaria:** Los reportes deben exportarse en formatos portables como PDF o Excel e incluir rangos aceptables, lecturas fuera de rango, acciones correctivas, fecha, responsable y activo afectado, de modo que puedan servir como evidencia ordenada ante auditorías internas o inspecciones de DIGESA y MINSA.
 
 6. **Mantener simplicidad para negocios pequeños:** Las funcionalidades nuevas deben conservar una interfaz clara, con lenguaje operativo y pocas decisiones por pantalla, debido a que parte del segmento objetivo no cuenta con experiencia previa en sistemas de monitoreo o gestión empresarial.
 
 7. **Evaluar sensores y proveedores locales:** Para reducir costos de adopción, se recomienda validar compatibilidad con hardware IoT accesible en Perú, como ESP32, Raspberry Pi o sensores comerciales de temperatura/humedad, antes de una implementación productiva.
+
+8. **Completar evidencias de video:** Se requiere agregar imágenes de portada o screenshots de los videos de validación, About-the-Product y About-the-Team como evidencia visual dentro del informe, cumpliendo con las especificaciones del enunciado para artefactos multimedia.
 ## 6.2. Video About-the-Team
 Como parte de la entrega final, cada integrante del equipo ha grabado una breve presentación personal en la que comparte su experiencia durante el desarrollo del proyecto ColdTrace, destacando los conocimientos adquiridos en el curso y cómo estos contribuyeron a su crecimiento profesional y al logro de los objetivos planteados.
 
