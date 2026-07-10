@@ -1,3 +1,4 @@
+<a id="carátula"></a>
 <div align="center">
 <br>
 <img src="report/assets/common/logo-upc.png" width="180" alt="Logo UPC">
@@ -244,8 +245,8 @@ Las funciones de Google, Apple, OpenAI y Stripe requieren configuración externa
 - [4.4. Web Applications UX/UI Design.](#44-web-applications-uxui-design)
     - [4.4.1. Web Applications Wireframes.](#441-web-applications-wireframes)
     - [4.4.2. Web Applications Wireflow Diagrams.](#442-web-applications-wireflow-diagrams)
-    - [4.4.2. Web Applications Mock-ups.](#442-web-applications-mock-ups)
-    - [4.4.3. Web Applications User Flow Diagrams.](#443-web-applications-user-flow-diagrams)
+    - [4.4.3. Web Applications Mock-ups.](#443-web-applications-mock-ups)
+    - [4.4.4. Web Applications User Flow Diagrams.](#444-web-applications-user-flow-diagrams)
 - [4.5. Web Applications Prototyping.](#45-web-applications-prototyping)
 - [4.6. Domain-Driven Software Architecture.](#46-domain-driven-software-architecture)
     - [4.6.1. Design-Level EventStorming.](#461-design-level-eventstorming)
@@ -306,7 +307,7 @@ En los siguientes cuadros se describen las acciones realizadas y conclusiones de
 
 ### Criterio 5.c.1 — Trabaja en equipo para proporcionar liderazgo en forma conjunta
 
-<table border="1" style="width:100%; border-collapse: collapse;">  
+<table class="student-outcome-evidence" border="1" style="width:100%; border-collapse: collapse;">
 <tr>  
 <th style="width:15%;">Criterio Específico</th>  
 <th style="width:42.5%;">Acciones Realizadas</th>  
@@ -359,7 +360,7 @@ El equipo extendió ColdTrace con identidad segura (JWT), asistencia operativa b
 
 ### Criterio 5.c.2 — Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos
 
-<table border="1" style="width:100%; border-collapse: collapse;">  
+<table class="student-outcome-evidence" border="1" style="width:100%; border-collapse: collapse;">
 <tr>  
 <th style="width:15%;">Criterio Específico</th>  
 <th style="width:42.5%;">Acciones Realizadas</th>  
@@ -1211,7 +1212,7 @@ El Product Backlog prioriza las historias funcionales del producto segun el valo
 
 ---
 
-# CAPÍTULO IV. PRODUCT UX/UI DESIGN
+# Capítulo IV: Product Design
 
 ## 4.1. Style Guidelines.
 
@@ -1496,7 +1497,7 @@ El usuario inicia en la Landing Page, revisa la propuesta de valor, consulta fun
 
 ---
 
-## 4.3. Landing Page UX/UI Design
+## 4.3. Landing Page UI Design
 
 ### 4.3.1. Landing Page Wireframe.
 
@@ -2591,7 +2592,7 @@ Durante el Sprint 1, todos los miembros del equipo participaron activamente en l
 La evidencia de colaboración se refleja en los commits registrados en el repositorio `landing-page`, así como en la distribución de responsabilidades documentada en las secciones de Aspect Leaders and Collaborators y Development Evidence.
 
 
-### 5.2.2 Sprint 2
+### 5.2.2. Sprint 2
 
 #### 5.2.2.1. Sprint Planning 2
 
@@ -3440,7 +3441,7 @@ Durante el Sprint 2 se realizó la implementación completa de la Frontend Web A
 </table>
 
 
-#### 5.2.2.5 Execution Evidence for Sprint Review
+#### 5.2.2.5. Execution Evidence for Sprint Review
 
 Al término del Sprint 2, se desplegó la primera versión funcional de la Frontend Web Application de ColdTrace en Vercel, accesible públicamente. La aplicación permite navegar a través de los módulos de autenticación, gestión de activos, monitoreo operacional y reportes de cumplimiento. A continuación se presentan las principales vistas implementadas durante el sprint.
 
@@ -3733,9 +3734,9 @@ A continuación se presenta el resumen de participación por integrante basado e
 <br>
 
 
-# 5.2.3 Sprint 3
+### 5.2.3. Sprint 3
 
-## 5.2.3.1. Sprint Planning 3
+#### 5.2.3.1. Sprint Planning 3
 El Sprint 3 tuvo como objetivo principal diseñar, implementar y desplegar el backend oficial de ColdTrace mediante una RESTful API robusta. Esto permitirá reemplazar el servidor JSON simulado utilizado en el Sprint 2 y habilitar la persistencia de datos real, lógica de negocio y seguridad para los bounded contexts de Identity & Access Management, Asset Management, Monitoring, Alerts, Reports y Maintenance. A continuación se presenta el resumen del Sprint Planning Meeting realizado al inicio de este sprint.
 
 | Sprint # | Sprint 3 |
@@ -3757,7 +3758,7 @@ El Sprint 3 tuvo como objetivo principal diseñar, implementar y desplegar el ba
 <br>
 <br>
 
-## 5.2.3.2. Aspect Leaders and Collaborators
+#### 5.2.3.2. Aspect Leaders and Collaborators
 Durante el Sprint 3, el trabajo se organizó en torno a la creación de los controladores, servicios y repositorios de la RESTful API. Se designó un líder (L) por cada grupo de APIs y colaboradores (C) para apoyar en la integración.
 
 Los aspectos principales del Sprint 3 fueron:
@@ -3781,7 +3782,7 @@ Los aspectos principales del Sprint 3 fueron:
 <br>
 
 
-## 5.2.3.3. Sprint Backlog 3
+#### 5.2.3.3. Sprint Backlog 3
 El Sprint Backlog se gestionó mediante Linear App. A continuación se detallan las tareas asignadas y completadas en el rango del 03 al 19 de junio de 2026.
 
 ![Backlog en Linear](./report/assets/chapter-05/sprint-03/linar-backlog.png)
@@ -3817,7 +3818,7 @@ Elaboración propia en Linear: [https://linear.app/coldtrace/team/APPWEB/all](ht
 <br>
 
 
-## 5.2.3.4. Development Evidence for Sprint Review
+#### 5.2.3.4. Development Evidence for Sprint Review
 Durante el Sprint 3, la implementación backend se gestionó en el repositorio `AplicacionesWeb-Grupo-2/coldtrace-platform` siguiendo el estándar de commits de la organización.
  
 
@@ -3871,7 +3872,7 @@ Durante el Sprint 3, la implementación backend se gestionó en el repositorio `
 <br>
 
 
-## 5.2.3.5. Execution Evidence for Sprint Review
+#### 5.2.3.5. Execution Evidence for Sprint Review
 Al término del Sprint 3, se logró disponer de una infraestructura backend en ejecución con múltiples endpoints operativos para probar la lógica de negocio de ColdTrace.
 
 ![swagger](./report/assets/chapter-05/sprint-03/swagger-assetSetting-asset.png)
@@ -3910,7 +3911,7 @@ A continuación se presenta el video de navegación del producto correspondiente
 <br>
 
 
-## 5.2.3.6. Services Documentation Evidence for Sprint Review
+#### 5.2.3.6. Services Documentation Evidence for Sprint Review
 Se implementó la documentación oficial de la RESTful API. A continuación se presentan los endpoints clave desarrollados en el Sprint 3:
 
 | Endpoint | Verb HTTP | Sintaxis de llamada | Parámetros | Descripción | Response |
@@ -3965,7 +3966,7 @@ Se implementó la documentación oficial de la RESTful API. A continuación se p
 | Reports | GET | `GET /api/v1/organizations/{organizationId}/reports/{reportId}` | organizationId, reportId (path) | Obtiene detalles/contenido de un reporte | 200 |
  
 
-### Documentación en Swagger UI
+##### Documentación en Swagger UI
 
 Se incluyen a continuación capturas de la documentación interactiva accesible en Swagger:
 
@@ -3985,7 +3986,7 @@ Se incluyen a continuación capturas de la documentación interactiva accesible 
 
  
 
-### Referencias de Implementación
+##### Referencias de Implementación
 
 **Repositorio de Web Services:** https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform
 
@@ -3997,13 +3998,13 @@ Se incluyen a continuación capturas de la documentación interactiva accesible 
 <br>
 <br>
  
-## 5.2.3.7. Software Deployment Evidence for Sprint Review
+#### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
 Durante el Sprint 3 se realizó el despliegue de la primera versión de los Web Services de ColdTrace. El backend ASP.NET Core fue containerizado con Docker y publicado en **Google Cloud Run**, conectado a una base de datos administrada en **Google Cloud SQL for MySQL**. A continuación se presentan las evidencias del proceso de despliegue.
 
 ---
 
-### Despliegue de Web Services
+##### Despliegue de Web Services
 
 **Stack de despliegue:**
 
@@ -4030,7 +4031,7 @@ Durante el Sprint 3 se realizó el despliegue de la primera versión de los Web 
  
  <br>
 
-## **Procedimiento de despliegue**
+##### **Procedimiento de despliegue**
 
 **Creación de la instancia Cloud SQL para MySQL**
 
@@ -4159,7 +4160,7 @@ Se ejecutó una solicitud GET al endpoint publicado en Cloud Run. La respuesta `
  
 
 
-## 5.2.3.8. Team Collaboration Insights during Sprint
+#### 5.2.3.8. Team Collaboration Insights during Sprint
 Durante el Sprint 3, el equipo concentró sus esfuerzos en el desarrollo de la API RESTful. La distribución del trabajo se reflejó en las asignaciones de issues de Linear App:
 
 | Integrante | GitHub Username | Issues Asignados | Áreas de Enfoque (APIs) |
@@ -4247,7 +4248,7 @@ La evidencia principal son los pull requests públicos. Cada enlace permite revi
 | Frontend dependency security | [PR 30 - secure Vue dependencies](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/30) |
 | Landing | [PR 9 - plans](https://github.com/AplicacionesWeb-Grupo-2/landing-page/pull/9), [PR 10 - registration and terms](https://github.com/AplicacionesWeb-Grupo-2/landing-page/pull/10), [PR 11 - responsive](https://github.com/AplicacionesWeb-Grupo-2/landing-page/pull/11), [PR 12 - videos](https://github.com/AplicacionesWeb-Grupo-2/landing-page/pull/12) |
 
-#### 5.2.4.5. Execution and Contract Evidence
+#### 5.2.4.5. Execution Evidence for Sprint Review
 
 | Flujo | Contrato de resultado |
 | :--- | :--- |
@@ -4263,7 +4264,7 @@ La evidencia principal son los pull requests públicos. Cada enlace permite revi
 
 Los builds y pruebas de contrato pertenecen a cada pull request. La prueba pública final debe repetirse después de integrar los PRs y desplegar una nueva revisión; el informe no presenta la revisión pública actual como si ya contuviera esos cambios.
 
-#### 5.2.4.6. Services Documentation Evidence
+#### 5.2.4.6. Services Documentation Evidence for Sprint Review
 
 | Capacidad | Método y endpoint |
 | :--- | :--- |
@@ -4286,7 +4287,7 @@ Los builds y pruebas de contrato pertenecen a cada pull request. La prueba públ
 
 Todos los contratos usan Swagger/OpenAPI, recursos REST, assemblers y Problem Details localizados de acuerdo con la estructura del backend del curso.
 
-#### 5.2.4.7. Alineación con Microsoft AI Ecosystem
+##### Alineación con Microsoft AI Ecosystem
 
 El material 1ASI0730-net-ai-ecosystem define tres niveles: abstracciones, orquestación y hosting. ColdTrace aplica el nivel necesario para sus casos de uso:
 
@@ -4299,7 +4300,7 @@ El material 1ASI0730-net-ai-ecosystem define tres niveles: abstracciones, orques
 
 Esta selección sigue la matriz de decisión del material: se usa la abstracción común y el patrón más simple que resuelve el problema sin acoplar el dominio al proveedor.
 
-#### 5.2.4.8. Software Deployment Evidence
+#### 5.2.4.7. Software Deployment Evidence for Sprint Review
 
 | Recurso | Estado al corte |
 | :--- | :--- |
@@ -4317,7 +4318,7 @@ Pasos operacionales pendientes antes de afirmar despliegue final:
 5. Guardar JWT, OpenAI, Google, Apple y Stripe en Google Secret Manager y otorgar secretAccessor al service account.
 6. Redesplegar Cloud Run y Vercel, ejecutar smoke tests y capturar la revisión final.
 
-#### 5.2.4.9. Team Collaboration Insights during Sprint
+#### 5.2.4.8. Team Collaboration Insights during Sprint
 
 La trazabilidad del Sprint 4 se obtiene de Linear y GitHub. Los estados se mantienen en los issues; los pull requests muestran la rama, el cambio técnico y su destino develop. No se sustituyen estos datos con nombres de commits o capturas inventadas.
 
@@ -4490,8 +4491,8 @@ El video puede visualizarse en el siguiente enlace:
 [Ver en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414054_upc_edu_pe/IQCmZIySYa3pT43sGAmn0UaGAfUnEK7pyE9kdDZWjSlXGX4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=1oulNb)
 ---
 
-# Capítulo VI: Conclusions
-## 6.1. Conclusiones y recomendaciones
+# Conclusiones
+## Conclusiones y recomendaciones
 ### Conclusiones
 
 1. **Necesidad validada en cadena de frío:** Las entrevistas y artefactos de needfinding evidencian que los negocios alimentarios pequeños y los responsables de operaciones aún dependen de controles manuales, hojas de cálculo, revisiones visuales y comunicación informal por WhatsApp o llamadas. Esta situación incrementa el riesgo de detectar tarde una desviación térmica y perder productos perecibles.
@@ -4524,7 +4525,7 @@ El video puede visualizarse en el siguiente enlace:
 
 8. **Preservar evidencia audiovisual del curso:** Los videos de validación, About-the-Product y About-the-Team deben conservar sus enlaces, participantes y nomenclatura de Aplicaciones Web. No corresponde reemplazarlos por grabaciones de Open Source; solo se mantiene el mismo propósito documental.
 
-## 6.2. Video About-the-Team
+## Video About-the-Team
 Como parte de la entrega final, cada integrante del equipo ha grabado una breve presentación personal en la que comparte su experiencia durante el desarrollo del proyecto ColdTrace, destacando los conocimientos adquiridos en el curso y cómo estos contribuyeron a su crecimiento profesional y al logro de los objetivos planteados.
 
 Los integrantes que participan en el video son:
@@ -4600,7 +4601,7 @@ Universidad Peruana de Ciencias Aplicadas. (2026). *Microsoft AI Ecosystem Overv
 
 > Las URLs públicas corresponden a la línea base desplegada. Los cambios de Sprint 4 deben integrarse y redesplegarse antes de atribuirles los nuevos contratos.
 
-## Anexo C: Videos del proyecto
+## Anexo C: Videos de Exposiciones
 
 | Tipo | Enlace |
 | :--- | :--- |
