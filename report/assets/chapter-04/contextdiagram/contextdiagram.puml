@@ -2,43 +2,31 @@
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
 
 title System Context Diagram - ColdTrace
-caption C4 level 1 for the ColdTrace web application.
+caption C4 level 1 aligned with the implemented Aplicaciones Web product.
 
 LAYOUT_WITH_LEGEND()
 LAYOUT_TOP_DOWN()
 
-' Main actors aligned with the user stories from the Web Applications project.
-Person(visitor, "Visitor", "Potential user who reviews the landing page, features, plans, and requests a demo [US01-US06].")
-Person(owner, "Business Owner or Store Manager", "Monitors refrigerated assets, reviews readings, and handles alerts and incidents from the web application [US18-US28].")
-Person(ops, "Operations / Quality / Logistics Manager", "Manages assets, sensors, gateways, ranges, maintenance, reports, and compliance evidence [US12-US17, US29-US38].")
-Person(admin, "Organization Administrator", "Manages account data, profile, permissions, and operational settings [US07-US11, US35-US36].")
-Person_Ext(auditor, "Health Inspector / External Reviewer", "Receives reports, logs, and exportable evidence for DIGESA/MINSA reviews or internal audits [US31-US34].")
+Person(visitor, "Visitor", "Reviews the value proposition, plans, and product videos before entering the application.")
+Person(operator, "Cold-chain Operator", "Monitors assets, readings, incidents, maintenance, and compliance reports.")
+Person(admin, "Organization Administrator", "Manages users, roles, plans, assets, locations, gateways, and IoT devices.")
+Person_Ext(auditor, "Compliance Reviewer", "Reviews exported operational and compliance evidence.")
 
-' Main system.
-System(coldtrace, "ColdTrace", "Web SaaS system for cold-chain monitoring. Integrates the landing page, web application, internal services, account access, infrastructure, monitoring, alerts, reports, and audit.")
+System(coldtrace, "ColdTrace", "Web SaaS product for cold-chain monitoring, incident response, compliance evidence, and subscription management.")
 
-' External systems.
-System_Ext(iot, "IoT Devices and Edge Gateways", "Devices installed in cold rooms, warehouses, and transport units. They capture temperature, humidity, and connectivity status [US14-US23].")
-System_Ext(email, "Email Service", "External provider for password recovery, commercial confirmations, and alerts [US04, US10, US25].")
-System_Ext(push, "Push Notification Service", "External provider for real-time browser and mobile critical alerts [US25-US26].")
-System_Ext(messaging, "Messaging Service", "External messaging channel such as WhatsApp Business API or SMS for critical alerts and escalation [US25-US26].")
-System_Ext(payments, "Payment Gateway", "External processor for SaaS subscription payments and plan activation.")
+System_Ext(iot, "IoT Devices and Gateways", "Provide temperature, humidity, and connectivity readings through the documented REST resources.")
+System_Ext(identity, "Google Identity and Sign in with Apple", "Issue provider credentials validated by the ColdTrace backend.")
+System_Ext(ai, "OpenAI / Ollama", "Provide chat completion behind the Microsoft.Extensions.AI IChatClient abstraction.")
+System_Ext(stripe, "Stripe", "Provides Checkout, Customer Portal, and signed subscription webhooks.")
 
-' Relationships between actors and the system.
-Rel(visitor, coldtrace, "Reviews value proposition and plans, then sends demo request", "HTTPS")
-Rel(owner, coldtrace, "Reviews dashboard, history, alerts, and incidents", "HTTPS / Responsive web")
-Rel(ops, coldtrace, "Registers assets, configures sensors, monitors, and generates reports", "HTTPS / Web")
-Rel(admin, coldtrace, "Manages account, profile, permissions, and operating ranges", "HTTPS / Web")
-Rel(coldtrace, auditor, "Provides reports, logs, and compliance evidence", "PDF / CSV")
+Rel(visitor, coldtrace, "Reviews the product and starts registration", "HTTPS")
+Rel(operator, coldtrace, "Uses monitoring, incidents, AI guidance, reports, and maintenance", "HTTPS")
+Rel(admin, coldtrace, "Configures organization resources, access, and billing", "HTTPS")
+Rel(coldtrace, auditor, "Provides report and compliance evidence", "HTTPS / export")
 
-' Relationships with IoT infrastructure.
-Rel(iot, coldtrace, "Sends readings, connectivity status, and synchronized data", "MQTT / HTTP")
-Rel(coldtrace, iot, "Applies pairing, ranges, and operating intervals", "API / configuration")
-
-' Relationships with external services.
-Rel(coldtrace, email, "Sends password recovery, confirmations, and alerts", "SMTP / REST API")
-Rel(coldtrace, push, "Triggers real-time critical alerts and escalation", "Web Push / FCM")
-Rel(coldtrace, messaging, "Sends critical alerts through messaging channels", "REST API")
-Rel(coldtrace, payments, "Processes monthly subscription payments", "REST / HTTPS")
+Rel(iot, coldtrace, "Sends operational readings", "HTTPS / JSON")
+Rel(coldtrace, identity, "Validates OIDC tokens or authorization codes", "OIDC / HTTPS")
+Rel(coldtrace, ai, "Requests structured operational assistance", "HTTPS")
+Rel(coldtrace, stripe, "Creates sessions and receives signed events", "HTTPS / webhook")
 
 @enduml

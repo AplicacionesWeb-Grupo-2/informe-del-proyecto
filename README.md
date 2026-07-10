@@ -84,7 +84,7 @@
 | :------ | :--------- | :-------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | AV1     | 25/04/2026 | Todos los integrantes | Primera versión formal del informe, correspondiente al avance AV1 del proyecto. Incluye la documentación inicial del producto, análisis del segmento objetivo, definición de requisitos, modelado del dominio, arquitectura del sistema, evidencias de implementación y artefactos de gestión del proyecto. |
 | AV2     | 19/06/2026 | Todos los integrantes | Versión desplegada del backend con avance significativo de la RESTful API, frontend actualizado, evidencias de ejecución, documentación Swagger/OpenAPI, despliegue en Cloud Run y videos de verificación. |
-| TB2     | 09/07/2026 | Todos los integrantes | Corrección integral del informe final: actualización de colaboración, normalización de entrevistas, fortalecimiento de evidencias de despliegue, incorporación del Sprint 4 como plantilla completa, conclusiones técnicas, recursos desplegados y anexos consolidados. |
+| TB2     | 09/07/2026 | Todos los integrantes | Cierre funcional y documental del Sprint 4: contratos JWT, IA, OAuth/OIDC, SaaS y Stripe, paridad Vue/Angular, configuración segura de proveedores externos, corrección de arquitectura, trazabilidad Linear-GitHub y regeneración del informe final. |
 
 ---
 
@@ -166,11 +166,11 @@ El equipo consolidó la arquitectura general del sistema mediante endpoints REST
 
 ## TB2
 
-Durante la entrega TB2, correspondiente al Sprint 4, el equipo consolidó el informe final integrando las observaciones recibidas en entregas previas y preparando el cierre documental del producto ColdTrace. El trabajo se enfocó en reforzar la comunicación escrita, completar evidencias faltantes, corregir inconsistencias de formato, normalizar la trazabilidad entre backlogs, sprints y artefactos, y dejar listo el Sprint 4 con una estructura verificable para incorporar las evidencias finales del equipo.
+Durante la entrega TB2, correspondiente al Sprint 4, el equipo extendió ColdTrace con autenticación JWT, asistencia operativa con IA, autenticación Google/Apple, planes SaaS y facturación Stripe. En paralelo, se corrigieron contratos entre Vue y ASP.NET Core para reportes, incidencias, mantenimiento, telemetría y eliminaciones seguras. El trabajo se organizó mediante issues de Linear, ramas por historia y pull requests dirigidos a develop.
 
-El Sprint 4 tiene como objetivo extender ColdTrace con identidad segura mediante JWT, asistencia operativa basada en inteligencia artificial y capacidades SaaS de suscripción. Mauricio Pajés lidera la autenticación JWT, Leonardo Delgado la asistencia con IA, Jean Pool Arias la integración frontend, Eduardo Velásquez los planes y facturación SaaS, y Santiago Vargas la documentación y despliegue.
+El cierre técnico conserva el mismo resultado de producto que la versión Open Source: las rutas, payloads, estados HTTP y recorridos principales mantienen paridad, mientras la implementación usa los patrones del curso de Aplicaciones Web. El frontend se implementa con Vue 3 y PrimeVue; el backend es un monolito modular ASP.NET Core con bounded contexts, servicios de aplicación, repositorios, assemblers, EF Core y MySQL.
 
-La mejora continua se aplicó en secciones clave del informe: entrevistas, backlog, despliegue, documentación de servicios, validación, conclusiones y anexos. Además, se separó explícitamente el contenido que requiere participación grupal posterior, como las entrevistas de validación faltantes y la evaluación heurística, para evitar registrar resultados no realizados.
+Las funciones de Google, Apple, OpenAI y Stripe requieren configuración externa además del código: clientes autorizados, redirect URIs, catálogo y webhook de Stripe, secretos en Google Secret Manager y un nuevo despliegue. Por esta razón, el informe distingue entre trabajo implementado en pull requests, trabajo integrado en develop, recursos actualmente desplegados y pasos operacionales todavía pendientes. Los videos y entrevistas se mantienen propios de Aplicaciones Web; solo comparten con Open Source su propósito y ubicación documental.
 
 <p align="center">
   <img src="report/assets/common/collaboration-insights/av1-pulse-overview.png" width="900" alt="GitHub Pulse overview for TB2 collaboration insights">
@@ -392,7 +392,7 @@ Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cu
 <strong>Santiago Enrique Vargas Alarcón:</strong> Ejecutó tareas de assets y asset settings, aportando a la gestión de parámetros operativos y validación de flujos con la API, documentando los endpoints en Swagger.<br><br>
 
 <strong>----------TB2----------</strong><br>  
-<strong>Mauricio Pajés:</strong> Planificó el Sprint 4, distribuyó responsabilidades por feature branch y coordinó la integración de los módulos de JWT, IA, SaaS y frontend. <strong>Leonardo Delgado:</strong> Diseñó y planificó el servicio de asistencia con IA. <strong>Jean Pool Arias:</strong> Organizó la integración frontend-backend con JWT. <strong>Eduardo Velásquez:</strong> Planificó el modelo de planes y facturación SaaS. <strong>Santiago Enrique Vargas Alarcón:</strong> Organizó la documentación técnica actualizada y el despliegue.
+<strong>Mauricio Pajés:</strong> Planificó el Sprint 4, coordinó la trazabilidad Linear-GitHub y trabajó en la alineación de JWT, IA, OAuth, billing y frontend. <strong>Leonardo Delgado:</strong> aportó al servicio de asistencia con IA. <strong>Jean Pool Arias:</strong> participó en la integración frontend-backend. <strong>Eduardo Velásquez:</strong> aportó al modelo de planes y facturación SaaS. <strong>Santiago Enrique Vargas Alarcón:</strong> contribuyó con documentación y despliegue. Las responsabilidades se verifican mediante los issues, commits y pull requests de cada repositorio.
 </td>  
 <td>  
 <strong>----------AV1----------</strong><br>
@@ -405,7 +405,7 @@ El equipo consolidó la planificación por bounded contexts y mantuvo colaboraci
 La colaboración se reflejó en la planificación por APIs, integración con Cloud Run y Cloud SQL, actualización del informe y validación de endpoints con Postman y Swagger. El equipo estableció metas técnicas claras, planificó tareas por issue en GitHub y distribuyó responsabilidades que permitieron completar el backend oficial en un solo sprint. La comunicación se mantuvo mediante reuniones virtuales, Pull Requests revisados y coordinación constante entre frontend y backend, demostrando un entorno colaborativo inclusivo donde cada miembro aportó desde su área de expertise.
 <br><br>
 <strong>----------TB2----------</strong><br>
-El equipo estableció metas finales de corrección documental, preparación del Sprint 4, organización de anexos y separación de actividades pendientes. La planificación permitió mejorar la calidad del informe sin registrar como completadas las entrevistas o evaluaciones heurísticas que todavía requieren trabajo grupal. El entorno colaborativo se mantuvo ordenado: el backlog quedó estimado bajo criterios de rúbrica, el Sprint 4 quedó listo para evidencias finales y las secciones reservadas para el grupo se mantuvieron transparentes. El equipo demostró capacidad para analizar críticas de entregas previas, proponer soluciones de mejora continua y garantizar cooperación, participación e integración efectiva entre todos los miembros.
+El equipo estableció metas finales de implementación, revisión cruzada y corrección documental. Linear concentró el backlog y GitHub registró una rama y un pull request por historia técnica o funcional. El informe conserva como pendientes únicamente las actividades que requieren evidencia humana o cuentas externas, como entrevistas faltantes, evaluación heurística, credenciales de proveedores y redespliegue final; no las presenta como resultados ejecutados. Esta separación permite evaluar con claridad qué está integrado, qué está en revisión y qué depende de una acción operacional del equipo.
 </td>  
 </tr>  
 </table>
@@ -1186,6 +1186,27 @@ El Product Backlog prioriza las historias funcionales del producto segun el valo
   <tr><td>36</td><td>US36</td><td>Actualizar parametros operativos</td><td>Como responsable de la operacion, quiero ajustar intervalos de lectura y criterios de evaluacion segun la criticidad del activo.</td><td>2</td></tr>
   <tr><td>37</td><td>US37</td><td>Programar mantenimiento preventivo</td><td>Como responsable de calidad, quiero agendar el mantenimiento de sensores y equipos de frio para reducir riesgos de falla.</td><td>3</td></tr>
   <tr><td>38</td><td>US38</td><td>Solicitar y cerrar servicio tecnico</td><td>Como usuario responsable, quiero solicitar asistencia tecnica y documentar la reparacion realizada para devolver el equipo a operacion.</td><td>2</td></tr>
+  <tr><td>39</td><td>US040</td><td>Generar un plan asistido por IA para una incidencia</td><td>Como operador, quiero solicitar una propuesta estructurada basada en la incidencia y sus lecturas para evaluar una respuesta operativa.</td><td>5</td></tr>
+  <tr><td>40</td><td>US041</td><td>Aprobar un plan de IA y cerrar la incidencia</td><td>Como operador responsable, quiero aprobar explícitamente una recomendación antes de aplicarla y cerrar la incidencia.</td><td>8</td></tr>
+  <tr><td>41</td><td>US042</td><td>Rechazar un plan de IA con motivo</td><td>Como operador, quiero rechazar una recomendación indicando el motivo para conservar trazabilidad humana.</td><td>3</td></tr>
+  <tr><td>42</td><td>US043</td><td>Revisar el historial de planes de IA</td><td>Como responsable, quiero consultar propuestas y decisiones anteriores para auditar el proceso de resolución.</td><td>3</td></tr>
+  <tr><td>43</td><td>US044</td><td>Generar un resumen inteligente de cumplimiento</td><td>Como responsable de calidad, quiero obtener una síntesis estructurada del reporte para priorizar hallazgos sin reemplazar la evidencia original.</td><td>5</td></tr>
+  <tr><td>44</td><td>US045</td><td>Comparar planes en la landing page</td><td>Como visitante, quiero comparar precio, límites y beneficios para elegir un plan antes del registro.</td><td>3</td></tr>
+  <tr><td>45</td><td>US046</td><td>Seleccionar un plan para la organización</td><td>Como administrador, quiero seleccionar el plan de mi organización para habilitar sus capacidades contratadas.</td><td>5</td></tr>
+  <tr><td>46</td><td>US047</td><td>Ver el plan actual y el consumo de límites</td><td>Como administrador, quiero revisar el plan activo y su uso para anticipar restricciones.</td><td>3</td></tr>
+  <tr><td>47</td><td>US048</td><td>Actualizar el plan mediante Stripe Checkout</td><td>Como administrador, quiero iniciar un checkout externo para contratar un plan pagado.</td><td>5</td></tr>
+  <tr><td>48</td><td>US049</td><td>Gestionar facturación mediante Customer Portal</td><td>Como administrador, quiero abrir el portal de Stripe para administrar la suscripción de forma segura.</td><td>3</td></tr>
+  <tr><td>49</td><td>US050</td><td>Bloquear funciones no incluidas en el plan</td><td>Como organización, quiero que los límites se apliquen en backend para que el acceso corresponda al plan contratado.</td><td>5</td></tr>
+  <tr><td>50</td><td>US051</td><td>Interpretar el dashboard con asistencia de IA</td><td>Como operador, quiero una interpretación estructurada de los indicadores para priorizar riesgos operativos.</td><td>5</td></tr>
+  <tr><td>51</td><td>US052</td><td>Crear cuenta o iniciar sesión con Google/Apple</td><td>Como usuario, quiero autenticarme con un proveedor externo validado por el backend para reducir fricción sin delegar la sesión de ColdTrace.</td><td>5</td></tr>
+  <tr><td>52</td><td>US053</td><td>Usar el panel AI Guidance en incidencias</td><td>Como operador, quiero solicitar y revisar la guía de IA dentro del flujo de incidencias.</td><td>5</td></tr>
+  <tr><td>53</td><td>US054</td><td>Gestionar billing y upgrades en la aplicación</td><td>Como administrador, quiero consultar el estado de billing e iniciar Checkout o Customer Portal desde una ruta coherente.</td><td>5</td></tr>
+  <tr><td>54</td><td>US055</td><td>Comparar planes desde la landing final</td><td>Como visitante, quiero revisar la oferta SaaS final con llamadas a registro y upgrade coherentes con la aplicación.</td><td>3</td></tr>
+  <tr><td>55</td><td>US056</td><td>Abrir la interpretación IA del dashboard</td><td>Como operador, quiero abrir una vista accesible con la interpretación y los datos que la sustentan.</td><td>3</td></tr>
+  <tr><td>56</td><td>US057</td><td>Iniciar Google/Apple desde la interfaz</td><td>Como usuario, quiero activar los flujos del proveedor desde Vue y continuar con la sesión emitida por ColdTrace.</td><td>3</td></tr>
+  <tr><td>57</td><td>US058</td><td>Iniciar sesión con una sesión JWT del backend</td><td>Como usuario, quiero que Vue conserve el token y lo adjunte a las solicitudes protegidas, manejando expiración y cierre de sesión.</td><td>3</td></tr>
+  <tr><td>58</td><td>US059</td><td>Ver videos de producto y equipo en la landing</td><td>Como visitante, quiero acceder a los videos propios de Aplicaciones Web desde una sección responsive de la landing.</td><td>3</td></tr>
+  <tr><td>59</td><td>US060</td><td>Actualizar telemetría sin mutaciones del cliente</td><td>Como operador, quiero que los paneles se refresquen con lecturas persistidas por el backend y no con valores simulados en Vue.</td><td>3</td></tr>
 </table>
 
 ---
@@ -1837,7 +1858,7 @@ El tablero de diseño se encuentra disponible en Miro: <https://miro.com/app/boa
 
 ### 4.6.2. Software Architecture Context Diagram.
 
-El diagrama de contexto de ColdTrace muestra la plataforma como sistema central y presenta sus relaciones con los actores principales, los dispositivos IoT y los servicios externos necesarios para operar la solución. A partir de las user stories documentadas en el Capítulo III y de la delimitación realizada en el Design-Level Event Storming de la sección 4.6.1, se definen los siguientes bounded contexts: **Autenticación y gestión de cuenta**, **Gestión de Sensores**, **Monitoreo**, **Alertas**, **Reportes** y **Auditoría**.
+El diagrama de contexto de ColdTrace muestra la plataforma como sistema central y presenta sus relaciones con los actores principales, los dispositivos IoT y los servicios externos realmente integrados. La implementación ASP.NET Core organiza el monolito modular en los bounded contexts **IdentityAccess**, **AssetManagement**, **Monitoring**, **Alerts**, **Reports**, **MaintenanceManagement**, **Billing** y **AiAssistance**, además de **Shared** para capacidades transversales.
 
 Las user stories se reflejan en el diagrama de la siguiente manera:
 
@@ -1847,7 +1868,7 @@ Las user stories se reflejan en el diagrama de la siguiente manera:
 - **Administrador de organización:** gestiona cuentas, perfiles, permisos y parámetros operativos.
 - **Auditor sanitario o responsable externo:** recibe reportes, bitácoras y evidencia exportable para sustentar cumplimiento.
 - **Sensores IoT y gateways:** envían lecturas de temperatura, humedad, conectividad y datos sincronizados después de periodos sin conexión.
-- **Servicios externos de correo, push, mensajería y pagos:** permiten recuperación de contraseña, confirmaciones comerciales, alertas críticas, escalamiento de incidencias y procesamiento de suscripciones.
+- **Servicios externos Google/Apple, OpenAI/Ollama y Stripe:** validan identidades externas, proporcionan el modelo de lenguaje detrás de la abstracción de IA y procesan Checkout, Customer Portal y webhooks de suscripción.
 
 <p align="center">
   <img src="report/assets/chapter-04/contextdiagram/contextdiagram.png" width="760">
@@ -1861,11 +1882,11 @@ Las user stories se reflejan en el diagrama de la siguiente manera:
 
 ### 4.6.3. Software Architecture Container Diagrams.
 
-El diagrama de contenedores muestra cómo ColdTrace se divide en sus principales aplicaciones, servicios y bases de datos. En esta vista se identifican la Landing Page, la Web Application, el API Gateway, el Telemetry Ingestion API, los servicios internos alineados a bounded contexts, sus repositorios de datos y los servicios externos requeridos por los flujos descritos en las user stories del Capítulo III y por las responsabilidades identificadas en el Design-Level Event Storming.
+El diagrama de contenedores representa la topología implementada: Landing Page estática, Frontend Web Application con Vue 3 y PrimeVue, una RESTful API ASP.NET Core y una base de datos MySQL en Google Cloud SQL. El backend se despliega como un único contenedor de aplicación en Cloud Run acompañado por el sidecar oficial de Cloud SQL Auth Proxy.
 
-Para esta propuesta, la arquitectura mantiene los bounded contexts definidos para ColdTrace en la sección 4.6.1 y adapta los contenedores a la tecnología proyectada del curso: aplicación web con Vue.js y PrimeVue, servicios internos con ASP.NET Core y C#, y documentación de servicios mediante OpenAPI/Swagger.
+La RESTful API es un **monolito modular**, no un conjunto de microservicios. Los bounded contexts comparten proceso y despliegue, pero conservan límites de código mediante carpetas y namespaces de Domain, Application, Infrastructure e Interfaces/REST. Los controladores son delgados y delegan en servicios de aplicación; los contratos externos se expresan con resources, commands y assemblers, siguiendo la estructura del Learning Center Platform de Aplicaciones Web.
 
-Cada bounded context mantiene su propia base de datos MySQL. Cuando un contexto necesita información de otro, la obtiene mediante APIs internas o eventos de integración, evitando que dos microservicios dependan directamente de las mismas tablas. Además, la evidencia hacia auditoría se centraliza a través del contexto de Auditoría, en lugar de exponer varios servicios internos directamente al actor externo.
+La persistencia usa un único AppDbContext, migraciones EF Core y un esquema MySQL. Las tablas y repositorios mantienen ownership por bounded context, pero no existen bases de datos ni llamadas HTTP internas separadas por módulo. El frontend consume directamente /api/v1 por HTTPS; por ello no se documentan un API Gateway ni una Telemetry Ingestion API independientes.
 
 <p align="center">
   <img src="report/assets/chapter-04/containerdiagram/containerdiagram.png" width="760">
@@ -1879,9 +1900,9 @@ Cada bounded context mantiene su propia base de datos MySQL. Cuando un contexto 
 
 ### 4.6.4. Software Architecture Components Diagrams.
 
-En esta sección se presenta la vista de componentes de ColdTrace por bounded context. Cada diagrama descompone el contenedor interno definido en la vista de contenedores y toma como base la separación de responsabilidades establecida en el Design-Level Event Storming. Además, muestra controladores, servicios de aplicación, servicios de dominio, repositorios, publicadores o consumidores de eventos y adaptadores externos.
+En esta sección se presenta la vista lógica de componentes por bounded context. Los diagramas fueron elaborados durante el diseño para separar controladores, servicios de aplicación, servicios de dominio, repositorios y adaptadores. En la implementación final esas piezas viven dentro del mismo contenedor ASP.NET Core y se comunican mediante llamadas en proceso, servicios compartidos o ACLs, no mediante una red de microservicios.
 
-Los diagramas mantienen la misma regla arquitectónica definida para la vista de contenedores: cada bounded context es dueño de su propia base de datos MySQL y las dependencias entre contextos se realizan mediante APIs internas o eventos de integración.
+Todos los repositorios EF Core usan el AppDbContext compartido y la misma base MySQL, manteniendo ownership modular por namespace y agregado. Las referencias visuales a bases o APIs por contexto deben interpretarse como límites lógicos del diseño, no como contenedores de despliegue independientes.
 
 - **Component Diagram - Account & Access Context:** muestra los componentes encargados de registro, inicio de sesión, recuperación de contraseña, perfil, roles, permisos y estado de suscripción.
 
@@ -1953,7 +1974,7 @@ Los diagramas mantienen la misma regla arquitectónica definida para la vista de
 
 En esta primera etapa se modela el dominio de ColdTrace con enfoque **DDD** y nomenclatura orientada a la futura implementación en C#. El objetivo es identificar las entidades, value objects conceptuales, clases abstractas, interfaces y tipos enumerados principales sin introducir detalles de infraestructura como repositorios, controladores, adapters o DTOs. A diferencia de la etapa 2, esta vista todavía no agrupa las clases dentro de paquetes por bounded context; solo presenta el modelo de clases y sus relaciones de dominio.
 
-Para mantener coherencia con la arquitectura de microservicios definida en la sección 4.6, las relaciones entre bounded contexts se representan mediante identificadores tipados como `OrganizationId`, `UserId`, `AssetId`, `SensorId`, `MeasurementId`, `AlertId`, `ReportId` y `AuditCaseId`, no como composiciones directas entre agregados de contextos distintos. Estos identificadores se tratan como value objects que envuelven valores `Guid`, manteniendo una nomenclatura compatible con la implementación proyectada en C#. Por ejemplo, `Alert` conserva `assetId`, `sensorId` y `measurementId`, mientras que `AlertRule` evalúa un `MeasurementEvaluationSnapshot`. Del mismo modo, `Report` consolida `ReadingSummary`, `AlertSummary` e `IncidentSummary` en lugar de consultar directamente objetos del contexto de Monitoreo o Alertas.
+Para mantener coherencia con el monolito modular definido en la sección 4.6, las relaciones entre bounded contexts se representan mediante identificadores y contratos, no como composiciones directas entre agregados de módulos distintos. El modelo conceptual usa identificadores tipados, mientras la implementación actual expone identificadores numéricos en rutas organization-scoped y recursos REST. Esta diferencia conserva el objetivo DDD del diseño sin afirmar que cada contexto sea un microservicio.
 
 Principales decisiones aplicadas en esta etapa:
 
@@ -1964,7 +1985,7 @@ Principales decisiones aplicadas en esta etapa:
 - **Reports:** evita acoplarse a las bases de datos de otros contextos mediante `ReadingSummary`, `AlertSummary` e `IncidentSummary`; sobre esa información genera `Report`, `DailyLog`, `MonthlyReport`, `ComplianceReport`, `ReportExport`, `Dashboard` y `Widget`.
 - **Audit:** centraliza la preparación de auditoría mediante `AuditCase`, `ComplianceCriterion`, `ComplianceFinding`, `EvidencePackage` y `EvidenceItem`.
 
-Se corrigieron inconsistencias del modelo base y de las historias de usuario: el gateway físico del dominio se denomina `EdgeGateway` para no confundirlo con el `API Gateway` ni con el `Telemetry Ingestion API`; cualquier referencia aislada a otro nombre de producto se interpreta como ColdTrace; `Asset` conserva `internalCode` y capacidad porque las historias de registro validan duplicados y capacidad; `Sensor` puede existir sin `assetId` ni `edgeGatewayId` antes de la vinculación; el contexto de alertas trabaja con snapshots de evaluación; el contexto de reportes no depende directamente de `Measurement` ni de `ThermalIncident`, sino de snapshots propios; y auditoría recibe paquetes de evidencia preparados, no reportes directos desde múltiples servicios internos.
+Se corrigieron inconsistencias del modelo base y de las historias de usuario: el gateway físico se implementa como Gateway; los dispositivos IoT pueden permanecer sin un activo asignado; assets y gateways comparten Location como base física; lecturas, incidentes y reportes preservan trazabilidad mediante identificadores organization-scoped; y las capacidades de IA y billing se integran como bounded contexts del mismo backend. El diagrama de clases conserva decisiones conceptuales más amplias, pero el texto de implementación y despliegue toma como fuente el código ASP.NET Core actual.
 
 Para mejorar la legibilidad del diagrama, los tipos enumerados se mantienen como tipos de atributos, pero no se expanden como cajas independientes. Así se evita que estados como `AlertStatus`, `SensorStatus` o `ReportStatus` generen ruido visual y oculten las relaciones principales entre entidades, value objects, clases abstractas e interfaces.
 
@@ -2141,7 +2162,7 @@ Para la gestión del código fuente, el equipo utiliza **Git** de forma local y 
 Los repositorios usados fueron:
 
 - Repositorio del informe: [https://github.com/AplicacionesWeb-Grupo-2/informe-del-proyecto.git](https://github.com/AplicacionesWeb-Grupo-2/informe-del-proyecto.git)
-- Repositorio de la Landing Page: [https://github.com/mauricio-pajes/landing-page-test](https://github.com/mauricio-pajes/landing-page-test)
+- Repositorio de la Landing Page: [https://github.com/AplicacionesWeb-Grupo-2/landing-page](https://github.com/AplicacionesWeb-Grupo-2/landing-page)
 - Repositorio de la Frontend Web Application: [https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend)
 - Repositorio de la RESTful API backend: [https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform)
 
@@ -4002,7 +4023,7 @@ Durante el Sprint 3 se realizó el despliegue de la primera versión de los Web 
 | :--- | :--- |
 | Repositorio backend | https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform |
 | Backend Cloud Run | https://coldtrace-platform-3kti2ylcba-uc.a.run.app |
-| Swagger UI | https://coldtrace-platform-3kti2ylcba-uc.a.run.app/swagger |
+| Swagger UI | https://coldtrace-platform-3kti2ylcba-uc.a.run.app/swagger/index.html |
 | Swagger JSON | https://coldtrace-platform-3kti2ylcba-uc.a.run.app/swagger/v1/swagger.json |
 
 ---
@@ -4166,328 +4187,138 @@ A continuación se presentan los analíticos de colaboración del repositorio pr
 
 #### 5.2.4.1. Sprint Planning 4
 
-El Sprint 4 tiene como objetivo preparar el cierre funcional de ColdTrace como producto SaaS, tomando como base la RESTful API desplegada en el Sprint 3. La planificación se orienta a tres frentes: seguridad de acceso, asistencia inteligente para decisiones operativas y evolución comercial mediante planes de suscripción. A diferencia del proyecto modelo revisado, esta versión mantiene el stack definido para el curso: **ASP.NET Core con C#**, documentación **Swagger/OpenAPI**, base de datos **MySQL** y despliegue en **Google Cloud Run**.
+El Sprint 4 cierra ColdTrace como producto SaaS con cinco objetivos: autenticación segura, asistencia operativa con IA, billing por suscripción, paridad funcional entre Vue y Angular, y despliegue reproducible de proveedores externos. El resultado de producto conserva los contratos del trabajo Open Source, mientras la solución de Aplicaciones Web usa Vue 3, PrimeVue, ASP.NET Core, EF Core, MySQL y la estructura del Learning Center Platform.
 
-<table border="1" cellpadding="6" cellspacing="0">
-  <tr>
-    <th>Sprint #</th>
-    <td>Sprint 4</td>
-  </tr>
-  <tr>
-    <th colspan="2">Sprint Planning Background</th>
-  </tr>
-  <tr>
-    <th>Date</th>
-    <td>2026-07-09</td>
-  </tr>
-  <tr>
-    <th>Location</th>
-    <td>Reunión virtual del equipo</td>
-  </tr>
-  <tr>
-    <th>Prepared By</th>
-    <td>Todos los integrantes</td>
-  </tr>
-  <tr>
-    <th>Attendees</th>
-    <td>Jean Pool Arias / Mauricio Pajés / Leonardo Delgado / Santiago Vargas / Eduardo Velásquez</td>
-  </tr>
-  <tr>
-    <th>Sprint 3 Review Summary</th>
-    <td>En el Sprint 3 se desplegó la RESTful API de ColdTrace en Google Cloud Run, conectada a MySQL y documentada con Swagger/OpenAPI. La API cubre organizaciones, ubicaciones, gateways, activos, dispositivos IoT, lecturas de sensores, incidencias, reportes, roles, mantenimiento y servicios técnicos.</td>
-  </tr>
-  <tr>
-    <th>Sprint 3 Retrospective Summary</th>
-    <td>El equipo identificó que la API base ya soporta los procesos operativos principales, pero requiere fortalecer autenticación, autorización, trazabilidad de decisiones, integración frontend-backend y preparación comercial para planes diferenciados.</td>
-  </tr>
-  <tr>
-    <th>Sprint 4 Goal</th>
-    <td>Our focus is on extending ColdTrace with secure identity, AI-assisted operational guidance and SaaS-ready subscription capabilities. This will be confirmed when the new ASP.NET Core services are documented in Swagger, validated against MySQL and prepared for integration with the Vue frontend.</td>
-  </tr>
-  <tr>
-    <th>Herramienta de seguimiento</th>
-    <td>Linear App</td>
-  </tr>
-  <tr>
-    <th>Repositorios involucrados</th>
-    <td>AplicacionesWeb-Grupo-2/coldtrace-platform, AplicacionesWeb-Grupo-2/coldtrace-frontend, AplicacionesWeb-Grupo-2/landing-page, AplicacionesWeb-Grupo-2/informe-del-proyecto</td>
-  </tr>
-</table>
-
-El sprint se documenta como una preparación completa para la entrega final. Las secciones siguientes dejan definidos los responsables, tareas, evidencias y capturas requeridas para que el equipo solo deba incorporar las imágenes finales en las rutas indicadas.
+| Campo | Detalle |
+| :--- | :--- |
+| Fecha de corte | 09/07/2026 |
+| Herramienta de seguimiento | Linear App, equipo Aplicaciones Web |
+| Repositorios | coldtrace-platform, coldtrace-frontend, landing-page e informe-del-proyecto |
+| Estrategia Git | Una rama feature y un pull request dirigido a develop por historia |
+| Estado documental | README.md es la fuente canónica; los capítulos separados conservan contenido histórico |
+| Criterio de paridad | Igual ruta, payload, respuesta y recorrido de UI que Open Source; lenguaje y patrones propios del curso |
 
 #### 5.2.4.2. Aspect Leaders and Collaborators
 
-| Aspecto | Líder | Colaboradores | Resultado esperado |
-| :--- | :--- | :--- | :--- |
-| Identity & Access | Mauricio Pajés | Equipo completo | Autenticación JWT, protección de rutas, administración de usuarios y preparación de inicio de sesión seguro desde frontend. |
-| AI Assistance | Leonardo Delgado | Jean Pool Arias, Mauricio Pajés | Endpoints para asistencia operativa en incidencias, resúmenes de reportes y recomendaciones trazables. |
-| SaaS Plans & Billing | Eduardo Velásquez | Santiago Vargas, Mauricio Pajés | Catálogo de planes, límites por suscripción y preparación de flujos de checkout/portal de facturación. |
-| Frontend integration | Jean Pool Arias | Santiago Vargas, Eduardo Velásquez | Consumo de endpoints reales desde Vue, validación de flujos principales y ajustes visuales responsive. |
-| Documentation & Deployment | Santiago Vargas | Todos los integrantes | Evidencias de Swagger, MySQL, Cloud Run, Linear, GitHub y rutas de recursos desplegados. |
+| Aspecto | Trabajo realizado | Evidencia |
+| :--- | :--- | :--- |
+| Identity & Access | JWT, CORS, password reset, eliminación de usuarios y Google/Apple OAuth/OIDC | Linear APPWEB-53, APPWEB-65, APPWEB-68, APPWEB-108 y APPWEB-109 |
+| AI Assistance | Proveedor IChatClient, planes de resolución, resumen de cumplimiento e interpretación del dashboard | Linear APPWEB-77 a APPWEB-90 |
+| SaaS Plans & Billing | Planes, límites, Stripe Checkout, Customer Portal, webhooks y ruta Vue /settings/billing | Linear APPWEB-93 a APPWEB-103 |
+| Frontend parity | Telemetría persistida, incidencias, reportes, mantenimiento, navegación responsive y eliminaciones reales | Linear APPWEB-36, APPWEB-49, APPWEB-61, APPWEB-111 y APPWEB-112 |
+| Landing Page | Planes, términos, responsive y videos propios de Aplicaciones Web | Linear APPWEB-16, APPWEB-18, APPWEB-105 y APPWEB-110 |
+| Deployment & report | Secret Manager, callbacks, CORS, arquitectura real y evidencia verificable | Linear APPWEB-64 y APPWEB-113 |
+
+Las responsabilidades individuales se consultan en cada issue y pull request. El informe evita reasignar autoría que no pueda comprobarse con GitHub o Linear.
 
 #### 5.2.4.3. Sprint Backlog 4
 
-El Sprint Backlog 4 se estructura con tareas de ingeniería estimadas entre 4 y 8 horas, de acuerdo con la restricción establecida en la rúbrica. La tabla separa historias funcionales y técnicas para mantener trazabilidad entre producto, backend, frontend y despliegue.
+| Alcance | Historias técnicas o funcionales | Estado verificable |
+| :--- | :--- | :--- |
+| Sesión segura | TS02, T58, US058 | Backend PR 33 y 35; frontend PR 14; en revisión |
+| Recuperación y acceso | TS11, US010, US011 | Backend PR 41; frontend PR 21 y 18; en revisión |
+| Google y Apple | TS30, US052, US057 | Backend PR 42; frontend PR 13; en revisión |
+| IA de incidentes y reportes | TS18, US040-US044, US053 | Endpoints base integrados; proveedor PR 31; frontend PR 12 y 15 |
+| IA del dashboard | TS31, US051, US056 | Backend PR 32 y frontend PR 11; en revisión |
+| Planes y Stripe | TS24-TS29, US045-US050, US054-US055 | Backend base integrado; frontend PR 25; landing PR 9 integrado |
+| Telemetría y flujos operativos | US024, US028, US037, US038, US060 | Frontend PR 16, 17, 19, 20 y 23; en revisión |
+| Contrato de reportes | TS10 | Frontend PR 22; en revisión |
+| Navegación responsive | US039 | Frontend PR 24; en revisión |
+| Eliminaciones organization-scoped | TS03, TS04, TS05, TS13 y TS17 | Backend PR 34, 36, 37, 38 y 40; clientes Vue PR 26 a 29 |
+| Landing final | US004, US006, US059 | Landing PR 10, 11 y 12; en revisión |
+| Proveedores externos | T57 | Backend PR 43; en revisión |
+| Informe final | TS32 | Linear APPWEB-113 y rama feature/TS32-final-report-alignment |
 
-![](./report/assets/chapter-05/sprint-04/sprint-backlog.png)
-*Link del Board de Trello (As Observer): https://trello.com/invite/b/6a5017db6b94ad4b44ffd40e/ATTI0218c96b6e195f10d67e6da5d1518410D78B106A/sprint-4 *
-
-
-<table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; text-align: center;">
-  <tr>
-    <th>Sprint #</th>
-    <td colspan="7">Sprint 4</td>
-  </tr>
-  <tr>
-    <th colspan="2">User Story / Technical Story</th>
-    <th colspan="6">Engineering Task</th>
-  </tr>
-  <tr>
-    <th>Id</th>
-    <th>Title</th>
-    <th>Id</th>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Estimation</th>
-    <th>Assigned To</th>
-    <th>Status</th>
-  </tr>
-  <tr>
-    <td>TS18</td>
-    <td>Authentication API with JWT</td>
-    <td>T-01</td>
-    <td>Configurar autenticación JWT en ASP.NET Core</td>
-    <td>Definir emisión, validación y expiración de tokens para proteger endpoints de ColdTrace.</td>
-    <td>6h</td>
-    <td>Mauricio Pajés</td>
-    <td>To Do</td>
-  </tr>
-  <tr>
-    <td>TS18</td>
-    <td>Authentication API with JWT</td>
-    <td>T-02</td>
-    <td>Proteger controladores REST</td>
-    <td>Aplicar políticas de autorización en organizaciones, activos, sensores, reportes e incidencias.</td>
-    <td>5h</td>
-    <td>Mauricio Pajés</td>
-    <td>To Do</td>
-  </tr>
-  <tr>
-    <td>US40</td>
-    <td>Acceso seguro desde frontend</td>
-    <td>T-03</td>
-    <td>Integrar sesión JWT en Vue</td>
-    <td>Guardar sesión, adjuntar token a solicitudes HTTP y manejar expiración o errores 401.</td>
-    <td>6h</td>
-    <td>Jean Pool Arias</td>
-    <td>To Do</td>
-  </tr>
-  <tr>
-    <td>TS19</td>
-    <td>AI assistance foundation</td>
-    <td>T-04</td>
-    <td>Diseñar servicio de asistencia IA</td>
-    <td>Crear capa de aplicación para generar recomendaciones a partir de incidencias, rangos seguros y lecturas.</td>
-    <td>8h</td>
-    <td>Leonardo Delgado</td>
-    <td>To Do</td>
-  </tr>
-  <tr>
-    <td>TS20</td>
-    <td>AI resolution plan lifecycle</td>
-    <td>T-05</td>
-    <td>Implementar aprobación y rechazo humano</td>
-    <td>Permitir que el operador apruebe, edite o rechace una recomendación antes de cerrar una incidencia.</td>
-    <td>6h</td>
-    <td>Leonardo Delgado</td>
-    <td>To Do</td>
-  </tr>
-  <tr>
-    <td>US41</td>
-    <td>Panel de AI Guidance</td>
-    <td>T-06</td>
-    <td>Preparar interfaz de asistencia en incidencias</td>
-    <td>Crear vista o panel para solicitar, revisar y registrar decisiones sobre planes sugeridos.</td>
-    <td>7h</td>
-    <td>Santiago Vargas</td>
-    <td>To Do</td>
-  </tr>
-  <tr>
-    <td>TS21</td>
-    <td>Subscription plans catalog</td>
-    <td>T-07</td>
-    <td>Modelar planes y límites en backend</td>
-    <td>Definir planes Base, Operaciones y Compliance AI con límites de usuarios, activos, sensores y reportes.</td>
-    <td>6h</td>
-    <td>Eduardo Velásquez</td>
-    <td>To Do</td>
-  </tr>
-  <tr>
-    <td>TS22</td>
-    <td>Billing integration preparation</td>
-    <td>T-08</td>
-    <td>Preparar endpoints de checkout y portal</td>
-    <td>Documentar contratos para creación de sesión de pago, portal de cliente y sincronización de estado de suscripción.</td>
-    <td>8h</td>
-    <td>Eduardo Velásquez</td>
-    <td>To Do</td>
-  </tr>
-  <tr>
-    <td>US42</td>
-    <td>Pricing in landing page</td>
-    <td>T-09</td>
-    <td>Actualizar sección de planes en landing</td>
-    <td>Presentar precios referenciales, beneficios por plan, límites y llamadas a la acción claras.</td>
-    <td>5h</td>
-    <td>Santiago Vargas</td>
-    <td>To Do</td>
-  </tr>
-  <tr>
-    <td>TS23</td>
-    <td>Swagger/OpenAPI final documentation</td>
-    <td>T-10</td>
-    <td>Documentar endpoints Sprint 4</td>
-    <td>Agregar ejemplos de request/response, códigos de error y agrupación por controlador en Swagger.</td>
-    <td>5h</td>
-    <td>Mauricio Pajés</td>
-    <td>To Do</td>
-  </tr>
-  <tr>
-    <td>TS24</td>
-    <td>Database verification</td>
-    <td>T-11</td>
-    <td>Validar persistencia en MySQL</td>
-    <td>Probar creación, consulta y actualización de datos desde endpoints reales hacia la base de datos Cloud SQL/MySQL.</td>
-    <td>5h</td>
-    <td>Jean Pool Arias</td>
-    <td>To Do</td>
-  </tr>
-  <tr>
-    <td>TS25</td>
-    <td>Deployment evidence</td>
-    <td>T-12</td>
-    <td>Actualizar despliegue y capturas</td>
-    <td>Registrar evidencias de Cloud Run, variables de entorno, Swagger publicado, frontend desplegado y colaboración en GitHub.</td>
-    <td>6h</td>
-    <td>Todos los integrantes</td>
-    <td>To Do</td>
-  </tr>
-</table>
+El estado En revisión significa que el código existe en una rama publicada y el pull request apunta a develop. No significa que la versión pública ya haya sido redesplegada.
 
 #### 5.2.4.4. Development Evidence for Sprint Review
 
-La evidencia de desarrollo del Sprint 4 debe sustentarse en commits, pull requests, issues de Linear y capturas del repositorio. Debido a que el docente indicó no usar capturas de un IDE como evidencia principal, las pruebas de implementación deben extraerse de GitHub, Swagger, Cloud Run, MySQL y la aplicación desplegada.
+La evidencia principal son los pull requests públicos. Cada enlace permite revisar commits, archivos, conversación y rama sin depender de capturas de un IDE.
 
-| Repositorio | Rama esperada | Evidencia requerida | Estado |
-| :--- | :--- | :--- | :--- |
-| AplicacionesWeb-Grupo-2/coldtrace-platform | `develop` / `feature/authentication` | Commits de autenticación JWT, protección de endpoints y documentación OpenAPI. | Pendiente de adjuntar |
-| AplicacionesWeb-Grupo-2/coldtrace-platform | `feature/ai-assistance` | Commits de servicios de asistencia IA, casos de uso y persistencia de decisiones. | Pendiente de adjuntar |
-| AplicacionesWeb-Grupo-2/coldtrace-platform | `feature/billing` | Commits de planes, límites, checkout y endpoints de suscripción. | Pendiente de adjuntar |
-| AplicacionesWeb-Grupo-2/coldtrace-frontend | `develop` / `feature/sprint-04-integration` | Commits de consumo de endpoints reales, sesión JWT y vistas de AI/Billing. | Pendiente de adjuntar |
-| AplicacionesWeb-Grupo-2/landing-page | `main` | Commits de pricing, CTA y enlaces a Web Application. | Pendiente de adjuntar |
-
-Evidencias gráficas pendientes:
-
-| Evidencia | Ruta sugerida |
+| Repositorio | Evidencia de desarrollo |
 | :--- | :--- |
-| Pull requests o commits de backend | `report/assets/chapter-05/sprint-04/github-backend-commits.png` |
-| Pull requests o commits de frontend | `report/assets/chapter-05/sprint-04/github-frontend-commits.png` |
-| Tablero Linear del Sprint 4 | `report/assets/chapter-05/sprint-04/linear-sprint-04-board.png` |
-| Vista de pricing en landing | `report/assets/chapter-05/sprint-04/landing-pricing.png` |
-| Vista de AI Guidance en frontend | `report/assets/chapter-05/sprint-04/frontend-ai-guidance.png` |
-| Vista de billing en frontend | `report/assets/chapter-05/sprint-04/frontend-billing.png` |
+| Backend | [PR 31 - AI provider](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/31), [PR 32 - dashboard AI](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/32), [PR 33 - JWT](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/33), [PR 35 - JWT/CORS](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/35), [PR 39 - Problem Details e i18n](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/39), [PR 41 - password reset](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/41), [PR 42 - OAuth/OIDC](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/42), [PR 43 - external providers](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/43) |
+| Backend deletion parity | [PR 34 - users](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/34), [PR 36 - assets](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/36), [PR 37 - IoT devices](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/37), [PR 38 - locations](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/38), [PR 40 - gateways](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/40) |
+| Frontend AI y sesión | [PR 11 - dashboard AI](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/11), [PR 12 - incident AI](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/12), [PR 13 - Google/Apple](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/13), [PR 14 - JWT](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/14), [PR 15 - compliance AI](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/15) |
+| Frontend operational parity | [PR 16 - telemetry](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/16), [PR 17 - incident lifecycle](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/17), [PR 18 - user password](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/18), [PR 19 - maintenance](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/19), [PR 20 - technical service](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/20), [PR 21 - recovery](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/21), [PR 22 - reports](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/22), [PR 23 - incidents](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/23), [PR 24 - responsive shell](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/24), [PR 25 - billing](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/25) |
+| Frontend deletion clients | [PR 26 - users](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/26), [PR 27 - assets](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/27), [PR 28 - IoT devices](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/28), [PR 29 - gateways](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/29) |
+| Landing | [PR 9 - plans](https://github.com/AplicacionesWeb-Grupo-2/landing-page/pull/9), [PR 10 - registration and terms](https://github.com/AplicacionesWeb-Grupo-2/landing-page/pull/10), [PR 11 - responsive](https://github.com/AplicacionesWeb-Grupo-2/landing-page/pull/11), [PR 12 - videos](https://github.com/AplicacionesWeb-Grupo-2/landing-page/pull/12) |
 
-#### 5.2.4.5. Execution Evidence for Sprint Review
+#### 5.2.4.5. Execution and Contract Evidence
 
-La ejecución del Sprint 4 debe demostrar que las funcionalidades planificadas pueden recorrerse desde la aplicación o desde clientes HTTP como Postman/Swagger. Los flujos principales a validar son:
-
-| Flujo validado | Resultado esperado | Evidencia pendiente |
-| :--- | :--- | :--- |
-| Inicio de sesión protegido | El backend emite un JWT y el frontend consume rutas protegidas sin exponer credenciales. | Captura de login, respuesta HTTP 200 y uso del token. |
-| Gestión de organización y usuarios | Los usuarios autenticados consultan recursos según organización y rol. | Captura de endpoint protegido y vista frontend. |
-| Asistencia IA para incidencia | El sistema genera una recomendación estructurada basada en datos operativos y exige aprobación humana. | Captura de Swagger/Postman y pantalla de AI Guidance. |
-| Resumen de reporte | El backend devuelve una síntesis de cumplimiento para auditoría o revisión interna. | Captura del endpoint y respuesta JSON. |
-| Consulta de planes | Landing y frontend muestran planes, límites y acciones disponibles. | Captura de sección pricing y vista billing. |
-| Persistencia en MySQL | Las operaciones realizadas desde API se reflejan en la base de datos. | Captura de tabla MySQL/Cloud SQL con datos generados. |
-
-> Evidencias pendientes de adjuntar en `report/assets/chapter-05/sprint-04/`: `swagger-auth-test.png`, `swagger-ai-test.png`, `swagger-billing-test.png`, `mysql-sprint-04-validation.png`, `frontend-authenticated-flow.png`.
-
-#### 5.2.4.6. Services Documentation Evidence for Sprint Review
-
-Los servicios del Sprint 4 deben mantenerse bajo el prefijo versionado `/api/v1`, siguiendo el criterio documentado en el Sprint 3. La evidencia principal será Swagger/OpenAPI publicado en Cloud Run y pruebas contra MySQL.
-
-| Grupo de servicios | Método | Endpoint propuesto | Propósito |
-| :--- | :--- | :--- | :--- |
-| Authentication | POST | `/api/v1/auth/sign-in` | Validar credenciales y emitir JWT. |
-| Authentication | POST | `/api/v1/auth/password-reset` | Solicitar recuperación de contraseña. |
-| Users | GET | `/api/v1/organizations/{organizationId}/users` | Listar usuarios por organización. |
-| Users | DELETE | `/api/v1/organizations/{organizationId}/users/{userId}` | Eliminar usuario cuando no existan dependencias bloqueantes. |
-| AI Assistance | POST | `/api/v1/organizations/{organizationId}/incidents/{incidentId}/ai-resolution-plans` | Generar plan asistido para una incidencia. |
-| AI Assistance | POST | `/api/v1/organizations/{organizationId}/incidents/{incidentId}/ai-resolution-plans/{planId}/approvals` | Aprobar plan sugerido con control humano. |
-| AI Assistance | POST | `/api/v1/organizations/{organizationId}/incidents/{incidentId}/ai-resolution-plans/{planId}/rejections` | Rechazar plan sugerido con motivo. |
-| AI Assistance | GET | `/api/v1/organizations/{organizationId}/incidents/{incidentId}/ai-resolution-plans` | Consultar historial de planes. |
-| Reports | POST | `/api/v1/organizations/{organizationId}/reports/{reportId}/ai-summary` | Generar resumen de cumplimiento. |
-| Subscription Plans | GET | `/api/v1/subscription-plans` | Listar planes disponibles. |
-| Billing | GET | `/api/v1/organizations/{organizationId}/subscription` | Consultar plan actual y consumo de límites. |
-| Billing | POST | `/api/v1/organizations/{organizationId}/billing/checkout-sessions` | Crear sesión de checkout externo. |
-| Billing | POST | `/api/v1/organizations/{organizationId}/billing/customer-portal-sessions` | Abrir portal de gestión de facturación. |
-
-Evidencias gráficas que deben agregarse:
-
-| Evidencia | Ruta sugerida | Descripción |
-| :--- | :--- | :--- |
-| Swagger general Sprint 4 | `report/assets/chapter-05/sprint-04/swagger-sprint-04-menu.png` | Menú Swagger con controladores nuevos. |
-| Swagger Authentication | `report/assets/chapter-05/sprint-04/swagger-authentication.png` | Endpoints de autenticación y usuarios protegidos. |
-| Swagger AI Assistance | `report/assets/chapter-05/sprint-04/swagger-ai-assistance.png` | Endpoints de generación, aprobación, rechazo e historial. |
-| Swagger Billing | `report/assets/chapter-05/sprint-04/swagger-billing.png` | Endpoints de planes, suscripción y checkout. |
-| MySQL validation | `report/assets/chapter-05/sprint-04/mysql-cloudsql-validation.png` | Tablas actualizadas luego de ejecutar endpoints. |
-
-#### 5.2.4.7. Software Deployment Evidence for Sprint Review
-
-El Sprint 4 se apoya en la infraestructura ya documentada en el Sprint 3: backend ASP.NET Core containerizado con Docker, publicación en Google Cloud Run, base de datos MySQL en Cloud SQL y documentación Swagger/OpenAPI disponible públicamente.
-
-| Componente | Detalle |
+| Flujo | Contrato de resultado |
 | :--- | :--- |
-| Backend | ASP.NET Core Web API con C# |
-| Frontend | Vue.js desplegado en Vercel |
-| Landing Page | Sitio estático desplegado con GitHub Pages |
-| Base de datos | MySQL / Google Cloud SQL |
-| Documentación API | Swagger/OpenAPI |
-| Cloud | Google Cloud Run |
-| Seguridad | JWT, CORS y variables de entorno para secretos |
-| Integraciones preparadas | Proveedor IA externo y pasarela de pagos externa |
+| Email/password | ColdTrace emite su JWT y Vue envía Bearer en solicitudes protegidas. |
+| Google/Apple | Vue obtiene credenciales del proveedor; ASP.NET Core valida issuer, audience, firma, expiración y nonce; ColdTrace emite su propio JWT. |
+| Incidencia con IA | El backend genera salida estructurada; una persona aprueba o rechaza antes del cierre. |
+| Dashboard y cumplimiento con IA | Las respuestas mantienen una estructura estable y conservan los datos operativos que sustentan la interpretación. |
+| Billing | Vue usa /settings/billing; Checkout, Portal y webhooks permanecen en backend; errores 401, 409, 502 y 503 se distinguen. |
+| Reportes | Vue envía DAILY_LOG, COMPLIANCE o MONTHLY_SUMMARY y conserva todas las métricas devueltas por ASP.NET Core. |
+| Telemetría | El refresco vuelve a consultar lecturas persistidas; el navegador no inventa valores. |
+| Mantenimiento e incidentes | Fechas, estados, acciones correctivas, evidencia técnica y notificaciones mantienen el contrato backend. |
+| Eliminaciones | Usuario, asset, IoT device, gateway y location usan rutas organization-scoped; 204 confirma, 404 identifica ausencia y 409 preserva dependencias. |
 
-Para completar la evidencia final del despliegue se deben adjuntar las siguientes capturas:
+Los builds y pruebas de contrato pertenecen a cada pull request. La prueba pública final debe repetirse después de integrar los PRs y desplegar una nueva revisión; el informe no presenta la revisión pública actual como si ya contuviera esos cambios.
 
-| Evidencia | Ruta sugerida |
+#### 5.2.4.6. Services Documentation Evidence
+
+| Capacidad | Método y endpoint |
 | :--- | :--- |
-| Revisión activa en Cloud Run | `report/assets/chapter-05/sprint-04/cloud-run-revision.png` |
-| Variables de entorno sin exponer secretos | `report/assets/chapter-05/sprint-04/cloud-run-env-vars.png` |
-| Swagger publicado en URL pública | `report/assets/chapter-05/sprint-04/swagger-public-url.png` |
-| Frontend desplegado en Vercel | `report/assets/chapter-05/sprint-04/vercel-frontend-deployment.png` |
-| Landing Page desplegada en GitHub Pages | `report/assets/chapter-05/sprint-04/github-pages-landing.png` |
+| Sign-in | POST /api/v1/authentication/sign-in |
+| Social token exchange | POST /api/v1/authentication/social/{provider}/token-exchange |
+| Social profile preview | POST /api/v1/authentication/social/{provider}/profile-preview |
+| Social organization sign-up | POST /api/v1/authentication/social/{provider}/organization-sign-up |
+| Password reset request | POST /api/v1/password-reset-requests |
+| AI provider status | GET /api/v1/ai-assistance/provider-status |
+| Incident AI plan | POST /api/v1/organizations/{organizationId}/incidents/{incidentId}/ai-resolution-plans |
+| Incident AI history | GET /api/v1/organizations/{organizationId}/incidents/{incidentId}/ai-resolution-plans |
+| Human approval/rejection | POST .../ai-resolution-plans/{planId}/approvals o /rejections |
+| Report AI summary | POST /api/v1/organizations/{organizationId}/reports/{reportId}/ai-summary |
+| Dashboard interpretation | POST /api/v1/organizations/{organizationId}/dashboard/ai-interpretation |
+| Plan catalog | GET /api/v1/subscription-plans |
+| Organization subscription | GET /api/v1/organizations/{organizationId}/subscription |
+| Stripe Checkout | POST /api/v1/organizations/{organizationId}/billing/checkout-sessions |
+| Stripe Customer Portal | POST /api/v1/organizations/{organizationId}/billing/portal-sessions |
+| Stripe webhook | POST /api/v1/billing/stripe/webhooks |
 
-#### 5.2.4.8. Team Collaboration Insights during Sprint
+Todos los contratos usan Swagger/OpenAPI, recursos REST, assemblers y Problem Details localizados de acuerdo con la estructura del backend del curso.
 
-La colaboración del Sprint 4 debe evidenciarse con Linear, commits, pull requests y analíticos de GitHub. La revisión final debe mostrar distribución de tareas, participación de todos los miembros y trazabilidad entre lo planificado y lo implementado.
+#### 5.2.4.7. Alineación con Microsoft AI Ecosystem
 
-| Actividad colaborativa | Evidencia requerida | Herramienta |
-| :--- | :--- | :--- |
-| Planning | Backlog Sprint 4 con tareas estimadas de 4 a 8 horas. | Linear App |
-| Development | Commits y pull requests por feature branch. | GitHub |
-| Execution | Pruebas de endpoints y recorridos frontend. | Swagger, Postman, Vercel |
-| Documentation | Actualización del informe y evidencias por sección. | GitHub, README.md |
-| Deployment | Revisión de Cloud Run, Swagger y base de datos. | Google Cloud, MySQL |
+El material 1ASI0730-net-ai-ecosystem define tres niveles: abstracciones, orquestación y hosting. ColdTrace aplica el nivel necesario para sus casos de uso:
 
-Evidencias pendientes de adjuntar:
+- Microsoft.Extensions.AI e IChatClient desacoplan la lógica de OpenAI u Ollama.
+- La creación del cliente y las opciones se resuelven por inyección de dependencias de ASP.NET Core.
+- Los casos de uso de incidencias, reportes y dashboard son solicitudes deterministas de un paso con salida JSON estructurada; por ello usan ejecución directa con IChatClient.
+- La decisión de aprobar o rechazar una recomendación permanece en servicios de aplicación y dominio, no se delega al modelo.
+- No se introducen Agent Framework, embeddings, memoria persistente ni workflows multi-agente porque el alcance actual no requiere selección autónoma de herramientas ni una cadena durable de pasos.
+- Si en una evolución futura aparece una secuencia larga, reanudable y determinista, corresponde evaluar Workflows; si el modelo debe decidir dinámicamente qué herramienta invocar, corresponde evaluar Agents.
 
-| Evidencia | Ruta sugerida |
+Esta selección sigue la matriz de decisión del material: se usa la abstracción común y el patrón más simple que resuelve el problema sin acoplar el dominio al proveedor.
+
+#### 5.2.4.8. Software Deployment Evidence
+
+| Recurso | Estado al corte |
 | :--- | :--- |
-| Contributors del repositorio backend/frontend | `report/assets/chapter-05/sprint-04/github-contributors.png` |
-| Pulse del repositorio | `report/assets/chapter-05/sprint-04/github-pulse.png` |
-| Linear por estados | `report/assets/chapter-05/sprint-04/linear-statuses.png` |
-| Pull requests cerrados | `report/assets/chapter-05/sprint-04/github-pull-requests.png` |
+| Landing Page | Repositorio oficial y GitHub Pages públicos; PR 10, 11 y 12 aún deben integrarse para publicar los últimos cambios. |
+| Frontend Vue | Vercel público con la línea base integrada; PR 11 a 29 aún deben integrarse y redesplegarse. |
+| Backend ASP.NET Core | Cloud Run, MySQL y Swagger públicos con la línea base; PR 31 a 43 aún deben integrarse y redesplegarse. |
+| Proveedores externos | El contrato de configuración está en PR 43. Faltan valores reales y autorizaciones en Google, Apple, OpenAI, Stripe y Secret Manager. |
+
+Pasos operacionales pendientes antes de afirmar despliegue final:
+
+1. Integrar los pull requests en develop respetando sus dependencias.
+2. Crear o confirmar el cliente web de Google y sus orígenes autorizados.
+3. Configurar el Service ID, return URL, Team ID, Key ID y private key de Apple.
+4. Crear productos, prices, Customer Portal y webhook de Stripe para /api/v1/billing/stripe/webhooks.
+5. Guardar JWT, OpenAI, Google, Apple y Stripe en Google Secret Manager y otorgar secretAccessor al service account.
+6. Redesplegar Cloud Run y Vercel, ejecutar smoke tests y capturar la revisión final.
+
+#### 5.2.4.9. Team Collaboration Insights during Sprint
+
+La trazabilidad del Sprint 4 se obtiene de Linear y GitHub. Los estados se mantienen en los issues; los pull requests muestran la rama, el cambio técnico y su destino develop. No se sustituyen estos datos con nombres de commits o capturas inventadas.
+
+Los videos de navegación, entrevistas, About-the-Product y About-the-Team incluidos en las secciones 5.3, 5.4, 6.2 y Anexo C son los grabados para Aplicaciones Web. Pueden diferir de los videos del curso Open Source porque la evidencia académica y los participantes pertenecen a entregas distintas.
 
 ## 5.3. Validation Interviews
 
@@ -4513,7 +4344,7 @@ Las entrevistas se estructuraron en torno a los siguientes ejes de validación:
 Para cada segmento objetivo se registrarán 3 entrevistas. Cada entrevista debe incluir la información personal solicitada, un screenshot del video, el enlace de Microsoft Stream, el timing donde inicia la entrevista, su duración y un resumen descriptivo de las principales apreciaciones del participante.
 
 **Video consolidado de entrevistas de validación:** [Ver video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQDzxmtGoZMES7vutMFjzCRkAXimh9-_K-h2BVM1FMlXjhY?e=hdDtj8&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)  
-**Nomenclatura del video:** `upc-pre-202610-1asi0729-10177-ICEQvalidation-sprint-3.mp4`
+**Nomenclatura del video:** `upc-pre-202610-1asi0730-10177-coldtrace-validation-sprint-3.mp4`
 
 #### Segmento objetivo 1: Dueños, administradores o encargados de pequeños negocios alimentarios
 
@@ -4668,7 +4499,7 @@ El video puede visualizarse en el siguiente enlace:
 
 4. **Arquitectura y despliegue coherentes con el curso:** El producto se documentó como una solución web distribuida con Landing Page, Frontend Web Application y RESTful API. El backend ASP.NET Core con C# se despliega en Google Cloud Run, se conecta a MySQL y expone documentación Swagger/OpenAPI, lo que permite validar contratos de servicio y consumo desde el frontend.
 
-5. **Mejora continua aplicada:** El informe incorporó correcciones de entregas anteriores, especialmente en entrevistas, backlog, evidencias, despliegue, documentación de servicios, conclusiones y anexos. Además, el Sprint 4 quedó preparado para integrar evidencias finales sin mezclar resultados pendientes con resultados ya validados.
+5. **Mejora continua aplicada:** El Sprint 4 incorporó contratos JWT, IA, OAuth/OIDC y Stripe, además de correcciones de paridad en Vue. La documentación distingue los cambios ya integrados, los pull requests en revisión y las acciones externas de proveedor o despliegue que todavía deben ejecutarse.
 
 6. **Colaboración del equipo:** La distribución por sprints, roles, issues y repositorios permitió organizar el trabajo de investigación, diseño, arquitectura, implementación y documentación. El uso de GitHub, Linear/Trello, Swagger y recursos desplegados fortalece la trazabilidad entre planificación, ejecución y evidencia.
 
@@ -4678,9 +4509,9 @@ El video puede visualizarse en el siguiente enlace:
 
 2. **Realizar la evaluación heurística grupal:** La sección 5.3.3 quedó como plantilla vacía para que el equipo complete problemas reales de usabilidad, severidad, heurística vulnerada y alternativa de solución técnica.
 
-3. **Adjuntar evidencias finales del Sprint 4:** Para cerrar el Sprint 4, se deben agregar capturas de Linear, Swagger, Cloud Run, MySQL, Vercel/GitHub Pages y GitHub Collaboration Insights en las rutas sugeridas dentro de la sección 5.2.4.
+3. **Integrar y redesplegar Sprint 4:** Antes de grabar la evidencia final, se deben integrar los pull requests en develop, provisionar los secretos y proveedores externos, redesplegar Cloud Run/Vercel y repetir los smoke tests contra la revisión resultante.
 
-4. **Consolidar pruebas frontend-backend:** Se recomienda ejecutar pruebas end-to-end sobre endpoints reales desplegados, especialmente autenticación, gestión de activos, lecturas, incidencias, reportes y flujos preparados de asistencia IA o billing.
+4. **Consolidar pruebas frontend-backend:** Se recomienda ejecutar pruebas end-to-end sobre la revisión final desplegada, especialmente autenticación, gestión de activos, lecturas, incidencias, reportes, asistencia IA y billing. Las pruebas locales y de pull request no sustituyen esta validación posterior al merge.
 
 5. **Fortalecer reportes para auditoría sanitaria:** Los reportes deben exportarse en formatos portables como PDF o Excel e incluir rangos aceptables, lecturas fuera de rango, acciones correctivas, fecha, responsable y activo afectado, de modo que puedan servir como evidencia ordenada ante auditorías internas o inspecciones de DIGESA y MINSA.
 
@@ -4688,7 +4519,8 @@ El video puede visualizarse en el siguiente enlace:
 
 7. **Evaluar sensores y proveedores locales:** Para reducir costos de adopción, se recomienda validar compatibilidad con hardware IoT accesible en Perú, como ESP32, Raspberry Pi o sensores comerciales de temperatura/humedad, antes de una implementación productiva.
 
-8. **Completar evidencias de video:** Se requiere agregar imágenes de portada o screenshots de los videos de validación, About-the-Product y About-the-Team como evidencia visual dentro del informe, cumpliendo con las especificaciones del enunciado para artefactos multimedia.
+8. **Preservar evidencia audiovisual del curso:** Los videos de validación, About-the-Product y About-the-Team deben conservar sus enlaces, participantes y nomenclatura de Aplicaciones Web. No corresponde reemplazarlos por grabaciones de Open Source; solo se mantiene el mismo propósito documental.
+
 ## 6.2. Video About-the-Team
 Como parte de la entrega final, cada integrante del equipo ha grabado una breve presentación personal en la que comparte su experiencia durante el desarrollo del proyecto ColdTrace, destacando los conocimientos adquiridos en el curso y cómo estos contribuyeron a su crecimiento profesional y al logro de los objetivos planteados.
 
@@ -4736,6 +4568,8 @@ FAO. (2021). Más de 12 millones de toneladas de alimentos se pierden a lo largo
 
 Gestión. (2025, septiembre 21). Mercado de almacenes en frío en Perú crecerá a US$ 510 millones en 2025: ¿qué lo impulsa? Gestión. https://gestion.pe/economia/empresas/mercado-de-almacenes-en-frio-en-peru-crecera-a-us-510-millones-en-2025-que-lo-impulsa-noticia/
 
+Universidad Peruana de Ciencias Aplicadas. (2026). *Microsoft AI Ecosystem Overview: .NET + IA para aplicaciones empresariales* [Material del curso 1ASI0730 Aplicaciones Web].
+
 ---
 
 # Anexos
@@ -4745,7 +4579,7 @@ Gestión. (2025, septiembre 21). Mercado de almacenes en frío en Perú crecerá
 | Producto | Repositorio |
 | :--- | :--- |
 | Informe del proyecto | https://github.com/AplicacionesWeb-Grupo-2/informe-del-proyecto |
-| Landing Page | https://github.com/mauricio-pajes/landing-page-test |
+| Landing Page | https://github.com/AplicacionesWeb-Grupo-2/landing-page |
 | Frontend Web Application | https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend |
 | Backend RESTful API | https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform |
 | Organización GitHub | https://github.com/AplicacionesWeb-Grupo-2 |
@@ -4755,12 +4589,13 @@ Gestión. (2025, septiembre 21). Mercado de almacenes en frío en Perú crecerá
 | Recurso | URL |
 | :--- | :--- |
 | Frontend Web Application (Vercel) | https://coldtrace-frontend-web.vercel.app/ |
+| Landing Page (GitHub Pages) | https://aplicacionesweb-grupo-2.github.io/landing-page/ |
 | Backend Cloud Run | https://coldtrace-platform-3kti2ylcba-uc.a.run.app |
-| Swagger UI | https://coldtrace-platform-3kti2ylcba-uc.a.run.app/swagger |
+| Swagger UI | https://coldtrace-platform-3kti2ylcba-uc.a.run.app/swagger/index.html |
 | Swagger JSON | https://coldtrace-platform-3kti2ylcba-uc.a.run.app/swagger/v1/swagger.json |
 | JSON Server provisional Sprint 2 | https://coldtrace-app-web-json-server.onrender.com/ |
 
-> Pendiente por confirmar con el equipo: URL pública final de la Landing Page en GitHub Pages, ya que el informe conserva el repositorio de landing pero no una URL pública explícita de producción.
+> Las URLs públicas corresponden a la línea base desplegada. Los cambios de Sprint 4 deben integrarse y redesplegarse antes de atribuirles los nuevos contratos.
 
 ## Anexo C: Videos del proyecto
 
@@ -4772,20 +4607,16 @@ Gestión. (2025, septiembre 21). Mercado de almacenes en frío en Perú crecerá
 | Video About-the-Product | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414054_upc_edu_pe/IQCmZIySYa3pT43sGAmn0UaGAfUnEK7pyE9kdDZWjSlXGX4 |
 | Video About-the-Team | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414054_upc_edu_pe/IQB7LR5aGL-8RoNvXRn22suHAQESryMX97Dk_Kc26UCQ6B0 |
 
-## Anexo D: Evidencias pendientes para Sprint 4
+## Anexo D: Estado de cierre de Sprint 4
 
-| Evidencia | Ruta sugerida |
-| :--- | :--- |
-| Tablero Linear del Sprint 4 | `report/assets/chapter-05/sprint-04/linear-sprint-04-board.png` |
-| Commits o Pull Requests backend | `report/assets/chapter-05/sprint-04/github-backend-commits.png` |
-| Commits o Pull Requests frontend | `report/assets/chapter-05/sprint-04/github-frontend-commits.png` |
-| Swagger Authentication | `report/assets/chapter-05/sprint-04/swagger-authentication.png` |
-| Swagger AI Assistance | `report/assets/chapter-05/sprint-04/swagger-ai-assistance.png` |
-| Swagger Billing | `report/assets/chapter-05/sprint-04/swagger-billing.png` |
-| Validación MySQL/Cloud SQL | `report/assets/chapter-05/sprint-04/mysql-cloudsql-validation.png` |
-| Despliegue Cloud Run | `report/assets/chapter-05/sprint-04/cloud-run-revision.png` |
-| Despliegue Frontend en Vercel | `report/assets/chapter-05/sprint-04/vercel-frontend-deployment.png` |
-| Analíticos de colaboración GitHub | `report/assets/chapter-05/sprint-04/github-contributors.png` |
+| Elemento | Fuente verificable | Estado |
+| :--- | :--- | :--- |
+| Backlog | Linear, equipo Aplicaciones Web | Issues actualizados y relacionados con sus PRs |
+| Backend | Pull requests 31 a 43 de coldtrace-platform | En revisión hacia develop |
+| Frontend | Pull requests 11 a 29 de coldtrace-frontend | En revisión hacia develop |
+| Landing | Pull requests 9 a 12 de landing-page | PR 9 integrado; PR 10 a 12 en revisión |
+| Informe | Linear APPWEB-113 y feature/TS32-final-report-alignment | En revisión |
+| Despliegue final | Cloud Run, Vercel, GitHub Pages y proveedores externos | Pendiente después de merges, secretos y configuración de proveedor |
 
 ## Anexo E: Secciones deliberadamente reservadas para trabajo grupal
 
