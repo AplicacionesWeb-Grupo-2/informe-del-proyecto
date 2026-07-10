@@ -2125,8 +2125,117 @@ Elaboración propia en Trello: https://trello.com/invite/b/6a5017db6b94ad4b44ffd
 
 #### 5.2.4.4. Development Evidence for Sprint Review
 
+Durante el Sprint 4, se realizó la union del backend frontend con el backend además de modificar la landing page para adecuarse a estos nuevos cambios, generando commits en sus respectivos repositorios siguiendo el estándar de commits de la organización.
 
-(FALTA)
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+|:---|:---|:---|:---|:---|:---|
+| coldtrace-platform | main | 1829ea0 | chore: trigger backend verification | Disparo de la verificación automatizada del backend para validar el pipeline al inicio de la iteración. | 2026-06-21 |
+| coldtrace-platform | main | 92fbb31 | Merge pull request #16 from AplicacionesWeb-Grupo-2/develop | Consolidación del estado estable de develop hacia main como línea base del Sprint 4. | 2026-06-21 |
+| coldtrace-platform | feature/TS18-ai-provider-integration | 4023bd0 | feat(TS18): add AI assistance foundation | Implementación de la base de asistencia con IA, estableciendo la estructura para salidas estructuradas. | 2026-07-07 |
+| coldtrace-platform | develop | 603e234 | Merge pull request #17 from AplicacionesWeb-Grupo-2/feature/TS18-ai-foundation-and-structured-output | Integración hacia develop de la fundación de asistencia con IA con salida estructurada. | 2026-07-07 |
+| coldtrace-platform | feature/TS18-ai-foundation-and-structured-output | 48e2aaa | feat(TS18): add AI assistance foundation | Fundación de asistencia con IA sobre la rama de estructura de salida, con contratos base del bounded context. | 2026-07-07 |
+| coldtrace-platform | feature/TS18-ai-assistance-contract-alignment | 8a35336 | feat(TS18): align AI assistance output contracts | Alineación de los contratos de salida de la asistencia con IA para estandarizar las respuestas. | 2026-07-07 |
+| coldtrace-platform | develop | 2859c63 | Merge pull request #18 from AplicacionesWeb-Grupo-2/feature/TS18-ai-assistance-contract-alignment | Integración hacia develop de la alineación de contratos de asistencia con IA. | 2026-07-07 |
+| coldtrace-platform | feature/TS19-resolution-plan-generation-with-real-context | 977e6ea | feat(TS19): add AI resolution plan generation | Implementación de la generación de planes de resolución con IA a partir de contexto operativo real. | 2026-07-07 |
+| coldtrace-platform | develop | 12fa1a0 | Merge pull request #19 from AplicacionesWeb-Grupo-2/feature/TS19-resolution-plan-generation-with-real-context | Integración hacia develop de la generación de planes de resolución con contexto real. | 2026-07-07 |
+| coldtrace-platform | feature/TS20-human-approval-and-backend-resolution | a1a8147 | feat(TS20): approve AI resolution plans | Implementación de la aprobación humana de los planes de resolución generados por IA. | 2026-07-07 |
+| coldtrace-platform | develop | 349c861 | Merge pull request #20 from AplicacionesWeb-Grupo-2/feature/TS20-human-approval-and-backend-resolution | Integración hacia develop del flujo de aprobación humana de planes de IA. | 2026-07-07 |
+| coldtrace-platform | feature/TS21-plan-rejection-and-traceability | 79eea69 | feat(TS21): reject AI resolution plans | Implementación del rechazo de planes de resolución de IA con trazabilidad de la decisión. | 2026-07-07 |
+| coldtrace-platform | develop | 5c4da86 | Merge pull request #21 from AplicacionesWeb-Grupo-2/feature/TS21-plan-rejection-and-traceability | Integración hacia develop del rechazo y trazabilidad de planes de IA. | 2026-07-07 |
+| coldtrace-platform | feature/TS22-ai-plan-persistence-and-history | eb271f9 | feat(TS22): expose AI plan history | Exposición del historial de planes de IA para consulta y auditoría. | 2026-07-07 |
+| coldtrace-platform | develop | f9d06d6 | Merge pull request #22 from AplicacionesWeb-Grupo-2/feature/TS22-ai-plan-persistence-and-history | Integración hacia develop de la persistencia e historial de planes de IA. | 2026-07-07 |
+| coldtrace-platform | feature/TS23-intelligent-report-summary | ea1201c | feat(TS23): generate intelligent report summaries | Generación de resúmenes inteligentes de reportes de cumplimiento a partir de datos agregados. | 2026-07-07 |
+| coldtrace-platform | develop | b603230 | Merge pull request #23 from AplicacionesWeb-Grupo-2/feature/TS23-intelligent-report-summary | Integración hacia develop del resumen inteligente de reportes. | 2026-07-07 |
+| coldtrace-platform | feature/TS24-backend-plan-and-pricing-catalog | 66eab5b | feat(TS24): expose subscription plan catalog | Exposición del catálogo de planes de suscripción y precios del backend. | 2026-07-07 |
+| coldtrace-platform | develop | 445cce1 | Merge pull request #24 from AplicacionesWeb-Grupo-2/feature/TS24-backend-plan-and-pricing-catalog | Integración hacia develop del catálogo de planes y precios. | 2026-07-07 |
+| coldtrace-platform | feature/TS25-organization-subscription-and-entitlements | e73d629 | TS25: add organization subscription entitlements | Implementación de suscripciones de organización y sus entitlements asociados. | 2026-07-07 |
+| coldtrace-platform | develop | b5dfa17 | Merge pull request #25 from AplicacionesWeb-Grupo-2/feature/TS25-organization-subscription-and-entitlements | Integración hacia develop de suscripciones y entitlements de organización. | 2026-07-07 |
+| coldtrace-platform | feature/TS26-stripe-checkout-session-creation | bb03522 | feat(TS26): add Stripe checkout session creation | Implementación de la creación de sesiones de Stripe Checkout para el proceso de pago. | 2026-07-07 |
+| coldtrace-platform | develop | 92fb230 | Merge pull request #26 from AplicacionesWeb-Grupo-2/feature/TS26-stripe-checkout-session-creation | Integración hacia develop de la creación de sesiones de Stripe Checkout. | 2026-07-07 |
+| coldtrace-platform | feature/TS27-stripe-webhooks-and-subscription-sync | b1f979b | feat(TS27): add Stripe webhook subscription sync | Implementación de la sincronización de suscripciones mediante webhooks de Stripe. | 2026-07-07 |
+| coldtrace-platform | develop | 2a08684 | Merge pull request #27 from AplicacionesWeb-Grupo-2/feature/TS27-stripe-webhooks-and-subscription-sync | Integración hacia develop de los webhooks y sincronización de suscripciones de Stripe. | 2026-07-07 |
+| coldtrace-platform | feature/TS28-stripe-customer-portal-sessions | cfd42d9 | feat(TS28): add Stripe customer portal sessions | Implementación de sesiones del Customer Portal de Stripe para autogestión de facturación. | 2026-07-07 |
+| coldtrace-platform | develop | f3d3c30 | Merge pull request #28 from AplicacionesWeb-Grupo-2/feature/TS28-stripe-customer-portal-sessions | Integración hacia develop de las sesiones del Customer Portal de Stripe. | 2026-07-07 |
+| coldtrace-platform | develop | 94b7782 | chore: align localization with Learning Center | Alineación de la localización de mensajes con el estándar del Learning Center de .NET. | 2026-07-07 |
+| coldtrace-platform | develop | 4832974 | Merge pull request #29 from AplicacionesWeb-Grupo-2/feature/localization-learning-center-alignment | Integración hacia develop de la alineación de localización con el Learning Center. | 2026-07-07 |
+| coldtrace-platform | feature/TS29-backend-plan-limit-validation | ff3fcb8 | feat(TS29): enforce backend plan limits | Aplicación de los límites de plan en el backend para restringir recursos según la suscripción. | 2026-07-08 |
+| coldtrace-platform | develop | 32f4f2d | Merge pull request #30 from AplicacionesWeb-Grupo-2/feature/TS29-backend-plan-limit-validation | Integración hacia develop de la validación de límites de plan en el backend. | 2026-07-08 |
+| coldtrace-platform | feature/TS18-ai-provider-integration | 1e3e8d5 | fix(TS18): register concrete AI provider clients | Registro de los clientes concretos de proveedor de IA en el contenedor de dependencias. | 2026-07-09 |
+| coldtrace-platform | feature/TS31-dashboard-ai-interpretation-api | 639dc13 | feat(TS31): add dashboard AI interpretation API | Implementación del API de interpretación con IA para el dashboard. | 2026-07-09 |
+| coldtrace-platform | feature/TS02-authentication-api-with-jwt | 7f322d1 | feat(TS02): implement JWT authentication API | Implementación del API de autenticación con emisión de tokens JWT. | 2026-07-09 |
+| coldtrace-platform | feature/TS03-delete-user | 28a272e | feat(TS03): add organization user deletion | Implementación de la eliminación de usuarios a nivel de organización. | 2026-07-09 |
+| coldtrace-platform | feature/T58-jwt-cors-hardening | 108a03e | feat(T58): harden JWT and CORS | Endurecimiento de la configuración de JWT y CORS para reforzar la seguridad. | 2026-07-09 |
+| coldtrace-platform | feature/TS04-delete-asset | 221d0d7 | feat(TS04): add organization asset deletion | Implementación de la eliminación de activos a nivel de organización. | 2026-07-09 |
+| coldtrace-platform | feature/TS05-delete-iot-device | 206b511 | feat(TS05): add organization IoT device deletion | Implementación de la eliminación de dispositivos IoT a nivel de organización. | 2026-07-09 |
+| coldtrace-platform | feature/TS17-delete-location | e68129a | feat(TS17): add organization location deletion | Implementación de la eliminación de ubicaciones a nivel de organización. | 2026-07-09 |
+| coldtrace-platform | feature/T55-error-handling-i18n | 022e75a | feat(T55): standardize localized API errors | Estandarización de los errores de API con mensajes localizados. | 2026-07-09 |
+| coldtrace-platform | feature/TS13-delete-gateway | 69bf8f6 | feat(TS13): add organization gateway deletion | Implementación de la eliminación de gateways a nivel de organización. | 2026-07-09 |
+| coldtrace-platform | feature/TS11-password-reset-request | e09f910 | feat(TS11): add password reset request API | Implementación del API de solicitud de restablecimiento de contraseña. | 2026-07-09 |
+| coldtrace-platform | feature/TS30-social-identity-validation | 0940741 | feat(TS30): add Google and Apple OIDC authentication | Implementación de la autenticación OIDC con Google y Apple. | 2026-07-09 |
+| coldtrace-platform | feature/T57-external-provider-deployment | 77d216e | feat(T57): configure external provider deployment | Configuración del despliegue con proveedores externos de identidad. | 2026-07-09 |
+| coldtrace-platform | feature/TS33-secure-openapi-dependencies | 04186e3 | chore(TS33): secure OpenAPI dependencies | Aseguramiento de las dependencias de OpenAPI para eliminar vulnerabilidades conocidas. | 2026-07-09 |
+| coldtrace-platform | feature/TS31-dashboard-ai-interpretation-api | 3b81afb | fix(TS31): import accept-language header parser | Incorporación del parser del encabezado accept-language para el API de interpretación. | 2026-07-09 |
+| coldtrace-platform | feature/TS18-ai-provider-integration | ba56fd2 | fix(TS18): register AI tests with dotnet test | Registro de las pruebas de IA en la ejecución de dotnet test. | 2026-07-10 |
+| coldtrace-platform | feature/TS30-social-identity-validation | 24bca43 | fix(TS30): protect linked social identities | Protección de las identidades sociales vinculadas contra accesos indebidos. | 2026-07-10 |
+| coldtrace-platform | feature/TS11-password-reset-request | a1937ba | fix(TS11): protect password reset ownership | Protección de la propiedad de la solicitud de restablecimiento de contraseña. | 2026-07-10 |
+| coldtrace-platform | feature/T58-jwt-cors-hardening | db80ca0 | fix(T58): enforce organization tenant boundaries | Aplicación de los límites de tenant por organización en las operaciones del backend. | 2026-07-10 |
+| coldtrace-platform | feature/T55-error-handling-i18n | b2b3418 | fix(T55): preserve feature problem details | Conservación de los problem details por feature para respuestas de error consistentes. | 2026-07-10 |
+| coldtrace-platform | feature/TS35-secure-cloud-runtime | 5b674b4 | feat(TS35): harden Google Cloud runtime | Endurecimiento del runtime de Google Cloud para la ejecución segura del backend. | 2026-07-10 |
+| coldtrace-platform | feature/TS30-social-identity-validation | 0956708 | fix(TS30): preserve incremental social identity migrations | Preservación de las migraciones incrementales de identidad social. | 2026-07-10 |
+| coldtrace-platform | feature/TS11-password-reset-request | ce3fa1c | fix(TS11): preserve incremental password reset migrations | Preservación de las migraciones incrementales del restablecimiento de contraseña. | 2026-07-10 |
+| coldtrace-platform | feature/TS35-secure-cloud-runtime | a4f7dc1 | fix(TS35): use current Cloud SQL SSL mode | Uso del modo SSL vigente de Cloud SQL en la conexión del backend. | 2026-07-10 |
+| coldtrace-platform | develop | 91691fb | Merge pull request #43 from AplicacionesWeb-Grupo-2/feature/T57-external-provider-deployment | Integración hacia develop del despliegue con proveedores externos. | 2026-07-10 |
+| coldtrace-platform | develop | 44d5571 | Merge pull request #45 from AplicacionesWeb-Grupo-2/feature/TS35-secure-cloud-runtime | Integración hacia develop del endurecimiento del runtime de Google Cloud. | 2026-07-10 |
+| coldtrace-frontend | main | 96aa126 | chore: trigger frontend production deployment | Disparo del despliegue de producción del frontend para validar el entorno desplegado. | 2026-06-21 |
+| coldtrace-frontend | main | f33347f | fix: handle duplicate incident escalation conflicts | Manejo de conflictos por escalamiento duplicado de incidentes. | 2026-06-22 |
+| coldtrace-frontend | main | 920558d | fix: preserve gateway when updating operational parameters | Conservación del gateway asociado al actualizar parámetros operativos de un activo. | 2026-06-22 |
+| coldtrace-frontend | main | 7c04d76 | fix: send future timestamp for preventive schedules | Envío de marcas de tiempo futuras válidas al programar mantenimientos preventivos. | 2026-06-22 |
+| coldtrace-frontend | main | 3b46443 | fix: align frontend payloads with backend validation | Alineación de los payloads del cliente con las reglas de validación del backend. | 2026-06-22 |
+| coldtrace-frontend | feature/US054-manage-billing-upgrades | 00f168d | feat(US054): add billing management page | Implementación de la página de gestión de facturación con planes y acciones de actualización. | 2026-07-08 |
+| coldtrace-frontend | develop | 055ce5b | Merge pull request #10 from AplicacionesWeb-Grupo-2/feature/US054-manage-billing-upgrades | Integración hacia develop de la gestión de facturación en la aplicación. | 2026-07-08 |
+| coldtrace-frontend | feature/US056-dashboard-ai-interpretation-ui | 3eaa519 | US056 - Open dashboard AI interpretation | Habilitación de la interpretación con IA en el dashboard. | 2026-07-08 |
+| coldtrace-frontend | feature/US053-incident-ai-guidance-panel | e4ad33c | US053 - Use AI Guidance panel in incidents | Incorporación del panel de AI Guidance en la vista de incidentes. | 2026-07-08 |
+| coldtrace-frontend | feature/US057-google-apple-sign-in-ui | 4d13580 | US057 - Start Google/Apple sign-in from the UI | Habilitación del inicio de sesión con Google y Apple desde la interfaz. | 2026-07-08 |
+| coldtrace-frontend | feature/US058-backend-jwt-session | cd4a110 | US058 - Sign in with backend JWT session | Consumo de la sesión JWT emitida por el backend para proteger rutas. | 2026-07-08 |
+| coldtrace-frontend | feature/US044-intelligent-compliance-summary | 506939f | US044 - Generate intelligent compliance summary | Generación del resumen inteligente de cumplimiento desde el frontend. | 2026-07-08 |
+| coldtrace-frontend | feature/US044-intelligent-compliance-summary | 5b74d74 | fix(US044): align AI summary recovery states | Alineación de los estados de recuperación y error del resumen de IA. | 2026-07-09 |
+| coldtrace-frontend | feature/US056-dashboard-ai-interpretation-ui | c284a17 | fix(US056): preserve dashboard assistant empty state | Preservación del estado vacío del asistente del dashboard cuando no hay datos. | 2026-07-09 |
+| coldtrace-frontend | feature/US053-incident-ai-guidance-panel | 09a63c3 | fix(US053): preserve AI guidance history access | Conservación del acceso al historial de recomendaciones de AI Guidance. | 2026-07-09 |
+| coldtrace-frontend | feature/US058-backend-jwt-session | 443c969 | fix(US058): reject malformed persisted sessions | Rechazo de sesiones persistidas malformadas para reforzar la seguridad. | 2026-07-09 |
+| coldtrace-frontend | feature/US057-google-apple-sign-in-ui | db70bbd | fix(US057): settle cancelled Google sign-in | Manejo correcto del flujo cuando el usuario cancela el inicio de sesión con Google. | 2026-07-09 |
+| coldtrace-frontend | feature/US060-backend-owned-telemetry | 7d8d678 | fix(US060): keep telemetry backend-owned | Aseguramiento de que la telemetría sea propiedad del backend. | 2026-07-09 |
+| coldtrace-frontend | feature/US028-complete-incident-lifecycle | eedca66 | fix(US028): preserve incident closure lifecycle | Preservación del ciclo de vida de cierre de incidentes. | 2026-07-09 |
+| coldtrace-frontend | feature/US058-backend-jwt-session | eddd981 | merge(US058): integrate social sign-in with JWT session | Integración del inicio de sesión social con la sesión JWT del backend. | 2026-07-09 |
+| coldtrace-frontend | feature/US011-create-user-password | f580ead | fix(US011): require initial user password | Exigencia de contraseña inicial obligatoria al crear un usuario. | 2026-07-09 |
+| coldtrace-frontend | feature/US037-maintenance-schedule-contract | 3038d86 | fix(US037): align maintenance schedule payload | Alineación del payload de programación de mantenimiento con el contrato del backend. | 2026-07-09 |
+| coldtrace-frontend | feature/US038-technical-service-closure-contract | dc7bb48 | fix(US038): preserve technical service closure evidence | Conservación de la evidencia de cierre de solicitudes de servicio técnico. | 2026-07-09 |
+| coldtrace-frontend | feature/US010-password-reset-request-flow | 17eeb5d | fix(US010): connect password recovery request flow | Conexión del flujo de solicitud de recuperación de contraseña con el backend. | 2026-07-09 |
+| coldtrace-frontend | feature/US058-backend-jwt-session | c5ca05f | fix(US058): keep password recovery public | Mantenimiento del endpoint de recuperación de contraseña como ruta pública. | 2026-07-09 |
+| coldtrace-frontend | feature/TS10-report-contract-parity | d4e39be | fix(TS10): align report API contract | Alineación del contrato del API de reportes entre cliente y backend. | 2026-07-09 |
+| coldtrace-frontend | feature/US024-incident-workspace-parity | b3c78b9 | feat(US024): align incident workspace | Alineación del espacio de trabajo de incidentes con el contrato del backend. | 2026-07-09 |
+| coldtrace-frontend | feature/US039-responsive-dashboard-navigation | a8b3159 | feat(US039): add responsive dashboard navigation | Implementación de navegación responsiva del dashboard para distintos tamaños de pantalla. | 2026-07-09 |
+| coldtrace-frontend | feature/US054-billing-contract-parity | 8840a9e | fix(US054): align billing routes and errors | Alineación de las rutas y el manejo de errores de facturación con el backend. | 2026-07-09 |
+| coldtrace-frontend | feature/TS03-user-deletion-client | 856cacf | feat(TS03): connect user deletion endpoint | Conexión del endpoint de eliminación de usuarios desde el cliente. | 2026-07-09 |
+| coldtrace-frontend | feature/TS04-asset-deletion-client | 30babfb | feat(TS04): connect asset deletion endpoint | Conexión del endpoint de eliminación de activos desde el cliente. | 2026-07-09 |
+| coldtrace-frontend | feature/TS13-gateway-deletion-client | 4c37a30 | feat(TS13): connect gateway deletion endpoint | Conexión del endpoint de eliminación de gateways desde el cliente. | 2026-07-09 |
+| coldtrace-frontend | feature/TS05-iot-device-deletion-client | 8658888 | feat(TS05): connect IoT device deletion endpoint | Conexión del endpoint de eliminación de dispositivos IoT desde el cliente. | 2026-07-09 |
+| coldtrace-frontend | feature/TS34-secure-vue-dependencies | 0625724 | chore(TS34): secure Vue client dependencies | Aseguramiento de las dependencias del cliente Vue para eliminar advisories. | 2026-07-09 |
+| coldtrace-frontend | feature/TS34-secure-vue-dependencies | fa24687 | fix(TS34): remove remaining dev advisory | Eliminación del advisory de seguridad restante en dependencias de desarrollo. | 2026-07-10 |
+| coldtrace-frontend | feature/US057-google-apple-sign-in-ui | e07d5d1 | fix(US057): isolate App Web provider configuration | Aislamiento de la configuración de proveedores de identidad para la App Web. | 2026-07-10 |
+| coldtrace-frontend | feature/US057-google-apple-sign-in-ui | d1da162 | fix(US057): load provider IDs from Vue env directory | Carga de los identificadores de proveedor desde el directorio de entorno de Vue. | 2026-07-10 |
+| coldtrace-frontend | feature/US056-dashboard-ai-interpretation-ui | 72bcf7b | fix(US056): contain modal keyboard focus | Contención del foco de teclado dentro del modal para mejorar accesibilidad. | 2026-07-10 |
+| coldtrace-frontend | feature/TS34-secure-vue-dependencies | be7f1f2 | ci(TS34): verify frontend pull requests | Configuración de la verificación de pull requests del frontend en integración continua. | 2026-07-10 |
+| coldtrace-frontend | feature/US054-billing-contract-parity | bc0746b | fix(US054): complete billing comparison parity | Completación de la paridad de comparación de planes de facturación. | 2026-07-10 |
+| coldtrace-frontend | feature/TS34-secure-vue-dependencies | 000af34 | fix(TS34): make lockfile reproducible on Linux | Reproducibilidad del lockfile de dependencias en entornos Linux. | 2026-07-10 |
+| coldtrace-frontend | feature/TS34-secure-vue-dependencies | 8b7bf26 | chore(TS34): configure Google OAuth client | Configuración del cliente OAuth de Google para el inicio de sesión social. | 2026-07-10 |
+| coldtrace-frontend | feature/TS34-secure-vue-dependencies | a9d0800 | chore(TS34): configure Apple OAuth client | Configuración del cliente OAuth de Apple para el inicio de sesión social. | 2026-07-10 |
+| landing-page | main | 397e576 | chore: Add the videos project and update the landing-page | Incorporación del proyecto de videos y actualización de la landing page. | 2026-06-30 |
+| landing-page | feature/US055-compare-plans-landing-page | 3f62b8d | feat(US055): add landing plan comparison | Implementación de la comparación de planes en la landing page. | 2026-07-08 |
+| landing-page | develop | 49dc7c1 | Merge pull request #9 from AplicacionesWeb-Grupo-2/feature/US055-compare-plans-landing-page | Integración hacia develop de la comparación de planes en la landing. | 2026-07-08 |
+| landing-page | feature/US004-access-registration-and-terms | 9f56dca | feat(US004): connect landing access and terms | Conexión de los accesos de registro y términos desde la landing. | 2026-07-09 |
+| landing-page | feature/US006-mobile-responsive-landing | 29464b2 | fix(US006): align responsive landing experience | Alineación de la experiencia responsiva de la landing en dispositivos móviles. | 2026-07-09 |
+| landing-page | feature/US059-product-team-videos | 904e918 | feat(US059): add product and team videos | Incorporación de los videos de producto y equipo en la landing. | 2026-07-09 |
+| landing-page | main | 38fb247 | feat: Update links to frontend services & screeshots | Actualización de los enlaces a los servicios del frontend y capturas de la landing. | 2026-07-09 |
 
 
 <br>
