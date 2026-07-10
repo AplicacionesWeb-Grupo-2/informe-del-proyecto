@@ -103,3 +103,7 @@
 
 ## Anexos
 - [Anexos.](#anexos)
+    - [Anexo A. Repositorios del proyecto.](#anexo-a-repositorios-del-proyecto)
+    - [Anexo B. Recursos desplegados.](#anexo-b-recursos-desplegados)
+    - [Anexo C. Videos del proyecto.](#anexo-c-videos-del-proyecto)
+    - [Anexo D. Videos de exposiciones.](#anexo-d-videos-de-exposiciones)

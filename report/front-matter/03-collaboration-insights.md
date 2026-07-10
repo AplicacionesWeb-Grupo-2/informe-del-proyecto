@@ -50,14 +50,18 @@ La colaboración se distribuyó por áreas técnicas de la API: Mauricio Pajés 
 
 El equipo consolidó la arquitectura general del sistema mediante endpoints RESTful que cubrieron los bounded contexts definidos en el diseño del dominio. La documentación Swagger quedó publicada como fuente técnica de referencia, y las pruebas con Postman validaron la funcionalidad de los endpoints principales.
 
-La captura específica de GitHub Analytics correspondiente a AV2 está **pendiente de incorporación**; debe obtenerse del intervalo real de la entrega antes de presentarla como evidencia.
+Las siguientes capturas conservan la evidencia disponible de actividad y contribuciones del repositorio durante AV2.
+
+<p align="center"><img src="../assets/common/collaboration-insights/av2-pulse-overview.png" alt="GitHub Pulse de AV2" width="850"></p>
+
+<p align="center"><img src="../assets/common/collaboration-insights/av2-contributors-commits.png" alt="Contribuciones de AV2" width="850"></p>
 
 ## TB2
 
-Durante la entrega TB2, correspondiente al Sprint 4, el equipo preparó en ramas y pull requests cambios de autenticación JWT, asistencia operativa con IA, autenticación Google/Apple, planes SaaS y facturación Stripe. En paralelo, se trabajó en contratos entre Vue y ASP.NET Core para reportes, incidencias, mantenimiento, telemetría y eliminaciones seguras. El trabajo se organizó mediante issues de Linear, ramas por historia y pull requests dirigidos a develop; estos cambios no se presentan como integrados ni desplegados.
+Durante la entrega TB2, correspondiente al Sprint 4, el equipo integró autenticación JWT, asistencia operativa con IA, autenticación Google/Apple, planes SaaS y facturación Stripe. En paralelo, se alinearon los contratos entre Vue y ASP.NET Core para reportes, incidencias, mantenimiento, telemetría y eliminaciones seguras. El trabajo se organizó mediante issues de Linear, ramas por historia y pull requests dirigidos a `develop`, y posteriormente se consolidó en las versiones desplegadas.
 
 La solución de Aplicaciones Web usa Vue 3 y PrimeVue en el frontend y un monolito modular ASP.NET Core con bounded contexts, servicios de aplicación, repositorios, assemblers, EF Core y MySQL en el backend. La evidencia de esta entrega se limita a los repositorios, issues y pull requests propios del curso.
 
-Las funciones de Google, Apple, OpenAI y Stripe requieren configuración externa además del código: clientes autorizados, redirect URIs, catálogo y webhook de Stripe, secretos en Google Secret Manager y un nuevo despliegue. Por esta razón, el informe distingue entre trabajo preparado en pull requests, recursos actualmente desplegados y pasos operacionales todavía pendientes.
+Las funciones de Google, Apple, OpenAI y Stripe requieren configuración externa además del código: clientes autorizados, redirect URIs, catálogo y webhook de Stripe, y secretos administrados fuera del repositorio. Por esta razón, la disponibilidad de estas funciones depende tanto de la versión desplegada como de que las credenciales y servicios externos permanezcan vigentes.
 
 La captura específica de GitHub Analytics correspondiente a TB2 está **pendiente de incorporación**; debe obtenerse del intervalo real de la entrega antes de presentarla como evidencia.

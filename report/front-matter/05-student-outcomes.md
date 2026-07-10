@@ -43,7 +43,7 @@ Trabaja en equipo para proporcionar liderazgo en forma conjunta
 <strong>Santiago Enrique Vargas Alarcón:</strong> Lideró la API de assets y configuración de activos, desarrollando servicios para la administración de activos refrigerados, configuración de parámetros operativos y vinculación con sensores IoT.<br><br>
 
 <strong>----------TB2----------</strong><br>
-<strong>Mauricio Pajés:</strong> Lidera el pull request de autenticación JWT del backend. <strong>Leonardo Delgado:</strong> Lidera la preparación del servicio de asistencia operativa basada en IA. <strong>Jean Pool Arias:</strong> Lidera el pull request de integración del frontend con la sesión JWT. <strong>Eduardo Velásquez:</strong> Lidera la preparación de planes y facturación SaaS. <strong>Santiago Enrique Vargas Alarcón:</strong> Lidera la documentación técnica y el plan de redespliegue. Estos aportes permanecen en revisión y no acreditan un despliegue final.
+<strong>Mauricio Pajés:</strong> Lideró la autenticación JWT y la coordinación de integración. <strong>Leonardo Delgado:</strong> lideró el servicio de asistencia operativa basada en IA. <strong>Jean Pool Arias:</strong> lideró la integración del frontend con la sesión JWT. <strong>Eduardo Velásquez:</strong> lideró los planes y la facturación SaaS. <strong>Santiago Enrique Vargas Alarcón:</strong> lideró la documentación técnica y el redespliegue. Los aportes se integraron mediante pull requests hacia `develop` y quedaron consolidados en los productos desplegados.
 </td>
 <td>
 <strong>----------AV1----------</strong><br>
@@ -56,7 +56,7 @@ El liderazgo se trasladó a módulos funcionales de la frontend web application.
 El liderazgo conjunto se evidenció en la construcción del backend real y su despliegue en Google Cloud Run. La distribución por APIs permitió que cada integrante condujera un área técnica específica — fundación de la API, dispositivos IoT, assets, mantenimiento, incidentes y reportes — mientras el equipo avanzaba de forma coordinada hacia una solución integrada con persistencia en Cloud SQL, documentación Swagger y entorno cloud. El liderazgo se sostuvo mediante la creación y planificación de issues, la distribución de responsabilidades y la integración continua de ramas.
 <br><br>
 <strong>----------TB2----------</strong><br>
-El equipo preparó pull requests para identidad segura (JWT), asistencia operativa basada en IA y capacidades SaaS de suscripción. El liderazgo se mantuvo distribuido: cada integrante condujo un área específica mientras colaboraba en las demás, trabajando de manera coordinada entre frontend, backend y documentación. El informe distingue esta evidencia de desarrollo de la integración, configuración externa y redespliegue que continúan pendientes.
+El equipo completó e integró identidad segura (JWT), asistencia operativa basada en IA y capacidades SaaS de suscripción. El liderazgo se mantuvo distribuido: cada integrante condujo un área específica mientras colaboraba en las demás, trabajando de manera coordinada entre frontend, backend y documentación hasta el despliegue consolidado.
 </td>
 </tr>
 </table>
@@ -109,7 +109,7 @@ El equipo consolidó la planificación por bounded contexts y mantuvo colaboraci
 La colaboración se reflejó en la planificación por APIs, integración con Cloud Run y Cloud SQL, actualización del informe y validación de endpoints con Postman y Swagger. El equipo estableció metas técnicas claras, planificó tareas por issue en GitHub y distribuyó responsabilidades que permitieron completar el backend oficial en un solo sprint. La comunicación se mantuvo mediante reuniones virtuales, Pull Requests revisados y coordinación constante entre frontend y backend, demostrando un entorno colaborativo inclusivo donde cada miembro aportó desde su área de expertise.
 <br><br>
 <strong>----------TB2----------</strong><br>
-El equipo estableció metas finales de implementación, revisión cruzada y corrección documental. Linear concentró el backlog y GitHub registró una rama y un pull request por historia técnica o funcional. El informe conserva como pendientes únicamente las actividades que requieren evidencia humana o cuentas externas, como entrevistas faltantes, evaluación heurística, credenciales de proveedores y redespliegue final; no las presenta como resultados ejecutados. Esta separación permite evaluar con claridad qué está integrado, qué está en revisión y qué depende de una acción operacional del equipo.
+El equipo estableció metas finales de implementación, revisión cruzada y corrección documental. Linear concentró el backlog y GitHub registró una rama y un pull request por historia técnica o funcional. Los cambios se integraron en `develop`, se consolidaron en los productos desplegados y se documentaron en el Sprint 4. El informe mantiene como pendientes solo las evidencias humanas que no se encontraron, sin presentarlas como resultados ejecutados.
 </td>
 </tr>
 </table>

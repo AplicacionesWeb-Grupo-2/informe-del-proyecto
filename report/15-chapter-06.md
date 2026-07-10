@@ -10,7 +10,7 @@
 
 4. **Arquitectura y despliegue coherentes con el curso:** El producto se documentó como una solución web distribuida con Landing Page, Frontend Web Application y RESTful API. El backend ASP.NET Core con C# se despliega en Google Cloud Run, se conecta a MySQL y expone documentación Swagger/OpenAPI, lo que permite validar contratos de servicio y consumo desde el frontend.
 
-5. **Mejora continua en preparación:** El Sprint 4 preparó en pull requests contratos JWT, IA, OAuth/OIDC y Stripe, además de correcciones de alineación en Vue. La documentación los mantiene como trabajo en revisión y separa las acciones externas de proveedor y despliegue que todavía deben ejecutarse.
+5. **Mejora continua integrada:** El Sprint 4 integró contratos JWT, IA, OAuth/OIDC y Stripe, además de la alineación de consumo y experiencia en Vue. La solución desplegada conserva los secretos fuera del código y separa la disponibilidad del software de la disponibilidad operativa de cada proveedor externo.
 
 6. **Colaboración del equipo:** La distribución por sprints, roles, issues y repositorios permitió organizar el trabajo de investigación, diseño, arquitectura, implementación y documentación. El uso de GitHub, Linear/Trello, Swagger y recursos desplegados fortalece la trazabilidad entre planificación, ejecución y evidencia.
 
@@ -18,11 +18,11 @@
 
 1. **Completar validaciones pendientes con usuarios reales:** Se recomienda terminar las entrevistas faltantes del segmento de responsables de operaciones, calidad o logística, registrando screenshots, enlaces, duración, timing y resumen por participante.
 
-2. **Realizar la evaluación heurística grupal:** La sección 5.3.3 quedó como plantilla vacía para que el equipo complete problemas reales de usabilidad, severidad, heurística vulnerada y alternativa de solución técnica.
+2. **Atender los hallazgos heurísticos:** Se recomienda priorizar el bloqueo al reconocer incidentes y después reforzar la recuperación ante fallos intermitentes en notificaciones y creación de activos.
 
-3. **Integrar y redesplegar Sprint 4:** Antes de grabar la evidencia final, se deben integrar los pull requests en develop, provisionar los secretos y proveedores externos, redesplegar Cloud Run/Vercel y repetir los smoke tests contra la revisión resultante.
+3. **Mantener control operacional de integraciones:** Se deben rotar y supervisar secretos, redirect URIs, webhooks y límites de proveedor, y repetir la validación funcional cuando cambie una credencial o configuración externa.
 
-4. **Consolidar pruebas frontend-backend:** Se recomienda ejecutar pruebas end-to-end sobre la revisión final desplegada, especialmente autenticación, gestión de activos, lecturas, incidencias, reportes, asistencia IA y billing. Las pruebas locales y de pull request no sustituyen esta validación posterior al merge.
+4. **Consolidar validación frontend-backend:** Se recomienda conservar una revisión periódica de los recorridos desplegados de autenticación, gestión de activos, lecturas, incidencias, reportes, asistencia IA y billing después de cada cambio de contrato.
 
 5. **Fortalecer reportes para auditoría sanitaria:** Los reportes deben exportarse en formatos portables como PDF o Excel e incluir rangos aceptables, lecturas fuera de rango, acciones correctivas, fecha, responsable y activo afectado, de modo que puedan servir como evidencia ordenada ante auditorías internas o inspecciones de DIGESA y MINSA.
 
