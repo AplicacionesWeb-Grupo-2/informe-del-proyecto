@@ -103,7 +103,7 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 
 |**Información del entrevistado**|**Contexto tecnológico**|
 |---|---|
-|**Nombre completo:** Jean Pool Coaguila|**Dispositivo de mayor frecuencia:** [pendiente]|
+|**Nombre completo:** Jean Pool Coaguila|**Dispositivo de mayor frecuencia:** No registrado en la entrevista.|
 |**Edad:** 29|**Sistema operativo/browser:** MacOs / Google|
 |**Definición profesional / cargo:** Administrador de Minimarket|**Canales digitales de comunicación:** Facebook|
 |**Residencia / ubicación:** Lima Norte|**Software especializado utilizado:** Ninguno|
@@ -171,8 +171,8 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 
 | **Información del entrevistado**                                        | **Contexto tecnológico**                                            |
 | ----------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| **Nombre completo:** Jesús Alberto Allende Medina                       | **Dispositivo de mayor frecuencia:** [pendiente]                    |
-| **Edad:** 22                                                            | **Sistema operativo/browser:** [pendiente]                          |
+| **Nombre completo:** Jesús Alberto Allende Medina                       | **Dispositivo de mayor frecuencia:** No registrado en la entrevista. |
+| **Edad:** 22                                                            | **Sistema operativo/browser:** No registrado en la entrevista.      |
 | **Definición profesional / cargo:** Estudiante de Ingeniería Industrial | **Canales digitales de comunicación:** WhatsApp / Llamadas directas |
 | **Residencia / ubicación:** Los Olivos, Lima                            | **Software especializado utilizado:** Excel                         |
 
@@ -193,10 +193,10 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 
 |**Información del entrevistado**|**Contexto tecnológico**|
 |---|---|
-|**Nombre completo:** Isaac Diaz|**Dispositivo de mayor frecuencia:** [pendiente]|
-|**Edad:** 21|**Sistema operativo/browser:** [pendiente]|
-|**Definición profesional / cargo:** Estudiante de Ingeniería Industrial|**Canales digitales de comunicación:** [pendiente]|
-|**Residencia / ubicación:** Los Olivos, Lima|**Software especializado utilizado:** [pendiente]|
+|**Nombre completo:** Isaac Diaz|**Dispositivo de mayor frecuencia:** No registrado en la entrevista.|
+|**Edad:** 21|**Sistema operativo/browser:** No registrado en la entrevista.|
+|**Definición profesional / cargo:** Estudiante de Ingeniería Industrial|**Canales digitales de comunicación:** No registrados en la entrevista.|
+|**Residencia / ubicación:** Los Olivos, Lima|**Software especializado utilizado:** No registrado en la entrevista.|
 
 - **Duración:** 3:50
 - **URL de grabación:** [https://1drv.ms/v/c/470edfbbf4f38077/IQCRg4LcvetaRLbLebLPf0QWAR3HOtvvikDBCQaQ68PDMBs?e=tNMWES](https://1drv.ms/v/c/470edfbbf4f38077/IQCRg4LcvetaRLbLebLPf0QWAR3HOtvvikDBCQaQ68PDMBs?e=tNMWES)
@@ -215,10 +215,10 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 
 |**Información del entrevistado**|**Contexto tecnológico**|
 |---|---|
-|**Nombre completo:** Elverth Vasquez Villalobos|**Dispositivo de mayor frecuencia:** [pendiente]|
-|**Edad:** 23|**Sistema operativo/browser:** [pendiente]|
+|**Nombre completo:** Elverth Vasquez Villalobos|**Dispositivo de mayor frecuencia:** No registrado en la entrevista.|
+|**Edad:** 23|**Sistema operativo/browser:** No registrado en la entrevista.|
 |**Definición profesional / cargo:** Estudiante de Ingeniería Industrial|**Canales digitales de comunicación:** WhatsApp|
-|**Residencia / ubicación:** San Martin de Porres, Lima|**Software especializado utilizado:** [pendiente]|
+|**Residencia / ubicación:** San Martin de Porres, Lima|**Software especializado utilizado:** No registrado en la entrevista.|
 
 - **Duración:** 3:53
 - **URL de grabación:** [https://1drv.ms/v/c/470edfbbf4f38077/IQCRg4LcvetaRLbLebLPf0QWAR3HOtvvikDBCQaQ68PDMBs?e=tNMWES](https://1drv.ms/v/c/470edfbbf4f38077/IQCRg4LcvetaRLbLebLPf0QWAR3HOtvvikDBCQaQ68PDMBs?e=tNMWES)
