@@ -1665,11 +1665,7 @@ El Sprint Backlog se gestionó mediante Linear App. A continuación se detallan 
 ![Backlog en Linear](assets/chapter-05/sprint-03/linar-backlog.png)
 Elaboración propia en Linear: [https://linear.app/coldtrace/team/APPWEB/all](https://linear.app/coldtrace/team/APPWEB/all)
 
-*[Imagen: Captura de pantalla del tablero de Linear App mostrando el Sprint Backlog del Sprint 3, con las tareas organizadas en columnas de To Do, In Progress, In Review y Done]*
-
-
-
-> Descripción: Tablero visual que muestra las diferentes etapas de las tareas del sprint.
+*Figura 5.2.3.3.1. Sprint Backlog 3 gestionado en Linear, organizado por estado de ejecución.*
 
 | User Story Id | User Story Title | Work-item Id | Title | Description | Estimation | Assigned To | Status |
 | :---: | :--- | :---: | :--- | :--- | :---: | :--- | :---: |
@@ -1751,23 +1747,21 @@ Al término del Sprint 3, se logró disponer de una infraestructura backend en e
 ![swagger](assets/chapter-05/sprint-03/swagger-reports-roles-sensor-technical-users.png)
 
 
-*[Imagen: Captura de pantalla de la interfaz de Swagger UI (o documento OpenAPI) mostrando todos los endpoints RESTful agrupados por controladores]*
-> Descripción: Documentación interactiva de la API oficial generada por Swagger, lista para ser consumida por el frontend.
+*Figura 5.2.3.5.1. Documentación interactiva de la API oficial en Swagger, agrupada por controladores.*
 
 <br>
 
 
 ![swagger](assets/chapter-05/sprint-03/getPostman.png)
 
-*[Imagen: Captura de pantalla de Postman ejecutando una petición GET a `/api/v1/organizations` y recibiendo un objeto JSON estructurado]*
+*Figura 5.2.3.5.2. Ejecución de una petición de consulta desde Postman y respuesta JSON de la API.*
 
 
 <br>
 
 ![swagger](assets/chapter-05/sprint-03/database.png)
 
-*[Imagen: Captura de pantalla de un explorador de base de datos mostrando las tablas relacionales creadas a partir de las migraciones]*
-> Descripción: Evidencia de la creación del esquema de la base de datos relacional y el correcto mapeo de las entidades del dominio.
+*Figura 5.2.3.5.3. Esquema relacional creado por las migraciones y mapeo de entidades del dominio.*
 
 <br>
 A continuación se presenta el video de navegación del producto correspondiente al Sprint 3, que consolida la demostración del flujo de la RESTful API desplegada, priorizando los user flows relacionados con el core business de ColdTrace
@@ -2434,7 +2428,7 @@ Para cada segmento objetivo se registrarán 3 entrevistas. Cada entrevista debe 
 
 #### Segmento objetivo 1: Dueños, administradores o encargados de pequeños negocios alimentarios
 
-| **Entrevista Nro. 1** |  |
+| **Entrevista Nro. 1** | **Detalle** |
 | --- | --- |
 | Screenshot | <img src="assets/chapter-05/validation/IsaacDiazInterview.png" alt="Screenshot de entrevista de validación - Isaac Diaz" width="600"> |
 | Nombres y apellidos | Isaac Diaz |
@@ -2446,7 +2440,7 @@ Para cada segmento objetivo se registrarán 3 entrevistas. Cada entrevista debe 
 | Duración | 12:28 |
 | Resumen | Isaac evaluó ColdTrace desde el rol de encargado de un pequeño negocio familiar que comercializa productos frios como carnes. Durante la revisión de la Landing Page, comprendió que la propuesta se enfoca en monitorear equipos refrigerados, recibir alertas y consultar historial, relacionándolo con su necesidad de detectar fallas antes de que la mercadería esté en riesgo. En la Web Application, valoró especialmente el dashboard, la revisión de activos, las alertas y el historial diario, pues estos elementos reemplazan parcialmente el control manual basado en revisar indicadores de refrigeradoras o inspeccionar visualmente los productos. Señaló que la solución sería útil si mantiene una experiencia simple, accesible desde cualquier dispositivo y con notificaciones claras. |
 
-| **Entrevista Nro. 2** | |
+| **Entrevista Nro. 2** | **Detalle** |
 | --- | --- |
 | Screenshot | <img src="assets/chapter-05/validation/GabrielRamirezInterview.png" alt="Screenshot de entrevista de validación - Gabriel Ramirez" width="600"> |
 | Nombres y apellidos | Gabriel Ramirez Gutiérrez |
@@ -2458,7 +2452,7 @@ Para cada segmento objetivo se registrarán 3 entrevistas. Cada entrevista debe 
 | Duración | 08:07 |
 | Resumen | Gabriel evaluó ColdTrace desde su rol como trabajador de una bodega en San Miguel, donde gestiona áreas de carnicería y verdulería. Durante la presentación, destacó que la Landing Page es clara y comunica eficazmente la propuesta de valor. Valoró positivamente la automatización del monitoreo de temperatura, señalando que le permitiría gestionar su inventario de forma más rápida y precisa desde un dispositivo, eliminando el control manual. Finalmente, expresó que las funciones de alertas y notificaciones del sistema serían herramientas de gran ayuda en su labor diaria. |
 
-| **Entrevista Nro. 3** |  |
+| **Entrevista Nro. 3** | **Detalle** |
 | --- | --- |
 | Screenshot | <img src="assets/chapter-05/validation/vi-s1-01-jean-pool-coaguila.png" alt="Screenshot de entrevista de validación - Jean Pool Coaguila" width="600"> |
 | Nombres y apellidos | Jean Pool Coaguila |
@@ -2472,7 +2466,7 @@ Para cada segmento objetivo se registrarán 3 entrevistas. Cada entrevista debe 
 
 #### Segmento objetivo 2: Responsables de operaciones, calidad o logística en negocios con cadena de frío
 
-| **Entrevista Nro. 1** |  |
+| **Entrevista Nro. 1** | **Detalle** |
 | --- | --- |
 | Screenshot | <img src="assets/chapter-05/validation/vi-s2-01-rodrigo-vasquez.png" alt="Screenshot de entrevista de validación - Rodrigo Vasquez" width="600"> |
 | Nombres y apellidos | Rodrigo Vasquez |
@@ -2484,7 +2478,7 @@ Para cada segmento objetivo se registrarán 3 entrevistas. Cada entrevista debe 
 | Duración | 31:58 |
 | Resumen | Rodrigo evaluó ColdTrace desde el rol de supervisor de operaciones encargado de controlar activos refrigerados y consolidar información operativa. Al revisar la Landing Page, identificó que la propuesta responde a problemas mencionados en la entrevista inicial, como la falta de visibilidad inmediata, la dependencia de registros manuales y la dispersión de información. En la Web Application, destacó el valor del dashboard operacional para priorizar riesgos, la gestión de activos y sensores para mantener trazabilidad de equipos, el módulo de incidentes para reconocer y cerrar alertas con acciones correctivas, y los reportes para auditorías o revisiones internas. Consideró que ColdTrace puede reducir el trabajo manual de consolidación en Excel o Google Sheets, siempre que los reportes sean descargables y la interfaz mantenga filtros claros por sede, activo, severidad y estado. Como mejoras, recomendó reforzar la priorización de alertas, agregar recomendaciones de acción y mejorar la vista por sede o zona para operaciones con varios puntos de control. |
 
-| **Entrevista Nro. 2** |  |
+| **Entrevista Nro. 2** | **Detalle** |
 | --- | --- |
 | Screenshot | <img src="assets/chapter-05/validation/ElverthVasquezInterview.jpg" alt="Screenshot de entrevista de validación - Elverth Vasquez" width="600"> |
 | Nombres y apellidos | Elverth Vasquez |
@@ -2496,17 +2490,17 @@ Para cada segmento objetivo se registrarán 3 entrevistas. Cada entrevista debe 
 | Duración | 16:22 |
 | Resumen | Elverth evaluó ColdTrace desde la perspectiva de un responsable operativo que necesita supervisar equipos y responder ante desviaciones. Consideró útil centralizar activos, lecturas, alertas e incidencias para evitar controles dispersos y destacó que el historial facilita justificar decisiones y acciones correctivas. También valoró el acceso desde distintos dispositivos y recomendó mantener mensajes de error claros, priorización visible de incidentes y una navegación directa hacia la acción requerida. |
 
-| **Entrevista Nro. 3** |  |
+| **Entrevista Nro. 3** | **Detalle** |
 | --- | --- |
-| Screenshot | <br><br> |
-| Nombres y apellidos |  |
-| Edad |  |
-| Distrito |  |
+| Screenshot | Pendiente de realizar la entrevista. |
+| Nombres y apellidos | Participante pendiente de confirmación. |
+| Edad | No disponible. |
+| Distrito | No disponible. |
 | Segmento objetivo | Responsables de operaciones, calidad o logística en negocios con cadena de frío |
-| URL de grabación |  |
-| Timing de inicio |  |
-| Duración |  |
-| Resumen | <br><br><br> |
+| URL de grabación | Pendiente de publicación. |
+| Timing de inicio | No disponible. |
+| Duración | No disponible. |
+| Resumen | Esta evidencia requiere una entrevista real adicional; no se registran resultados hasta contar con el participante y la grabación. |
 
 ### 5.3.3. Evaluaciones según heurísticas
 
