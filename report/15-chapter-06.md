@@ -1,25 +1,38 @@
-# Capítulo VI: Conclusions
-## 6.1. Conclusiones y recomendaciones
+# Conclusiones
+## Conclusiones y recomendaciones
 ### Conclusiones
-El desarrollo del presente trabajo permitió validar una necesidad real en el sector alimentario peruano: la falta de herramientas accesibles para monitorear la cadena de frío, detectar incidentes a tiempo y conservar evidencia operativa para auditorías sanitarias.
 
-El proceso de investigación, diseño y especificación permitió convertir hallazgos de entrevistas, user personas, journeys, mapas de impacto y user stories en una propuesta de producto coherente para los dos segmentos objetivo priorizados.
+1. **Necesidad validada en cadena de frío:** Las entrevistas y artefactos de needfinding evidencian que los negocios alimentarios pequeños y los responsables de operaciones aún dependen de controles manuales, hojas de cálculo, revisiones visuales y comunicación informal por WhatsApp o llamadas. Esta situación incrementa el riesgo de detectar tarde una desviación térmica y perder productos perecibles.
 
-En la implementación, ColdTrace evolucionó desde la landing page y la frontend web application hacia una RESTful API en ASP.NET Core desplegada en Google Cloud Run, conectada a Cloud SQL for MySQL y documentada mediante Swagger UI. Esto reduce la dependencia del servidor JSON provisional y acerca la solución a un entorno de producción real.
+2. **Soporte al cumplimiento normativo DIGESA/MINSA:** ColdTrace contribuye a la preparación de evidencias para inspecciones sanitarias de la Dirección General de Salud Ambiental (DIGESA) y del Ministerio de Salud (MINSA), especialmente en lo relativo a inocuidad alimentaria, conservación de alimentos perecibles y control de condiciones de almacenamiento. La plataforma facilita el registro de temperaturas, historial de incidencias, acciones correctivas y reportes en formatos exigidos por DIGESA, como el PDF con temperatura mínima/máxima, responsable, fecha y número de registro (US31). Además, permite generar paquetes de evidencia para auditoría interna (US34) que incluyen reportes de lecturas, incidencias cerradas con acción correctiva y bitácoras del periodo. La plataforma no reemplaza la obligación normativa de cada negocio, pero sí reduce el riesgo de sanciones al ofrecer trazabilidad documental verificable.
 
-El trabajo por sprints, ramas GitFlow y evidencias de commits permitió mantener trazabilidad entre requisitos, diseño, implementación, validación y despliegue, aunque el equipo debe seguir reforzando la integración continua entre frontend, backend y base de datos.
+3. **Trazabilidad operacional:** La propuesta conecta activos refrigerados, gateways, dispositivos IoT, lecturas de sensores, alertas, incidencias y reportes dentro de una misma plataforma. Esta trazabilidad permite pasar de una gestión reactiva a una supervisión basada en datos, donde cada evento crítico puede vincularse con una lectura, un activo, una acción correctiva y un responsable.
+
+4. **Arquitectura y despliegue coherentes con el curso:** El producto se documentó como una solución web distribuida con Landing Page, Frontend Web Application y RESTful API. El backend ASP.NET Core con C# se despliega en Google Cloud Run, se conecta a MySQL y expone documentación Swagger/OpenAPI, lo que permite validar contratos de servicio y consumo desde el frontend.
+
+5. **Mejora continua en preparación:** El Sprint 4 preparó en pull requests contratos JWT, IA, OAuth/OIDC y Stripe, además de correcciones de alineación en Vue. La documentación los mantiene como trabajo en revisión y separa las acciones externas de proveedor y despliegue que todavía deben ejecutarse.
+
+6. **Colaboración del equipo:** La distribución por sprints, roles, issues y repositorios permitió organizar el trabajo de investigación, diseño, arquitectura, implementación y documentación. El uso de GitHub, Linear/Trello, Swagger y recursos desplegados fortalece la trazabilidad entre planificación, ejecución y evidencia.
 
 ### Recomendaciones
-Se recomienda continuar validando la solución con usuarios reales de ambos segmentos, especialmente responsables de operaciones y dueños de negocios que gestionan productos perecibles, para contrastar la utilidad de alertas, reportes y monitoreo en escenarios reales.
 
-Para los siguientes incrementos, se debe priorizar la integración completa entre la frontend web application y la RESTful API desplegada, reemplazando definitivamente los datos simulados y verificando los flujos críticos de autenticación, activos, sensores, incidentes y reportes.
+1. **Completar validaciones pendientes con usuarios reales:** Se recomienda terminar las entrevistas faltantes del segmento de responsables de operaciones, calidad o logística, registrando screenshots, enlaces, duración, timing y resumen por participante.
 
-También se recomienda ampliar las pruebas automatizadas del backend, incluyendo pruebas de integración contra la base de datos y validaciones de seguridad sobre credenciales, CORS, roles y acceso por organización.
+2. **Realizar la evaluación heurística grupal:** La sección 5.3.3 quedó como plantilla vacía para que el equipo complete problemas reales de usabilidad, severidad, heurística vulnerada y alternativa de solución técnica.
 
-Finalmente, se debe mantener la documentación del informe sincronizada con cada despliegue, incluyendo URLs vigentes, capturas legibles, evidencia de ejecución, estado de ramas y enlaces finales a los videos de exposición.
+3. **Integrar y redesplegar Sprint 4:** Antes de grabar la evidencia final, se deben integrar los pull requests en develop, provisionar los secretos y proveedores externos, redesplegar Cloud Run/Vercel y repetir los smoke tests contra la revisión resultante.
 
-## 6.2. Video About-the-Team
+4. **Consolidar pruebas frontend-backend:** Se recomienda ejecutar pruebas end-to-end sobre la revisión final desplegada, especialmente autenticación, gestión de activos, lecturas, incidencias, reportes, asistencia IA y billing. Las pruebas locales y de pull request no sustituyen esta validación posterior al merge.
 
+5. **Fortalecer reportes para auditoría sanitaria:** Los reportes deben exportarse en formatos portables como PDF o Excel e incluir rangos aceptables, lecturas fuera de rango, acciones correctivas, fecha, responsable y activo afectado, de modo que puedan servir como evidencia ordenada ante auditorías internas o inspecciones de DIGESA y MINSA.
+
+6. **Mantener simplicidad para negocios pequeños:** Las funcionalidades nuevas deben conservar una interfaz clara, con lenguaje operativo y pocas decisiones por pantalla, debido a que parte del segmento objetivo no cuenta con experiencia previa en sistemas de monitoreo o gestión empresarial.
+
+7. **Evaluar sensores y proveedores locales:** Para reducir costos de adopción, se recomienda validar compatibilidad con hardware IoT accesible en Perú, como ESP32, Raspberry Pi o sensores comerciales de temperatura/humedad, antes de una implementación productiva.
+
+8. **Preservar evidencia audiovisual del curso:** Los videos de validación, About-the-Product y About-the-Team deben conservar sus enlaces, participantes y nomenclatura de Aplicaciones Web, y cualquier video faltante debe permanecer identificado como pendiente hasta que el equipo confirme su enlace real.
+
+## Video About-the-Team
 Como parte de la entrega final, cada integrante del equipo ha grabado una breve presentación personal en la que comparte su experiencia durante el desarrollo del proyecto ColdTrace, destacando los conocimientos adquiridos en el curso y cómo estos contribuyeron a su crecimiento profesional y al logro de los objetivos planteados.
 
 Los integrantes que participan en el video son:
