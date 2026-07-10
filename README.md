@@ -4569,83 +4569,111 @@ Para cada segmento objetivo se registrarán 3 entrevistas. Cada entrevista debe 
 
 | **Entrevista Nro. 2** |  |
 | --- | --- |
-| Screenshot | <br><br> |
-| Nombres y apellidos |  |
-| Edad |  |
-| Distrito |  |
+| Screenshot | <img src="report/assets/chapter-05/validation/ElverthVasquezInterview.jpg" alt="Screenshot de entrevista de validación - Elverth Vasquez" width="600"> |
+| Nombres y apellidos | Elverth Vasquez |
+| Edad | 21 años |
+| Distrito | Lima Metropolitana |
 | Segmento objetivo | Responsables de operaciones, calidad o logística en negocios con cadena de frío |
-| URL de grabación |  |
-| Timing de inicio |  |
-| Duración |  |
-| Resumen | <br><br><br> |
-
-| **Entrevista Nro. 3** |  |
-| --- | --- |
-| Screenshot | <br><br> |
-| Nombres y apellidos |  |
-| Edad |  |
-| Distrito |  |
-| Segmento objetivo | Responsables de operaciones, calidad o logística en negocios con cadena de frío |
-| URL de grabación |  |
-| Timing de inicio |  |
-| Duración |  |
-| Resumen | <br><br><br> |
+| URL de grabación | [Ver video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202321020_upc_edu_pe/IQBABHq_q78wR7GGauAcAa8eAX54dBwKdLT-qohJPgtR5TQ?e=f2iKcN&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D) |
+| Timing de inicio | 0:00 |
+| Duración | 16:22 |
+| Resumen | Elverth evaluó ColdTrace desde el rol de supervisor de camaras frigorificas encargado de monitorear activos refrigerados y consolidar información operativa. Al revisar la Landing Page, identificó que la propuesta responde a funciones deseadas en la entrevista inicial, como la falta de visibilidad inmediata, la dependencia de registros manuales y la dispersión de información. En la Web Application, destacó el valor de la seccion de alertas junto con la de notificaciones para priorizar riesgos. Consideró que ColdTrace puede ayudar de manera bastante util el trabajo manual de monitoreo junto con la consodilacion en Excel o Google Sheets, siempre que los reportes sean descargables y la interfaz mantenga filtros claros por sede, activo, severidad y estado.|
 
 ### 5.3.3. Evaluaciones según heurísticas
 
-Esta sección queda preparada para que el equipo complete la evaluación heurística formal de la Landing Page y la Frontend Web Application. Los problemas, severidades, heurísticas vulneradas y alternativas de solución deben registrarse después de la revisión grupal.
+<table>
+<tr><td><strong>CARRERA</strong></td><td> Ingeniería de Software</td></tr>
+<tr><td><strong>CURSO</strong></td><td> Aplicaciones Web</td></tr>
+<tr><td><strong>SECCIÓN</strong></td><td> 12190</td></tr>
+<tr><td><strong>PROFESORES</strong></td><td> Todos</td></tr>
+<tr><td><strong>AUDITOR</strong></td><td> FrostGuard Team</td></tr>
+<tr><td><strong>CLIENTE(S)</strong></td><td>  Aponte Pablo, Isabel Luisa, Laura Acosta, Victor Jhosef, Blancas Chávez, Carlos Franco </td></tr>
+</table>
 
-#### UX Heuristics & Principles Evaluation
+**Usability – Inclusive Design – Information Architecture**
 
-**Usability - Inclusive Design - Information Architecture**
+**SITE o APP A EVALUAR:** ColdTrace Web Application
 
-| Campo | Información |
-| :--- | :--- |
-| Carrera | Ingeniería de Software |
-| Curso | Aplicaciones Web |
-| Sección | 2610 |
-| Profesor | Hugo Allan Mori Paiva |
-| Auditor | FrostGuard |
-| Cliente(s) |  |
-| Site o App a evaluar | ColdTrace Landing Page y ColdTrace Frontend Web Application |
+**TAREAS A EVALUAR:**
 
-**Tareas a evaluar**
+El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas:
 
 | # | Tarea | Incluida |
 | :---: | :--- | :---: |
-| 1 | Registro o inicio de sesión de usuario. |  |
-| 2 | Consulta del dashboard operacional. |  |
-| 3 | Gestión de activos, sensores y gateways. |  |
-| 4 | Revisión de alertas e incidencias. |  |
-| 5 | Consulta de reportes de cumplimiento. |  |
-| 6 | Gestión de mantenimiento o servicios técnicos. |  |
-| 7 | Revisión de planes, billing o funcionalidades SaaS. |  |
+| 1 | Registro o inicio de sesión de usuario. | Si |
+| 2 | Consulta del dashboard operacional. | Si |
+| 3 | Gestión de activos, sensores y gateways. | Si |
+| 4 | Revisión de alertas e incidencias. | Si |
+| 5 | Consulta de reportes de cumplimiento. | Si |
+| 6 | Gestión de mantenimiento o servicios técnicos. | Si |
+| 7 | Revisión de planes, billing o funcionalidades SaaS. | Si |
 
-**Escala de severidad**
+
+**ESCALA DE SEVERIDAD:**
+
+Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 
 | Nivel | Descripción |
-| :---: | :--- |
-| 1 | Problema superficial que puede ser superado fácilmente o aparece con muy poca frecuencia. |
-| 2 | Problema menor que puede dificultar parcialmente la experiencia y debe priorizarse con severidad baja. |
-| 3 | Problema mayor que ocurre con frecuencia o impide completar una tarea de forma fluida. |
-| 4 | Problema crítico que bloquea el uso de la herramienta y debe corregirse antes de una entrega productiva. |
+|-------|-------------|
+| 1 | **Problema superficial:** puede ser fácilmente superado por el usuario u ocurre con muy poca frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo. |
+| 2 | **Problema menor:** puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja resolverlo de cara al siguiente release. |
+| 3 | **Problema mayor:** ocurre frecuentemente o los usuarios no son capaces de resolverlo. Es importante que sea corregido y se le debe asignar una prioridad alta. |
+| 4 | **Problema muy grave:** un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento. |
 
-**Tabla resumen**
 
-| # | Problema | Escala de severidad | Heurística/Principio vulnerado |
-| :---: | :--- | :---: | :--- |
-| 1 |  |  |  |
-| 2 |  |  |  |
-| 3 |  |  |  |
-| 4 |  |  |  |
+**TABLA RESUMEN:**
 
-**Descripción de problemas**
+| # | Problema | Escala de severidad | Heurística/Principio violada(o) |
+|---|----------|:-------------------:|-------------------------------|
+| 1 | Rara vez no carga notificaciones | 1 | Usability: Flexibilidad y eficiencia de uso |
+| 2 | Boton de incidente sin funcionar | 3 | Usability: Ayuda y documentación |
+| 3 | No poder crear una nueva camara rara vez | 2 | Usability: Flexibilidad y eficiencia de uso |
 
-| Problema | Severidad | Heurística/Principio | Evidencia | Recomendación |
-| :--- | :---: | :--- | :--- | :--- |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
+**DESCRIPCIÓN DE PROBLEMAS:**
+
+**PROBLEMA #01:** Los colores del panel de alertas activas no generan suficiente contraste visual para destacar las alertas críticas
+
+**Severidad:** 2
+
+**Heurística violada:** Usability: Flexibilidad y eficiencia de uso
+
+**Problema:**
+
+Al usar del boton derecho superior de alertas pendientes, hay ocasiones en la que no carga de manera correcta la seccion | 1 | Usability: Flexibilidad y eficiencia de uso
+
+<p align="center">
+  <img src="report/assets/chapter-05/heuristics/problem1.jpg" width="600">
+</p>
+
+
+**PROBLEMA #02:** Las letras del formulario de registro de incidentes son pequeñas y difíciles de leer en fondo oscuro
+
+**Severidad:** 2
+
+**Heurística violada:**  Usability: Ayuda y documentación
+
+**Problema:**
+
+Al reconocer un incidente activo, el boton no funciona dando un mensaje de error
+
+<p align="center">
+  <img src="report/assets/chapter-05/heuristics/problem2.jpg" width="600">
+</p>
+
+
+**PROBLEMA #03:** No poder crear una nueva camara rara vez
+
+**Severidad:** 2
+
+**Heurística violada:** Usability: Flexibilidad y eficiencia de uso
+
+**Problema:**
+
+ La sección "Activos" de vez en cuando no permite crear una nueva camara frigorifica
+<p align="center">
+  <img src="report/assets/chapter-05/heuristics/problem3.jpg" width="600">
+</p>
+
 
 ## 5.4. Video About-the-Product
 
