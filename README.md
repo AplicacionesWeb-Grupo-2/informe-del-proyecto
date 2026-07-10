@@ -4207,7 +4207,7 @@ El Sprint 4 cierra ColdTrace como producto SaaS con cinco objetivos: autenticaci
 | SaaS Plans & Billing | Planes, límites, Stripe Checkout, Customer Portal, webhooks y ruta Vue /settings/billing | Linear APPWEB-93 a APPWEB-103 |
 | Frontend parity | Telemetría persistida, incidencias, reportes, mantenimiento, navegación responsive y eliminaciones reales | Linear APPWEB-36, APPWEB-49, APPWEB-61, APPWEB-111 y APPWEB-112 |
 | Landing Page | Planes, términos, responsive y videos propios de Aplicaciones Web | Linear APPWEB-16, APPWEB-18, APPWEB-105 y APPWEB-110 |
-| Deployment & report | Secret Manager, callbacks, CORS, arquitectura real y evidencia verificable | Linear APPWEB-64 y APPWEB-113 |
+| Deployment, security & report | Secret Manager, callbacks, CORS, dependencias OpenAPI seguras, arquitectura real y evidencia verificable | Linear APPWEB-64, APPWEB-113 y APPWEB-114 |
 
 Las responsabilidades individuales se consultan en cada issue y pull request. El informe evita reasignar autoría que no pueda comprobarse con GitHub o Linear.
 
@@ -4227,6 +4227,7 @@ Las responsabilidades individuales se consultan en cada issue y pull request. El
 | Eliminaciones organization-scoped | TS03, TS04, TS05, TS13 y TS17 | Backend PR 34, 36, 37, 38 y 40; clientes Vue PR 26 a 29 |
 | Landing final | US004, US006, US059 | Landing PR 10, 11 y 12; en revisión |
 | Proveedores externos | T57 | Backend PR 43; en revisión |
+| Seguridad de documentación OpenAPI | TS33 | Backend PR 44; auditoría de NuGet sin paquetes vulnerables |
 | Informe final | TS32 | Linear APPWEB-113 y rama feature/TS32-final-report-alignment |
 
 El estado En revisión significa que el código existe en una rama publicada y el pull request apunta a develop. No significa que la versión pública ya haya sido redesplegada.
@@ -4237,7 +4238,7 @@ La evidencia principal son los pull requests públicos. Cada enlace permite revi
 
 | Repositorio | Evidencia de desarrollo |
 | :--- | :--- |
-| Backend | [PR 31 - AI provider](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/31), [PR 32 - dashboard AI](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/32), [PR 33 - JWT](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/33), [PR 35 - JWT/CORS](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/35), [PR 39 - Problem Details e i18n](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/39), [PR 41 - password reset](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/41), [PR 42 - OAuth/OIDC](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/42), [PR 43 - external providers](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/43) |
+| Backend | [PR 31 - AI provider](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/31), [PR 32 - dashboard AI](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/32), [PR 33 - JWT](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/33), [PR 35 - JWT/CORS](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/35), [PR 39 - Problem Details e i18n](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/39), [PR 41 - password reset](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/41), [PR 42 - OAuth/OIDC](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/42), [PR 43 - external providers](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/43), [PR 44 - secure OpenAPI dependencies](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/44) |
 | Backend deletion parity | [PR 34 - users](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/34), [PR 36 - assets](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/36), [PR 37 - IoT devices](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/37), [PR 38 - locations](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/38), [PR 40 - gateways](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform/pull/40) |
 | Frontend AI y sesión | [PR 11 - dashboard AI](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/11), [PR 12 - incident AI](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/12), [PR 13 - Google/Apple](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/13), [PR 14 - JWT](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/14), [PR 15 - compliance AI](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/15) |
 | Frontend operational parity | [PR 16 - telemetry](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/16), [PR 17 - incident lifecycle](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/17), [PR 18 - user password](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/18), [PR 19 - maintenance](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/19), [PR 20 - technical service](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/20), [PR 21 - recovery](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/21), [PR 22 - reports](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/22), [PR 23 - incidents](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/23), [PR 24 - responsive shell](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/24), [PR 25 - billing](https://github.com/AplicacionesWeb-Grupo-2/coldtrace-frontend/pull/25) |
@@ -4302,7 +4303,7 @@ Esta selección sigue la matriz de decisión del material: se usa la abstracció
 | :--- | :--- |
 | Landing Page | Repositorio oficial y GitHub Pages públicos; PR 10, 11 y 12 aún deben integrarse para publicar los últimos cambios. |
 | Frontend Vue | Vercel público con la línea base integrada; PR 11 a 29 aún deben integrarse y redesplegarse. |
-| Backend ASP.NET Core | Cloud Run, MySQL y Swagger públicos con la línea base; PR 31 a 43 aún deben integrarse y redesplegarse. |
+| Backend ASP.NET Core | Cloud Run, MySQL y Swagger públicos con la línea base; PR 31 a 44 aún deben integrarse y redesplegarse. |
 | Proveedores externos | El contrato de configuración está en PR 43. Faltan valores reales y autorizaciones en Google, Apple, OpenAI, Stripe y Secret Manager. |
 
 Pasos operacionales pendientes antes de afirmar despliegue final:
@@ -4612,7 +4613,7 @@ Universidad Peruana de Ciencias Aplicadas. (2026). *Microsoft AI Ecosystem Overv
 | Elemento | Fuente verificable | Estado |
 | :--- | :--- | :--- |
 | Backlog | Linear, equipo Aplicaciones Web | Issues actualizados y relacionados con sus PRs |
-| Backend | Pull requests 31 a 43 de coldtrace-platform | En revisión hacia develop |
+| Backend | Pull requests 31 a 44 de coldtrace-platform | En revisión hacia develop |
 | Frontend | Pull requests 11 a 29 de coldtrace-frontend | En revisión hacia develop |
 | Landing | Pull requests 9 a 12 de landing-page | PR 9 integrado; PR 10 a 12 en revisión |
 | Informe | Linear APPWEB-113 y feature/TS32-final-report-alignment | En revisión |
