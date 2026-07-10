@@ -4603,6 +4603,17 @@ Universidad Peruana de Ciencias Aplicadas. (2026). *Microsoft AI Ecosystem Overv
 
 ## Anexo C: Videos de Exposiciones
 
+El enunciado exige registrar progresivamente el video de exposición correspondiente a cada entrega. Los enlaces deben pertenecer a Aplicaciones Web y ser confirmados por el equipo antes de la entrega final.
+
+| Entrega | Título | Enlace de exposición |
+| :--- | :--- | :--- |
+| AV1 | Exposición AV1 | Pendiente de confirmación por el equipo |
+| TB1 | Exposición TB1 | Pendiente de confirmación por el equipo |
+| AV2 | Exposición AV2 | Pendiente de confirmación por el equipo |
+| TB2 | Exposición TB2 | Pendiente de confirmación por el equipo |
+
+### Videos complementarios del proyecto
+
 | Tipo | Enlace |
 | :--- | :--- |
 | Video de navegación del producto - Sprint 2 | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQAb3T9DE7AmQ7aOxNsIfCAIAaqlY68Kt3syw7uDil2npvk |
