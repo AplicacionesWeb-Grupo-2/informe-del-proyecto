@@ -1691,7 +1691,7 @@ Elaboración propia en Linear: [https://linear.app/coldtrace/team/APPWEB/all](ht
 
 ## 5.2.3.4. Development Evidence for Sprint Review
 Durante el Sprint 3, la implementación backend se gestionó en el repositorio `AplicacionesWeb-Grupo-2/coldtrace-platform` siguiendo el estándar de commits de la organización.
- 
+
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
 |:---|:---|:---|:---|:---|:---|
@@ -1738,7 +1738,7 @@ Durante el Sprint 3, la implementación backend se gestionó en el repositorio `
 | coldtrace-platform | develop | c4d5e6f | merge: integrate feature branches into develop for Sprint 3 Review | Merge final consolidando todos los feature branches hacia develop. Se ejecutaron pruebas de integración y validación de compatibilidad entre módulos para Sprint 3. | 2026-06-19 |
 
 ---
- 
+
 
 ## 5.2.3.5. Execution Evidence for Sprint Review
 Al término del Sprint 3, se logró disponer de una infraestructura backend en ejecución con múltiples endpoints operativos para probar la lógica de negocio de ColdTrace.
@@ -1746,7 +1746,7 @@ Al término del Sprint 3, se logró disponer de una infraestructura backend en e
 ![swagger](assets/chapter-05/sprint-03/swagger-assetSetting-asset.png)
 ![swagger](assets/chapter-05/sprint-03/swagger-gateways-Incidents-iotDevices.png)
 ![swagger](assets/chapter-05/sprint-03/swagger-locations-maintenance-notifications-organizatios.png)
-![swagger](assets/chapter-05/sprint-03/swagger-reports-roles-sensor-technical-users.png) 
+![swagger](assets/chapter-05/sprint-03/swagger-reports-roles-sensor-technical-users.png)
 
 
 *[Imagen: Captura de pantalla de la interfaz de Swagger UI (o documento OpenAPI) mostrando todos los endpoints RESTful agrupados por controladores]*
@@ -1755,9 +1755,9 @@ Al término del Sprint 3, se logró disponer de una infraestructura backend en e
 <br>
 
 
-![swagger](assets/chapter-05/sprint-03/getPostman.png) 
- 
-*[Imagen: Captura de pantalla de Postman ejecutando una petición GET a `/api/v1/organizations` y recibiendo un objeto JSON estructurado]* 
+![swagger](assets/chapter-05/sprint-03/getPostman.png)
+
+*[Imagen: Captura de pantalla de Postman ejecutando una petición GET a `/api/v1/organizations` y recibiendo un objeto JSON estructurado]*
 
 
 <br>
@@ -1768,7 +1768,7 @@ Al término del Sprint 3, se logró disponer de una infraestructura backend en e
 > Descripción: Evidencia de la creación del esquema de la base de datos relacional y el correcto mapeo de las entidades del dominio.
 
 <br>
-A continuación se presenta el video de navegación del producto correspondiente al Sprint 3, que consolida la demostración del flujo de la RESTful API desplegada, priorizando los user flows relacionados con el core business de ColdTrace 
+A continuación se presenta el video de navegación del producto correspondiente al Sprint 3, que consolida la demostración del flujo de la RESTful API desplegada, priorizando los user flows relacionados con el core business de ColdTrace
 
 ![evidencia del video](assets/chapter-05/sprint-03/evidenceVideo.png)
 
@@ -1827,7 +1827,7 @@ Se implementó la documentación oficial de la RESTful API. A continuación se p
 | Reports | GET | `GET /api/v1/organizations/{organizationId}/reports` | organizationId (path) | Lista reportes generados | 200 |
 | Reports | POST | `POST /api/v1/organizations/{organizationId}/reports` | organizationId (path), Body: (según tipo de reporte) | Genera un nuevo reporte | 201 |
 | Reports | GET | `GET /api/v1/organizations/{organizationId}/reports/{reportId}` | organizationId, reportId (path) | Obtiene detalles/contenido de un reporte | 200 |
- 
+
 
 ### Documentación en Swagger UI
 
@@ -1847,7 +1847,7 @@ Se incluyen a continuación capturas de la documentación interactiva accesible 
 
 > Descripción: Vista expandida de un endpoint (ejemplo: GET /api/v1/organizations) mostrando especificación de parámetros, modelo de respuesta exitosa (200) y ejemplo de datos JSON retornado por el servidor.
 
- 
+
 
 ### Referencias de Implementación
 
@@ -1872,7 +1872,7 @@ Durante el Sprint 3 se realizó el despliegue de la primera versión de los Web 
 | Runtime del backend | ASP.NET Core containerizado con Docker |
 | Plataforma de hosting | Google Cloud Run — `us-central1` |
 | Base de datos | Google Cloud SQL for MySQL — instancia `coldtrace-mysql` |
-| Esquema de base de datos | `coldtrace_platform` | 
+| Esquema de base de datos | `coldtrace_platform` |
 | Registro de imágenes | Google Artifact Registry |
 | Integración continua | GitHub Actions (`backend-ci.yml`) |
 | Documentación de API | Swagger UI / OpenAPI |
@@ -1882,12 +1882,14 @@ Durante el Sprint 3 se realizó el despliegue de la primera versión de los Web 
 | Servicio | URL |
 | :--- | :--- |
 | Repositorio backend | https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform |
-| Backend Cloud Run | https://coldtrace-platform-3kti2ylcba-uc.a.run.app |
-| Swagger UI | https://coldtrace-platform-3kti2ylcba-uc.a.run.app/swagger |
-| Swagger JSON | https://coldtrace-platform-3kti2ylcba-uc.a.run.app/swagger/v1/swagger.json |
+| Backend Cloud Run | https://coldtrace-platform-55771439812.us-central1.run.app |
+| Swagger UI | https://coldtrace-platform-55771439812.us-central1.run.app/swagger/index.html |
+| Swagger JSON | https://coldtrace-platform-55771439812.us-central1.run.app/swagger/v1/swagger.json |
+
+Google Cloud Run también generó la URL automática alternativa `https://coldtrace-platform-3kti2ylcba-uc.a.run.app` para el mismo servicio `coldtrace-platform`. Para el informe se usa como referencia principal la URL visible en la interfaz de Cloud Run con número de proyecto y región explícita.
 
 ---
- 
+
  <br>
 
 ## **Procedimiento de despliegue**
@@ -2032,7 +2034,7 @@ A continuación se presentan los analíticos de colaboración del repositorio pr
 **Figura 1. Gráfica de contribuciones de commits por integrante**
 
 ![GitHub Contributors Graph – coldtrace-platform](assets/chapter-05/sprint-03/contributors.png)
- 
+
 
 <br>
 
@@ -2400,15 +2402,105 @@ A continuación se presentan los analíticos de colaboración del repositorio pr
 
 ## 5.3. Validation Interviews
 
-Durante el Sprint 1 no se ejecutaron entrevistas de validación del producto, debido a que el alcance de la iteración estuvo centrado en la construcción y despliegue inicial del Landing Page. Esta actividad queda planificada para una iteración posterior, cuando exista una versión de producto con flujos funcionales suficientes para evaluar con usuarios.
-
 ### 5.3.1. Diseño de Entrevistas
 
-El diseño de entrevistas de validación será elaborado en una siguiente iteración, considerando preguntas orientadas a evaluar comprensión de la propuesta de valor, utilidad percibida, claridad visual y facilidad de navegación.
+Para la validación de la solución implementada, se diseñaron entrevistas dirigidas a representantes de los segmentos objetivo identificados en las fases iniciales del proyecto. El objetivo fue evaluar la percepción de los usuarios sobre la funcionalidad, usabilidad y pertinencia de la RESTful API de ColdTrace y su integración con la Frontend Web Application.
+
+Se definieron dos perfiles de entrevistados:
+
+- **Dueño o encargado de negocio:** Interesado en la reducción de merma, el cumplimiento sanitario y la generación de reportes operativos.
+- **Responsable de operaciones o calidad:** Enfocado en el monitoreo en tiempo real, la gestión de alertas e incidencias y la configuración de parámetros operativos.
+
+Las entrevistas se estructuraron en torno a los siguientes ejes de validación:
+
+1. **Registro y gestión de organizaciones y usuarios:** Validar que el flujo de sign-up y administración de usuarios sea claro y funcional.
+2. **Gestión de activos e infraestructura IoT:** Evaluar la facilidad para registrar activos, vincular sensores y configurar gateways.
+3. **Monitoreo y alertas:** Verificar que la visualización de lecturas de sensores y la gestión de incidencias térmicas responda a las necesidades operativas.
+4. **Reportes y cumplimiento:** Confirmar que la generación de reportes operativos y de cumplimiento sea útil para la toma de decisiones.
+5. **Mantenimiento y servicio técnico:** Evaluar la utilidad de la programación de mantenimiento preventivo y la gestión de solicitudes de servicio técnico.
 
 ### 5.3.2. Registro de Entrevistas
 
-No se registran entrevistas de validación para Sprint 1.
+Para cada segmento objetivo se registrarán 3 entrevistas. Cada entrevista debe incluir la información personal solicitada, un screenshot del video, el enlace de Microsoft Stream, el timing donde inicia la entrevista, su duración y un resumen descriptivo de las principales apreciaciones del participante.
+
+**Video consolidado de entrevistas de validación:** [Ver video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQDzxmtGoZMES7vutMFjzCRkAXimh9-_K-h2BVM1FMlXjhY?e=hdDtj8&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+**Nomenclatura del video:** `upc-pre-202610-1asi0729-10177-ColdTracevalidation-sprint-3.mp4`
+
+#### Segmento objetivo 1: Dueños, administradores o encargados de pequeños negocios alimentarios
+
+| **Entrevista Nro. 1** |  |
+| --- | --- |
+| Screenshot | <img src="assets/chapter-05/validation/IsaacDiazInterview.png" alt="Screenshot de entrevista de validación - Isaac Diaz" width="600"> |
+| Nombres y apellidos | Isaac Diaz |
+| Edad | 25 años |
+| Distrito | San Miguel |
+| Segmento objetivo | Dueños, administradores o encargados de pequeños negocios alimentarios |
+| URL de grabación | [Ver video en Microsoft Stream](https://1drv.ms/v/c/470edfbbf4f38077/IQDBetSYZ7JeQpQ6vmBHOrz2AQAVRE3xe3Wd1l_OaXu63Cs?e=l02EFp) |
+| Timing de inicio | 00:00 |
+| Duración | 12:28 |
+| Resumen | Isaac evaluó ColdTrace desde el rol de encargado de un pequeño negocio familiar que comercializa productos frios como carnes. Durante la revisión de la Landing Page, comprendió que la propuesta se enfoca en monitorear equipos refrigerados, recibir alertas y consultar historial, relacionándolo con su necesidad de detectar fallas antes de que la mercadería esté en riesgo. En la Web Application, valoró especialmente el dashboard, la revisión de activos, las alertas y el historial diario, pues estos elementos reemplazan parcialmente el control manual basado en revisar indicadores de refrigeradoras o inspeccionar visualmente los productos. Señaló que la solución sería útil si mantiene una experiencia simple, accesible desde cualquier dispositivo y con notificaciones claras. |
+
+| **Entrevista Nro. 2** | |
+| --- | --- |
+| Screenshot | <img src="assets/chapter-05/validation/GabrielRamirezInterview.png" alt="Screenshot de entrevista de validación - Gabriel Ramirez" width="600"> |
+| Nombres y apellidos | Gabriel Ramirez Gutiérrez |
+| Edad | 19 años |
+| Distrito | San Miguel |
+| Segmento objetivo | Dueños, administradores o encargados de pequeños negocios alimentarios |
+| URL de grabación | [Ver video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416706_upc_edu_pe/IQCjVmGP_7UOT5AhWUlpq7XcAXPy3iQzuc8WC1u_7x62KWw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=D1GZfR) |
+| Timing de inicio | 00:00 |
+| Duración | 08:07 |
+| Resumen | Gabriel evaluó ColdTrace desde su rol como trabajador de una bodega en San Miguel, donde gestiona áreas de carnicería y verdulería. Durante la presentación, destacó que la Landing Page es clara y comunica eficazmente la propuesta de valor. Valoró positivamente la automatización del monitoreo de temperatura, señalando que le permitiría gestionar su inventario de forma más rápida y precisa desde un dispositivo, eliminando el control manual. Finalmente, expresó que las funciones de alertas y notificaciones del sistema serían herramientas de gran ayuda en su labor diaria. |
+
+| **Entrevista Nro. 3** |  |
+| --- | --- |
+| Screenshot | <img src="assets/chapter-05/validation/vi-s1-01-jean-pool-coaguila.png" alt="Screenshot de entrevista de validación - Jean Pool Coaguila" width="600"> |
+| Nombres y apellidos | Jean Pool Coaguila |
+| Edad | 29 años |
+| Distrito | Lima Norte |
+| Segmento objetivo | Dueños, administradores o encargados de pequeños negocios alimentarios |
+| URL de grabación | [Ver video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQDzxmtGoZMES7vutMFjzCRkAXimh9-_K-h2BVM1FMlXjhY?e=hdDtj8&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D) |
+| Timing de inicio | 00:00 |
+| Duración | 18:16 |
+| Resumen | Jean Pool evaluó ColdTrace desde el rol de encargado de un minimarket familiar que comercializa productos perecibles. Durante la revisión de la Landing Page, comprendió que la propuesta se enfoca en monitorear equipos refrigerados, recibir alertas y consultar historial, relacionándolo con su necesidad de detectar fallas antes de que la mercadería esté en riesgo. En la Web Application, valoró especialmente el dashboard, la revisión de activos, las alertas y el historial diario, pues estos elementos reemplazan parcialmente el control manual basado en revisar indicadores de refrigeradoras o inspeccionar visualmente los productos. Señaló que la solución sería útil si mantiene una experiencia simple, accesible desde celular y con mensajes de alerta claros. Como oportunidades de mejora, sugirió explicar mejor el costo, la instalación de sensores y agregar recomendaciones concretas de acción ante cada alerta. |
+
+#### Segmento objetivo 2: Responsables de operaciones, calidad o logística en negocios con cadena de frío
+
+| **Entrevista Nro. 1** |  |
+| --- | --- |
+| Screenshot | <img src="assets/chapter-05/validation/vi-s2-01-rodrigo-vasquez.png" alt="Screenshot de entrevista de validación - Rodrigo Vasquez" width="600"> |
+| Nombres y apellidos | Rodrigo Vasquez |
+| Edad | 30 años |
+| Distrito | Lima Metropolitana |
+| Segmento objetivo | Responsables de operaciones, calidad o logística en negocios con cadena de frío |
+| URL de grabación | [Ver video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQDzxmtGoZMES7vutMFjzCRkAXimh9-_K-h2BVM1FMlXjhY?e=hdDtj8&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D) |
+| Timing de inicio | 18:16 |
+| Duración | 31:58 |
+| Resumen | Rodrigo evaluó ColdTrace desde el rol de supervisor de operaciones encargado de controlar activos refrigerados y consolidar información operativa. Al revisar la Landing Page, identificó que la propuesta responde a problemas mencionados en la entrevista inicial, como la falta de visibilidad inmediata, la dependencia de registros manuales y la dispersión de información. En la Web Application, destacó el valor del dashboard operacional para priorizar riesgos, la gestión de activos y sensores para mantener trazabilidad de equipos, el módulo de incidentes para reconocer y cerrar alertas con acciones correctivas, y los reportes para auditorías o revisiones internas. Consideró que ColdTrace puede reducir el trabajo manual de consolidación en Excel o Google Sheets, siempre que los reportes sean descargables y la interfaz mantenga filtros claros por sede, activo, severidad y estado. Como mejoras, recomendó reforzar la priorización de alertas, agregar recomendaciones de acción y mejorar la vista por sede o zona para operaciones con varios puntos de control. |
+
+| **Entrevista Nro. 2** |  |
+| --- | --- |
+| Screenshot | <br><br> |
+| Nombres y apellidos |  |
+| Edad |  |
+| Distrito |  |
+| Segmento objetivo | Responsables de operaciones, calidad o logística en negocios con cadena de frío |
+| URL de grabación |  |
+| Timing de inicio |  |
+| Duración |  |
+| Resumen | <br><br><br> |
+
+| **Entrevista Nro. 3** |  |
+| --- | --- |
+| Screenshot | <br><br> |
+| Nombres y apellidos |  |
+| Edad |  |
+| Distrito |  |
+| Segmento objetivo | Responsables de operaciones, calidad o logística en negocios con cadena de frío |
+| URL de grabación |  |
+| Timing de inicio |  |
+| Duración |  |
+| Resumen | <br><br><br> |
 
 ### 5.3.3. Evaluaciones según heurísticas
 
@@ -2416,5 +2508,8 @@ No se realizaron evaluaciones heurísticas formales durante Sprint 1. La revisi�
 
 ## 5.4. Video About-the-Product
 
-El documento fuente no registra un enlace final de video About-the-Product para esta entrega. El video será incorporado cuando se consolide la evidencia audiovisual del producto.
+Como parte de la entrega del proyecto, se ha elaborado un video explicativo que presenta de manera resumida el producto ColdTrace, una plataforma orientada a la gestión y monitoreo de la cadena de frío. En el video se describe el problema que aborda el sistema, sus principales funcionalidades —gestión de organizaciones, ubicaciones, gateways, activos, dispositivos IoT, lecturas de sensores, incidentes y reportes— así como el valor que aporta a las organizaciones que dependen del control de temperatura y humedad en sus operaciones.
 
+El video puede visualizarse en el siguiente enlace:
+
+[Ver en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414054_upc_edu_pe/IQCmZIySYa3pT43sGAmn0UaGAfUnEK7pyE9kdDZWjSlXGX4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=1oulNb)
