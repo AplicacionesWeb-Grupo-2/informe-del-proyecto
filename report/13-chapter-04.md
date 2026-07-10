@@ -1,4 +1,4 @@
-# CAPÍTULO IV. PRODUCT UX/UI DESIGN
+# Capítulo IV: Product Design
 
 ## 4.1. Style Guidelines.
 
@@ -6,11 +6,11 @@ Esta sección define los lineamientos de estilo que aseguran una identidad visua
 
 ### 4.1.1. General Style Guidelines.
 
-**Brand Overview** 
+**Brand Overview**
 
 Se ha seleccionado la propuesta basada en un escudo térmico como logo definitivo. Esta elección responde a una estrategia de marca diseñada para transmitir seguridad alimentaria y protección. El isotipo fusiona un escudo (protección), la inicial "F" con trazos fluidos (logística) y ondas internas que simbolizan los datos de los sensores IoT y el flujo de aire frío.
 
-**Typography** 
+**Typography**
 
 Hemos seleccionado cuidadosamente estas tipografías para ColdTrace, buscando un equilibrio armónico entre claridad, profesionalismo y modernidad que refuerce nuestros valores de eficiencia, monitoreo inteligente y trazabilidad precisa. La combinación de Poppins para títulos e Inter (o Roboto) para textos técnicos potencia la legibilidad en web y móvil, proyecta una identidad tecnológica y accesible, y acompaña con coherencia los flujos clave del _dashboard_, la gestión de sensores y la resolución de incidentes, asegurando una experiencia consistente, robusta y fácil de usar en toda la plataforma.
 
@@ -19,7 +19,7 @@ Poppins, una tipografía Sans-Serif geométrica, fue elegida para los títulos p
 - **Poppins (Bold - 40 px)** asegura jerarquías nítidas en los encabezados principales (H1), permitiendo que el usuario identifique rápidamente la sección en la que se encuentra (como los paneles de monitoreo en vivo) sin sacrificar legibilidad en dispositivos de escritorio.
 - **Poppins (Bold - 24 px / 20 px)** se utiliza en títulos de botones, encabezados secundarios y textos de énfasis por su equilibrio entre personalidad y orden visual, resultando fundamental para facilitar una lectura rápida y sin errores al momento de mostrar **alertas críticas** de temperatura y notificaciones del sistema.
 
-![Typography](./assets/chapter-04/studyguidelines/Typography.png)
+![Typography](assets/chapter-04/studyguidelines/Typography.png)
 
 **Colors**
 
@@ -29,21 +29,21 @@ La paleta evoca el entorno industrial del frío y la fiabilidad tecnoló
 
 | **Color**                                         | **Código HEX** | **Significado**                                                                                                                                                                                                                                                  |
 | ------------------------------------------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](./assets/chapter-04/studyguidelines/Azul.png) | `[#002d56]`    | Es el color principal de la marca y de interacción. Se utiliza para guiar la atención del usuario hacia las acciones principales, como los botones de "Sign up", "Get started", "See all features", enlaces de texto y elementos clave en la interfaz del panel. |
+| ![](assets/chapter-04/studyguidelines/Azul.png) | `[#002d56]`    | Es el color principal de la marca y de interacción. Se utiliza para guiar la atención del usuario hacia las acciones principales, como los botones de "Sign up", "Get started", "See all features", enlaces de texto y elementos clave en la interfaz del panel. |
 
 - Colores Secundarios
 
 | Color                                                  | Codigo HEX  | Significado                                                                                                                                           |
 | ------------------------------------------------------ | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](./assets/chapter-04/studyguidelines/Verde.png)     | `[#008F39]` | Se usa para indicar estados positivos, cumplimiento ("Compliance"), marcas de verificación (checkmarks) y métricas de buen rendimiento.               |
-| ![](./assets/chapter-04/studyguidelines/Colar.png)     | `[#008F39]` | Se emplea para captar la atención sobre problemas, como alertas, excursiones térmicas y notificaciones de error.                                      |
-| ![](./assets/chapter-04/studyguidelines/Amarrillo.png) | `[#E0B046]` | Funciona como un color de acento para íconos (como la ilustración de la carpeta), segmentos en los gráficos circulares y advertencias de nivel medio. |
+| ![](assets/chapter-04/studyguidelines/Verde.png)     | `[#008F39]` | Se usa para indicar estados positivos, cumplimiento ("Compliance"), marcas de verificación (checkmarks) y métricas de buen rendimiento.               |
+| ![](assets/chapter-04/studyguidelines/Colar.png)     | `[#008F39]` | Se emplea para captar la atención sobre problemas, como alertas, excursiones térmicas y notificaciones de error.                                      |
+| ![](assets/chapter-04/studyguidelines/Amarrillo.png) | `[#E0B046]` | Funciona como un color de acento para íconos (como la ilustración de la carpeta), segmentos en los gráficos circulares y advertencias de nivel medio. |
 - Colores Neutros
 
 | Color                                                   | Codigo HEX  | Significado                                                                                                                                                   |
 | ------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](./assets/chapter-04/studyguidelines/Gris.png)       | `[#F4F7F9]` | Dominan el fondo de toda la página y las tarjetas de la interfaz, dando un respiro visual y un aspecto limpio (Clean UI).                                     |
-| ![](./assets/chapter-04/studyguidelines/GrisOscuro.png) | `[#828282]` | Se utiliza en la tipografía (títulos y cuerpos de texto) para asegurar legibilidad, y es el color sólido que conforma el bloque del pie de página (_footer_). |
+| ![](assets/chapter-04/studyguidelines/Gris.png)       | `[#F4F7F9]` | Dominan el fondo de toda la página y las tarjetas de la interfaz, dando un respiro visual y un aspecto limpio (Clean UI).                                     |
+| ![](assets/chapter-04/studyguidelines/GrisOscuro.png) | `[#828282]` | Se utiliza en la tipografía (títulos y cuerpos de texto) para asegurar legibilidad, y es el color sólido que conforma el bloque del pie de página (_footer_). |
 
 **Espaciado y márgenes (Análisis de la UI de ColdTrace)**
 
@@ -60,7 +60,7 @@ La paleta evoca el entorno industrial del frío y la fiabilidad tecnoló
 - **Identidad Cromática:** Utiliza un negro sólido con un enfoque minimalista e industrial. Esta elección visual transmite la precisión, rigor técnico y fiabilidad absoluta que requiere un sistema de control de normativas.
 - **Naming y Tipografía:** "ColdTrace" describe claramente su función: rastrear entornos fríos. Emplea una tipografía _sans-serif_ gruesa y geométrica que asegura excelente legibilidad y proyecta un software robusto y estable.
 
-![Logotype](./assets/chapter-04/studyguidelines/Coldtrace.png)
+![Logotype](assets/chapter-04/studyguidelines/Coldtrace.png)
 
 
 
@@ -163,10 +163,10 @@ Se aplica una organización visual jerárquica y funcional. En la Landing Page, 
 
 **Organización de la Landing Page:**
 
-*Encabezado (Header):*  
+*Encabezado (Header):*
 Incluye el logotipo de ColdTrace, enlaces de navegación principales, selector de idioma y accesos a autenticación. Su función es mantener disponibles las rutas de mayor valor durante todo el recorrido.
 
-*Sección Introductoria (Hero):*  
+*Sección Introductoria (Hero):*
 Presenta la propuesta de valor del producto: centralizar la infraestructura de almacenamiento en frío en una plataforma inteligente con monitoreo en tiempo real, alertas y trazabilidad.
 
 *Beneficios:*
@@ -175,13 +175,13 @@ Presenta la propuesta de valor del producto: centralizar la infraestructura de a
 - Historial descargable para trazabilidad.
 - Reportes listos para auditorías sanitarias.
 
-*Cómo Funciona:*  
+*Cómo Funciona:*
 Organiza el flujo de uso en pasos simples: configurar sensores y rangos, monitorear activos en tiempo real y auditar mediante reportes exportables.
 
-*Casos de uso:*  
+*Casos de uso:*
 Explica escenarios asociados a cámaras frigoríficas, almacenes, transporte refrigerado, minimarkets y responsables de operaciones que necesitan controlar la cadena de frío.
 
-*Pie de Página (Footer):*  
+*Pie de Página (Footer):*
 Agrupa enlaces secundarios relacionados con producto, soporte, recursos, redes sociales y acceso a información institucional.
 
 ---
@@ -274,7 +274,7 @@ Los sistemas de búsqueda se diseñan para que el usuario no se pierda entre gra
 
 El sistema de navegación guía al usuario desde la presentación comercial del producto hasta las funcionalidades operativas de la Web Application.
 
-**Flujo principal:**  
+**Flujo principal:**
 El usuario inicia en la Landing Page, revisa la propuesta de valor, consulta funcionalidades, explora el flujo de trabajo y accede al registro o inicio de sesión. Una vez autenticado, ingresa al dashboard principal, desde donde puede navegar hacia monitoreo en vivo, activos, transporte, alertas, reportes, usuarios y configuración.
 
 - **Navegación global:** el menú superior permanece disponible en la Landing Page para facilitar el acceso a secciones clave y al cambio de idioma.
@@ -283,7 +283,7 @@ El usuario inicia en la Landing Page, revisa la propuesta de valor, consulta fun
 
 ---
 
-## 4.3. Landing Page UX/UI Design
+## 4.3. Landing Page UI Design
 
 ### 4.3.1. Landing Page Wireframe.
 
@@ -363,19 +363,19 @@ Los mock-ups de la Landing Page representan la versión visual de alta fidelidad
 
 ### 4.4.1. Web Applications Wireframes.
 
-Los wireframes de la aplicación web fueron diseñados para definir la estructura funcional de las principales pantallas del sistema. En esta etapa se identificaron los elementos clave de interacción, como paneles de control, visualización de datos, navegación entre secciones y componentes necesarios para la gestión del sistema. Estos wireframes permiten validar la distribución de información antes de la implementación visual, asegurando que las funcionalidades respondan a las necesidades del usuario. 
+Los wireframes de la aplicación web fueron diseñados para definir la estructura funcional de las principales pantallas del sistema. En esta etapa se identificaron los elementos clave de interacción, como paneles de control, visualización de datos, navegación entre secciones y componentes necesarios para la gestión del sistema. Estos wireframes permiten validar la distribución de información antes de la implementación visual, asegurando que las funcionalidades respondan a las necesidades del usuario.
 
-Wireframe Landing Page: En este wireframe vemos la organización de los elementos que se le presentarían al usuario inicialmente al entrar a la página. 
+Wireframe Landing Page: En este wireframe vemos la organización de los elementos que se le presentarían al usuario inicialmente al entrar a la página.
 <p align="center">
   <img src="assets/chapter-04/wireflowdiagram/WireframeLP.png" alt="Wireframes">
 </p>
 
-Wireframe Landing Page Mobile: Organización de elementos para el landing page en entorno de móviles 
+Wireframe Landing Page Mobile: Organización de elementos para el landing page en entorno de móviles
 <p align="center">
   <img src="assets/chapter-04/wireflowdiagram/WireframeMobile.png" alt="Wireframes">
 </p>
 
-Wireframes Pantallas: Aqui vemos la organización de secciones individuales que componen las distintas pantallas de la página web. 
+Wireframes Pantallas: Aqui vemos la organización de secciones individuales que componen las distintas pantallas de la página web.
 <p align="center">
   <img src="assets/chapter-04/wireflowdiagram/Activos.png" alt="Wireframes">
 </p>
@@ -405,7 +405,7 @@ Wireframes Pantallas: Aqui vemos la organización de secciones individuales que 
 
 ### 4.4.2. Web Applications Wireflow Diagrams.
 
-Los wireflow diagrams representan el flujo de interacción del usuario dentro de la aplicación, mostrando la navegación entre pantallas y las acciones que el usuario puede realizar en cada etapa. Estos diagramas permiten entender el recorrido del usuario (user flow), facilitando la identificación de puntos clave de interacción y mejorando la experiencia general del sistema. 
+Los wireflow diagrams representan el flujo de interacción del usuario dentro de la aplicación, mostrando la navegación entre pantallas y las acciones que el usuario puede realizar en cada etapa. Estos diagramas permiten entender el recorrido del usuario (user flow), facilitando la identificación de puntos clave de interacción y mejorando la experiencia general del sistema.
 
 <p align="center">
   <img src="assets/chapter-04/wireflowdiagram/WireFlows (1).png" alt="Wireframes">
@@ -417,27 +417,31 @@ Los wireflow diagrams representan el flujo de interacción del usuario dentro de
 
 En esta sección se presentan los Mock-ups de alta fidelidad de la plataforma ColdTrace. Estos diseños han sido elaborados en la plataforma Figma, siguiendo un sistema de diseño consistente que prioriza la legibilidad de datos críticos y la eficiencia operativa en entornos de logística y salud.
 
-![Dashboard](./assets/chapter-04/mockups/Dashboard.png)
+![Dashboard](assets/chapter-04/mockups/Dashboard.png)
 
 Dashboard Principal (Panel de Control): Es el nodo central de la aplicación. Utiliza un diseño de cuadrícula (Grid) que organiza la información mediante Tarjetas de KPI (indicadores clave de desempeño) que muestran el resumen de sensores activos, alertas pendientes y estados de flota. Los gráficos de líneas integrados permiten una visualización inmediata de las tendencias térmicas.
 
-![MonitoreoEnTiempoReal](./assets/chapter-04/mockups/MonitoreoEnTiempoReal.png)
+![MonitoreoEnTiempoReal](assets/chapter-04/mockups/MonitoreoEnTiempoReal.png)
 
 Detalle del Activo y Gráficos en Vivo: Pantalla dedicada al análisis profundo. Destaca un gráfico de área de alta precisión que muestra la fluctuación de temperatura y humedad en tiempo real. El diseño incluye paneles laterales con especificaciones técnicas del sensor y el historial de incidencias del activo seleccionado.
 
-![Activos](./assets/chapter-04/mockups/Activos.png)
+![Activos](assets/chapter-04/mockups/Activos.png)
 
 Gestión de Activos y Lista de Sensores: Presenta una interfaz de tabla avanzada con indicadores de estado codificados por colores (Verde: Estable / Rojo: Alerta). Permite acciones rápidas de filtrado y búsqueda, facilitando la administración de grandes volúmenes de dispositivos de telemetría.
 
-![AlertaseIncidencias](./assets/chapter-04/mockups/AlertaseIncidencias.png)
+![Transporte](assets/chapter-04/mockups/Transporte.png)
+
+Módulos de Gestión (Transporte y Formularios): Vistas diseñadas para la entrada de datos. Los formularios de "Registro de Unidad" y "Verificación de Calibración" siguen un flujo paso a paso para evitar la sobrecarga cognitiva, asegurando que el operador complete la documentación y firma digital sin errores.
+
+![AlertaseIncidencias](assets/chapter-04/mockups/AlertaseIncidencias.png)
 
 Modulo de Alertas e Incidencias: Presenta una lista priorizada de eventos térmicos y operativos. En la parte superior se visualizan filtros por estado: Abiertas, Reconocidas, Cerradas y Todas, permitiendo al usuario segmentar rápidamente los registros. La tabla principal muestra columnas de Severidad, Incidencia, Activo, Inicio, Asignado a, Estado y Acciones, brindando una visión clara del estado de cada alerta. Los registros con estado ABIERTA se resaltan en rojo para captar la atención del usuario de forma inmediata. Adicionalmente, se incluye un botón de Exportar en la esquina superior derecha y una barra de búsqueda global en el encabezado, facilitando la gestión y trazabilidad de incidencias.
 
-![ReportesyCumplimiento](./assets/chapter-04/mockups/ReportesyCumplimiento.png)
+![ReportesyCumplimiento](assets/chapter-04/mockups/ReportesyCumplimiento.png)
 
 Modulo Reportes y Cumplimiento: En la parte superior se presentan cuatro tarjetas de acceso rápido: Bitácora diaria, Cumplimiento sanitario, Mensual y Paquete auditoría, cada una con su respectiva acción principal (Generar, Exportar, Descargar o Preparar paquete). A continuación, se muestra una sección de Hallazgos automáticos de cumplimiento, donde el sistema detecta y notifica inconsistencias como lecturas faltantes, calibraciones vencidas o bitácoras sin firma, con la opción de resolverlas directamente. En la parte inferior, una tabla filtrable por tipo de reporte (Bitácoras, Sanitarios, Mensuales, Auditoría, Hallazgos) lista los documentos generados con sus columnas de Reporte, Tipo, Período, Generado, Tamaño y Acciones, permitiendo al usuario visualizar o descargar cada documento. Un botón "+ Generar reporte" en la esquina superior derecha facilita la creación de nuevos reportes de forma inmediata.
 
-![LoginSignUp](./assets/chapter-04/mockups/LoginSignUp.png)
+![LoginSignUp](assets/chapter-04/mockups/LoginSignUp.png)
 
 Portal de Autenticación (Login / Sign Up): Interfaces simplificadas y centradas en el usuario. El diseño minimiza las distracciones para asegurar un inicio de sesión rápido. Incluye validaciones visuales en tiempo real y flujos claros para el manejo de errores o recuperación de credenciales.
 
@@ -449,7 +453,7 @@ En esta sección se presenta la narrativa detallada de los diagramas de flujo de
 
 ### User Flow 1 : Login or Sing Up
 
-![LoginSignUp](./assets/chapter-04/userflowdiagram/LoginSign-up.png)
+![LoginSignUp](assets/chapter-04/userflowdiagram/LoginSign-up.png)
 
 1. Ciclo de Autenticación y Control de Acceso 
 
@@ -468,7 +472,7 @@ Como parte de la arquitectura de información para nuevos usuarios o perfiles in
 
 ### User Flow 2 : Monitores En Vivo
 
-![MonitoresenVivo](./assets/chapter-04/userflowdiagram/MonitoresenVivo.png)
+![MonitoresenVivo](assets/chapter-04/userflowdiagram/MonitoresenVivo.png)
 
 1. Segmento de Acceso y Supervisión General 
 
@@ -494,7 +498,7 @@ Una vez identificado el activo en crisis, se activa el flujo de mante
 
 ### User Flow 3 : Transporte
 
-![Transporte](./assets/chapter-04/userflowdiagram/Transporte.png)
+![Transporte](assets/chapter-04/userflowdiagram/Transporte.png)
 
 1. Acceso y Visibilidad Logística 
 
@@ -641,7 +645,7 @@ El tablero de diseño se encuentra disponible en Miro: <https://miro.com/app/boa
 
 ### 4.6.2. Software Architecture Context Diagram.
 
-El diagrama de contexto de ColdTrace muestra la plataforma como sistema central y presenta sus relaciones con los actores principales, los dispositivos IoT y los servicios externos necesarios para operar la solución. A partir de las user stories documentadas en el Capítulo III y de la delimitación realizada en el Design-Level Event Storming de la sección 4.6.1, se definen los siguientes bounded contexts: **Autenticación y gestión de cuenta**, **Gestión de Sensores**, **Monitoreo**, **Alertas**, **Reportes** y **Auditoría**.
+El diagrama de contexto de ColdTrace muestra la plataforma como sistema central y presenta sus relaciones con los actores principales, los dispositivos IoT y los servicios externos previstos por el diseño. La línea base pública usa el monolito modular ASP.NET Core; **Billing**, **AiAssistance** y los proveedores externos se documentan como alcance preparado en pull requests, pendiente de integración, configuración operacional y redespliegue.
 
 Las user stories se reflejan en el diagrama de la siguiente manera:
 
@@ -651,7 +655,7 @@ Las user stories se reflejan en el diagrama de la siguiente manera:
 - **Administrador de organización:** gestiona cuentas, perfiles, permisos y parámetros operativos.
 - **Auditor sanitario o responsable externo:** recibe reportes, bitácoras y evidencia exportable para sustentar cumplimiento.
 - **Sensores IoT y gateways:** envían lecturas de temperatura, humedad, conectividad y datos sincronizados después de periodos sin conexión.
-- **Servicios externos de correo, push, mensajería y pagos:** permiten recuperación de contraseña, confirmaciones comerciales, alertas críticas, escalamiento de incidencias y procesamiento de suscripciones.
+- **Servicios externos Google/Apple, OpenAI/Ollama y Stripe:** validan identidades externas, proporcionan el modelo de lenguaje detrás de la abstracción de IA y procesan Checkout, Customer Portal y webhooks de suscripción.
 
 <p align="center">
   <img src="assets/chapter-04/contextdiagram/contextdiagram.png" width="760">
@@ -665,11 +669,11 @@ Las user stories se reflejan en el diagrama de la siguiente manera:
 
 ### 4.6.3. Software Architecture Container Diagrams.
 
-El diagrama de contenedores muestra cómo ColdTrace se divide en sus principales aplicaciones, servicios y bases de datos. En esta vista se identifican la Landing Page, la Web Application, el API Gateway, el Telemetry Ingestion API, los servicios internos alineados a bounded contexts, sus repositorios de datos y los servicios externos requeridos por los flujos descritos en las user stories del Capítulo III y por las responsabilidades identificadas en el Design-Level Event Storming.
+El diagrama de contenedores representa la topología implementada: Landing Page estática, Frontend Web Application con Vue 3 y PrimeVue, una RESTful API ASP.NET Core y una base de datos MySQL en Google Cloud SQL. El backend se despliega como un único contenedor de aplicación en Cloud Run acompañado por el sidecar oficial de Cloud SQL Auth Proxy.
 
-Para esta propuesta, la arquitectura mantiene los bounded contexts definidos para ColdTrace en la sección 4.6.1 y adapta los contenedores a la tecnología proyectada del curso: aplicación web con Vue.js y PrimeVue, servicios internos con ASP.NET Core y C#, y documentación de servicios mediante OpenAPI/Swagger.
+La RESTful API es un **monolito modular**, no un conjunto de microservicios. Los bounded contexts comparten proceso y despliegue, pero conservan límites de código mediante carpetas y namespaces de Domain, Application, Infrastructure e Interfaces/REST. Los controladores son delgados y delegan en servicios de aplicación; los contratos externos se expresan con resources, commands y assemblers, siguiendo la estructura del Learning Center Platform de Aplicaciones Web.
 
-Cada bounded context mantiene su propia base de datos MySQL. Cuando un contexto necesita información de otro, la obtiene mediante APIs internas o eventos de integración, evitando que dos microservicios dependan directamente de las mismas tablas. Además, la evidencia hacia auditoría se centraliza a través del contexto de Auditoría, en lugar de exponer varios servicios internos directamente al actor externo.
+La persistencia usa un único AppDbContext, migraciones EF Core y un esquema MySQL. Las tablas y repositorios mantienen ownership por bounded context, pero no existen bases de datos ni llamadas HTTP internas separadas por módulo. El frontend consume directamente /api/v1 por HTTPS; por ello no se documentan un API Gateway ni una Telemetry Ingestion API independientes.
 
 <p align="center">
   <img src="assets/chapter-04/containerdiagram/containerdiagram.png" width="760">
@@ -683,9 +687,9 @@ Cada bounded context mantiene su propia base de datos MySQL. Cuando un contexto 
 
 ### 4.6.4. Software Architecture Components Diagrams.
 
-En esta sección se presenta la vista de componentes de ColdTrace por bounded context. Cada diagrama descompone el contenedor interno definido en la vista de contenedores y toma como base la separación de responsabilidades establecida en el Design-Level Event Storming. Además, muestra controladores, servicios de aplicación, servicios de dominio, repositorios, publicadores o consumidores de eventos y adaptadores externos.
+En esta sección se presenta la vista lógica de componentes por bounded context. Los diagramas fueron elaborados durante el diseño para separar controladores, servicios de aplicación, servicios de dominio, repositorios y adaptadores. En la implementación final esas piezas viven dentro del mismo contenedor ASP.NET Core y se comunican mediante llamadas en proceso, servicios compartidos o ACLs, no mediante una red de microservicios.
 
-Los diagramas mantienen la misma regla arquitectónica definida para la vista de contenedores: cada bounded context es dueño de su propia base de datos MySQL y las dependencias entre contextos se realizan mediante APIs internas o eventos de integración.
+Todos los repositorios EF Core usan el AppDbContext compartido y la misma base MySQL, manteniendo ownership modular por namespace y agregado. Las referencias visuales a bases o APIs por contexto deben interpretarse como límites lógicos del diseño, no como contenedores de despliegue independientes.
 
 - **Component Diagram - Account & Access Context:** muestra los componentes encargados de registro, inicio de sesión, recuperación de contraseña, perfil, roles, permisos y estado de suscripción.
 
@@ -757,7 +761,7 @@ Los diagramas mantienen la misma regla arquitectónica definida para la vista de
 
 En esta primera etapa se modela el dominio de ColdTrace con enfoque **DDD** y nomenclatura orientada a la futura implementación en C#. El objetivo es identificar las entidades, value objects conceptuales, clases abstractas, interfaces y tipos enumerados principales sin introducir detalles de infraestructura como repositorios, controladores, adapters o DTOs. A diferencia de la etapa 2, esta vista todavía no agrupa las clases dentro de paquetes por bounded context; solo presenta el modelo de clases y sus relaciones de dominio.
 
-Para mantener coherencia con la arquitectura de microservicios definida en la sección 4.6, las relaciones entre bounded contexts se representan mediante identificadores tipados como `OrganizationId`, `UserId`, `AssetId`, `SensorId`, `MeasurementId`, `AlertId`, `ReportId` y `AuditCaseId`, no como composiciones directas entre agregados de contextos distintos. Estos identificadores se tratan como value objects que envuelven valores `Guid`, manteniendo una nomenclatura compatible con la implementación proyectada en C#. Por ejemplo, `Alert` conserva `assetId`, `sensorId` y `measurementId`, mientras que `AlertRule` evalúa un `MeasurementEvaluationSnapshot`. Del mismo modo, `Report` consolida `ReadingSummary`, `AlertSummary` e `IncidentSummary` en lugar de consultar directamente objetos del contexto de Monitoreo o Alertas.
+Para mantener coherencia con el monolito modular definido en la sección 4.6, las relaciones entre bounded contexts se representan mediante identificadores y contratos, no como composiciones directas entre agregados de módulos distintos. El modelo conceptual usa identificadores tipados, mientras la implementación actual expone identificadores numéricos en rutas organization-scoped y recursos REST. Esta diferencia conserva el objetivo DDD del diseño sin afirmar que cada contexto sea un microservicio.
 
 Principales decisiones aplicadas en esta etapa:
 
@@ -768,7 +772,7 @@ Principales decisiones aplicadas en esta etapa:
 - **Reports:** evita acoplarse a las bases de datos de otros contextos mediante `ReadingSummary`, `AlertSummary` e `IncidentSummary`; sobre esa información genera `Report`, `DailyLog`, `MonthlyReport`, `ComplianceReport`, `ReportExport`, `Dashboard` y `Widget`.
 - **Audit:** centraliza la preparación de auditoría mediante `AuditCase`, `ComplianceCriterion`, `ComplianceFinding`, `EvidencePackage` y `EvidenceItem`.
 
-Se corrigieron inconsistencias del modelo base y de las historias de usuario: el gateway físico del dominio se denomina `EdgeGateway` para no confundirlo con el `API Gateway` ni con el `Telemetry Ingestion API`; cualquier referencia aislada a otro nombre de producto se interpreta como ColdTrace; `Asset` conserva `internalCode` y capacidad porque las historias de registro validan duplicados y capacidad; `Sensor` puede existir sin `assetId` ni `edgeGatewayId` antes de la vinculación; el contexto de alertas trabaja con snapshots de evaluación; el contexto de reportes no depende directamente de `Measurement` ni de `ThermalIncident`, sino de snapshots propios; y auditoría recibe paquetes de evidencia preparados, no reportes directos desde múltiples servicios internos.
+Se corrigieron inconsistencias del modelo base y de las historias de usuario: el gateway físico se implementa como Gateway; los dispositivos IoT pueden permanecer sin un activo asignado; assets y gateways comparten Location como base física; y lecturas, incidentes y reportes preservan trazabilidad mediante identificadores organization-scoped. Las capacidades de IA y billing se modelan como bounded contexts objetivo del mismo backend, pero sus cambios nuevos permanecen en pull requests y no se atribuyen a la revisión desplegada. El diagrama de clases conserva decisiones conceptuales más amplias, mientras el texto de implementación y despliegue distingue el código de la línea base y el trabajo en revisión.
 
 Para mejorar la legibilidad del diagrama, los tipos enumerados se mantienen como tipos de atributos, pero no se expanden como cajas independientes. Así se evita que estados como `AlertStatus`, `SensorStatus` o `ReportStatus` generen ruido visual y oculten las relaciones principales entre entidades, value objects, clases abstractas e interfaces.
 

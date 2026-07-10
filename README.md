@@ -85,7 +85,7 @@
 | :------ | :--------- | :-------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | AV1     | 25/04/2026 | Todos los integrantes | Primera versión formal del informe, correspondiente al avance AV1 del proyecto. Incluye la documentación inicial del producto, análisis del segmento objetivo, definición de requisitos, modelado del dominio, arquitectura del sistema, evidencias de implementación y artefactos de gestión del proyecto. |
 | AV2     | 19/06/2026 | Todos los integrantes | Versión desplegada del backend con avance significativo de la RESTful API, frontend actualizado, evidencias de ejecución, documentación Swagger/OpenAPI, despliegue en Cloud Run y videos de verificación. |
-| TB2     | 09/07/2026 | Todos los integrantes | Cierre funcional y documental del Sprint 4: contratos JWT, IA, OAuth/OIDC, SaaS y Stripe, paridad Vue/Angular, configuración segura de proveedores externos, corrección de arquitectura, trazabilidad Linear-GitHub y regeneración del informe final. |
+| TB2     | 09/07/2026 | Todos los integrantes | Alineación documental del Sprint 4: trazabilidad de pull requests JWT, IA, OAuth/OIDC, SaaS y Stripe; corrección de arquitectura; preparación de proveedores externos; registro de integración y redespliegue pendientes; y regeneración del informe final. |
 
 ---
 
@@ -131,19 +131,7 @@ Durante la entrega TB1, correspondiente al Sprint 2, el equipo se enfocó en el 
 
 La colaboración se organizó por bounded contexts funcionales: Mauricio Pajés lideró la identidad y acceso junto con la gestión de activos; Leonardo Delgado condujo el módulo de reportes y cumplimiento normativo; Jean Pool Arias asumió la configuración operativa; Santiago Vargas lideró el dashboard de monitoreo operacional; y Eduardo Velásquez lideró las alertas e incidencias. Todos los integrantes participaron como colaboradores en los módulos restantes, lo que permitió completar una aplicación funcional en un solo sprint.
 
-El equipo registró alrededor de 76 commits en el repositorio del frontend, con una distribución que refleja la participación activa de todos los miembros. La planificación se gestionó mediante Trello, y la integración continua se implementó con GitHub Actions hacia Vercel.
-
-<p align="center">
-  <img src="report/assets/common/collaboration-insights/av1-pulse-overview.png" width="900" alt="GitHub Pulse overview for TB1 collaboration insights">
-</p>
-
-*Figura 3. Vista general de actividad del repositorio durante el periodo correspondiente a TB1.*
-
-<p align="center">
-  <img src="report/assets/common/collaboration-insights/av1-contributors-commits.png" width="900" alt="GitHub contributors commit activity for TB1 collaboration insights">
-</p>
-
-*Figura 4. Registro de contribuciones por integrante en el repositorio del informe durante TB1.*
+La planificación se gestionó mediante Trello, y la integración continua se implementó con GitHub Actions hacia Vercel. La captura específica de GitHub Analytics correspondiente a TB1 está **pendiente de incorporación**; las imágenes de AV1 no se reutilizan como evidencia de esta entrega.
 
 ## AV2
 
@@ -153,37 +141,17 @@ La colaboración se distribuyó por áreas técnicas de la API: Mauricio Pajés 
 
 El equipo consolidó la arquitectura general del sistema mediante endpoints RESTful que cubrieron los bounded contexts definidos en el diseño del dominio. La documentación Swagger quedó publicada como fuente técnica de referencia, y las pruebas con Postman validaron la funcionalidad de los endpoints principales.
 
-<p align="center">
-  <img src="report/assets/common/collaboration-insights/av1-pulse-overview.png" width="900" alt="GitHub Pulse overview for AV2 collaboration insights">
-</p>
-
-*Figura 5. Vista general de actividad del repositorio durante el periodo correspondiente a AV2.*
-
-<p align="center">
-  <img src="report/assets/common/collaboration-insights/av1-contributors-commits.png" width="900" alt="GitHub contributors commit activity for AV2 collaboration insights">
-</p>
-
-*Figura 6. Registro de contribuciones por integrante en el repositorio del informe durante AV2.*
+La captura específica de GitHub Analytics correspondiente a AV2 está **pendiente de incorporación**; debe obtenerse del intervalo real de la entrega antes de presentarla como evidencia.
 
 ## TB2
 
-Durante la entrega TB2, correspondiente al Sprint 4, el equipo extendió ColdTrace con autenticación JWT, asistencia operativa con IA, autenticación Google/Apple, planes SaaS y facturación Stripe. En paralelo, se corrigieron contratos entre Vue y ASP.NET Core para reportes, incidencias, mantenimiento, telemetría y eliminaciones seguras. El trabajo se organizó mediante issues de Linear, ramas por historia y pull requests dirigidos a develop.
+Durante la entrega TB2, correspondiente al Sprint 4, el equipo preparó en ramas y pull requests cambios de autenticación JWT, asistencia operativa con IA, autenticación Google/Apple, planes SaaS y facturación Stripe. En paralelo, se trabajó en contratos entre Vue y ASP.NET Core para reportes, incidencias, mantenimiento, telemetría y eliminaciones seguras. El trabajo se organizó mediante issues de Linear, ramas por historia y pull requests dirigidos a develop; estos cambios no se presentan como integrados ni desplegados.
 
-El cierre técnico conserva el mismo resultado de producto que la versión Open Source: las rutas, payloads, estados HTTP y recorridos principales mantienen paridad, mientras la implementación usa los patrones del curso de Aplicaciones Web. El frontend se implementa con Vue 3 y PrimeVue; el backend es un monolito modular ASP.NET Core con bounded contexts, servicios de aplicación, repositorios, assemblers, EF Core y MySQL.
+La solución de Aplicaciones Web usa Vue 3 y PrimeVue en el frontend y un monolito modular ASP.NET Core con bounded contexts, servicios de aplicación, repositorios, assemblers, EF Core y MySQL en el backend. La evidencia de esta entrega se limita a los repositorios, issues y pull requests propios del curso.
 
-Las funciones de Google, Apple, OpenAI y Stripe requieren configuración externa además del código: clientes autorizados, redirect URIs, catálogo y webhook de Stripe, secretos en Google Secret Manager y un nuevo despliegue. Por esta razón, el informe distingue entre trabajo implementado en pull requests, trabajo integrado en develop, recursos actualmente desplegados y pasos operacionales todavía pendientes. Los videos y entrevistas se mantienen propios de Aplicaciones Web; solo comparten con Open Source su propósito y ubicación documental.
+Las funciones de Google, Apple, OpenAI y Stripe requieren configuración externa además del código: clientes autorizados, redirect URIs, catálogo y webhook de Stripe, secretos en Google Secret Manager y un nuevo despliegue. Por esta razón, el informe distingue entre trabajo preparado en pull requests, recursos actualmente desplegados y pasos operacionales todavía pendientes.
 
-<p align="center">
-  <img src="report/assets/common/collaboration-insights/av1-pulse-overview.png" width="900" alt="GitHub Pulse overview for TB2 collaboration insights">
-</p>
-
-*Figura 7. Vista general de actividad del repositorio durante el periodo correspondiente a TB2.*
-
-<p align="center">
-  <img src="report/assets/common/collaboration-insights/av1-contributors-commits.png" width="900" alt="GitHub contributors commit activity for TB2 collaboration insights">
-</p>
-
-*Figura 8. Registro de contribuciones por integrante en el repositorio del informe durante TB2.*
+La captura específica de GitHub Analytics correspondiente a TB2 está **pendiente de incorporación**; debe obtenerse del intervalo real de la entrega antes de presentarla como evidencia.
 
 ---
 
@@ -308,41 +276,41 @@ En los siguientes cuadros se describen las acciones realizadas y conclusiones de
 ### Criterio 5.c.1 — Trabaja en equipo para proporcionar liderazgo en forma conjunta
 
 <table class="student-outcome-evidence" border="1" style="width:100%; border-collapse: collapse;">
-<tr>  
-<th style="width:15%;">Criterio Específico</th>  
-<th style="width:42.5%;">Acciones Realizadas</th>  
-<th style="width:42.5%;">Conclusiones</th>  
-</tr>  
-<tr>  
-<td>  
-Trabaja en equipo para proporcionar liderazgo en forma conjunta  
-</td>  
-<td>  
-<strong>----------AV1----------</strong><br>  
-<strong>Leonardo Delgado:</strong> Lideró la corrección de contenido del informe y participó como colaborador en las demás secciones del Landing Page, aportando consistencia técnica y editorial al documento base del proyecto.<br><br>  
-<strong>Mauricio Pajés:</strong> Lideró la infraestructura del repositorio, la configuración de CI/CD, la base del Landing Page y las funcionalidades interactivas del Sprint 1. Su liderazgo técnico permitió establecer el entorno de desarrollo y despliegue desde la primera etapa.<br><br>  
-<strong>Jean Pool Arias:</strong> Lideró la sección de contenido del informe y desarrolló las secciones Hero y responsive del Landing Page, participando activamente en la construcción visual y estructural de la página inicial del producto.<br><br>  
-<strong>Eduardo Velásquez:</strong> Preparó el Sprint Planning 1 como planificador principal del primer sprint, distribuyendo las historias de usuario entre los integrantes y estableciendo el velocity del equipo. Desarrolló la navegación sticky y los formularios de registro e inicio de sesión.<br><br>  
+<tr>
+<th style="width:15%;">Criterio Específico</th>
+<th style="width:42.5%;">Acciones Realizadas</th>
+<th style="width:42.5%;">Conclusiones</th>
+</tr>
+<tr>
+<td>
+Trabaja en equipo para proporcionar liderazgo en forma conjunta
+</td>
+<td>
+<strong>----------AV1----------</strong><br>
+<strong>Leonardo Delgado:</strong> Lideró la corrección de contenido del informe y participó como colaborador en las demás secciones del Landing Page, aportando consistencia técnica y editorial al documento base del proyecto.<br><br>
+<strong>Mauricio Pajés:</strong> Lideró la infraestructura del repositorio, la configuración de CI/CD, la base del Landing Page y las funcionalidades interactivas del Sprint 1. Su liderazgo técnico permitió establecer el entorno de desarrollo y despliegue desde la primera etapa.<br><br>
+<strong>Jean Pool Arias:</strong> Lideró la sección de contenido del informe y desarrolló las secciones Hero y responsive del Landing Page, participando activamente en la construcción visual y estructural de la página inicial del producto.<br><br>
+<strong>Eduardo Velásquez:</strong> Preparó el Sprint Planning 1 como planificador principal del primer sprint, distribuyendo las historias de usuario entre los integrantes y estableciendo el velocity del equipo. Desarrolló la navegación sticky y los formularios de registro e inicio de sesión.<br><br>
 <strong>Santiago Enrique Vargas Alarcón:</strong> Lideró la corrección de contenido del informe y desarrolló la sección de demo del Landing Page, completando el formulario de contacto como punto de entrada para futuros clientes.<br><br>
 
-<strong>----------TB1----------</strong><br>  
-<strong>Leonardo Delgado:</strong> Lideró el bounded context de Reportes y Cumplimiento (EP006), desarrollando las vistas de bitácora diaria, historial operativo, exportación sanitaria, reporte mensual, detección de faltantes y evidencia para auditoría. Configuró el despliegue en Vercel.<br><br>  
-<strong>Mauricio Pajés:</strong> Lideró Identidad y Acceso (EP002), Gestión de Activos (EP003) y la infraestructura de despliegue del frontend en Vercel con json-server en Render. Planificó el Sprint 2 y coordinó Pull Requests hacia develop.<br><br>  
-<strong>Jean Pool Arias:</strong> Lideró Configuración Operativa y Mantenimiento (EP007), implementando rangos de seguridad, parámetros operativos y seguimiento de mantenimiento. Participó como colaborador en gestión de activos dentro del velocity planificado.<br><br>  
-<strong>Eduardo Velásquez:</strong> Lideró Alertas e Incidencias (EP005), desarrollando la creación de incidencias térmicas, notificaciones automáticas, escalamiento de alertas, reconocimiento de alertas críticas y registro de acciones correctivas.<br><br>  
+<strong>----------TB1----------</strong><br>
+<strong>Leonardo Delgado:</strong> Lideró el bounded context de Reportes y Cumplimiento (EP006), desarrollando las vistas de bitácora diaria, historial operativo, exportación sanitaria, reporte mensual, detección de faltantes y evidencia para auditoría. Configuró el despliegue en Vercel.<br><br>
+<strong>Mauricio Pajés:</strong> Lideró Identidad y Acceso (EP002), Gestión de Activos (EP003) y la infraestructura de despliegue del frontend en Vercel con json-server en Render. Planificó el Sprint 2 y coordinó Pull Requests hacia develop.<br><br>
+<strong>Jean Pool Arias:</strong> Lideró Configuración Operativa y Mantenimiento (EP007), implementando rangos de seguridad, parámetros operativos y seguimiento de mantenimiento. Participó como colaborador en gestión de activos dentro del velocity planificado.<br><br>
+<strong>Eduardo Velásquez:</strong> Lideró Alertas e Incidencias (EP005), desarrollando la creación de incidencias térmicas, notificaciones automáticas, escalamiento de alertas, reconocimiento de alertas críticas y registro de acciones correctivas.<br><br>
 <strong>Santiago Enrique Vargas Alarcón:</strong> Lideró el dashboard operacional (EP004, US039) y colaboró en las vistas de monitoreo de temperatura, humedad, historial de lecturas, detección fuera de rango y conectividad.<br><br>
 
-<strong>----------AV2----------</strong><br>  
-<strong>Leonardo Delgado:</strong> Lideró las APIs de Incidentes, Notificaciones y Reportes en el backend oficial, cubriendo los bounded contexts de seguimiento de eventos, generación de reportes consolidados y evidencia documental para auditorías.<br><br>  
-<strong>Mauricio Pajés:</strong> Lideró la fundación de la API, la autenticación, las APIs de organizaciones, usuarios, gateways y ubicaciones. Creó y estructuró la mayor parte de los issues del sprint, definiendo el alcance funcional del backend y distribuyendo responsabilidades entre los integrantes.<br><br>  
-<strong>Jean Pool Arias:</strong> Lideró la API de dispositivos IoT y lecturas de sensores, articulando los servicios que permiten el monitoreo de temperatura y humedad en tiempo real, la consulta de historiales y la detección de desviaciones.<br><br>  
-<strong>Eduardo Velásquez:</strong> Lideró las APIs de mantenimiento, servicio técnico y roles, incluyendo cronogramas de mantenimiento preventivo, solicitudes técnicas y asignación de permisos dentro de la plataforma.<br><br>  
+<strong>----------AV2----------</strong><br>
+<strong>Leonardo Delgado:</strong> Lideró las APIs de Incidentes, Notificaciones y Reportes en el backend oficial, cubriendo los bounded contexts de seguimiento de eventos, generación de reportes consolidados y evidencia documental para auditorías.<br><br>
+<strong>Mauricio Pajés:</strong> Lideró la fundación de la API, la autenticación, las APIs de organizaciones, usuarios, gateways y ubicaciones. Creó y estructuró la mayor parte de los issues del sprint, definiendo el alcance funcional del backend y distribuyendo responsabilidades entre los integrantes.<br><br>
+<strong>Jean Pool Arias:</strong> Lideró la API de dispositivos IoT y lecturas de sensores, articulando los servicios que permiten el monitoreo de temperatura y humedad en tiempo real, la consulta de historiales y la detección de desviaciones.<br><br>
+<strong>Eduardo Velásquez:</strong> Lideró las APIs de mantenimiento, servicio técnico y roles, incluyendo cronogramas de mantenimiento preventivo, solicitudes técnicas y asignación de permisos dentro de la plataforma.<br><br>
 <strong>Santiago Enrique Vargas Alarcón:</strong> Lideró la API de assets y configuración de activos, desarrollando servicios para la administración de activos refrigerados, configuración de parámetros operativos y vinculación con sensores IoT.<br><br>
 
-<strong>----------TB2----------</strong><br>  
-<strong>Mauricio Pajés:</strong> Lidera la autenticación JWT del backend, extendiendo la seguridad de la API con emisión y validación de tokens. <strong>Leonardo Delgado:</strong> Lidera el diseño del servicio de asistencia operativa basada en IA. <strong>Jean Pool Arias:</strong> Lidera la integración del frontend con el nuevo backend JWT. <strong>Eduardo Velásquez:</strong> Lidera los planes y facturación SaaS. <strong>Santiago Enrique Vargas Alarcón:</strong> Lidera la documentación técnica y el despliegue actualizado.
-</td>  
-<td>  
+<strong>----------TB2----------</strong><br>
+<strong>Mauricio Pajés:</strong> Lidera el pull request de autenticación JWT del backend. <strong>Leonardo Delgado:</strong> Lidera la preparación del servicio de asistencia operativa basada en IA. <strong>Jean Pool Arias:</strong> Lidera el pull request de integración del frontend con la sesión JWT. <strong>Eduardo Velásquez:</strong> Lidera la preparación de planes y facturación SaaS. <strong>Santiago Enrique Vargas Alarcón:</strong> Lidera la documentación técnica y el plan de redespliegue. Estos aportes permanecen en revisión y no acreditan un despliegue final.
+</td>
+<td>
 <strong>----------AV1----------</strong><br>
 El equipo lideró de forma conjunta el desarrollo del Landing Page de ColdTrace, distribuyendo el liderazgo por artefactos: infraestructura técnica, contenido editorial, secciones interactivas, formularios y despliegue. Cada integrante asumió un rol de liderazgo en su área y colaboró en las demás, demostrando capacidad para trabajar de manera coordinada, establecer un entorno de desarrollo funcional desde el primer sprint y superar los logros planteados a nivel de investigación, diseño UX, modelado del dominio y arquitectura del sistema.
 <br><br>
@@ -353,49 +321,49 @@ El liderazgo se trasladó a módulos funcionales de la frontend web application.
 El liderazgo conjunto se evidenció en la construcción del backend real y su despliegue en Google Cloud Run. La distribución por APIs permitió que cada integrante condujera un área técnica específica — fundación de la API, dispositivos IoT, assets, mantenimiento, incidentes y reportes — mientras el equipo avanzaba de forma coordinada hacia una solución integrada con persistencia en Cloud SQL, documentación Swagger y entorno cloud. El liderazgo se sostuvo mediante la creación y planificación de issues, la distribución de responsabilidades y la integración continua de ramas.
 <br><br>
 <strong>----------TB2----------</strong><br>
-El equipo extendió ColdTrace con identidad segura (JWT), asistencia operativa basada en IA y capacidades SaaS de suscripción. El liderazgo se mantuvo distribuido: cada integrante condujo un área específica mientras colaboraba en las demás, demostrando capacidad para liderar en todas las actividades del proyecto y trabajar de manera coordinada entre frontend, backend, documentación y despliegue. El informe final consolidó todas las evidencias en una narrativa técnica coherente y verificable.
-</td>  
-</tr>  
+El equipo preparó pull requests para identidad segura (JWT), asistencia operativa basada en IA y capacidades SaaS de suscripción. El liderazgo se mantuvo distribuido: cada integrante condujo un área específica mientras colaboraba en las demás, trabajando de manera coordinada entre frontend, backend y documentación. El informe distingue esta evidencia de desarrollo de la integración, configuración externa y redespliegue que continúan pendientes.
+</td>
+</tr>
 </table>
 
 ### Criterio 5.c.2 — Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos
 
 <table class="student-outcome-evidence" border="1" style="width:100%; border-collapse: collapse;">
-<tr>  
-<th style="width:15%;">Criterio Específico</th>  
-<th style="width:42.5%;">Acciones Realizadas</th>  
-<th style="width:42.5%;">Conclusiones</th>  
-</tr>  
-<tr>  
-<td>  
-Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos  
-</td>  
-<td>  
-<strong>----------AV1----------</strong><br>  
-<strong>Leonardo Delgado:</strong> Planificó la corrección de contenido del informe, preparó preguntas para entrevistas y revisó la consistencia del documento, estableciendo un proceso de revisión que el equipo mantuvo durante las siguientes etapas.<br><br>  
-<strong>Mauricio Pajés:</strong> Planificó la infraestructura del repositorio, distribuyó responsabilidades por secciones del Landing Page y coordinó la integración de contribuciones mediante Pull Requests, asegurando que cada miembro pudiera trabajar de forma paralela.<br><br>  
-<strong>Jean Pool Arias:</strong> Coordinó los aportes de contenido del informe y participó en la planificación de las secciones visuales del Landing Page, organizando el trabajo en tareas concretas y verificables dentro del sprint.<br><br>  
-<strong>Eduardo Velásquez:</strong> Preparó el Sprint Planning 1, distribuyendo las historias de usuario entre los integrantes y estableciendo el velocity del equipo.<br><br>  
+<tr>
+<th style="width:15%;">Criterio Específico</th>
+<th style="width:42.5%;">Acciones Realizadas</th>
+<th style="width:42.5%;">Conclusiones</th>
+</tr>
+<tr>
+<td>
+Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos
+</td>
+<td>
+<strong>----------AV1----------</strong><br>
+<strong>Leonardo Delgado:</strong> Planificó la corrección de contenido del informe, preparó preguntas para entrevistas y revisó la consistencia del documento, estableciendo un proceso de revisión que el equipo mantuvo durante las siguientes etapas.<br><br>
+<strong>Mauricio Pajés:</strong> Planificó la infraestructura del repositorio, distribuyó responsabilidades por secciones del Landing Page y coordinó la integración de contribuciones mediante Pull Requests, asegurando que cada miembro pudiera trabajar de forma paralela.<br><br>
+<strong>Jean Pool Arias:</strong> Coordinó los aportes de contenido del informe y participó en la planificación de las secciones visuales del Landing Page, organizando el trabajo en tareas concretas y verificables dentro del sprint.<br><br>
+<strong>Eduardo Velásquez:</strong> Preparó el Sprint Planning 1, distribuyendo las historias de usuario entre los integrantes y estableciendo el velocity del equipo.<br><br>
 <strong>Santiago Enrique Vargas Alarcón:</strong> Ejecutó la sección de demo del Landing Page dentro del plazo establecido, cumpliendo con los criterios de aceptación y manteniendo la línea de trabajo acordada por el equipo.<br><br>
 
-<strong>----------TB1----------</strong><br>  
-<strong>Leonardo Delgado:</strong> Descompuso el bounded context EP006 en tasks concretos, completó todos los entregables de reportes y cumplimiento, y coordinó la integración del despliegue en Vercel durante el Sprint 2.<br><br>  
-<strong>Mauricio Pajés:</strong> Planificó el Sprint 2, distribuyó responsabilidades por bounded context, coordinó Pull Requests hacia develop y mantuvo la infraestructura de despliegue operativa durante todo el sprint.<br><br>  
-<strong>Jean Pool Arias:</strong> Organizó las tareas de EP003 y EP007 dentro del velocity planificado, completando las funcionalidades de configuración operativa y mantenimiento en el tiempo establecido.<br><br>  
-<strong>Eduardo Velásquez:</strong> Participó en la planificación del sprint y ejecutó las funcionalidades de alertas e incidencias de forma estructurada, cumpliendo con los criterios de aceptación de cada historia de usuario asignada.<br><br>  
+<strong>----------TB1----------</strong><br>
+<strong>Leonardo Delgado:</strong> Descompuso el bounded context EP006 en tasks concretos, completó todos los entregables de reportes y cumplimiento, y coordinó la integración del despliegue en Vercel durante el Sprint 2.<br><br>
+<strong>Mauricio Pajés:</strong> Planificó el Sprint 2, distribuyó responsabilidades por bounded context, coordinó Pull Requests hacia develop y mantuvo la infraestructura de despliegue operativa durante todo el sprint.<br><br>
+<strong>Jean Pool Arias:</strong> Organizó las tareas de EP003 y EP007 dentro del velocity planificado, completando las funcionalidades de configuración operativa y mantenimiento en el tiempo establecido.<br><br>
+<strong>Eduardo Velásquez:</strong> Participó en la planificación del sprint y ejecutó las funcionalidades de alertas e incidencias de forma estructurada, cumpliendo con los criterios de aceptación de cada historia de usuario asignada.<br><br>
 <strong>Santiago Enrique Vargas Alarcón:</strong> Completó las tareas del dashboard operacional y contribuyó al Sprint Goal, manteniendo la colaboración con los demás integrantes en las vistas de monitoreo.<br><br>
 
-<strong>----------AV2----------</strong><br>  
-<strong>Leonardo Delgado:</strong> Ejecutó issues de incidentes, notificaciones y reportes, coordinando su integración con el contrato REST del backend y documentando los endpoints mediante Swagger.<br><br>  
-<strong>Mauricio Pajés:</strong> Organizó issues técnicos del Sprint 3, alineó ramas hacia develop/main y coordinó hotfixes de integración, CORS, base de datos y deployment en Google Cloud Run.<br><br>  
-<strong>Jean Pool Arias:</strong> Ejecutó las tareas de dispositivos IoT y sensor readings, colaborando en la continuidad entre telemetría, monitoreo y evidencias del informe.<br><br>  
-<strong>Eduardo Velásquez:</strong> Ejecutó tareas de mantenimiento, servicio técnico y roles, además de apoyar la incorporación de evidencias de ejecución y documentación en el informe.<br><br>  
+<strong>----------AV2----------</strong><br>
+<strong>Leonardo Delgado:</strong> Ejecutó issues de incidentes, notificaciones y reportes, coordinando su integración con el contrato REST del backend y documentando los endpoints mediante Swagger.<br><br>
+<strong>Mauricio Pajés:</strong> Organizó issues técnicos del Sprint 3, alineó ramas hacia develop/main y coordinó hotfixes de integración, CORS, base de datos y deployment en Google Cloud Run.<br><br>
+<strong>Jean Pool Arias:</strong> Ejecutó las tareas de dispositivos IoT y sensor readings, colaborando en la continuidad entre telemetría, monitoreo y evidencias del informe.<br><br>
+<strong>Eduardo Velásquez:</strong> Ejecutó tareas de mantenimiento, servicio técnico y roles, además de apoyar la incorporación de evidencias de ejecución y documentación en el informe.<br><br>
 <strong>Santiago Enrique Vargas Alarcón:</strong> Ejecutó tareas de assets y asset settings, aportando a la gestión de parámetros operativos y validación de flujos con la API, documentando los endpoints en Swagger.<br><br>
 
-<strong>----------TB2----------</strong><br>  
-<strong>Mauricio Pajés:</strong> Planificó el Sprint 4, coordinó la trazabilidad Linear-GitHub y trabajó en la alineación de JWT, IA, OAuth, billing y frontend. <strong>Leonardo Delgado:</strong> aportó al servicio de asistencia con IA. <strong>Jean Pool Arias:</strong> participó en la integración frontend-backend. <strong>Eduardo Velásquez:</strong> aportó al modelo de planes y facturación SaaS. <strong>Santiago Enrique Vargas Alarcón:</strong> contribuyó con documentación y despliegue. Las responsabilidades se verifican mediante los issues, commits y pull requests de cada repositorio.
-</td>  
-<td>  
+<strong>----------TB2----------</strong><br>
+<strong>Mauricio Pajés:</strong> Planificó el Sprint 4, coordinó la trazabilidad Linear-GitHub y trabajó en la alineación de JWT, IA, OAuth, billing y frontend. <strong>Leonardo Delgado:</strong> aportó al servicio de asistencia con IA. <strong>Jean Pool Arias:</strong> participó en el pull request de integración frontend-backend. <strong>Eduardo Velásquez:</strong> aportó al modelo de planes y facturación SaaS. <strong>Santiago Enrique Vargas Alarcón:</strong> contribuyó con documentación y preparación del redespliegue. Las responsabilidades se verifican mediante los issues, commits y pull requests de cada repositorio.
+</td>
+<td>
 <strong>----------AV1----------</strong><br>
 El equipo creó un entorno colaborativo desde la primera etapa al dividir investigación, UX, modelado y Landing Page en responsabilidades claras. La planificación se realizó mediante Trello y GitHub, con Pull Requests y ramas feature que permitieron integrar contribuciones de los cinco miembros sin conflicto. El equipo demostró disposición para escuchar opiniones, recibir retroalimentación y mantener una comunicación efectiva durante todo el sprint, estableciendo una base documental sólida y un entorno de desarrollo funcional que facilitó la continuidad del proyecto.
 <br><br>
@@ -407,8 +375,8 @@ La colaboración se reflejó en la planificación por APIs, integración con Clo
 <br><br>
 <strong>----------TB2----------</strong><br>
 El equipo estableció metas finales de implementación, revisión cruzada y corrección documental. Linear concentró el backlog y GitHub registró una rama y un pull request por historia técnica o funcional. El informe conserva como pendientes únicamente las actividades que requieren evidencia humana o cuentas externas, como entrevistas faltantes, evaluación heurística, credenciales de proveedores y redespliegue final; no las presenta como resultados ejecutados. Esta separación permite evaluar con claridad qué está integrado, qué está en revisión y qué depende de una acción operacional del equipo.
-</td>  
-</tr>  
+</td>
+</tr>
 </table>
 
 ---
@@ -436,7 +404,7 @@ Nuestra visión es convertirnos en la plataforma de referencia en moni
 | ![LeonardoFoto](report/assets/chapter-01/team/Leonardo.png)  | Leonardo Sebastian Delgado Arriola   | Ingenieria de Software | C++, HTML, CSS, JS, Vue, MySQL, MongoDB, Git                                                                        |
 |     ![JeanFoto](report/assets/chapter-01/team/Jean.png)      | Jean Pool Alexander Arias Tasayco    | Ingenieria de Software | Java, Html, Css, JavaScript, Angular, Vue, Node.js, TypeScript, TailwindCss, Spring, C++, Python                    |
 | ![SantiagoFoto](report/assets/chapter-01/team/Santiago.jpeg) | Santiago Enrique Vargas Alarcon      | Ingenieria de Software | C++, HTML, CSS, MySQL, Python (basics), C# (basics)                                                                 |
-| ![MauricioFoto](report/assets/chapter-01/team/Mauricio.jpeg) | Mauricio Pajés                       | Ingenieria de Software | C++ y Python, y conocimientos en diseño y patrones de software, PostgreSQL y MongoDB, Java ,Spring Boot y  Node.js. |
+| ![MauricioFoto](report/assets/chapter-01/team/Mauricio.jpeg) | Mauricio Pajés                       | Ingenieria de Software | C++ y Python, y conocimientos en diseño y patrones de software, PostgreSQL, MongoDB, Java y Node.js.                |
 |  ![EduardoFoto](report/assets/chapter-01/team/Eduardo.png)   | Eduardo David Velasquez Laquihuanaco | Ingenieria de Software | C++, Java, JavaScript, HTML, CSS, SQL Server, MongoDB, Git                                                          |
 
 ## 1.2 Solution Profile
@@ -568,13 +536,13 @@ Para el desarrollo de ColdTrace, se ha identificado competidores que ofrecen 
 | Amenazas                                              | Que empresas como Zabarburu desarrollen su propia plataforma digital o se alíen con otros proveedores de software.                                                           | Startups ágiles que utilizan sensores IoT genéricos a una fracción de su costo.                                                                                                                                                                                                            | Incremento de costos de importación de repuestos y componentes de refrigeración.                             | Plataformas de software que integran múltiples marcas de sensores, desplazando su software propietario     |                                                                |     |
 ### 2.1.2 Estrategias y tácticas frente a competidores
 
-Para enfrentar a estos competidores, FrostGuard aplicará las siguientes estrategias y tácticas enfocadas en las debilidades detectadas. 
+Para enfrentar a estos competidores, FrostGuard aplicará las siguientes estrategias y tácticas enfocadas en las debilidades detectadas.
 
-- Estrategias de Diferenciación por Accesibilidad: Mientras que AKO y Dickson requieren compra de hardware costoso, FrostGuard ofrecerá un modelo de suscripción mensual que incluye el acceso a la plataforma, facilitando que minimarkets y restaurantes adopten la tecnología sin descapitalizarse. 
+- Estrategias de Diferenciación por Accesibilidad: Mientras que AKO y Dickson requieren compra de hardware costoso, FrostGuard ofrecerá un modelo de suscripción mensual que incluye el acceso a la plataforma, facilitando que minimarkets y restaurantes adopten la tecnología sin descapitalizarse.
 
-- Táctica de Alertas Preventivas: A diferencia de los registros manuales de Zabarburu o los datos "offline" de Dickson, nuestra plataforma enviará notificaciones automáticas al móvil del usuario ante cualquier falla, permitiendo salvar la mercadería antes de que se pierda. 
+- Táctica de Alertas Preventivas: A diferencia de los registros manuales de Zabarburu o los datos "offline" de Dickson, nuestra plataforma enviará notificaciones automáticas al móvil del usuario ante cualquier falla, permitiendo salvar la mercadería antes de que se pierda.
 
-- Estrategia de Enfoque Normativo: Aprovecharemos la debilidad de los competidores internacionales en el conocimiento de la burocracia local para ofrecer reportes de trazabilidad que cumplan específicamente con los formatos y exigencias de las inspecciones de DIGESA y MINSA en el Perú. 
+- Estrategia de Enfoque Normativo: Aprovecharemos la debilidad de los competidores internacionales en el conocimiento de la burocracia local para ofrecer reportes de trazabilidad que cumplan específicamente con los formatos y exigencias de las inspecciones de DIGESA y MINSA en el Perú.
 
 - Táctica de Diseño Inclusivo: Desarrollaremos una interfaz web (Dashboard) extremadamente sencilla e intuitiva (UX), permitiendo que cualquier operario de almacén pueda entender el estado de la cadena de frío sin necesidad de ser un ingeniero en refrigeración.
 ---
@@ -647,7 +615,7 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 - **URL de grabación:** [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQC5SLu3pgY6S5eNUkOt9uyaAa8jPHO6DP0PwkxE8ClfFCU?e=NkAjlP](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQC5SLu3pgY6S5eNUkOt9uyaAa8jPHO6DP0PwkxE8ClfFCU?e=NkAjlP)
 
 > **Resumen de la entrevista**
-> 
+>
 > Jean Pool administra un minimarket familiar que comercializa lácteos, embutidos, bebidas frías y productos congelados. El control de la temperatura en sus equipos se realiza de forma manual, revisando los indicadores de las refrigeradoras o inspeccionando visualmente el estado de los productos, sin contar con alertas automáticas ni historial digital de mediciones. Las fallas suelen originarse por cortes de luz, puertas mal cerradas o problemas técnicos en los equipos, y normalmente se detectan cuando la mercadería ya está en riesgo. El entrevistado señala que estas incidencias generan pérdidas económicas y desorden operativo, ya que debe mover productos entre equipos o recurrir a soporte técnico de forma reactiva. Valora especialmente la posibilidad de recibir alertas en tiempo real y consultar un historial simple desde el celular, aunque advierte que el costo y la facilidad de uso serán factores decisivos para adoptar una solución como ColdTrace en un negocio pequeño.
 
 ---
@@ -667,7 +635,7 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 - **URL de grabación:** [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323350_upc_edu_pe/IQCqkr-aHZRMQJ4asJYslxzNATYEJLIw5vyYjCGVZpJhyQE?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=E8Wvkf](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323350_upc_edu_pe/IQCqkr-aHZRMQJ4asJYslxzNATYEJLIw5vyYjCGVZpJhyQE?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=E8Wvkf)
 
 > **Resumen de la entrevista**
-> 
+>
 > Durante la entrevista se presentó FrostGuard, una startup enfocada en ofrecer ColdTrace, una plataforma web de monitoreo inteligente de la cadena de frío para la industria alimentaria. El entrevistado, Matías Carrillo, de 19 años y residente de Bellavista, comentó que en su negocio maneja productos lácteos, carnes, embutidos, bebidas refrigeradas y productos congelados como pollo y mariscos. Actualmente controlan la temperatura de forma manual revisando termómetros varias veces al día, y las variaciones de temperatura suelen ocurrir algunas veces al mes por cortes de energía o fallas en los equipos. Estas fallas generan pérdidas de productos, gastos económicos y problemas con normas sanitarias. Cuando ocurre un problema, revisan el equipo, trasladan los productos a otra unidad y llaman a un técnico. También mencionó que una solución tecnológica sería útil para prevenir pérdidas y tener mayor control en tiempo real. Entre las funcionalidades más valiosas destacó el monitoreo en tiempo real, el historial de temperatura y los reportes de incidencias, esperando una plataforma fácil de usar, confiable y útil para auditorías y control.
 
 ---
@@ -684,20 +652,20 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 |**Residencia / ubicación:** Callao|**Software especializado utilizado:** Ninguno|
 
 - **Duración:** 3:51
-    
+
 - **URL de grabación:** [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323350_upc_edu_pe/IQCqkr-aHZRMQJ4asJYslxzNATYEJLIw5vyYjCGVZpJhyQE?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=TcHSJQ](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323350_upc_edu_pe/IQCwTuQrPyIgRq040cbclhPqAfX8tnqEC6IFJJJ84kIgL6U?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=TcHSJQ)
-    
+
 
 > **Resumen de la entrevista**
-> 
+>
 > El entrevistado, Miguel Rodríguez, de 22 años y residente del Callao, explicó que trabaja con productos como lácteos, carnes, embutidos, bebidas refrigeradas y alimentos congelados como pollo y mariscos. Actualmente, el control de temperatura se realiza de forma manual mediante la revisión de termómetros varias veces al día. Indicó que los problemas de refrigeración suelen presentarse aproximadamente una vez al mes, principalmente por fallas eléctricas o daños en los equipos, lo que puede generar pérdidas de productos, costos adicionales y sanciones sanitarias.
-> 
+>
 > Cuando ocurre una incidencia, el personal inspecciona el equipo, traslada los productos a otra unidad disponible y contacta a un técnico especializado. Generalmente, estos problemas se detectan durante revisiones rutinarias o cuando ya hay señales de deterioro en los productos.
-> 
+>
 > El entrevistado señaló que sí han considerado implementar tecnología para mejorar el control y anticiparse a fallas. Sin embargo, mencionó como principales dificultades la inversión inicial, la capacitación del personal y la adaptación al sistema.
-> 
+>
 > Finalmente, destacó que las funcionalidades más valiosas serían las alertas automáticas, el monitoreo constante, el registro de temperaturas y los reportes de incidencias. Espera una plataforma sencilla, confiable y útil para mejorar el control interno, cumplir auditorías y reducir pérdidas.
-> 
+>
 
 **Segmento 2: Responsables de operaciones, calidad o logística en negocios con cadena de frío**
 
@@ -716,11 +684,11 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 - **URL de grabación:** [https://1drv.ms/v/c/470edfbbf4f38077/IQCRg4LcvetaRLbLebLPf0QWAR3HOtvvikDBCQaQ68PDMBs?e=tNMWES](https://1drv.ms/v/c/470edfbbf4f38077/IQCRg4LcvetaRLbLebLPf0QWAR3HOtvvikDBCQaQ68PDMBs?e=tNMWES)
 
 > **Resumen de la entrevista** El entrevistado, estudiante de Ingeniería Industrial de Lima, señala que el principal problema en la supervisión de la cadena de frío es la dependencia del factor humano, ya que el monitoreo se realiza de forma manual mediante hojas de registro en papel o Excel, sin ningún mecanismo de verificación en tiempo real. Esta situación se agrava durante los turnos nocturnos, fines de semana y en las rutas de transporte, donde la supervisión es prácticamente inexistente entre el punto de origen y el destino.
-> 
+>
 > Respecto a la confiabilidad del proceso actual, el entrevistado la considera baja, dado que los datos registrados dependen del criterio y la disciplina de cada operario, sin posibilidad de auditar su exactitud. Las incidencias se gestionan de manera informal, principalmente a través de WhatsApp o llamadas directas, sin protocolos estandarizados, lo que genera respuestas inconsistentes según quién esté disponible en el momento.
-> 
+>
 > En cuanto a soluciones tecnológicas, indica que nunca se han evaluado formalmente debido al costo inicial percibido y a la resistencia de la gerencia hacia herramientas desconocidas, sumado a una cultura organizacional de conformidad con los métodos tradicionales. Sin embargo, reconoce que sí existen pérdidas que no se contabilizan correctamente.
-> 
+>
 > Finalmente, el entrevistado identifica como valor clave de una solución digital la generación automática de reportes con historial de temperaturas, fechas y acciones correctivas, que es exactamente lo que exigen las inspecciones de DIGESA y MINSA. Considera que una plataforma accesible mediante suscripción mensual, con interfaz simple y reportes pre-formateados, tendría alta viabilidad de adopción en su organización.
 
 ### Entrevista N.° 2
@@ -738,11 +706,11 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 - **URL de grabación:** [https://1drv.ms/v/c/470edfbbf4f38077/IQCRg4LcvetaRLbLebLPf0QWAR3HOtvvikDBCQaQ68PDMBs?e=tNMWES](https://1drv.ms/v/c/470edfbbf4f38077/IQCRg4LcvetaRLbLebLPf0QWAR3HOtvvikDBCQaQ68PDMBs?e=tNMWES)
 
 > **Resumen de la entrevista**
-> 
+>
 > El entrevistado, estudiante de Ingeniería Industrial de Lima, destaca que la falta de visibilidad en tiempo real es el problema central de la cadena de frío, agravado por registros manuales poco confiables donde los operarios suelen completar datos estimados al final del turno. Identifica el transporte, los cambios de turno y las épocas de alta demanda como los puntos de mayor riesgo operativo.
-> 
+>
 > Respecto a la gestión de incidencias, señala que no existe un protocolo formal establecido, resolviéndose cada situación según el criterio de quien esté disponible y sin documentación adecuada. En cuanto a soluciones tecnológicas, menciona que el alto costo percibido y la falta de tiempo para investigar alternativas accesibles son las principales razones por las que las empresas descartan la adopción.
-> 
+>
 > Finalmente, el entrevistado considera que una solución viable debe ser económica, intuitiva y capaz de generar reportes listos para inspecciones de DIGESA sin procesamiento adicional, esperando como beneficios concretos la reducción de pérdidas no contabilizadas y la disponibilidad inmediata de evidencia ante auditorías sanitarias.
 
 ### Entrevista N.° 3
@@ -760,13 +728,13 @@ Segmento 2: Responsables de operaciones, calidad o logística en negoci
 - **URL de grabación:** [https://1drv.ms/v/c/470edfbbf4f38077/IQCRg4LcvetaRLbLebLPf0QWAR3HOtvvikDBCQaQ68PDMBs?e=tNMWES](https://1drv.ms/v/c/470edfbbf4f38077/IQCRg4LcvetaRLbLebLPf0QWAR3HOtvvikDBCQaQ68PDMBs?e=tNMWES)
 
 > **Resumen de la entrevista**
-> 
+>
 > El entrevistado, estudiante de Ingeniería Industrial de Lima, señala que la ausencia de automatización es el problema central, ya que el monitoreo queda supeditado a la carga de trabajo del operario, generando datos imprecisos sin ningún mecanismo de verificación. Identifica el transporte nocturno y los periodos sin personal como los momentos de mayor riesgo, donde una falla puede pasar desapercibida durante horas.
-> 
+>
 > Respecto a la gestión de incidencias, confirma la ausencia de protocolos formales, resolviéndose cada situación por WhatsApp según el criterio del jefe disponible. La adopción tecnológica no se ha explorado formalmente debido a la percepción generalizada de alto costo y complejidad de implementación.
-> 
+>
 > Finalmente, el entrevistado es claro en que una solución viable debe ser económica, operable sin capacitación extensa y capaz de generar automáticamente el historial de temperaturas requerido por DIGESA, esperando como resultado concreto pasar de una gestión reactiva a una preventiva.
-> 
+>
 ### 2.2.3 Análisis de entrevistas
 
 El análisis de entrevistas nos permite profundizar en la comprensión de las necesidades, deseos y comportamientos de nuestros usuarios, lo que a su vez informa la toma de decisiones en el diseño y desarrollo de productos o servicios orientados al usuario.
@@ -780,7 +748,7 @@ El análisis de entrevistas nos permite profundizar en la comprensión de las ne
 
 Características comunes: 
 
-Interés en la virtualidad: Todos expresan un claro entusiasmo por los beneficios potenciales al implementar una solución de monitoreo digital, siempre y cuando, no requiera una inversión inicial o algún período de prueba que los pueda convencer. 
+Interés en la virtualidad: Todos expresan un claro entusiasmo por los beneficios potenciales al implementar una solución de monitoreo digital, siempre y cuando, no requiera una inversión inicial o algún período de prueba que los pueda convencer.
 
 Importancia de herramientas y características esenciales: Resaltan la importancia de herramientas como las alertas automáticas ante una falla de temperatura. 
 
@@ -1220,11 +1188,11 @@ Esta sección define los lineamientos de estilo que aseguran una identidad visua
 
 ### 4.1.1. General Style Guidelines.
 
-**Brand Overview** 
+**Brand Overview**
 
 Se ha seleccionado la propuesta basada en un escudo térmico como logo definitivo. Esta elección responde a una estrategia de marca diseñada para transmitir seguridad alimentaria y protección. El isotipo fusiona un escudo (protección), la inicial "F" con trazos fluidos (logística) y ondas internas que simbolizan los datos de los sensores IoT y el flujo de aire frío.
 
-**Typography** 
+**Typography**
 
 Hemos seleccionado cuidadosamente estas tipografías para ColdTrace, buscando un equilibrio armónico entre claridad, profesionalismo y modernidad que refuerce nuestros valores de eficiencia, monitoreo inteligente y trazabilidad precisa. La combinación de Poppins para títulos e Inter (o Roboto) para textos técnicos potencia la legibilidad en web y móvil, proyecta una identidad tecnológica y accesible, y acompaña con coherencia los flujos clave del _dashboard_, la gestión de sensores y la resolución de incidentes, asegurando una experiencia consistente, robusta y fácil de usar en toda la plataforma.
 
@@ -1377,10 +1345,10 @@ Se aplica una organización visual jerárquica y funcional. En la Landing Page, 
 
 **Organización de la Landing Page:**
 
-*Encabezado (Header):*  
+*Encabezado (Header):*
 Incluye el logotipo de ColdTrace, enlaces de navegación principales, selector de idioma y accesos a autenticación. Su función es mantener disponibles las rutas de mayor valor durante todo el recorrido.
 
-*Sección Introductoria (Hero):*  
+*Sección Introductoria (Hero):*
 Presenta la propuesta de valor del producto: centralizar la infraestructura de almacenamiento en frío en una plataforma inteligente con monitoreo en tiempo real, alertas y trazabilidad.
 
 *Beneficios:*
@@ -1389,13 +1357,13 @@ Presenta la propuesta de valor del producto: centralizar la infraestructura de a
 - Historial descargable para trazabilidad.
 - Reportes listos para auditorías sanitarias.
 
-*Cómo Funciona:*  
+*Cómo Funciona:*
 Organiza el flujo de uso en pasos simples: configurar sensores y rangos, monitorear activos en tiempo real y auditar mediante reportes exportables.
 
-*Casos de uso:*  
+*Casos de uso:*
 Explica escenarios asociados a cámaras frigoríficas, almacenes, transporte refrigerado, minimarkets y responsables de operaciones que necesitan controlar la cadena de frío.
 
-*Pie de Página (Footer):*  
+*Pie de Página (Footer):*
 Agrupa enlaces secundarios relacionados con producto, soporte, recursos, redes sociales y acceso a información institucional.
 
 ---
@@ -1488,7 +1456,7 @@ Los sistemas de búsqueda se diseñan para que el usuario no se pierda entre gra
 
 El sistema de navegación guía al usuario desde la presentación comercial del producto hasta las funcionalidades operativas de la Web Application.
 
-**Flujo principal:**  
+**Flujo principal:**
 El usuario inicia en la Landing Page, revisa la propuesta de valor, consulta funcionalidades, explora el flujo de trabajo y accede al registro o inicio de sesión. Una vez autenticado, ingresa al dashboard principal, desde donde puede navegar hacia monitoreo en vivo, activos, transporte, alertas, reportes, usuarios y configuración.
 
 - **Navegación global:** el menú superior permanece disponible en la Landing Page para facilitar el acceso a secciones clave y al cambio de idioma.
@@ -1577,19 +1545,19 @@ Los mock-ups de la Landing Page representan la versión visual de alta fidelidad
 
 ### 4.4.1. Web Applications Wireframes.
 
-Los wireframes de la aplicación web fueron diseñados para definir la estructura funcional de las principales pantallas del sistema. En esta etapa se identificaron los elementos clave de interacción, como paneles de control, visualización de datos, navegación entre secciones y componentes necesarios para la gestión del sistema. Estos wireframes permiten validar la distribución de información antes de la implementación visual, asegurando que las funcionalidades respondan a las necesidades del usuario. 
+Los wireframes de la aplicación web fueron diseñados para definir la estructura funcional de las principales pantallas del sistema. En esta etapa se identificaron los elementos clave de interacción, como paneles de control, visualización de datos, navegación entre secciones y componentes necesarios para la gestión del sistema. Estos wireframes permiten validar la distribución de información antes de la implementación visual, asegurando que las funcionalidades respondan a las necesidades del usuario.
 
-Wireframe Landing Page: En este wireframe vemos la organización de los elementos que se le presentarían al usuario inicialmente al entrar a la página. 
+Wireframe Landing Page: En este wireframe vemos la organización de los elementos que se le presentarían al usuario inicialmente al entrar a la página.
 <p align="center">
   <img src="report/assets/chapter-04/wireflowdiagram/WireframeLP.png" alt="Wireframes">
 </p>
 
-Wireframe Landing Page Mobile: Organización de elementos para el landing page en entorno de móviles 
+Wireframe Landing Page Mobile: Organización de elementos para el landing page en entorno de móviles
 <p align="center">
   <img src="report/assets/chapter-04/wireflowdiagram/WireframeMobile.png" alt="Wireframes">
 </p>
 
-Wireframes Pantallas: Aqui vemos la organización de secciones individuales que componen las distintas pantallas de la página web. 
+Wireframes Pantallas: Aqui vemos la organización de secciones individuales que componen las distintas pantallas de la página web.
 <p align="center">
   <img src="report/assets/chapter-04/wireflowdiagram/Activos.png" alt="Wireframes">
 </p>
@@ -1619,7 +1587,7 @@ Wireframes Pantallas: Aqui vemos la organización de secciones individuales que 
 
 ### 4.4.2. Web Applications Wireflow Diagrams.
 
-Los wireflow diagrams representan el flujo de interacción del usuario dentro de la aplicación, mostrando la navegación entre pantallas y las acciones que el usuario puede realizar en cada etapa. Estos diagramas permiten entender el recorrido del usuario (user flow), facilitando la identificación de puntos clave de interacción y mejorando la experiencia general del sistema. 
+Los wireflow diagrams representan el flujo de interacción del usuario dentro de la aplicación, mostrando la navegación entre pantallas y las acciones que el usuario puede realizar en cada etapa. Estos diagramas permiten entender el recorrido del usuario (user flow), facilitando la identificación de puntos clave de interacción y mejorando la experiencia general del sistema.
 
 <p align="center">
   <img src="report/assets/chapter-04/wireflowdiagram/WireFlows (1).png" alt="Wireframes">
@@ -1859,7 +1827,7 @@ El tablero de diseño se encuentra disponible en Miro: <https://miro.com/app/boa
 
 ### 4.6.2. Software Architecture Context Diagram.
 
-El diagrama de contexto de ColdTrace muestra la plataforma como sistema central y presenta sus relaciones con los actores principales, los dispositivos IoT y los servicios externos realmente integrados. La implementación ASP.NET Core organiza el monolito modular en los bounded contexts **IdentityAccess**, **AssetManagement**, **Monitoring**, **Alerts**, **Reports**, **MaintenanceManagement**, **Billing** y **AiAssistance**, además de **Shared** para capacidades transversales.
+El diagrama de contexto de ColdTrace muestra la plataforma como sistema central y presenta sus relaciones con los actores principales, los dispositivos IoT y los servicios externos previstos por el diseño. La línea base pública usa el monolito modular ASP.NET Core; **Billing**, **AiAssistance** y los proveedores externos se documentan como alcance preparado en pull requests, pendiente de integración, configuración operacional y redespliegue.
 
 Las user stories se reflejan en el diagrama de la siguiente manera:
 
@@ -1986,7 +1954,7 @@ Principales decisiones aplicadas en esta etapa:
 - **Reports:** evita acoplarse a las bases de datos de otros contextos mediante `ReadingSummary`, `AlertSummary` e `IncidentSummary`; sobre esa información genera `Report`, `DailyLog`, `MonthlyReport`, `ComplianceReport`, `ReportExport`, `Dashboard` y `Widget`.
 - **Audit:** centraliza la preparación de auditoría mediante `AuditCase`, `ComplianceCriterion`, `ComplianceFinding`, `EvidencePackage` y `EvidenceItem`.
 
-Se corrigieron inconsistencias del modelo base y de las historias de usuario: el gateway físico se implementa como Gateway; los dispositivos IoT pueden permanecer sin un activo asignado; assets y gateways comparten Location como base física; lecturas, incidentes y reportes preservan trazabilidad mediante identificadores organization-scoped; y las capacidades de IA y billing se integran como bounded contexts del mismo backend. El diagrama de clases conserva decisiones conceptuales más amplias, pero el texto de implementación y despliegue toma como fuente el código ASP.NET Core actual.
+Se corrigieron inconsistencias del modelo base y de las historias de usuario: el gateway físico se implementa como Gateway; los dispositivos IoT pueden permanecer sin un activo asignado; assets y gateways comparten Location como base física; y lecturas, incidentes y reportes preservan trazabilidad mediante identificadores organization-scoped. Las capacidades de IA y billing se modelan como bounded contexts objetivo del mismo backend, pero sus cambios nuevos permanecen en pull requests y no se atribuyen a la revisión desplegada. El diagrama de clases conserva decisiones conceptuales más amplias, mientras el texto de implementación y despliegue distingue el código de la línea base y el trabajo en revisión.
 
 Para mejorar la legibilidad del diagrama, los tipos enumerados se mantienen como tipos de atributos, pero no se expanden como cajas independientes. Así se evita que estados como `AlertStatus`, `SensorStatus` o `ReportStatus` generen ruido visual y oculten las relaciones principales entre entidades, value objects, clases abstractas e interfaces.
 
@@ -3820,7 +3788,7 @@ Elaboración propia en Linear: [https://linear.app/coldtrace/team/APPWEB/all](ht
 
 #### 5.2.3.4. Development Evidence for Sprint Review
 Durante el Sprint 3, la implementación backend se gestionó en el repositorio `AplicacionesWeb-Grupo-2/coldtrace-platform` siguiendo el estándar de commits de la organización.
- 
+
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
 |:---|:---|:---|:---|:---|:---|
@@ -3878,7 +3846,7 @@ Al término del Sprint 3, se logró disponer de una infraestructura backend en e
 ![swagger](./report/assets/chapter-05/sprint-03/swagger-assetSetting-asset.png)
 ![swagger](./report/assets/chapter-05/sprint-03/swagger-gateways-Incidents-iotDevices.png)
 ![swagger](./report/assets/chapter-05/sprint-03/swagger-locations-maintenance-notifications-organizatios.png)
-![swagger](./report/assets/chapter-05/sprint-03/swagger-reports-roles-sensor-technical-users.png) 
+![swagger](./report/assets/chapter-05/sprint-03/swagger-reports-roles-sensor-technical-users.png)
 
 
 *[Imagen: Captura de pantalla de la interfaz de Swagger UI (o documento OpenAPI) mostrando todos los endpoints RESTful agrupados por controladores]*
@@ -3887,9 +3855,9 @@ Al término del Sprint 3, se logró disponer de una infraestructura backend en e
 <br>
 
 
-![swagger](./report/assets/chapter-05/sprint-03/getPostman.png) 
- 
-*[Imagen: Captura de pantalla de Postman ejecutando una petición GET a `/api/v1/organizations` y recibiendo un objeto JSON estructurado]* 
+![swagger](./report/assets/chapter-05/sprint-03/getPostman.png)
+
+*[Imagen: Captura de pantalla de Postman ejecutando una petición GET a `/api/v1/organizations` y recibiendo un objeto JSON estructurado]*
 
 
 <br>
@@ -3900,7 +3868,7 @@ Al término del Sprint 3, se logró disponer de una infraestructura backend en e
 > Descripción: Evidencia de la creación del esquema de la base de datos relacional y el correcto mapeo de las entidades del dominio.
 
 <br>
-A continuación se presenta el video de navegación del producto correspondiente al Sprint 3, que consolida la demostración del flujo de la RESTful API desplegada, priorizando los user flows relacionados con el core business de ColdTrace 
+A continuación se presenta el video de navegación del producto correspondiente al Sprint 3, que consolida la demostración del flujo de la RESTful API desplegada, priorizando los user flows relacionados con el core business de ColdTrace
 
 ![evidencia del video](./report/assets/chapter-05/sprint-03/evidenceVideo.png)
 
@@ -3964,7 +3932,7 @@ Se implementó la documentación oficial de la RESTful API. A continuación se p
 | Reports | GET | `GET /api/v1/organizations/{organizationId}/reports` | organizationId (path) | Lista reportes generados | 200 |
 | Reports | POST | `POST /api/v1/organizations/{organizationId}/reports` | organizationId (path), Body: (según tipo de reporte) | Genera un nuevo reporte | 201 |
 | Reports | GET | `GET /api/v1/organizations/{organizationId}/reports/{reportId}` | organizationId, reportId (path) | Obtiene detalles/contenido de un reporte | 200 |
- 
+
 
 ##### Documentación en Swagger UI
 
@@ -3984,7 +3952,7 @@ Se incluyen a continuación capturas de la documentación interactiva accesible 
 
 > Descripción: Vista expandida de un endpoint (ejemplo: GET /api/v1/organizations) mostrando especificación de parámetros, modelo de respuesta exitosa (200) y ejemplo de datos JSON retornado por el servidor.
 
- 
+
 
 ##### Referencias de Implementación
 
@@ -3997,7 +3965,7 @@ Se incluyen a continuación capturas de la documentación interactiva accesible 
 
 <br>
 <br>
- 
+
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
 Durante el Sprint 3 se realizó el despliegue de la primera versión de los Web Services de ColdTrace. El backend ASP.NET Core fue containerizado con Docker y publicado en **Google Cloud Run**, conectado a una base de datos administrada en **Google Cloud SQL for MySQL**. A continuación se presentan las evidencias del proceso de despliegue.
@@ -4012,8 +3980,10 @@ Durante el Sprint 3 se realizó el despliegue de la primera versión de los Web 
 | :--- | :--- |
 | Runtime del backend | ASP.NET Core containerizado con Docker |
 | Plataforma de hosting | Google Cloud Run — `us-central1` |
+| Proyecto de Google Cloud | `coldtrace-platform-20260619` |
+| Número de proyecto | `55771439812` |
 | Base de datos | Google Cloud SQL for MySQL — instancia `coldtrace-mysql` |
-| Esquema de base de datos | `coldtrace_platform` | 
+| Esquema de base de datos | `coldtrace_platform` |
 | Registro de imágenes | Google Artifact Registry |
 | Integración continua | GitHub Actions (`backend-ci.yml`) |
 | Documentación de API | Swagger UI / OpenAPI |
@@ -4023,12 +3993,14 @@ Durante el Sprint 3 se realizó el despliegue de la primera versión de los Web 
 | Servicio | URL |
 | :--- | :--- |
 | Repositorio backend | https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform |
-| Backend Cloud Run | https://coldtrace-platform-3kti2ylcba-uc.a.run.app |
-| Swagger UI | https://coldtrace-platform-3kti2ylcba-uc.a.run.app/swagger/index.html |
-| Swagger JSON | https://coldtrace-platform-3kti2ylcba-uc.a.run.app/swagger/v1/swagger.json |
+| Backend Cloud Run (URL determinística) | https://coldtrace-platform-55771439812.us-central1.run.app |
+| Backend Cloud Run (alias) | https://coldtrace-platform-3kti2ylcba-uc.a.run.app |
+| Swagger UI (URL determinística) | https://coldtrace-platform-55771439812.us-central1.run.app/swagger/index.html |
+| Swagger UI (alias) | https://coldtrace-platform-3kti2ylcba-uc.a.run.app/swagger/index.html |
+| Swagger JSON | https://coldtrace-platform-55771439812.us-central1.run.app/swagger/v1/swagger.json |
 
 ---
- 
+
  <br>
 
 ##### **Procedimiento de despliegue**
@@ -4157,7 +4129,7 @@ Se ejecutó una solicitud GET al endpoint publicado en Cloud Run. La respuesta `
 
 <br>
 <br>
- 
+
 
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint
@@ -4182,13 +4154,13 @@ A continuación se presentan los analíticos de colaboración del repositorio pr
 
 <br>
 <br>
- 
+
 
 ### 5.2.4. Sprint 4
 
 #### 5.2.4.1. Sprint Planning 4
 
-El Sprint 4 cierra ColdTrace como producto SaaS con cinco objetivos: autenticación segura, asistencia operativa con IA, billing por suscripción, paridad funcional entre Vue y Angular, y despliegue reproducible de proveedores externos. El resultado de producto conserva los contratos del trabajo Open Source, mientras la solución de Aplicaciones Web usa Vue 3, PrimeVue, ASP.NET Core, EF Core, MySQL y la estructura del Learning Center Platform.
+El Sprint 4 prepara el cierre de ColdTrace como producto SaaS con cinco objetivos: autenticación segura, asistencia operativa con IA, billing por suscripción, alineación funcional entre Vue y ASP.NET Core, y configuración reproducible de proveedores externos. Al corte del informe, el trabajo nuevo permanece en pull requests dirigidos a `develop`; no se presenta como integrado ni desplegado. La solución de Aplicaciones Web usa Vue 3, PrimeVue, ASP.NET Core, EF Core, MySQL y la estructura del Learning Center Platform.
 
 | Campo | Detalle |
 | :--- | :--- |
@@ -4196,8 +4168,8 @@ El Sprint 4 cierra ColdTrace como producto SaaS con cinco objetivos: autenticaci
 | Herramienta de seguimiento | Linear App, equipo Aplicaciones Web |
 | Repositorios | coldtrace-platform, coldtrace-frontend, landing-page e informe-del-proyecto |
 | Estrategia Git | Una rama feature y un pull request dirigido a develop por historia |
-| Estado documental | README.md es la fuente canónica; los capítulos separados conservan contenido histórico |
-| Criterio de paridad | Igual ruta, payload, respuesta y recorrido de UI que Open Source; lenguaje y patrones propios del curso |
+| Estado documental | README.md es la fuente canónica; los capítulos separados son fuentes activas y deben mantenerse sincronizados |
+| Criterio de alineación | Rutas, payloads, respuestas y recorridos de UI coherentes entre Vue y ASP.NET Core, con el lenguaje y los patrones del curso |
 
 #### 5.2.4.2. Aspect Leaders and Collaborators
 
@@ -4219,9 +4191,9 @@ Las responsabilidades individuales se consultan en cada issue y pull request. El
 | Sesión segura | TS02, T58, US058 | Backend PR 33 y 35; frontend PR 14; en revisión |
 | Recuperación y acceso | TS11, US010, US011 | Backend PR 41; frontend PR 21 y 18; en revisión |
 | Google y Apple | TS30, US052, US057 | Backend PR 42; frontend PR 13; en revisión |
-| IA de incidentes y reportes | TS18, US040-US044, US053 | Endpoints base integrados; proveedor PR 31; frontend PR 12 y 15 |
-| IA del dashboard | TS31, US051, US056 | Backend PR 32 y frontend PR 11; en revisión |
-| Planes y Stripe | TS24-TS29, US045-US050, US054-US055 | Backend base integrado; frontend PR 25; landing PR 9 integrado |
+| IA de incidentes y reportes | TS18, US040-US044, US053 | Backend PR 31 y frontend PR 12 y 15; pendientes de integración y redespliegue |
+| IA del dashboard | TS31, US051, US056 | Backend PR 32 y frontend PR 11; pendientes de integración y redespliegue |
+| Planes y Stripe | TS24-TS29, US045-US050, US054-US055 | Frontend PR 25 y trazabilidad en Linear; la configuración funcional y el redespliegue siguen pendientes |
 | Telemetría y flujos operativos | US024, US028, US037, US038, US060 | Frontend PR 16, 17, 19, 20 y 23; en revisión |
 | Contrato de reportes | TS10 | Frontend PR 22; en revisión |
 | Navegación responsive | US039 | Frontend PR 24; en revisión |
@@ -4232,7 +4204,7 @@ Las responsabilidades individuales se consultan en cada issue y pull request. El
 | Seguridad de dependencias Vue | TS34 | Frontend PR 30; auditoría de npm sin vulnerabilidades |
 | Informe final | TS32 | Linear APPWEB-113 y rama feature/TS32-final-report-alignment |
 
-El estado En revisión significa que el código existe en una rama publicada y el pull request apunta a develop. No significa que la versión pública ya haya sido redesplegada.
+El estado En revisión significa que el código existe en una rama publicada y el pull request apunta a `develop`. No equivale a trabajo terminado, integrado ni disponible en la versión pública.
 
 #### 5.2.4.4. Development Evidence for Sprint Review
 
@@ -4250,7 +4222,9 @@ La evidencia principal son los pull requests públicos. Cada enlace permite revi
 
 #### 5.2.4.5. Execution Evidence for Sprint Review
 
-| Flujo | Contrato de resultado |
+Los siguientes contratos describen el resultado esperado del trabajo en revisión. Deben validarse nuevamente después de integrar los pull requests, configurar los proveedores y desplegar una nueva revisión.
+
+| Flujo | Contrato esperado |
 | :--- | :--- |
 | Email/password | ColdTrace emite su JWT y Vue envía Bearer en solicitudes protegidas. |
 | Google/Apple | Vue obtiene credenciales del proveedor; ASP.NET Core valida issuer, audience, firma, expiración y nonce; ColdTrace emite su propio JWT. |
@@ -4265,6 +4239,8 @@ La evidencia principal son los pull requests públicos. Cada enlace permite revi
 Los builds y pruebas de contrato pertenecen a cada pull request. La prueba pública final debe repetirse después de integrar los PRs y desplegar una nueva revisión; el informe no presenta la revisión pública actual como si ya contuviera esos cambios.
 
 #### 5.2.4.6. Services Documentation Evidence for Sprint Review
+
+Los endpoints siguientes corresponden a contratos documentados en código o pull requests. Su inclusión no demuestra que estén disponibles en la revisión pública actual de Cloud Run.
 
 | Capacidad | Método y endpoint |
 | :--- | :--- |
@@ -4309,6 +4285,40 @@ Esta selección sigue la matriz de decisión del material: se usa la abstracció
 | Backend ASP.NET Core | Cloud Run, MySQL y Swagger públicos con la línea base; PR 31 a 44 aún deben integrarse y redesplegarse. |
 | Proveedores externos | El contrato de configuración está en PR 43. Faltan valores reales y autorizaciones en Google, Apple, OpenAI, Stripe y Secret Manager. |
 
+##### Evidencia de preparación de proveedores, no de despliegue
+
+Las siguientes capturas se conservan como evidencia aportada para preparar las cuentas y catálogos externos. No prueban que las credenciales estén completas, almacenadas en Secret Manager, inyectadas en Cloud Run ni operativas desde la revisión pública actual.
+
+<p align="center">
+  <img src="report/assets/chapter-05/sprint-04/clients.png" width="760" alt="Preparación de cliente web OAuth en Google Cloud">
+</p>
+
+*Preparación del cliente web OAuth en Google Cloud. La captura no demuestra autorización final ni uso desde el backend desplegado.*
+
+<p align="center">
+  <img src="report/assets/chapter-05/sprint-04/developer.png" width="760" alt="Preparación de identificador para Sign in with Apple">
+</p>
+
+*Preparación de un identificador en Apple Developer. Aún deben verificarse Service ID, return URL, claves y autorización completa.*
+
+<p align="center">
+  <img src="report/assets/chapter-05/sprint-04/apikeys.png" width="760" alt="Inventario de clave de API para preparar el proveedor de inteligencia artificial">
+</p>
+
+*Inventario de una clave de API para preparar el proveedor de IA. La captura no acredita que el secreto esté configurado en Cloud Run.*
+
+<p align="center">
+  <img src="report/assets/chapter-05/sprint-04/catalogos.png" width="760" alt="Preparación del catálogo de Stripe en entorno de prueba">
+</p>
+
+*Preparación del catálogo de Stripe en entorno de prueba; no corresponde a una configuración productiva desplegada.*
+
+<p align="center">
+  <img src="report/assets/chapter-05/sprint-04/catalogos2.png" width="760" alt="Detalle de producto de Stripe en entorno de prueba">
+</p>
+
+*Detalle de un producto de Stripe en entorno de prueba. Customer Portal, webhook, prices y secretos siguen pendientes de verificación operacional.*
+
 Pasos operacionales pendientes antes de afirmar despliegue final:
 
 1. Integrar los pull requests en develop respetando sus dependencias.
@@ -4322,7 +4332,7 @@ Pasos operacionales pendientes antes de afirmar despliegue final:
 
 La trazabilidad del Sprint 4 se obtiene de Linear y GitHub. Los estados se mantienen en los issues; los pull requests muestran la rama, el cambio técnico y su destino develop. No se sustituyen estos datos con nombres de commits o capturas inventadas.
 
-Los videos de navegación, entrevistas, About-the-Product y About-the-Team incluidos en las secciones 5.3, 5.4, 6.2 y Anexo C son los grabados para Aplicaciones Web. Pueden diferir de los videos del curso Open Source porque la evidencia académica y los participantes pertenecen a entregas distintas.
+Los videos de navegación, entrevistas, About-the-Product y About-the-Team incluidos en las secciones 5.3, 5.4, Video About-the-Team y Anexo C corresponden exclusivamente a las entregas de Aplicaciones Web.
 
 ## 5.3. Validation Interviews
 
@@ -4347,7 +4357,7 @@ Las entrevistas se estructuraron en torno a los siguientes ejes de validación:
 
 Para cada segmento objetivo se registrarán 3 entrevistas. Cada entrevista debe incluir la información personal solicitada, un screenshot del video, el enlace de Microsoft Stream, el timing donde inicia la entrevista, su duración y un resumen descriptivo de las principales apreciaciones del participante.
 
-**Video consolidado de entrevistas de validación:** [Ver video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQDzxmtGoZMES7vutMFjzCRkAXimh9-_K-h2BVM1FMlXjhY?e=hdDtj8&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)  
+**Video consolidado de entrevistas de validación:** [Ver video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQDzxmtGoZMES7vutMFjzCRkAXimh9-_K-h2BVM1FMlXjhY?e=hdDtj8&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 **Nomenclatura del video:** `upc-pre-202610-1asi0730-10177-coldtrace-validation-sprint-3.mp4`
 
 #### Segmento objetivo 1: Dueños, administradores o encargados de pequeños negocios alimentarios
@@ -4404,27 +4414,27 @@ Para cada segmento objetivo se registrarán 3 entrevistas. Cada entrevista debe 
 
 | **Entrevista Nro. 2** |  |
 | --- | --- |
-| Screenshot | <br><br> |
-| Nombres y apellidos |  |
-| Edad |  |
-| Distrito |  |
+| Screenshot | Pendiente de entrevista y captura real |
+| Nombres y apellidos | Pendiente |
+| Edad | Pendiente |
+| Distrito | Pendiente |
 | Segmento objetivo | Responsables de operaciones, calidad o logística en negocios con cadena de frío |
-| URL de grabación |  |
-| Timing de inicio |  |
-| Duración |  |
-| Resumen | <br><br><br> |
+| URL de grabación | Pendiente |
+| Timing de inicio | Pendiente |
+| Duración | Pendiente |
+| Resumen | Pendiente de realizar y documentar la entrevista. |
 
 | **Entrevista Nro. 3** |  |
 | --- | --- |
-| Screenshot | <br><br> |
-| Nombres y apellidos |  |
-| Edad |  |
-| Distrito |  |
+| Screenshot | Pendiente de entrevista y captura real |
+| Nombres y apellidos | Pendiente |
+| Edad | Pendiente |
+| Distrito | Pendiente |
 | Segmento objetivo | Responsables de operaciones, calidad o logística en negocios con cadena de frío |
-| URL de grabación |  |
-| Timing de inicio |  |
-| Duración |  |
-| Resumen | <br><br><br> |
+| URL de grabación | Pendiente |
+| Timing de inicio | Pendiente |
+| Duración | Pendiente |
+| Resumen | Pendiente de realizar y documentar la entrevista. |
 
 ### 5.3.3. Evaluaciones según heurísticas
 
@@ -4441,20 +4451,20 @@ Esta sección queda preparada para que el equipo complete la evaluación heurís
 | Sección | 2610 |
 | Profesor | Hugo Allan Mori Paiva |
 | Auditor | FrostGuard |
-| Cliente(s) |  |
+| Cliente(s) | Pendiente de confirmar durante la evaluación grupal |
 | Site o App a evaluar | ColdTrace Landing Page y ColdTrace Frontend Web Application |
 
 **Tareas a evaluar**
 
 | # | Tarea | Incluida |
 | :---: | :--- | :---: |
-| 1 | Registro o inicio de sesión de usuario. |  |
-| 2 | Consulta del dashboard operacional. |  |
-| 3 | Gestión de activos, sensores y gateways. |  |
-| 4 | Revisión de alertas e incidencias. |  |
-| 5 | Consulta de reportes de cumplimiento. |  |
-| 6 | Gestión de mantenimiento o servicios técnicos. |  |
-| 7 | Revisión de planes, billing o funcionalidades SaaS. |  |
+| 1 | Registro o inicio de sesión de usuario. | Pendiente de evaluación |
+| 2 | Consulta del dashboard operacional. | Pendiente de evaluación |
+| 3 | Gestión de activos, sensores y gateways. | Pendiente de evaluación |
+| 4 | Revisión de alertas e incidencias. | Pendiente de evaluación |
+| 5 | Consulta de reportes de cumplimiento. | Pendiente de evaluación |
+| 6 | Gestión de mantenimiento o servicios técnicos. | Pendiente de evaluación |
+| 7 | Revisión de planes, billing o funcionalidades SaaS. | Pendiente de evaluación |
 
 **Escala de severidad**
 
@@ -4469,18 +4479,18 @@ Esta sección queda preparada para que el equipo complete la evaluación heurís
 
 | # | Problema | Escala de severidad | Heurística/Principio vulnerado |
 | :---: | :--- | :---: | :--- |
-| 1 |  |  |  |
-| 2 |  |  |  |
-| 3 |  |  |  |
-| 4 |  |  |  |
+| 1 | Pendiente de evaluación grupal | Pendiente | Pendiente |
+| 2 | Pendiente de evaluación grupal | Pendiente | Pendiente |
+| 3 | Pendiente de evaluación grupal | Pendiente | Pendiente |
+| 4 | Pendiente de evaluación grupal | Pendiente | Pendiente |
 
 **Descripción de problemas**
 
 | Problema | Severidad | Heurística/Principio | Evidencia | Recomendación |
 | :--- | :---: | :--- | :--- | :--- |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
+| Pendiente de evaluación grupal | Pendiente | Pendiente | Pendiente | Pendiente |
+| Pendiente de evaluación grupal | Pendiente | Pendiente | Pendiente | Pendiente |
+| Pendiente de evaluación grupal | Pendiente | Pendiente | Pendiente | Pendiente |
 
 ## 5.4. Video About-the-Product
 
@@ -4503,7 +4513,7 @@ El video puede visualizarse en el siguiente enlace:
 
 4. **Arquitectura y despliegue coherentes con el curso:** El producto se documentó como una solución web distribuida con Landing Page, Frontend Web Application y RESTful API. El backend ASP.NET Core con C# se despliega en Google Cloud Run, se conecta a MySQL y expone documentación Swagger/OpenAPI, lo que permite validar contratos de servicio y consumo desde el frontend.
 
-5. **Mejora continua aplicada:** El Sprint 4 incorporó contratos JWT, IA, OAuth/OIDC y Stripe, además de correcciones de paridad en Vue. La documentación distingue los cambios ya integrados, los pull requests en revisión y las acciones externas de proveedor o despliegue que todavía deben ejecutarse.
+5. **Mejora continua en preparación:** El Sprint 4 preparó en pull requests contratos JWT, IA, OAuth/OIDC y Stripe, además de correcciones de alineación en Vue. La documentación los mantiene como trabajo en revisión y separa las acciones externas de proveedor y despliegue que todavía deben ejecutarse.
 
 6. **Colaboración del equipo:** La distribución por sprints, roles, issues y repositorios permitió organizar el trabajo de investigación, diseño, arquitectura, implementación y documentación. El uso de GitHub, Linear/Trello, Swagger y recursos desplegados fortalece la trazabilidad entre planificación, ejecución y evidencia.
 
@@ -4523,7 +4533,7 @@ El video puede visualizarse en el siguiente enlace:
 
 7. **Evaluar sensores y proveedores locales:** Para reducir costos de adopción, se recomienda validar compatibilidad con hardware IoT accesible en Perú, como ESP32, Raspberry Pi o sensores comerciales de temperatura/humedad, antes de una implementación productiva.
 
-8. **Preservar evidencia audiovisual del curso:** Los videos de validación, About-the-Product y About-the-Team deben conservar sus enlaces, participantes y nomenclatura de Aplicaciones Web. No corresponde reemplazarlos por grabaciones de Open Source; solo se mantiene el mismo propósito documental.
+8. **Preservar evidencia audiovisual del curso:** Los videos de validación, About-the-Product y About-the-Team deben conservar sus enlaces, participantes y nomenclatura de Aplicaciones Web, y cualquier video faltante debe permanecer identificado como pendiente hasta que el equipo confirme su enlace real.
 
 ## Video About-the-Team
 Como parte de la entrega final, cada integrante del equipo ha grabado una breve presentación personal en la que comparte su experiencia durante el desarrollo del proyecto ColdTrace, destacando los conocimientos adquiridos en el curso y cómo estos contribuyeron a su crecimiento profesional y al logro de los objetivos planteados.
@@ -4566,9 +4576,9 @@ Los integrantes que participan en el video son:
 ---
 
 # Bibliografía
-Agraria.pe. (2019, junio 26). Perú pierde más del 33% de los alimentos que produce por mal uso de la cadena de frío. Agraria. https://www.agraria.pe/noticias/peru-pierde-mas-del-33-de-los-alimentos-que-produce-por-mal--19324 
+Agraria.pe. (2019, junio 26). Perú pierde más del 33% de los alimentos que produce por mal uso de la cadena de frío. Agraria. https://www.agraria.pe/noticias/peru-pierde-mas-del-33-de-los-alimentos-que-produce-por-mal--19324
 
-FAO. (2021). Más de 12 millones de toneladas de alimentos se pierden a lo largo de la cadena productiva en el Perú. Organización de las Naciones Unidas para la Alimentación y la Agricultura. https://www.fao.org/peru/noticias/detail-events/en/c/1712376/ 
+FAO. (2021). Más de 12 millones de toneladas de alimentos se pierden a lo largo de la cadena productiva en el Perú. Organización de las Naciones Unidas para la Alimentación y la Agricultura. https://www.fao.org/peru/noticias/detail-events/en/c/1712376/
 
 Gestión. (2025, septiembre 21). Mercado de almacenes en frío en Perú crecerá a US$ 510 millones en 2025: ¿qué lo impulsa? Gestión. https://gestion.pe/economia/empresas/mercado-de-almacenes-en-frio-en-peru-crecera-a-us-510-millones-en-2025-que-lo-impulsa-noticia/
 
@@ -4594,9 +4604,11 @@ Universidad Peruana de Ciencias Aplicadas. (2026). *Microsoft AI Ecosystem Overv
 | :--- | :--- |
 | Frontend Web Application (Vercel) | https://coldtrace-frontend-web.vercel.app/ |
 | Landing Page (GitHub Pages) | https://aplicacionesweb-grupo-2.github.io/landing-page/ |
-| Backend Cloud Run | https://coldtrace-platform-3kti2ylcba-uc.a.run.app |
-| Swagger UI | https://coldtrace-platform-3kti2ylcba-uc.a.run.app/swagger/index.html |
-| Swagger JSON | https://coldtrace-platform-3kti2ylcba-uc.a.run.app/swagger/v1/swagger.json |
+| Proyecto Google Cloud | `coldtrace-platform-20260619` (número `55771439812`) |
+| Backend Cloud Run (URL determinística) | https://coldtrace-platform-55771439812.us-central1.run.app |
+| Backend Cloud Run (alias) | https://coldtrace-platform-3kti2ylcba-uc.a.run.app |
+| Swagger UI | https://coldtrace-platform-55771439812.us-central1.run.app/swagger/index.html |
+| Swagger JSON | https://coldtrace-platform-55771439812.us-central1.run.app/swagger/v1/swagger.json |
 | JSON Server provisional Sprint 2 | https://coldtrace-app-web-json-server.onrender.com/ |
 
 > Las URLs públicas corresponden a la línea base desplegada. Los cambios de Sprint 4 deben integrarse y redesplegarse antes de atribuirles los nuevos contratos.

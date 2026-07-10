@@ -21,7 +21,7 @@ Nuestra visión es convertirnos en la plataforma de referencia en moni
 | ![LeonardoFoto](./assets/chapter-01/team/Leonardo.png)  | Leonardo Sebastian Delgado Arriola   | Ingenieria de Software | C++, HTML, CSS, JS, Vue, MySQL, MongoDB, Git                                                                        |
 |     ![JeanFoto](./assets/chapter-01/team/Jean.png)      | Jean Pool Alexander Arias Tasayco    | Ingenieria de Software | Java, Html, Css, JavaScript, Angular, Vue, Node.js, TypeScript, TailwindCss, Spring, C++, Python                    |
 | ![SantiagoFoto](./assets/chapter-01/team/Santiago.jpeg) | Santiago Enrique Vargas Alarcon      | Ingenieria de Software | C++, HTML, CSS, MySQL, Python (basics), C# (basics)                                                                 |
-| ![MauricioFoto](./assets/chapter-01/team/Mauricio.jpeg) | Mauricio Pajés                       | Ingenieria de Software | C++ y Python, y conocimientos en diseño y patrones de software, PostgreSQL y MongoDB, Java ,Spring Boot y  Node.js. |
+| ![MauricioFoto](./assets/chapter-01/team/Mauricio.jpeg) | Mauricio Pajés                       | Ingenieria de Software | C++ y Python, y conocimientos en diseño y patrones de software, PostgreSQL, MongoDB, Java y Node.js.                |
 |  ![EduardoFoto](./assets/chapter-01/team/Eduardo.png)   | Eduardo David Velasquez Laquihuanaco | Ingenieria de Software | C++, Java, JavaScript, HTML, CSS, SQL Server, MongoDB, Git                                                          |
 
 ## 1.2 Solution Profile
