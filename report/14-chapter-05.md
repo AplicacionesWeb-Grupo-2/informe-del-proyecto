@@ -2034,6 +2034,260 @@ A continuación se presentan los analíticos de colaboración del repositorio pr
 ![GitHub Contributors Graph – coldtrace-platform](assets/chapter-05/sprint-03/contributors.png)
  
 
+<br>
+
+
+### 5.2.4. Sprint 4
+
+El Sprint 4 tuvo como objetivo extender la RESTful API de ColdTrace desarrollada en el Sprint 3 con capacidades transversales de producto: autenticación segura (JWT/OAuth), asistencia basada en inteligencia artificial para la interpretación de incidentes, reportes y dashboard, y un modelo de monetización SaaS mediante planes de suscripción validados desde el backend. El trabajo se organizó sobre la misma arquitectura y despliegue consolidados en Cloud Run durante el Sprint 3, sin reescribir los módulos operativos existentes.
+
+#### 5.2.4.1. Sprint Planning 4
+
+Se presenta a continuación el resumen del Sprint Planning Meeting para el Sprint 4.
+
+| Campo | Detalle |
+|-------|---------|
+| **Sprint #** | Sprint 4 |
+| **Sprint Planning Background** | |
+| **Date** | 2026-07-02 |
+| **Time** | 08:00 PM |
+| **Location** | Reunión virtual vía Discord |
+| **Prepared By** | Pajés León, Mauricio Luis |
+| **Attendees (to planning meeting)** | Arias Tasayco, Jean Pool Alexander / Pajés León, Mauricio Luis / Delgado Arriola, Leonardo Sebastian / Vargas Alarcón, Santiago Enrique / Velásquez Laquihuanaco, Eduardo David |
+| **Sprint 3 – Review Summary** | En el Sprint 3 el equipo diseñó, implementó y desplegó la primera versión de la RESTful API de ColdTrace en Google Cloud Run, reemplazando el servidor JSON simulado del Sprint 2. Se completaron los bounded contexts de Organizations, Gateways, Users, Maintenance Schedules y Technical Services, mientras que Assets, IoT Devices, Sensor Readings, Incidents, Reports y Role Assignment quedaron documentados y en revisión al cierre del sprint. |
+| **Sprint 3 – Retrospective Summary** | El equipo identificó una concentración desigual de tareas, con Pajés León asumiendo la mayor carga de issues (Foundation, Organizations, Gateways, Users, Errors) frente a 2-3 issues por el resto del equipo. Como acción de mejora para el Sprint 4, se acordó cerrar por completo los endpoints que quedaron en revisión antes de sumar alcance nuevo, y reforzar la comunicación temprana sobre bloqueos entre los responsables de cada bounded context. |
+| **Sprint Goal & User Stories** | |
+| **Sprint 4 Goal** | Our focus is on extending ColdTrace with secure identity, AI-assisted operational guidance, and SaaS monetization capabilities. We believe it delivers a stronger product platform by adding JWT/OAuth authentication, AI support for incident/report/dashboard interpretation, and backend-enforced subscription plans. This will be confirmed when Linear shows the backend technical stories completed, Swagger UI documents the new service groups, and frontend stories are clearly separated as pending product-experience work. |
+| **Sprint 4 Velocity** | 82 Story Points (completados y verificados como Done en el Sprint Backlog 4) |
+| **Sum of Story Points** | 151 Story Points (82 completados en backend + 69 pendientes en historias frontend registradas para una siguiente iteración) |
+
+#### 5.2.4.2. Aspect Leaders and Collaborators
+
+En el Sprint 4, los aspectos considerados corresponden a las tres capacidades transversales priorizadas sobre la RESTful API de ColdTrace: **Identity & Access** (autenticación JWT/OAuth, rutas protegidas y gestión de sesión), **AI Assistance** (generación e interpretación de planes de resolución, resúmenes de reportes y dashboard asistidos por IA) y **SaaS Plans & Billing** (catálogo de planes, suscripciones por organización y validación de límites). Los tres aspectos se implementaron a nivel de backend bajo la responsabilidad de Pajés León, Mauricio Luis, con el resto del equipo como colaboradores en la integración y validación.
+
+| Team Member (Last Name, First Name) | GitHub Username | Identity & Access | AI Assistance | SaaS Plans & Billing |
+|---|---|---|---|---|
+| Pajés León, Mauricio Luis | mauricio-pajes | L | L | L |
+| Arias Tasayco, Jean Pool Alexander | Jean-AT | C | C | C |
+| Delgado Arriola, Leonardo Sebastian | leodev77 | C | C | C |
+| Vargas Alarcón, Santiago Enrique | SanVargasAI | C | C | C |
+| Velásquez Laquihuanaco, Eduardo David | Edu-VLL | C | C | C |
+
+
+<br>
+
+#### 5.2.4.3. Sprint Backlog 4
+
+El Sprint Backlog 4 fue gestionado en Trello. Al igual que en el Sprint 3, el trabajo se organizó por Technical Stories y User Stories vinculadas a los tres aspectos priorizados del sprint: Identity & Access, AI Assistance y SaaS Plans & Billing. Los ítems backend fueron completados sobre el repositorio `AplicacionesWeb-Grupo-2/coldtrace-platform`, mientras que las historias de experiencia de usuario asociadas quedaron registradas como alcance pendiente para una siguiente iteración.
+
+![Trello](../report/assets/chapter-05/sprint-04/trello.png)
+*Figura 5.2.4.3.1: Tablero de Trello con el seguimiento de tickets del Sprint 4.*
+
+Elaboración propia en Trello: https://trello.com/invite/b/6a5017db6b94ad4b44ffd40e/ATTI0218c96b6e195f10d67e6da5d1518410D78B106A/sprint-4
+
+| User Story Id | User Story Title | Work-item Id | Title | Description | Estimation | Assigned To | Status |
+| :---: | :--- | :---: | :--- | :--- | :---: | :--- | :---: |
+| TS02 | Authentication API with JWT | T-66 | Authentication API with JWT | Endpoint de inicio de sesión con validación de credenciales y emisión de token JWT. | 6 | Jean Pool Arias | Done |
+| TS58 | JWT, Protected Routes and CORS Hardening | T-67 | Protected Routes & CORS Hardening | Rutas protegidas y configuración CORS reforzada para consumo seguro desde frontend. | 4 | Santiago Enrique Vargas Alarcón | Done |
+| TS11 | Password Reset Request API | T-68 | Password Reset Request API | API para solicitud de recuperación de contraseña. | 4 | Eduardo Velásquez | Done |
+| TS30 | Google and Apple OAuth/OIDC Authentication API | T-69 | Google/Apple OAuth Authentication API | Integración backend para autenticación social con Google y Apple. | 6 | Leonardo Delgado | Done |
+| US057 | Start Google/Apple sign-in from the UI | T-70 | Start Social Sign-in from the UI | Inicio del flujo de autenticación social desde la interfaz. | 3 | Mauricio Pajés | Done |
+| US052 | Create or sign in with Google/Apple | T-71 | Create or Sign In with Google/Apple | Creación o inicio de sesión mediante proveedores OAuth/OIDC. | 4 | Jean Pool Arias | Done |
+| US058 | Sign in with backend JWT session | T-72 | Sign In with Backend JWT Session | Integración del inicio de sesión frontend con sesión JWT emitida por backend. | 2 | Santiago Enrique Vargas Alarcón | Done |
+| TS18 | AI Service Foundation and Structured Output | T-73 | AI Service Foundation & Structured Output | Base técnica del servicio de IA y respuestas estructuradas para casos de uso inteligentes. | 4 | Eduardo Velásquez | Done |
+| TS19 | Resolution Plan Generation with Real Context | T-74 | Incident Resolution Plan Generation | Generación de planes de resolución para incidentes usando contexto real de ColdTrace. | 5 | Leonardo Delgado | Done |
+| TS20 | Human Approval and Backend Resolution | T-75 | Plan Approval & Resolution Execution | Flujo de aprobación humana antes de aplicar una resolución asistida. | 4 | Mauricio Pajés | Done |
+| TS21 | Plan Rejection and Traceability | T-76 | Plan Rejection & Traceability | Rechazo de planes de IA con trazabilidad de la decisión. | 3 | Jean Pool Arias | Done |
+| TS22 | AI Plan Persistence and History | T-77 | AI Plan History Persistence | Persistencia e historial de planes generados por IA. | 3 | Santiago Enrique Vargas Alarcón | Done |
+| TS23 | Intelligent Report Summary | T-78 | Intelligent Report Summary | Resumen inteligente de reportes de cumplimiento. | 4 | Eduardo Velásquez | Done |
+| TS31 | Dashboard AI Interpretation API | T-79 | Dashboard AI Interpretation | Interpretación automática del dashboard operacional mediante IA. | 4 | Leonardo Delgado | Done |
+| TS24 | Backend Plan and Pricing Catalog | T-80 | Subscription Plan Catalog API | Catálogo backend de planes, precios y características disponibles. | 4 | Mauricio Pajés | Done |
+| TS25 | Organization Subscription and Entitlements | T-81 | Organization Subscription & Entitlements | Modelo de suscripción por organización y permisos asociados al plan. | 6 | Jean Pool Arias | Done |
+| TS26 | Payment Checkout Session Creation | T-82 | Payment Checkout Session Creation | Creación de sesiones de pago para actualizar el plan de una organización. | 4 | Santiago Enrique Vargas Alarcón | Done |
+| TS27 | Payment Webhooks and Subscription Sync | T-83 | Payment Webhook Synchronization | Sincronización de estados de suscripción mediante webhooks del proveedor de pagos. | 4 | Eduardo Velásquez | Done |
+| TS28 | Customer Billing Portal Sessions | T-84 | Customer Billing Portal Session | Sesiones del portal de cliente para gestión de suscripción. | 4 | Leonardo Delgado | Done |
+| TS29 | Backend Plan-Limit Validation | T-85 | Backend Plan-Limit Validation | Validación backend de límites según el plan contratado. | 4 | Mauricio Pajés | Done |
+| US040 | Generate an AI-assisted plan for an incident | T-86 | AI Plan Generation UI | Consumo frontend de la generación de planes de IA para incidencias. | 7 | Jean Pool Arias | To-Do |
+| US041 | Approve an AI plan and close the incident | T-87 | AI Plan Approval UI | Interfaz para aprobar un plan de IA y cerrar la incidencia desde el flujo operativo. | 4 | Santiago Enrique Vargas Alarcón | To-Do |
+| US042 | Reject an AI plan with a reason | T-88 | AI Plan Rejection UI | Interfaz para rechazar recomendaciones de IA con motivo auditable. | 3 | Eduardo Velásquez | To-Do |
+| US043 | Review AI plan history | T-89 | AI Plan History UI | Consulta visual del historial de planes generados, aprobados o rechazados. | 4 | Leonardo Delgado | To-Do |
+| US044 | Generate an intelligent compliance summary | T-90 | Compliance Summary UI | Experiencia frontend para solicitar y mostrar resúmenes inteligentes de reportes. | 5 | Mauricio Pajés | To-Do |
+| US053 | Use AI Guidance panel in incidents | T-91 | AI Guidance Panel in Incidents | Panel de guía IA dentro del módulo de incidencias. | 6 | Jean Pool Arias | To-Do |
+| US051 / US056 | Dashboard AI interpretation on demand | T-92 | Dashboard AI Interpretation UI | Apertura e integración del asistente de IA para interpretar el dashboard operacional. | 8 | Santiago Enrique Vargas Alarcón | To-Do |
+| US045 / US055 | Compare plans from the landing page | T-93 | Plan Comparison on Landing Page | Comparación de planes en landing page usando el catálogo backend. | 8 | Eduardo Velásquez | To-Do |
+| US046 / US047 | Select plan and view usage | T-94 | Plan Selection & Usage View | Selección de plan, visualización de plan actual y uso de límites. | 8 | Leonardo Delgado | To-Do |
+| US048 / US049 | Stripe Checkout and Customer Portal | T-95 | Checkout & Customer Portal UI | Flujos frontend para upgrade mediante checkout y gestión de billing en customer portal. | 8 | Mauricio Pajés | To-Do |
+| US050 / US054 | Plan guards and billing management | T-96 | Plan Guards & Billing Management UI | Bloqueo visual de funcionalidades no incluidas y administración de upgrades dentro de la app. | 8 | Jean Pool Arias | To-Do |
+
+
+<br>
+
+
+#### 5.2.4.4. Development Evidence for Sprint Review
+
+
+(FALTA)
+
+
+<br>
+
+
+#### 5.2.4.5. Execution Evidence for Sprint Review
+
+Durante el Sprint 4, el equipo de FrostGuard completó la implementación de los tres aspectos priorizados para ColdTrace: Identity & Access, AI Assistance y SaaS Plans & Billing. Estas capacidades se desarrollaron como extensiones de la RESTful API ya desplegada en Google Cloud Run, documentadas mediante OpenAPI/Swagger y listas para ser consumidas por el Frontend Web Application. A continuación se presentan las capturas de las principales vistas del funcionamiento del sistema.
+
+(FALTA — captura de Swagger UI con los nuevos grupos de endpoints)
+
+(FALTA — captura de una prueba funcional, p. ej. Postman, de un endpoint de autenticación/IA/billing)
+
+(FALTA — captura adicional relevante, p. ej. base de datos o consola de proveedor externo)
+
+(FALTA — imagen de portada del video + URL del video de navegación del Sprint 4)
+
+**URL del video:** (FALTA)
+
+
+<br>
+
+
+#### 5.2.4.6. Services Documentation Evidence for Sprint Review
+
+Se documentaron oficialmente los endpoints correspondientes a los tres aspectos priorizados del Sprint 4: Identity & Access, AI Assistance y SaaS Plans & Billing. A continuación se presentan los endpoints clave desarrollados en el Sprint 4:
+
+| Endpoint | Verb HTTP | Sintaxis de llamada | Parámetros | Descripción | Response |
+|:---|:---:|:---|:---|:---|:---:|
+| Authentication Sign-In | POST | `POST /api/v1/authentication/sign-in` | Body: email, password | Valida credenciales y emite un token JWT | 200 |
+| Social Authentication Token Exchange | POST | `POST /api/v1/authentication/social/{provider}/token-exchange` | provider (path), Body: idToken | Valida la identidad externa (Google/Apple) y emite sesión JWT propia de ColdTrace | 200 |
+| Social Authentication Profile Preview | POST | `POST /api/v1/authentication/social/{provider}/profile-preview` | provider (path), Body: idToken | Previsualiza el perfil externo antes de completar el onboarding | 200 |
+| Social Organization Sign-Up | POST | `POST /api/v1/authentication/social/{provider}/organization-sign-up` | provider (path), Body: idToken, datos de organización | Crea o vincula una organización a partir de una identidad social validada | 201 |
+| Roles | GET | `GET /api/v1/roles` | — | Consulta de roles disponibles para el frontend | 200 |
+| Organizations | GET | `GET /api/v1/organizations` | — | Consulta de organizaciones disponibles para el usuario autenticado | 200 |
+| Organization Users | DELETE | `DELETE /api/v1/organizations/{organizationId}/users/{userId}` | organizationId, userId (path) | Eliminación controlada de usuarios internos por organización | 200 |
+| AI Resolution Plans | POST | `POST /api/v1/organizations/{organizationId}/incidents/{incidentId}/ai-resolution-plans` | organizationId, incidentId (path) | Genera un plan de resolución asistido por IA con contexto real del incidente | 201 |
+| AI Resolution Plan Approvals | POST | `POST /api/v1/organizations/{organizationId}/incidents/{incidentId}/ai-resolution-plans/{planId}/approvals` | organizationId, incidentId, planId (path) | Aprueba el plan generado y ejecuta la resolución de la incidencia | 200 |
+| AI Resolution Plan Rejections | POST | `POST /api/v1/organizations/{organizationId}/incidents/{incidentId}/ai-resolution-plans/{planId}/rejections` | organizationId, incidentId, planId (path), Body: reason | Rechaza el plan de IA registrando el motivo con trazabilidad | 200 |
+| AI Resolution Plans History | GET | `GET /api/v1/organizations/{organizationId}/incidents/{incidentId}/ai-resolution-plans` | organizationId, incidentId (path) | Obtiene el historial de planes generados, aprobados o rechazados de una incidencia | 200 |
+| AI Report Summaries | POST | `POST /api/v1/organizations/{organizationId}/reports/{reportId}/ai-summaries` | organizationId, reportId (path) | Genera un resumen inteligente de cumplimiento a partir de un reporte existente | 201 |
+| Dashboard AI Interpretation | POST | `POST /api/v1/organizations/{organizationId}/dashboard/ai-interpretation` | organizationId (path) | Genera una interpretación asistida por IA del estado operacional del dashboard | 200 |
+| Subscription Plans Catalog | GET | `GET /api/v1/subscription-plans` | — | Obtiene el catálogo público de planes, precios y funcionalidades | 200 |
+| Organization Subscription | GET | `GET /api/v1/organizations/{organizationId}/subscription` | organizationId (path) | Obtiene la suscripción activa, límites y funcionalidades habilitadas de una organización | 200 |
+| Billing Checkout Sessions | POST | `POST /api/v1/organizations/{organizationId}/billing/checkout-sessions` | organizationId (path), Body: planId | Crea una sesión de pago para actualizar el plan de la organización | 201 |
+| Billing Customer Portal Sessions | POST | `POST /api/v1/organizations/{organizationId}/billing/customer-portal-sessions` | organizationId (path) | Crea una sesión del portal de facturación para gestionar la suscripción | 201 |
+| Billing Webhooks | POST | `POST /api/v1/billing/webhooks` | Body: evento firmado del proveedor de pagos | Sincroniza el estado de la suscripción a partir de eventos externos de pago | 200 |
+| Assets Deletion | DELETE | `DELETE /api/v1/organizations/{organizationId}/assets/{assetId}` | organizationId, assetId (path) | Eliminación controlada de activos cuando no existen dependencias bloqueantes | 200 |
+| Gateways Deletion | DELETE | `DELETE /api/v1/organizations/{organizationId}/gateways/{gatewayId}` | organizationId, gatewayId (path) | Eliminación controlada de gateways asociados a la organización | 200 |
+| IoT Devices Deletion | DELETE | `DELETE /api/v1/organizations/{organizationId}/iot-devices/{iotDeviceId}` | organizationId, iotDeviceId (path) | Eliminación controlada de dispositivos IoT | 200 |
+| Locations Deletion | DELETE | `DELETE /api/v1/organizations/{organizationId}/locations/{locationId}` | organizationId, locationId (path) | Eliminación controlada de ubicaciones | 200 |
+
+
+### Documentación en Swagger UI
+
+
+![swagger](../report/assets/chapter-05/sprint-04/swagger.png)
+
+La documentación de estos servicios es especialmente relevante porque las historias frontend pendientes dependen de contratos estables. Los endpoints de autenticación deben devolver sesiones coherentes para rutas protegidas, los endpoints IA deben exponer respuestas estructuradas y auditables, y los endpoints de billing deben manejar redirecciones, eventos externos de Stripe y validaciones de plan sin exponer secretos al cliente.
+
+![swagger](../report/assets/chapter-05/sprint-04/authenticationSwagger.png)
+
+Endpoints de autenticación y OAuth/OIDC documentados en Swagger UI.
+
+![swagger](../report/assets/chapter-05/sprint-04/AIAssistanceSwagger.png)
+
+Endpoints de AI Assistance documentados en Swagger UI.
+
+![swagger](../report/assets/chapter-05/sprint-04/BillingSwagger.png)
+
+Endpoints de billing, checkout, Customer Portal y webhooks documentados en Swagger UI.
+
+### Referencias de Implementación
+
+**Repositorio de Web Services:** https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform
+
+**URL de la Documentación Swagger:** https://coldtrace-platform-3kti2ylcba-uc.a.run.app/swagger
+
+
+
+<br>
+
+
+#### 5.2.4.7. Software Deployment Evidence for Sprint Review
+
+Para el Sprint 4 no se levantó infraestructura nueva: se reutilizó el mismo servicio de **Google Cloud Run** configurado en el Sprint 3, manteniendo la contenedorización con Docker y la gestión de configuración vía variables de entorno. Las capacidades de Identity & Access, AI Assistance y SaaS Plans & Billing se sumaron al backend existente mediante un nuevo despliegue (re-deploy) sobre ese mismo servicio, sin generar una URL adicional.
+
+Para habilitar las capacidades agregadas en este sprint, el despliegue requirió variables y secretos adicionales:
+
+| Categoría | Configuración requerida | Uso |
+| :--- | :--- | :--- |
+| JWT | Secreto de firma, tiempo de expiración del token y configuración de rutas protegidas. | Emitir y validar sesiones seguras. |
+| OAuth/OIDC | Client ID, Client Secret, redirect URIs y configuración de proveedores Google/Apple. | Completar la autenticación social. |
+| AI Assistance | API key de producción de OpenAI y configuración del modelo consumido por el backend. | Generar planes de resolución, resúmenes de reportes e interpretación del dashboard. |
+| Billing | Stripe Secret Key, Price IDs del catálogo de planes, webhook secret y URLs de retorno. | Crear sesiones de pago, sincronizar suscripciones y habilitar el portal de facturación. |
+
+---
+
+**Evidencia de configuración de proveedores externos**
+
+A continuación se muestran los paneles de administración de cada proveedor externo que se integró durante este sprint, como respaldo de que la configuración se realizó sobre cuentas y servicios reales.
+
+**Google — OAuth 2.0 / OpenID Connect**
+
+En Google Cloud se dio de alta un OAuth Client tipo Web Application, indicando los orígenes JavaScript autorizados y las URIs de redirección tanto del entorno local como del frontend ya desplegado de ColdTrace.
+
+![OAuth Client configurado en Google Cloud](../report/assets/chapter-05/sprint-04/clients.png)
+
+OAuth Client Web configurado en Google Cloud con origins y redirect URIs de ColdTrace. 
+
+**Apple — Sign in with Apple**
+
+De forma complementaria, se dio de alta el identificador de la app en la cuenta de Apple Developer, requisito necesario para poder ofrecer Sign in with Apple como segundo proveedor de identidad externo.
+
+![Identifier registrado en Apple Developer](../report/assets/chapter-05/sprint-04/developer.png)
+
+Identifier de Sign in with Apple registrado en Apple Developer.
+
+**OpenAI — AI Assistance**
+
+En la consola de OpenAI se emitió una API key de producción que el backend desplegado utiliza para resolver las solicitudes de asistencia inteligente. Esta credencial no forma parte del código fuente: se inyecta al servicio a través de sus variables de entorno.
+
+![API key de producción configurada en OpenAI](../report/assets/chapter-05/sprint-04/apikeys.png)
+
+API key de producción configurada en OpenAI para AI Assistance.
+
+**Stripe — Subscription & Billing**
+
+En el entorno de pruebas de Stripe se armó el catálogo de productos que representa los planes de suscripción de ColdTrace, cada uno con su tarifa recurrente correspondiente.
+
+![Catálogo de planes de suscripción en Stripe](../report/assets/chapter-05/sprint-04/catalogos.png)
+
+![Detalle de un plan de suscripción en Stripe](../report/assets/chapter-05/sprint-04/catalogos2.png)
+
+Catálogo de planes de suscripción configurado en Stripe.
+
+
+<br>
+
+
+#### 5.2.4.8. Team Collaboration Insights during Sprint
+
+Durante el Sprint 4, el equipo mantuvo una carga de trabajo equilibrada entre los cinco integrantes, a diferencia de la concentración observada en el Sprint 3. Cada miembro asumió cuatro ítems del backend correspondientes a los tres aspectos priorizados (Identity & Access, AI Assistance y SaaS Plans & Billing), según se refleja en el tablero de Trello y en las asignaciones del Sprint Backlog 4.
+
+| Integrante | GitHub Username | Ítems Asignados (Done) | Áreas de Enfoque |
+| :--- | :--- | :---: | :--- |
+| Arias Tasayco, Jean Pool | Jean-AT | 4 | Authentication API with JWT, Create/Sign In with Google/Apple, Plan Rejection & Traceability, Organization Subscription & Entitlements |
+| Vargas Alarcón, Santiago Enrique | SanVargasAI | 4 | Protected Routes & CORS Hardening, Sign In with Backend JWT Session, AI Plan History Persistence, Payment Checkout Session Creation |
+| Velásquez Laquihuanaco, Eduardo David | Edu-VLL | 4 | Password Reset Request API, AI Service Foundation & Structured Output, Intelligent Report Summary, Payment Webhook Synchronization |
+| Delgado Arriola, Leonardo Sebastian | leodev77 | 4 | Google/Apple OAuth Authentication API, Incident Resolution Plan Generation, Dashboard AI Interpretation, Customer Billing Portal Session |
+| Pajés León, Mauricio Luis | mauricio-pajes | 4 | Start Social Sign-in from the UI, Plan Approval & Resolution Execution, Subscription Plan Catalog API, Backend Plan-Limit Validation |
+
+A continuación se presentan los analíticos de colaboración del repositorio principal del backend
+
+**Figura 5.2.4.8.1. Gráfica de contribuciones**
+
+(FALTA)
+
+
+<br>
+
 
 ## 5.3. Validation Interviews
 
