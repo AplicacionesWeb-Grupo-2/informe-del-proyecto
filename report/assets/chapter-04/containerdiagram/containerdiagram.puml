@@ -2,110 +2,42 @@
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
 
 title Container Diagram - ColdTrace
-caption C4 level 2 container view aligned with the bounded contexts and Web Applications user stories.
+caption C4 level 2 aligned with the Vue and ASP.NET Core modular-monolith implementation.
 
 LAYOUT_WITH_LEGEND()
-LAYOUT_TOP_DOWN()
+LAYOUT_LEFT_RIGHT()
 
-' Main actors
-Person(visitor, "Visitor", "Potential user who reviews the landing page, features, plans, and requests a demo [US01-US06].")
-Person(owner, "Business Owner or Store Manager", "Monitors refrigerated assets, reviews readings, and handles alerts and incidents [US18-US28].")
-Person(ops, "Operations / Quality / Logistics Manager", "Manages assets, sensors, gateways, ranges, maintenance, reports, and compliance evidence [US12-US17, US29-US38].")
-Person(admin, "Organization Administrator", "Manages account data, profile, permissions, and operational settings [US07-US11, US35-US36].")
-Person_Ext(auditor, "Health Inspector / External Reviewer", "Receives exported reports and compliance evidence [US31-US34].")
+Person(visitor, "Visitor", "Reviews the public product site and enters the application.")
+Person(operator, "Cold-chain Operator", "Monitors operations and resolves incidents.")
+Person(admin, "Organization Administrator", "Manages access, resources, plans, and billing.")
+Person_Ext(auditor, "Compliance Reviewer", "Consumes report evidence.")
 
-' External systems
-System_Ext(iot, "IoT Devices and Edge Gateways", "Field devices installed in cold rooms, warehouses, and transport units. They capture temperature, humidity, and connectivity status [US14-US23].")
-System_Ext(email, "Email Service", "External provider for password recovery, demo confirmations, and email alerts [US04, US10, US25].")
-System_Ext(push, "Push Notification Service", "External provider for real-time browser and mobile critical alerts [US25-US26].")
-System_Ext(messaging, "Messaging Service", "External messaging channel such as WhatsApp Business API or SMS for critical alerts and escalation [US25-US26].")
-System_Ext(payments, "Payment Gateway", "External processor for SaaS subscription payments and plan activation.")
+System_Ext(iot, "IoT Devices and Gateways", "Operational devices represented by organization-scoped REST resources.")
+System_Ext(identity, "Google Identity and Sign in with Apple", "External identity providers.")
+System_Ext(ai, "OpenAI / Ollama", "Cloud or local chat model provider.")
+System_Ext(stripe, "Stripe", "Checkout, Customer Portal, and signed webhooks.")
 
 System_Boundary(coldtrace, "ColdTrace") {
-
-    ' Presentation layer
-    Container(landing, "Landing Page", "HTML5, CSS3, JavaScript", "Public product website with value proposition, features, pricing, and demo request CTA [US01-US06].")
-
-    Container(webapp, "Web Application", "Vue.js, PrimeVue", "Responsive operational dashboard for monitoring, asset management, alerts, reports, and configuration.")
-
-    ' Gateways
-    Container(apigateway, "API Gateway", "ASP.NET Core / C#", "Single entry point for frontend requests. Handles routing, authentication checks, and access to internal REST APIs.")
-
-    Container(iotgateway, "Telemetry Ingestion API", "MQTT / HTTP", "Internal ingestion endpoint that receives, validates, and normalizes telemetry before forwarding readings to the Monitoring Context.")
-
-    ' Bounded-context services
-    Container(auth_svc, "Account & Access Context API", "ASP.NET Core / C#", "Registration, login, password recovery, profile data, sessions, roles, permissions, and subscription status [EP02, EP08].")
-
-    Container(infra_svc, "Sensor Management Context API", "ASP.NET Core / C#", "Assets, cold rooms, transport units, sensors, physical gateways, calibration, ranges, and operating parameters [EP03, EP07, EP09].")
-
-    Container(monitor_svc, "Monitoring Context API", "ASP.NET Core / C#", "Temperature and humidity readings, connectivity status, historical readings, offline synchronization, and range validation [EP04, EP10].")
-
-    Container(alerts_svc, "Alerts Context API", "ASP.NET Core / C#", "Thermal incidents, critical alerts, escalation, acknowledgment, corrective actions, and incident closure [EP05, EP11, EP12].")
-
-    Container(reports_svc, "Reports Context API", "ASP.NET Core / C#", "Daily logs, historical summaries, monthly reports, compliance exports, and downloadable report files [EP06, EP13].")
-
-    Container(audit_svc, "Audit Context API", "ASP.NET Core / C#", "Compliance checks, missing record detection, audit evidence preparation, and audit-oriented traceability [EP06].")
-
-    ' Data stores by context
-    ContainerDb(db_auth, "Account & Access Database", "MySQL", "Users, profiles, roles, permissions, sessions, subscription status, and account recovery tokens.")
-
-    ContainerDb(db_infra, "Sensor Management Database", "MySQL", "Assets, sensors, physical gateways, calibration data, ranges, and maintenance records.")
-
-    ContainerDb(db_monitor, "Monitoring Database", "MySQL", "Time-series readings, connectivity states, synchronization records, and range evaluation results.")
-
-    ContainerDb(db_alerts, "Alerts Database", "MySQL", "Alerts, incidents, escalation records, acknowledgments, corrective actions, and closure evidence.")
-
-    ContainerDb(db_reports, "Reports Database", "MySQL", "Generated reports, logs, export metadata, report files, and download history.")
-
-    ContainerDb(db_audit, "Audit Database", "MySQL", "Audit checks, compliance findings, evidence packages, and traceability records.")
+    Container(landing, "Landing Page", "HTML5, CSS3, JavaScript", "Static public site hosted with GitHub Pages.")
+    Container(webapp, "Frontend Web Application", "Vue 3, PrimeVue, Vite", "Responsive operational interface deployed with Vercel.")
+    Container(api, "ColdTrace RESTful API", "ASP.NET Core, C#, .NET 10", "Single modular-monolith process exposing /api/v1, JWT, Problem Details, Swagger/OpenAPI, and bounded-context modules.")
+    ContainerDb(database, "ColdTrace Database", "MySQL / Google Cloud SQL", "One schema managed through EF Core migrations and a shared AppDbContext.")
 }
 
-' User access
-Rel(visitor, landing, "Visits and requests demo", "HTTPS")
-Rel(owner, webapp, "Reviews status, readings, alerts, and incidents", "HTTPS")
-Rel(ops, webapp, "Configures assets, monitors operation, and generates reports", "HTTPS")
-Rel(admin, webapp, "Manages users, permissions, and operating settings", "HTTPS")
+Rel(visitor, landing, "Reviews product, plans, and videos", "HTTPS")
+Rel(visitor, webapp, "Starts registration or sign-in", "HTTPS")
+Rel(operator, webapp, "Uses operational workflows", "HTTPS")
+Rel(admin, webapp, "Uses administration and billing workflows", "HTTPS")
 
-' Frontend to backend
-Rel(landing, apigateway, "Submits demo request", "HTTPS / JSON")
-Rel(webapp, apigateway, "Consumes REST APIs", "HTTPS / JSON")
+Rel(landing, webapp, "Opens registration and sign-in routes", "HTTPS")
+Rel(webapp, api, "Consumes /api/v1 resources with bearer tokens", "HTTPS / JSON")
+Rel(iot, api, "Posts readings through documented resources", "HTTPS / JSON")
+Rel(api, database, "Reads and writes aggregates", "EF Core")
 
-' IoT telemetry flow
-Rel(iot, iotgateway, "Sends telemetry and connectivity data", "MQTT / HTTP")
-Rel(iotgateway, monitor_svc, "Forwards normalized readings", "HTTP / internal events")
-
-' API routing
-Rel(apigateway, auth_svc, "Routes account and access requests", "HTTP")
-Rel(apigateway, infra_svc, "Routes asset, sensor, gateway, range, and maintenance requests", "HTTP")
-Rel(apigateway, monitor_svc, "Routes monitoring and reading queries", "HTTP")
-Rel(apigateway, alerts_svc, "Routes alert and incident requests", "HTTP")
-Rel(apigateway, reports_svc, "Routes report generation and download requests", "HTTP")
-Rel(apigateway, audit_svc, "Routes audit and compliance requests", "HTTP")
-
-' Persistence by context
-Rel(auth_svc, db_auth, "Reads / writes", "EF Core")
-Rel(infra_svc, db_infra, "Reads / writes", "EF Core")
-Rel(monitor_svc, db_monitor, "Reads / writes", "EF Core")
-Rel(alerts_svc, db_alerts, "Reads / writes", "EF Core")
-Rel(reports_svc, db_reports, "Reads / writes", "EF Core")
-Rel(audit_svc, db_audit, "Reads / writes", "EF Core")
-
-' Cross-context communication
-Rel(infra_svc, monitor_svc, "Provides active sensors, ranges, and operating parameters", "Internal REST / events")
-Rel(monitor_svc, alerts_svc, "Publishes out-of-range readings and connectivity issues", "Internal events")
-Rel(monitor_svc, reports_svc, "Publishes readings and monitoring summaries", "Internal events")
-Rel(alerts_svc, reports_svc, "Provides incident and corrective-action history", "Internal REST / events")
-Rel(reports_svc, audit_svc, "Provides reports and logs for compliance evidence", "Internal REST")
-
-' External integrations
-Rel(auth_svc, email, "Sends password recovery messages", "SMTP / REST API")
-Rel(auth_svc, payments, "Processes subscription checkout and payment status", "REST / HTTPS")
-Rel(landing, email, "Sends demo request confirmation", "SMTP / REST API")
-Rel(alerts_svc, email, "Sends email alerts", "SMTP / REST API")
-Rel(alerts_svc, push, "Sends real-time critical alerts", "Web Push / FCM")
-Rel(alerts_svc, messaging, "Sends critical alerts and escalation messages", "REST API")
-
-' External evidence delivery
-Rel(audit_svc, auditor, "Provides compliance evidence packages", "PDF / CSV")
+Rel(api, identity, "Validates provider identity", "OIDC / HTTPS")
+Rel(api, ai, "Uses IChatClient for structured assistance", "HTTPS")
+Rel(api, stripe, "Creates billing sessions", "HTTPS")
+Rel(stripe, api, "Posts signed subscription events", "HTTPS / webhook")
+Rel(webapp, auditor, "Presents and exports report evidence", "HTTPS / export")
 
 @enduml

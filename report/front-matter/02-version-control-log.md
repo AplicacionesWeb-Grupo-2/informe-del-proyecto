@@ -1,5 +1,8 @@
 # Registro de Versiones del Informe
 
-| Versión | Fecha | Autor | Descripción de modificación |
-| :--- | :--- | :--- | :--- |
-| AV1 | 25/04/2026 | Todos los integrantes | Primera versión formal del informe, correspondiente al avance AV1 del proyecto. Incluye la documentación inicial del producto, análisis del segmento objetivo, definición de requisitos, modelado del dominio, arquitectura del sistema, evidencias de implementación y artefactos de gestión del proyecto. |
+| Versión | Fecha      | Autor                 | Descripción de modificación                                                                                                                                                                                                                                                                                 |
+| :------ | :--------- | :-------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| AV1     | 25/04/2026 | Todos los integrantes | Primera versión formal del informe, correspondiente al avance AV1 del proyecto. Incluye la documentación inicial del producto, análisis del segmento objetivo, definición de requisitos, modelado del dominio, arquitectura del sistema, evidencias de implementación y artefactos de gestión del proyecto. |
+| TB1     | 15/05/2026 | Todos los integrantes | Implementación y despliegue de la primera Frontend Web Application en Vue, actualización de artefactos de diseño y registro completo del Sprint 2. |
+| AV2     | 19/06/2026 | Todos los integrantes | Despliegue de la RESTful API ASP.NET Core en Cloud Run con Cloud SQL, documentación Swagger/OpenAPI, integración del frontend, validaciones y evidencias del Sprint 3. |
+| TB2     | 10/07/2026 | Todos los integrantes | Consolidación final del Sprint 4: autenticación JWT y social, asistencia con IA basada en Microsoft.Extensions.AI, planes SaaS y Stripe, frontend Vue integrado, landing page final, validaciones, conclusiones y anexos. |

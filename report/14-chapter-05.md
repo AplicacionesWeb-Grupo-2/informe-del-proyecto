@@ -478,7 +478,7 @@ Durante el Sprint 1, todos los miembros del equipo participaron activamente en l
 
 La evidencia de colaboración se refleja en los commits registrados en el repositorio `landing-page`, así como en la distribución de responsabilidades documentada en las secciones de Aspect Leaders and Collaborators y Development Evidence.
 
-### 5.2.2 Sprint 2
+### 5.2.2. Sprint 2
 
 #### 5.2.2.1. Sprint Planning 2
 
@@ -1621,7 +1621,9 @@ A continuación se presenta el resumen de participación por integrante basado e
 
  # 5.2.3 Sprint 3
 
-## 5.2.3.1. Sprint Planning 3
+### 5.2.3. Sprint 3
+
+#### 5.2.3.1. Sprint Planning 3
 El Sprint 3 tuvo como objetivo principal diseñar, implementar y desplegar el backend oficial de ColdTrace mediante una RESTful API robusta. Esto permitirá reemplazar el servidor JSON simulado utilizado en el Sprint 2 y habilitar la persistencia de datos real, lógica de negocio y seguridad para los bounded contexts de Identity & Access Management, Asset Management, Monitoring, Alerts, Reports y Maintenance. A continuación se presenta el resumen del Sprint Planning Meeting realizado al inicio de este sprint.
 
 | Sprint # | Sprint 3 |
@@ -1639,7 +1641,7 @@ El Sprint 3 tuvo como objetivo principal diseñar, implementar y desplegar el ba
 | **Sprint 3 Velocity** | 45 Story Points |
 | **Sum of Story Points** | 45 Story Points |
 
-## 5.2.3.2. Aspect Leaders and Collaborators
+#### 5.2.3.2. Aspect Leaders and Collaborators
 Durante el Sprint 3, el trabajo se organizó en torno a la creación de los controladores, servicios y repositorios de la RESTful API. Se designó un líder (L) por cada grupo de APIs y colaboradores (C) para apoyar en la integración.
 
 Los aspectos principales del Sprint 3 fueron:
@@ -1657,7 +1659,7 @@ Los aspectos principales del Sprint 3 fueron:
 | **Velásquez, Eduardo** | Edu-VLL | C | C | C | L | C |
 | **Delgado Arriola, Leonardo Sebastian**| leodev77 | C | C | C | C | L |
 
-## 5.2.3.3. Sprint Backlog 3
+#### 5.2.3.3. Sprint Backlog 3
 El Sprint Backlog se gestionó mediante Linear App. A continuación se detallan las tareas asignadas y completadas en el rango del 03 al 19 de junio de 2026.
 
 ![Backlog en Linear](assets/chapter-05/sprint-03/linar-backlog.png)
@@ -1689,9 +1691,9 @@ Elaboración propia en Linear: [https://linear.app/coldtrace/team/APPWEB/all](ht
 | TS16 | Organizations API Base | T-64 | TS16 - Organizations API Base | Estructura base del bounded context Organizations con DbContext y entidades principales. | 4 | Mauricio Pajés | Done |
 | TS17 | Locations API | T-65 | TS17 - Locations API | CRUD de ubicaciones (sedes, almacenes, puntos de distribución) dentro de una organización. | 3 | Mauricio Pajés | Done |
 
-## 5.2.3.4. Development Evidence for Sprint Review
+#### 5.2.3.4. Development Evidence for Sprint Review
 Durante el Sprint 3, la implementación backend se gestionó en el repositorio `AplicacionesWeb-Grupo-2/coldtrace-platform` siguiendo el estándar de commits de la organización.
- 
+
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
 |:---|:---|:---|:---|:---|:---|
@@ -1738,15 +1740,15 @@ Durante el Sprint 3, la implementación backend se gestionó en el repositorio `
 | coldtrace-platform | develop | c4d5e6f | merge: integrate feature branches into develop for Sprint 3 Review | Merge final consolidando todos los feature branches hacia develop. Se ejecutaron pruebas de integración y validación de compatibilidad entre módulos para Sprint 3. | 2026-06-19 |
 
 ---
- 
 
-## 5.2.3.5. Execution Evidence for Sprint Review
+
+#### 5.2.3.5. Execution Evidence for Sprint Review
 Al término del Sprint 3, se logró disponer de una infraestructura backend en ejecución con múltiples endpoints operativos para probar la lógica de negocio de ColdTrace.
 
 ![swagger](assets/chapter-05/sprint-03/swagger-assetSetting-asset.png)
 ![swagger](assets/chapter-05/sprint-03/swagger-gateways-Incidents-iotDevices.png)
 ![swagger](assets/chapter-05/sprint-03/swagger-locations-maintenance-notifications-organizatios.png)
-![swagger](assets/chapter-05/sprint-03/swagger-reports-roles-sensor-technical-users.png) 
+![swagger](assets/chapter-05/sprint-03/swagger-reports-roles-sensor-technical-users.png)
 
 
 *[Imagen: Captura de pantalla de la interfaz de Swagger UI (o documento OpenAPI) mostrando todos los endpoints RESTful agrupados por controladores]*
@@ -1755,9 +1757,9 @@ Al término del Sprint 3, se logró disponer de una infraestructura backend en e
 <br>
 
 
-![swagger](assets/chapter-05/sprint-03/getPostman.png) 
- 
-*[Imagen: Captura de pantalla de Postman ejecutando una petición GET a `/api/v1/organizations` y recibiendo un objeto JSON estructurado]* 
+![swagger](assets/chapter-05/sprint-03/getPostman.png)
+
+*[Imagen: Captura de pantalla de Postman ejecutando una petición GET a `/api/v1/organizations` y recibiendo un objeto JSON estructurado]*
 
 
 <br>
@@ -1768,13 +1770,13 @@ Al término del Sprint 3, se logró disponer de una infraestructura backend en e
 > Descripción: Evidencia de la creación del esquema de la base de datos relacional y el correcto mapeo de las entidades del dominio.
 
 <br>
-A continuación se presenta el video de navegación del producto correspondiente al Sprint 3, que consolida la demostración del flujo de la RESTful API desplegada, priorizando los user flows relacionados con el core business de ColdTrace 
+A continuación se presenta el video de navegación del producto correspondiente al Sprint 3, que consolida la demostración del flujo de la RESTful API desplegada, priorizando los user flows relacionados con el core business de ColdTrace
 
 ![evidencia del video](assets/chapter-05/sprint-03/evidenceVideo.png)
 
 **URL del video:** [Video Product Navigation Sprint 3](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202323350_upc_edu_pe/IQC_iCMNMEIJRoDLEchEjK4XAQZvho_o3UllbIqUg4E8yHo?e=RanuCx&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
-## 5.2.3.6. Services Documentation Evidence for Sprint Review
+#### 5.2.3.6. Services Documentation Evidence for Sprint Review
 Se implementó la documentación oficial de la RESTful API. A continuación se presentan los endpoints clave desarrollados en el Sprint 3:
 
 | Endpoint | Verb HTTP | Sintaxis de llamada | Parámetros | Descripción | Response |
@@ -1827,7 +1829,7 @@ Se implementó la documentación oficial de la RESTful API. A continuación se p
 | Reports | GET | `GET /api/v1/organizations/{organizationId}/reports` | organizationId (path) | Lista reportes generados | 200 |
 | Reports | POST | `POST /api/v1/organizations/{organizationId}/reports` | organizationId (path), Body: (según tipo de reporte) | Genera un nuevo reporte | 201 |
 | Reports | GET | `GET /api/v1/organizations/{organizationId}/reports/{reportId}` | organizationId, reportId (path) | Obtiene detalles/contenido de un reporte | 200 |
- 
+
 
 ### Documentación en Swagger UI
 
@@ -1847,7 +1849,7 @@ Se incluyen a continuación capturas de la documentación interactiva accesible 
 
 > Descripción: Vista expandida de un endpoint (ejemplo: GET /api/v1/organizations) mostrando especificación de parámetros, modelo de respuesta exitosa (200) y ejemplo de datos JSON retornado por el servidor.
 
- 
+
 
 ### Referencias de Implementación
 
@@ -1857,7 +1859,7 @@ Se incluyen a continuación capturas de la documentación interactiva accesible 
 
 ---
 
-## 5.2.3.7. Software Deployment Evidence for Sprint Review
+#### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
 Durante el Sprint 3 se realizó el despliegue de la primera versión de los Web Services de ColdTrace. El backend ASP.NET Core fue containerizado con Docker y publicado en **Google Cloud Run**, conectado a una base de datos administrada en **Google Cloud SQL for MySQL**. A continuación se presentan las evidencias del proceso de despliegue.
 
@@ -1872,7 +1874,7 @@ Durante el Sprint 3 se realizó el despliegue de la primera versión de los Web 
 | Runtime del backend | ASP.NET Core containerizado con Docker |
 | Plataforma de hosting | Google Cloud Run — `us-central1` |
 | Base de datos | Google Cloud SQL for MySQL — instancia `coldtrace-mysql` |
-| Esquema de base de datos | `coldtrace_platform` | 
+| Esquema de base de datos | `coldtrace_platform` |
 | Registro de imágenes | Google Artifact Registry |
 | Integración continua | GitHub Actions (`backend-ci.yml`) |
 | Documentación de API | Swagger UI / OpenAPI |
@@ -1882,12 +1884,14 @@ Durante el Sprint 3 se realizó el despliegue de la primera versión de los Web 
 | Servicio | URL |
 | :--- | :--- |
 | Repositorio backend | https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform |
-| Backend Cloud Run | https://coldtrace-platform-3kti2ylcba-uc.a.run.app |
-| Swagger UI | https://coldtrace-platform-3kti2ylcba-uc.a.run.app/swagger |
-| Swagger JSON | https://coldtrace-platform-3kti2ylcba-uc.a.run.app/swagger/v1/swagger.json |
+| Backend Cloud Run | https://coldtrace-platform-55771439812.us-central1.run.app |
+| Swagger UI | https://coldtrace-platform-55771439812.us-central1.run.app/swagger/index.html |
+| Swagger JSON | https://coldtrace-platform-55771439812.us-central1.run.app/swagger/v1/swagger.json |
+
+Google Cloud Run también generó la URL automática alternativa `https://coldtrace-platform-3kti2ylcba-uc.a.run.app` para el mismo servicio `coldtrace-platform`. Para el informe se usa como referencia principal la URL visible en la interfaz de Cloud Run con número de proyecto y región explícita.
 
 ---
- 
+
  <br>
 
 ## **Procedimiento de despliegue**
@@ -2014,7 +2018,7 @@ Se ejecutó una solicitud GET al endpoint publicado en Cloud Run. La respuesta `
 
 
 
-## 5.2.3.8. Team Collaboration Insights during Sprint
+#### 5.2.3.8. Team Collaboration Insights during Sprint
 Durante el Sprint 3, el equipo concentró sus esfuerzos en el desarrollo de la API RESTful. La distribución del trabajo se reflejó en las asignaciones de issues de Linear App:
 
 | Integrante | GitHub Username | Issues Asignados | Áreas de Enfoque (APIs) |
@@ -2032,7 +2036,7 @@ A continuación se presentan los analíticos de colaboración del repositorio pr
 **Figura 1. Gráfica de contribuciones de commits por integrante**
 
 ![GitHub Contributors Graph – coldtrace-platform](assets/chapter-05/sprint-03/contributors.png)
- 
+
 
 <br>
 
@@ -2057,9 +2061,9 @@ Se presenta a continuación el resumen del Sprint Planning Meeting para el Sprin
 | **Sprint 3 – Review Summary** | En el Sprint 3 el equipo diseñó, implementó y desplegó la primera versión de la RESTful API de ColdTrace en Google Cloud Run, reemplazando el servidor JSON simulado del Sprint 2. Se completaron los bounded contexts de Organizations, Gateways, Users, Maintenance Schedules y Technical Services, mientras que Assets, IoT Devices, Sensor Readings, Incidents, Reports y Role Assignment quedaron documentados y en revisión al cierre del sprint. |
 | **Sprint 3 – Retrospective Summary** | El equipo identificó una concentración desigual de tareas, con Pajés León asumiendo la mayor carga de issues (Foundation, Organizations, Gateways, Users, Errors) frente a 2-3 issues por el resto del equipo. Como acción de mejora para el Sprint 4, se acordó cerrar por completo los endpoints que quedaron en revisión antes de sumar alcance nuevo, y reforzar la comunicación temprana sobre bloqueos entre los responsables de cada bounded context. |
 | **Sprint Goal & User Stories** | |
-| **Sprint 4 Goal** | Our focus is on extending ColdTrace with secure identity, AI-assisted operational guidance, and SaaS monetization capabilities. We believe it delivers a stronger product platform by adding JWT/OAuth authentication, AI support for incident/report/dashboard interpretation, and backend-enforced subscription plans. This will be confirmed when Linear shows the backend technical stories completed, Swagger UI documents the new service groups, and frontend stories are clearly separated as pending product-experience work. |
-| **Sprint 4 Velocity** | 82 Story Points (completados y verificados como Done en el Sprint Backlog 4) |
-| **Sum of Story Points** | 151 Story Points (82 completados en backend + 69 pendientes en historias frontend registradas para una siguiente iteración) |
+| **Sprint 4 Goal** | Our focus is on delivering secure identity, AI-assisted operational guidance, and SaaS monetization as integrated product capabilities. We believe it delivers safer access, actionable operational support, and sustainable plan management to ColdTrace customers. This is confirmed by the completed Linear stories, documented Swagger contracts, Vue consumption of the deployed API, and production releases in Cloud Run, Vercel, and GitHub Pages. |
+| **Sprint 4 Velocity** | 151 Story Points completados e integrados entre backend, frontend y landing page. |
+| **Sum of Story Points** | 151 Story Points. |
 
 #### 5.2.4.2. Aspect Leaders and Collaborators
 
@@ -2078,7 +2082,7 @@ En el Sprint 4, los aspectos considerados corresponden a las tres capacidades tr
 
 #### 5.2.4.3. Sprint Backlog 4
 
-El Sprint Backlog 4 fue gestionado en Trello. Al igual que en el Sprint 3, el trabajo se organizó por Technical Stories y User Stories vinculadas a los tres aspectos priorizados del sprint: Identity & Access, AI Assistance y SaaS Plans & Billing. Los ítems backend fueron completados sobre el repositorio `AplicacionesWeb-Grupo-2/coldtrace-platform`, mientras que las historias de experiencia de usuario asociadas quedaron registradas como alcance pendiente para una siguiente iteración.
+El Sprint Backlog 4 fue gestionado en Trello y posteriormente trazado en Linear. El trabajo se organizó por Technical Stories y User Stories vinculadas a Identity & Access, AI Assistance y SaaS Plans & Billing. Los contratos se implementaron en `coldtrace-platform`, se consumieron desde `coldtrace-frontend` y se reflejaron en la landing page y el informe mediante ramas y pull requests dirigidos a `develop`.
 
 ![Trello](../report/assets/chapter-05/sprint-04/trello.png)
 *Figura 5.2.4.3.1: Tablero de Trello con el seguimiento de tickets del Sprint 4.*
@@ -2107,17 +2111,17 @@ Elaboración propia en Trello: https://trello.com/invite/b/6a5017db6b94ad4b44ffd
 | TS27 | Payment Webhooks and Subscription Sync | T-83 | Payment Webhook Synchronization | Sincronización de estados de suscripción mediante webhooks del proveedor de pagos. | 4 | Eduardo Velásquez | Done |
 | TS28 | Customer Billing Portal Sessions | T-84 | Customer Billing Portal Session | Sesiones del portal de cliente para gestión de suscripción. | 4 | Leonardo Delgado | Done |
 | TS29 | Backend Plan-Limit Validation | T-85 | Backend Plan-Limit Validation | Validación backend de límites según el plan contratado. | 4 | Mauricio Pajés | Done |
-| US040 | Generate an AI-assisted plan for an incident | T-86 | AI Plan Generation UI | Consumo frontend de la generación de planes de IA para incidencias. | 7 | Jean Pool Arias | To-Do |
-| US041 | Approve an AI plan and close the incident | T-87 | AI Plan Approval UI | Interfaz para aprobar un plan de IA y cerrar la incidencia desde el flujo operativo. | 4 | Santiago Enrique Vargas Alarcón | To-Do |
-| US042 | Reject an AI plan with a reason | T-88 | AI Plan Rejection UI | Interfaz para rechazar recomendaciones de IA con motivo auditable. | 3 | Eduardo Velásquez | To-Do |
-| US043 | Review AI plan history | T-89 | AI Plan History UI | Consulta visual del historial de planes generados, aprobados o rechazados. | 4 | Leonardo Delgado | To-Do |
-| US044 | Generate an intelligent compliance summary | T-90 | Compliance Summary UI | Experiencia frontend para solicitar y mostrar resúmenes inteligentes de reportes. | 5 | Mauricio Pajés | To-Do |
-| US053 | Use AI Guidance panel in incidents | T-91 | AI Guidance Panel in Incidents | Panel de guía IA dentro del módulo de incidencias. | 6 | Jean Pool Arias | To-Do |
-| US051 / US056 | Dashboard AI interpretation on demand | T-92 | Dashboard AI Interpretation UI | Apertura e integración del asistente de IA para interpretar el dashboard operacional. | 8 | Santiago Enrique Vargas Alarcón | To-Do |
-| US045 / US055 | Compare plans from the landing page | T-93 | Plan Comparison on Landing Page | Comparación de planes en landing page usando el catálogo backend. | 8 | Eduardo Velásquez | To-Do |
-| US046 / US047 | Select plan and view usage | T-94 | Plan Selection & Usage View | Selección de plan, visualización de plan actual y uso de límites. | 8 | Leonardo Delgado | To-Do |
-| US048 / US049 | Stripe Checkout and Customer Portal | T-95 | Checkout & Customer Portal UI | Flujos frontend para upgrade mediante checkout y gestión de billing en customer portal. | 8 | Mauricio Pajés | To-Do |
-| US050 / US054 | Plan guards and billing management | T-96 | Plan Guards & Billing Management UI | Bloqueo visual de funcionalidades no incluidas y administración de upgrades dentro de la app. | 8 | Jean Pool Arias | To-Do |
+| US040 | Generate an AI-assisted plan for an incident | T-86 | AI Plan Generation UI | Consumo frontend de la generación de planes de IA para incidencias. | 7 | Jean Pool Arias | Done |
+| US041 | Approve an AI plan and close the incident | T-87 | AI Plan Approval UI | Interfaz para aprobar un plan de IA y cerrar la incidencia desde el flujo operativo. | 4 | Santiago Enrique Vargas Alarcón | Done |
+| US042 | Reject an AI plan with a reason | T-88 | AI Plan Rejection UI | Interfaz para rechazar recomendaciones de IA con motivo auditable. | 3 | Eduardo Velásquez | Done |
+| US043 | Review AI plan history | T-89 | AI Plan History UI | Consulta visual del historial de planes generados, aprobados o rechazados. | 4 | Leonardo Delgado | Done |
+| US044 | Generate an intelligent compliance summary | T-90 | Compliance Summary UI | Experiencia frontend para solicitar y mostrar resúmenes inteligentes de reportes. | 5 | Mauricio Pajés | Done |
+| US053 | Use AI Guidance panel in incidents | T-91 | AI Guidance Panel in Incidents | Panel de guía IA dentro del módulo de incidencias. | 6 | Jean Pool Arias | Done |
+| US051 / US056 | Dashboard AI interpretation on demand | T-92 | Dashboard AI Interpretation UI | Apertura e integración del asistente de IA para interpretar el dashboard operacional. | 8 | Santiago Enrique Vargas Alarcón | Done |
+| US045 / US055 | Compare plans from the landing page | T-93 | Plan Comparison on Landing Page | Comparación de planes en landing page usando el catálogo backend. | 8 | Eduardo Velásquez | Done |
+| US046 / US047 | Select plan and view usage | T-94 | Plan Selection & Usage View | Selección de plan, visualización de plan actual y uso de límites. | 8 | Leonardo Delgado | Done |
+| US048 / US049 | Stripe Checkout and Customer Portal | T-95 | Checkout & Customer Portal UI | Flujos frontend para upgrade mediante checkout y gestión de billing en customer portal. | 8 | Mauricio Pajés | Done |
+| US050 / US054 | Plan guards and billing management | T-96 | Plan Guards & Billing Management UI | Bloqueo visual de funcionalidades no incluidas y administración de upgrades dentro de la app. | 8 | Jean Pool Arias | Done |
 
 
 <br>
@@ -2243,17 +2247,17 @@ Durante el Sprint 4, se realizó la union del backend frontend con el backend ad
 
 #### 5.2.4.5. Execution Evidence for Sprint Review
 
-Durante el Sprint 4, el equipo de FrostGuard completó la implementación de los tres aspectos priorizados para ColdTrace: Identity & Access, AI Assistance y SaaS Plans & Billing. Estas capacidades se desarrollaron como extensiones de la RESTful API ya desplegada en Google Cloud Run, documentadas mediante OpenAPI/Swagger y listas para ser consumidas por el Frontend Web Application. A continuación se presentan las capturas de las principales vistas del funcionamiento del sistema.
+Durante el Sprint 4, el equipo de FrostGuard completó la implementación e integración de Identity & Access, AI Assistance y SaaS Plans & Billing. Estas capacidades ampliaron la RESTful API desplegada en Google Cloud Run, se documentaron mediante OpenAPI/Swagger y se conectaron con la Frontend Web Application desplegada en Vercel.
 
-(FALTA — captura de Swagger UI con los nuevos grupos de endpoints)
+![Vista general de Swagger UI](assets/chapter-05/sprint-04/swagger.png)
 
-(FALTA — captura de una prueba funcional, p. ej. Postman, de un endpoint de autenticación/IA/billing)
+![Endpoints de autenticación y acceso](assets/chapter-05/sprint-04/authenticationSwagger.png)
 
-(FALTA — captura adicional relevante, p. ej. base de datos o consola de proveedor externo)
+![Endpoints de asistencia con IA](assets/chapter-05/sprint-04/AIAssistanceSwagger.png)
 
-(FALTA — imagen de portada del video + URL del video de navegación del Sprint 4)
+![Endpoints de suscripciones y facturación](assets/chapter-05/sprint-04/BillingSwagger.png)
 
-**URL del video:** (FALTA)
+La evidencia de configuración de Google, Apple, OpenAI y Stripe se presenta en la sección 5.2.4.7. El video About-the-Product consolidado se registra en la sección 5.4; no se encontró en el repositorio un video independiente de navegación etiquetado específicamente para Sprint 4.
 
 
 <br>
@@ -2282,7 +2286,7 @@ Se documentaron oficialmente los endpoints correspondientes a los tres aspectos 
 | Organization Subscription | GET | `GET /api/v1/organizations/{organizationId}/subscription` | organizationId (path) | Obtiene la suscripción activa, límites y funcionalidades habilitadas de una organización | 200 |
 | Billing Checkout Sessions | POST | `POST /api/v1/organizations/{organizationId}/billing/checkout-sessions` | organizationId (path), Body: planId | Crea una sesión de pago para actualizar el plan de la organización | 201 |
 | Billing Customer Portal Sessions | POST | `POST /api/v1/organizations/{organizationId}/billing/customer-portal-sessions` | organizationId (path) | Crea una sesión del portal de facturación para gestionar la suscripción | 201 |
-| Billing Webhooks | POST | `POST /api/v1/billing/webhooks` | Body: evento firmado del proveedor de pagos | Sincroniza el estado de la suscripción a partir de eventos externos de pago | 200 |
+| Billing Webhooks | POST | `POST /api/v1/billing/stripe/webhooks` | Body: evento firmado por Stripe | Sincroniza el estado de la suscripción a partir de eventos externos de pago | 200 |
 | Assets Deletion | DELETE | `DELETE /api/v1/organizations/{organizationId}/assets/{assetId}` | organizationId, assetId (path) | Eliminación controlada de activos cuando no existen dependencias bloqueantes | 200 |
 | Gateways Deletion | DELETE | `DELETE /api/v1/organizations/{organizationId}/gateways/{gatewayId}` | organizationId, gatewayId (path) | Eliminación controlada de gateways asociados a la organización | 200 |
 | IoT Devices Deletion | DELETE | `DELETE /api/v1/organizations/{organizationId}/iot-devices/{iotDeviceId}` | organizationId, iotDeviceId (path) | Eliminación controlada de dispositivos IoT | 200 |
@@ -2294,7 +2298,7 @@ Se documentaron oficialmente los endpoints correspondientes a los tres aspectos 
 
 ![swagger](../report/assets/chapter-05/sprint-04/swagger.png)
 
-La documentación de estos servicios es especialmente relevante porque las historias frontend pendientes dependen de contratos estables. Los endpoints de autenticación deben devolver sesiones coherentes para rutas protegidas, los endpoints IA deben exponer respuestas estructuradas y auditables, y los endpoints de billing deben manejar redirecciones, eventos externos de Stripe y validaciones de plan sin exponer secretos al cliente.
+La documentación de estos servicios mantiene contratos estables entre Vue y ASP.NET Core. Los endpoints de autenticación devuelven sesiones coherentes para rutas protegidas, los endpoints de IA exponen respuestas estructuradas y auditables, y los endpoints de billing manejan redirecciones, eventos externos de Stripe y validaciones de plan sin exponer secretos al cliente.
 
 ![swagger](../report/assets/chapter-05/sprint-04/authenticationSwagger.png)
 
@@ -2304,6 +2308,12 @@ Endpoints de autenticación y OAuth/OIDC documentados en Swagger UI.
 
 Endpoints de AI Assistance documentados en Swagger UI.
 
+### Arquitectura de AI Assistance
+
+La integración de IA usa `Microsoft.Extensions.AI` como capa de abstracción y registra `IChatClient` mediante inyección de dependencias. `AiChatClientFactory` selecciona el proveedor configurado, de modo que los servicios de aplicación consumen el mismo contrato para OpenAI u Ollama y no dependen directamente de un SDK específico. Las respuestas se solicitan como salida estructurada y luego se validan antes de persistir o presentar una recomendación.
+
+Los casos de uso se implementaron como flujos deterministas de aplicación: reciben contexto del incidente, reporte o dashboard, solicitan una respuesta estructurada y conservan la aprobación humana antes de ejecutar una acción correctiva. No se incorporó un agente autónomo porque estos procesos requieren reglas de negocio, trazabilidad y control humano explícitos.
+
 ![swagger](../report/assets/chapter-05/sprint-04/BillingSwagger.png)
 
 Endpoints de billing, checkout, Customer Portal y webhooks documentados en Swagger UI.
@@ -2312,7 +2322,7 @@ Endpoints de billing, checkout, Customer Portal y webhooks documentados en Swagg
 
 **Repositorio de Web Services:** https://github.com/AplicacionesWeb-Grupo-2/coldtrace-platform
 
-**URL de la Documentación Swagger:** https://coldtrace-platform-3kti2ylcba-uc.a.run.app/swagger
+**URL de la Documentación Swagger:** https://coldtrace-platform-55771439812.us-central1.run.app/swagger/index.html
 
 
 
@@ -2344,7 +2354,7 @@ En Google Cloud se dio de alta un OAuth Client tipo Web Application, indicando l
 
 ![OAuth Client configurado en Google Cloud](../report/assets/chapter-05/sprint-04/clients.png)
 
-OAuth Client Web configurado en Google Cloud con origins y redirect URIs de ColdTrace. 
+OAuth Client Web configurado en Google Cloud con origins y redirect URIs de ColdTrace.
 
 **Apple — Sign in with Apple**
 
@@ -2388,11 +2398,9 @@ Durante el Sprint 4, el equipo mantuvo una carga de trabajo equilibrada entre lo
 | Delgado Arriola, Leonardo Sebastian | leodev77 | 4 | Google/Apple OAuth Authentication API, Incident Resolution Plan Generation, Dashboard AI Interpretation, Customer Billing Portal Session |
 | Pajés León, Mauricio Luis | mauricio-pajes | 4 | Start Social Sign-in from the UI, Plan Approval & Resolution Execution, Subscription Plan Catalog API, Backend Plan-Limit Validation |
 
-A continuación se presentan los analíticos de colaboración del repositorio principal del backend
+A continuación se resume la colaboración registrada mediante issues, ramas, commits y pull requests de los repositorios del producto.
 
-**Figura 5.2.4.8.1. Gráfica de contribuciones**
-
-(FALTA)
+La captura de GitHub Insights limitada al intervalo exacto de TB2 no se encontró entre los aportes de las ramas revisadas. Por ello, no se reutiliza una captura de otra entrega como si correspondiera a este sprint; la evidencia disponible se conserva en el Sprint Backlog y en la tabla de commits de la sección 5.2.4.4.
 
 
 <br>
@@ -2400,21 +2408,146 @@ A continuación se presentan los analíticos de colaboración del repositorio pr
 
 ## 5.3. Validation Interviews
 
-Durante el Sprint 1 no se ejecutaron entrevistas de validación del producto, debido a que el alcance de la iteración estuvo centrado en la construcción y despliegue inicial del Landing Page. Esta actividad queda planificada para una iteración posterior, cuando exista una versión de producto con flujos funcionales suficientes para evaluar con usuarios.
-
 ### 5.3.1. Diseño de Entrevistas
 
-El diseño de entrevistas de validación será elaborado en una siguiente iteración, considerando preguntas orientadas a evaluar comprensión de la propuesta de valor, utilidad percibida, claridad visual y facilidad de navegación.
+Para la validación de la solución implementada, se diseñaron entrevistas dirigidas a representantes de los segmentos objetivo identificados en las fases iniciales del proyecto. El objetivo fue evaluar la percepción de los usuarios sobre la funcionalidad, usabilidad y pertinencia de la RESTful API de ColdTrace y su integración con la Frontend Web Application.
+
+Se definieron dos perfiles de entrevistados:
+
+- **Dueño o encargado de negocio:** Interesado en la reducción de merma, el cumplimiento sanitario y la generación de reportes operativos.
+- **Responsable de operaciones o calidad:** Enfocado en el monitoreo en tiempo real, la gestión de alertas e incidencias y la configuración de parámetros operativos.
+
+Las entrevistas se estructuraron en torno a los siguientes ejes de validación:
+
+1. **Registro y gestión de organizaciones y usuarios:** Validar que el flujo de sign-up y administración de usuarios sea claro y funcional.
+2. **Gestión de activos e infraestructura IoT:** Evaluar la facilidad para registrar activos, vincular sensores y configurar gateways.
+3. **Monitoreo y alertas:** Verificar que la visualización de lecturas de sensores y la gestión de incidencias térmicas responda a las necesidades operativas.
+4. **Reportes y cumplimiento:** Confirmar que la generación de reportes operativos y de cumplimiento sea útil para la toma de decisiones.
+5. **Mantenimiento y servicio técnico:** Evaluar la utilidad de la programación de mantenimiento preventivo y la gestión de solicitudes de servicio técnico.
 
 ### 5.3.2. Registro de Entrevistas
 
-No se registran entrevistas de validación para Sprint 1.
+Para cada segmento objetivo se registrarán 3 entrevistas. Cada entrevista debe incluir la información personal solicitada, un screenshot del video, el enlace de Microsoft Stream, el timing donde inicia la entrevista, su duración y un resumen descriptivo de las principales apreciaciones del participante.
+
+**Video consolidado de entrevistas de validación:** [Ver video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQDzxmtGoZMES7vutMFjzCRkAXimh9-_K-h2BVM1FMlXjhY?e=hdDtj8&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+**Nomenclatura del video:** `upc-pre-202610-1asi0729-10177-ColdTracevalidation-sprint-3.mp4`
+
+#### Segmento objetivo 1: Dueños, administradores o encargados de pequeños negocios alimentarios
+
+| **Entrevista Nro. 1** |  |
+| --- | --- |
+| Screenshot | <img src="assets/chapter-05/validation/IsaacDiazInterview.png" alt="Screenshot de entrevista de validación - Isaac Diaz" width="600"> |
+| Nombres y apellidos | Isaac Diaz |
+| Edad | 25 años |
+| Distrito | San Miguel |
+| Segmento objetivo | Dueños, administradores o encargados de pequeños negocios alimentarios |
+| URL de grabación | [Ver video en Microsoft Stream](https://1drv.ms/v/c/470edfbbf4f38077/IQDBetSYZ7JeQpQ6vmBHOrz2AQAVRE3xe3Wd1l_OaXu63Cs?e=l02EFp) |
+| Timing de inicio | 00:00 |
+| Duración | 12:28 |
+| Resumen | Isaac evaluó ColdTrace desde el rol de encargado de un pequeño negocio familiar que comercializa productos frios como carnes. Durante la revisión de la Landing Page, comprendió que la propuesta se enfoca en monitorear equipos refrigerados, recibir alertas y consultar historial, relacionándolo con su necesidad de detectar fallas antes de que la mercadería esté en riesgo. En la Web Application, valoró especialmente el dashboard, la revisión de activos, las alertas y el historial diario, pues estos elementos reemplazan parcialmente el control manual basado en revisar indicadores de refrigeradoras o inspeccionar visualmente los productos. Señaló que la solución sería útil si mantiene una experiencia simple, accesible desde cualquier dispositivo y con notificaciones claras. |
+
+| **Entrevista Nro. 2** | |
+| --- | --- |
+| Screenshot | <img src="assets/chapter-05/validation/GabrielRamirezInterview.png" alt="Screenshot de entrevista de validación - Gabriel Ramirez" width="600"> |
+| Nombres y apellidos | Gabriel Ramirez Gutiérrez |
+| Edad | 19 años |
+| Distrito | San Miguel |
+| Segmento objetivo | Dueños, administradores o encargados de pequeños negocios alimentarios |
+| URL de grabación | [Ver video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416706_upc_edu_pe/IQCjVmGP_7UOT5AhWUlpq7XcAXPy3iQzuc8WC1u_7x62KWw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=D1GZfR) |
+| Timing de inicio | 00:00 |
+| Duración | 08:07 |
+| Resumen | Gabriel evaluó ColdTrace desde su rol como trabajador de una bodega en San Miguel, donde gestiona áreas de carnicería y verdulería. Durante la presentación, destacó que la Landing Page es clara y comunica eficazmente la propuesta de valor. Valoró positivamente la automatización del monitoreo de temperatura, señalando que le permitiría gestionar su inventario de forma más rápida y precisa desde un dispositivo, eliminando el control manual. Finalmente, expresó que las funciones de alertas y notificaciones del sistema serían herramientas de gran ayuda en su labor diaria. |
+
+| **Entrevista Nro. 3** |  |
+| --- | --- |
+| Screenshot | <img src="assets/chapter-05/validation/vi-s1-01-jean-pool-coaguila.png" alt="Screenshot de entrevista de validación - Jean Pool Coaguila" width="600"> |
+| Nombres y apellidos | Jean Pool Coaguila |
+| Edad | 29 años |
+| Distrito | Lima Norte |
+| Segmento objetivo | Dueños, administradores o encargados de pequeños negocios alimentarios |
+| URL de grabación | [Ver video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQDzxmtGoZMES7vutMFjzCRkAXimh9-_K-h2BVM1FMlXjhY?e=hdDtj8&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D) |
+| Timing de inicio | 00:00 |
+| Duración | 18:16 |
+| Resumen | Jean Pool evaluó ColdTrace desde el rol de encargado de un minimarket familiar que comercializa productos perecibles. Durante la revisión de la Landing Page, comprendió que la propuesta se enfoca en monitorear equipos refrigerados, recibir alertas y consultar historial, relacionándolo con su necesidad de detectar fallas antes de que la mercadería esté en riesgo. En la Web Application, valoró especialmente el dashboard, la revisión de activos, las alertas y el historial diario, pues estos elementos reemplazan parcialmente el control manual basado en revisar indicadores de refrigeradoras o inspeccionar visualmente los productos. Señaló que la solución sería útil si mantiene una experiencia simple, accesible desde celular y con mensajes de alerta claros. Como oportunidades de mejora, sugirió explicar mejor el costo, la instalación de sensores y agregar recomendaciones concretas de acción ante cada alerta. |
+
+#### Segmento objetivo 2: Responsables de operaciones, calidad o logística en negocios con cadena de frío
+
+| **Entrevista Nro. 1** |  |
+| --- | --- |
+| Screenshot | <img src="assets/chapter-05/validation/vi-s2-01-rodrigo-vasquez.png" alt="Screenshot de entrevista de validación - Rodrigo Vasquez" width="600"> |
+| Nombres y apellidos | Rodrigo Vasquez |
+| Edad | 30 años |
+| Distrito | Lima Metropolitana |
+| Segmento objetivo | Responsables de operaciones, calidad o logística en negocios con cadena de frío |
+| URL de grabación | [Ver video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQDzxmtGoZMES7vutMFjzCRkAXimh9-_K-h2BVM1FMlXjhY?e=hdDtj8&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D) |
+| Timing de inicio | 18:16 |
+| Duración | 31:58 |
+| Resumen | Rodrigo evaluó ColdTrace desde el rol de supervisor de operaciones encargado de controlar activos refrigerados y consolidar información operativa. Al revisar la Landing Page, identificó que la propuesta responde a problemas mencionados en la entrevista inicial, como la falta de visibilidad inmediata, la dependencia de registros manuales y la dispersión de información. En la Web Application, destacó el valor del dashboard operacional para priorizar riesgos, la gestión de activos y sensores para mantener trazabilidad de equipos, el módulo de incidentes para reconocer y cerrar alertas con acciones correctivas, y los reportes para auditorías o revisiones internas. Consideró que ColdTrace puede reducir el trabajo manual de consolidación en Excel o Google Sheets, siempre que los reportes sean descargables y la interfaz mantenga filtros claros por sede, activo, severidad y estado. Como mejoras, recomendó reforzar la priorización de alertas, agregar recomendaciones de acción y mejorar la vista por sede o zona para operaciones con varios puntos de control. |
+
+| **Entrevista Nro. 2** |  |
+| --- | --- |
+| Screenshot | <img src="assets/chapter-05/validation/ElverthVasquezInterview.jpg" alt="Screenshot de entrevista de validación - Elverth Vasquez" width="600"> |
+| Nombres y apellidos | Elverth Vasquez |
+| Edad | 21 años |
+| Distrito | Lima Metropolitana |
+| Segmento objetivo | Responsables de operaciones, calidad o logística en negocios con cadena de frío |
+| URL de grabación | [Ver video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202321020_upc_edu_pe/IQBABHq_q78wR7GGauAcAa8eAX54dBwKdLT-qohJPgtR5TQ?e=f2iKcN&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0%3D) |
+| Timing de inicio | 00:00 |
+| Duración | 16:22 |
+| Resumen | Elverth evaluó ColdTrace desde la perspectiva de un responsable operativo que necesita supervisar equipos y responder ante desviaciones. Consideró útil centralizar activos, lecturas, alertas e incidencias para evitar controles dispersos y destacó que el historial facilita justificar decisiones y acciones correctivas. También valoró el acceso desde distintos dispositivos y recomendó mantener mensajes de error claros, priorización visible de incidentes y una navegación directa hacia la acción requerida. |
+
+| **Entrevista Nro. 3** |  |
+| --- | --- |
+| Screenshot | <br><br> |
+| Nombres y apellidos |  |
+| Edad |  |
+| Distrito |  |
+| Segmento objetivo | Responsables de operaciones, calidad o logística en negocios con cadena de frío |
+| URL de grabación |  |
+| Timing de inicio |  |
+| Duración |  |
+| Resumen | <br><br><br> |
 
 ### 5.3.3. Evaluaciones según heurísticas
 
-No se realizaron evaluaciones heurísticas formales durante Sprint 1. La revisión se enfocó en verificar que la Landing Page cargue correctamente, que las secciones principales sean visibles y que el diseño responda en distintas resoluciones.
+| Campo | Detalle |
+| :--- | :--- |
+| Carrera | Ingeniería de Software |
+| Curso | Aplicaciones Web |
+| Sección | 2610 (NRC 12190) |
+| Auditor | FrostGuard Team |
+| Clientes | Aponte Pablo, Isabel Luisa; Laura Acosta, Victor Jhosef; Blancas Chávez, Carlos Franco |
+
+La evaluación abarcó el registro e inicio de sesión, dashboard operacional, gestión de activos y dispositivos, alertas e incidencias, reportes, mantenimiento y capacidades SaaS. Se utilizó una escala de severidad de 1 (problema superficial) a 4 (problema crítico que impide continuar).
+
+| # | Problema observado | Severidad | Heurística afectada |
+| :---: | :--- | :---: | :--- |
+| 1 | El acceso a alertas pendientes puede no cargar la lista de notificaciones. | 1 | Visibilidad del estado del sistema y flexibilidad de uso. |
+| 2 | El reconocimiento de un incidente puede devolver un error y bloquear la acción. | 3 | Prevención de errores y recuperación ante errores. |
+| 3 | La creación de una cámara frigorífica puede quedar temporalmente indisponible. | 2 | Control del usuario y flexibilidad de uso. |
+
+**Problema 1. Carga intermitente de notificaciones**
+
+Al usar el acceso de alertas pendientes, en ocasiones la sección no carga correctamente y el usuario no recibe confirmación suficiente sobre el estado de la solicitud.
+
+![Evidencia del problema de notificaciones](assets/chapter-05/heuristics/problem1.jpg)
+
+**Problema 2. Error al reconocer un incidente**
+
+Al intentar reconocer un incidente activo, la operación puede responder con un error y no ofrece una recuperación directa dentro del mismo flujo.
+
+![Evidencia del problema de reconocimiento de incidentes](assets/chapter-05/heuristics/problem2.jpg)
+
+**Problema 3. Creación intermitente de cámaras frigoríficas**
+
+La sección de activos puede no permitir temporalmente crear una nueva cámara frigorífica, por lo que debe informar la causa y conservar los datos ingresados para reintentar.
+
+![Evidencia del problema de creación de activos](assets/chapter-05/heuristics/problem3.jpg)
 
 ## 5.4. Video About-the-Product
 
-El documento fuente no registra un enlace final de video About-the-Product para esta entrega. El video será incorporado cuando se consolide la evidencia audiovisual del producto.
+Como parte de la entrega del proyecto, se ha elaborado un video explicativo que presenta de manera resumida el producto ColdTrace, una plataforma orientada a la gestión y monitoreo de la cadena de frío. En el video se describe el problema que aborda el sistema, sus principales funcionalidades —gestión de organizaciones, ubicaciones, gateways, activos, dispositivos IoT, lecturas de sensores, incidentes y reportes— así como el valor que aporta a las organizaciones que dependen del control de temperatura y humedad en sus operaciones.
 
+El video puede visualizarse en el siguiente enlace:
+
+[Ver en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414054_upc_edu_pe/IQCmZIySYa3pT43sGAmn0UaGAfUnEK7pyE9kdDZWjSlXGX4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=1oulNb)
