@@ -31,7 +31,7 @@
 | Video About-the-Product | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414054_upc_edu_pe/IQCmZIySYa3pT43sGAmn0UaGAfUnEK7pyE9kdDZWjSlXGX4 |
 | Video About-the-Team | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202414054_upc_edu_pe/IQB7LR5aGL-8RoNvXRn22suHAQESryMX97Dk_Kc26UCQ6B0 |
 
-Los enlaces de publicación en YouTube y los datos de timing de los videos About-the-Product y About-the-Team no se encontraron en las ramas revisadas. Deben incorporarse cuando el equipo publique y confirme esos recursos; los enlaces de Microsoft Stream se conservan como evidencia disponible.
+Los enlaces de Microsoft Stream de About-the-Product y About-the-Team fueron confirmados contra los enlaces usados actualmente por la Landing Page. Los enlaces de publicación en YouTube y los datos de timing no se encontraron en las ramas revisadas y deben incorporarse cuando el equipo publique esos recursos.
 
 ## Anexo D. Videos de exposiciones
 
