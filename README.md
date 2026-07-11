@@ -4978,7 +4978,7 @@ Para cada segmento objetivo se registrarán 3 entrevistas. Cada entrevista debe 
 
 | **Entrevista Nro. 3** | **Detalle** |
 | --- | --- |
-| Screenshot | <img src="report/assets/chapter-05/validation/ConsueloAlarcon.jpg" alt="Screenshot de entrevista de validación - Consuelo Alarcon" width="600"> |
+| Screenshot | <img src="report/assets/chapter-05/validation/ConsueloAlarcon.png" alt="Screenshot de entrevista de validación - Consuelo Alarcon" width="600"> |
 | Nombres y apellidos | Consuelo Alarcón |
 | Edad | 49 años |
 | Distrito | San Borja |
