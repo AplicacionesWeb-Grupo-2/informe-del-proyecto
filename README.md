@@ -5206,14 +5206,9 @@ Los enlaces de Microsoft Stream de About-the-Product y About-the-Team fueron con
 
 ## Anexo D. Videos de exposiciones
 
-El enunciado solicita una tabla con los videos de exposición de cada entrega. En las ramas revisadas no se encontraron enlaces identificados de forma inequívoca para AV1, TB1, AV2 y TB2, por lo que no se asignan videos de navegación o validación a una exposición distinta.
-
 | Entrega | Enlace de exposición |
 | :--- | :--- |
-| AV1 | Pendiente de confirmación por el equipo. |
-| TB1 | Pendiente de confirmación por el equipo. |
-| AV2 | Pendiente de confirmación por el equipo. |
-| TB2 | Pendiente de confirmación por el equipo. |
+| TB2 | [Video de exposición TB2](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQASqFLIdBgOSpdAenFP_MNdAQf15Jpw1R0e92lIRhO7R1A?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=CBpkSL) |
 
 
 ---
