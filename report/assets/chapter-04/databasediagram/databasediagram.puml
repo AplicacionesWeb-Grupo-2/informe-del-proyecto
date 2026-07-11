@@ -1,517 +1,247 @@
 @startuml
-
-title ColdTrace - Database Diagram
-caption Single logical MySQL database in 3NF. Colors identify the bounded context of each table.
-
+title ColdTrace - Implemented Database Diagram
+caption MySQL schema aligned with the final EF Core AppDbContext model snapshot.
 hide circle
 skinparam linetype ortho
 skinparam classAttributeIconSize 0
-skinparam nodesep 34
-skinparam ranksep 48
+skinparam nodesep 20
+skinparam ranksep 28
 
-' Account & Access
-
-entity "organizations" as organizations #D6EAF8 {
-  * id : char(36) <<PK>>
+entity organizations #D6EAF8 {
+  * id : int <<PK>>
   --
-  legal_name : varchar(160) <<NOT NULL>>
-  tax_identifier : varchar(20) <<UK, NOT NULL>>
-  contact_email : varchar(120) <<NOT NULL>>
-  status : varchar(30) <<NOT NULL>>
+  commercial_name : varchar(200)
+  contact_email : varchar(256) <<UK>>
+  legal_name : varchar(200)
+  tax_id : varchar(32) <<UK>>
+}
+entity users #D6EAF8 {
+  * id : int <<PK>>
+  --
+  # organization_id : int <<FK>>
+  # role_id : int <<FK>>
+  email : varchar(256)
+  password_hash : varchar(512)
+}
+entity roles #D6EAF8 {
+  * id : int <<PK>>
+  --
+  name : varchar(64) <<UK>>
+  label : varchar(128)
+}
+entity role_permissions #D6EAF8 {
+  * # role_id : int <<PK, FK>>
+  * id : int <<PK>>
+  --
+  resource : varchar(64)
+  action : varchar(64)
+}
+entity external_identities #D6EAF8 {
+  * id : int <<PK>>
+  --
+  # user_id : int <<FK>>
+  provider : varchar(32)
+  provider_subject : varchar(255)
+  email : varchar(255)
+}
+entity password_reset_requests #D6EAF8 {
+  * id : int <<PK>>
+  --
+  # user_id : int <<FK>>
+  token_hash : varchar(128) <<UK>>
+  requested_at : datetime
+  expires_at : datetime
 }
 
-entity "users" as users #D6EAF8 {
-  * id : char(36) <<PK>>
+entity locations #FADBD8 {
+  * id : int <<PK>>
   --
-  # organization_id : char(36) <<FK, NOT NULL>>
-  email : varchar(120) <<UK, NOT NULL>>
-  display_name : varchar(120) <<NOT NULL>>
-  password_hash : varchar(255) <<NOT NULL>>
-  status : varchar(30) <<NOT NULL>>
-  created_at : datetime <<NOT NULL>>
-  verified_at : datetime
+  # organization_id : int <<FK>>
+  name : varchar(150)
+  address : varchar(300)
+}
+entity gateways #FADBD8 {
+  * id : int <<PK>>
+  --
+  # organization_id : int <<FK>>
+  # location_id : int <<FK>>
+  serial_number : varchar(100)
+  status : varchar(50)
+}
+entity assets #FADBD8 {
+  * id : int <<PK>>
+  --
+  # organization_id : int <<FK>>
+  # location_id : int <<FK>>
+  name : varchar(150)
+  asset_type : varchar(50)
+}
+entity asset_settings #FADBD8 {
+  * id : int <<PK>>
+  --
+  # asset_id : int <<FK, UK>>
+  minimum_temperature : decimal
+  maximum_temperature : decimal
+  minimum_humidity : decimal
+  maximum_humidity : decimal
+}
+entity asset_settings_asset_types #FADBD8 {
+  * # asset_settings_id : int <<PK, FK>>
+  * value : varchar(100) <<PK>>
+}
+entity asset_settings_iot_device_types #FADBD8 {
+  * # asset_settings_id : int <<PK, FK>>
+  * value : varchar(100) <<PK>>
+}
+entity iot_devices #FADBD8 {
+  * id : int <<PK>>
+  --
+  # organization_id : int <<FK>>
+  # gateway_id : int <<FK>>
+  asset_id : int <<FK>>
+  device_uid : varchar(100)
+  status : varchar(50)
+}
+entity iot_device_measurement_parameters #FADBD8 {
+  * # iot_device_id : int <<PK, FK>>
+  * value : varchar(100) <<PK>>
+}
+entity sensor_readings #D5F5E3 {
+  * id : int <<PK>>
+  --
+  # organization_id : int <<FK>>
+  # iot_device_id : int <<FK>>
+  temperature : decimal
+  humidity : decimal
+  recorded_at : datetime
 }
 
-entity "sessions" as sessions #D6EAF8 {
-  * id : char(36) <<PK>>
+entity incidents #FCF3CF {
+  * id : int <<PK>>
   --
-  # user_id : char(36) <<FK, NOT NULL>>
-  access_token_hash : varchar(255) <<UK, NOT NULL>>
-  created_at : datetime <<NOT NULL>>
-  expires_at : datetime <<NOT NULL>>
-  revoked_at : datetime
+  # organization_id : int <<FK>>
+  asset_id : int
+  severity : varchar(32)
+  status : varchar(32)
+  detected_at : datetime
+}
+entity notifications #FCF3CF {
+  * id : int <<PK>>
+  --
+  # organization_id : int <<FK>>
+  # incident_id : int <<FK>>
+  channel : varchar(32)
+  status : varchar(32)
+}
+entity ai_resolution_plans #D7DBFF {
+  * id : int <<PK>>
+  --
+  # organization_id : int <<FK>>
+  # incident_id : int <<FK>>
+  status : varchar(32)
+  probable_cause : varchar(1024)
+  model_provider : varchar(64)
+  generated_at : datetime
+}
+entity ai_resolution_plan_steps #D7DBFF {
+  * # ai_resolution_plan_id : int <<PK, FK>>
+  * sequence : int <<PK>>
+  --
+  action : varchar(1024)
+  rationale : varchar(1024)
+  expected_outcome : varchar(1024)
+}
+entity ai_resolution_plan_required_evidences #D7DBFF {
+  * id : int <<PK>>
+  --
+  # ai_resolution_plan_id : int <<FK>>
+  value : varchar(512)
+}
+entity ai_resolution_plan_uncertainty_notes #D7DBFF {
+  * id : int <<PK>>
+  --
+  # ai_resolution_plan_id : int <<FK>>
+  value : varchar(512)
 }
 
-entity "roles" as roles #D6EAF8 {
-  * id : char(36) <<PK>>
+entity maintenance_schedules #E8DAEF {
+  * id : int <<PK>>
   --
-  name : varchar(80) <<UK, NOT NULL>>
-  description : varchar(255)
+  # organization_id : int <<FK>>
+  # asset_id : int <<FK>>
+  scheduled_date : datetime
+  status : varchar(50)
+}
+entity technical_service_requests #E8DAEF {
+  * id : int <<PK>>
+  --
+  # organization_id : int <<FK>>
+  # asset_id : int <<FK>>
+  status : varchar(50)
+  requested_at : datetime
+}
+entity reports #E8DAEF {
+  * id : int <<PK>>
+  --
+  # organization_id : int <<FK>>
+  uuid : varchar(128)
+  report_type : varchar(64)
+  generated_at : datetime
 }
 
-entity "permissions" as permissions #D6EAF8 {
-  * id : char(36) <<PK>>
+entity organization_subscriptions #FDEBD0 {
+  * id : int <<PK>>
   --
-  resource : varchar(80) <<NOT NULL>>
-  action : varchar(50) <<NOT NULL>>
+  # organization_id : int <<FK, UK>>
+  plan_code : varchar(40)
+  status : varchar(30)
+  provider : varchar(30)
+  provider_customer_id : varchar(255)
+  provider_subscription_id : varchar(255)
+}
+entity billing_webhook_events #FDEBD0 {
+  * id : int <<PK>>
   --
-  UK (resource, action)
+  organization_id : int
+  provider : varchar(30)
+  event_id : varchar(120)
+  event_type : varchar(120)
+  status : varchar(30)
+  processed_at : datetime
 }
 
-entity "user_roles" as user_roles #D6EAF8 {
-  * # user_id : char(36) <<PK, FK>>
-  * # role_id : char(36) <<PK, FK>>
-}
-
-entity "role_permissions" as role_permissions #D6EAF8 {
-  * # role_id : char(36) <<PK, FK>>
-  * # permission_id : char(36) <<PK, FK>>
-}
-
-entity "subscription_plans" as subscription_plans #D6EAF8 {
-  * id : char(36) <<PK>>
-  --
-  name : varchar(80) <<UK, NOT NULL>>
-  max_assets : int <<NOT NULL>>
-  max_users : int <<NOT NULL>>
-  monthly_price : decimal(10,2) <<NOT NULL>>
-}
-
-entity "subscriptions" as subscriptions #D6EAF8 {
-  * id : char(36) <<PK>>
-  --
-  # organization_id : char(36) <<FK, NOT NULL>>
-  # plan_id : char(36) <<FK, NOT NULL>>
-  status : varchar(30) <<NOT NULL>>
-  starts_at : date <<NOT NULL>>
-  ends_at : date
-}
-
-entity "payment_records" as payment_records #D6EAF8 {
-  * id : char(36) <<PK>>
-  --
-  # subscription_id : char(36) <<FK, NOT NULL>>
-  provider_reference : varchar(120) <<UK, NOT NULL>>
-  amount : decimal(10,2) <<NOT NULL>>
-  status : varchar(30) <<NOT NULL>>
-  paid_at : datetime
-}
-
-entity "notification_preferences" as notification_preferences #D6EAF8 {
-  * id : char(36) <<PK>>
-  --
-  # user_id : char(36) <<FK, UK, NOT NULL>>
-  quiet_hours_start : time
-  quiet_hours_end : time
-  minimum_severity : varchar(30) <<NOT NULL>>
-}
-
-entity "notification_preference_channels" as notification_preference_channels #D6EAF8 {
-  * # preference_id : char(36) <<PK, FK>>
-  * channel : varchar(30) <<PK>>
-}
-
-' Sensor Management
-
-entity "assets" as assets #FADBD8 {
-  * id : char(36) <<PK>>
-  --
-  # organization_id : char(36) <<FK, NOT NULL>>
-  internal_code : varchar(80) <<NOT NULL>>
-  name : varchar(120) <<NOT NULL>>
-  description : varchar(255)
-  type : varchar(40) <<NOT NULL>>
-  capacity_value : decimal(10,2)
-  capacity_unit : varchar(20)
-  status : varchar(30) <<NOT NULL>>
-  --
-  UK (organization_id, internal_code)
-}
-
-entity "asset_locations" as asset_locations #FADBD8 {
-  * # asset_id : char(36) <<PK, FK>>
-  --
-  label : varchar(120)
-  address : varchar(255)
-  latitude : decimal(10,7)
-  longitude : decimal(10,7)
-  is_mobile : boolean <<NOT NULL>>
-}
-
-entity "edge_gateways" as edge_gateways #FADBD8 {
-  * id : char(36) <<PK>>
-  --
-  organization_id : char(36) <<NOT NULL>>
-  serial_number : varchar(100) <<UK, NOT NULL>>
-  claim_code : varchar(80) <<UK, NOT NULL>>
-  model : varchar(80) <<NOT NULL>>
-  protocol : varchar(40) <<NOT NULL>>
-  status : varchar(30) <<NOT NULL>>
-}
-
-entity "sensors" as sensors #FADBD8 {
-  * id : char(36) <<PK>>
-  --
-  # asset_id : char(36) <<FK>>
-  edge_gateway_id : char(36)
-  serial_number : varchar(100) <<UK, NOT NULL>>
-  model : varchar(80) <<NOT NULL>>
-  type : varchar(40) <<NOT NULL>>
-  status : varchar(30) <<NOT NULL>>
-  paired_at : datetime
-  reading_interval_seconds : int <<NOT NULL>>
-}
-
-entity "calibration_records" as calibration_records #FADBD8 {
-  * id : char(36) <<PK>>
-  --
-  # sensor_id : char(36) <<FK, NOT NULL>>
-  certificate_code : varchar(100) <<UK, NOT NULL>>
-  calibrated_at : date <<NOT NULL>>
-  expires_at : date <<NOT NULL>>
-  status : varchar(30) <<NOT NULL>>
-}
-
-entity "operating_parameters" as operating_parameters #FADBD8 {
-  * id : char(36) <<PK>>
-  --
-  # asset_id : char(36) <<FK, UK, NOT NULL>>
-  product_category : varchar(120) <<NOT NULL>>
-  temperature_min_celsius : decimal(6,2) <<NOT NULL>>
-  temperature_max_celsius : decimal(6,2) <<NOT NULL>>
-  humidity_min_percentage : decimal(5,2) <<NOT NULL>>
-  humidity_max_percentage : decimal(5,2) <<NOT NULL>>
-  reading_interval_seconds : int <<NOT NULL>>
-  criticality : varchar(30) <<NOT NULL>>
-}
-
-entity "maintenance_schedules" as maintenance_schedules #FADBD8 {
-  * id : char(36) <<PK>>
-  --
-  # asset_id : char(36) <<FK, NOT NULL>>
-  sensor_id : char(36)
-  scheduled_for : date <<NOT NULL>>
-  status : varchar(30) <<NOT NULL>>
-  notes : varchar(500)
-}
-
-entity "service_tickets" as service_tickets #FADBD8 {
-  * id : char(36) <<PK>>
-  --
-  # asset_id : char(36) <<FK, NOT NULL>>
-  requested_by_user_id : char(36) <<NOT NULL>>
-  status : varchar(30) <<NOT NULL>>
-  opened_at : datetime <<NOT NULL>>
-  closed_at : datetime
-}
-
-entity "service_interventions" as service_interventions #FADBD8 {
-  * id : char(36) <<PK>>
-  --
-  # ticket_id : char(36) <<FK, NOT NULL>>
-  technician_name : varchar(120) <<NOT NULL>>
-  description : varchar(500) <<NOT NULL>>
-  result : varchar(30) <<NOT NULL>>
-  performed_at : datetime <<NOT NULL>>
-}
-
-' Monitoring
-
-entity "offline_sync_batches" as offline_sync_batches #D5F5E3 {
-  * id : char(36) <<PK>>
-  --
-  # edge_gateway_id : char(36) <<FK, NOT NULL>>
-  received_at : datetime <<NOT NULL>>
-  record_count : int <<NOT NULL>>
-  discarded_count : int <<NOT NULL>>
-  status : varchar(30) <<NOT NULL>>
-}
-
-entity "measurements" as measurements #D5F5E3 {
-  * id : char(36) <<PK>>
-  --
-  # sensor_id : char(36) <<FK, NOT NULL>>
-  # offline_sync_batch_id : char(36) <<FK>>
-  kind : varchar(30) <<NOT NULL>>
-  value : decimal(10,3) <<NOT NULL>>
-  captured_at : datetime <<NOT NULL>>
-  received_at : datetime <<NOT NULL>>
-  status : varchar(30) <<NOT NULL>>
-}
-
-entity "range_evaluations" as range_evaluations #D5F5E3 {
-  * id : char(36) <<PK>>
-  --
-  # measurement_id : char(36) <<FK, UK, NOT NULL>>
-  result : varchar(30) <<NOT NULL>>
-  evaluated_at : datetime <<NOT NULL>>
-  reason : varchar(255)
-}
-
-entity "connectivity_snapshots" as connectivity_snapshots #D5F5E3 {
-  * id : char(36) <<PK>>
-  --
-  # sensor_id : char(36) <<FK, NOT NULL>>
-  edge_gateway_id : char(36) <<NOT NULL>>
-  status : varchar(30) <<NOT NULL>>
-  checked_at : datetime <<NOT NULL>>
-}
-
-' Alerts
-
-entity "alert_rules" as alert_rules #FCF3CF {
-  * id : char(36) <<PK>>
-  --
-  # sensor_id : char(36) <<FK, NOT NULL>>
-  alert_type : varchar(40) <<NOT NULL>>
-  severity : varchar(30) <<NOT NULL>>
-  minimum_duration_seconds : int <<NOT NULL>>
-  active : boolean <<NOT NULL>>
-}
-
-entity "alerts" as alerts #FCF3CF {
-  * id : char(36) <<PK>>
-  --
-  # alert_rule_id : char(36) <<FK, NOT NULL>>
-  measurement_id : char(36) <<NOT NULL>>
-  acknowledged_by_user_id : char(36)
-  status : varchar(30) <<NOT NULL>>
-  generated_at : datetime <<NOT NULL>>
-  acknowledged_at : datetime
-}
-
-entity "thermal_incidents" as thermal_incidents #FCF3CF {
-  * id : char(36) <<PK>>
-  --
-  # alert_id : char(36) <<FK, UK, NOT NULL>>
-  assigned_user_id : char(36) <<NOT NULL>>
-  status : varchar(30) <<NOT NULL>>
-  opened_at : datetime <<NOT NULL>>
-  closed_at : datetime
-  summary : varchar(500)
-}
-
-entity "corrective_actions" as corrective_actions #FCF3CF {
-  * id : char(36) <<PK>>
-  --
-  # incident_id : char(36) <<FK, NOT NULL>>
-  performed_by_user_id : char(36) <<NOT NULL>>
-  description : varchar(500) <<NOT NULL>>
-  evidence_uri : varchar(500)
-  stability_confirmed : boolean <<NOT NULL>>
-  performed_at : datetime <<NOT NULL>>
-}
-
-entity "notifications" as notifications #FCF3CF {
-  * id : char(36) <<PK>>
-  --
-  # alert_id : char(36) <<FK, NOT NULL>>
-  recipient_user_id : char(36) <<NOT NULL>>
-  channel : varchar(30) <<NOT NULL>>
-  status : varchar(30) <<NOT NULL>>
-  sent_at : datetime
-}
-
-entity "escalation_policies" as escalation_policies #FCF3CF {
-  * id : char(36) <<PK>>
-  --
-  # organization_id : char(36) <<FK, NOT NULL>>
-  target_role_id : char(36) <<NOT NULL>>
-  severity : varchar(30) <<NOT NULL>>
-  timeout_minutes : int <<NOT NULL>>
-}
-
-' Reports
-
-entity "reports" as reports #E8DAEF {
-  * id : char(36) <<PK>>
-  --
-  # organization_id : char(36) <<FK, NOT NULL>>
-  generated_by_user_id : char(36) <<NOT NULL>>
-  title : varchar(160) <<NOT NULL>>
-  report_type : varchar(40) <<NOT NULL>>
-  period_start : datetime <<NOT NULL>>
-  period_end : datetime <<NOT NULL>>
-  status : varchar(30) <<NOT NULL>>
-}
-
-entity "monthly_reports" as monthly_reports #E8DAEF {
-  * # report_id : char(36) <<PK, FK>>
-  --
-  month : int <<NOT NULL>>
-  year : int <<NOT NULL>>
-}
-
-entity "compliance_reports" as compliance_reports #E8DAEF {
-  * # report_id : char(36) <<PK, FK>>
-  --
-  standard : varchar(60) <<NOT NULL>>
-  result : varchar(30) <<NOT NULL>>
-}
-
-entity "daily_logs" as daily_logs #E8DAEF {
-  * id : char(36) <<PK>>
-  --
-  # organization_id : char(36) <<FK, NOT NULL>>
-  date : date <<NOT NULL>>
-  status : varchar(30) <<NOT NULL>>
-  --
-  UK (organization_id, date)
-}
-
-entity "reading_summaries" as reading_summaries #E8DAEF {
-  * id : char(36) <<PK>>
-  --
-  report_id : char(36)
-  # daily_log_id : char(36) <<FK>>
-  measurement_id : char(36) <<NOT NULL>>
-}
-
-entity "alert_summaries" as alert_summaries #E8DAEF {
-  * id : char(36) <<PK>>
-  --
-  report_id : char(36)
-  # daily_log_id : char(36) <<FK>>
-  alert_id : char(36) <<NOT NULL>>
-}
-
-entity "incident_summaries" as incident_summaries #E8DAEF {
-  * id : char(36) <<PK>>
-  --
-  report_id : char(36)
-  # daily_log_id : char(36) <<FK>>
-  incident_id : char(36) <<NOT NULL>>
-}
-
-entity "report_exports" as report_exports #E8DAEF {
-  * id : char(36) <<PK>>
-  --
-  # report_id : char(36) <<FK, NOT NULL>>
-  format : varchar(20) <<NOT NULL>>
-  file_uri : varchar(500) <<UK, NOT NULL>>
-  created_at : datetime <<NOT NULL>>
-}
-
-entity "dashboards" as dashboards #E8DAEF {
-  * id : char(36) <<PK>>
-  --
-  # user_id : char(36) <<FK, NOT NULL>>
-  name : varchar(120) <<NOT NULL>>
-}
-
-entity "widgets" as widgets #E8DAEF {
-  * id : char(36) <<PK>>
-  --
-  # dashboard_id : char(36) <<FK, NOT NULL>>
-  title : varchar(120) <<NOT NULL>>
-  type : varchar(40) <<NOT NULL>>
-  configuration_json : json
-}
-
-' Audit
-
-entity "audit_cases" as audit_cases #FDEBD0 {
-  * id : char(36) <<PK>>
-  --
-  # organization_id : char(36) <<FK, NOT NULL>>
-  requested_by_user_id : char(36) <<NOT NULL>>
-  standard : varchar(60) <<NOT NULL>>
-  status : varchar(30) <<NOT NULL>>
-  started_at : datetime <<NOT NULL>>
-  closed_at : datetime
-}
-
-entity "compliance_criteria" as compliance_criteria #FDEBD0 {
-  * id : char(36) <<PK>>
-  --
-  standard : varchar(60) <<NOT NULL>>
-  code : varchar(80) <<NOT NULL>>
-  description : varchar(500) <<NOT NULL>>
-  --
-  UK (standard, code)
-}
-
-entity "compliance_findings" as compliance_findings #FDEBD0 {
-  * id : char(36) <<PK>>
-  --
-  # audit_case_id : char(36) <<FK, NOT NULL>>
-  # criterion_id : char(36) <<FK, NOT NULL>>
-  result : varchar(30) <<NOT NULL>>
-  details : varchar(500)
-}
-
-entity "evidence_packages" as evidence_packages #FDEBD0 {
-  * id : char(36) <<PK>>
-  --
-  # audit_case_id : char(36) <<FK, UK, NOT NULL>>
-  status : varchar(30) <<NOT NULL>>
-  prepared_at : datetime <<NOT NULL>>
-}
-
-entity "evidence_items" as evidence_items #FDEBD0 {
-  * id : char(36) <<PK>>
-  --
-  # package_id : char(36) <<FK, NOT NULL>>
-  report_export_id : char(36) <<NOT NULL>>
-  type : varchar(40) <<NOT NULL>>
-  captured_at : datetime <<NOT NULL>>
-}
-
-' Account & Access relationships
 organizations ||--o{ users
-users ||--o{ sessions
-users ||--o{ user_roles
-roles ||--o{ user_roles
+roles ||--o{ users
 roles ||--o{ role_permissions
-permissions ||--o{ role_permissions
-subscription_plans ||--o{ subscriptions
-organizations ||--o{ subscriptions
-subscriptions ||--o{ payment_records
-users ||--|| notification_preferences
-notification_preferences ||--o{ notification_preference_channels
-
-' Sensor Management relationships
+users ||--o{ external_identities
+users ||--o{ password_reset_requests
+organizations ||--o{ locations
+organizations ||--o{ gateways
+locations ||--o{ gateways
 organizations ||--o{ assets
-assets ||--|| asset_locations
-assets ||--o{ sensors
-sensors ||--o{ calibration_records
-assets ||--o| operating_parameters
+locations ||--o{ assets
+assets ||--o| asset_settings
+asset_settings ||--o{ asset_settings_asset_types
+asset_settings ||--o{ asset_settings_iot_device_types
+organizations ||--o{ iot_devices
+gateways ||--o{ iot_devices
+assets |o--o{ iot_devices
+iot_devices ||--o{ iot_device_measurement_parameters
+iot_devices ||--o{ sensor_readings
+organizations ||--o{ sensor_readings
+organizations ||--o{ incidents
+incidents ||--o{ notifications
+organizations ||--o{ notifications
+incidents ||--o{ ai_resolution_plans
+organizations ||--o{ ai_resolution_plans
+ai_resolution_plans ||--o{ ai_resolution_plan_steps
+ai_resolution_plans ||--o{ ai_resolution_plan_required_evidences
+ai_resolution_plans ||--o{ ai_resolution_plan_uncertainty_notes
+organizations ||--o{ maintenance_schedules
 assets ||--o{ maintenance_schedules
-assets ||--o{ service_tickets
-service_tickets ||--o{ service_interventions
-
-' Monitoring relationships
-edge_gateways ||--o{ offline_sync_batches
-offline_sync_batches ||--o{ measurements
-sensors ||--o{ measurements
-measurements ||--o| range_evaluations
-sensors ||--o{ connectivity_snapshots
-
-' Alerts relationships
-sensors ||--o{ alert_rules
-organizations ||--o{ escalation_policies
-alert_rules ||--o{ alerts
-alerts ||--o| thermal_incidents
-thermal_incidents ||--o{ corrective_actions
-alerts ||--o{ notifications
-
-' Reports relationships
+organizations ||--o{ technical_service_requests
+assets ||--o{ technical_service_requests
 organizations ||--o{ reports
-reports ||--o| monthly_reports
-reports ||--o| compliance_reports
-reports ||--o{ report_exports
-organizations ||--o{ daily_logs
-daily_logs ||--o{ reading_summaries
-daily_logs ||--o{ alert_summaries
-daily_logs ||--o{ incident_summaries
-users ||--o{ dashboards
-dashboards ||--o{ widgets
-
-' Audit relationships
-organizations ||--o{ audit_cases
-audit_cases ||--|| evidence_packages
-compliance_criteria ||--o{ compliance_findings
-audit_cases ||--o{ compliance_findings
-evidence_packages ||--o{ evidence_items
-
+organizations ||--o| organization_subscriptions
+organizations |o--o{ billing_webhook_events
 @enduml

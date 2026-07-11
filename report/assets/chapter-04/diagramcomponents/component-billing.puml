@@ -1,0 +1,42 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title Component Diagram - ColdTrace - Billing
+caption Implemented subscription catalog, entitlements, Stripe sessions, and webhook synchronization.
+
+LAYOUT_WITH_LEGEND()
+LAYOUT_LEFT_RIGHT()
+
+Container(landing, "Landing Page", "HTML / CSS / JavaScript", "Displays the public plan comparison.")
+Container(webapp, "Frontend Web Application", "Vue 3", "Displays subscription usage and starts billing management flows.")
+System_Ext(stripe, "Stripe", "Checkout, Customer Portal, and signed webhook events.")
+ContainerDb(database, "Shared ColdTrace Database", "MySQL / EF Core", "Plans, organization subscriptions, usage, and processed webhook events.")
+
+Container_Boundary(billing, "Billing Bounded Context") {
+    Component(plans_controller, "Subscription Plans Controller", "ASP.NET Core", "Publishes the active catalog.")
+    Component(subscription_controller, "Organization Subscriptions Controller", "ASP.NET Core", "Returns plan, status, entitlements, limits, and usage.")
+    Component(checkout_controller, "Checkout Sessions Controller", "ASP.NET Core", "Creates Stripe Checkout sessions.")
+    Component(portal_controller, "Portal Sessions Controller", "ASP.NET Core", "Creates Stripe Customer Portal sessions.")
+    Component(webhook_controller, "Stripe Webhooks Controller", "ASP.NET Core", "Validates and processes signed events idempotently.")
+    Component(application_services, "Billing Application Services", "Application", "Coordinate catalog, subscription, checkout, portal, webhook, and limits.")
+    Component(stripe_adapters, "Stripe Provider Adapters", "Infrastructure", "Call Stripe and validate webhook signatures.")
+    Component(repositories, "Billing Repositories", "EF Core", "Persist subscription and webhook state.")
+}
+
+Rel(landing, plans_controller, "Gets catalog", "HTTPS / JSON")
+Rel(webapp, plans_controller, "Gets catalog", "HTTPS / JSON")
+Rel(webapp, subscription_controller, "Gets plan and usage", "HTTPS / JSON")
+Rel(webapp, checkout_controller, "Starts upgrade", "HTTPS / JSON")
+Rel(webapp, portal_controller, "Manages billing", "HTTPS / JSON")
+Rel(stripe, webhook_controller, "Posts signed event", "HTTPS / webhook")
+Rel(plans_controller, application_services, "Queries catalog")
+Rel(subscription_controller, application_services, "Queries subscription")
+Rel(checkout_controller, application_services, "Creates checkout")
+Rel(portal_controller, application_services, "Creates portal")
+Rel(webhook_controller, application_services, "Synchronizes subscription")
+Rel(application_services, stripe_adapters, "Uses provider")
+Rel(stripe_adapters, stripe, "Creates sessions / verifies events", "HTTPS")
+Rel(application_services, repositories, "Reads / writes")
+Rel(repositories, database, "Reads / writes", "EF Core")
+
+@enduml
