@@ -645,7 +645,7 @@ El tablero de diseño se encuentra disponible en Miro: <https://miro.com/app/boa
 
 ### 4.6.2. Software Architecture Context Diagram.
 
-El diagrama de contexto de ColdTrace muestra la plataforma como sistema central y presenta sus relaciones con los actores principales, los dispositivos IoT y los servicios externos previstos por el diseño. La línea base pública usa el monolito modular ASP.NET Core; **Billing**, **AiAssistance** y los proveedores externos se documentan como alcance preparado en pull requests, pendiente de integración, configuración operacional y redespliegue.
+El diagrama de contexto de ColdTrace muestra la plataforma como sistema central y presenta sus relaciones con los actores principales, los dispositivos IoT y los servicios externos integrados. La solución usa un monolito modular ASP.NET Core; **Iam**, **AiAssistance** y **Billing** forman parte del backend desplegado, mientras Google, Apple, OpenAI/Ollama y Stripe permanecen como sistemas externos configurables.
 
 Las user stories se reflejan en el diagrama de la siguiente manera:
 
@@ -671,7 +671,7 @@ Las user stories se reflejan en el diagrama de la siguiente manera:
 
 El diagrama de contenedores representa la topología implementada: Landing Page estática, Frontend Web Application con Vue 3 y PrimeVue, una RESTful API ASP.NET Core y una base de datos MySQL en Google Cloud SQL. El backend se despliega como un único contenedor de aplicación en Cloud Run acompañado por el sidecar oficial de Cloud SQL Auth Proxy.
 
-La RESTful API es un **monolito modular**, no un conjunto de microservicios. Los bounded contexts comparten proceso y despliegue, pero conservan límites de código mediante carpetas y namespaces de Domain, Application, Infrastructure e Interfaces/REST. Los controladores son delgados y delegan en servicios de aplicación; los contratos externos se expresan con resources, commands y assemblers, siguiendo la estructura del Learning Center Platform de Aplicaciones Web.
+La RESTful API es un **monolito modular**, no un conjunto de microservicios. Los bounded contexts comparten proceso y despliegue, pero conservan límites de código mediante carpetas y namespaces de Domain, Application, Infrastructure e Interfaces/REST. Los controladores son delgados y delegan en servicios de aplicación; los contratos externos se expresan con resources, commands y assemblers.
 
 La persistencia usa un único AppDbContext, migraciones EF Core y un esquema MySQL. Las tablas y repositorios mantienen ownership por bounded context, pero no existen bases de datos ni llamadas HTTP internas separadas por módulo. El frontend consume directamente /api/v1 por HTTPS; por ello no se documentan un API Gateway ni una Telemetry Ingestion API independientes.
 
@@ -691,12 +691,12 @@ En esta sección se presenta la vista lógica de componentes por bounded context
 
 Todos los repositorios EF Core usan el AppDbContext compartido y la misma base MySQL, manteniendo ownership modular por namespace y agregado. Las referencias visuales a bases o APIs por contexto deben interpretarse como límites lógicos del diseño, no como contenedores de despliegue independientes.
 
-- **Component Diagram - Account & Access Context:** muestra los componentes encargados de registro, inicio de sesión, recuperación de contraseña, perfil, roles, permisos y estado de suscripción.
+- **Component Diagram - IAM:** muestra los componentes implementados para registro, inicio de sesión, recuperación de contraseña, usuarios, roles, JWT e identidades externas Google/Apple.
 
 <p align="center">
-  <img src="assets/chapter-04/diagramcomponents/component-account-access.png" width="760" alt="Component View Account and Access Context">
+  <img src="assets/chapter-04/diagramcomponents/component-account-access.png" width="760" alt="Component View IAM">
   <br>
-  <em>Figura 4.6.4.1. Component Diagram del Account & Access Context.</em>
+  <em>Figura 4.6.4.1. Component Diagram del bounded context IAM.</em>
 </p>
 
 > El código fuente en PlantUML se encuentra en `assets/chapter-04/diagramcomponents/component-account-access.puml`.
@@ -751,6 +751,26 @@ Todos los repositorios EF Core usan el AppDbContext compartido y la misma base M
 
 > El código fuente en PlantUML se encuentra en `assets/chapter-04/diagramcomponents/component-audit.puml`.
 
+- **Component Diagram - AI Assistance:** muestra la abstracción `IChatClient`, la construcción de contexto real, la salida estructurada y la integración con dashboard, reportes e incidencias bajo aprobación humana.
+
+<p align="center">
+  <img src="assets/chapter-04/diagramcomponents/component-ai-assistance.png" width="760" alt="Component View AI Assistance">
+  <br>
+  <em>Figura 4.6.4.7. Component Diagram del bounded context AI Assistance.</em>
+</p>
+
+> El código fuente en PlantUML se encuentra en `assets/chapter-04/diagramcomponents/component-ai-assistance.puml`.
+
+- **Component Diagram - Billing:** muestra catálogo, suscripción, entitlements, Checkout, Customer Portal, webhooks idempotentes y persistencia compartida.
+
+<p align="center">
+  <img src="assets/chapter-04/diagramcomponents/component-billing.png" width="760" alt="Component View Billing">
+  <br>
+  <em>Figura 4.6.4.8. Component Diagram del bounded context Billing.</em>
+</p>
+
+> El código fuente en PlantUML se encuentra en `assets/chapter-04/diagramcomponents/component-billing.puml`.
+
 ---
 
 ## 4.7. Software Object-Oriented Design.
@@ -772,7 +792,7 @@ Principales decisiones aplicadas en esta etapa:
 - **Reports:** evita acoplarse a las bases de datos de otros contextos mediante `ReadingSummary`, `AlertSummary` e `IncidentSummary`; sobre esa información genera `Report`, `DailyLog`, `MonthlyReport`, `ComplianceReport`, `ReportExport`, `Dashboard` y `Widget`.
 - **Audit:** centraliza la preparación de auditoría mediante `AuditCase`, `ComplianceCriterion`, `ComplianceFinding`, `EvidencePackage` y `EvidenceItem`.
 
-Se corrigieron inconsistencias del modelo base y de las historias de usuario: el gateway físico se implementa como Gateway; los dispositivos IoT pueden permanecer sin un activo asignado; assets y gateways comparten Location como base física; y lecturas, incidentes y reportes preservan trazabilidad mediante identificadores organization-scoped. Las capacidades de IA y billing se modelan como bounded contexts objetivo del mismo backend, pero sus cambios nuevos permanecen en pull requests y no se atribuyen a la revisión desplegada. El diagrama de clases conserva decisiones conceptuales más amplias, mientras el texto de implementación y despliegue distingue el código de la línea base y el trabajo en revisión.
+Se corrigieron inconsistencias del modelo base y de las historias de usuario: el gateway físico se implementa como Gateway; los dispositivos IoT pueden permanecer sin un activo asignado; assets y gateways comparten Location como base física; y lecturas, incidentes y reportes preservan trazabilidad mediante identificadores organization-scoped. La implementación final añade `Iam`, `AiAssistance` y `Billing` como bounded contexts del mismo backend. Los diagramas C4 de componentes y base de datos reflejan estas capacidades finales; los diagramas de clases de las primeras etapas se conservan como evolución conceptual del diseño.
 
 Para mejorar la legibilidad del diagrama, los tipos enumerados se mantienen como tipos de atributos, pero no se expanden como cajas independientes. Así se evita que estados como `AlertStatus`, `SensorStatus` o `ReportStatus` generen ruido visual y oculten las relaciones principales entre entidades, value objects, clases abstractas e interfaces.
 
@@ -878,6 +898,8 @@ En esta tercera etapa se toma el modelo de clases ya definido y se clasifica cad
 ## 4.8. Database Design.
 
 ### 4.8.1. Database Diagrams.
+
+El diagrama de base de datos se actualizó a partir del `AppDbContextModelSnapshot` de la versión final. Representa una sola base MySQL compartida por el monolito modular y usa identificadores enteros, tablas y relaciones implementadas. En particular, incorpora `external_identities`, `password_reset_requests`, `ai_resolution_plans` y sus colecciones, `organization_subscriptions` y `billing_webhook_events`. El catálogo de planes se configura en backend y no se presenta como una tabla inexistente.
 
 El diagrama de base de datos de ColdTrace se define como una sola base de datos lógica en MySQL, alineada con los bounded contexts trabajados en los diagramas C4 y de clases: **Account & Access**, **Sensor Management**, **Monitoring**, **Alerts**, **Reports** y **Audit**. Aunque en la arquitectura de contenedores se separan responsabilidades por contexto, en este diagrama informacional todas las tablas pertenecen al mismo modelo relacional. Los colores solo ayudan a identificar a qué contexto pertenece cada entidad.
 
