@@ -135,6 +135,8 @@ La colaboración se organizó por bounded contexts funcionales: Mauricio Pajés 
 
 La planificación se gestionó mediante Trello, y la integración continua se implementó con GitHub Actions hacia Vercel. La captura específica de GitHub Analytics correspondiente a TB1 está **pendiente de incorporación**; las imágenes de AV1 no se reutilizan como evidencia de esta entrega.
 
+![contributors](report/assets/chapter-05/sprint-04/contributors.png)
+
 ## AV2
 
 Durante la entrega AV2, correspondiente al Sprint 3, el equipo desarrolló y desplegó la RESTful API oficial de ColdTrace utilizando ASP.NET Core con C#, reemplazando la API simulada del Sprint 2. El backend se desplegó en Google Cloud Run con persistencia real en Google Cloud SQL for MySQL, documentación Swagger/OpenAPI y pipeline de integración continua con GitHub Actions.
