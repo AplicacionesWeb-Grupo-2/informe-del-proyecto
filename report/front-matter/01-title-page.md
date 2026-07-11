@@ -1,77 +1,78 @@
 <div align="center">
-<br>
-<img src="../assets/common/logo-upc.png" width="180" alt="Logo UPC">
+<br><br>
+<img src="../assets/common/logo-upc.png" width="90" alt="Logo UPC">
 <br><br>
 
-# UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS
+### Universidad Peruana de Ciencias Aplicadas
 
-<br>
-
-### Facultad de Ingeniería
 ### Carrera de Ingeniería de Software
 
 <br>
 
-**Ciclo Académico 2026-10**
+## 1ASI0730
+
+## Aplicaciones Web
+
+### NRC
+
+## 12190
+
+# Informe del Trabajo Final
+
+### Docente
+
+## Mori Paiva, Hugo Allan
+
+### Equipo
+
+## FrostGuard
 
 <br>
 
-**Código:** 1ASI0730 &nbsp; | &nbsp; **Curso:** Aplicaciones Web &nbsp; | &nbsp; **Sección:** 2610 &nbsp; | &nbsp; **NRC:** 12190
+### Proyecto
+
+## ColdTrace
 
 <br>
 
-**Docente:** Hugo Allan Mori Paiva
-
-<br>
-
-# Informe de Trabajo Final
-
-<br>
-
-### **Nombre de la Startup:**
-**FrostGuard**
-
-<br>
-
-### **Nombre del Producto:**
-**ColdTrace**
-
-<br>
-
-### Relación de integrantes
+### Integrantes
 
 <table align="center" style="margin: 0 auto; font-size: 15px;">
-<thead>
+  <thead>
     <tr>
       <th align="center">Código</th>
-      <th align="center">Apellidos y Nombres</th>
+      <th align="left">Apellidos y Nombres</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td align="center">U202414054</td>
-      <td align="left">Jean Pool Alexander Arias Tasayco</td>
+      <td align="left">Arias Tasayco, Jean Pool Alexander</td>
     </tr>
     <tr>
       <td align="center">U202410093</td>
-      <td align="left">Mauricio Luis Pajes Leon</td>
+      <td align="left">Pajés León, Mauricio Luis</td>
     </tr>
     <tr>
       <td align="center">U202321020</td>
-      <td align="left">Leonardo Sebastian Delgado Arriola</td>
+      <td align="left">Delgado Arriola, Leonardo Sebastian</td>
     </tr>
     <tr>
       <td align="center">U202416706</td>
-      <td align="left">Santiago Enrique Vargas Alarcon</td>
+      <td align="left">Vargas Alarcón, Santiago Enrique</td>
     </tr>
     <tr>
       <td align="center">U202323350</td>
-      <td align="left">Eduardo David Velasquez Laquihuanaco</td>
+      <td align="left">Velásquez Laquihuanaco, Eduardo David</td>
     </tr>
   </tbody>
 </table>
 
-<br><br>
+<br>
 
-**Lima, Abril de 2026**
+## Período 202610
+
+<br>
+
+## Julio 2026
 </div>
