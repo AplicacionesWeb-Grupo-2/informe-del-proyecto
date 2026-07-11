@@ -157,7 +157,10 @@ La solución de Aplicaciones Web usa Vue 3 y PrimeVue en el frontend y un monoli
 
 Las funciones de Google, Apple, OpenAI y Stripe requieren configuración externa además del código: clientes autorizados, redirect URIs, catálogo y webhook de Stripe, y secretos administrados fuera del repositorio. Por esta razón, la disponibilidad de estas funciones depende tanto de la versión desplegada como de que las credenciales y servicios externos permanezcan vigentes.
 
-La captura específica de GitHub Analytics correspondiente a TB2 está **pendiente de incorporación**; debe obtenerse del intervalo real de la entrega antes de presentarla como evidencia.
+Las siguientes capturas conservan la evidencia disponible de actividad y contribuciones del repositorio durante TB1.
+
+![contributors](report/assets/chapter-05/sprint-04/pulse.png)
+![contributors](report/assets/chapter-05/sprint-04/contributors.png)
 
 
 ---
