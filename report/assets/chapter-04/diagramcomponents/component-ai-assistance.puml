@@ -1,0 +1,37 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title Component Diagram - ColdTrace - AI Assistance
+caption Implemented AI assistance with provider abstraction and human approval.
+
+LAYOUT_WITH_LEGEND()
+LAYOUT_LEFT_RIGHT()
+
+Container(webapp, "Frontend Web Application", "Vue 3", "Requests dashboard interpretations, report summaries, and incident guidance.")
+System_Ext(provider, "OpenAI / Ollama", "Model provider selected by configuration.")
+ContainerDb(database, "Shared ColdTrace Database", "MySQL / EF Core", "Operational context and persisted incident resolution plans.")
+
+Container_Boundary(ai, "AI Assistance and Integrating Contexts") {
+    Component(dashboard_controller, "Dashboard AI Interpretations Controller", "ASP.NET Core", "Exposes dashboard interpretation requests.")
+    Component(incidents_controller, "Incidents Controller", "ASP.NET Core / Alerts", "Generates, lists, approves, and rejects AI resolution plans.")
+    Component(reports_controller, "Reports Controller", "ASP.NET Core / Reports", "Generates intelligent compliance summaries.")
+    Component(ai_services, "AI Application Services", "Application", "Build prompts and validate structured operational responses.")
+    Component(plan_services, "Resolution Plan Services", "Application / Alerts", "Persist plans and enforce pending, approved, and rejected transitions.")
+    Component(context_facades, "Operational Context Facades", "ACL", "Provide organization-scoped dashboard, incident, report, and entitlement context.")
+    Component(chat_factory, "AI Chat Client Factory", "Infrastructure", "Creates the configured Microsoft.Extensions.AI IChatClient.")
+}
+
+Rel(webapp, dashboard_controller, "Requests interpretation", "HTTPS / JSON")
+Rel(webapp, incidents_controller, "Uses AI Guidance", "HTTPS / JSON")
+Rel(webapp, reports_controller, "Requests compliance summary", "HTTPS / JSON")
+Rel(dashboard_controller, ai_services, "Interprets dashboard")
+Rel(incidents_controller, plan_services, "Executes plan lifecycle")
+Rel(reports_controller, ai_services, "Summarizes report")
+Rel(plan_services, ai_services, "Generates structured plan")
+Rel(ai_services, context_facades, "Obtains real context")
+Rel(ai_services, chat_factory, "Requests IChatClient")
+Rel(chat_factory, provider, "Requests structured completion", "HTTPS / local API")
+Rel(plan_services, database, "Persists plan and decision", "EF Core")
+Rel(context_facades, database, "Reads operational data", "EF Core")
+
+@enduml
