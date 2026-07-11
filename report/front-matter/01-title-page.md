@@ -9,29 +9,29 @@
 
 <br>
 
-## 1ASI0730
+<p><big><strong>1ASI0730</strong></big></p>
 
-## Aplicaciones Web
+<p><big><strong>Aplicaciones Web</strong></big></p>
 
 ### NRC
 
-## 12190
+<p><big><strong>12190</strong></big></p>
 
-# Informe del Trabajo Final
+<p><big><big><strong>Informe del Trabajo Final</strong></big></big></p>
 
 ### Docente
 
-## Mori Paiva, Hugo Allan
+<p><big><strong>Mori Paiva, Hugo Allan</strong></big></p>
 
 ### Equipo
 
-## FrostGuard
+<p><big><strong>FrostGuard</strong></big></p>
 
 <br>
 
 ### Proyecto
 
-## ColdTrace
+<p><big><strong>ColdTrace</strong></big></p>
 
 <br>
 
@@ -70,9 +70,9 @@
 
 <br>
 
-## Período 202610
+<p><big><strong>Período 202610</strong></big></p>
 
 <br>
 
-## Julio 2026
+<p><big><strong>Julio 2026</strong></big></p>
 </div>
