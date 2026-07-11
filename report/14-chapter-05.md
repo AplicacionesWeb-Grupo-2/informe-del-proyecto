@@ -2254,6 +2254,13 @@ Durante el Sprint 4, el equipo de FrostGuard completó la implementación e inte
 La evidencia de configuración de Google, Apple, OpenAI y Stripe se presenta en la sección 5.2.4.7. El video About-the-Product consolidado se registra en la sección 5.4; no se encontró en el repositorio un video independiente de navegación etiquetado específicamente para Sprint 4.
 
 
+**Video de demostración en Swagger**
+
+![Evidencia](assets/chapter-05/sprint-04/evidence4.png)
+
+**URL del video:** https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410093_upc_edu_pe/IQBiVAph_D_FRrfQLxExrgSfAYfj3JS0x1PW92lWPzZ5XdQ?e=OrBl7D
+
+
 <br>
 
 
