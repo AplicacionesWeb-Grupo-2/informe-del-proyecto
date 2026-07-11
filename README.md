@@ -4891,15 +4891,15 @@ Para cada segmento objetivo se registrarán 3 entrevistas. Cada entrevista debe 
 
 | **Entrevista Nro. 3** | **Detalle** |
 | --- | --- |
-| Screenshot | Pendiente de realizar la entrevista. |
-| Nombres y apellidos | Participante pendiente de confirmación. |
-| Edad | No disponible. |
-| Distrito | No disponible. |
+| Screenshot | <img src="report/assets/chapter-05/validation/ConsueloAlarcon.jpg" alt="Screenshot de entrevista de validación - Consuelo Alarcon" width="600"> |
+| Nombres y apellidos | Consuelo Alarcón |
+| Edad | 49 años |
+| Distrito | San Borja |
 | Segmento objetivo | Responsables de operaciones, calidad o logística en negocios con cadena de frío |
-| URL de grabación | Pendiente de publicación. |
-| Timing de inicio | No disponible. |
-| Duración | No disponible. |
-| Resumen | Esta evidencia requiere una entrevista real adicional; no se registran resultados hasta contar con el participante y la grabación. |
+| URL de grabación | [Ver video en Microsoft Stream](upc-pre-202610-1ASI0730-10177-coldtrace-about-the-product-sprint-4-segmento-2.mkv) |
+| Timing de inicio | 00:00 |
+| Duración | 10:11 |
+| Resumen | Consuelo evaluó ColdTrace desde su experiencia como jefa de logística en una cadena de supermercados. Sobre la Landing Page, destacó que el diseño es claro, ordenado e intuitivo, lo que facilita la navegación sin necesidad de conocimientos previos. Como oportunidades de mejora, sugirió traducir la totalidad de los términos al español y hacer más explícito qué es exactamente lo que se está vendiendo. Respecto a la aplicación web, valoró positivamente la cantidad y calidad de la información disponible. Sin embargo, recomendó como mejora principal la creación de un "dashboard" o vista principal que consolide únicamente los indicadores más críticos, para que los responsables puedan revisarlos de manera rápida y directa sin saturarse de información. |
 
 ### 5.3.3. Evaluaciones según heurísticas
 
