@@ -1,0 +1,247 @@
+@startuml
+title ColdTrace - Implemented Database Diagram
+caption MySQL schema aligned with the final EF Core AppDbContext model snapshot.
+hide circle
+skinparam linetype ortho
+skinparam classAttributeIconSize 0
+skinparam nodesep 20
+skinparam ranksep 28
+
+entity organizations #D6EAF8 {
+  * id : int <<PK>>
+  --
+  commercial_name : varchar(200)
+  contact_email : varchar(256) <<UK>>
+  legal_name : varchar(200)
+  tax_id : varchar(32) <<UK>>
+}
+entity users #D6EAF8 {
+  * id : int <<PK>>
+  --
+  # organization_id : int <<FK>>
+  # role_id : int <<FK>>
+  email : varchar(256)
+  password_hash : varchar(512)
+}
+entity roles #D6EAF8 {
+  * id : int <<PK>>
+  --
+  name : varchar(64) <<UK>>
+  label : varchar(128)
+}
+entity role_permissions #D6EAF8 {
+  * # role_id : int <<PK, FK>>
+  * id : int <<PK>>
+  --
+  resource : varchar(64)
+  action : varchar(64)
+}
+entity external_identities #D6EAF8 {
+  * id : int <<PK>>
+  --
+  # user_id : int <<FK>>
+  provider : varchar(32)
+  provider_subject : varchar(255)
+  email : varchar(255)
+}
+entity password_reset_requests #D6EAF8 {
+  * id : int <<PK>>
+  --
+  # user_id : int <<FK>>
+  token_hash : varchar(128) <<UK>>
+  requested_at : datetime
+  expires_at : datetime
+}
+
+entity locations #FADBD8 {
+  * id : int <<PK>>
+  --
+  # organization_id : int <<FK>>
+  name : varchar(150)
+  address : varchar(300)
+}
+entity gateways #FADBD8 {
+  * id : int <<PK>>
+  --
+  # organization_id : int <<FK>>
+  # location_id : int <<FK>>
+  serial_number : varchar(100)
+  status : varchar(50)
+}
+entity assets #FADBD8 {
+  * id : int <<PK>>
+  --
+  # organization_id : int <<FK>>
+  # location_id : int <<FK>>
+  name : varchar(150)
+  asset_type : varchar(50)
+}
+entity asset_settings #FADBD8 {
+  * id : int <<PK>>
+  --
+  # asset_id : int <<FK, UK>>
+  minimum_temperature : decimal
+  maximum_temperature : decimal
+  minimum_humidity : decimal
+  maximum_humidity : decimal
+}
+entity asset_settings_asset_types #FADBD8 {
+  * # asset_settings_id : int <<PK, FK>>
+  * value : varchar(100) <<PK>>
+}
+entity asset_settings_iot_device_types #FADBD8 {
+  * # asset_settings_id : int <<PK, FK>>
+  * value : varchar(100) <<PK>>
+}
+entity iot_devices #FADBD8 {
+  * id : int <<PK>>
+  --
+  # organization_id : int <<FK>>
+  # gateway_id : int <<FK>>
+  asset_id : int <<FK>>
+  device_uid : varchar(100)
+  status : varchar(50)
+}
+entity iot_device_measurement_parameters #FADBD8 {
+  * # iot_device_id : int <<PK, FK>>
+  * value : varchar(100) <<PK>>
+}
+entity sensor_readings #D5F5E3 {
+  * id : int <<PK>>
+  --
+  # organization_id : int <<FK>>
+  # iot_device_id : int <<FK>>
+  temperature : decimal
+  humidity : decimal
+  recorded_at : datetime
+}
+
+entity incidents #FCF3CF {
+  * id : int <<PK>>
+  --
+  # organization_id : int <<FK>>
+  asset_id : int
+  severity : varchar(32)
+  status : varchar(32)
+  detected_at : datetime
+}
+entity notifications #FCF3CF {
+  * id : int <<PK>>
+  --
+  # organization_id : int <<FK>>
+  # incident_id : int <<FK>>
+  channel : varchar(32)
+  status : varchar(32)
+}
+entity ai_resolution_plans #D7DBFF {
+  * id : int <<PK>>
+  --
+  # organization_id : int <<FK>>
+  # incident_id : int <<FK>>
+  status : varchar(32)
+  probable_cause : varchar(1024)
+  model_provider : varchar(64)
+  generated_at : datetime
+}
+entity ai_resolution_plan_steps #D7DBFF {
+  * # ai_resolution_plan_id : int <<PK, FK>>
+  * sequence : int <<PK>>
+  --
+  action : varchar(1024)
+  rationale : varchar(1024)
+  expected_outcome : varchar(1024)
+}
+entity ai_resolution_plan_required_evidences #D7DBFF {
+  * id : int <<PK>>
+  --
+  # ai_resolution_plan_id : int <<FK>>
+  value : varchar(512)
+}
+entity ai_resolution_plan_uncertainty_notes #D7DBFF {
+  * id : int <<PK>>
+  --
+  # ai_resolution_plan_id : int <<FK>>
+  value : varchar(512)
+}
+
+entity maintenance_schedules #E8DAEF {
+  * id : int <<PK>>
+  --
+  # organization_id : int <<FK>>
+  # asset_id : int <<FK>>
+  scheduled_date : datetime
+  status : varchar(50)
+}
+entity technical_service_requests #E8DAEF {
+  * id : int <<PK>>
+  --
+  # organization_id : int <<FK>>
+  # asset_id : int <<FK>>
+  status : varchar(50)
+  requested_at : datetime
+}
+entity reports #E8DAEF {
+  * id : int <<PK>>
+  --
+  # organization_id : int <<FK>>
+  uuid : varchar(128)
+  report_type : varchar(64)
+  generated_at : datetime
+}
+
+entity organization_subscriptions #FDEBD0 {
+  * id : int <<PK>>
+  --
+  # organization_id : int <<FK, UK>>
+  plan_code : varchar(40)
+  status : varchar(30)
+  provider : varchar(30)
+  provider_customer_id : varchar(255)
+  provider_subscription_id : varchar(255)
+}
+entity billing_webhook_events #FDEBD0 {
+  * id : int <<PK>>
+  --
+  organization_id : int
+  provider : varchar(30)
+  event_id : varchar(120)
+  event_type : varchar(120)
+  status : varchar(30)
+  processed_at : datetime
+}
+
+organizations ||--o{ users
+roles ||--o{ users
+roles ||--o{ role_permissions
+users ||--o{ external_identities
+users ||--o{ password_reset_requests
+organizations ||--o{ locations
+organizations ||--o{ gateways
+locations ||--o{ gateways
+organizations ||--o{ assets
+locations ||--o{ assets
+assets ||--o| asset_settings
+asset_settings ||--o{ asset_settings_asset_types
+asset_settings ||--o{ asset_settings_iot_device_types
+organizations ||--o{ iot_devices
+gateways ||--o{ iot_devices
+assets |o--o{ iot_devices
+iot_devices ||--o{ iot_device_measurement_parameters
+iot_devices ||--o{ sensor_readings
+organizations ||--o{ sensor_readings
+organizations ||--o{ incidents
+incidents ||--o{ notifications
+organizations ||--o{ notifications
+incidents ||--o{ ai_resolution_plans
+organizations ||--o{ ai_resolution_plans
+ai_resolution_plans ||--o{ ai_resolution_plan_steps
+ai_resolution_plans ||--o{ ai_resolution_plan_required_evidences
+ai_resolution_plans ||--o{ ai_resolution_plan_uncertainty_notes
+organizations ||--o{ maintenance_schedules
+assets ||--o{ maintenance_schedules
+organizations ||--o{ technical_service_requests
+assets ||--o{ technical_service_requests
+organizations ||--o{ reports
+organizations ||--o| organization_subscriptions
+organizations |o--o{ billing_webhook_events
+@enduml

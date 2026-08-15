@@ -1,0 +1,32 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+title System Context Diagram - ColdTrace
+caption C4 level 1 aligned with the implemented Aplicaciones Web product.
+
+LAYOUT_WITH_LEGEND()
+LAYOUT_TOP_DOWN()
+
+Person(visitor, "Visitor", "Reviews the value proposition, plans, and product videos before entering the application.")
+Person(operator, "Cold-chain Operator", "Monitors assets, readings, incidents, maintenance, and compliance reports.")
+Person(admin, "Organization Administrator", "Manages users, roles, plans, assets, locations, gateways, and IoT devices.")
+Person_Ext(auditor, "Compliance Reviewer", "Reviews exported operational and compliance evidence.")
+
+System(coldtrace, "ColdTrace", "Web SaaS product for cold-chain monitoring, incident response, compliance evidence, and subscription management.")
+
+System_Ext(iot, "IoT Devices and Gateways", "Provide temperature, humidity, and connectivity readings through the documented REST resources.")
+System_Ext(identity, "Google Identity and Sign in with Apple", "Issue provider credentials validated by the ColdTrace backend.")
+System_Ext(ai, "OpenAI / Ollama", "Provide chat completion behind the Microsoft.Extensions.AI IChatClient abstraction.")
+System_Ext(stripe, "Stripe", "Provides Checkout, Customer Portal, and signed subscription webhooks.")
+
+Rel(visitor, coldtrace, "Reviews the product and starts registration", "HTTPS")
+Rel(operator, coldtrace, "Uses monitoring, incidents, AI guidance, reports, and maintenance", "HTTPS")
+Rel(admin, coldtrace, "Configures organization resources, access, and billing", "HTTPS")
+Rel(coldtrace, auditor, "Provides report and compliance evidence", "HTTPS / export")
+
+Rel(iot, coldtrace, "Sends operational readings", "HTTPS / JSON")
+Rel(coldtrace, identity, "Validates OIDC tokens or authorization codes", "OIDC / HTTPS")
+Rel(coldtrace, ai, "Requests structured operational assistance", "HTTPS")
+Rel(coldtrace, stripe, "Creates sessions and receives signed events", "HTTPS / webhook")
+
+@enduml

@@ -1,0 +1,122 @@
+@startuml
+
+title Stage 3 - Account & Access Context
+caption Identification of Aggregates, Entities and Value Objects. Only classes defined in the previous stages are used.
+
+skinparam classAttributeIconSize 0
+skinparam packageStyle rectangle
+skinparam nodesep 45
+skinparam ranksep 55
+left to right direction
+hide empty members
+
+package "Account & Access Context" #D6EAF8 {
+  class Organization <<Aggregate>> #FADBD8 {
+    - id: OrganizationId
+    - legalName: string
+    - taxIdentifier: string
+    - contactEmail: string
+    - status: OrganizationStatus
+    + addUser(userId: UserId): void
+    + suspend(): void
+    + activate(): void
+  }
+
+  class User <<Aggregate>> #FADBD8 {
+    - id: UserId
+    - organizationId: OrganizationId
+    - email: string
+    - displayName: string
+    - passwordHash: string
+    - status: UserStatus
+    - createdAt: DateTime
+    - verifiedAt: DateTime
+    + register(): void
+    + verifyEmail(token: string): bool
+    + changeProfile(displayName: string): void
+    + assignRole(roleId: RoleId): void
+  }
+
+  class Role <<Aggregate>> #FADBD8 {
+    - id: RoleId
+    - name: string
+    - description: string
+    + grants(permission: Permission): bool
+  }
+
+  class SubscriptionPlan <<Aggregate>> #FADBD8 {
+    - id: SubscriptionPlanId
+    - name: string
+    - maxAssets: int
+    - maxUsers: int
+    - monthlyPrice: decimal
+    + supportsAssetCount(count: int): bool
+  }
+
+  class Session <<Entity>> {
+    - id: SessionId
+    - userId: UserId
+    - accessTokenHash: string
+    - createdAt: DateTime
+    - expiresAt: DateTime
+    - revokedAt: DateTime
+    + isActive(now: DateTime): bool
+    + revoke(): void
+  }
+
+  class Subscription <<Entity>> {
+    - id: SubscriptionId
+    - organizationId: OrganizationId
+    - planId: SubscriptionPlanId
+    - status: SubscriptionStatus
+    - startsAt: DateOnly
+    - endsAt: DateOnly
+    + isActive(date: DateOnly): bool
+    + renew(until: DateOnly): void
+    + cancel(): void
+  }
+
+  class PaymentRecord <<Entity>> {
+    - id: PaymentRecordId
+    - subscriptionId: SubscriptionId
+    - providerReference: string
+    - amount: decimal
+    - status: PaymentStatus
+    - paidAt: DateTime
+    + markPaid(reference: string): void
+    + markFailed(reason: string): void
+  }
+
+  class NotificationPreference <<Entity>> {
+    - id: NotificationPreferenceId
+    - userId: UserId
+    - enabledChannels: ISet<NotificationChannelType>
+    - quietHoursStart: TimeOnly
+    - quietHoursEnd: TimeOnly
+    - minimumSeverity: NotificationSeverity
+    + accepts(channel: NotificationChannelType, severity: NotificationSeverity): bool
+  }
+
+  class Permission <<ValueObject>> #FCF3CF {
+    - resource: string
+    - action: string
+    + matches(resource: string, action: string): bool
+  }
+
+  Organization "1" o-- "*" User
+  Organization "1" *-- "0..1" Subscription
+  User "1" o-- "*" Session
+  User "*" -- "*" Role
+  Role "*" o-- "*" Permission
+  Subscription "*" --> "1" SubscriptionPlan
+  Subscription "1" o-- "*" PaymentRecord
+  User "1" *-- "1" NotificationPreference
+}
+
+legend right
+  Red: Aggregate root
+  White: Entity
+  Yellow: Value Object
+endlegend
+
+@enduml

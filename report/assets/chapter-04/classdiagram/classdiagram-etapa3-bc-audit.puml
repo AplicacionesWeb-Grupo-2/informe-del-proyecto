@@ -1,0 +1,75 @@
+@startuml
+
+title Stage 3 - Audit Context
+caption Identification of Aggregates, Entities and Value Objects. Only classes defined in the previous stages are used.
+
+skinparam classAttributeIconSize 0
+skinparam packageStyle rectangle
+skinparam nodesep 45
+skinparam ranksep 55
+left to right direction
+hide empty members
+
+package "Audit Context" #FDEBD0 {
+  class AuditCase <<Aggregate>> #FADBD8 {
+    - id: AuditCaseId
+    - organizationId: OrganizationId
+    - requestedByUserId: UserId
+    - standard: ComplianceStandard
+    - status: AuditStatus
+    - startedAt: DateTime
+    - closedAt: DateTime
+    + start(): void
+    + close(result: ComplianceResult): void
+  }
+
+  class ComplianceCriterion <<Aggregate>> #FADBD8 {
+    - id: ComplianceCriterionId
+    - standard: ComplianceStandard
+    - code: string
+    - description: string
+    + evaluate(package: EvidencePackage): ComplianceResult
+  }
+
+  class ComplianceFinding <<Entity>> {
+    - id: ComplianceFindingId
+    - auditCaseId: AuditCaseId
+    - criterionId: ComplianceCriterionId
+    - result: ComplianceResult
+    - details: string
+    + isCompliant(): bool
+  }
+
+  class EvidencePackage <<Entity>> {
+    - id: EvidencePackageId
+    - auditCaseId: AuditCaseId
+    - status: EvidencePackageStatus
+    - preparedAt: DateTime
+    + addItem(item: EvidenceItem): void
+    + markComplete(): void
+  }
+
+  class EvidenceItem <<Entity>> {
+    - id: EvidenceItemId
+    - packageId: EvidencePackageId
+    - reportId: ReportId
+    - type: EvidenceType
+    - fileUri: Uri
+    - capturedAt: DateTime
+    + references(reportId: ReportId): bool
+  }
+
+  AuditCase "1" o-- "1" EvidencePackage
+  AuditCase "1" o-- "*" ComplianceFinding
+  AuditCase "*" --> "*" ComplianceCriterion
+  EvidencePackage "1" o-- "*" EvidenceItem
+  ComplianceFinding "*" --> "1" ComplianceCriterion
+}
+
+legend right
+  Red: Aggregate root
+  White: Entity
+  Yellow: Value Object
+endlegend
+
+@enduml

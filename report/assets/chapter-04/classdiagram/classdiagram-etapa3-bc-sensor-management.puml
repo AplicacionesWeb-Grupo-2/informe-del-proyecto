@@ -1,0 +1,151 @@
+@startuml
+
+title Stage 3 - Sensor Management Context
+caption Identification of Aggregates, Entities and Value Objects. Only classes defined in the previous stages are used.
+
+skinparam classAttributeIconSize 0
+skinparam packageStyle rectangle
+skinparam nodesep 45
+skinparam ranksep 55
+left to right direction
+hide empty members
+
+package "Sensor Management Context" #FADBD8 {
+  class Asset <<Aggregate>> #FADBD8 {
+    - id: AssetId
+    - organizationId: OrganizationId
+    - internalCode: string
+    - name: string
+    - description: string
+    - type: AssetType
+    - capacityValue: decimal
+    - capacityUnit: string
+    - status: AssetStatus
+    + assignSensor(sensorId: SensorId): void
+    + updateLocation(location: Location): void
+    + putInMaintenance(): void
+    + returnToOperation(): void
+  }
+
+  class Sensor <<Aggregate>> #FADBD8 {
+    - id: SensorId
+    - assetId: AssetId?
+    - edgeGatewayId: EdgeGatewayId?
+    - serialNumber: string
+    - model: string
+    - type: SensorType
+    - status: SensorStatus
+    - pairedAt: DateTime
+    - readingIntervalSeconds: int
+    + pairWith(assetId: AssetId, gatewayId: EdgeGatewayId): void
+    + activate(): void
+    + deactivate(): void
+    + requireCalibration(): void
+  }
+
+  class EdgeGateway <<Aggregate>> #FADBD8 {
+    - id: EdgeGatewayId
+    - organizationId: OrganizationId
+    - serialNumber: string
+    - claimCode: string
+    - model: string
+    - protocol: string
+    - status: GatewayStatus
+    + pair(): void
+    + markOnline(): void
+    + markOffline(): void
+  }
+
+  class ServiceTicket <<Aggregate>> #FADBD8 {
+    - id: ServiceTicketId
+    - assetId: AssetId
+    - requestedByUserId: UserId
+    - status: ServiceTicketStatus
+    - openedAt: DateTime
+    - closedAt: DateTime
+    + open(): void
+    + close(intervention: ServiceIntervention): void
+  }
+
+  class CalibrationRecord <<Entity>> {
+    - id: CalibrationRecordId
+    - sensorId: SensorId
+    - certificateCode: string
+    - calibratedAt: DateOnly
+    - expiresAt: DateOnly
+    - status: CalibrationStatus
+    + isValid(date: DateOnly): bool
+  }
+
+  class OperatingParameter <<Entity>> {
+    - id: OperatingParameterId
+    - assetId: AssetId
+    - productCategory: string
+    - temperatureRange: TemperatureRange
+    - humidityRange: HumidityRange
+    - readingIntervalSeconds: int
+    - criticality: CriticalityLevel
+    + isCompatibleWith(sensor: Sensor): bool
+  }
+
+  class MaintenanceSchedule <<Entity>> {
+    - id: MaintenanceScheduleId
+    - assetId: AssetId
+    - sensorId: SensorId
+    - scheduledFor: DateOnly
+    - status: MaintenanceStatus
+    - notes: string
+    + reschedule(date: DateOnly): void
+    + complete(): void
+  }
+
+  class ServiceIntervention <<Entity>> {
+    - id: ServiceInterventionId
+    - ticketId: ServiceTicketId
+    - technicianName: string
+    - description: string
+    - result: InterventionResult
+    - performedAt: DateTime
+    + passesFunctionalTest(): bool
+  }
+
+  class Location <<ValueObject>> #FCF3CF {
+    - label: string
+    - address: string
+    - latitude: decimal
+    - longitude: decimal
+    - isMobile: bool
+    + distanceTo(other: Location): decimal
+  }
+
+  class TemperatureRange <<ValueObject>> #FCF3CF {
+    - minCelsius: decimal
+    - maxCelsius: decimal
+    + contains(value: decimal): bool
+  }
+
+  class HumidityRange <<ValueObject>> #FCF3CF {
+    - minPercentage: decimal
+    - maxPercentage: decimal
+    + contains(value: decimal): bool
+  }
+
+  Asset "1" *-- "1" Location
+  Asset "1" o-- "*" Sensor
+  Asset "1" o-- "0..1" OperatingParameter
+  Asset "1" o-- "*" MaintenanceSchedule
+  Asset "1" o-- "*" ServiceTicket
+  EdgeGateway "1" o-- "*" Sensor
+  Sensor "1" o-- "*" CalibrationRecord
+  OperatingParameter *-- "1" TemperatureRange
+  OperatingParameter *-- "1" HumidityRange
+  ServiceTicket "1" o-- "*" ServiceIntervention
+}
+
+legend right
+  Red: Aggregate root
+  White: Entity
+  Yellow: Value Object
+endlegend
+
+@enduml

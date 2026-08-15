@@ -1,0 +1,43 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+title Container Diagram - ColdTrace
+caption C4 level 2 aligned with the Vue and ASP.NET Core modular-monolith implementation.
+
+LAYOUT_WITH_LEGEND()
+LAYOUT_LEFT_RIGHT()
+
+Person(visitor, "Visitor", "Reviews the public product site and enters the application.")
+Person(operator, "Cold-chain Operator", "Monitors operations and resolves incidents.")
+Person(admin, "Organization Administrator", "Manages access, resources, plans, and billing.")
+Person_Ext(auditor, "Compliance Reviewer", "Consumes report evidence.")
+
+System_Ext(iot, "IoT Devices and Gateways", "Operational devices represented by organization-scoped REST resources.")
+System_Ext(identity, "Google Identity and Sign in with Apple", "External identity providers.")
+System_Ext(ai, "OpenAI / Ollama", "Cloud or local chat model provider.")
+System_Ext(stripe, "Stripe", "Checkout, Customer Portal, and signed webhooks.")
+
+System_Boundary(coldtrace, "ColdTrace") {
+    Container(landing, "Landing Page", "HTML5, CSS3, JavaScript", "Static public site hosted with GitHub Pages.")
+    Container(webapp, "Frontend Web Application", "Vue 3, PrimeVue, Vite", "Responsive operational interface deployed with Vercel.")
+    Container(api, "ColdTrace RESTful API", "ASP.NET Core, C#, .NET 10", "Single modular-monolith process exposing /api/v1, JWT, Problem Details, Swagger/OpenAPI, and bounded-context modules.")
+    ContainerDb(database, "ColdTrace Database", "MySQL / Google Cloud SQL", "One schema managed through EF Core migrations and a shared AppDbContext.")
+}
+
+Rel(visitor, landing, "Reviews product, plans, and videos", "HTTPS")
+Rel(visitor, webapp, "Starts registration or sign-in", "HTTPS")
+Rel(operator, webapp, "Uses operational workflows", "HTTPS")
+Rel(admin, webapp, "Uses administration and billing workflows", "HTTPS")
+
+Rel(landing, webapp, "Opens registration and sign-in routes", "HTTPS")
+Rel(webapp, api, "Consumes /api/v1 resources with bearer tokens", "HTTPS / JSON")
+Rel(iot, api, "Posts readings through documented resources", "HTTPS / JSON")
+Rel(api, database, "Reads and writes aggregates", "EF Core")
+
+Rel(api, identity, "Validates provider identity", "OIDC / HTTPS")
+Rel(api, ai, "Uses IChatClient for structured assistance", "HTTPS")
+Rel(api, stripe, "Creates billing sessions", "HTTPS")
+Rel(stripe, api, "Posts signed subscription events", "HTTPS / webhook")
+Rel(webapp, auditor, "Presents and exports report evidence", "HTTPS / export")
+
+@enduml

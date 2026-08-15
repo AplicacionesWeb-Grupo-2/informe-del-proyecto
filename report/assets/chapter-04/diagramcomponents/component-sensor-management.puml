@@ -1,0 +1,62 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title Component Diagram - ColdTrace - Sensor Management Context
+caption Internal components for assets, sensors, gateways, calibration, operating ranges, and maintenance.
+
+LAYOUT_WITH_LEGEND()
+LAYOUT_LEFT_RIGHT()
+
+Container(api_gateway, "API Gateway", "ASP.NET Core / C#", "Routes infrastructure and configuration requests.")
+Container_Ext(account_api, "Account & Access Context API", "ASP.NET Core / C#", "Provides permission checks for administrative operations.")
+Container_Ext(monitoring_api, "Monitoring Context API", "ASP.NET Core / C#", "Consumes active sensors, ranges, and operating parameters.")
+
+Container_Boundary(sensor, "Sensor Management Context API") {
+    Component(asset_controller, "Asset Controller", "ASP.NET Core Controller", "Endpoints for cold rooms, transport units, locations, and asset status.")
+    Component(sensor_controller, "Sensor Controller", "ASP.NET Core Controller", "Endpoints for sensors, pairing, calibration, and physical gateways.")
+    Component(config_controller, "Configuration Controller", "ASP.NET Core Controller", "Endpoints for safe ranges, reading intervals, and maintenance planning.")
+
+    Component(permission_facade, "Permission Facade", "Internal Client", "Requests access decisions from the Account & Access Context.")
+    Component(asset_service, "Asset Application Service", "Application Service", "Coordinates asset creation, updates, and lifecycle changes.")
+    Component(sensor_service, "Sensor Application Service", "Application Service", "Coordinates sensor registration, pairing, calibration checks, and gateway assignment.")
+    Component(config_service, "Operating Configuration Service", "Application Service", "Coordinates ranges, reading intervals, and maintenance schedules.")
+
+    Component(asset_rules, "Asset Rules", "Domain Service", "Validates asset status transitions and duplicate asset identifiers.")
+    Component(sensor_rules, "Sensor Rules", "Domain Service", "Validates sensor pairing, calibration status, and gateway compatibility.")
+
+    Component(asset_repo, "Asset Repository", "EF Core Repository", "Persists assets, locations, and operating status.")
+    Component(sensor_repo, "Sensor Repository", "EF Core Repository", "Persists sensors, gateways, calibration data, ranges, and maintenance records.")
+    Component(config_events, "Configuration Event Publisher", "Integration Events", "Publishes sensor-paired, range-changed, and maintenance-scheduled events.")
+}
+
+ContainerDb(sensor_db, "Sensor Management Database", "MySQL", "Assets, sensors, physical gateways, calibration data, ranges, and maintenance records.")
+
+Rel(api_gateway, asset_controller, "Routes asset requests", "HTTPS / JSON")
+Rel(api_gateway, sensor_controller, "Routes sensor requests", "HTTPS / JSON")
+Rel(api_gateway, config_controller, "Routes configuration requests", "HTTPS / JSON")
+
+Rel(asset_controller, permission_facade, "Checks permissions")
+Rel(sensor_controller, permission_facade, "Checks permissions")
+Rel(config_controller, permission_facade, "Checks permissions")
+Rel(permission_facade, account_api, "Requests access decision", "Internal REST")
+
+Rel(asset_controller, asset_service, "Executes asset commands")
+Rel(sensor_controller, sensor_service, "Executes sensor commands")
+Rel(config_controller, config_service, "Executes configuration commands")
+
+Rel(asset_service, asset_rules, "Validates asset rules")
+Rel(sensor_service, sensor_rules, "Validates sensor rules")
+Rel(config_service, sensor_rules, "Checks sensor and gateway compatibility")
+
+Rel(asset_service, asset_repo, "Reads / writes assets")
+Rel(sensor_service, sensor_repo, "Reads / writes sensors")
+Rel(config_service, sensor_repo, "Reads / writes ranges and maintenance")
+
+Rel(asset_repo, sensor_db, "Reads / writes", "EF Core")
+Rel(sensor_repo, sensor_db, "Reads / writes", "EF Core")
+
+Rel(sensor_service, config_events, "Publishes pairing and calibration events")
+Rel(config_service, config_events, "Publishes range and maintenance events")
+Rel(config_events, monitoring_api, "Provides active configuration", "Internal events")
+
+@enduml

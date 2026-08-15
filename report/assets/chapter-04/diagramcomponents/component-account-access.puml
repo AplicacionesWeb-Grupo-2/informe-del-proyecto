@@ -1,0 +1,43 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title Component Diagram - ColdTrace - IAM
+caption Implemented IAM components inside the ASP.NET Core modular monolith.
+
+LAYOUT_WITH_LEGEND()
+LAYOUT_LEFT_RIGHT()
+
+Container(webapp, "Frontend Web Application", "Vue 3", "Starts local and social authentication and stores the minimal ColdTrace session.")
+System_Ext(identity, "Google Identity / Apple", "External OIDC identity providers.")
+ContainerDb(database, "Shared ColdTrace Database", "MySQL / EF Core", "Users, roles, organizations, external identities, and password reset requests.")
+
+Container_Boundary(iam, "IAM Bounded Context") {
+    Component(auth_controller, "Authentication Controller", "ASP.NET Core", "Sign-in, social token exchange, profile preview, and social organization sign-up.")
+    Component(signup_controller, "Organization Sign-Ups Controller", "ASP.NET Core", "Bootstraps an organization and its first user.")
+    Component(users_controller, "Users and Roles Controllers", "ASP.NET Core", "Organization-scoped user and role operations.")
+    Component(password_controller, "Password Reset Requests Controller", "ASP.NET Core", "Accepts public password reset requests.")
+
+    Component(command_services, "Command Services", "Application", "Handle sign-in, sign-up, user, role, social identity, and password reset commands.")
+    Component(query_services, "Query Services", "Application", "Resolve users, roles, organizations, and verified identities.")
+    Component(token_service, "Token Service", "Infrastructure / JWT", "Issues and validates ColdTrace bearer tokens.")
+    Component(oauth_services, "OAuth Provider Services", "Infrastructure / OIDC", "Validate Google and Apple responses server-side.")
+    Component(repositories, "IAM Repositories", "EF Core", "Persist IAM aggregates in the shared context.")
+}
+
+Rel(webapp, auth_controller, "Authenticates", "HTTPS / JSON")
+Rel(webapp, signup_controller, "Registers organization", "HTTPS / JSON")
+Rel(webapp, users_controller, "Manages users and roles", "HTTPS / JSON")
+Rel(webapp, password_controller, "Requests password recovery", "HTTPS / JSON")
+Rel(auth_controller, command_services, "Executes authentication commands")
+Rel(signup_controller, command_services, "Executes sign-up command")
+Rel(users_controller, command_services, "Executes user and role commands")
+Rel(users_controller, query_services, "Queries users and roles")
+Rel(password_controller, command_services, "Creates reset request")
+Rel(command_services, token_service, "Issues session token")
+Rel(command_services, oauth_services, "Validates external identity")
+Rel(oauth_services, identity, "Validates provider response", "OIDC / HTTPS")
+Rel(command_services, repositories, "Reads / writes")
+Rel(query_services, repositories, "Reads")
+Rel(repositories, database, "Reads / writes", "EF Core")
+
+@enduml
